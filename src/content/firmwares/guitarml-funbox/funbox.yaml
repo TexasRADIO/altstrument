@@ -1,0 +1,31 @@
+device: guitarml-funbox
+name: Funbox
+summary: Firmware and PCB design for GuitarML's stereo Daisy Seed pedal. Planet-series modules include NAM and RTNeural amp sims, reverbs, delays, a dual looper, spectral and granular effects, a plate reverb with octave and a MIDI synth.
+description: >-
+  Modules named after planets: Mercury (Neural Amp Modeler amp with 4-band EQ),
+  Venus (spectral reverb), Earth (plate reverb with octave and overdrive), Mars
+  (amp sim and delay), Jupiter (reverb), Saturn (spectral delay), Uranus
+  (granular delay and FM synth), Neptune (reverb and delay) and Pluto (dual
+  looper). A MidiKeys synth is shown in the video demos; the README also lists
+  chorus/reverb and FFT-filter experiments, and the repository has recently
+  added a Cassini sampler. Prebuilt .bin files are on the release page, which
+  still has only the v1 tag from 2024.
+status: active
+authors:
+  - name: Keith Bloemer (GuitarML)
+    url: https://github.com/GuitarML
+source: https://github.com/GuitarML/FunBox
+source_status: open
+license: MIT
+license_notes: LICENSE.txt, copyright Keith Bloemer 2024. Submodules such as DaisySP, libDaisy and RTNeural carry their own licenses.
+distribution: download
+install_notes: Flash a release .bin with the Electrosmith web programmer or `make program-dfu`; Mars and Neptune use SRAM and need the bootloader method.
+tags: [platform, amp-sim, reverb, delay, looper, granular, fx]
+versions:
+  - version: main @ c0409dd (Cassini sampler)
+    date: 2026-07-10
+    url: https://github.com/GuitarML/FunBox/commit/c0409dd
+    notes: Latest commit; not yet a tagged release.
+  - version: v1
+    date: 2024-06-22
+    url: https://github.com/GuitarML/FunBox/releases/tag/v1

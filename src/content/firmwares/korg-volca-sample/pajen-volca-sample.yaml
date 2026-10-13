@@ -1,0 +1,28 @@
+device: korg-volca-sample
+name: Pajen unofficial firmware
+summary: Unofficial volca sample firmware with chromatic sample playback, polyphony, MIDI velocity, probability triggering, drone mode and extra MIDI CCs.
+description: >-
+  Beta 7 lets you play samples chromatically from a MIDI keyboard. Coverage
+  also lists polyphony, per-part and per-pattern note and pitch options, extra
+  reverb programs, probability triggering, an insta-drone mode and new MIDI
+  CC values. The features can be switched off in the global menu and the
+  official firmware can be restored. One report says it may need a little more
+  current than stock. Discussion and downloads were in a long-running
+  Gearspace (formerly Gearslutz) thread.
+status: dormant
+authors:
+  - name: Pajen
+source_status: closed
+license: unspecified
+license_notes: No license statement. Binary firmware only.
+homepage: https://gearspace.com/board/electronic-music-instruments-and-electronic-music-production/1232112-volca-sample-firmware-hack.html
+distribution: download
+install_notes: >-
+  Installed the same way as Korg's official updates. Applies to the original
+  volca sample.
+tags: [sampler, polyphony, velocity, midi]
+versions:
+  - version: Beta 7
+    date: 2020-03-27
+    url: https://www.synthtopia.com/?p=115600
+    notes: Date is that of the Synthtopia article covering Beta 7, not a confirmed release date.

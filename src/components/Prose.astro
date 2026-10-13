@@ -1,0 +1,11 @@
+---
+import { paragraphs } from '@/lib/catalog';
+interface Props { text?: string; class?: string }
+const { text, class: className } = Astro.props;
+const paras = paragraphs(text);
+---
+{paras.length > 0 && (
+  <div class:list={['prose-plain', className]}>
+    {paras.map((p) => <p>{p}</p>)}
+  </div>
+)}

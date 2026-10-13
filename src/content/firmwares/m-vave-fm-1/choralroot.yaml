@@ -1,0 +1,30 @@
+device: m-vave-fm-1
+name: ChoralRoot FM-1
+summary: >-
+  Telepathic Orchid-style chord instrument: one hand plays roots, the other shapes voicings, with key
+  and performance modes, a bass line and a looper, on Felucca engines and the monome-grid ChoralRoot musical
+  engine.
+status: active
+authors:
+- name: Quixotic7
+  url: https://github.com/Quixotic7
+source: https://github.com/Quixotic7/ChoralRootFM1
+source_status: open
+license: GPL-3.0-only
+homepage: https://quixotic7.github.io/ChoralRootFM1/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer; browser emulator at /emu/. Independent of Telepathic Instruments and M-VAVE.
+  Early releases were beta pre-releases.
+brick_risk: true
+tags: [chords, synth-engine, performance]
+versions:
+- version: '0.21'
+  date: 2026-10-13
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.21
+- version: '0.20'
+  date: 2026-10-13
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.20
+- version: '0.19'
+  date: 2026-10-12
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.19

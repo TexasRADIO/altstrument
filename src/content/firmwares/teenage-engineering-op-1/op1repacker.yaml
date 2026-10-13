@@ -1,0 +1,35 @@
+device: teenage-engineering-op-1
+name: op1repacker
+kind: tool
+summary: Python tool that unpacks, modifies and repacks official OP-1 firmware files. Ships ready-made mods such as the hidden iter synth and filter effect, subtler default FX levels and custom graphics.
+description: >-
+  Based on the research in the op-forums custom firmware thread. Unpack and
+  repack subcommands expose the files inside an official .op1 update, an
+  analyze subcommand reports build version and bootloader version, and a modify
+  subcommand applies predefined mods: iter, presets-iter, filter, subtle-fx and
+  graphics changes (iter lab visuals, inverted tape screen, CWO animal swaps).
+  The README says mods were tested on firmware 235 and warns that a bad build
+  can brick the unit. It can only change what is already in the firmware; new
+  features cannot be added this way.
+status: maintained
+authors:
+  - name: op1hacks
+    url: https://github.com/op1hacks
+source: https://github.com/op1hacks/op1repacker
+source_status: open
+license: MIT
+distribution: patch-your-own
+requires_stock: Tested on 235
+install_notes: Install with pip, unpack your own official firmware file, apply mods, repack, then update the OP-1 through the normal update mode.
+brick_risk: true
+tags: [editor, ui, research, bugfixes]
+versions:
+  - version: 0.2.6
+    date: 2020-08-05
+    url: https://pypi.org/project/op1repacker/0.2.6/
+  - version: 0.2.5
+    date: 2020-06-02
+    url: https://github.com/op1hacks/op1repacker/releases/tag/0.2.5
+  - version: 0.2.4
+    date: 2019-12-26
+    url: https://github.com/op1hacks/op1repacker/releases/tag/0.2.4

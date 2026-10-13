@@ -1,0 +1,27 @@
+device: monome-crow
+name: druid
+kind: tool
+summary: >-
+  monome's Python terminal REPL for crow: send Lua, upload scripts, read output, and update crow firmware with `druid firmware`.
+status: active
+authors:
+  - name: monome
+    url: https://monome.org
+source: https://github.com/monome/druid
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE is GPLv3; no "or later" grant found in project files.
+homepage: https://monome.org/docs/crow/druid
+distribution: download
+install_notes: "Install with pip (package name: monome-druid)."
+tags: [scripting, flasher]
+versions:
+  - version: v1.1.7
+    date: 2026-06-10
+    url: https://github.com/monome/druid/releases/tag/v1.1.7
+  - version: v1.1.6
+    date: 2025-12-20
+    url: https://github.com/monome/druid/releases/tag/v1.1.6
+  - version: v1.1.5
+    date: 2023-05-31
+    url: https://github.com/monome/druid/releases/tag/v1.1.5

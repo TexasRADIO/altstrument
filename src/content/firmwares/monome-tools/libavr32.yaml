@@ -1,0 +1,18 @@
+device: monome-tools
+name: libavr32
+kind: tool
+summary: Shared C library under monome's AVR32 Eurorack firmwares (ansible, earthsea, kria, meadowphysics, Teletype, white whale), which handles hardware initialization, an event queue and timers, and has helpers for controllers and CV, with build instructions.
+status: active
+authors:
+  - name: monome
+    url: https://monome.org
+  - name: Contributors
+    url: https://github.com/monome/libavr32/graphs/contributors
+source: https://github.com/monome/libavr32
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own files.
+homepage: https://github.com/monome/libavr32
+distribution: source-only
+install_notes: Needs the AVR32 toolchain; Dewb/monome-build wraps it in a container.
+tags: [sdk]

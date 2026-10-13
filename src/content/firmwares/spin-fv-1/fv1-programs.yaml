@@ -1,0 +1,24 @@
+device: spin-fv-1
+name: fv1-programs
+kind: tool
+summary: Community directory of FV-1 programs for DIY guitar pedals, published as a searchable website built from a programs list in the repository. Listed as a tool because it catalogues programs rather than shipping firmware.
+description: >-
+  A Nuxt-based site at mstratman.github.io/fv1-programs aggregating programs
+  from Spin and from forum threads. Contributions come by pull request to the
+  programs.js file or by email to the maintainer. The programs listed carry
+  their own authors and terms; the repository itself has no license file.
+status: maintained
+authors:
+  - name: Mark A. Stratman
+    url: https://github.com/mstratman
+source: https://github.com/mstratman/fv1-programs
+source_status: open
+license: unspecified
+license_notes: No license file in the repository; listed programs have their own authors and terms.
+homepage: https://mstratman.github.io/fv1-programs/
+tags: [fx, research, platform]
+versions:
+  - version: main @ 6feb327
+    date: 2025-06-03
+    url: https://github.com/mstratman/fv1-programs/commit/6feb327
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,28 @@
+device: elektron-analog-rytm
+name: rytm-mods-src
+summary: "MrScruff's source for Analog Rytm MKII OS 1.73 mods, public copy: euclid accents, velocity humanise, LFO RND, comp preview, kit A/B, SLICE LOOP, CTRL ALL and others (mods 0000 to 0015)."
+description: >-
+  Every build starts from the pinned stock image (checksum only, you supply the
+  file) and rebuilds from source; the patch sources, symbol map and allocation
+  registry are the project. A public repost by ConnorWay32, redistributed with
+  the original author's permission, released as-is with no support expected. The
+  mods directory lists euclid-accents, velocity-humanise, lfo-rnd, comp-preview,
+  filter-hz, main-rms, kit-ab, slice-loop, voice-dac, ctrl-all and env-reset-amp.
+status: active
+authors:
+  - name: MrScruff
+  - name: ConnorWay32 (repost)
+    url: https://github.com/ConnorWay32
+source: https://github.com/ConnorWay32/rytm-mods-src
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is the GPL v2 text added after the initial commit; no "or later" statement of its own was found, so the stricter reading is used.
+distribution: patch-your-own
+requires_stock: "1.73"
+install_notes: Needs Python 3.11+, git, make, a C compiler and m68k-elf-binutils. Place your own Analog-Rytm_MKII_OS1.73.syx in stock/.
+tags: [sequencer, ui, lfo, velocity, bugfixes]
+versions:
+  - version: Mods 0000-0015
+    date: 2026-10-10
+    url: https://github.com/ConnorWay32/rytm-mods-src
+    notes: Date is the repository's initial commit; no tagged releases.

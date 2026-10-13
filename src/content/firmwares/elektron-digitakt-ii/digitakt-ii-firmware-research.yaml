@@ -1,0 +1,14 @@
+device: elektron-digitakt-ii
+name: digitakt-ii-firmware-research-public
+kind: tool
+summary: "Sanitized notes mapping the Digitakt II OS 1.15C architecture: ColdFire control side, SHARC audio side, their state-publication path and the project-sample resource path. No firmware or patches."
+status: active
+authors:
+  - name: lalzart
+    url: https://github.com/lalzart
+source: https://github.com/lalzart/digitakt-ii-firmware-research-public
+source_status: open
+license: CC0-1.0
+distribution: source-only
+tags: [research]
+versions: []

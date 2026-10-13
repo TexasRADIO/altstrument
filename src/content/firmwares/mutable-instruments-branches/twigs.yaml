@@ -1,0 +1,22 @@
+device: mutable-instruments-branches
+name: Twigs
+summary: Branches firmware with two functions assignable to either channel, VC Factor (clock divider and multiplier) and VC Swing. Inputs are shared, with the top jack as reset and the bottom jack as clock.
+status: dormant
+authors:
+  - name: Ari Russo
+    url: https://github.com/arirusso
+source: https://github.com/arirusso/twigs
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSE file reads "GPL, Version 3.0" with no "or later" wording; Branches
+  is an AVR module, so upstream AVR code is GPL-3.0 as well.
+distribution: download
+tags: [fx]
+versions:
+  - version: v1.0.2
+    date: 2020-08-28
+    url: https://github.com/arirusso/twigs/releases/tag/v1.0.2
+  - version: v1.0.1
+    date: 2016-05-31
+    url: https://github.com/arirusso/twigs/releases/tag/v1.0.1

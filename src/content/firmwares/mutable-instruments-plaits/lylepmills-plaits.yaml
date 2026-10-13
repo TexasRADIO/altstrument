@@ -1,0 +1,15 @@
+device: mutable-instruments-plaits
+name: Plaits alt firmware (frequency locking)
+summary: Earlier Plaits alt firmware with frequency locking, sub-oscillator output, crossfading and configurable CV inputs. No longer supported; the README points users to Plaits Palette.
+status: archived
+authors:
+  - name: Lyle Mills
+    url: https://github.com/lylepmills
+source: https://github.com/lylepmills/eurorack/blob/master/alt_firmwares/README.md
+source_status: open
+license: MIT
+license_notes: Inherits from Mutable Instruments; repository README states STM32 code is MIT.
+homepage: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+distribution: download
+install_notes: Prefer Plaits Palette, which supersedes these builds.
+tags: [synth-engine]

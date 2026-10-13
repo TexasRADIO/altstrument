@@ -1,0 +1,23 @@
+device: elektron-analog-keys
+name: Chopshop (Analog Keys builds)
+summary: "The Analog Keys side of Chopshop, a browser builder for OS 1.56: chord memory, JOY RANDOM, or both. The Analog Four is explicitly not supported."
+description: >-
+  Builds are Control (repack only), chord memory, chord plus JOY RANDOM, and JOY
+  RANDOM only. The author reports chord memory worked on a unit and the chord plus
+  JOY RANDOM build was used in a jam; JOY RANDOM only has not been run separately.
+  Keep Elektron's original 1.56 file; recovery is FUNCTION while powering on, then
+  TRIG 4 (OS UPGRADE) over DIN MIDI. See the analog-rytm entry for the shared code
+  and licence notes.
+status: active
+authors:
+  - name: Jesus Triana (bandersong)
+    url: https://github.com/bandersong
+source: https://github.com/bandersong/chopshop
+source_status: open
+license: GPL-3.0-or-later
+homepage: https://chopshop-synth.pages.dev/
+distribution: browser-installer
+requires_stock: "1.56"
+install_notes: Build in the browser from your own OS 1.56 file, flash with Elektron Transfer, and add one mod at a time.
+tags: [chords, performance, editor]
+versions: []

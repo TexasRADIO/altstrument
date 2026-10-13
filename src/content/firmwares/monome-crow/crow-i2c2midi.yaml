@@ -1,0 +1,26 @@
+device: monome-crow
+name: crow i2c2midi support (eethann)
+summary: Unofficial crow fork that merges the i2c2midi library into the firmware itself, with chord and note commands plus first-pass MIDI getters. One pre-release build was published in November 2023.
+description: >-
+  The pre-release tagged 4.1.0-i2c2midi-rc1 carries a crow.bin and describes an
+  initial, incomplete merge of mreid's i2c2midi user script. MIDI getter
+  channels are offset by one, so channel 1 is index 0. The i2c2midi_support
+  branch has two commits on top of upstream's main, and the author's repository
+  has not been updated since.
+status: dormant
+authors:
+  - name: eethann
+    url: https://github.com/eethann
+source: https://github.com/eethann/crow
+source_status: open
+license: GPL-3.0-only
+license_notes: Inherited from monome/crow (GPLv3).
+homepage: https://github.com/eethann/crow/releases/tag/4.1.0-i2c2midi-rc1
+distribution: download
+requires_stock: crow 4.x with an i2c2midi module on the bus
+tags: [platform, i2c, midi]
+versions:
+  - version: 4.1.0-i2c2midi-rc1
+    date: 2023-11-07
+    url: https://github.com/eethann/crow/releases/tag/4.1.0-i2c2midi-rc1
+    notes: GitHub pre-release.

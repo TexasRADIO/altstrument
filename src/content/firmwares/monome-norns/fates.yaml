@@ -1,0 +1,35 @@
+device: monome-norns
+name: norns for Fates
+summary: Release stream of norns system software and disk images for Fates, a DIY Raspberry Pi board (codec, OLED, three encoders and keys) that runs the standard norns ecosystem.
+description: >-
+  Fates is a DIY audio and UI board for the Raspberry Pi 3B+ and 4B (repository
+  okyeron/fates); this fork publishes norns builds for it. Each release links to
+  the matching monome/norns release for its changelog and installs from
+  SYSTEM > UPDATE; version 220321 or later is needed to use the updater, and
+  older installs need a disk image first. The Fates build lags monome's
+  release line: the newest is built from norns 2.9.3.
+status: maintained
+authors:
+  - name: okyeron
+    url: https://github.com/okyeron
+  - name: Fates project
+    url: https://github.com/fates-project
+source: https://github.com/fates-project/norns
+source_status: open
+license: GPL-3.0-only
+license_notes: Fork of monome/norns, whose LICENSE.txt is GPLv3.
+homepage: https://github.com/okyeron/fates
+distribution: download
+requires_stock: Raspberry Pi 3B+ or 4B on a Fates board; 220321 or later for on-device updates
+install_notes: Run SYSTEM > UPDATE while connected to the internet, or upload the release tgz to ~/update/ over SFTP. Back up scripts first.
+tags: [platform, os]
+versions:
+  - version: v2.9.3 (build 250926)
+    date: 2025-10-07
+    url: https://github.com/fates-project/norns/releases/tag/v2.9.3
+  - version: v2.8.4
+    date: 2024-09-13
+    url: https://github.com/fates-project/norns/releases/tag/v2.8.4
+  - version: v2.8.1
+    date: 2023-12-02
+    url: https://github.com/fates-project/norns/releases/tag/v2.8.1

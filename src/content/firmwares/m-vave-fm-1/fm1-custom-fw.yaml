@@ -1,0 +1,26 @@
+device: m-vave-fm-1
+name: aroum/fm1-custom-fw
+kind: tool
+summary: >-
+  Curated directory of FM-1 custom firmwares, tools and docs, with REVERSE_ENGINEERING.md and a Python
+  flasher/extractor (fm1_flasher.py) for exploring the SysEx update protocol.
+description: >-
+  Covers the JieLi AC791N hardware, the update protocol, memory map and bootloader notes, recovery vectors,
+  emulators, editors and links to articles. Repeats the community advice to return to stock V15 before
+  flashing a different custom firmware. No LICENSE file; some per-entry licence details in the README
+  are second-hand and worth checking against each project.
+status: active
+authors:
+- name: aroum
+  url: https://github.com/aroum
+source: https://github.com/aroum/fm1-custom-fw
+source_status: open
+license: unspecified
+license_notes: No LICENSE file in the repository.
+distribution: source-only
+tags: [research, flasher, config-tool]
+versions:
+- version: main
+  date: 2026-10-12
+  url: https://github.com/aroum/fm1-custom-fw
+  notes: No tagged releases; date is the last commit.

@@ -1,0 +1,25 @@
+device: elektron-digitakt
+name: DT-FM
+summary: Four-operator FM synth machine for the Digitakt mk1 with eight algorithms and parameter locks on the SRC page, based on digisophie.
+status: active
+authors:
+  - name: mtalikka
+    url: https://github.com/mtalikka
+source: https://github.com/mtalikka/DT-FM
+source_status: open
+license: MIT
+distribution: patch-your-own
+requires_stock: 1.53 / 1.54
+install_notes: Add the mod in elekloader with your own official OS file. The repo distributes source, not a modified OS.
+tags: [machines, synth-engine, fm]
+versions:
+  - version: v1.2.1
+    date: 2026-10-09
+    url: https://github.com/mtalikka/DT-FM/releases/tag/v1.2.1
+    notes: Adds parameter locks on the SRC page.
+  - version: v1.1.0
+    date: 2026-10-08
+    url: https://github.com/mtalikka/DT-FM/releases/tag/v1.1.0
+  - version: v1.0.0
+    date: 2026-10-06
+    url: https://github.com/mtalikka/DT-FM/releases/tag/v1.0.0

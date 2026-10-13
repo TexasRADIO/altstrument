@@ -1,0 +1,34 @@
+device: monome-norns
+name: norns disk images
+summary: Official monome disk images for fresh norns and norns shield installs, plus the build files for them. Flash to the SD card or CM3, then update the OS from the device.
+description: >-
+  The norns-image repository holds the files used to build the norns disk
+  image; the compiled images are attached to its releases. The 250530 image is
+  for standard norns only. Shield users are pointed to the 231114-img release,
+  which has separate files for Pi 3 and Pi 4 and the two audio codecs, and then
+  run SYSTEM > UPDATE to reach a current OS.
+status: maintained
+authors:
+  - name: monome
+    url: https://monome.org
+source: https://github.com/monome/norns-image
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file; the norns software it packages is GPL-3.0.
+homepage: https://monome.org/docs/norns/shield
+distribution: download
+requires_stock: Standard norns for 250530; Raspberry Pi 3B/3B+/4B shield for 231114-img
+install_notes: Flash with balenaEtcher or Raspberry Pi Imager; choose the file matching your Pi model and audio codec (shield revision 211028 and later use the cs4271 codec).
+tags: [platform, os]
+versions:
+  - version: "250530"
+    date: 2025-07-02
+    url: https://github.com/monome/norns-image/releases/tag/250530
+    notes: Standard norns only.
+  - version: "240911"
+    date: 2024-10-30
+    url: https://github.com/monome/norns-image/releases/tag/240911
+  - version: 231114-img
+    date: 2023-11-21
+    url: https://github.com/monome/norns-image/releases/tag/231114-img
+    notes: Latest shield images (Pi 3 / Pi 4, cs4270 / cs4271).

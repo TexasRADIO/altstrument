@@ -1,0 +1,28 @@
+device: elektron-analog-rytm
+name: Chopshop
+summary: "Browser firmware builder for Analog Rytm MK1/MKII OS 1.73 and Analog Keys OS 1.56: CHOP with step-lock, Sample Focus, SMP CUT; on Keys, chord memory and JOY RANDOM. Not for OS 1.74 or the Analog Four."
+description: >-
+  Drop your own OS file onto the page, which identifies it by sha256, builds
+  the chosen mods in a WebAssembly worker using elektron-firmware-tool, and only
+  offers the result if it verifies. Hardware reports are the author's own: MK1
+  builds have run, Keys builds have run, and no MKII build has ever been run on
+  an MKII. Rytm MK1 and MKII are listed here; the Analog Keys features are
+  described under the analog-keys entry. The repo says the mods never change the
+  recovery code.
+status: active
+authors:
+  - name: Jesus Triana (bandersong)
+    url: https://github.com/bandersong
+source: https://github.com/bandersong/chopshop
+source_status: open
+license: GPL-3.0-or-later
+license_notes: Incorporates gdeo607's rytm1_mods, which has no licence, credited and used as is; the GPL grant does not cover it.
+homepage: https://chopshop-synth.pages.dev/
+distribution: browser-installer
+requires_stock: 1.73 (Rytm), 1.56 (Keys); not 1.74
+install_notes: >-
+  Flash a Control build first, then add one mod at a time. Elektron now serves only
+  OS 1.74 for Rytm; a unit on 1.74 cannot take these files and going back is
+  unverified. Recovery uses the startup menu over DIN MIDI.
+tags: [sampler, sequencer, editor, chords]
+versions: []

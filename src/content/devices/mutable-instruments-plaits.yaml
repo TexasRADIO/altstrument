@@ -1,0 +1,26 @@
+name: Plaits
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Macro oscillator (discontinued)
+platform: STM32F3
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/plaits/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
+  is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name.
+  The Plaits Palette builder and the older Lyle Mills alt firmware share one
+  repository with the Rings alt firmware.
+related: [mutable-instruments-rings]
+image:
+  src: /images/devices/mutable-instruments-plaits.jpg
+  style: photo
+  alt: Front panel of the Mutable Instruments Plaits Eurorack module
+  width: 565
+  height: 1200
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/plaits/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/plaits/images/front.jpg

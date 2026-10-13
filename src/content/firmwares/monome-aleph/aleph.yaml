@@ -1,0 +1,37 @@
+device: monome-aleph
+name: aleph firmware (bees, lines, waves)
+summary: >-
+  Official open firmware for aleph: the AVR32 bootloader and apps such as bees, a Blackfin DSP module library with lines and waves, and an in-progress block-processing DSP branch.
+description: >-
+  The repository is the full aleph software tree: AVR32 application code,
+  Blackfin DSP modules, shared libraries, docs and utilities. Apps are loaded as
+  hex files from the SD card by the bootloader. Tagged releases stop in 2015
+  (bees-0.7.1), but the dev branch received block-DSP work in August 2026.
+  Licensing varies by directory.
+status: active
+authors:
+  - name: monome
+    url: https://monome.org
+  - name: ngwese
+    url: https://github.com/ngwese
+source: https://github.com/monome/aleph
+source_status: open
+license: CC-BY-SA-3.0
+license_notes: "apps/ is CC-BY-SA-3.0. modules/ and dsp/ are Unlicense; avr32_lib carries the Atmel ASF license and utils/ components keep their own (LUFA, bootloader). The top-level LICENSE.TXT only points to these."
+homepage: https://monome.org/docs/aleph/
+distribution: download
+requires_stock: aleph hardware with SD card
+install_notes: Hold the mode switch (upper right) while powering up to start the bootloader, then load an AVR32 app from the hex folder on the SD card.
+tags: [platform, sdk, synth-engine]
+versions:
+  - version: bees-0.7.1
+    date: 2015-11-05
+    url: https://github.com/monome/aleph/releases/tag/bees-0.7.1
+  - version: bees-0.7.0
+    date: 2015-11-03
+    url: https://github.com/monome/aleph/releases/tag/bees-0.7.0
+    notes: Breaks scene compatibility for MIDI and white whale ops.
+  - version: aleph-150718
+    date: 2015-07-18
+    url: https://github.com/monome/aleph/releases/tag/aleph-150718
+    notes: Includes lines 0.2.4.

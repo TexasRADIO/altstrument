@@ -1,0 +1,55 @@
+---
+import type { Version } from '@/content/schema';
+import { isoDate, versionAnchor, plural } from '@/lib/catalog';
+interface Props {
+  /** Already sorted newest first. */
+  versions: Version[];
+  /** Rows shown before the rest fold into a <details>. */
+  visible?: number;
+  /** Give rows id="v-<version>" for deep links (single-firmware pages only). */
+  anchors?: boolean;
+  caption?: string;
+}
+const { versions, visible = 5, anchors = false, caption = 'Version history' } = Astro.props;
+const head = versions.slice(0, visible);
+const rest = versions.slice(visible);
+const hasNotes = versions.some((v) => v.notes);
+---
+{versions.length > 0 && (
+  <>
+    <table class="vtable">
+      <caption class="sr-only">{caption}</caption>
+      <thead>
+        <tr><th scope="col">Version</th><th scope="col">Date</th>{hasNotes && <th scope="col">Notes</th>}</tr>
+      </thead>
+      <tbody>
+        {head.map((v) => (
+          <Fragment>
+            <tr id={anchors ? versionAnchor(v.version) : undefined}>
+              <td class="mono" data-label="Version">{v.url ? <a href={v.url} rel="noopener">{v.version}</a> : v.version}</td>
+              <td class="nowrap mono" data-label="Date">{isoDate(v.date) ?? <span class="text-muted">undated</span>}</td>
+              {hasNotes && <td data-label="Notes" class="w-full">{v.notes}</td>}
+            </tr>
+          </Fragment>
+        ))}
+      </tbody>
+    </table>
+    {rest.length > 0 && (
+      <details class="mt-1">
+        <summary class="cursor-pointer py-1 text-sm text-accent">{plural(rest.length, 'older version')}</summary>
+        <table class="vtable">
+          <caption class="sr-only">{caption} (older)</caption>
+          <tbody>
+            {rest.map((v) => (
+              <tr id={anchors ? versionAnchor(v.version) : undefined}>
+                <td class="mono" data-label="Version">{v.url ? <a href={v.url} rel="noopener">{v.version}</a> : v.version}</td>
+                <td class="nowrap mono" data-label="Date">{isoDate(v.date) ?? <span class="text-muted">undated</span>}</td>
+                {hasNotes && <td data-label="Notes" class="w-full">{v.notes}</td>}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </details>
+    )}
+  </>
+)}

@@ -1,0 +1,25 @@
+device: m-vave-fm-1
+name: Bubba Machine
+summary: >-
+  Six-track live groovebox written from scratch in C99: TR-style drum machine, 8-slice sampler, wavetable
+  bass and three assignable synth/kit/MIDI tracks, with polymeter, p-locks and crash-resilient flash saves.
+description: >-
+  No code from other FM-1 firmware; only hardware facts from public reverse engineering. The README says
+  to install only once a tested version exists: it runs in a desktop simulation and a WebAssembly emulator,
+  and a hardware flasher is on the roadmap. The GitHub releases carry no firmware assets. Documentation
+  is mostly Spanish.
+status: announced
+authors:
+- name: Erbubar23
+  url: https://github.com/Erbubar23
+source: https://github.com/Erbubar23/bubba-machine
+source_status: open
+license: GPL-3.0-or-later
+homepage: https://erbubar23.github.io/bubba-machine/
+distribution: source-only
+tags: [drums, sampler, sequencer, synth-engine, wavetable, emulator]
+versions:
+- version: 0.5.0-beta
+  date: 2026-10-12
+  url: https://github.com/Erbubar23/bubba-machine/releases/tag/v0.5.0-beta
+  notes: Marked pre-release; no firmware attached.

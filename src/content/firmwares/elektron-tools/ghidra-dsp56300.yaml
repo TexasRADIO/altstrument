@@ -1,0 +1,17 @@
+device: elektron-tools
+name: ghidra-dsp56300
+kind: tool
+summary: Ghidra processor extension for the Motorola/Freescale DSP56300 family (DSP5630x/5636x/5672x) with a SLEIGH language, hardware loop support and a loop-end analyzer. Useful for Octatrack-era DSP code.
+status: active
+authors:
+  - name: roblg
+    url: https://github.com/roblg
+source: https://github.com/roblg/ghidra-dsp56300
+source_status: open
+license: Apache-2.0
+distribution: download
+tags: [research, sdk]
+versions:
+  - version: v0.0.7
+    date: 2026-10-08
+    url: https://github.com/roblg/ghidra-dsp56300/releases/tag/v0.0.7

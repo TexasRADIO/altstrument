@@ -1,0 +1,35 @@
+device: bpcmusic-telex
+name: TELEX firmware (TXo, TXi)
+summary: Open firmware for the TELEXo output and TELEXi input expanders for Teletype, an Arduino/Teensyduino project loaded onto the module's Teensy 3.2 or 3.6 with Teensy Loader.
+description: >-
+  The repository holds the TELEXo and TELEXi sources, hardware files and a
+  command reference. Releases attach prebuilt hex files per module (the v.022A
+  release covers TELEXo and TELEXoPlus). The README says to overclock a Teensy
+  3.2 to 120 MHz and a 3.6 to 180 MHz when compiling, and not to power the
+  module while the Teensy is on USB. The last release is from September 2021.
+status: dormant
+authors:
+  - name: Brendon Cassidy
+    url: https://github.com/bpcmusic
+source: https://github.com/bpcmusic/telex
+source_status: open
+license: MIT
+license_notes: Software is MIT (software-license.txt). Hardware files are CC-BY-SA-4.0.
+homepage: https://llllllll.co/t/a-teletype-expander/1379
+distribution: download
+requires_stock: TELEXo or TELEXi module with a Teensy 3.2 / 3.6
+install_notes: Open the module's hex in Teensy Loader with the Teensy connected to USB and the module unpowered.
+tags: [platform, i2c]
+versions:
+  - version: v.022
+    date: 2021-09-18
+    url: https://github.com/bpcmusic/telex/releases/tag/v.022
+    notes: GitHub pre-release; restores pulse width for square waves (tested on TELEXo Plus).
+  - version: v.021
+    date: 2018-03-02
+    url: https://github.com/bpcmusic/telex/releases/tag/v.021
+    notes: GitHub pre-release.
+  - version: v.018
+    date: 2017-12-03
+    url: https://github.com/bpcmusic/telex/releases/tag/v.018
+    notes: Latest release not marked pre-release.

@@ -1,0 +1,15 @@
+name: FV-1 based pedals
+manufacturer: Spin Semiconductor
+category: pedal
+tagline: Pedals built around the Spin FV-1 DSP chip
+platform: Spin FV-1 DSP
+links:
+  manufacturer: http://spinsemi.com/products.html
+  community:
+    - label: FV-1 program directory
+      url: https://mstratman.github.io/fv1-programs/
+notes: >-
+  The FV-1 runs programs stored in an external EEPROM, so custom programs are
+  burned to or loaded into that memory rather than flashed as a firmware image.
+  The entries here are tools and program collections rather than a replacement
+  OS.

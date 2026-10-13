@@ -1,0 +1,22 @@
+device: m-vave-fm-1
+name: ETCH
+summary: >-
+  Draw-your-own-waveform synth: 8 voices, single-cycle waves A, B and a modulating C drawn on the device,
+  morphing between them, a wave library, motion recording and an arpeggiator with a generative RIFF mode.
+status: active
+authors:
+- name: SikkenWorks
+  url: https://github.com/SikkenWorks
+source: https://github.com/SikkenWorks/ETCH
+source_status: open
+license: GPL-3.0-only
+homepage: https://etch.sikkenworks.com/
+distribution: browser-installer
+install_notes: Browser WebMIDI installer, or flash the prebuilt .fwsc image.
+brick_risk: true
+tags: [synth-engine, wavetable, sequencer, ui]
+versions:
+- version: 1.20 RC
+  date: 2026-10-12
+  url: https://github.com/SikkenWorks/ETCH/releases/tag/fm1-firmware
+  notes: Release tag is fm1-firmware.

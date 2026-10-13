@@ -1,0 +1,26 @@
+device: m-vave-fm-1
+name: NoteSorcery
+summary: >-
+  OP-1-style eight-track groovebox on SLOOP: ACID and WAVE engines, circuit and Machinedrum-style kits,
+  visual sequencer, live USB sampling, Ableton export from the browser and Android controller integration.
+description: >-
+  Marked in development (0.1) and tested on the host, not yet on a device. It does not read SLOOP projects
+  and has smaller sample slots.
+status: active
+authors:
+- name: catacombius
+  url: https://github.com/catacombius
+source: https://github.com/catacombius/NoteSorcery
+source_status: open
+license: GPL-3.0-only
+homepage: https://catacombius.github.io/NoteSorcery/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer in Chrome or Edge; back up in SLOOP's editor first if coming from SLOOP. Rescue
+  steps in GUIDE.md.
+brick_risk: true
+tags: [sequencer, sampler, synth-engine, drums, usb-audio, editor]
+versions:
+- version: '0.1'
+  url: https://github.com/catacombius/NoteSorcery
+  notes: Version from the README status line; no release tags, so no date.

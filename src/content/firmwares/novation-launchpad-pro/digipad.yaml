@@ -1,0 +1,22 @@
+device: novation-launchpad-pro
+name: DigiPAD
+summary: Launchpad Pro firmware for controlling the Elektron Digitakt, Digitone and other synths, with PolyFORK polyphony on the Digitakt, Blues mode, slider-style volume and filter layouts, sample slots and ScaleArp.
+description: >-
+  Announced on Elektronauts on 2018-05-30 by Fenix Song as the first official
+  version. The free version is downloaded through the author's Patreon, and some
+  modes (such as Master Arp and Dual ScaleArp) are for patrons only. No license
+  or source is stated, and the author notes it is independent and not endorsed
+  by Elektron or Novation.
+status: dormant
+authors:
+  - name: Fenix Song
+    url: https://fenixsong.com/digipad
+source_status: binary-only
+license: unspecified
+homepage: https://www.elektronauts.com/t/digipad-launchpad-pro-for-digitakt-and-synths/56942
+distribution: download
+tags: [controller-mode, midi, scales, performance, sampler]
+versions:
+  - version: First official version
+    date: 2018-05-30
+    url: https://www.elektronauts.com/t/digipad-launchpad-pro-for-digitakt-and-synths/56942

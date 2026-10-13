@@ -1,0 +1,109 @@
+---
+import Base from '@/layouts/Base.astro';
+import DeviceCard from '@/components/DeviceCard.astro';
+import SearchBox, { type IndexEntry } from '@/components/SearchBox.astro';
+import type { DeviceItem } from '@/lib/catalog';
+import { getDevicesWithFirmwares, groupByCategory, groupByManufacturer, siteStats, plural, compareByPopularity, compareText, firmwareTotal, latestUpdate, latestUpdateOf, isoDate } from '@/lib/catalog';
+
+const devices = await getDevicesWithFirmwares();
+const groups = groupByCategory(devices);
+// Server order is "popularity" (the default sort); SearchBox.astro re-sorts on the client.
+type Grp = { name: string; devices: DeviceItem[] };
+const byPopularity = (a: Grp, b: Grp) => firmwareTotal(b.devices) - firmwareTotal(a.devices) || compareText(a.name, b.name);
+const mfrs = groupByManufacturer(devices)
+  .map((m) => ({ ...m, devices: [...m.devices].sort(compareByPopularity) }))
+  .sort(byPopularity);
+const catGroups = groups
+  .map((g) => ({ ...g, name: g.label, devices: [...g.devices].sort(compareByPopularity) }))
+  .sort(byPopularity);
+const sortAttrs = (name: string, ds: DeviceItem[]) => ({
+  'data-count': firmwareTotal(ds),
+  'data-name': name,
+  'data-updated': isoDate(latestUpdateOf(ds)) ?? '',
+});
+const stats = siteStats(devices);
+const index: IndexEntry[] = devices.map((d) => ({
+  id: d.id,
+  name: d.data.name,
+  manufacturer: d.data.manufacturer,
+  category: d.data.category,
+  tagline: d.data.tagline,
+  firmwareCount: d.firmwares.length,
+  firmwares: d.firmwares.map((f) => f.data.name).join(' '),
+}));
+---
+<Base
+  home
+  title="Firmware World: custom firmware for music hardware"
+  description="A directory of custom and third-party firmware for synths, grooveboxes, samplers, controllers, pedals and Eurorack, with sources, licenses and version history."
+>
+  <h1 class="text-2xl">Firmware World</h1>
+  <p class="mt-1 max-w-[68ch] text-muted">A directory of custom and third-party firmware for music hardware.</p>
+
+  <dl class="mt-4 flex flex-wrap gap-x-8 gap-y-2" aria-label="Catalog size">
+    <div><dt class="text-xs uppercase tracking-wide text-muted">Devices</dt><dd class="mono text-xl font-semibold">{stats.devices}</dd></div>
+    <div><dt class="text-xs uppercase tracking-wide text-muted">Firmwares</dt><dd class="mono text-xl font-semibold">{stats.firmwares}</dd></div>
+    <div><dt class="text-xs uppercase tracking-wide text-muted">Manufacturers</dt><dd class="mono text-xl font-semibold">{stats.manufacturers}</dd></div>
+  </dl>
+
+  <div class="mt-6">
+    <SearchBox index={index} categories={groups.map((g) => g.category)} />
+  </div>
+
+  <p id="no-results" class="mt-8 text-muted" hidden>No devices match. Try fewer words or clear the category.</p>
+
+  {groups.length === 0 && <p class="mt-8 text-muted">No devices listed yet.</p>}
+
+  {/* Both groupings are rendered; CSS (html[data-grouping]) shows one. Without JS the manufacturer view shows. */}
+  <div data-group-view="manufacturer">
+    <nav aria-label="Manufacturers" class="mt-4">
+      <ul class="flex flex-wrap gap-x-3 gap-y-1 text-xs leading-snug">
+        {mfrs.map((m) => (
+          <li data-jump={`mfr-${m.slug}`}><a href={`#mfr-${m.slug}`}>{m.name}</a> <span class="mono text-muted" data-jump-count>{m.devices.length}</span></li>
+        ))}
+      </ul>
+    </nav>
+
+    {mfrs.map((m) => (
+      <section data-group={`mfr-${m.slug}`} {...sortAttrs(m.name, m.devices)} class="mt-8" aria-labelledby={`mfr-${m.slug}`}>
+        <h2 id={`mfr-${m.slug}`} class="flex items-baseline gap-2 border-b border-line pb-1 text-lg">
+          <a href={m.url}>{m.name}</a>
+          <span class="mono text-sm font-normal text-muted" data-group-count aria-label={plural(m.devices.length, 'device')}>{m.devices.length}</span>
+        </h2>
+        <ul class="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {m.devices.map((d) => (
+            <li data-device={d.id} data-count={d.firmwares.length} data-name={d.data.name} data-updated={isoDate(latestUpdate(d)) ?? ''}><DeviceCard device={d} showManufacturer={false} /></li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+
+  <div data-group-view="category">
+    <nav aria-label="Categories" class="mt-4">
+      <ul class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+        {catGroups.map((g) => (
+          <li data-jump={`cat-${g.category}`}><a href={`#cat-${g.category}`}>{g.label}</a> <span class="mono text-muted" data-jump-count>{g.devices.length}</span></li>
+        ))}
+      </ul>
+    </nav>
+
+    {catGroups.map((g) => (
+      <section data-group={`cat-${g.category}`} {...sortAttrs(g.label, g.devices)} class="mt-8" aria-labelledby={`cat-${g.category}`}>
+        <h2 id={`cat-${g.category}`} class="flex items-baseline gap-2 border-b border-line pb-1 text-lg">
+          {g.label}
+          <span class="mono text-sm font-normal text-muted" data-group-count aria-label={plural(g.devices.length, 'device')}>{g.devices.length}</span>
+        </h2>
+        <ul class="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {g.devices.map((d) => (
+            <li data-device={d.id} data-count={d.firmwares.length} data-name={d.data.name} data-updated={isoDate(latestUpdate(d)) ?? ''}><DeviceCard device={d} /></li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+  <script is:inline>
+    // Re-sort before first paint when a non-default sort is stored or in the URL.
+    if (window.fwSort) window.fwSort(document.documentElement.getAttribute('data-sorting'));
+  </script>
+</Base>

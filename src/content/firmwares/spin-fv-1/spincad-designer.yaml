@@ -1,0 +1,31 @@
+device: spin-fv-1
+name: SpinCAD Designer
+kind: tool
+summary: Open-source Java visual patch builder with an audio simulator for the Spin FV-1 DSP chip. Requires Java 8 or later; runs on Windows, macOS and Linux.
+description: >-
+  Blocks are wired together on a canvas and compiled to FV-1 assembly. New
+  blocks can be added through the SpinCAD Builder language, which is described
+  as an advanced topic. The author maintains written and video tutorials on a
+  GitBook site and block documentation in the repository. Frequent numbered
+  releases are published as jar files.
+status: active
+authors:
+  - name: Gary Worsham (HolyCityAudio)
+    url: https://github.com/HolyCityAudio
+source: https://github.com/HolyCityAudio/SpinCAD-Designer
+source_status: open
+license: GPL-3.0-or-later
+homepage: https://holy-city-audio-1.gitbook.io/holy-city-audio
+distribution: download
+install_notes: Download the SpinCAD jar from the releases page and run it with Java 8 or later.
+tags: [editor, fx, emulator, reverb, delay]
+versions:
+  - version: 0.99-1070
+    date: 2026-04-19
+    url: https://github.com/HolyCityAudio/SpinCAD-Designer/releases/tag/0.99-1070
+  - version: 0.99-1069
+    date: 2026-04-12
+    url: https://github.com/HolyCityAudio/SpinCAD-Designer/releases/tag/0.99-1069
+  - version: 0.99-1067
+    date: 2026-03-30
+    url: https://github.com/HolyCityAudio/SpinCAD-Designer/releases/tag/0.99-1067

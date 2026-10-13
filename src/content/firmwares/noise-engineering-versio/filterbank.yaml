@@ -1,0 +1,13 @@
+device: noise-engineering-versio
+name: Filterbank
+summary: Filter bank processor for Versio, distributed as binaries through a Drive folder and announced in a Reddit r/modular post, both linked from the community firmware index.
+status: unknown
+authors:
+  - name: ericxgao
+    url: https://github.com/ericxgao
+source_status: binary-only
+license: unspecified
+license_notes: No license stated.
+homepage: https://github.com/Maxhodges/noise-engineering-firmware-index
+distribution: download
+tags: [fx]

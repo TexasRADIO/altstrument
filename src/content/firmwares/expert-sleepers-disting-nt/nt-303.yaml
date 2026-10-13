@@ -1,0 +1,21 @@
+device: expert-sleepers-disting-nt
+name: nt_303
+summary: TB-303 style bass synthesizer plugin for the disting NT, based on Open303, with accent via MIDI velocity or CV, slide, and a custom pot and encoder UI.
+status: active
+authors:
+  - name: Neal Sanche (thorinside)
+    url: https://github.com/thorinside
+source: https://github.com/thorinside/nt_303
+source_status: open
+license: MIT
+homepage: https://github.com/thorinside/nt_303/releases
+distribution: download
+install_notes: Copy nt_303.o from the release to the plugins folder on the disting NT SD card.
+tags: [synth-engine, emulator]
+versions:
+  - version: v0.7.1
+    date: 2026-03-08
+    url: https://github.com/thorinside/nt_303/releases/tag/v0.7.1
+  - version: v0.7.0
+    date: 2026-03-03
+    url: https://github.com/thorinside/nt_303/releases/tag/v0.7.0

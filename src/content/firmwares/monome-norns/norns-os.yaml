@@ -1,0 +1,42 @@
+device: monome-norns
+name: norns
+summary: >-
+  Official open-source norns system software: the Lua UI and scripting layer, the SuperCollider-based audio engine (with the softcut submodule), updated on device from SYSTEM > UPDATE.
+description: >-
+  The main monome/norns repository is the operating-system layer that runs on
+  norns, norns shield and compatible boards. Release 3.0.0 combined the
+  previously separate matron and crone processes into one process that talks
+  over shared memory instead of OSC. Releases are uploaded as tgz update
+  packages with a checksum. GitHub marks the 3.0.x line as pre-release;
+  2.9.4 is the latest release not marked pre-release.
+status: active
+authors:
+  - name: monome
+    url: https://monome.org
+  - name: Contributors
+    url: https://github.com/monome/norns/graphs/contributors
+source: https://github.com/monome/norns
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE.txt is GPLv3; no "or later" grant was found in the project's own files. Bundled third-party code (e.g. Faust UI headers) keeps its own terms.
+homepage: https://monome.org/docs/norns/
+distribution: download
+install_notes: Connect norns to the internet and use SYSTEM > UPDATE, or upload the release tgz to the device's update directory.
+tags: [platform, os, scripting, sampler]
+versions:
+  - version: v3.0.2
+    date: 2026-08-19
+    url: https://github.com/monome/norns/releases/tag/v3.0.2
+    notes: GitHub pre-release; fixes the sidecar and update procedure.
+  - version: v3.0.1
+    date: 2026-06-16
+    url: https://github.com/monome/norns/releases/tag/v3.0.1
+    notes: GitHub pre-release; softcut fixes.
+  - version: v3.0.0
+    date: 2026-05-27
+    url: https://github.com/monome/norns/releases/tag/v3.0.0
+    notes: GitHub pre-release; matron and crone combined into one process.
+  - version: v2.9.4
+    date: 2026-01-03
+    url: https://github.com/monome/norns/releases/tag/v2.9.4
+    notes: Latest release not marked pre-release.

@@ -1,0 +1,26 @@
+device: elektron-digitakt
+name: digislicer
+summary: Slice machine (DIGISLICER) for the Digitakt mk1 with a waveform slice editor, a playhead and a keyboard that plays slices. 2.3 needs core 3.0 and the machine-pages mod.
+status: active
+authors:
+  - name: irpina
+    url: https://github.com/irpina
+source: https://github.com/irpina/digislicer
+source_status: open
+license: GPL-2.0-or-later
+distribution: patch-your-own
+requires_stock: 1.53 / 1.54
+install_notes: Tick it in elekloader; 2.3 also needs core 3.0 and machine-pages. Builds for both OS 1.53 and 1.54.
+tags: [machines, sampler, ui]
+versions:
+  - version: "2.3"
+    date: 2026-10-09
+    url: https://github.com/irpina/digislicer/commit/d3515b20730ca374bf37e911a7ddf47265827f1e
+    notes: Commit date; no GitHub release yet.
+  - version: "2.2"
+    date: 2026-10-09
+    url: https://github.com/irpina/digislicer/releases/tag/v2.2
+    notes: Uses 15 KB of mod RAM instead of 92 KB.
+  - version: "2.1"
+    date: 2026-10-02
+    url: https://github.com/irpina/digislicer/releases/tag/v2.1

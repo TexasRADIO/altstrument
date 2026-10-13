@@ -1,0 +1,232 @@
+# Contributing
+
+Thanks for adding to the catalog. Every entry is a YAML file checked against the schema in `src/content/schema.ts` by `scripts/validate.ts`. The templates below use placeholder values that pass the schema; replace them with real ones.
+
+## Adding a device
+
+1. Create `src/content/devices/<slug>.yaml`.
+2. The slug is lowercase kebab-case (`^[a-z0-9]+(?:-[a-z0-9]+)*$`), built as `manufacturer-device`, for example `elektron-digitakt`.
+3. Fill in the template below. A device with no firmware entries needs a `notes` value explaining why.
+
+## Adding a firmware
+
+1. Create `src/content/firmwares/<device-slug>/<firmware-slug>.yaml`. The directory must already exist as a device slug, so the device file comes first.
+2. The `device` field must equal the directory name, and that device file must exist.
+3. The firmware slug is lowercase kebab-case, named after the firmware (`octabam`).
+
+## Entries fetched at build time
+
+Some entries are not files in this repository. They are fetched from an upstream data source when the site builds, by a content loader under `src/loaders/`. Today that is every Music Thing Workshop Computer program card: the loader reads each card's `info.yaml` from the `releases/` folder of the Workshop_Computer repository and adds one entry per card to the `firmwares` collection, alongside the file-based entries. The only file under `src/content/firmwares/music-thing-workshop-computer/` is the hand-written `program-card-library.yaml`.
+
+- Such entries carry a `generated_from` field with the URL of the upstream file they were built from, and their pages show a "Synced from" row.
+- To correct one, fix the upstream `info.yaml`; the next build picks it up. There is nothing to edit here.
+- To change how fields are mapped (status, license, tags), edit the loader in `src/loaders/workshop-computer.ts`.
+- Builds need network access for these entries. The loader caches on the directory listing's ETag, so an unchanged upstream costs one request. Set `GITHUB_TOKEN` to raise the GitHub API rate limit, or `FIRMWARE_WORLD_SKIP_REMOTE=1` to build offline from the cached data store.
+
+## Device template
+
+```yaml
+# src/content/devices/example-co-example-synth.yaml
+
+# REQUIRED. Display name.
+name: Example Synth
+
+# REQUIRED. Manufacturer display name.
+manufacturer: Example Co
+
+# REQUIRED. One of: synth, groovebox, sampler, drum-machine, controller,
+# foot-controller, pedal, eurorack, diy-platform, tools, other
+category: synth
+
+# OPTIONAL. Up to 140 characters, plain text.
+tagline: pocket FM synth
+
+# OPTIONAL. MCU, SoC or DSP family.
+platform: ARM Cortex-M4
+
+# OPTIONAL. Stock OS version that most mods currently target.
+stock_firmware: 1.2.0
+
+# OPTIONAL. Defaults to { community: [] }.
+links:
+  # OPTIONAL. Official product page.
+  manufacturer: https://example.com/example-synth
+  # OPTIONAL. Defaults to []. Forums, wikis, community hubs.
+  community:
+    - label: Example forum
+      url: https://forum.example.com/
+
+# OPTIONAL. Device-level caveats: brick risk, platform policy, "no custom
+# firmware exists". Plain text, may span lines.
+notes: >-
+  Example note.
+
+# OPTIONAL. Defaults to []. Slugs of other devices that share firmware or
+# hardware. Each slug must have a device file.
+related: []
+```
+
+## Firmware template
+
+```yaml
+# src/content/firmwares/example-co-example-synth/examplefw.yaml
+
+# REQUIRED. Must equal the directory name (the device slug).
+device: example-co-example-synth
+
+# REQUIRED. Display name of the firmware or tool.
+name: ExampleFW
+
+# OPTIONAL. Defaults to firmware. One of:
+#   firmware  replaces or modifies what runs on the device
+#   tool      host-side tool that supports the scene (editor, flasher, emulator, SDK)
+kind: firmware
+
+# REQUIRED. 1 to 280 characters, plain factual prose.
+summary: Replaces the stock OS with a reworked oscillator engine and a MIDI clock sync option.
+
+# OPTIONAL. Longer plain prose.
+description: >-
+  Example description. Say what the firmware changes, in plain factual terms.
+
+# OPTIONAL. Defaults to unknown. One of:
+#   active | maintained | dormant | archived | announced | unknown
+status: maintained
+
+# REQUIRED. At least one author.
+authors:
+  - name: Jane Doe
+    # OPTIONAL. Profile or project page.
+    url: https://github.com/janedoe
+
+# REQUIRED when source_status is open. Must be absent when source_status is closed.
+# Source repository or release page.
+source: https://github.com/janedoe/examplefw
+
+# REQUIRED. One of: open | patcher-only | binary-only | closed
+source_status: open
+
+# REQUIRED. An SPDX id from the list in src/content/schema.ts, or proprietary
+# or unspecified. See "Choosing a license" below.
+license: MIT
+
+# OPTIONAL. Qualifier for the license, e.g. "patch/ directory excluded".
+license_notes: Example qualifier.
+
+# REQUIRED when source is absent. Otherwise optional. Primary non-repo link:
+# project site, forum thread or installer page.
+homepage: https://example.com/examplefw
+
+# OPTIONAL. One of: download | browser-installer | patch-your-own | commercial | source-only
+distribution: source-only
+
+# OPTIONAL. Stock firmware version(s) this targets, if specific.
+requires_stock: 1.2.0
+
+# OPTIONAL. Install steps and warnings, plain text.
+install_notes: >-
+  Example install note.
+
+# OPTIONAL. Defaults to false. Set to true when flashing has a known,
+# documented risk of bricking the device.
+brick_risk: false
+
+# OPTIONAL. Defaults to []. Lowercase letters, digits and hyphens only.
+tags: [oscillator, midi-clock]
+
+# OPTIONAL. Defaults to []. Newest first. Each version string must be unique
+# within the entry.
+versions:
+  - version: 1.3.0
+    # OPTIONAL. ISO date (YYYY-MM-DD), only when confirmed. Otherwise omit.
+    date: 2026-01-31
+    # OPTIONAL. Release page or commit.
+    url: https://github.com/janedoe/examplefw/releases/tag/v1.3.0
+    # OPTIONAL. One-line summary of the change.
+    notes: Adds MIDI clock sync.
+  - version: 1.2.0
+    url: https://github.com/janedoe/examplefw/releases/tag/v1.2.0
+```
+
+## Field values
+
+### status
+
+| Value        | Meaning                                                  |
+|--------------|----------------------------------------------------------|
+| `active`     | commits or releases within roughly the last year         |
+| `maintained` | stable, infrequent updates, author still responsive      |
+| `dormant`    | no activity for a long time, still usable                |
+| `archived`   | explicitly archived or abandoned by the author           |
+| `announced`  | publicly announced, nothing downloadable yet             |
+| `unknown`    | default; use when the status cannot be determined        |
+
+### source_status
+
+| Value          | Meaning                                                                 |
+|----------------|-------------------------------------------------------------------------|
+| `open`         | full source published. Requires `source`.                               |
+| `patcher-only` | patch tooling is public, the firmware changes themselves are not        |
+| `binary-only`  | only compiled images are distributed                                    |
+| `closed`       | nothing public. Must not have `source`.                                 |
+
+### distribution
+
+| Value               | Meaning                                              |
+|---------------------|------------------------------------------------------|
+| `download`          | prebuilt image you flash yourself                    |
+| `browser-installer` | WebMIDI / WebUSB installer page                      |
+| `patch-your-own`    | tool patches a stock firmware file you supply        |
+| `commercial`        | paid                                                 |
+| `source-only`       | you must build it yourself                           |
+
+### kind
+
+| Value      | Meaning                                                                    |
+|------------|----------------------------------------------------------------------------|
+| `firmware` | replaces or modifies what runs on the device (default)                     |
+| `tool`     | host-side tool that supports the scene (editor, flasher, emulator, SDK)    |
+
+## Choosing a license
+
+1. Use the license in the source repository's `LICENSE` file (or the license statement on the homepage). Use the SPDX identifier that matches it exactly, for example `GPL-3.0-or-later`, not `GPL-3.0`.
+2. If the license has a carve-out or exception (a directory excluded, a linking exception), record it in `license_notes`.
+3. Use `proprietary` when the author reserves all rights or states custom non-open terms.
+4. Use `unspecified` when there is no license file and no license statement.
+5. A vague statement such as "free for personal use" is not a license. Use `proprietary` if it describes custom non-open terms, or `unspecified` if you cannot tell, and quote the statement in `license_notes`.
+6. If the SPDX id you need is missing from the list, open a PR that adds it to `LICENSES` in `src/content/schema.ts`. Do not use free text.
+
+The validator warns when `source_status` is `open` and `license` is `unspecified`.
+
+Accepted values: `MIT`, `BSD-2-Clause`, `BSD-3-Clause`, `Apache-2.0`, `GPL-2.0-only`, `GPL-2.0-or-later`, `GPL-3.0-only`, `GPL-3.0-or-later`, `LGPL-2.1-or-later`, `LGPL-3.0-or-later`, `AGPL-3.0-only`, `AGPL-3.0-or-later`, `MPL-2.0`, `Unlicense`, `WTFPL`, `CC0-1.0`, `CC-BY-4.0`, `CC-BY-SA-4.0`, `CC-BY-NC-4.0`, `CC-BY-NC-SA-4.0`, `Elastic-2.0`, `proprietary`, `unspecified`.
+
+## Rules of evidence
+
+- Every link must be live when you submit. Open each one.
+- Dates only when confirmed by a release page, changelog or commit. Otherwise omit the `date`.
+- Versions newest first. Version strings must be unique within an entry.
+- Write summaries and descriptions as plain, factual prose: what the firmware does. No marketing language or superlatives.
+- Write your own summaries. Do not copy text from other catalogs or sites.
+
+## What we do not accept
+
+- Links to redistributed manufacturer firmware, including third-party mirrors of official OS images.
+- Binary files of any kind in the repository (`.bin`, `.syx`, `.hex`, firmware archives).
+- Affiliate or referral links.
+- Entries without a working `source` or `homepage`.
+- Links that the hardware platform forbids sharing. The `notes` field on `elektron-octatrack` shows an example of a platform policy.
+
+## Pull request checklist
+
+- [ ] `pnpm validate` passes
+- [ ] `pnpm check` passes
+- [ ] `pnpm build` passes
+- [ ] Every link opens
+- [ ] `license` matches the source repository's license file
+- [ ] Versions are newest first, with no duplicates, and dates appear only where confirmed
+- [ ] No binary files are added
+- [ ] One device or one firmware per PR when possible
+
+## Licensing of contributions
+
+By opening a pull request, you agree that your code contributions are licensed under MIT (see [LICENSE](LICENSE)) and that your data contributions under `src/content` are licensed under CC-BY-4.0 (see [LICENSE-DATA](LICENSE-DATA)).

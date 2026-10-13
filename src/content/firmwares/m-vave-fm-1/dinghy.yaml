@@ -1,0 +1,32 @@
+device: m-vave-fm-1
+name: Dinghy
+summary: >-
+  Minimal base firmware to build your own on: update path, USB rescue, USB MIDI and audio, panel, screen and
+  settings working and documented, with a sine wave on top.
+description: >-
+  Classified as firmware rather than a tool because it is a flashable image (a 4-voice sine synth) that
+  people copy and extend; it is tagged platform and sdk to mark its role as a starting skeleton. The README
+  has a step-by-step build-your-own guide.
+status: active
+authors:
+- name: Sven Trogus (zvenson)
+  url: https://github.com/zvenson
+source: https://github.com/zvenson/dinghy
+source_status: open
+license: GPL-3.0-only
+homepage: https://github.com/zvenson/dinghy
+distribution: browser-installer
+install_notes: >-
+  Installs from the FM-1 Firmware Hub listed on fm1-editor.com, or build and flash with the Makefile.
+brick_risk: true
+tags: [platform, sdk, usb-audio, usb-midi]
+versions:
+- version: '0.3'
+  date: 2026-10-09
+  url: https://github.com/zvenson/dinghy/releases/tag/v0.3
+- version: '0.2'
+  date: 2026-10-09
+  url: https://github.com/zvenson/dinghy/releases/tag/v0.2
+- version: '0.1'
+  date: 2026-10-09
+  url: https://github.com/zvenson/dinghy/releases/tag/v0.1

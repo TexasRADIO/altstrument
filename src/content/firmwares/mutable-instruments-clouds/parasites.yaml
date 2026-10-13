@@ -1,0 +1,37 @@
+device: mutable-instruments-clouds
+name: Parasites (Clouds)
+summary: Clouds firmware adding a CV-controllable shimmer reverb, the Resonestor dual resonator with Karplus-Strong plucks, extended granular options and a tempo-synced looping delay. Also exists for Tides, Warps and Frames.
+description: >-
+  Reverb is called Miverb on the project page and Oliverb in the release
+  history and in later ports. Granular gains reversed playback, asymmetric
+  grain envelopes and much smaller grains; the looping delay adds tempo sync,
+  ping-pong and an open feedback loop. Parasites for Tides (v1.121), Warps
+  (v1.01) and Frames (v1.21) come from the same repository and release list
+  but those modules have no device page here. Recalibrate after updating.
+status: dormant
+authors:
+  - name: Matthias Puech
+    url: https://github.com/mqtthiqs
+source: https://github.com/mqtthiqs/parasites
+source_status: open
+license: MIT
+license_notes: >-
+  Inherits from Mutable Instruments; the repository README states STM32
+  projects are MIT and AVR projects GPL-3.0.
+homepage: https://mqtthiqs.github.io/parasites/clouds.html
+distribution: download
+requires_stock: Use v1.3 or later if the module was bought in July 2015 or later
+install_notes: >-
+  Follow the firmware update procedure in the official Clouds manual, then
+  recalibrate (press Save on startup). If the serial number ends in a number
+  below 020, the project page advises contacting Mutable Instruments first
+  because the bootloader may be faulty.
+brick_risk: true
+tags: [granular, reverb, delay, physical-modeling, fx]
+versions:
+  - version: clouds-v2.01
+    date: 2016-09-29
+    url: https://github.com/mqtthiqs/parasites/releases/tag/clouds-v2.01
+  - version: clouds-v2.0
+    date: 2016-09-05
+    url: https://github.com/mqtthiqs/parasites/releases/tag/clouds-v2.0

@@ -1,0 +1,27 @@
+device: paintaudio-midi-captain
+name: MidiCaptain4Kemper
+summary: Alternative CircuitPython firmware extension for PaintAudio MIDI Captain controllers with Kemper Profiler stomp, performance and tuner views and a bidirectional mode. Selectable at boot beside PaintAudio's KPP 3.5 firmware.
+description: >-
+  Extends PaintAudio's firmware 3.5 for the Kemper Profiler Player. Three views:
+  stomp/effect (rig name, four slots with Kemper colours), performance (five
+  rigs per bank, morphing) and tuner. At boot, holding a switch picks USB disk
+  mode, the PaintAudio firmware, a MIDI request mode or bidirectional
+  communication with the Kemper, where LED colour and brightness follow effect
+  type and state. Its hardware reverse-engineering work is credited as the basis
+  of PySwitch.
+status: maintained
+authors:
+  - name: gstrotmann
+    url: https://github.com/gstrotmann
+source: https://github.com/gstrotmann/MidiCaptain4Kemper
+source_status: open
+license: MIT
+distribution: download
+requires_stock: PaintAudio KPP firmware 3.5
+install_notes: Hold switch 1 while powering on to mount the USB drive, then copy the files from the src folder to the device.
+tags: [controller-mode, midi, ui]
+versions:
+  - version: main @ 7f0e031
+    date: 2025-01-08
+    url: https://github.com/gstrotmann/MidiCaptain4Kemper/commit/7f0e031
+    notes: No tagged releases; this is the latest commit.

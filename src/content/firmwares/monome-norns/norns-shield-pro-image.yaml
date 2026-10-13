@@ -1,0 +1,25 @@
+device: monome-norns
+name: Norns Shield Pro image
+summary: Disk images for Norns-Shield-Pro, a Freepoet hardware variant of the norns shield; a base image, one with scripts preloaded and a Lenovo-labelled variant, flashed with balenaEtcher.
+description: >-
+  The image repository carries the flashing guide, checksums and release
+  assets. Its own README says the supported hardware revisions, minimum card
+  size, preloaded script list and the purpose of the Lenovo variant are not
+  yet documented, and that flashing erases the target drive. Freepoet's hardware repo
+  is separate (Norns-Shield-Pro).
+status: active
+authors:
+  - name: Freepoet
+    url: https://github.com/FreepoetOfficial
+source_status: binary-only
+license: unspecified
+license_notes: No license file or statement in the image repository.
+homepage: https://github.com/FreepoetOfficial/Norns-Shield-Pro-Image
+distribution: download
+requires_stock: Norns-Shield-Pro hardware
+install_notes: Verify the SHA-256 listed in the repository, extract the .7z and write the image with balenaEtcher. Confirm your hardware revision with the vendor first.
+tags: [platform, os]
+versions:
+  - version: v-20251216
+    date: 2025-12-17
+    url: https://github.com/FreepoetOfficial/Norns-Shield-Pro-Image/releases/tag/v-20251216

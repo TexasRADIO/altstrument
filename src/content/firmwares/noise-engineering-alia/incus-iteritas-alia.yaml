@@ -1,0 +1,23 @@
+device: noise-engineering-alia
+name: Incus Iteritas Alia
+summary: Official wavemangling FM percussion and instrument voice firmware.
+description: >-
+  New firmware for Alia; NE has compared it against the BIA on its blog. Runs
+  on any Alia module. Manual: https://noiseengineering.us/manuals/incus-
+  iteritas-alia/
+status: active
+authors:
+  - name: Noise Engineering
+    url: https://noiseengineering.us
+source_status: closed
+license: proprietary
+license_notes: >-
+  Closed-source official firmware, free to Alia owners.
+homepage: https://noiseengineering.us/products/incus-iteritas-alia/
+distribution: download
+install_notes: >-
+  Swap from the Noise Engineering firmware portal
+  (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
+  (Chrome, Edge or Opera). Free for Alia owners.
+tags: [official, percussion, voice, fm]
+versions: []

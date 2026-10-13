@@ -1,0 +1,36 @@
+---
+import Base from '@/layouts/Base.astro';
+import { getDevicesWithFirmwares, recentVersions, isoDate, versionAnchor } from '@/lib/catalog';
+
+const rows = recentVersions(await getDevicesWithFirmwares(), 50);
+---
+<Base title="Recent versions" description="The 50 most recent dated firmware versions across the catalog.">
+  <h1 class="text-2xl">Recent versions</h1>
+  <p class="mt-1 max-w-[68ch] text-muted">
+    The {rows.length} most recent dated versions across all firmware, newest first.
+    Also available as <a href="/feed.xml">RSS</a>.
+  </p>
+  {rows.length === 0 ? (
+    <p class="mt-6 text-muted">No dated versions recorded yet.</p>
+  ) : (
+    <table class="vtable mt-5">
+      <caption class="sr-only">Most recent versions</caption>
+      <thead>
+        <tr>
+          <th scope="col">Date</th><th scope="col">Firmware</th><th scope="col">Device</th><th scope="col">Version</th><th scope="col">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <td class="nowrap mono" data-label="Date">{isoDate(r.date)}</td>
+            <td data-label="Firmware"><a href={`${r.firmware.url}#${versionAnchor(r.version.version)}`}>{r.firmware.data.name}</a></td>
+            <td data-label="Device"><a href={r.device.url}>{r.device.data.name}</a></td>
+            <td class="mono" data-label="Version">{r.version.url ? <a href={r.version.url} rel="noopener">{r.version.version}</a> : r.version.version}</td>
+            <td data-label="Notes">{r.version.notes}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )}
+</Base>

@@ -1,0 +1,31 @@
+device: monome-tools
+name: monome-rack
+kind: tool
+summary: VCV Rack plugin that emulates monome's Teletype, ansible, white whale, meadowphysics and earthsea inside Rack, with virtual 64/128/256 grids and support for real grids and arcs through serialosc.
+description: >-
+  An unofficial community port made with permission and no support
+  guarantees. monome's docs say the sunset Eurorack modules were ported to
+  VCV Rack through community effort led by Dewb. A MetaModule port exists
+  in a separate repository but is a work in progress.
+status: maintained
+authors:
+  - name: Michael Dewberry
+    url: https://github.com/Dewb
+source: https://github.com/Dewb/monome-rack
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own files.
+homepage: https://dewb.github.io/monome-rack
+distribution: download
+install_notes: Install from the VCV Rack plugin library or a GitHub release; serialosc is needed only for real grids and arcs.
+tags: [emulator, grid]
+versions:
+  - version: v2.2.8
+    date: 2024-10-10
+    url: https://github.com/Dewb/monome-rack/releases/tag/v2.2.8
+  - version: v2.2.7
+    date: 2024-01-14
+    url: https://github.com/Dewb/monome-rack/releases/tag/v2.2.7
+  - version: v2.2.3
+    date: 2023-10-03
+    url: https://github.com/Dewb/monome-rack/releases/tag/v2.2.3

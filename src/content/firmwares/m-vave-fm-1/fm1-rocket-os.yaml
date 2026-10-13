@@ -1,0 +1,21 @@
+device: m-vave-fm-1
+name: fm1-rocket-os
+summary: >-
+  Work-in-progress clip-launching performance firmware that turns the FM-1 into an Ableton-style clip
+  launcher and matrix sequencer; forked from X0X.
+description: >-
+  No releases; the README says to install a built build/x0x.fwsc with tools/fm1_install.py and to use
+  X0X's web installer to return to stock. The repository includes a playbook of lessons for building FM-1
+  firmware on any base.
+status: active
+authors:
+- name: cmlarsen
+  url: https://github.com/cmlarsen
+source: https://github.com/cmlarsen/fm1-rocket-os
+source_status: open
+license: GPL-3.0-only
+distribution: source-only
+install_notes: >-
+  Build, then install with tools/fm1_install.py; return to stock with the X0X web installer.
+brick_risk: true
+tags: [sequencer, performance, ui]

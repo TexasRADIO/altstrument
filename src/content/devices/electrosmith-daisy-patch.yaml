@@ -1,0 +1,27 @@
+name: Daisy Patch / Pod / Patch.init()
+manufacturer: Electrosmith
+category: eurorack
+tagline: Daisy-based Eurorack and desktop hardware for custom DSP firmware
+platform: Electrosmith Daisy (libDaisy, DaisySP)
+links:
+  manufacturer: https://electro-smith.com/
+  community:
+    - label: Daisy community forum
+      url: https://community.daisy.audio/
+notes: >-
+  Daisy Patch is listed by Electrosmith as legacy hardware. Firmware is
+  written in C++ (libDaisy / DaisySP), Arduino, Pure Data or Max gen~, and
+  flashed over the Daisy bootloader. Ports of Mutable Instruments code to
+  Patch follow the same terms as the original (MIT, no use of the Mutable
+  name).
+related: [noise-engineering-versio, befaco-lich]
+image:
+  src: /images/devices/electrosmith-daisy-patch.jpg
+  style: photo
+  alt: Front panel of the Electrosmith Patch.Init() Eurorack module (cropped from the product photo)
+  width: 560
+  height: 1200
+  credit: Electrosmith
+  license: manufacturer product image
+  source_url: https://daisy.audio/products/patch-init
+  original_url: https://daisy.audio/cdn/shop/products/patch_init_front_square.jpg

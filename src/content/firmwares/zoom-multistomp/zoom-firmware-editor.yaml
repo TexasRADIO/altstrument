@@ -1,0 +1,25 @@
+device: zoom-multistomp
+name: Zoom Firmware Editor
+kind: tool
+summary: Java tool that edits Zoom's official firmware updater files to add, remove or swap effects and replace drum samples. Supports ZDL pedals (G1on, B1on, MS-50G, MS-60B, MS-70CDR) and ZD2 pedals (G3n, G5n, B3n, AC-2/3, G1/B1 Four).
+description: >-
+  Classified as a tool because it works on updater files you supply rather than
+  publishing firmware images; its output is a modified updater that you then run
+  with Zoom's own installer. It can also extract effect files from an updater,
+  which zoom-zt2 then installs over SysEx. The README notes that Four-series
+  updaters contain a GUARDZDL.ZT2 file whose handling is unresolved, and zoom-zt2
+  says this repacking approach did not work on the G1Four.
+status: dormant
+authors:
+  - name: Barsik-Barbosik
+    url: https://github.com/Barsik-Barbosik
+source: https://github.com/Barsik-Barbosik/Zoom-Firmware-Editor
+source_status: open
+license: MIT
+distribution: patch-your-own
+install_notes: Needs Java 8 or later and the original Windows firmware updaters from Zoom, which you download yourself. Edit the updater, then run it as normal.
+tags: [editor, fx, research]
+versions:
+  - version: v0.98
+    date: 2019-04-16
+    url: https://github.com/Barsik-Barbosik/Zoom-Firmware-Editor/releases/tag/v0.98

@@ -1,0 +1,26 @@
+name: MIDI Commander
+manufacturer: MeloAudio
+category: foot-controller
+tagline: Eight-button MIDI foot controller with a small display
+platform: STM32F103
+links:
+  community:
+    - label: midi-commander-custom
+      url: https://github.com/harvie256/midi-commander-custom
+notes: >-
+  Firmware is loaded with the same DFU update process as the official firmware,
+  using the update tools from MeloAudio or ST (STSW-STM32080). The custom build
+  keeps its configuration in flash, separate from the stock configuration in the
+  external EEPROM, and the custom build's author expects you can go back to
+  the MeloAudio build. The custom build's author reported trouble with
+  DFU on Windows 10 and tested on a Windows 7 VM.
+image:
+  src: /images/devices/meloaudio-midi-commander.jpg
+  style: photo
+  alt: MeloAudio MIDI Commander USB MIDI foot controller with ten footswitches, angled view
+  width: 1200
+  height: 654
+  credit: MeloAudio
+  license: manufacturer product image
+  source_url: https://web.archive.org/web/20190412102511/https://meloaudio.com/products/meloaudio-midi-commander-guitar-floor-multi-effects-portable-usb-midi-foot-controller-foot-switches
+  original_url: https://web.archive.org/web/20190804002223im_/https://cdn.shopify.com/s/files/1/0142/2137/7594/products/midi1500_1280x1280.jpg?v=1546500881

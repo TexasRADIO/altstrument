@@ -1,0 +1,12 @@
+name: Sequential Circuits
+website: https://sequential.com/
+logo:
+  src: /images/logos/sequential-circuits.png
+  alt: Sequential logo
+  width: 1200
+  height: 175
+  credit: Sequential LLC
+  license: public domain (text logo)
+  source_url: https://commons.wikimedia.org/wiki/File:Sequential-Logo-Black.png
+  original_url: https://upload.wikimedia.org/wikipedia/commons/2/21/Sequential-Logo-Black.png
+  monochrome: true

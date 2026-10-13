@@ -1,0 +1,89 @@
+---
+import Base from '@/layouts/Base.astro';
+import StatusBadge from '@/components/StatusBadge.astro';
+import SourceBadge from '@/components/SourceBadge.astro';
+import LicenseBadge from '@/components/LicenseBadge.astro';
+import BrickWarning from '@/components/BrickWarning.astro';
+import TagList from '@/components/TagList.astro';
+import AuthorList from '@/components/AuthorList.astro';
+import VersionTable from '@/components/VersionTable.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import Prose from '@/components/Prose.astro';
+import { KIND_LABELS, DISTRIBUTION_LABELS } from '@/lib/labels';
+import { getDevicesWithFirmwares, hostOf, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
+
+export async function getStaticPaths() {
+  const devices = await getDevicesWithFirmwares();
+  return devices.flatMap((device) =>
+    device.firmwares.map((firmware) => ({
+      params: { device: device.id, fw: firmware.slug },
+      props: { device, firmware },
+    })),
+  );
+}
+
+interface Props { device: DeviceItem; firmware: FirmwareItem }
+const { device, firmware: fw } = Astro.props;
+const d = fw.data;
+const links = [
+  d.source && { label: 'Source', url: d.source },
+  d.homepage && { label: 'Homepage', url: d.homepage },
+].filter(Boolean) as { label: string; url: string }[];
+---
+<Base title={`${d.name} for ${device.data.name}`} description={`${d.name}: ${d.summary}`}>
+  <Breadcrumb items={[{ label: 'Devices', href: '/' }, { label: device.data.name, href: device.url }, { label: d.name }]} />
+
+  <header>
+    <h1 class="text-2xl">{d.name}</h1>
+    <p class="mt-1 text-muted">
+      {KIND_LABELS[d.kind]} for <a href={device.url}>{device.data.name}</a>{' '}
+      (<a href={`/manufacturers/${device.manufacturerSlug}`}>{device.data.manufacturer}</a>)
+    </p>
+    <p class="mt-2 max-w-[68ch] text-base">{d.summary}</p>
+    <p class="mt-2 text-sm text-muted">by <AuthorList authors={d.authors} /></p>
+    <div class="mt-3 flex flex-wrap items-center gap-1.5">
+      <StatusBadge status={d.status} />
+      <SourceBadge status={d.source_status} />
+      <LicenseBadge license={d.license} />
+    </div>
+  </header>
+
+  {d.brick_risk && <div class="mt-4 max-w-[68ch]"><BrickWarning /></div>}
+
+  <dl class="mt-5 grid max-w-[68ch] grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-sm">
+    {d.distribution && (<><dt class="text-muted">Distribution</dt><dd>{DISTRIBUTION_LABELS[d.distribution]}</dd></>)}
+    {d.requires_stock && (<><dt class="text-muted">Requires stock</dt><dd class="mono">{d.requires_stock}</dd></>)}
+    {d.license_notes && (<><dt class="text-muted">License notes</dt><dd>{d.license_notes}</dd></>)}
+    {links.map((l) => (
+      <><dt class="text-muted">{l.label}</dt><dd><a href={l.url} rel="noopener">{hostOf(l.url)}</a> <span class="mono break-all text-xs text-muted">{l.url}</span></dd></>
+    ))}
+    {d.generated_from && (
+      <><dt class="text-muted">Synced from</dt><dd>upstream metadata, <a href={d.generated_from} rel="noopener">{hostOf(d.generated_from)}</a> <span class="mono break-all text-xs text-muted">{d.generated_from}</span>. Corrections belong upstream.</dd></>
+    )}
+  </dl>
+
+  {d.tags.length > 0 && <div class="mt-4"><TagList tags={d.tags} /></div>}
+
+  {d.description && (
+    <section class="mt-8" aria-labelledby="desc-h">
+      <h2 id="desc-h" class="mb-2 text-lg">Description</h2>
+      <Prose text={d.description} />
+    </section>
+  )}
+
+  {d.install_notes && (
+    <section class="mt-8" aria-labelledby="install-h">
+      <h2 id="install-h" class="mb-2 text-lg">Install notes</h2>
+      <Prose text={d.install_notes} />
+    </section>
+  )}
+
+  <section class="mt-8" aria-labelledby="versions-h">
+    <h2 id="versions-h" class="mb-2 text-lg">Version history</h2>
+    {fw.versions.length > 0
+      ? <VersionTable versions={fw.versions} visible={1000} anchors caption={`${d.name} version history`} />
+      : <p class="text-muted">No versions recorded.</p>}
+  </section>
+
+  <p class="mt-8 text-sm"><a href={device.url}>Back to {device.data.name}</a></p>
+</Base>

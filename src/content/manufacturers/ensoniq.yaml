@@ -1,0 +1,11 @@
+name: Ensoniq
+logo:
+  src: /images/logos/ensoniq.svg
+  alt: Ensoniq logo
+  width: 560
+  height: 103
+  credit: Tymcode
+  license: CC0-1.0
+  source_url: https://commons.wikimedia.org/wiki/File:Ensoniq_Logo_1993-2003.svg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/d/d1/Ensoniq_Logo_1993-2003.svg
+  monochrome: true

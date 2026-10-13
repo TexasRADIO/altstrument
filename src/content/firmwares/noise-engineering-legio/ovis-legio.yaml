@@ -1,0 +1,22 @@
+device: noise-engineering-legio
+name: Ovis Legio
+summary: Official experimental granular effect that turns any audio source into a Shepard tone.
+description: >-
+  Official Noise Engineering firmware for the 6 HP Legio platform. Runs on any
+  Legio module. Manual: https://noiseengineering.us/manuals/ovis-legio/
+status: active
+authors:
+  - name: Noise Engineering
+    url: https://noiseengineering.us
+source_status: closed
+license: proprietary
+license_notes: >-
+  Closed-source official firmware, free to Legio owners.
+homepage: https://noiseengineering.us/products/ovis-legio/
+distribution: download
+install_notes: >-
+  Swap from the Noise Engineering firmware portal
+  (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
+  (Chrome, Edge or Opera). Free for Legio owners.
+tags: [official, granular, effect, experimental]
+versions: []

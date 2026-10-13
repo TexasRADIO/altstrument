@@ -1,0 +1,28 @@
+name: MIDI Captain (Nano 4 / Mini 6 / 10)
+manufacturer: PaintAudio
+category: foot-controller
+tagline: CircuitPython-based MIDI foot controllers with colour displays
+platform: CircuitPython
+links:
+  manufacturer: https://paintaudio.com/
+  community:
+    - label: PySwitch emulator and configurator
+      url: https://pyswitch.tunetown.de/
+    - label: PySwitch thread on the Kemper forum
+      url: https://forum.kemper-amps.com/forum/thread/65206-pyswitch-an-alternative-customizable-firmware-for-paintaudio-midi-captain-contro/
+notes: >-
+  The controllers present a USB drive (hold switch 1 while powering up), so
+  firmware is installed by copying files. Both projects here are written in
+  CircuitPython. PySwitch recommends saving the drive's original contents
+  first, including the license folder, if you may want to restore the
+  manufacturer firmware, and supports multi-boot alongside it.
+image:
+  src: /images/devices/paintaudio-midi-captain.jpg
+  style: photo
+  alt: Top view of the PaintAudio MIDI Captain Mini 6 foot controller with six footswitches and a small display
+  width: 1200
+  height: 773
+  credit: PaintAudio
+  license: manufacturer product image
+  source_url: https://paintaudio.com/products/midi-captain-mini-6-controller-with-hid-multi-state-cycling
+  original_url: https://paintaudio.com/cdn/shop/files/4_7c56ca7b-1ec4-4c0b-87f1-7bbf0b2c3b02.png

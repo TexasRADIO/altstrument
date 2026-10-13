@@ -1,0 +1,23 @@
+device: m-vave-fm-1
+name: FM1 Move
+summary: >-
+  Eight-track groovebox inspired by the Ableton Move workflow, built on SLOOP 2.5: any mix of synth and
+  drum tracks, clips and scenes, 240x240 UI, browser simulator and device manager.
+description: >-
+  The README warns that it is experimental and has never run on hardware: it is verified in host simulation
+  and builds with the real JieLi compiler, but no build has run on a physical FM-1. A recovery section
+  is included. Source branch: fm1-move/dev.
+status: active
+authors:
+- name: Nicodesy06
+  url: https://github.com/Nicodesy06
+source: https://github.com/Nicodesy06/FM1-MOVE
+source_status: open
+license: GPL-3.0-only
+homepage: https://nicodesy06.github.io/FM1-MOVE/device/
+distribution: browser-installer
+install_notes: >-
+  Device page at nicodesy06.github.io/FM1-MOVE/device/ installs and backs up over WebMIDI. Not tested
+  on hardware yet; do not install on a unit you cannot recover.
+brick_risk: true
+tags: [sequencer, performance, ui, drums]

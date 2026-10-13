@@ -1,0 +1,15 @@
+device: elektron-digitakt
+name: digirta
+summary: Octave-band real-time analyzer popup for the Digitakt mk1 OS 1.53, showing frequency balance of the main outputs or inputs over any page.
+status: active
+authors:
+  - name: Alez22
+    url: https://github.com/Alez22
+source: https://github.com/Alez22/digirta
+source_status: open
+license: MIT
+distribution: patch-your-own
+requires_stock: "1.53"
+install_notes: elekloader mod; needs the core mod.
+tags: [ui]
+versions: []

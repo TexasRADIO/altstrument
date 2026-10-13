@@ -1,0 +1,32 @@
+name: Model:Cycles
+manufacturer: Elektron
+category: groovebox
+tagline: 6-track FM groovebox
+stock_firmware: "1.13"
+links:
+  manufacturer: https://www.elektron.se/support-downloads/modelcycles
+  community:
+    - label: elektronmods.com
+      url: https://elektronmods.com/
+    - label: Modded Cycles browser flasher
+      url: https://18nelli18.github.io/Modded-Cycles/flasher/
+notes: >-
+  Mods target OS 1.13 and patch the official .syx you supply; none ship
+  Elektron firmware. Model:Cycles and Model:Samples share much of their
+  firmware, so several projects (Modded Cycles, elektron-model-tweaks,
+  ms-multi-output, plaits-on-models) cover both; Modded Cycles can also turn a
+  Cycles into a Samples and back, where returning needs a MIDI interface.
+  Elektron does not permit sharing mod files or links on Elektronauts (policy
+  of 2026-09-16); community discussion moved to elektronmods.com and
+  modwerk.app.
+related: [elektron-model-samples, elektron-syntakt]
+image:
+  src: /images/devices/elektron-model-cycles.webp
+  style: photo
+  alt: "Elektron Model:Cycles, top view"
+  width: 1200
+  height: 812
+  credit: Elektron
+  license: manufacturer press kit
+  source_url: https://www.elektron.se/press
+  original_url: https://www.elektron.se/wp-content/uploads/2026/09/Elektron-Press-Kit.zip

@@ -1,0 +1,27 @@
+device: monome-tools
+name: diii (terminal)
+kind: tool
+summary: >-
+  Python terminal REPL for iii-mode grids and arcs, a fork of druid: send Lua, see output and manage files on the device.
+status: active
+authors:
+  - name: monome
+    url: https://monome.org
+source: https://github.com/monome/diii
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE is GPLv3; no "or later" grant found in project files.
+homepage: https://monome.org/docs/iii/
+distribution: download
+install_notes: Install with uv (`uv pip install monome-diii`) in a virtual environment, then run `diii`.
+tags: [scripting, flasher]
+versions:
+  - version: v1.1.1
+    date: 2026-06-10
+    url: https://github.com/monome/diii/releases/tag/v1.1.1
+  - version: v1.1.0
+    date: 2026-03-20
+    url: https://github.com/monome/diii/releases/tag/v1.1.0
+  - version: v1.0.2
+    date: 2025-02-20
+    url: https://github.com/monome/diii/releases/tag/v1.0.2

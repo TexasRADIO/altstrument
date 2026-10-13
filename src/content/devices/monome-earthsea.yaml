@@ -1,0 +1,18 @@
+name: earthsea
+manufacturer: monome
+category: eurorack
+tagline: Pattern-recording grid keyboard and shape-memory CV (discontinued)
+platform: AVR32 (AT32UC3B)
+stock_firmware: "1.9.5"
+links:
+  manufacturer: https://monome.org/docs/earthsea/
+  community:
+    - label: llllllll.co (lines forum)
+      url: https://llllllll.co/
+    - label: monome modular firmware update guide
+      url: https://monome.org/docs/modular/update/
+notes: >-
+  Legacy monome module with open firmware; an earthsea app also runs on ansible.
+  Community work such as polyearthsea is built on the multipass framework
+  and targets several modules. Back up before flashing.
+related: [monome-white-whale, monome-meadowphysics, monome-ansible, monome-tools]

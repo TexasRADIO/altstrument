@@ -1,0 +1,27 @@
+name: volca drum
+manufacturer: Korg
+category: drum-machine
+tagline: 6-part digital percussion synth with motion sequencing
+stock_firmware: "1.14"
+links:
+  manufacturer: https://www.korg.com/us/products/dj/volca_drum/
+  community:
+    - label: Sonic State coverage of vdcf
+      url: https://sonicstate.com/news/2026/08/20/free-custom-firmware-for-the-volca-drum/
+notes: >-
+  Firmware updates are audio files played into the SYNC IN jack. The vdcf
+  project removed Korg's downgrade check, so Korg's own 1.14 file can be
+  played to return to stock.
+related:
+  - korg-volca-fm
+  - korg-volca-sample
+image:
+  src: /images/devices/korg-volca-drum.png
+  style: photo
+  alt: Top-down view of the Korg volca drum digital percussion synthesizer
+  width: 1030
+  height: 637
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/dj/volca_drum/
+  original_url: https://cdn.korg.com/us/products/upload/338e4d93b7041ef6833930bf6b81df19_pc.png

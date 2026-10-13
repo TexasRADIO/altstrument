@@ -1,0 +1,17 @@
+name: Matrix-1000
+manufacturer: Oberheim
+category: synth
+tagline: Rack-mount analog polysynth module
+platform: Motorola 6809
+stock_firmware: "1.11"
+links:
+  community:
+    - label: MATRIXSYNTH comparison post
+      url: https://www.matrixsynth.com/2020/09/original-matrix-1000-firmware-vs-gligli.html
+    - label: Tauntek Matrix-1000 firmware page
+      url: http://www.tauntek.com/Matrix1000Firmware.htm
+notes: >-
+  Both alternative firmwares are EPROM images (27C256) that replace the stock
+  system ROM, so they need a chip swap rather than a software update. Keep the
+  original chip to revert. The Tauntek page also covers a separate Matrix-6/6R
+  firmware, which is not listed here.

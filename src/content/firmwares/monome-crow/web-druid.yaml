@@ -1,0 +1,16 @@
+device: monome-crow
+name: druid web
+kind: tool
+summary: Browser-based Lua editor and REPL for crow and crow-like devices over Web Serial, with a Monaco editor beside the output console, modelled on maiden. Chromium browsers only.
+status: active
+authors:
+  - name: Dune Desormeaux
+    url: https://github.com/dessertplanet
+source: https://github.com/dessertplanet/web-druid
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE is GPLv3; no "or later" grant found in project files.
+homepage: https://dessertplanet.github.io/web-druid/
+distribution: browser-installer
+install_notes: Open the page in Chrome, Edge or Opera and pick the crow from the serial port list. Firefox and Safari are not supported.
+tags: [scripting, editor]

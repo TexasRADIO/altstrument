@@ -1,0 +1,26 @@
+name: OpenDeck boards
+manufacturer: Shantea Controls
+category: diy-platform
+tagline: Open MIDI and OSC controller platform for custom hardware
+platform: RP2040, ESP32-S3, STM32, nRF, Teensy 4 (Zephyr RTOS)
+links:
+  manufacturer: https://shanteacontrols.com/
+  community:
+    - label: OpenDeck configurator
+      url: https://config.shanteacontrols.com/
+notes: >-
+  One official board is sold, the OpenDeck L (RP2040, 128 digital inputs, DIN
+  and USB MIDI, no OSC). The firmware also runs on a long list of third-party
+  development boards, including Teensy 4.0/4.1, Raspberry Pi Pico and Pico 2,
+  Adafruit Metro and several ST Nucleo and Discovery boards; OSC needs an
+  Ethernet-capable board.
+image:
+  src: /images/devices/shantea-opendeck.png
+  style: photo
+  alt: OpenDeck L board (RP2040) with input and output header pads, angled top view
+  width: 1200
+  height: 800
+  credit: Shantea Controls
+  license: manufacturer product image
+  source_url: https://lectronz.com/products/opendeck-l/
+  original_url: https://lectronz-images.b-cdn.net/lectronz/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDgwMzMsInB1ciI6ImJsb2JfaWQifX0=--27d8feb70d147d79edae38b616b9d6b49fbf875a/1000031620.png

@@ -1,0 +1,27 @@
+name: Deluge
+manufacturer: Synthstrom Audible
+category: groovebox
+tagline: Portable sequencer, synthesizer and sampler
+platform: Renesas RZ/A1L (Arm Cortex-A9)
+stock_firmware: 1.2.1
+links:
+  manufacturer: https://synthstrom.com/product/deluge/
+  community:
+    - label: Deluge Community
+      url: https://delugecommunity.com/
+    - label: Update guide
+      url: https://github.com/SynthstromAudible/DelugeFirmware/wiki/Update-guide
+notes: >-
+  Synthstrom Audible open-sourced the Deluge firmware, and the community
+  firmware is developed in Synthstrom's own GitHub organisation. Release notes
+  recommend backing up the SD card before updating.
+image:
+  src: /images/devices/synthstrom-deluge.jpg
+  style: photo
+  alt: Front view of the Synthstrom Deluge groovebox with its pad grid and wooden side cheeks
+  width: 1200
+  height: 800
+  credit: Synthstrom Audible
+  license: manufacturer product image
+  source_url: https://synthstrom.com/product/deluge/
+  original_url: https://synthstrom.com/wp-content/uploads/2017/05/Deluge3-scaled.jpg

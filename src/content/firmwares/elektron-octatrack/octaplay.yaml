@@ -1,0 +1,18 @@
+device: elektron-octatrack
+name: Octaplay
+summary: Octabam module that adds playhead modes to the sequencer - normal, reversed, two pingpongs, random and shuffle - shared by all tracks or set per track (T1-T8, M1-M8).
+description: >-
+  Experimental. Played on an MKII in test images but not stress-tested; back up
+  projects and keep a stock OS file at hand.
+status: active
+authors:
+  - name: devilfish707
+    url: https://github.com/devilfish707
+source: https://github.com/devilfish707/Octaplay
+source_status: open
+license: MIT
+distribution: patch-your-own
+requires_stock: 1.40C
+install_notes: Build with octabam / octamod from your own OS 1.40C.
+tags: [sequencer, performance]
+versions: []

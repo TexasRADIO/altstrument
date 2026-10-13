@@ -1,0 +1,28 @@
+device: m-vave-fm-1
+name: FM-106
+summary: >-
+  Roland Juno-106 emulation: a 6-voice polyphonic port of the KR-106 engine using both cores, with oscilloscope
+  and parameters on screen, 4 banks, Juno-106 SysEx patch import and USB audio.
+description: >-
+  Ported from ultramaster_kr106 with dual-core acceleration adapted from Melodee. A companion web Librarian
+  handles .syx patches.
+status: active
+authors:
+- name: PattF
+  url: https://github.com/PatttF
+source: https://github.com/PatttF/fm-106
+source_status: open
+license: GPL-3.0-only
+homepage: https://patttf.github.io/fm-106/Librarian.html
+distribution: browser-installer
+install_notes: Browser WebMIDI installer; see the repository README.
+brick_risk: true
+tags: [synth-engine, usb-audio, editor, midi]
+versions:
+- version: Beta2
+  date: 2026-10-12
+  url: https://github.com/PatttF/fm-106/releases/tag/Beta2
+- version: release
+  date: 2026-10-11
+  url: https://github.com/PatttF/fm-106/releases/tag/release
+  notes: First release.

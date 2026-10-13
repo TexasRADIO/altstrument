@@ -1,0 +1,17 @@
+device: novation-launchpad-pro
+name: vjosset/reasonlpp
+summary: Launchpad Pro firmware for Reason, based on Dave Hodder's open firmware.
+status: dormant
+authors:
+  - name: vjosset
+    url: https://github.com/vjosset
+source: https://github.com/vjosset/reasonlpp
+source_status: open
+license: BSD-3-Clause
+distribution: source-only
+tags: [platform, sdk]
+versions:
+  - version: master @ 36fe8fb
+    date: 2020-03-10
+    url: https://github.com/vjosset/reasonlpp/commit/36fe8fb
+    notes: No tagged releases; this is the latest commit.

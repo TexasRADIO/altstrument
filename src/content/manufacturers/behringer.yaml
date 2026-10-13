@@ -1,0 +1,12 @@
+name: Behringer
+website: https://www.behringer.com/
+logo:
+  src: /images/logos/behringer.svg
+  alt: Behringer logo
+  width: 134
+  height: 27
+  credit: Behringer
+  license: public domain (text logo)
+  source_url: https://commons.wikimedia.org/wiki/File:Behringer_logo.svg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/a/a7/Behringer_logo.svg
+  monochrome: true

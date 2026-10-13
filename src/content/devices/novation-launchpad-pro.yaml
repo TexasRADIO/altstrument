@@ -1,0 +1,28 @@
+name: Launchpad Pro (MK1)
+manufacturer: Novation
+category: controller
+tagline: 8x8 pad grid controller with USB and DIN MIDI
+platform: STM32
+links:
+  manufacturer: https://novationmusic.com/products/launchpad-pro
+  community:
+    - label: lpp-performance-cfw unbrick guide
+      url: https://github.com/mat1jaczyyy/lpp-performance-cfw/blob/master/unbrick.md
+related: [novation-launchpad]
+notes: >-
+  MK1 only; the Launchpad Pro MK3 is covered under the Launchpad family entry.
+  Novation released an open firmware framework for this model rather than the
+  factory source, and nearly every custom build descends from it. Firmware is
+  sent as SysEx while the unit is in bootloader mode (hold Setup while powering
+  on). Open firmware drops the stock Live port, so mods differ in whether they
+  keep Ableton integration.
+image:
+  src: /images/devices/novation-launchpad-pro.png
+  style: photo
+  alt: Novation Launchpad Pro (MK1) 8x8 RGB pad grid controller, angled front view
+  width: 640
+  height: 399
+  credit: Novation
+  license: manufacturer product image
+  source_url: https://web.archive.org/web/20160607135935/http://global.novationmusic.com/launch/launchpad-pro
+  original_url: https://d19ulaff0trnck.cloudfront.net/sites/default/files/styles/cta_scale_640/public/3-LPP_0_0.png

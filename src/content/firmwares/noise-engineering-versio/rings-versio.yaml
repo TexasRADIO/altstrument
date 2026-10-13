@@ -1,0 +1,15 @@
+device: noise-engineering-versio
+name: Rings Versio
+summary: Port of Mutable Instruments Rings to Versio, distributed as binaries through a shared Drive folder linked from the community firmware index.
+status: unknown
+authors:
+  - name: ericxgao
+    url: https://github.com/ericxgao
+source_status: binary-only
+license: unspecified
+license_notes: >-
+  No license stated. Rings is MIT upstream, but this port's source was not
+  found.
+homepage: https://github.com/Maxhodges/noise-engineering-firmware-index
+distribution: download
+tags: [physical-modeling, synth-engine, emulator]

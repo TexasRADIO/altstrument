@@ -1,0 +1,27 @@
+name: volca sample
+manufacturer: Korg
+category: sampler
+tagline: 10-part sample player with 16-step sequencer
+links:
+  manufacturer: https://www.korg.com/us/products/dj/volca_sample/
+  community:
+    - label: Gearspace thread "Volca Sample firmware hack"
+      url: https://gearspace.com/board/electronic-music-instruments-and-electronic-music-production/1232112-volca-sample-firmware-hack.html
+notes: >-
+  Covers the original (mk1) volca sample. The unofficial firmware installs the
+  same way as Korg's own updates and can be overwritten with the official
+  file. Community reports suggest it may draw more current than stock, so
+  check the power supply.
+related:
+  - korg-volca-drum
+  - korg-volca-fm
+image:
+  src: /images/devices/korg-volca-sample.png
+  style: photo
+  alt: Top-down view of the Korg volca sample digital sample sequencer
+  width: 926
+  height: 575
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/dj/volca_sample/
+  original_url: https://cdn.korg.com/us/products/upload/d6562fa9883cea2fd64f8056de24e40c_pc.png

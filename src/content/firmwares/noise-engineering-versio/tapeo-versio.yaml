@@ -1,0 +1,18 @@
+device: noise-engineering-versio
+name: Tapeo Versio
+summary: Tape-delay emulation with fuzz and an envelope follower controlling the fuzz, built in Max gen~. Turn Fuzz and Fuzz mix fully counter-clockwise before first use.
+status: dormant
+authors:
+  - name: onoma2
+    url: https://github.com/onoma2
+source: https://github.com/onoma2/TapeoVersio
+source_status: open
+license: unspecified
+license_notes: No license file or statement in the repository.
+homepage: https://github.com/onoma2/TapeoVersio
+distribution: download
+install_notes: Prebuilt TapeoVersio_05.bin is in the repository; flash with the Daisy Web Programmer.
+tags: [delay, fx, emulator]
+versions:
+  - version: TapeoVersio_05.bin
+    url: https://github.com/onoma2/TapeoVersio

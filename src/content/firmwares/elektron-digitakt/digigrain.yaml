@@ -1,0 +1,16 @@
+device: elektron-digitakt
+name: digigrain
+summary: Granular playback SRC machine (GRANULAR, machine id 6) for the Digitakt mk1 OS 1.53. Verified in an emulator on the real firmware; not reported on hardware.
+status: active
+authors:
+  - name: lucykowal
+    url: https://github.com/lucykowal
+source: https://github.com/lucykowal/digigrain
+source_status: open
+license: unspecified
+license_notes: No license file in the repository.
+distribution: source-only
+requires_stock: "1.53"
+install_notes: Build with elekloader checked out beside it and your own stock OS 1.53 file; see the repo README.
+tags: [machines, granular]
+versions: []

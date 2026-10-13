@@ -1,0 +1,21 @@
+device: elektron-analog-rytm
+name: rytm1_mods
+summary: "Port of MrScruff's rytm-mods to the Analog Rytm MK1 OS 1.73: SMP CUT per-track low and high cut, random LFO modifiers, euclid accents and velocity humanise. Also exports one elekloader .elemod per mod."
+description: >-
+  Two builds: SMP CUT (press FILTER twice for a low and high cut on the sample
+  layer) and RANDOM (press LFO twice for two random modifiers per sound). Both
+  carry euclid accents and velocity humanise. Chopshop uses its code, credited,
+  as it ships no licence.
+status: active
+authors:
+  - name: gdeo607
+    url: https://github.com/gdeo607
+source: https://github.com/gdeo607/rytm1_mods
+source_status: open
+license: unspecified
+license_notes: No license file in the repository; Chopshop notes it has no licence.
+distribution: patch-your-own
+requires_stock: "1.73"
+install_notes: Every build starts from the pinned stock image you supply; see docs/FLASHING.md in the repo and keep the stock .syx for recovery.
+tags: [filter, lfo, sequencer, velocity, ui]
+versions: []

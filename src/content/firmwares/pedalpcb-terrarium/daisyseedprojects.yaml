@@ -1,0 +1,29 @@
+device: pedalpcb-terrarium
+name: DaisySeedProjects (Guitar Pedal framework)
+summary: Multi-effect pedal framework by Keith Shepherd that abstracts the hardware so a library of effect modules runs on the PedalPCB Terrarium and the author's own 125B and 1590B Daisy Seed pedal designs.
+description: >-
+  The software project is the Guitar Multi-Effect Pedal; three hardware designs
+  are documented alongside it (125B with OLED and relay bypass, 1590B SMD and
+  1590B through-hole). Recent releases add effect chains, a Dattorro plate
+  reverb, harmonic tremolo, a Keeley Halo-style dual echo, and Neural Amp
+  Modeler profiles. v1.6.1 was released 2026-09-26.
+status: active
+authors:
+  - name: Keith Shepherd (bkshepherd)
+    url: https://github.com/bkshepherd
+source: https://github.com/bkshepherd/DaisySeedProjects
+source_status: open
+license: MIT
+distribution: download
+install_notes: Flash a release build to the Daisy Seed, or build the Software/GuitarPedal project for your hardware target.
+tags: [platform, fx, amp-sim, reverb, delay, lfo]
+versions:
+  - version: v1.6.1
+    date: 2026-09-26
+    url: https://github.com/bkshepherd/DaisySeedProjects/releases/tag/v1.6.1
+  - version: v1.6.0
+    date: 2026-06-10
+    url: https://github.com/bkshepherd/DaisySeedProjects/releases/tag/v1.6.0
+  - version: v1.5.5
+    date: 2026-05-16
+    url: https://github.com/bkshepherd/DaisySeedProjects/releases/tag/v1.5.5

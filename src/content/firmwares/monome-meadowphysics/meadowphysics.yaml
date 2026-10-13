@@ -1,0 +1,25 @@
+device: monome-meadowphysics
+name: meadowphysics
+summary: Official open-source meadowphysics firmware, the cascading-counter rhythm sequencer for grid, with the latest grid support added in 2021.
+description: >-
+  Release 2.2.1 adds support for the latest grids. A meadowphysics app also
+  runs on ansible. The standalone repository has been idle since 2021.
+status: dormant
+authors:
+  - name: monome
+    url: https://monome.org
+source: https://github.com/monome/meadowphysics
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own files.
+homepage: https://monome.org/docs/meadowphysics/
+distribution: download
+install_notes: Follow monome's modular update guide (dfu-programmer, update_firmware.command in the release zip).
+tags: [platform, sequencer, grid, random]
+versions:
+  - version: v2.2.1
+    date: 2021-06-03
+    url: https://github.com/monome/meadowphysics/releases/tag/v2.2.1
+  - version: v2.1
+    date: 2016-03-25
+    url: https://github.com/monome/meadowphysics/releases/tag/v2.1

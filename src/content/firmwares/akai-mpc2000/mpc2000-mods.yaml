@@ -1,0 +1,49 @@
+device: akai-mpc2000
+name: MPC2000 MODS
+summary: Installer that builds a modified OS from your own MPC2000 or 2000XL OS file, with input monitoring, extended tuning, mute groups, folders, lazy chop, regions, filters and larger HFE disk images.
+description: >-
+  Every mod is optional and the installer shows a safety meter for how far a
+  selection goes beyond the 1.8 set. Version 2.0 adds a Sampling Mode that
+  gives new recordings SP1200 or S900 character. Other mods listed include
+  double STOP, step move event, input thru, program transpose, TUNE +/-360
+  and LPF/HPF. The Classic gains folders, track programs and a sorted file
+  list, and can output SYS, IMG or HFE; the XL outputs a modified BIN. macOS
+  and Windows installers are provided. The original file is not changed and
+  nothing is written to the MPC by the installer. A GitHub repository linked
+  from the page holds the source of the original eight-mod pack and may lag
+  behind the current release.
+status: active
+authors:
+  - name: vubeatz
+    url: https://vubeatz.com
+source: https://github.com/dariuszchynek/mpc2000_2000xl_mod_pack
+source_status: binary-only
+license: PolyForm-Noncommercial-1.0.0
+license_notes: >-
+  The installer has no stated license. The linked repository's source for the
+  original eight mods is PolyForm Noncommercial 1.0.0 (source-available, not
+  open source).
+homepage: https://vubeatz.com/mpc-mods.html
+distribution: patch-your-own
+requires_stock: OS 1.72 (Classic) / OS 1.20 (XL)
+install_notes: >-
+  Supply your original Akai OS, choose mods and an output format, then copy the
+  result to your boot medium. The author recommends running the built-in memory
+  test on the original OS first and booting the XL from a card or floppy.
+tags: [sampler, filter, ui]
+versions:
+  - version: "2.0"
+    date: 2026-10-08
+    url: https://vubeatz.com/mpc-mods.html
+    notes: Every mod optional, safety meter, Sampling Mode.
+  - version: "1.9"
+    date: 2026-10-01
+    url: https://vubeatz.com/mpc-mods.html
+  - version: "1.8"
+    date: 2026-09-28
+    url: https://vubeatz.com/mpc-mods.html
+    notes: Input thru, larger HFE data disks, signed and notarized macOS installers.
+  - version: "1.7"
+    date: 2026-09-24
+    url: https://vubeatz.com/mpc-mods.html
+    notes: Lazy chop and LPF/HPF.

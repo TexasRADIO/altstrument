@@ -1,0 +1,33 @@
+device: elektron-model-cycles
+name: Modded Cycles
+summary: "Browser-based mod picker for Model:Cycles OS 1.13: 6-channel USB audio, Syntakt engines, MACRO (Braids) and ACID (Open303) machines, arpeggiator, extra LFOs, per-track filter, 546 BPM, and Samples OS on Cycles and back. Also covers Model:Samples."
+description: >-
+  The page builds a patched OS in your browser from your own official file and can
+  send it over USB. It bundles Model-TG, Chord Keys and drumkilla's tweaks as
+  options (Chord Keys and Model-TG cannot be combined; LFO 2/3/4 and the
+  per-track filter exclude each other). Cycles OS for Model:Samples and the
+  return trip are marked experimental. Returning from Samples OS on a Cycles
+  needs a MIDI interface.
+status: active
+authors:
+  - name: 18nelli18
+    url: https://github.com/18nelli18
+  - name: Modded-Cycles contributors
+source: https://github.com/18nelli18/Modded-Cycles
+source_status: open
+license: MIT
+license_notes: Covers the project's original work; third-party components (Braids, Open303, elektron-model-tweaks and others) keep their own licences, listed in THIRD-PARTY-NOTICES.md.
+homepage: https://18nelli18.github.io/Modded-Cycles/
+distribution: browser-installer
+requires_stock: "1.13"
+install_notes: Drop your official OS file into the flasher page, pick mods, download and send with Elektron Transfer or flash over USB. Back up first.
+tags: [usb-audio, machines, synth-engine, fx, sequencer, lfo, filter, boot-splash]
+versions:
+  - version: Release 1.54
+    date: 2026-10-12
+    url: https://github.com/18nelli18/Modded-Cycles/pull/86
+    notes: "MACRO lo-fi on FUNC + PITCH. Date is the merge of PR #86; flasher releases are not tagged on GitHub."
+  - version: Release 1.53
+    date: 2026-10-12
+    url: https://github.com/18nelli18/Modded-Cycles/pull/78
+    notes: Adds the ACID machine.

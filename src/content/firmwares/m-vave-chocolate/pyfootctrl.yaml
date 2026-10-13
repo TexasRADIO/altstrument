@@ -1,0 +1,26 @@
+device: m-vave-chocolate
+name: PyFootCtrl
+kind: tool
+summary: >-
+  Python companion app that turns Chocolate footswitch presses into custom behaviours (toggle, tap tempo,
+  note toggle and trigger, keystrokes) sent to a virtual MIDI port, without the official app.
+description: >-
+  Does not write to the device or use its SysEx configuration protocol; it listens to the stock MIDI output
+  and re-emits transformed messages through a loopback port (loopMIDI on Windows). Behaviours are defined
+  in config.py and behaviours.py.
+status: dormant
+authors:
+- name: varlen
+  url: https://github.com/varlen
+source: https://github.com/varlen/pyfootctrl
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  pip install python-rtmidi, then python pyfootctrl.py; a loopback MIDI port is required on Windows.
+tags: [config-tool, midi, controller-mode]
+versions:
+- version: main
+  date: 2024-09-15
+  url: https://github.com/varlen/pyfootctrl
+  notes: No tagged releases; date is the last commit.

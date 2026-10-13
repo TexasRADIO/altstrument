@@ -1,0 +1,30 @@
+name: ansible
+manufacturer: monome
+category: eurorack
+tagline: Grid / arc / Teletype / MIDI companion module (discontinued)
+platform: AVR32 (AT32UC3B)
+stock_firmware: "3.2.0"
+links:
+  manufacturer: https://monome.org/docs/ansible/
+  community:
+    - label: llllllll.co (lines forum)
+      url: https://llllllll.co/
+    - label: monome modular firmware update guide
+      url: https://monome.org/docs/modular/update/
+notes: >-
+  monome's docs list ansible as discontinued along with its other sunset Eurorack
+  modules. The firmware is open (apps include Kria, Meadowphysics and Earthsea)
+  and monome's docs point to scanner_darkly's multipass framework for writing
+  your own firmware. A flash replaces the whole image including presets, so
+  back up first.
+related: [monome-teletype, monome-white-whale, monome-meadowphysics, monome-earthsea, monome-grid, monome-arc, monome-tools]
+image:
+  src: /images/devices/monome-ansible.jpg
+  style: photo
+  alt: Front panel of the monome ansible Eurorack module (cropped from the product photo)
+  width: 230
+  height: 630
+  credit: monome
+  license: manufacturer product image
+  source_url: https://monome.org/docs/ansible/
+  original_url: https://monome.org/docs/ansible/images/ansible.jpg

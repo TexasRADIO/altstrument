@@ -1,0 +1,27 @@
+device: elektron-octatrack
+name: Octatrick
+summary: "Four octabam-built additions for OS 1.40C: a two-operator FM synth machine with chords, a scale quantizer with glide, direct pattern jump and a tuner; also USB MIDI and 20-channel USB audio."
+description: >-
+  The synth machine turns a FLEX track whose sample is named FMSYNTH*.wav into
+  an FM voice with mono or paraphonic voicing and chord shapes. The scale
+  quantizer offers 24 scales on a chosen root and survives power cycles. Direct
+  jump starts a newly chosen pattern at the current step. The remix also adds
+  USB MIDI and 20-channel USB audio out. Runs on the author's MKI on every build
+  since 2026-09-26; not yet reported on an MKII.
+status: active
+authors:
+  - name: Tim Hastie
+    url: https://github.com/timhastie
+source: https://github.com/timhastie/octatrick
+source_status: open
+license: MIT
+license_notes: Covers this repository only; octabam is separately MIT-licensed by Sam Banks.
+distribution: patch-your-own
+requires_stock: 1.40C
+install_notes: One-command build from your own OS 1.40C file; no firmware is included.
+tags: [synth-engine, fm, scales, chords, usb-audio, usb-midi, performance]
+versions:
+  - version: MKI hardware-tested builds
+    date: 2026-09-26
+    url: https://github.com/timhastie/octatrick
+    notes: README states every build since this date runs on the author's MKI.

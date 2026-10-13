@@ -1,0 +1,25 @@
+device: noise-engineering-versio
+name: Cithara Versio
+summary: Microtonal sympathetic string resonator. Strings are tuned to 12-EDO or one of eight chosen microtonal tunings, with step subsets from scales, mode rotation and feedback controls.
+description: >-
+  Resonance morphs from a piano soundboard to a double bass, timpani or a long
+  tube (per the community index). A PDF manual is in the repository.
+status: active
+authors:
+  - name: TricksterSam
+    url: https://github.com/TricksterSam
+source: https://github.com/TricksterSam/CitharaVersio
+source_status: open
+license: GPL-3.0-only
+license_notes: Per the repository LICENSE file.
+homepage: https://github.com/TricksterSam/CitharaVersio/releases/tag/tag
+distribution: download
+install_notes: >-
+  Does not install through Noise Engineering's updater; use the Daisy
+  bootloader flow at flash.daisy.audio, as noted in the community index.
+tags: [physical-modeling, scales, fx]
+versions:
+  - version: tag
+    date: 2026-06-23
+    url: https://github.com/TricksterSam/CitharaVersio/releases/tag/tag
+    notes: The release tag is literally named "tag".

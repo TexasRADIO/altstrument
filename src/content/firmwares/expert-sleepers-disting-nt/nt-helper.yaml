@@ -1,0 +1,22 @@
+device: expert-sleepers-disting-nt
+name: nt_helper
+kind: tool
+summary: Cross-platform Flutter editor for disting NT presets. Edits algorithms and parameters, maps CV, MIDI and I2C, analyses routing, installs preset packages, and includes an MCP server on desktop.
+status: active
+authors:
+  - name: No-Such-Device (thorinside)
+    url: https://github.com/No-Such-Device
+source: https://github.com/No-Such-Device/nt_helper
+source_status: open
+license: unspecified
+license_notes: README says "This project is open source" but names no license and there is no LICENSE file.
+homepage: https://github.com/No-Such-Device/nt_helper/releases
+distribution: download
+tags: [editor]
+versions:
+  - version: v2.57.0
+    date: 2026-10-13
+    url: https://github.com/No-Such-Device/nt_helper/releases/tag/v2.57.0
+  - version: v2.56.1
+    date: 2026-10-07
+    url: https://github.com/No-Such-Device/nt_helper/releases/tag/v2.56.1

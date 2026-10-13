@@ -1,0 +1,16 @@
+device: m-vave-fm-1
+name: fm1-mdx
+summary: >-
+  Experimental Sharp X68000 MDX/PDX song player using a software YM2151 emulation, with part muting and
+  live keyboard accompaniment. Tested on a computer, not yet installed on an FM-1.
+status: announced
+authors:
+- name: Keitark
+  url: https://github.com/Keitark
+source: https://github.com/Keitark/fm1-mdx
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  Original MDX additions are GPL-3.0-or-later; upstream notices apply to bundled third-party code.
+distribution: source-only
+tags: [emulator, research]

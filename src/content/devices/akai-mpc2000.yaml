@@ -1,0 +1,29 @@
+name: MPC2000 / 2000XL
+manufacturer: Akai Professional
+category: sampler
+tagline: MPC sampler and sequencer in Classic and XL versions
+stock_firmware: 1.72 (Classic) / 1.20 (XL)
+links:
+  community:
+    - label: MPC2000 MODS
+      url: https://vubeatz.com/mpc-mods.html
+notes: >-
+  MPC2000 MODS builds a new OS file from your original and leaves the
+  original untouched. The author recommends running the built-in memory test
+  on the stock OS first and warns against installing the Classic OS on the
+  F-ROM expansion.
+related:
+  - akai-mpc-live
+  - akai-mpc500
+  - akai-mpc1000
+  - akai-force
+image:
+  src: /images/devices/akai-mpc2000.webp
+  style: photo
+  alt: "Akai Professional MPC2000XL, top view"
+  width: 1200
+  height: 750
+  credit: Akai Professional
+  license: manufacturer product image
+  source_url: https://web.archive.org/web/20080317222146/http://www.akaipro.com:80/mpc2000xl
+  original_url: https://web.archive.org/web/20081117155457im_/http://www.akaipro.com/stuff/contentmgr/files/0/5669e47e4a173e2226a033dcd9389948/large/mpc2000xl_top_lg_v2.png

@@ -1,0 +1,7 @@
+---
+interface Props { compact?: boolean }
+const { compact = false } = Astro.props;
+---
+<p class:list={['rounded border border-red-bd bg-red-bg text-red-fg', compact ? 'px-2 py-1 text-xs' : 'px-3 py-2 text-sm']} role="note">
+  <strong>Brick risk.</strong> Flashing this carries a known, documented risk of damaging the device.
+</p>

@@ -1,0 +1,12 @@
+name: Polyend
+website: https://polyend.com/
+logo:
+  src: /images/logos/polyend.svg
+  alt: Polyend logo
+  width: 640
+  height: 150
+  credit: Polyend
+  license: CC0-1.0
+  source_url: https://commons.wikimedia.org/wiki/File:Polyend_Logo.svg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/0/0c/Polyend_Logo.svg
+  monochrome: true

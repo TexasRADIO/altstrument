@@ -1,0 +1,35 @@
+name: Ornament & Crime (o_C, uO_C, ORN8)
+manufacturer: Ornament & Crime (open hardware)
+category: eurorack
+tagline: Teensy-based quad CV / trigger module with OLED
+platform: Teensy 3.2 / 4.0 / 4.1
+links:
+  manufacturer: https://ornament-and-cri.me/
+  community:
+    - label: Phazerville documentation
+      url: https://firmware.phazerville.com/
+    - label: O.R.N.8 (O_C T4.1) hardware
+      url: https://github.com/PaulStoffregen/O_C_T41
+    - label: uO_C (8HP) hardware
+      url: https://github.com/jakplugg/uO_c
+    - label: o_C licensing statement
+      url: https://ornament-and-cri.me/licensing/
+notes: >-
+  Open hardware, covering the original 14HP o_C by mxmxmx, the 8HP uO_C, the
+  Teensy 4.1 based ORN8 board and commercial variants (for example Plum Audio
+  1U builds). Per ornament-and-cri.me/licensing, most firmware source files
+  carry MIT headers but at least one file is GPLv3, so the firmware bundle and
+  its binaries are treated as GPLv3. The Hemisphere line is a dual-applet
+  framework layered on the stock o_C code; Benisphere forked Hemisphere and
+  Phazerville forked Benisphere. Build guides and manuals are not under an
+  open license.
+image:
+  src: /images/devices/ornament-and-crime.jpg
+  style: photo
+  alt: Ornament and Crime Eurorack module seen at an angle, with OLED display, two encoders and a grid of jacks on a silver panel
+  width: 1024
+  height: 576
+  credit: mxmxmx (Ornament & Crime project)
+  license: project photo, published in the official O_C repository README
+  source_url: https://github.com/mxmxmx/O_C
+  original_url: https://farm1.staticflickr.com/676/20090774694_b56e557693_b.jpg

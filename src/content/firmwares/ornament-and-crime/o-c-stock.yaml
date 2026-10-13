@@ -1,0 +1,29 @@
+device: ornament-and-crime
+name: o_C stock firmware
+summary: The baseline polymorphic CV generator firmware by Patrick Dowling, mxmxmx and Tim Churches. Twelve apps including CopierMaschine, Harrington 1200, Automatonnetz, Quantermain and Meta-Q. Foundation for every other firmware here.
+status: dormant
+authors:
+  - name: mxmxmx
+    url: https://github.com/mxmxmx
+  - name: Patrick Dowling
+    url: https://github.com/patrickdowling
+  - name: Tim Churches
+    url: https://github.com/timchurches
+source: https://github.com/mxmxmx/O_C
+source_status: open
+license: MIT
+license_notes: >-
+  No LICENSE file. Per ornament-and-cri.me/licensing most source files carry
+  MIT headers, but at least one (for example OC_DAC.cpp) is GPLv3 with
+  additional permissions, so the firmware bundle is treated as GPLv3.
+homepage: https://ornament-and-cri.me/
+distribution: download
+tags: [platform, sequencer, quantizer, lfo, envelopes]
+versions:
+  - version: "1.3.6"
+    date: 2019-10-07
+    url: https://github.com/mxmxmx/O_C/releases/tag/1.3.6
+    notes: Marked pre-release on GitHub.
+  - version: "1.3.5"
+    date: 2019-01-25
+    url: https://github.com/mxmxmx/O_C/releases/tag/1.3.5

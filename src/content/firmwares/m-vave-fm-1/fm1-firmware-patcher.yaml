@@ -1,0 +1,30 @@
+device: m-vave-fm-1
+name: FM-1 Firmware Patcher
+summary: >-
+  Python script that patches your own copy of stock V15: operator detune matched to Dexed, aftertouch
+  vibrato removed, scope colour changed. The patched file must not be shared.
+description: >-
+  The device still reports V15, so M-UPGRADE treats the patched file as already installed. Downgrade to
+  V14 with M-VAVE's tone updater first, then install the patched file; the same steps put V15 back. Also
+  changes the oscilloscope to dark blue and the FX cursor to green as a visible marker.
+status: active
+authors:
+- name: Christian Zietz (czietz)
+  url: https://github.com/czietz
+source: https://github.com/czietz/fm1-firmware-patcher
+source_status: open
+license: Unlicense
+license_notes: Covers the patcher script only; M-VAVE firmware stays under M-VAVE copyright.
+distribution: patch-your-own
+requires_stock: V15 (downgrade to V14 first to install the patched file)
+install_notes: >-
+  python patch_firmware.py FM-1.fwsc FM-1-fixed.fwsc, then downgrade to V14 with M-VAVE's tone firmware
+  update utility and install the result with M-UPGRADE. Author reports it stable and the changes localized,
+  but flashing in general carries risk.
+brick_risk: true
+tags: [patch, fm]
+versions:
+- version: main
+  date: 2026-09-28
+  url: https://github.com/czietz/fm1-firmware-patcher
+  notes: No tagged releases; date is the last commit.

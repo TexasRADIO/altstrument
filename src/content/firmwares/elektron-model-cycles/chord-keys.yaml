@@ -1,0 +1,26 @@
+device: elektron-model-cycles
+name: Chord Keys
+summary: Turns TRIG 1-16 into a scale-locked chord keyboard on the selected CHORD track (I-VII, then octaves), with triad to 13th chords per degree, SHAPE voicings and COLOR; later versions add harmony pads and MIDI chord output.
+description: >-
+  Contributed by Nico Heuser to Modded Cycles (pull request #46, merged as #50
+  on 2026-10-11) and available as a flasher option there. Does not combine with
+  Model-TG. The author's own fork holds the standalone work and a second
+  version with held harmony pads, MIDI chords and lighter processing.
+status: active
+authors:
+  - name: Nico Heuser
+    url: https://github.com/byNicoHeuser
+source: https://github.com/byNicoHeuser/Modded-Cycles
+source_status: open
+license: unspecified
+license_notes: The author's fork carries no license file. Inside Modded Cycles it is listed in THIRD-PARTY-NOTICES as a contribution of the author; the project license is MIT.
+homepage: https://18nelli18.github.io/Modded-Cycles/
+distribution: browser-installer
+requires_stock: "1.13"
+install_notes: Select Chord Keys in the Modded Cycles flasher with your own OS file.
+tags: [chords, scales, performance, ui]
+versions:
+  - version: Second version (harmony pads, MIDI chords)
+    date: 2026-10-07
+    url: https://github.com/byNicoHeuser/Modded-Cycles/pull/2
+    notes: Date is when the fork pull request was opened.

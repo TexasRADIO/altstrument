@@ -1,0 +1,42 @@
+device: chase-bliss-chompi
+name: CHOMPI open source firmware
+summary: "Official open-source release of the CHOMPI firmware: TAPE 2.0 sampler, TEMPO 1.0 pattern generator, WAVE 1.0 wavetable synth and a beta bootloader, with hardware files and factory card profiles."
+description: >-
+  Released as a discontinuation open-source bundle. TAPE 2.0 is the sampler
+  firmware every unit shipped with. TEMPO 1.0 is its pattern generator
+  counterpart. WAVE 1.0 is a wavetable synth that the repository positions as
+  a starting point for people writing their own firmware. Bootloader v6.4
+  (beta) never shipped on units and was written to improve stability with the
+  Daisy Seed and fix edge cases inherited from the Electrosmith bootloader.
+  The repository also contains PCB, BOM and enclosure files and the factory
+  microSD card profiles. The repository says it is a permanent source and
+  will likely get no further updates.
+status: archived
+authors:
+  - name: CHOMPI Club
+    url: https://www.chompiclub.com
+  - name: Chase Bliss
+    url: https://www.chasebliss.com
+source: https://github.com/CHOMPI-Club/CHOMPI
+source_status: open
+license: MIT
+license_notes: The CHOMPI name, logo and panel artwork are not covered; see TRADEMARKS.md.
+homepage: https://www.chompiclub.com/opensource
+distribution: download
+install_notes: >-
+  The firmware README covers setting up the development environment, building
+  and loading onto a CHOMPI. MD5 checksums are provided with the release.
+tags: [sampler, sequencer, synth-engine, sdk]
+versions:
+  - version: TAPE 2.0
+    date: 2026-09-29
+    url: https://github.com/CHOMPI-Club/CHOMPI/releases/tag/chompi-open-source-bundle
+  - version: TEMPO 1.0
+    date: 2026-09-29
+    url: https://github.com/CHOMPI-Club/CHOMPI/releases/tag/chompi-open-source-bundle
+  - version: WAVE 1.0
+    date: 2026-09-29
+    url: https://github.com/CHOMPI-Club/CHOMPI/releases/tag/chompi-open-source-bundle
+  - version: Bootloader 6.4 (beta)
+    date: 2026-09-29
+    url: https://github.com/CHOMPI-Club/CHOMPI/releases/tag/chompi-open-source-bundle

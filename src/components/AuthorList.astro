@@ -1,0 +1,13 @@
+---
+import type { FirmwareItem } from '@/lib/catalog';
+interface Props { authors: FirmwareItem['data']['authors'] }
+const { authors } = Astro.props;
+---
+<span>
+  {authors.map((a, i) => (
+    <>
+      {i > 0 && ', '}
+      {a.url ? <a href={a.url} rel="noopener">{a.name}</a> : a.name}
+    </>
+  ))}
+</span>

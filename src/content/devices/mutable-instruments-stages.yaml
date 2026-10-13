@@ -1,0 +1,25 @@
+name: Stages
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Segment generator / envelope (discontinued)
+platform: STM32F3
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/stages/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
+  is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name.
+  Official firmware v1.2 absorbed several features that began in community
+  forks.
+image:
+  src: /images/devices/mutable-instruments-stages.jpg
+  style: photo
+  alt: Front panel of the Mutable Instruments Stages Eurorack module
+  width: 662
+  height: 1200
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/stages/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/stages/images/front.jpg

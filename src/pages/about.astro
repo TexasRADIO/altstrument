@@ -1,0 +1,119 @@
+---
+import Base from '@/layouts/Base.astro';
+import StatusBadge from '@/components/StatusBadge.astro';
+import SourceBadge from '@/components/SourceBadge.astro';
+import LicenseBadge from '@/components/LicenseBadge.astro';
+import { STATUSES, SOURCE_STATUSES } from '@/content/schema';
+import { STATUS_INFO, SOURCE_INFO, LICENSE_SENTINELS } from '@/lib/labels';
+---
+<Base
+  title="About"
+  description="What Firmware World lists, what it does not, how to read the badges, and how to contribute."
+>
+  <h1 class="text-2xl">About</h1>
+
+  <div class="mt-4 flex max-w-[68ch] flex-col gap-8 [&_h2]:mb-2 [&_h2]:text-lg [&_p+p]:mt-3">
+    <section aria-labelledby="what">
+      <h2 id="what">What this is</h2>
+      <p>
+        Firmware World is a directory of custom and third-party firmware for music hardware. Entries are grouped by
+        device and then by firmware project. Each one records the authors, where the source lives, the license, and the
+        version history, so you can tell who made something, whether you can read it, and how recently it was touched.
+      </p>
+    </section>
+
+    <section aria-labelledby="scope">
+      <h2 id="scope">Scope</h2>
+      <p>
+        The catalog covers grooveboxes, synths, samplers, drum machines, controllers, pedals, Eurorack modules, vintage
+        gear, and DIY platforms. Host-side tools that support a scene, such as editors, flashers, emulators and SDKs,
+        are listed alongside the firmware they serve.
+      </p>
+    </section>
+
+    <section aria-labelledby="policy">
+      <h2 id="policy">Policy</h2>
+      <p>
+        We link; we never host firmware binaries. We also never link to redistributed copies of manufacturer firmware.
+        Where a project works by patching a stock file, you supply that file yourself from the manufacturer.
+      </p>
+      <p>
+        Entries carrying a brick-risk flag have a known, documented risk of damaging the device. Flashing third-party
+        firmware may void your warranty, and doing so is at your own risk. Read the project's own notes before you
+        start, and keep a way back to stock where one exists.
+      </p>
+    </section>
+
+    <section aria-labelledby="badges">
+      <h2 id="badges">Reading the badges</h2>
+      <p class="mb-3">Status describes how alive the project is.</p>
+      <dl class="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-[max-content_1fr]">
+        {STATUSES.map((s) => (
+          <>
+            <dt><StatusBadge status={s} /></dt>
+            <dd class="mb-2 sm:mb-0">{STATUS_INFO[s].desc}</dd>
+          </>
+        ))}
+      </dl>
+      <p class="mb-3 mt-5">Source describes how much of the work is public.</p>
+      <dl class="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-[max-content_1fr]">
+        {SOURCE_STATUSES.map((s) => (
+          <>
+            <dt><SourceBadge status={s} /></dt>
+            <dd class="mb-2 sm:mb-0">{SOURCE_INFO[s].desc}</dd>
+          </>
+        ))}
+      </dl>
+      <p class="mb-3 mt-5">
+        License is an <a href="https://spdx.org/licenses/" rel="noopener">SPDX</a> identifier linking to the license
+        text. Two values are not licenses in that sense and appear as plain, muted badges.
+      </p>
+      <dl class="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-[max-content_1fr]">
+        {Object.entries(LICENSE_SENTINELS).map(([id, desc]) => (
+          <>
+            <dt><LicenseBadge license={id} /></dt>
+            <dd class="mb-2 sm:mb-0">{desc}</dd>
+          </>
+        ))}
+      </dl>
+    </section>
+
+    <section aria-labelledby="contribute">
+      <h2 id="contribute">Contributing</h2>
+      <p>
+        The catalog is plain YAML. To add or correct an entry, open a pull request that adds or edits a file under
+        <code>src/content</code>: one file per device in <code>devices/</code>, and one per firmware project in
+        <code>firmwares/&lt;device&gt;/</code>. A validator checks the schema on every build. See
+        <code>CONTRIBUTING.md</code> in the repository for the field reference and the rules about omitting dates
+        rather than guessing them.
+      </p>
+    </section>
+
+    <section aria-labelledby="thanks">
+      <h2 id="thanks">Prior art and thanks</h2>
+      <p>This site builds on lists others have kept for years:</p>
+      <ul class="mt-2 list-disc pl-5">
+        <li><code>Lapin/awesome-music-gear-firmware</code></li>
+        <li><code>aroum/fm1-custom-fw</code></li>
+        <li><code>Maxhodges/noise-engineering-firmware-index</code></li>
+        <li>Mutable Instruments' third-party firmware page</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="license">
+      <h2 id="license">Licensing</h2>
+      <p>
+        The site code is released under the MIT license. The catalog data is released under
+        <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC-BY-4.0</a>; reuse it with attribution.
+        A full JSON export is available at <a href="/api/catalog.json">/api/catalog.json</a>.
+      </p>
+      <p>
+        Device images are the manufacturers' own product and press photos, shown with attribution and a link to
+        where they are published. They remain the property of their owners and are not covered by the catalog's
+        CC-BY-4.0 license. Where no product image is available, the manufacturer's logo is shown instead; those are
+        public-domain wordmarks or brand assets used with permission, and remain trademarks of their owners. If you
+        own an image or mark shown here and want it changed or removed, open an issue.
+      </p>
+    </section>
+  </div>
+</Base>

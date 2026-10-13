@@ -1,0 +1,20 @@
+device: noise-engineering-versio
+name: WTF!
+summary: Stereo granular and beat-repeat effect with Granular, Repeat and Cloud effect modes, Forward, PingPong and Reverse grain modes, and a buffer of about 90 s.
+description: >-
+  Binary download from the author's site. The community index lists it as
+  updated April 2026; the project page itself shows v1.1 and no release date.
+status: active
+authors:
+  - name: DUB-Russell
+    url: https://2020.dubrussell.com/
+source_status: binary-only
+license: unspecified
+license_notes: The project page states no license.
+homepage: https://2020.dubrussell.com/resources/wtf/
+distribution: download
+install_notes: Select WTF-1.1.bin as a custom file on Noise Engineering's firmware page.
+tags: [granular, looper, fx]
+versions:
+  - version: "1.1"
+    url: https://2020.dubrussell.com/resources/wtf/

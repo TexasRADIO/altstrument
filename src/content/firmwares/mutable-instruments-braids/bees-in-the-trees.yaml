@@ -1,0 +1,24 @@
+device: mutable-instruments-braids
+name: Bees-in-the-Trees
+summary: Braids firmware with internal modulation sources and a built-in random meta-sequencer, based on Braids 1.7.
+status: dormant
+authors:
+  - name: Tim Churches
+    url: https://github.com/timchurches
+source: https://github.com/timchurches/Mutated-Mutables
+source_status: open
+license: MIT
+license_notes: >-
+  Inherits from Mutable Instruments; the repository has no license file of its
+  own and is a copy of the upstream eurorack repository.
+homepage: https://timchurches.github.io/Mutated-Mutables/
+distribution: download
+requires_stock: Braids 1.7 base
+tags: [synth-engine, sequencer, lfo, random]
+versions:
+  - version: v4.1.1
+    date: 2015-04-26
+    url: https://github.com/timchurches/Mutated-Mutables/releases/tag/v4.1.1
+  - version: v4.0.1
+    date: 2015-04-11
+    url: https://github.com/timchurches/Mutated-Mutables/releases/tag/v4.0.1

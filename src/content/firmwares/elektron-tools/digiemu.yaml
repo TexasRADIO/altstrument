@@ -1,0 +1,24 @@
+device: elektron-tools
+name: digiemu
+kind: tool
+summary: Emulator for Digitakt, Digitone (mk1), Model:Cycles and Model:Samples that runs their real firmware behind a clickable front panel, with live audio and MIDI. Apps for Windows and Apple silicon Macs; bring your own .syx.
+status: active
+authors:
+  - name: irpina
+    url: https://github.com/irpina
+source: https://github.com/irpina/digiemu
+source_status: open
+license: GPL-2.0-or-later
+distribution: download
+tags: [emulator, research]
+versions:
+  - version: v0.4.1
+    date: 2026-10-09
+    url: https://github.com/irpina/digiemu/releases/tag/v0.4.1
+    notes: The Models open, Linux live audio, Digitakt 1.54 LEDs.
+  - version: v0.4.0
+    date: 2026-10-07
+    url: https://github.com/irpina/digiemu/releases/tag/v0.4.0
+  - version: v0.3.0
+    date: 2026-10-02
+    url: https://github.com/irpina/digiemu/releases/tag/v0.3.0

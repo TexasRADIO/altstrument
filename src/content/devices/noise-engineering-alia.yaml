@@ -1,0 +1,35 @@
+name: Alia
+manufacturer: Noise Engineering
+category: eurorack
+tagline: 10 HP oscillator and voice platform with swappable Iteritas firmwares
+platform: Electrosmith Daisy-based DSP platform
+links:
+  manufacturer: https://noiseengineering.us/pages/world-of-alia
+  community:
+    - label: Noise Engineering firmware swap portal
+      url: https://noiseengineering.us/portal/firmware/
+    - label: Noise Engineering firmware index (Versio only)
+      url: https://github.com/Maxhodges/noise-engineering-firmware-index
+notes: >-
+  Alia is one 10 HP hardware module, billed by Noise Engineering as the home
+  of the BIA (Basimilus Iteritas Alia). Every Alia firmware runs on any Alia
+  and swapping is free through the Firmware Swap page,
+  noiseengineering.us/portal/firmware, from a WebUSB browser. Hot-swappable
+  panel overlays are sold per firmware. Alia is a different piece of hardware
+  from Versio and Legio, so Versio and Legio firmwares, official or
+  third-party, do not run on it. No third-party Alia firmware was found: the
+  community firmware index lists Versio only, and Noise Engineering documents
+  libDaisy support for Versio and Legio but not Alia. Press coverage
+  describes Alia as Daisy-based, which Noise Engineering's own pages do not
+  state.
+related: [noise-engineering-versio, noise-engineering-legio]
+image:
+  src: /images/devices/noise-engineering-alia.png
+  style: photo
+  alt: Noise Engineering Alia platform pictured with the Basimilus Iteritas Alia firmware panel (black panel render on transparent background)
+  width: 600
+  height: 1200
+  credit: Noise Engineering
+  license: manufacturer product image
+  source_url: https://noiseengineering.us/products/alia/
+  original_url: https://cdn.shopify.com/s/files/1/0552/0923/0485/files/basimilus-iteritas-alia-black-1024x2048.png

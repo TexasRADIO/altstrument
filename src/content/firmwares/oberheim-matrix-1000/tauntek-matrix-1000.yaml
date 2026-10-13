@@ -1,0 +1,27 @@
+device: oberheim-matrix-1000
+name: Tauntek firmware (v1.20)
+summary: EPROM firmware for the Matrix-1000 that speeds up many slow MIDI parameter updates, adds Gligli's detune and an NRPN addressing fix, and shows parameter values on the display while they are changed over MIDI.
+description: >-
+  Written by Bob Grieb of Tauntek after studying how the Matrix-6 code handles
+  parameter updates and what Gligli's v1.16 had changed. Faster parameters
+  include VCA amounts, several VCF and DCO parameters; envelope and LFO
+  parameters were already quick and are unchanged. The author states it does not
+  discard parameter updates and describes it as not exhaustively tested but in
+  wide use. The image is available as a download from the Tauntek page, and
+  programmed EPROMs are sold by Tauntek and by two authorised resellers. The
+  author states the code is copyright-protected and that no one else is
+  authorised to sell it.
+status: maintained
+authors:
+  - name: Bob Grieb (Tauntek)
+    url: http://www.tauntek.com/
+source_status: binary-only
+license: proprietary
+license_notes: Copyright-protected by the author; only the author and two named resellers are authorised to sell programmed chips.
+homepage: http://www.tauntek.com/Matrix1000Firmware.htm
+distribution: download
+install_notes: Program a 27C256 EPROM with the image and fit it in place of the stock system ROM.
+tags: [midi, bugfixes, performance]
+versions:
+  - version: v1.20
+    url: http://www.tauntek.com/Matrix1000Firmware.htm

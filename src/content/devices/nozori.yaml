@@ -1,0 +1,25 @@
+name: Nozori
+manufacturer: nozoid
+category: eurorack
+tagline: Multi-module platform with open Arduino firmware
+platform: Arduino IDE firmware
+links:
+  manufacturer: https://www.nozoid.com/nozori-68
+  community:
+    - label: Nozori firmware repository
+      url: https://github.com/ch-nry/nozori
+notes: >-
+  One hardware platform morphs into many modules by loading a different
+  Arduino sketch; the repository ships sketches for the 68 and 84 variants,
+  calibration and test sketches, and a template for new modules. The
+  repository has had no commits since 2019-10-04.
+image:
+  src: /images/devices/nozori.jpg
+  style: photo
+  alt: Front panel of the Nozoid Nozori 68 Eurorack module (cropped from the product photo)
+  width: 430
+  height: 859
+  credit: Nozoid
+  license: manufacturer product image
+  source_url: https://nozoid.com/product/nozori-68/
+  original_url: https://nozoid.com/wp-content/uploads/2019/05/nozori_68_face_square.jpg

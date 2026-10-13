@@ -1,0 +1,35 @@
+device: m-vave-fm-1
+name: ORBIT
+summary: >-
+  OP-1-inspired groovebox firmware based on SLOOP: synth, drum and mixer screens, per-track inserts, sample
+  tools, an event tape for rearranging what the four tracks play, and its own engines beside a 6-op FM.
+description: >-
+  Started from a SLOOP v2.3 snapshot rather than a fork, with later SLOOP changes merged in. Releases
+  carry only the firmware file, installed with a script from the source; there is no browser installer.
+  Extracted OP-1 tables and factory data are noted separately in LICENSING.md.
+status: active
+authors:
+- name: dspaudio
+  url: https://github.com/dspaudio
+source: https://github.com/dspaudio/orbit
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Existing msfa (Apache-2.0) exception and asset notices apply; see LICENSING.md.
+homepage: https://dspaudio.github.io/orbit-web-emu/
+distribution: download
+install_notes: >-
+  Download the firmware from the releases page and install with the script in the repository (see BUILDING.md).
+  Browser emulator available.
+brick_risk: true
+tags: [sequencer, sampler, synth-engine, fx, performance, ui]
+versions:
+- version: 0.7.0
+  date: 2026-10-12
+  url: https://github.com/dspaudio/orbit/releases/tag/v0.7.0
+- version: 0.6.0
+  date: 2026-10-10
+  url: https://github.com/dspaudio/orbit/releases/tag/v0.6.0
+- version: 0.5.0
+  date: 2026-10-10
+  url: https://github.com/dspaudio/orbit/releases/tag/v0.5.0

@@ -1,0 +1,12 @@
+name: Oberheim
+website: https://oberheim.com/
+logo:
+  src: /images/logos/oberheim.svg
+  alt: Oberheim logo
+  width: 2524
+  height: 853
+  credit: Oberheim
+  license: public domain (text logo)
+  source_url: https://commons.wikimedia.org/wiki/File:Oberheim_Electronics.svg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/f/f6/Oberheim_Electronics.svg
+  monochrome: true

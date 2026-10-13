@@ -1,0 +1,23 @@
+device: elektron-digitakt
+name: Digisophie
+summary: Metallic percussion synth machine for the Digitakt mk1 in four models (FUSE, BOOM, PIPE, SHARD), parameter-lockable and routed through the normal AMP, filter and FX path.
+description: >-
+  Began as a fixed-point adaptation of mestela's Sophie for Schwung. Built as an
+  elekloader mod, with one .elemod for each of OS 1.53 and 1.54; an optional
+  diagnostic mod is also provided. DT-FM and later machines grew out of it.
+status: active
+authors:
+  - name: soejrd
+    url: https://github.com/soejrd
+source: https://github.com/soejrd/digisophie
+source_status: open
+license: MIT
+license_notes: The separate digihealth diagnostic source is GPL-2.0-or-later; see THIRD_PARTY.md in the repo.
+distribution: patch-your-own
+requires_stock: 1.53 / 1.54
+install_notes: Add the mod in elekloader (0.4.0 or later) with your own official OS file and flash the result.
+tags: [machines, synth-engine, performance]
+versions:
+  - version: v1.1.13
+    date: 2026-10-02
+    url: https://github.com/soejrd/digisophie/releases/tag/v1.1.13

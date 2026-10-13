@@ -1,0 +1,25 @@
+device: ornament-and-crime
+name: Hemisphere Suite
+summary: Original dual-applet alternate firmware for Ornament & Crime. Each half of the screen hosts a small modular function; dozens of applets are included. Basis for Benisphere and Phazerville.
+status: dormant
+authors:
+  - name: Jason Justian (Chysn)
+    url: https://github.com/Chysn
+source: https://github.com/Chysn/O_C-HemisphereSuite
+source_status: open
+license: MIT
+license_notes: >-
+  No LICENSE file in the repository. Applet source files carry MIT headers;
+  the core o_C files it builds on are GPLv3 with additional permissions (see
+  ornament-and-cri.me/licensing).
+homepage: https://github.com/Chysn/O_C-HemisphereSuite
+distribution: download
+requires_stock: Teensy 3.2 o_C hardware
+tags: [sequencer, quantizer, lfo, envelopes]
+versions:
+  - version: HSv1.99 Repeating
+    date: 2022-06-19
+    url: https://github.com/Chysn/O_C-HemisphereSuite/releases/tag/HSv1.99Repeating
+  - version: HSv1.8A
+    date: 2020-11-21
+    url: https://github.com/Chysn/O_C-HemisphereSuite/releases/tag/HSv1.8A

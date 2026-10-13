@@ -1,0 +1,34 @@
+device: korg-electribe-2
+name: Hacktribe
+summary: Patch for the Electribe 2 Sampler 2.02 firmware that adds sampling, new oscillators and filters, extra MFX and IFX, more grooves and scales, FX preset editing and an expanded MIDI implementation.
+description: >-
+  Supports both synth and sampler hardware. Other features listed in the
+  README include import and export of FX and grooves, a custom init pattern
+  and NRPN control, for example setting the active step. A wiki covers the
+  firmware patch, debricking and an FAQ. The main branch has had no commits
+  since 2025-06-30; the dev branch last had a commit on 2025-12-28. There are
+  no tagged releases.
+status: maintained
+authors:
+  - name: bangcorrupt
+    url: https://github.com/bangcorrupt
+source: https://github.com/bangcorrupt/hacktribe
+source_status: patcher-only
+license: AGPL-3.0-only
+license_notes: >-
+  README: all files are AGPL-3.0 except the patch directory, which is stated
+  to be not open source and not covered by the GPL.
+homepage: https://github.com/bangcorrupt/hacktribe/wiki
+distribution: patch-your-own
+requires_stock: Electribe 2 Sampler 2.02
+install_notes: >-
+  Patch your own SYSTEM.VSB for Sampler 2.02 with the GUI, the Python script or
+  a manual bspatch, check that both checksums match, then update from the SD
+  card. Factory 2.02 firmware can be reinstalled to revert. Synth hardware
+  needs the file header edited with the provided script.
+brick_risk: true
+tags: [sampler, synth-engine, fx, filter, midi, scales]
+versions:
+  - version: main (last commit 2025-06-30)
+    date: 2025-06-30
+    url: https://github.com/bangcorrupt/hacktribe/commits/main

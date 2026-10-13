@@ -1,0 +1,30 @@
+name: Syntakt
+manufacturer: Elektron
+category: groovebox
+tagline: 12-track drum and synth groovebox
+stock_firmware: "1.41"
+links:
+  manufacturer: https://www.elektron.se/explore/syntakt
+  community:
+    - label: elektronmods.com
+      url: https://elektronmods.com/
+    - label: Modwerk
+      url: https://modwerk.app/
+notes: >-
+  The only public project targets OS 1.41 (Modded Cycles also reads a
+  Syntakt OS file to borrow engines for the Model:Cycles; its flasher accepts
+  1.42). Browser tools patch your own stock .syx locally and leave the
+  bootloader untouched. Elektron does not permit sharing mod files or links on
+  Elektronauts (policy of 2026-09-16); community discussion moved to
+  elektronmods.com and modwerk.app.
+related: [elektron-model-cycles, elektron-model-samples]
+image:
+  src: /images/devices/elektron-syntakt.webp
+  style: photo
+  alt: "Elektron Syntakt, top view"
+  width: 1200
+  height: 864
+  credit: Elektron
+  license: manufacturer press kit
+  source_url: https://www.elektron.se/press
+  original_url: https://www.elektron.se/wp-content/uploads/2026/09/Elektron-Press-Kit.zip

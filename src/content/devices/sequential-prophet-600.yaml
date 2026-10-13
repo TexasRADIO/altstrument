@@ -1,0 +1,25 @@
+name: Prophet-600
+manufacturer: Sequential Circuits
+category: synth
+tagline: Six-voice analog polysynth
+platform: Z80
+links:
+  community:
+    - label: P600FW project page
+      url: https://gligli.github.io/p600fw/
+    - label: Prophet 600 revisited (blog)
+      url: https://prophet600revisited.blogspot.com/
+notes: >-
+  P600FW is a hardware-plus-firmware replacement: a slightly modified Teensy++
+  board plugs into the Z80 socket in place of the stock CPU, so this is not a
+  software-only update.
+image:
+  src: /images/devices/sequential-prophet-600.png
+  style: photo
+  alt: Front view of the Sequential Circuits Prophet-600 six-voice analog polysynth with wooden end cheeks
+  width: 1200
+  height: 338
+  credit: Sequential
+  license: manufacturer heritage image
+  source_url: https://sequential.com/50-years-of-sequential/
+  original_url: https://sequential.com/wp-content/uploads/2024/08/Prophet-600.png

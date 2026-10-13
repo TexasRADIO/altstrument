@@ -1,0 +1,26 @@
+name: volca fm
+manufacturer: Korg
+category: synth
+tagline: Compact 6-operator FM synth with 16-step sequencer
+links:
+  manufacturer: https://www.korg.com/us/products/dj/volca_fm/
+  community:
+    - label: ranzee.com firmware mirror (1.08)
+      url: https://ranzee.com/korg-volca-fm-firmware-1-08-unofficial-update/
+notes: >-
+  Covers the original (mk1) volca fm. The unofficial firmware here is reported
+  not to apply to the volca fm 2. Updates are audio files played into the
+  SYNC IN jack, and Korg's official file can be played to go back.
+related:
+  - korg-volca-drum
+  - korg-volca-sample
+image:
+  src: /images/devices/korg-volca-fm.png
+  style: photo
+  alt: Top-down view of the Korg volca fm digital FM synthesizer
+  width: 930
+  height: 576
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/dj/volca_fm/
+  original_url: https://cdn.korg.com/us/products/upload/1e23b800dfee7982cbf3a307b9abc214_pc.png

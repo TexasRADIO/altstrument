@@ -1,0 +1,17 @@
+device: novation-launchpad-pro
+name: hotchk155/launchpad-pro
+summary: Early fork of Dave Hodder's Launchpad Pro open firmware, whose latest commit, from September 2015, is titled 'add sysx'.
+status: dormant
+authors:
+  - name: hotchk155
+    url: https://github.com/hotchk155
+source: https://github.com/hotchk155/launchpad-pro
+source_status: open
+license: BSD-3-Clause
+distribution: source-only
+tags: [platform, sdk]
+versions:
+  - version: master @ 10ee62e
+    date: 2015-09-27
+    url: https://github.com/hotchk155/launchpad-pro/commit/10ee62e
+    notes: No tagged releases; this is the latest commit.

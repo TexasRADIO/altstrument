@@ -1,0 +1,12 @@
+name: Elektron
+website: https://www.elektron.se/
+logo:
+  src: /images/logos/elektron.svg
+  alt: Elektron logo
+  width: 260
+  height: 40
+  credit: Elektron
+  license: public domain (text logo)
+  source_url: https://commons.wikimedia.org/wiki/File:Logo_Elektron_Music_Machines.svg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/8/8d/Logo_Elektron_Music_Machines.svg
+  monochrome: true

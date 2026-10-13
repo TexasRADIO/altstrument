@@ -1,0 +1,29 @@
+device: polyend-preset
+name: PresetSandbox
+kind: tool
+summary: Polyend's open-source sandbox for writing your own Preset firmware, with a runtime framework, peripheral drivers, a C++ UI and I/O API and a Euclidean generator example.
+description: >-
+  Described in the README as an alternative open source firmware for the
+  Preset module, for sequencing, preset management or other functionality.
+  Contains a runtime framework, drivers for all peripherals, the API headers
+  and example apps. Builds with the GNU Arm toolchain or MCUXpresso and is
+  flashed with the Polyend Tool. A prebuilt Euclidean generator binary is
+  attached to the 0.1.0 pre-release. Single commit history from December 2020.
+status: dormant
+authors:
+  - name: Polyend
+    url: https://polyend.com
+source: https://github.com/polyend/PresetSandbox
+source_status: open
+license: MIT
+homepage: https://github.com/polyend/PresetSandbox
+distribution: download
+install_notes: >-
+  Download the prebuilt binary from Releases or build with make, then flash
+  with the Polyend Tool.
+tags: [sdk, sequencer]
+versions:
+  - version: "0.1.0"
+    date: 2020-12-22
+    url: https://github.com/polyend/PresetSandbox/releases/tag/0.1.0
+    notes: Pre-release with a Euclidean generator example.

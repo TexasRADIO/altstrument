@@ -1,0 +1,17 @@
+device: novation-launchpad-pro
+name: d-curtis/LaunchpadPro-DaveMod
+summary: Personal hacking fork of the Launchpad Pro open firmware; recent commits add velocity scaling and a velocity curve generator tool.
+status: dormant
+authors:
+  - name: d-curtis
+    url: https://github.com/d-curtis
+source: https://github.com/d-curtis/LaunchpadPro-DaveMod
+source_status: open
+license: BSD-3-Clause
+distribution: source-only
+tags: [platform, sdk]
+versions:
+  - version: master @ 68fa629
+    date: 2019-11-03
+    url: https://github.com/d-curtis/LaunchpadPro-DaveMod/commit/68fa629
+    notes: No tagged releases; this is the latest commit.

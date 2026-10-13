@@ -1,0 +1,27 @@
+device: m-vave-fm-1
+name: FM1 Quest
+summary: >-
+  SLOOP as a pixel-art RPG sidescroller: tracks are party heroes, lit steps are attacks, tempo sets walking
+  speed, scales set biomes, and recording a loop triggers a boss fight. SLOOP functions and controls are
+  unchanged.
+status: active
+authors:
+- name: hericdk
+  url: https://github.com/hericdk
+source: https://github.com/hericdk/fm1-quest
+source_status: open
+license: GPL-3.0-only
+homepage: https://fm1.quest/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer and in-browser emulator on the project page; SLOOP's own release installs
+  over it.
+brick_risk: true
+tags: [game, sequencer, ui, performance]
+versions:
+- version: build 38
+  date: 2026-10-12
+  url: https://github.com/hericdk/fm1-quest/releases/tag/quest-38
+- version: build 37
+  date: 2026-10-12
+  url: https://github.com/hericdk/fm1-quest/releases/tag/quest-37

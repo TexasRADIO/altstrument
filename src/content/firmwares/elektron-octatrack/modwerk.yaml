@@ -1,0 +1,30 @@
+device: elektron-octatrack
+name: Modwerk
+kind: tool
+summary: Module SDK and web mod shop (formerly Octamod) built on octabam, for writing DSP56300 and ColdFire modules and assembling Octatrack firmware from them.
+description: >-
+  Write DSP effects in DSP56300 assembly or playback and system patches in
+  ColdFire assembly, with Python manifests describing controls, placement and
+  compatibility; the site and shop assemble modules into an image from your own
+  OS. The SDK is marked experimental and native builds need a locally prepared
+  toolchain. The project states that original and generated images must not be
+  shared and that flashing can leave a device unusable.
+status: active
+authors:
+  - name: repeat98
+    url: https://github.com/repeat98
+source: https://github.com/repeat98/modwerk
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  Mixed. The backend (server/, functions/, migrations/, worker.ts) is
+  Elastic-2.0, which restricts offering it as a hosted service. The browser
+  frontend and other original code are GPL-3.0-or-later; some shared helpers are
+  dual GPL-3.0-or-later OR Elastic-2.0. SDKs, modules and third-party parts keep
+  their own licences.
+homepage: https://modwerk.app/
+distribution: patch-your-own
+requires_stock: 1.40C
+install_notes: Needs Git, Node.js 24 and Python 3.10+. Images are built locally from your own OS file.
+brick_risk: true
+tags: [sdk, fx, machines, editor]

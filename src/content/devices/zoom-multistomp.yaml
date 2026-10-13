@@ -1,0 +1,26 @@
+name: Zoom MS-50G / MS-60B / MS-70CDR and G-series
+manufacturer: Zoom
+category: pedal
+tagline: Multi-effects pedals with installable effect files
+links:
+  manufacturer: https://zoomcorp.com/en/us/
+  community:
+    - label: r/zoommultistomp
+      url: https://www.reddit.com/r/zoommultistomp/
+notes: >-
+  Two incompatible effect formats exist: ZDL (G1on, G1Xon, B1on, B1Xon, MS-50G,
+  MS-60B, MS-70CDR) and ZD2 (G3X, G3n, G3Xn, G5n, B3n, AC-2, AC-3 and the Four
+  series), and effects from one cannot be used on the other. Effect files can be
+  extracted from official firmware updaters and installed with these tools. The
+  newer MS-plus pedals are only partly supported by zoom-zt2. All of this is
+  unsupported by Zoom and used at your own risk.
+image:
+  src: /images/devices/zoom-multistomp.png
+  style: photo
+  alt: Zoom MS-50G+ MultiStomp guitar effects pedal, top view
+  width: 727
+  height: 1200
+  credit: Zoom Corporation
+  license: manufacturer product image
+  source_url: https://zoomcorp.com/en/us/multi-effects/multistomp-pedals/ms-50g-plus/
+  original_url: https://zoomcorp.com/media/images/MS50Gplus_listImg_1.original.png

@@ -1,0 +1,28 @@
+device: korg-poly-800
+name: HAWK-800
+summary: Hardware-plus-firmware upgrade for the Poly-800 and EX-800 with expanded MIDI (NRPN, SysEx dumps), an arpeggiator, extra LFOs, selectable filter slope and flash patch storage. Kits are no longer sold.
+description: >-
+  The project page says over 5,000 kits were sold between 2007 and 2021. Features
+  include an arpeggiator, expanded and super LFOs, resonance modulation, a 24 or
+  12 dB per octave filter slope, DCO harmonic modulation, extreme resonance and
+  quasi-FM modes, MIDI clock sync, chord sync, cascade mode for two units and
+  patches stored in flash (four banks of 64 on later kits). The SourceForge
+  project hosts the 2.68a firmware zip and says assembly source is posted there,
+  with no license stated. The kits have been unavailable since 2023 and the
+  author is working on a successor, the HAWK-832.
+status: dormant
+authors:
+  - name: Mike (hawk800.com)
+    url: https://www.hawk800.com/
+source: https://sourceforge.net/projects/hawk800/
+source_status: open
+license: unspecified
+license_notes: No license is stated on the SourceForge project page. The project page says source assembly code is posted there.
+homepage: https://www.hawk800.com/
+distribution: download
+install_notes: Needs the HAWK-800 hardware board installed in the synth; the firmware zip on SourceForge is for existing kits.
+tags: [midi, lfo, filter, synth-engine, performance]
+versions:
+  - version: 2.68a
+    url: https://sourceforge.net/projects/hawk800/
+    notes: Latest firmware zip on the SourceForge project, which lists a last update of 2024-01-04; no release date is given for the version itself.

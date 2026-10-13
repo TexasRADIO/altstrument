@@ -1,0 +1,20 @@
+device: noise-engineering-versio
+name: Stray Drum
+summary: Beta FM and ring-modulation macro oscillator for kicks, snares, hats, percussion and chord stabs. Five octaves of pitch; V/Oct tracking needs a calibration that is not implemented yet.
+description: >-
+  The page warns of rough edges: audio inputs, the Trig button and one switch
+  are unused. Pairs with the Traffic and Water module for three voices.
+status: unknown
+authors:
+  - name: Jasmine & Olive Trees
+    url: https://jasmineandolivetrees.com/
+source_status: binary-only
+license: unspecified
+license_notes: The page states no license.
+homepage: https://jasmineandolivetrees.com/pages/stray-drum-versio-firmware
+distribution: download
+install_notes: Select StrayDrumV0.bin as a custom file on Noise Engineering's firmware page.
+tags: [synth-engine]
+versions:
+  - version: V0
+    url: https://jasmineandolivetrees.com/pages/stray-drum-versio-firmware

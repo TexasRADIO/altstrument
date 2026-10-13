@@ -1,0 +1,42 @@
+device: akai-mpc500
+name: Open500
+summary: "Loader injected into the stock MPC500 OS 1.31 that runs add-ons from WAV files: master FX, grid sequencer, auto chop, sample FX, pad tools and input thru."
+description: >-
+  A 1.3 KB loader is written into an unused area of OS 1.31 and hooked into the
+  main loop. It reserves 896 KB of sample memory for add-ons and effect
+  buffers. Add-ons are WAV files with a signed relocatable payload, managed by
+  a HUB add-on that holds up to eight at once. The bootloader is never
+  touched and flashing the original OS removes everything. The repository
+  contains no Akai code. Tested on one MPC500 with OS 1.31 according to the
+  README.
+status: active
+authors:
+  - name: M45K
+    url: https://github.com/M45K
+source: https://github.com/M45K/open500
+source_status: patcher-only
+license: unspecified
+license_notes: >-
+  The project site calls Open500 free and open source, but the repository has
+  no LICENSE file and does not include the add-on source.
+homepage: https://m45k.github.io/open500/
+distribution: browser-installer
+requires_stock: "1.31"
+install_notes: >-
+  Drop the official OS 1.31 file into the web page to add the loader locally
+  in your browser, flash the result, then load add-on WAVs from the sample
+  list.
+tags: [fx, sequencer, sampler, loader]
+versions:
+  - version: v11 (loader v10)
+    date: 2026-09-29
+    url: https://github.com/M45K/open500/commits/main
+    notes: Adds Master FX, Grid Seq and Input Thru.
+  - version: v9
+    date: 2026-09-26
+    url: https://github.com/M45K/open500/commits/main
+    notes: Loader with 8 add-on slots and autoload, Pad Tools, Sample FX chain.
+  - version: v8 loader
+    date: 2026-09-24
+    url: https://github.com/M45K/open500/commits/main
+    notes: First site, in-browser patcher, HUB and Auto Chop.

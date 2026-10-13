@@ -1,0 +1,21 @@
+device: elektron-digitakt-ii
+name: DigiSplash-II
+kind: tool
+summary: Utility that encodes any image or animated GIF into the Digitakt II's OLED format and injects it as a custom boot logo or animation into your own OS 1.17 file, producing a flashable .syx.
+description: >-
+  Uses an unused ROM cave and a small trampoline hook, disables the dither boot
+  screen to avoid boot noise, and can flash over USB MIDI with amidi on Linux or
+  macOS. Relies on mischa85/elektron-firmware-tool to repack the container.
+status: active
+authors:
+  - name: Fadedlimes
+    url: https://github.com/Fadedlimes
+source: https://github.com/Fadedlimes/digisplash-ii
+source_status: open
+license: unspecified
+license_notes: No license file in the repository.
+distribution: patch-your-own
+requires_stock: "1.17"
+install_notes: Place your official Digitakt_II_OS1.17.syx in the folder, build the container tool, then run the Python script.
+tags: [boot-splash, ui, flasher]
+versions: []

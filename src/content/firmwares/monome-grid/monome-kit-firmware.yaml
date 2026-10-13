@@ -1,0 +1,26 @@
+device: monome-grid
+name: monome kit (mk) firmware
+summary: >-
+  Original sources for the 2010 monome kit grids: default, encoder and tilt-sensor firmwares for 8x8, 16x8 and 16x16 hardware, plus "-old" builds for early 40h-style orientation.
+description: >-
+  The mk repository holds complete kit sources: bootloader, firmware and
+  hardware files. Firmware folders include default, encoders (8 encoders on
+  the aux port) and tilt, each with an "-old" variant for old 40h grids
+  that tile in a rotated orientation. The README asks users to share their
+  modifications.
+status: dormant
+authors:
+  - name: Brian Crabtree
+    url: https://github.com/tehn
+source: https://github.com/monome/mk
+source_status: open
+license: CC-BY-NC-SA-3.0
+license_notes: Per the README, firmware and hardware files are CC BY-NC-SA 3.0 and the bootloader is GPL. Non-commercial use only; contact monome for other uses.
+homepage: https://monome.org/docs/grid/editions/
+distribution: source-only
+requires_stock: monome kit grids (2010)
+tags: [platform, grid]
+versions:
+  - version: v2.0
+    date: 2014-09-17
+    url: https://github.com/monome/mk/releases/tag/v2.0

@@ -1,0 +1,9 @@
+---
+import Badge from './Badge.astro';
+import { STATUS_INFO } from '@/lib/labels';
+import type { Status } from '@/content/schema';
+interface Props { status: Status }
+const { status } = Astro.props;
+const info = STATUS_INFO[status];
+---
+<Badge tone={info.tone} title={info.desc}>{info.label}</Badge>

@@ -1,0 +1,26 @@
+name: MPC1000 / 2500
+manufacturer: Akai Professional
+category: sampler
+tagline: MPC1000-series sampler and sequencer
+links:
+  community:
+    - label: JJOS site
+      url: http://www7a.biglobe.ne.jp/~mpc1000/
+notes: >-
+  JJOS is the established alternative OS for this family. The JJOS site
+  lists the MPC1000 variants and links to a separate MPC2500 page.
+related:
+  - akai-mpc-live
+  - akai-mpc500
+  - akai-mpc2000
+  - akai-force
+image:
+  src: /images/devices/akai-mpc1000.webp
+  style: photo
+  alt: "Akai Professional MPC1000, top view"
+  width: 1200
+  height: 750
+  credit: Akai Professional
+  license: manufacturer product image
+  source_url: https://web.archive.org/web/20080318155400/http://www.akaipro.com:80/mpc1000
+  original_url: https://web.archive.org/web/20081115232611im_/http://www.akaipro.com/stuff/contentmgr/files/0/0717ce0054b74108faef329855c5a0bf/large/mpc1000_top_lg.png

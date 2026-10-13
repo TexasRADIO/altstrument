@@ -1,0 +1,26 @@
+name: CHOMPI
+manufacturer: Chase Bliss
+category: sampler
+tagline: Chromatic sampler and tape-music instrument
+platform: Electrosmith Daisy Seed
+stock_firmware: TAPE 2.0
+links:
+  manufacturer: https://www.chompiclub.com
+  community:
+    - label: CHOMPI open source
+      url: https://www.chompiclub.com/opensource
+notes: >-
+  The original CHOMPI is discontinued. Hardware and firmware were released as
+  open source in September 2026 and the repository is described as a
+  permanent source with no further updates planned. Panel artwork, the CHOMPI
+  name and the logo are not covered by the MIT license.
+image:
+  src: /images/devices/chase-bliss-chompi.jpg
+  style: photo
+  alt: Top-down view of the Chase Bliss CHOMPI sampler with its handle, knobs and 14-key keyboard (cropped from the product photo)
+  width: 1160
+  height: 610
+  credit: Chase Bliss
+  license: manufacturer product image
+  source_url: https://www.chompiclub.com/chompi
+  original_url: "https://images.squarespace-cdn.com/content/v1/6806d2ffc4a80a2513faa80c/1762298724027-A3MCJJNAYP4J4PUQXJ8U/Chompi_Chase+Bliss_Chompi+Club_Top.jpg"

@@ -1,0 +1,25 @@
+device: monome-earthsea
+name: polyearthsea
+summary: scanner_darkly's polyphonic earthsea built on the multipass framework, targeting trilogy modules, ansible and Teletype; built from source or from a 2020 pre-release.
+description: >-
+  A multipass version of earthsea with polyphony. Build by choosing the module
+  folder under multipass/monome_euro (for example ansible) and running make,
+  following the libavr32 toolchain instructions. The only tag is a 0.0.1
+  pre-release from December 2020 and the last commit is from October 2023.
+status: dormant
+authors:
+  - name: scanner_darkly
+    url: https://github.com/scanner-darkly
+source: https://github.com/scanner-darkly/polyearthsea
+source_status: open
+license: unspecified
+license_notes: No LICENSE file in the repository; multipass, which it includes as a submodule, is GPLv2.
+homepage: https://github.com/scanner-darkly/polyearthsea/releases/tag/0.0.1
+distribution: download
+requires_stock: Trilogy modules, ansible or Teletype hardware
+tags: [sequencer, grid]
+versions:
+  - version: "0.0.1"
+    date: 2020-12-18
+    url: https://github.com/scanner-darkly/polyearthsea/releases/tag/0.0.1
+    notes: GitHub pre-release.

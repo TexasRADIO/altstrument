@@ -1,0 +1,23 @@
+device: noise-engineering-alia
+name: Manis Iteritas Alia
+summary: Official dark, industrial-strength voice firmware.
+description: >-
+  Part of the Iteritas lineup. Part of the proceeds from Manis Iteritas sales
+  support pangolin conservation. Runs on any Alia module. Manual:
+  https://noiseengineering.us/manuals/manis-iteritas-alia/
+status: active
+authors:
+  - name: Noise Engineering
+    url: https://noiseengineering.us
+source_status: closed
+license: proprietary
+license_notes: >-
+  Closed-source official firmware, free to Alia owners.
+homepage: https://noiseengineering.us/products/manis-iteritas-alia/
+distribution: download
+install_notes: >-
+  Swap from the Noise Engineering firmware portal
+  (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
+  (Chrome, Edge or Opera). Free for Alia owners.
+tags: [official, voice, industrial]
+versions: []

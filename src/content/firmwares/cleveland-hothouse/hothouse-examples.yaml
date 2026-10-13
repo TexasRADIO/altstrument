@@ -1,0 +1,33 @@
+device: cleveland-hothouse
+name: HothouseExamples
+summary: Example effects and prebuilt binaries for the Hothouse pedal kit, with a web flasher, project scaffolding scripts, a dev container, Funbox ports, and support for Faust, plugdata/Pd and Max/MSP Gen~.
+description: >-
+  Source code for ready-to-flash effects (for example EchoKing tape delay,
+  ShimmerVerb, Frippertronics, TapeSimulator, BasicChorus and Phaser) plus
+  helper scripts for creating and building projects. Third-party toolchains can
+  target the Hothouse: faust2hothouse and plugdata via HVCC. A Funbox-to-Hothouse
+  port directory is included. Release v26.05.02 added a hold-both-footswitches
+  DFU gesture to most binaries. The hardware is released separately under
+  CC-BY-SA-4.0.
+status: active
+authors:
+  - name: Cleveland Music Co.
+    url: https://clevelandmusicco.com/
+source: https://github.com/clevelandmusicco/HothouseExamples
+source_status: open
+license: GPL-3.0-or-later
+license_notes: Software only. The Hothouse hardware design is CC-BY-SA-4.0.
+homepage: https://clevelandmusicco.github.io/HothouseFlasher/
+distribution: browser-installer
+install_notes: Flash a binary from the latest release with the Hothouse Flasher, or build an example with the Daisy toolchain.
+tags: [platform, fx, flasher, sdk, delay, reverb]
+versions:
+  - version: v26.05.02
+    date: 2026-05-25
+    url: https://github.com/clevelandmusicco/HothouseExamples/releases/tag/v26.05.02
+  - version: v26.05.1
+    date: 2026-05-07
+    url: https://github.com/clevelandmusicco/HothouseExamples/releases/tag/v26.05.1
+  - version: v26.01.01
+    date: 2026-01-28
+    url: https://github.com/clevelandmusicco/HothouseExamples/releases/tag/v26.01.01

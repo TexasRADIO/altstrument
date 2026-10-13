@@ -1,0 +1,43 @@
+device: arturia-microfreak
+name: SuperFreaker
+summary: Free open-beta mod packs for the MicroFreak, built by a browser patcher from your own official 5.0.0.2084 file. Adds separate release, legato glide, transpose, a metronome, per-preset volume, +7 dB output, and pre-filter effects including tape echo.
+description: >-
+  Distributed as three packs applied by a browser-based patcher to an official
+  firmware file you supply; the patcher checks that the file is exactly
+  5.0.0.2084 and the file is not uploaded. Essentials adds a separate release
+  stage, legato glide, transpose, metronome, per-preset volume and preset jump,
+  Shift latch, sequencer shortcuts, extra MIDI CCs, and options to ignore
+  Program Change and MIDI Start. Loud adds about 7 dB at the headphone and line
+  outputs. Sound adds pre-filter drive and lo-fi, noise and tremolo, a tape
+  echo with four modes, a wavefolder and a sub-octave. The patches change only
+  the main program in the firmware file; the authors state the bootloader and
+  the unit's serial number and calibration data are not touched. The patch data
+  itself is not published, so the source status is patcher-only. Built by
+  Freakier Firmware Labs LLC, an independent company in Asheville, NC, funded by
+  voluntary donations. The site states it does not host or link any maker's
+  firmware.
+status: active
+authors:
+  - name: Freakier Firmware Labs LLC
+    url: https://freakierfirmware.com/
+source_status: patcher-only
+license: proprietary
+license_notes: >-
+  All rights reserved. Per the site terms, you may build and flash as many of
+  your own instruments as you like, but may not resell, share or redistribute a
+  pack's patch data or a build made with it. Every pack is free during the beta.
+homepage: https://freakierfirmware.com/microfreak/
+distribution: patch-your-own
+requires_stock: 5.0.0.2084
+install_notes: >-
+  Back up presets, samples and wavetables in Arturia MIDI Control Center and
+  keep your official firmware file. Patch it in the browser, then load the
+  result with MIDI Control Center's force upgrade. The authors' recovery guide
+  covers returning to the official firmware.
+brick_risk: true
+tags: [fx, synth-engine, midi, performance, bugfixes]
+versions:
+  - version: SuperFreaker 5.0.0.2084 (open beta)
+    date: 2026-10-10
+    url: https://freakierfirmware.com/microfreak/
+    notes: Date taken from the Synth Anatomy coverage of the public beta; the project page itself states no release date.

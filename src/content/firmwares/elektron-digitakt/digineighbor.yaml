@@ -1,0 +1,22 @@
+device: elektron-digitakt
+name: digineighbor
+summary: "NEIGHBOR machine for the Digitakt mk1, like the Octatrack's: a track plays another track's audio through its own overdrive, filter, envelope, pan and sends, with pitch shift and gain."
+status: active
+authors:
+  - name: irpina
+    url: https://github.com/irpina
+source: https://github.com/irpina/digineighbor
+source_status: open
+license: GPL-2.0-or-later
+distribution: patch-your-own
+requires_stock: 1.53 / 1.54
+install_notes: elekloader mod, one file per OS version.
+tags: [machines, fx]
+versions:
+  - version: "0.7"
+    date: 2026-10-09
+    url: https://github.com/irpina/digineighbor/commit/f5639220d4248882f60fd1f6d502ec25d8b6d221
+    notes: Commit date; needs core 3.0 machine pages. No GitHub release yet.
+  - version: v0.6
+    date: 2026-10-02
+    url: https://github.com/irpina/digineighbor/releases/tag/v0.6

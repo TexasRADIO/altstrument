@@ -1,0 +1,18 @@
+name: TELEXo / TELEXi (TXo, TXi)
+manufacturer: Brendon Cassidy (bpcmusic)
+category: eurorack
+tagline: >-
+  Open DIY Teletype expanders: output (TXo) and input (TXi) over i2c
+platform: Teensy 3.2 / 3.6
+links:
+  manufacturer: https://github.com/bpcmusic/telex
+  community:
+    - label: TELEX thread on llllllll.co
+      url: https://llllllll.co/t/a-teletype-expander/1379
+notes: >-
+  TELEX modules are open-source expanders for monome Teletype that use the
+  monome-style i2c (ii) bus; the README says they could also extend other
+  monome devices. Firmware is loaded to the piggybacked Teensy with Teensy
+  Loader, and the README warns not to power the module while the Teensy is
+  connected to USB. The last firmware release is from 2021.
+related: [monome-teletype, monome-ansible, monome-crow, 16n-faderbank]

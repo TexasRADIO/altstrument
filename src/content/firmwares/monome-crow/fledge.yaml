@@ -1,0 +1,22 @@
+device: monome-crow
+name: fledge
+kind: tool
+summary: >-
+  norns script that updates crow firmware: it checks for pip3 and Python modules, fetches the current crow firmware, activates the bootloader and flashes it.
+description: >-
+  The README calls it an inelegant brute-force approach and points to the
+  maiden console for details while updating. Included here because it is a
+  flasher; it runs on stock norns, so it is a tool and not a norns script
+  entry. The repository has not changed since June 2023.
+status: dormant
+authors:
+  - name: monome
+    url: https://monome.org
+source: https://github.com/monome/fledge
+source_status: open
+license: unspecified
+license_notes: No LICENSE file in the repository.
+homepage: https://monome.org/docs/crow/update/
+distribution: source-only
+install_notes: In maiden, run `;install https://github.com/monome/fledge`, then launch fledge on norns with crow connected.
+tags: [flasher]

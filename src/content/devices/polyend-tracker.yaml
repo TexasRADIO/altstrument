@@ -1,0 +1,20 @@
+name: Tracker
+manufacturer: Polyend
+category: groovebox
+tagline: Standalone tracker-style sequencer and sampler
+stock_firmware: 1.9.2
+links:
+  manufacturer: https://polyend.com/tracker/
+notes: >-
+  Official firmware 1.9.2 dates from October 2025. The one third-party tool
+  here targets the older 1.5.0 release and has not been updated since 2024.
+image:
+  src: /images/devices/polyend-tracker.png
+  style: photo
+  alt: Angled view of the original Polyend Tracker standalone tracker-style sequencer and sampler
+  width: 1200
+  height: 665
+  credit: Polyend
+  license: manufacturer product image
+  source_url: https://polyend.com/tracker/
+  original_url: https://polyend-website.fra1.digitaloceanspaces.com/wp-content/uploads/2023/01/01084224/tracker__glamour.png

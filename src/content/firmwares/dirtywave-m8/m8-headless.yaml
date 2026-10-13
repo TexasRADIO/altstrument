@@ -1,0 +1,42 @@
+device: dirtywave-m8
+name: M8 Headless
+summary: Dirtywave's own build of the M8 tracker for a bare Teensy 4.1, driven through a display and input client on a host computer over USB.
+description: >-
+  Precompiled .hex firmware for the Teensy 4.1 with the M8 sequencer, sampler
+  and synth engines. Samples are read from a microSD card in the /Samples
+  directory; the repository recommends FAT32 and a card with good random-read
+  speed. Setup is covered in the M8Docs headless guide. The repository's
+  changelog lists the 6.6.3 series as fixes for MIDI sync, trig envelopes and
+  the FM synth, plus a recording dropout mitigation.
+status: active
+authors:
+  - name: Dirtywave (Trash80)
+    url: https://dirtywave.com
+source: https://github.com/Dirtywave/M8HeadlessFirmware
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  Distributed under the Dirtywave EULA in the repository (EULA.txt): use on
+  your own devices and archival copies only. No modification, derivative
+  works, reverse engineering or redistribution.
+homepage: https://github.com/Dirtywave/M8Docs/blob/main/docs/M8HeadlessSetup.md
+distribution: download
+install_notes: >-
+  Flash the .hex from the repository's Releases folder to the Teensy 4.1 and
+  run a display and input client on the host. See the setup guide.
+tags: [sequencer, sampler, synth-engine, fm, midi]
+versions:
+  - version: 6.6.3E
+    date: 2026-10-05
+    url: https://github.com/Dirtywave/M8HeadlessFirmware/blob/main/changelog.txt
+    notes: Fixes a small visual bug in project tempo nudge.
+  - version: 6.6.3D
+    date: 2026-10-05
+    url: https://github.com/Dirtywave/M8HeadlessFirmware/blob/main/changelog.txt
+    notes: Fixes MIDI sync input with song position pointer and trig envelope resets.
+  - version: 6.6.3C
+    date: 2026-09-13
+    url: https://github.com/Dirtywave/M8HeadlessFirmware/blob/main/changelog.txt
+  - version: "6.6.3"
+    date: 2026-09-07
+    url: https://github.com/Dirtywave/M8HeadlessFirmware/blob/main/changelog.txt

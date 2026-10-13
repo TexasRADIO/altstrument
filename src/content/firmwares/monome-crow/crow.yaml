@@ -1,0 +1,34 @@
+device: monome-crow
+name: crow
+summary: >-
+  Official open-source crow firmware: the Lua scripting runtime, ASL envelope and LFO engine, i2c leader and follower, and USB text interface for the 2HP module.
+description: >-
+  Crow is a collaboration between Whimsical Raps and monome. The firmware
+  repository holds the C code, the Lua runtime and the build tooling. The
+  last tagged release is 4.0.5 from July 2023, while commits have continued
+  into 2026. Updates are made with druid, the fledge script on norns, or a
+  manual DFU flash.
+status: active
+authors:
+  - name: monome
+    url: https://monome.org
+  - name: Whimsical Raps
+    url: https://www.whimsicalraps.com
+source: https://github.com/monome/crow
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE.txt is GPLv3; no "or later" grant found in the project's own files.
+homepage: https://monome.org/docs/crow/
+distribution: download
+install_notes: Run `druid firmware` on a computer, use fledge on norns, or follow the manual update guide. Windows may need a WinUSB driver (Zadig) for DFU.
+tags: [platform, scripting, i2c, envelopes, lfo]
+versions:
+  - version: v4.0.5
+    date: 2023-07-25
+    url: https://github.com/monome/crow/releases/tag/v4.0.5
+  - version: v4.0.4
+    date: 2023-06-30
+    url: https://github.com/monome/crow/releases/tag/v4.0.4
+  - version: v4.0.3
+    date: 2023-06-01
+    url: https://github.com/monome/crow/releases/tag/v4.0.3

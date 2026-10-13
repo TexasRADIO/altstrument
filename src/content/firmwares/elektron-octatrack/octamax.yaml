@@ -1,0 +1,32 @@
+device: elektron-octatrack
+name: OCTAMAX
+summary: Reverse-engineering toolkit for the Octatrack MKII OS 1.40C plus opt-in behaviour patches (lazy part transitions, no bank/pattern countdown, arp scales, slice playhead, 256 static slots). Origin of the scene.
+description: >-
+  Educational workspace by Maxolydian: how the update files are packed, how
+  code is laid out in memory, how the microkernel and DSP are driven, and a few
+  optional, reversible behaviour changes that prove the understanding. Version
+  2.0 BETA is tested on one MKII. Toggles live in PERSONALIZE and persist across
+  power cycles and OS upgrades. Later projects (octabam, Kyoti) credit it and
+  reuse its analysis tooling.
+status: active
+authors:
+  - name: Maxolydian (mxldyn)
+    url: https://github.com/mxldyn
+source: https://github.com/mxldyn/octamax
+source_status: open
+license: unspecified
+license_notes: No license file in the repository; downstream projects note it ships none. Code is offered for educational use only.
+distribution: patch-your-own
+requires_stock: 1.40C
+install_notes: >-
+  Run the setup scripts against your own official 1.40C .syx to produce a
+  modified image. Flash with Elektron Transfer. The bootloader is never touched;
+  [FUNC] + power on then [TRIG 3] recovers the unit even if the OS is corrupt.
+tags: [research, ui, sequencer, scales]
+versions:
+  - version: 2.0 BETA
+    notes: Adds SLICE PLAYHEAD view and persistent PERSONALIZE toggles. Beta, tested on one MKII.
+  - version: dual256-v1
+    date: 2026-09-05
+    url: https://github.com/mxldyn/octamax/releases/tag/dual256-v1
+    notes: Tag for the 256 static slots build.

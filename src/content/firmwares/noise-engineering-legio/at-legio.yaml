@@ -1,0 +1,22 @@
+device: noise-engineering-legio
+name: AT Legio
+summary: Official LFSR lofi oscillator, inspired by Ataraxic Translatron, the first Noise Engineering module.
+description: >-
+  Official Noise Engineering firmware for the 6 HP Legio platform. Runs on any
+  Legio module. Manual: https://noiseengineering.us/manuals/at-legio/
+status: active
+authors:
+  - name: Noise Engineering
+    url: https://noiseengineering.us
+source_status: closed
+license: proprietary
+license_notes: >-
+  Closed-source official firmware, free to Legio owners.
+homepage: https://noiseengineering.us/products/at-legio/
+distribution: download
+install_notes: >-
+  Swap from the Noise Engineering firmware portal
+  (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
+  (Chrome, Edge or Opera). Free for Legio owners.
+tags: [official, oscillator, lofi]
+versions: []

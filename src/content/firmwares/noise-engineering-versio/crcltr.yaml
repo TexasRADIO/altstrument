@@ -1,0 +1,25 @@
+device: noise-engineering-versio
+name: CRCLTR
+summary: Dual stereo looper (loop 1 with seamless crossfade, loop 2 with click-avoid fades) built with the Max gen~ to Oopsy workflow.
+description: >-
+  Releases carry a .bin for the Daisy Web Programmer. Rebuilding needs Max and
+  the Oopsy package.
+status: dormant
+authors:
+  - name: s3g
+    url: https://github.com/s3g
+source: https://github.com/s3g/crcltr
+source_status: open
+license: unspecified
+license_notes: No license file or statement in the repository.
+homepage: https://github.com/s3g/crcltr/releases
+distribution: download
+install_notes: Upload the .bin with the Daisy Web Programmer (flash.daisy.audio).
+tags: [looper]
+versions:
+  - version: v1.0.1
+    date: 2024-01-25
+    url: https://github.com/s3g/crcltr/releases/tag/v1.0.1
+  - version: v1.0.0
+    date: 2024-01-24
+    url: https://github.com/s3g/crcltr/releases/tag/v1.0.0

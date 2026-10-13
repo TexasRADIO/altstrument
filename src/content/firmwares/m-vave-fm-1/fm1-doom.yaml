@@ -1,0 +1,29 @@
+device: m-vave-fm-1
+name: FM-1 Doom
+summary: >-
+  Port of Doom (one FreeDM arena map) to the FM-1: rendered on the colour screen, keys and knobs as controls,
+  synthesised sound effects, no music.
+description: >-
+  Needs no game data of your own. Built on doomgeneric (Chocolate Doom) with the Felucca / sloopDX hardware
+  layer; keeps sloopDX's USB rescue and preserves sloopDX projects in flash.
+status: active
+authors:
+- name: Sven Trogus (zvenson)
+  url: https://github.com/zvenson
+source: https://github.com/zvenson/fm1doom
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Engine is GPL-2.0-or-later (doomgeneric / Chocolate Doom); combined with the GPL-3.0 hardware layer
+  the firmware as a whole is GPL-3.0. FreeDM game data is BSD-3-Clause.
+homepage: https://doom.deadlockinteractive.com/
+distribution: browser-installer
+install_notes: Browser WebMIDI installer from the project site; it can put sloopDX back.
+brick_risk: true
+tags: [game, emulator]
+versions:
+- version: '0.5'
+  date: 2026-10-07
+  url: https://github.com/zvenson/fm1doom
+  notes: >-
+    Version and date from the fm1-editor.com/firmware hub; repository has no release tags.

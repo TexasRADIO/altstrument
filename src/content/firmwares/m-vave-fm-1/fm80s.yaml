@@ -1,0 +1,27 @@
+device: m-vave-fm-1
+name: FM80S
+summary: >-
+  Synthwave synth-looper by Floydus: play a loop on the keys, layer another instrument over it, or step-program
+  it, then chain loops into a song. Version 0.1 is SLOOP 2.5 under a new name, with a browser FM-1 and
+  8 tracks planned.
+description: >-
+  Documentation is in French. The roadmap lists a virtual FM-1 in the browser, then eight tracks, then
+  the synthwave theme and sounds. The fm1-editor.com directory lists it on its watch list rather than
+  as installable.
+status: active
+authors:
+- name: Floydus (y6zkcqnf5r-hue)
+  url: https://github.com/y6zkcqnf5r-hue
+source: https://github.com/y6zkcqnf5r-hue/fm1-fm80s
+source_status: open
+license: GPL-3.0-only
+distribution: source-only
+install_notes: >-
+  Build with ./build.sh, then use the local installer page described in the README. Keep V15 (FM-1.fwsc)
+  from M-VAVE to roll back.
+brick_risk: true
+tags: [sequencer, synth-engine, performance]
+versions:
+- version: '0.1'
+  url: https://github.com/y6zkcqnf5r-hue/fm1-fm80s
+  notes: 'F0-01: SLOOP 2.5 renamed; version from the README, no dated release.'

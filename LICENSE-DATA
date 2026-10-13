@@ -1,0 +1,14 @@
+Catalog data license (CC BY 4.0)
+
+The catalog data in this repository, meaning the device and firmware YAML files under src/content/devices and src/content/firmwares, is licensed under the Creative Commons Attribution 4.0 International License.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+In short, you may:
+
+- Share: copy and redistribute the material in any medium or format.
+- Adapt: remix, transform, and build upon the material for any purpose, including commercially.
+
+You must give appropriate credit, link to the license, and indicate if you made changes. You may not apply legal terms or technical measures that restrict others from doing anything the license permits.
+
+This license covers the catalog entries. It does not change the license of any firmware the entries describe, which is recorded in each entry's license field. The code in this repository, including src/content/schema.ts, is MIT (see LICENSE).

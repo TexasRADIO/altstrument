@@ -1,0 +1,27 @@
+device: elektron-model-cycles
+name: Model-TG
+summary: "Sampler machine for Model:Cycles OS 1.13 as a seventh machine: one-shot, loop, slice, granular, stretch, pluck and wavetable playback, resampling, beat-repeat and 12 master FX."
+description: >-
+  Plays samples from the Cycles' internal storage, a different sample per pattern,
+  with p-lockable per-step sample locks. Built on your computer from your own
+  stock OS. Version 1.1.0 adds slide trigs, also on the Syntakt engines.
+  Included as an option in Modded Cycles.
+status: active
+authors:
+  - name: TinyGregAudio
+    url: https://github.com/TinyGregAudio
+source: https://github.com/TinyGregAudio/Model-TG
+source_status: open
+license: MIT
+license_notes: Covers the repository's source code and documentation only.
+distribution: patch-your-own
+requires_stock: "1.13"
+install_notes: Build per docs/BUILD.md from your own OS file; the docs include a going-back-to-stock section.
+tags: [sampler, machines, granular, wavetable, fx]
+versions:
+  - version: v1.1.0
+    date: 2026-10-02
+    url: https://github.com/TinyGregAudio/Model-TG/releases/tag/v1.1.0
+  - version: v1.0.0
+    date: 2026-10-01
+    url: https://github.com/TinyGregAudio/Model-TG/releases/tag/v1.0.0

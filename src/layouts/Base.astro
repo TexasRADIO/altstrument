@@ -1,0 +1,141 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Home page uses the bare site name as its title. */
+  home?: boolean;
+  /** Social preview image: site-relative path (made absolute with Astro.site). */
+  image?: { src: string; alt?: string };
+}
+const { title, description, home = false, image } = Astro.props;
+const SITE = 'Firmware World';
+const fullTitle = home ? title : `${title} · ${SITE}`;
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const canonical = Astro.site ? new URL(path, Astro.site).href : undefined;
+
+const imageUrl = image ? (Astro.site ? new URL(image.src, Astro.site).href : image.src) : undefined;
+
+const nav = [
+  { href: '/', label: 'Devices', match: (p: string) => p === '/' || p.startsWith('/devices') || p.startsWith('/firmware') || p.startsWith('/manufacturers') },
+  { href: '/recent', label: 'Recent', match: (p: string) => p === '/recent' },
+  { href: '/about', label: 'About', match: (p: string) => p === '/about' },
+  { href: '/feed.xml', label: 'RSS', match: () => false },
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <script is:inline>
+      // Runs before first paint so a saved choice never flashes the other theme.
+      // Nothing saved (or invalid) = no attribute; the CSS media query follows the system.
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="application/rss+xml" title="Firmware World: recent versions" href="/feed.xml" />
+    <meta property="og:site_name" content={SITE} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    {canonical && <meta property="og:url" content={canonical} />}
+    {imageUrl && <meta property="og:image" content={imageUrl} />}
+    {imageUrl && image?.alt && <meta property="og:image:alt" content={image.alt} />}
+    <meta name="twitter:card" content={imageUrl ? 'summary_large_image' : 'summary'} />
+    {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-10 focus:rounded focus:bg-surface focus:px-3 focus:py-2">Skip to content</a>
+    <header class="border-b border-line bg-surface">
+      <div class="mx-auto flex w-full max-w-[72rem] flex-wrap items-baseline justify-between gap-x-6 gap-y-1 px-4 py-3">
+        <a href="/" class="text-lg font-semibold tracking-tight text-fg no-underline hover:text-fg">{SITE}</a>
+        <nav aria-label="Main">
+          <ul class="flex items-center gap-4 text-sm">
+            {nav.map((n) => (
+              <li>
+                <a
+                  href={n.href}
+                  class:list={['no-underline hover:underline', n.match(path) ? 'font-semibold text-fg' : 'text-muted hover:text-fg']}
+                  aria-current={n.match(path) ? 'page' : undefined}>{n.label}</a>
+              </li>
+            ))}
+            <li data-theme-item hidden>
+              <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+                <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" /></svg>
+                <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" /></svg>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="mx-auto w-full max-w-[72rem] flex-1 px-4 py-6 sm:py-8">
+      <slot />
+    </main>
+    <footer class="border-t border-line bg-surface text-sm text-muted">
+      <div class="mx-auto flex w-full max-w-[72rem] flex-col gap-1 px-4 py-4 sm:flex-row sm:flex-wrap sm:justify-between">
+        <p>Catalog data <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC-BY-4.0</a>. Site code <a href="https://spdx.org/licenses/MIT.html" rel="noopener">MIT</a>.</p>
+        <p><a href="https://github.com/philmillman/firmware-world" rel="noopener">Edit this on GitHub</a></p>
+      </div>
+    </footer>
+    <script is:inline>
+      // Theme toggle: two states (light/dark). The initial state is the saved choice, else the
+      // current system preference. A saved choice keeps overriding the system. Without JS the
+      // <li> stays hidden and the CSS follows prefers-color-scheme.
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        if (!btn) return;
+        var root = document.documentElement;
+        var mq = window.matchMedia('(prefers-color-scheme: dark)');
+        function saved() {
+          try {
+            var t = localStorage.getItem('theme');
+            return t === 'light' || t === 'dark' ? t : null;
+          } catch (e) {
+            var a = root.getAttribute('data-theme');
+            return a === 'light' || a === 'dark' ? a : null;
+          }
+        }
+        function render() {
+          var s = saved();
+          // Only pin data-theme for a saved choice; otherwise the media query decides.
+          if (s) root.setAttribute('data-theme', s);
+          else root.removeAttribute('data-theme');
+          label(s || (mq.matches ? 'dark' : 'light'));
+        }
+        function label(mode) {
+          var text = 'Theme: ' + mode + '. Switch to ' + (mode === 'dark' ? 'light' : 'dark');
+          btn.setAttribute('data-mode', mode);
+          btn.setAttribute('aria-label', text);
+          btn.setAttribute('title', text);
+        }
+        render();
+        btn.closest('[data-theme-item]').hidden = false;
+        btn.addEventListener('click', function () {
+          var next = btn.getAttribute('data-mode') === 'dark' ? 'light' : 'dark';
+          try { localStorage.setItem('theme', next); } catch (e) {}
+          root.setAttribute('data-theme', next); // also covers storage being unavailable
+          label(next);
+        });
+        // Follow the system while no choice is saved.
+        var onSystem = function () { if (!saved()) render(); };
+        if (mq.addEventListener) mq.addEventListener('change', onSystem);
+        else if (mq.addListener) mq.addListener(onSystem);
+        // Keep other open tabs in step.
+        window.addEventListener('storage', function (e) {
+          if (e.key === 'theme' || e.key === null) render();
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+device: shantea-opendeck
+name: OpenDeck
+summary: Open MIDI and OSC firmware for building custom controllers on many boards, configured from a browser with no firmware coding. Handles buttons, encoders, LEDs, pots, FSRs, displays and sensors.
+description: >-
+  Created by Igor Petrovic and maintained under Shantea Controls. The current
+  codebase runs on Zephyr RTOS. Features include 7-bit and 14-bit NRPN, latching
+  buttons, several encoder modes, output control from MIDI In, OSC over Ethernet
+  with mDNS discovery, network-based configuration and firmware updates, Nextion
+  and SSD1306 displays, and several OSC-only sensors. The configurator is
+  available online and as an offline app.
+status: active
+authors:
+  - name: Igor Petrovic (Shantea Controls)
+    url: https://shanteacontrols.com/
+source: https://github.com/shanteacontrols/OpenDeck
+source_status: open
+license: Apache-2.0
+homepage: https://shanteacontrols.com/
+distribution: download
+install_notes: Choose a supported board, flash a release build, then configure in the browser configurator over USB or the network.
+tags: [midi, platform, ui, controller-mode]
+versions:
+  - version: v8.5.2
+    date: 2026-08-03
+    url: https://github.com/shanteacontrols/OpenDeck/releases/tag/v8.5.2
+  - version: v8.5.1
+    date: 2026-06-14
+    url: https://github.com/shanteacontrols/OpenDeck/releases/tag/v8.5.1
+  - version: v8.5.0
+    date: 2026-06-12
+    url: https://github.com/shanteacontrols/OpenDeck/releases/tag/v8.5.0

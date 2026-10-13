@@ -1,0 +1,24 @@
+device: mutable-instruments-peaks
+name: Dead Man's Catch
+summary: Peaks firmware with extra envelope, LFO and drum modes plus internal randomization.
+status: dormant
+authors:
+  - name: Tim Churches
+    url: https://github.com/timchurches
+source: https://github.com/timchurches/Mutated-Mutables
+source_status: open
+license: MIT
+license_notes: >-
+  Inherits from Mutable Instruments; the repository has no license file of its
+  own and is a copy of the upstream eurorack repository.
+homepage: https://timchurches.github.io/Mutated-Mutables/
+distribution: download
+tags: [envelopes, lfo, random]
+versions:
+  - version: v0.7-beta
+    date: 2016-12-07
+    url: https://github.com/timchurches/Mutated-Mutables/releases/tag/DMC-v0.7-beta
+    notes: Marked pre-release on GitHub.
+  - version: v0.6-beta
+    date: 2015-10-25
+    url: https://github.com/timchurches/Mutated-Mutables/releases/tag/DMC-v0.6-beta

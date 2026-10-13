@@ -1,0 +1,25 @@
+name: Lich / Witch (OpenWare)
+manufacturer: Befaco / Rebel Technology
+category: eurorack
+tagline: OWL-platform modules that load patches from a library
+platform: STM32 (Rebel Technology OWL)
+links:
+  manufacturer: https://www.befaco.org/lich/
+  community:
+    - label: Rebel Technology OpenWare
+      url: https://github.com/RebelTechnology/OpenWare
+notes: >-
+  Lich is made by Befaco with Rebel Technology on the OWL platform; patches
+  written in Pure Data, Max gen~ or Faust load onto the module. Befaco's
+  Oneiroi is a separate module that runs a patch on the same platform.
+related: [electrosmith-daisy-patch]
+image:
+  src: /images/devices/befaco-lich.webp
+  style: photo
+  alt: Befaco Lich, front panel
+  width: 514
+  height: 1080
+  credit: Befaco
+  license: manufacturer product image
+  source_url: https://www.befaco.org/lich/
+  original_url: https://www.befaco.org/wp-content/uploads/2025/09/Lich_web_front.png

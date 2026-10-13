@@ -1,0 +1,28 @@
+device: ensoniq-mirage
+name: MASOS_BE
+summary: First Mirage OS update in nearly forty years, adding a SysEx handler that applies single parameter messages immediately for live editing from the companion Visage editor.
+description: >-
+  Works with the DSK, DSK-8 and DSM-8 and with existing MASOS v2 wavesamples,
+  which can be loaded with the upper and lower sample load functions and
+  saved in MASOS_BE format. Distributed as a .hfe disk image for Gotek floppy
+  emulators running HxC firmware. Boxed Ear states the original boot ROM is
+  hardware-protected. Visage (1.1.5, macOS and Windows) is free and shows every
+  parameter on one screen. Source is not published.
+status: active
+authors:
+  - name: Boxed Ear
+    url: https://boxedear.com
+source_status: binary-only
+license: unspecified
+license_notes: No license or terms stated on the download page. Free to download.
+homepage: https://boxedear.com/software/visage.html
+distribution: download
+install_notes: >-
+  Copy the .hfe image to the Gotek SD card and boot the Mirage from it. No
+  hardware modification is needed.
+tags: [midi, os, editor]
+versions:
+  - version: "0.20"
+    date: 2026-09-17
+    url: https://boxedear.com/software/visage.html
+    notes: Date is that of the Sonic State announcement; the Boxed Ear page gives no date.

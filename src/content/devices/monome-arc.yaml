@@ -1,0 +1,28 @@
+name: arc
+manufacturer: monome
+category: controller
+tagline: Four-encoder knob controller with LED rings
+links:
+  manufacturer: https://monome.org/docs/arc/
+  community:
+    - label: llllllll.co (lines forum)
+      url: https://llllllll.co/
+    - label: monome on GitHub
+      url: https://github.com/monome
+notes: >-
+  Only the 2025 arc with a pushbutton supports monome's iii scripting
+  firmware, and it ships with it, so no separate install is needed; older arcs
+  keep their stock firmware and can use the viii browser emulator for iii
+  scripts. Arc is also used with norns, ansible and crow, and a protocol-compatible
+  DIY clone has its own open firmware.
+related: [monome-grid, monome-norns, monome-ansible, monome-tools]
+image:
+  src: /images/devices/monome-arc.jpg
+  style: photo
+  alt: monome arc, a four-encoder controller with ring LEDs around each knob, connected by a USB cable
+  width: 1200
+  height: 675
+  credit: monome
+  license: manufacturer product image
+  source_url: https://monome.org/docs/arc/
+  original_url: https://monome.org/image/high/arc.jpg

@@ -1,0 +1,24 @@
+name: Peaks
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Dual function generator / drum synth (discontinued)
+platform: STM32
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/peaks/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
+  is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name.
+related: [mutable-instruments-braids]
+image:
+  src: /images/devices/mutable-instruments-peaks.jpg
+  style: photo
+  alt: Front panel of the Mutable Instruments Peaks Eurorack module
+  width: 374
+  height: 1200
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/peaks/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/peaks/images/front.jpg

@@ -1,0 +1,24 @@
+name: Branches
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Dual bernoulli gate (discontinued)
+platform: ATmega88 (AVR)
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/branches/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Hardware is CC-BY-SA-3.0. Branches is an AVR module, so its code falls under
+  Mutable's GPL-3.0 notice for AVR projects rather than the MIT notice for
+  STM32 projects. Derivatives may not use the Mutable Instruments name.
+image:
+  src: /images/devices/mutable-instruments-branches.jpg
+  style: photo
+  alt: Front panel of the Mutable Instruments Branches Eurorack module
+  width: 280
+  height: 1200
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/branches/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/branches/images/front.jpg

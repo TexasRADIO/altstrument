@@ -1,0 +1,18 @@
+device: noise-engineering-versio
+name: Triwalkma Versio
+summary: Three independent loopers for Versio, built in Max gen~.
+status: dormant
+authors:
+  - name: onoma2
+    url: https://github.com/onoma2
+source: https://github.com/onoma2/TriwalkmaVersio
+source_status: open
+license: GPL-3.0-only
+license_notes: Per the repository LICENSE file.
+homepage: https://github.com/onoma2/TriwalkmaVersio
+distribution: download
+install_notes: Prebuilt TriwalkmaVersio_05.bin is in the repository; flash with the Daisy Web Programmer.
+tags: [looper]
+versions:
+  - version: TriwalkmaVersio_05.bin
+    url: https://github.com/onoma2/TriwalkmaVersio

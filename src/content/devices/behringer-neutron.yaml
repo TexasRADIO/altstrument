@@ -1,0 +1,23 @@
+name: Neutron
+manufacturer: Behringer
+category: synth
+tagline: Semi-modular analog synth
+platform: STM32 (Cortex-M0)
+links:
+  community:
+    - label: mrf-r/Neutron
+      url: https://github.com/mrf-r/Neutron
+notes: >-
+  This is the only Behringer alternative firmware found in this research. It is
+  flashed over USB DFU; the release bundles a Windows DFU tool and suggests
+  dfu-util on macOS and Linux.
+image:
+  src: /images/devices/behringer-neutron.png
+  style: photo
+  alt: Top-down view of the Behringer Neutron semi-modular analog synthesizer
+  width: 1200
+  height: 424
+  credit: Behringer
+  license: manufacturer product image
+  source_url: https://www.behringer.com/en/products/0718-AAB
+  original_url: https://cdn-media.empowertribe.com/450978f51f1c457fb2ce78b2bd330e52/Image_BE_0718-AAB_NEUTRON_Top_XL.png

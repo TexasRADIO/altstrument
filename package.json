@@ -1,0 +1,29 @@
+{
+  "name": "firmware-world",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A directory of custom and third-party firmware for music hardware.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "pnpm validate && astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "validate": "tsx scripts/validate.ts",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "astro": "^7.3.8"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^22",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.0",
+    "yaml": "^2.8.0"
+  },
+  "packageManager": "pnpm@10.8.1"
+}

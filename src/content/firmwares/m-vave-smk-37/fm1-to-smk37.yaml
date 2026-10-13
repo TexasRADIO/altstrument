@@ -1,0 +1,29 @@
+device: m-vave-smk-37
+name: fm1-to-smk37
+kind: tool
+summary: >-
+  Porting kit and agent playbook for moving open FM-1 firmware to the SMK-37 Pro: board-layer patch series,
+  mapping patterns, a flash-safety guide, and a setup file, written to be driven by a coding agent.
+description: >-
+  The SMK-37 uses the same AC791N chip, bootloader, update loader and chip key as the FM-1, so porting
+  means replacing the board layer (keyboard matrix, analog inputs, display pins, pad LEDs, flash map).
+  The guide covers the protected SPI flash ranges holding the factory key, pad calibration and pairing
+  data. Compatibility is rated low effort for SLOOP and sloopDX and medium for Felucca, X0X, FoMni-1 and
+  Melodee. The firmware code it refers to stays under GPL-3.0 in its own repositories.
+status: active
+authors:
+- name: genkigenki
+  url: https://github.com/genkigenki
+source: https://github.com/genkigenki/fm1-to-smk37
+source_status: open
+license: CC-BY-NC-4.0
+license_notes: >-
+  Applies to the guide text and tables only (LICENSE). The GitHub licence detector reports NOASSERTION.
+homepage: https://genkigenki.github.io/smk37/kit.html
+distribution: source-only
+tags: [sdk, research, patch]
+versions:
+- version: main
+  date: 2026-10-13
+  url: https://github.com/genkigenki/fm1-to-smk37
+  notes: No tagged releases; date is the last commit.

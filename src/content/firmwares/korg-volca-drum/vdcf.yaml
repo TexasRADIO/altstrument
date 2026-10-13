@@ -1,0 +1,35 @@
+device: korg-volca-drum
+name: vdcf (hj firmware)
+summary: Unofficial firmware based on Korg 1.14 that adds a per-part filter and clipper, trig conditions, extended slices and negative accents for ghost notes, per-part sequence speed, touch FX and extra MIDI CCs.
+description: >-
+  Adds a bipolar low-pass and high-pass filter on every part, selectable soft
+  or hard clipping, Elektron-style trigger conditions, sub-step SLICE patterns
+  and corrected positive slices, ACCENT down to -15, negative swing, per-part
+  motion interpolation, wrap and speed settings, momentary touch FX, and
+  fixes for several clock and slice bugs in Korg 1.14. Installed as an audio
+  file through SYNC IN like Korg's own updates. The author removed Korg's
+  version-downgrade check so the official 1.14 file can be played to go back,
+  but 1.14 does not understand negative SLICE or ACCENT values stored in
+  programs.
+status: active
+authors:
+  - name: hj-oja
+    url: https://github.com/hj-oja
+source: https://github.com/hj-oja/vdcf
+source_status: binary-only
+license: unspecified
+license_notes: No license file in the repository. Distributed as a compiled WAV.
+homepage: https://sonicstate.com/news/2026/08/20/free-custom-firmware-for-the-volca-drum/
+distribution: download
+requires_stock: "1.14"
+install_notes: >-
+  Hold FUNC and REC while powering on, then play Volca_Drum_0121.wav into SYNC
+  IN with all audio processing disabled. A failed transfer leaves the existing
+  firmware intact, according to the README. Hold PLAY while powering on to
+  check the version.
+tags: [sequencer, filter, fx, midi, performance]
+versions:
+  - version: "1.21"
+    date: 2026-09-11
+    url: https://github.com/hj-oja/vdcf
+    notes: Date is the last commit touching the firmware file; the "v1.21 update" commit is 2026-09-10.

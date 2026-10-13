@@ -1,0 +1,28 @@
+device: monome-white-whale
+name: kria
+summary: >-
+  Alternative monome firmware for white whale: the multi-track Kria step sequencer for grid with per-parameter clock division and external sync. A version of Kria also ships inside ansible.
+description: >-
+  Kria was first released as an alt firmware for white whale. Release 0.4
+  added external sync, and its notes say only clock division is available per
+  param and track. The standalone repository is idle; development of Kria
+  continues inside monome/ansible.
+status: dormant
+authors:
+  - name: monome
+    url: https://monome.org
+source: https://github.com/monome/kria
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own files.
+homepage: https://monome.org/docs/ansible/
+distribution: download
+tags: [sequencer, grid]
+versions:
+  - version: v0.4
+    date: 2016-12-02
+    url: https://github.com/monome/kria/releases/tag/v0.4
+    notes: Adds external sync.
+  - version: v0.3
+    date: 2016-03-27
+    url: https://github.com/monome/kria/releases/tag/v0.3

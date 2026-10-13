@@ -1,0 +1,33 @@
+device: elektron-octatrack
+name: OT Kyoti FW
+summary: Feature and bug-fix builds that keep the stock feel, with mute modes, direct pattern jump, a sidechain compressor with key input, repitch, project reload and batch fixes. Tested on an MKI.
+description: >-
+  Every feature is off by default so a freshly flashed unit behaves like stock;
+  bug fixes are always on. Features include MUTE_MODES (OT, OTFX, OTFX-T, DT-T),
+  DIRECT_JUMP_KYOTI, SIDECHAIN_COMPRESSOR, RELOAD_FROM_PROJECT, repitch
+  (REPITCH_REPEAT98_KYOTI), live-record quantize toggle and trigless-lock
+  cleanup. Unpromoted builds refuse to run unless KYOTI_ALLOW_WIP=1 is set.
+  KYOTI V1.0 was withdrawn on 2026-10-06 because it could crash; V1.2 broke
+  PLATE REVERB. Hardware testing is on an MKI only.
+status: active
+authors:
+  - name: Zac Kyoti
+    url: https://github.com/Zac-Kyoti
+source: https://github.com/Zac-Kyoti/octatrack-kyoti-fw
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the repository's own code and docs. Excludes Elektron material, files
+  inherited from OCTAMAX (which ships no license), patches to third-party tools
+  and anything fetched at build time.
+distribution: patch-your-own
+requires_stock: 1.40C
+install_notes: >-
+  Build with the repo's tools from your own OS 1.40C; see BUILD_KYOTI.md and
+  FLASHING.md in the repo. The unit's OS version reads KYOTI V1.3 when flashed.
+tags: [fx, sequencer, performance, ui, bugfixes]
+versions:
+  - version: KYOTI V1.3
+    date: 2026-10-10
+    url: https://github.com/Zac-Kyoti/octatrack-kyoti-fw/commit/8f1c4ca4a4570b83a5f4ba4f59c035554e3d2632
+    notes: Combined image, hardware-confirmed; fixes the PLATE REVERB break in V1.2. Replaces V1.0 to V1.2.

@@ -1,0 +1,25 @@
+name: Yarns
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: MIDI-to-CV interface (discontinued)
+platform: STM32F1
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/yarns/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
+  is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name.
+  Presets saved under a custom firmware do not load on stock firmware and
+  vice versa.
+image:
+  src: /images/devices/mutable-instruments-yarns.jpg
+  style: photo
+  alt: Front panel of the Mutable Instruments Yarns Eurorack module
+  width: 565
+  height: 1200
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/yarns/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/yarns/images/front.jpg

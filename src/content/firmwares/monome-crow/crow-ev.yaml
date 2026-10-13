@@ -1,0 +1,25 @@
+device: monome-crow
+name: crow-ev
+summary: evnoj's crow fork with extra output modes (including a "spinner" ramp oscillator for circular parameters), clock additions and TELEX / TXi commands. Built from source.
+description: >-
+  As of October 2026 the main-ev branch is 21 commits ahead of monome/crow.
+  The fork's docs describe output modes selected per output, a spinner
+  mode with configurable cycle time, start and end points and direction, extra
+  ii.txi commands, and clock changes such as a tempo-change handler. No
+  prebuilt releases are published; the docs.md file in the repository lists the fork's features.
+status: active
+authors:
+  - name: Evan Johnson
+    url: https://github.com/evnoj
+source: https://github.com/evnoj/crow-ev
+source_status: open
+license: GPL-3.0-only
+license_notes: Inherited from monome/crow (GPLv3).
+homepage: https://github.com/evnoj/crow-ev/blob/main-ev/docs.md
+distribution: source-only
+requires_stock: monome/crow main branch
+tags: [platform, scripting, i2c]
+versions:
+  - version: main-ev (branch head)
+    date: 2026-06-07
+    url: https://github.com/evnoj/crow-ev/tree/main-ev

@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: SLOOP
+summary: >-
+  Live-performance groovebox built on Felucca: 4 tracks, 12 engines including 6-op FM with DX7 import,
+  drum machine, 27 punch-in effects, user samples, song mode, USB audio, web editor.
+description: >-
+  Projects, patterns and songs without mandatory presets. Three synth tracks plus a drum track, TRS MIDI
+  in, MIDI clock sync, physical models of strings and bells, sample chopping, and a web editor with backup
+  and restore. Several forks build on it (sloopDX, zp12, ORBIT, FM1 Move, FM1 Quest, Optimist and the
+  SMK-37 Snoop37 port).
+status: active
+authors:
+- name: isod89
+  url: https://github.com/isod89
+source: https://github.com/isod89/sloop-fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Code is GPL-3.0-only; icon atlas and panel image are separate assets (LICENSING.md). Includes msfa (Apache-2.0)
+  for the FM6 engine.
+homepage: https://isod89.github.io/sloop-fm1/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB. Roll back to M-VAVE stock V15 with M-UPGRADE or the installer.
+  If SLOOP or a derivative will not start, hold OCT- alone while powering on to enter USB rescue (per
+  fm1-editor.com).
+brick_risk: true
+tags: [sequencer, synth-engine, drums, sampler, fx, performance, usb-audio, midi, fm, physical-modeling,
+  editor]
+versions:
+- version: '2.6'
+  date: 2026-10-11
+  url: https://github.com/isod89/sloop-fm1/releases/tag/v2.6
+  notes: Sustain pedal and pitch bend over MIDI.
+- version: '2.5'
+  date: 2026-10-09
+  url: https://github.com/isod89/sloop-fm1/releases/tag/v2.5
+- version: 2.4.1
+  date: 2026-10-07
+  url: https://github.com/isod89/sloop-fm1/releases/tag/v2.4.1

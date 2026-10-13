@@ -1,0 +1,14 @@
+name: Mirage
+manufacturer: Ensoniq
+category: sampler
+tagline: 1984 keyboard sampler
+stock_firmware: MASOS v2
+links:
+  community:
+    - label: Boxed Ear Visage and MASOS_BE
+      url: https://boxedear.com/software/visage.html
+notes: >-
+  MASOS_BE is reported to work on the DSK, DSK-8 and DSM-8 and to read
+  existing MASOS v2 wavesamples. It boots from a Gotek floppy emulator image.
+  The Boxed Ear page states the original boot ROM is hardware-protected, so
+  nothing is changed permanently.

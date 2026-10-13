@@ -1,0 +1,15 @@
+device: elektron-octatrack
+name: ems-octakit
+summary: Replaces the four Parts per Bank with 256 Kits per Project.
+status: active
+authors:
+  - name: June Kiff (emuyia)
+    url: https://github.com/emuyia
+source: https://github.com/emuyia/ems-octakit
+source_status: open
+license: MIT
+distribution: patch-your-own
+requires_stock: 1.40C
+install_notes: Build from your own OS 1.40C; no firmware is included.
+tags: [machines, ui]
+versions: []

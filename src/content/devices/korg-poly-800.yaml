@@ -1,0 +1,14 @@
+name: Poly-800 / EX-800
+manufacturer: Korg
+category: synth
+tagline: Eight-voice DCO polysynth and its rack module
+platform: 80C85
+links:
+  community:
+    - label: HAWK-800 / HAWK-832 project
+      url: https://www.hawk800.com/
+notes: >-
+  The HAWK-800 kit works in the Poly-800 MK1, MK2 and the EX-800. It was sold
+  from 2007 and the kits are no longer available; the same author is developing
+  a successor, the HAWK-832, on an STM32 board that plugs into the EPROM socket,
+  which is not released yet.

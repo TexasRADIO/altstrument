@@ -1,0 +1,32 @@
+name: crow
+manufacturer: monome / Whimsical Raps
+category: eurorack
+tagline: Scriptable USB-to-CV Lua module (discontinued)
+platform: STM32F722
+stock_firmware: "4.0.5"
+links:
+  manufacturer: https://monome.org/docs/crow/
+  community:
+    - label: llllllll.co (lines forum)
+      url: https://llllllll.co/
+    - label: crow update guide
+      url: https://monome.org/docs/crow/update/
+    - label: monome on GitHub
+      url: https://github.com/monome
+notes: >-
+  monome's site lists crow as discontinued as of October 2025; the firmware
+  repository still receives commits. Firmware is open (GPL-3.0) and community
+  forks add features, so read each fork's own docs before swapping builds. Update
+  with druid (`druid firmware`), the fledge script on norns, or a manual DFU
+  flash. Lua scripts run on stock firmware and are not catalogued.
+related: [monome-teletype, monome-norns, monome-tools]
+image:
+  src: /images/devices/monome-crow.jpg
+  style: photo
+  alt: monome crow Eurorack module, a narrow black panel with four jacks, seen at an angle
+  width: 1200
+  height: 800
+  credit: monome / Whimsical Raps
+  license: manufacturer product image
+  source_url: https://monome.org/docs/crow/
+  original_url: https://monome.org/docs/crow/images/crow.jpg

@@ -1,0 +1,26 @@
+device: monome-white-whale
+name: white whale
+summary: Official open-source white whale firmware, the probabilistic step sequencer app for grid, with the stock grid support updated in 2021.
+description: >-
+  The 1.6.0 release adds support for the latest grids and bundles fixes that
+  never had a proper release. The repository is part of the AVR32 module family built on
+  libavr32.
+status: dormant
+authors:
+  - name: monome
+    url: https://monome.org
+source: https://github.com/monome/whitewhale
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own files.
+homepage: https://monome.org/docs/whitewhale/
+distribution: download
+install_notes: Follow monome's modular update guide (dfu-programmer, update_firmware.command in the release zip). A flash replaces the whole image including presets.
+tags: [platform, sequencer, grid, random]
+versions:
+  - version: v1.6.0
+    date: 2021-06-03
+    url: https://github.com/monome/whitewhale/releases/tag/v1.6.0
+  - version: v1.5
+    date: 2016-03-27
+    url: https://github.com/monome/whitewhale/releases/tag/v1.5

@@ -1,0 +1,21 @@
+device: electrosmith-daisy-patch
+name: no_such_verb
+summary: Reverb firmware for Patch.init() built from DaisySP algorithms, with send level, overdrive and modulation intensity, feedback and high-pass, and low-pass controls, plus a square-noise and AM LFO option.
+status: active
+authors:
+  - name: Neal Sanche (thorinside)
+    url: https://github.com/thorinside
+source: https://github.com/thorinside/no_such_verb
+source_status: open
+license: unspecified
+license_notes: No license file or statement in the repository.
+homepage: https://github.com/thorinside/no_such_verb/releases
+distribution: download
+tags: [reverb, fx]
+versions:
+  - version: v1.8.0
+    date: 2025-10-21
+    url: https://github.com/thorinside/no_such_verb/releases/tag/v1.8.0
+  - version: v1.7.0
+    date: 2025-10-20
+    url: https://github.com/thorinside/no_such_verb/releases/tag/v1.7.0

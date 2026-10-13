@@ -1,0 +1,17 @@
+device: monome-grid
+name: 40h firmware
+summary: >-
+  Source for the original 2006 monome 40h button grid: AVR firmware, hardware layouts and parts list, published for building and hacking your own.
+status: dormant
+authors:
+  - name: Brian Crabtree
+    url: https://github.com/tehn
+  - name: Joe Lake
+source: https://github.com/monome/40h
+source_status: open
+license: GPL-2.0-or-later
+license_notes: Per source file headers ("version 2 ... or (at your option) any later version"); the repository has no LICENSE file.
+homepage: https://monome.org/docs/grid/editions/
+distribution: source-only
+requires_stock: 40h (2006-2007 and 40h kits)
+tags: [platform, grid]

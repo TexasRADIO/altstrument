@@ -1,0 +1,44 @@
+device: ornament-and-crime
+name: Phazerville Suite
+summary: Active Hemisphere-descended o_C firmware with dual-applet framework, MIDI map, Calibr8or and Scenery apps, and Teensy 4.x audio applets. Supports Teensy 3.2, 4.0 and 4.1, uO_C and ORN8.
+description: >-
+  Starts from Benisphere and gathers applets from other developers; the
+  stock o_C apps are included but do not all fit in one image, so releases
+  ship pre-built selections. The Teensy 4.1 / ORN8 builds add audio DSP
+  applets and USB MIDI plus audio on the device port (variant A), a WavRec
+  build (B) and an MTP disk build with legacy apps (X). Teensy 3.2 builds can
+  be requested as custom builds. Commercial variants listed as supported
+  include After Later Audio Ornate Criminal, Plum Audio OCP X (v1.x only),
+  CalSynth XLOC2 and RÖMHOLD T4.1. v2.x is the main line; the original
+  phazerville branch was backported as v1.14 for Teensy 3.2 only.
+status: active
+authors:
+  - name: Nicholas Michalek (djphazer)
+    url: https://github.com/djphazer
+source: https://github.com/djphazer/O_C-Phazerville
+source_status: open
+license: MIT
+license_notes: >-
+  README: MIT except where file headers say otherwise, with some GPLv3 bits
+  included, so the whole is also subject to GPL compliance (see
+  ornament-and-cri.me/licensing).
+homepage: https://firmware.phazerville.com/
+distribution: download
+requires_stock: Teensy 3.2 (v1.x), Teensy 4.0 or 4.1 (v2.x)
+install_notes: >-
+  Download a release hex from GitHub and follow the Installation page on
+  firmware.phazerville.com. Updating from older versions can reset saved
+  settings; calibration is unaffected.
+tags: [sequencer, quantizer, midi, usb-audio, platform, fx]
+versions:
+  - version: v1.14 (T32 only)
+    date: 2026-08-30
+    url: https://github.com/djphazer/O_C-Phazerville/releases/tag/PSv1.14
+    notes: Backport of v2.0.1 features for original Teensy 3.2 hardware.
+  - version: v2.0.1
+    date: 2026-07-11
+    url: https://github.com/djphazer/O_C-Phazerville/releases/tag/PSv2.0.1
+    notes: Stability fixes; dynamic objects allocated in RAM2 with PSRAM overflow.
+  - version: v2.0
+    date: 2026-06-12
+    url: https://github.com/djphazer/O_C-Phazerville/releases/tag/PSv2.0

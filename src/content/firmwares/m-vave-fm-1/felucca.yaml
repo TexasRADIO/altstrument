@@ -1,0 +1,47 @@
+device: m-vave-fm-1
+name: Felucca
+summary: >-
+  Open multi-engine synth platform: 13 engines, 4 tracks sharing 8 voices, 64-step sequencer, mod matrix,
+  USB and TRS MIDI, USB audio. The base most other FM-1 firmwares fork.
+description: >-
+  Thirteen engines with factory presets (analogue, 6-operator FM, phase distortion, samples, granular,
+  drums, Plaits- and Rings-derived physical models), a 64-step sequencer with chords, ties, chance, conditions,
+  ratchets and automation, songs, effects, a MOD matrix, MIDI learn, a web editor and a browser demo.
+  Most of the scene (SLOOP, X0X, FoMni, Melodee and others) is built on its hardware layer and update
+  loader.
+status: active
+authors:
+- name: Leo Kuroshita (@kurogedelic), Hügelton Instruments
+  url: https://github.com/kurogedelic
+source: https://github.com/hugelton/Felucca
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Bundled fonts and ported DSP keep their own licences (LICENSING.md, LICENSES/).
+homepage: https://hugelton.github.io/Felucca/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py from a terminal. The installer's Return
+  to official V15 and M-VAVE's updater both go back to stock. Build guide: BUILDING.md.
+brick_risk: true
+tags: [synth-engine, sequencer, fx, usb-audio, midi, wavetable, granular, physical-modeling, fm, editor,
+  platform]
+versions:
+- version: '1.6'
+  date: 2026-10-13
+  url: https://github.com/hugelton/Felucca/releases/tag/v1.6
+  notes: >-
+    Custom UI colours, conditional steps, EUCLID, MIDI channel per track. Projects with conditional steps
+    do not open on 1.5 or 1.5.1.
+- version: 1.5.1
+  date: 2026-10-10
+  url: https://github.com/hugelton/Felucca/releases/tag/v1.5.1
+- version: '1.5'
+  date: 2026-10-09
+  url: https://github.com/hugelton/Felucca/releases/tag/v1.5
+- version: 1.4.1
+  date: 2026-10-09
+  url: https://github.com/hugelton/Felucca/releases/tag/v1.4.1
+- version: '1.4'
+  date: 2026-10-09
+  url: https://github.com/hugelton/Felucca/releases/tag/v1.4

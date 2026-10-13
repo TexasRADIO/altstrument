@@ -1,0 +1,25 @@
+device: befaco-lich
+name: Oneiroi firmware
+summary: Multi-functional experimental digital synth patch for the OWL platform, aimed at ambient pads and drones. Three oscillators, four effects, a looper, self-modulation and a randomizer.
+description: >-
+  Developed by Roberto Noris for Befaco's Oneiroi module. The patch updates
+  from the browser over Web MIDI.
+status: active
+authors:
+  - name: Roberto Noris
+    url: https://github.com/hirnlego
+source: https://github.com/Befaco/Oneiroi
+source_status: open
+license: GPL-3.0-only
+license_notes: Per the repository license detection; no further qualifier found.
+homepage: https://github.com/Befaco/Oneiroi/releases
+distribution: browser-installer
+install_notes: Use a Web MIDI browser (Chrome or Chromium recommended) and the patch from the latest release.
+tags: [synth-engine, looper, fx]
+versions:
+  - version: v1.2.2
+    date: 2025-11-06
+    url: https://github.com/Befaco/Oneiroi/releases/tag/v1.2.2
+  - version: v1.2.1
+    date: 2025-09-22
+    url: https://github.com/Befaco/Oneiroi/releases/tag/v1.2.1

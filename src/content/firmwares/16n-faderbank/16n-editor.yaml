@@ -1,0 +1,26 @@
+device: 16n-faderbank
+name: 16n editor
+kind: tool
+summary: >-
+  Web-based SvelteKit editor for configuring 16n-family and 8mu controllers from the browser: channels, MIDI and i2c behaviour, and 14-bit mode where the firmware supports it.
+description: >-
+  The latest tagged release is v2.0.4 from April 2023, while package.json on
+  the main branch is at 2.3.0 (8mu support, Svelte 5 and 14-bit CCs) with
+  commits through September 2026. Older SAMD21 8mu firmware must be updated
+  before using this editor.
+status: active
+authors:
+  - name: 16n faderbank project
+    url: https://github.com/16n-faderbank
+source: https://github.com/16n-faderbank/16n-editor
+source_status: open
+license: MIT
+homepage: https://16n-faderbank.github.io/editor
+distribution: browser-installer
+install_notes: Open the hosted editor in a WebMIDI-capable browser with the faderbank connected.
+tags: [editor]
+versions:
+  - version: v2.0.4
+    date: 2023-04-18
+    url: https://github.com/16n-faderbank/16n-editor/releases/tag/v2.0.4
+    notes: Latest tagged release; the main branch is ahead.

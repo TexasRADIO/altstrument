@@ -1,0 +1,15 @@
+device: elektron-tools
+name: elektron-firmware-tool
+kind: tool
+summary: C tool to inspect, decompress and rebuild Elektron OS .syx containers (ELE3, ELE2, ELEK, AD and older Machinedrum/Monomachine formats), replacing a section and recomputing checksums.
+description: Widely reused by other projects, including Chopshop, Modded Cycles and DigiSplash-II.
+status: active
+authors:
+  - name: Marcel Bierling (mischa85)
+    url: https://github.com/mischa85
+source: https://github.com/mischa85/elektron-firmware-tool
+source_status: open
+license: MIT
+distribution: source-only
+tags: [research, flasher]
+versions: []

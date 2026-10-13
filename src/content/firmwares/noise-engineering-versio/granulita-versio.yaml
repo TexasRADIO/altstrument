@@ -1,0 +1,22 @@
+device: noise-engineering-versio
+name: Granulita Versio
+summary: Official granular chord resynthesizer.
+description: >-
+  Listed by NE under Granular. Runs on any Versio module. Manual:
+  https://noiseengineering.us/manuals/granulita-versio/
+status: active
+authors:
+  - name: Noise Engineering
+    url: https://noiseengineering.us
+source_status: closed
+license: proprietary
+license_notes: >-
+  Closed-source official firmware, free to Versio owners.
+homepage: https://noiseengineering.us/products/granulita-versio/
+distribution: download
+install_notes: >-
+  Swap from the Noise Engineering firmware portal
+  (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
+  (Chrome, Edge or Opera). Free for Versio owners.
+tags: [official, granular, resynthesis]
+versions: []

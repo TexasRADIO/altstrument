@@ -1,0 +1,22 @@
+device: noise-engineering-versio
+name: Lacrima Versio
+summary: Official autowah firmware with distortion, billed by Noise Engineering as the devil's autowah.
+description: >-
+  Listed by NE under Filter and Distortion. Runs on any Versio module. Manual:
+  https://noiseengineering.us/manuals/lacrima-versio/
+status: active
+authors:
+  - name: Noise Engineering
+    url: https://noiseengineering.us
+source_status: closed
+license: proprietary
+license_notes: >-
+  Closed-source official firmware, free to Versio owners.
+homepage: https://noiseengineering.us/products/lacrima-versio/
+distribution: download
+install_notes: >-
+  Swap from the Noise Engineering firmware portal
+  (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
+  (Chrome, Edge or Opera). Free for Versio owners.
+tags: [official, filter, autowah, distortion]
+versions: []

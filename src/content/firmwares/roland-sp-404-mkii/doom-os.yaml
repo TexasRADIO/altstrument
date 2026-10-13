@@ -1,0 +1,43 @@
+device: roland-sp-404-mkii
+name: DOOM OS
+summary: Heavily modified 5.52 firmware that adds a graphical pattern sequencer, piano roll, live recording, mixer, effect automation and undo in a "shadow OS" opened with REMAIN + SUB PAD.
+description: >-
+  The shadow OS sits beside the stock firmware and everything from the
+  original firmware still works. Adds a grid pattern sequencer you can edit
+  while it plays, a piano roll played on the pads, live recording with
+  rehearse mode, quantise and swing, eight pattern tools, a mixer with level
+  meters, recorded and step-edited effect automation, 12-step undo and redo,
+  custom shortcuts and a help mode. Patterns are written to a new file before
+  the old one is removed. The author lists built-in instruments, song mode, a
+  clip launcher, a sample editor and an add-on system as possible future work.
+status: active
+authors:
+  - name: Quintus Oostendorp (Klangfeld Labs)
+    url: https://klangfeldlabs.com
+source: https://github.com/klangfeld-labs/doom-os
+source_status: patcher-only
+license: proprietary
+license_notes: >-
+  Custom license. Free to use, including for commercial music. You may not
+  pass on the patch, patcher or a patched file, or modify or imitate DOOM OS.
+  The repository contains the browser patcher, not the firmware changes in
+  readable form.
+homepage: https://klangfeldlabs.com/doom-os
+distribution: patch-your-own
+requires_stock: "5.52"
+install_notes: >-
+  Load Roland's official 5.52 SP404MKII_APP1.bin into the browser patcher, which
+  checks the result against published checksums. Copy the patched file to the
+  SD card, hold SHIFT while powering on and press the VALUE knob. Running the
+  updater with Roland's original file restores stock.
+tags: [sequencer, performance, ui, os]
+versions:
+  - version: 0.6.2-alpha (build 3824)
+    date: 2026-10-06
+    url: https://github.com/klangfeld-labs/doom-os/tree/v0.6.2-alpha-3824
+  - version: 0.6.1-alpha
+    date: 2026-10-04
+    url: https://github.com/klangfeld-labs/doom-os/tree/v0.6.1-alpha-ED5E
+  - version: 0.6-alpha
+    date: 2026-09-29
+    url: https://github.com/klangfeld-labs/doom-os/tree/v0.6-alpha-0C34

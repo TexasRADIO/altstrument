@@ -1,0 +1,18 @@
+device: elektron-digitone
+name: DigiChroma
+summary: Chroma Console-style input effects for the Digitone mk1, as an elekloader mod on core-dn1 3.2; combines with DigiCosm. Pre-release.
+status: active
+authors:
+  - name: irpina
+    url: https://github.com/irpina
+source: https://github.com/irpina/digichroma
+source_status: open
+license: GPL-2.0-or-later
+distribution: patch-your-own
+requires_stock: 1.43 / 1.44
+tags: [fx]
+versions:
+  - version: v0.1
+    date: 2026-10-09
+    url: https://github.com/irpina/digichroma/releases/tag/v0.1
+    notes: Pre-release.

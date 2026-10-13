@@ -1,0 +1,29 @@
+device: zoom-multistomp
+name: zoom-zt2
+kind: tool
+summary: Python script and GUI that install and remove .ZD2 effects on Zoom pedals over MIDI SysEx. Tested on the G1Four; expected to work on G1XFour, B1Four, B1XFour, G3n, G3Xn, B3n and G5n, and partly on the MS-plus series.
+description: >-
+  Inspired by the Zoom Firmware Editor, whose repacking approach failed on the
+  G1Four. Effect binaries must be extracted first, for example from an official
+  updater with Zoom Firmware Editor. For MS-plus pedals the icon (ZIC) and IR
+  (ZIR) files should be included, otherwise the library shows a blank slot. A
+  pre-built Windows binary is provided. Not supported or authorised by Zoom.
+status: active
+authors:
+  - name: mungewell
+    url: https://github.com/mungewell
+source: https://github.com/mungewell/zoom-zt2
+source_status: open
+license: MIT
+distribution: download
+tags: [editor, fx, midi]
+versions:
+  - version: v1.2.0
+    date: 2026-05-23
+    url: https://github.com/mungewell/zoom-zt2/releases/tag/v1.2.0
+  - version: v1.1.0
+    date: 2025-10-07
+    url: https://github.com/mungewell/zoom-zt2/releases/tag/v1.1.0
+  - version: v1.0.0
+    date: 2024-09-13
+    url: https://github.com/mungewell/zoom-zt2/releases/tag/v1.0.0

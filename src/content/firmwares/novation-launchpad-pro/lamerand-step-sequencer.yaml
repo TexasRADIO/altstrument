@@ -1,0 +1,15 @@
+device: novation-launchpad-pro
+name: Lamerand 16-channel step sequencer
+summary: Standalone slave-clocked step sequencer firmware for the Launchpad Pro, with 16 channels, up to 32 steps, velocity input, note repeat and step rotation. The author's download page no longer resolves.
+description: >-
+  Unnamed mod by French engineer Quentin Lamerand, covered by CDM on 2018-09-11 as a free
+  mod installable without coding. It outputs notes over USB or DIN MIDI and
+  needs an external clock. The project page was at faqtor.fr, which no longer
+  resolves, so the download is gone and no license or source was found.
+status: archived
+authors:
+  - name: Quentin Lamerand
+source_status: closed
+license: unspecified
+homepage: https://cdm.link/2018/09/hack-a-launchpad-pro-into-a-16-channel-step-sequencer-free/
+tags: [sequencer, performance, midi]

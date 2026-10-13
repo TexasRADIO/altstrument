@@ -1,0 +1,38 @@
+device: monome-ansible
+name: ansible
+summary: >-
+  Official open-source ansible firmware: Kria, Meadowphysics and Earthsea apps for grid and arc, MIDI modes, an i2c leader mode and USB preset storage.
+description: >-
+  The changelog lists MIDI by ngwese, the Earthsea implementation by
+  scanner_darkly and the preset JSON engine by csboling. Version 3.0.0 added
+  i2c leader mode for Just Friends, TELEXo or ER-301; 3.1.0 added Disting EX,
+  W/syn and crow as followers; 3.2.0 supports CDC arc. monome lists ansible as
+  discontinued.
+status: maintained
+authors:
+  - name: monome
+    url: https://monome.org
+  - name: ngwese
+    url: https://github.com/ngwese
+  - name: scanner_darkly
+    url: https://github.com/scanner-darkly
+  - name: csboling
+    url: https://github.com/csboling
+source: https://github.com/monome/ansible
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own files.
+homepage: https://monome.org/docs/ansible/
+distribution: download
+install_notes: Follow monome's modular update guide (dfu-programmer, update_firmware.command in the release zip). Back up first; a flash replaces presets.
+tags: [platform, sequencer, grid, i2c, midi]
+versions:
+  - version: v3.2.0
+    date: 2025-04-01
+    url: https://github.com/monome/ansible/releases/tag/v3.2.0
+  - version: v3.1.3
+    date: 2023-07-29
+    url: https://github.com/monome/ansible/releases/tag/v3.1.3
+  - version: v3.1.2
+    date: 2021-11-23
+    url: https://github.com/monome/ansible/releases/tag/v3.1.2

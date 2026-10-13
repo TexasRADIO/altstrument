@@ -1,0 +1,44 @@
+device: elektron-octatrack
+name: octabam
+summary: Modular "remixer" build that adds bus and per-track effects, an FM synth machine, 255 kits per project, USB audio and MIDI, and fixes for stock bugs.
+description: >-
+  A modification is a module, a named selection of modules is a remix, and the
+  build composes a remix into a flashable image from your own OS 1.40C: it
+  places the code, wires hooks by symbol, refuses collisions by name and
+  checks every ported module against its author's own build byte for byte.
+  Community mods such as Octatrick, PassOS, midisc and Octaplay are built on
+  it. No firmware is distributed and a
+  built image must not be shared. Pull requests are accepted; issues are
+  disabled.
+status: active
+authors:
+  - name: Sam Banks
+    url: https://github.com/sambanks
+  - name: Contributors credited per module
+source: https://github.com/sambanks/octabam
+source_status: open
+license: MIT
+license_notes: Covers the repository's own code and docs; transcribed third-party DSP sources and carried community modifications keep their own terms.
+homepage: https://modwerk.app/
+distribution: patch-your-own
+requires_stock: 1.40C
+install_notes: >-
+  Build from your own stock 1.40C .syx, then flash with Elektron Transfer or
+  from the CF card. Bootloader is not modified.
+tags: [fx, machines, usb-audio, usb-midi, bugfixes]
+versions:
+  - version: "REC THRESHOLD (PR #687)"
+    date: 2026-10-13
+    url: https://github.com/sambanks/octabam/pull/687
+    notes: Recorder trig that waits for input (THR, LEV, IN).
+  - version: "Outbox 8 support (PR #597)"
+    date: 2026-10-05
+    url: https://github.com/sambanks/octabam/pull/597
+    notes: Adds Outbox 8 expander support via USB audio clock SET_CUR handling.
+  - version: OCTABAM43
+    date: 2026-09-21
+    url: https://github.com/sambanks/octabam/releases/tag/OCTABAM43
+    notes: Latest tag.
+  - version: OCTABAM38
+    date: 2026-09-20
+    url: https://github.com/sambanks/octabam/releases/tag/OCTABAM38

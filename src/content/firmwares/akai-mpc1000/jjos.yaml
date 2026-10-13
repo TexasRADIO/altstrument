@@ -1,0 +1,41 @@
+device: akai-mpc1000
+name: JJOS
+summary: Long-running alternative operating system for the MPC1000 series, sold in several tiers, with a free version whose save function is locked until a paid password is entered.
+description: >-
+  The JJOS site lists a free JJOS 3.16, the paid OS2XL, OS3 and Light, which
+  unlock saving with the OS2XL password, and OS128XL for 240x128 LCD
+  upgrades. It lists the MPC1000, 1000B, 1000BK and 1000BK-N and links to a
+  separate page for the MPC2500. The site names no author. OS2XL, OS3 and
+  OS128XL were uploaded 2026-10-10, so the project is still updated. Installs
+  are free and passwords are sold through PayPal.
+status: active
+authors:
+  - name: JJ
+    url: http://www7a.biglobe.ne.jp/~mpc1000/
+source_status: closed
+license: proprietary
+license_notes: >-
+  Closed source. Free to install; saving requires a paid password on most
+  versions. Author is not named on the site.
+homepage: http://www7a.biglobe.ne.jp/~mpc1000/
+distribution: commercial
+install_notes: >-
+  Download and install from the JJOS site. Per community reports, holding TAP
+  TEMPO at boot switches back to the previously installed OS.
+tags: [os, sampler, sequencer, ui]
+versions:
+  - version: OS2XL 3.89
+    date: 2026-10-10
+    url: http://www7a.biglobe.ne.jp/~mpc1000/
+  - version: OS3 2.59
+    date: 2026-10-10
+    url: http://www7a.biglobe.ne.jp/~mpc1000/
+  - version: OS128XL 2.53
+    date: 2026-10-10
+    url: http://www7a.biglobe.ne.jp/~mpc1000/
+  - version: Light 1.00
+    date: 2025-09-13
+    url: http://www7a.biglobe.ne.jp/~mpc1000/
+  - version: Free JJOS 3.16
+    date: 2015-02-16
+    url: http://www7a.biglobe.ne.jp/~mpc1000/

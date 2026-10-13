@@ -1,0 +1,25 @@
+name: SP-404MKII
+manufacturer: Roland
+category: sampler
+tagline: 16-pad sampler with onboard effects and pattern sequencer
+stock_firmware: "5.52"
+links:
+  manufacturer: https://www.roland.com/global/products/sp-404mk2/
+  community:
+    - label: DOOM OS manual
+      url: https://klangfeldlabs.com/doom-os/manual/
+notes: >-
+  Both entries here are layers on top of Roland's own system rather than
+  replacements for it. DOOM OS is built by patching the official 5.52 update
+  file in your browser, and running the updater with Roland's original file
+  restores stock.
+image:
+  src: /images/devices/roland-sp-404-mkii.jpg
+  style: photo
+  alt: Top-down view of the Roland SP-404MKII sampler with its display showing a tempo of 84
+  width: 765
+  height: 1200
+  credit: Roland
+  license: manufacturer product image
+  source_url: https://www.roland.com/global/products/sp-404mk2/
+  original_url: https://static.roland.com/products/sp-404mk2/images/img_product_sp-404mk2_01.jpg

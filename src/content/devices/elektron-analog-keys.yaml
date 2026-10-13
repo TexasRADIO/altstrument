@@ -1,0 +1,29 @@
+name: Analog Keys
+manufacturer: Elektron
+category: synth
+tagline: 4-voice analog keyboard synth
+stock_firmware: "1.56"
+links:
+  community:
+    - label: elektronmods.com
+      url: https://elektronmods.com/
+    - label: Chopshop
+      url: https://chopshop-synth.pages.dev/
+notes: >-
+  Only Chopshop currently builds Analog Keys mods (OS 1.56). There is no
+  custom firmware for the Analog Four, which Chopshop explicitly does not
+  support. Recovery uses the startup menu over DIN MIDI with Elektron's original
+  file. Elektron does not permit sharing mod files or links on Elektronauts
+  (policy of 2026-09-16); community discussion moved to elektronmods.com and
+  modwerk.app.
+related: [elektron-analog-rytm]
+image:
+  src: /images/devices/elektron-analog-keys.jpg
+  style: photo
+  alt: "Elektron Analog Keys, angled view"
+  width: 1200
+  height: 524
+  credit: Elektron
+  license: manufacturer product image
+  source_url: https://web.archive.org/web/20211128122013/https://www.elektron.se/products/analog-keys/
+  original_url: https://web.archive.org/web/20190503181724im_/https://www.elektron.se/wp-content/uploads/2016/11/keys_angle_shadow.jpg

@@ -1,0 +1,19 @@
+device: nozori
+name: Nozori firmware
+summary: Arduino sketches for every Nozori module (68 and 84 families), plus calibration and test sketches and a template for new modules. One hardware platform morphs into many modules.
+description: >-
+  The README invites customization and links the update guide on nozoid.com.
+  No commits since 2019-10-04, and the repository has no tagged releases.
+status: dormant
+authors:
+  - name: nozoid (ch-nry)
+    url: https://github.com/ch-nry
+source: https://github.com/ch-nry/nozori
+source_status: open
+license: GPL-3.0-only
+license_notes: Per the repository LICENSE file.
+homepage: https://www.nozoid.com/nozori-68
+distribution: source-only
+requires_stock: Nozori 68 or 84 hardware
+install_notes: Update procedure is documented at nozoid.com/update-nozori-software.
+tags: [platform]

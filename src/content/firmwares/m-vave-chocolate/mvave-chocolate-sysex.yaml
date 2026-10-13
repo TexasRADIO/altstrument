@@ -1,0 +1,25 @@
+device: m-vave-chocolate
+name: mvave-chocolate-sysex
+kind: tool
+summary: >-
+  Notes and SysEx dumps for the Chocolate: mode switching, discovery, reading current settings and write
+  messages, usable with aseqsend on Linux.
+description: >-
+  Documentation only. The author notes configuration worked only while the official app was running (seemingly
+  because the device wants SysEx inside a single USB request) and that SysEx over BLE MIDI did not work.
+  Superseded in practice by OpenChocolate's fuller spec.
+status: dormant
+authors:
+- name: cbix
+  url: https://github.com/cbix
+source: https://github.com/cbix/mvave-chocolate-sysex
+source_status: open
+license: unspecified
+license_notes: No LICENSE file in the repository.
+distribution: source-only
+tags: [config-tool, research, midi]
+versions:
+- version: main
+  date: 2024-06-27
+  url: https://github.com/cbix/mvave-chocolate-sysex
+  notes: No tagged releases; date is the last commit.

@@ -1,0 +1,28 @@
+name: Hothouse DSP Pedal Kit
+manufacturer: Cleveland Music Co.
+category: pedal
+tagline: Stereo DIY digital effects pedal kit for the Daisy Seed
+platform: Electrosmith Daisy Seed (STM32H7)
+links:
+  manufacturer: https://clevelandmusicco.com/hothouse-diy-digital-signal-processing-platform-kit/
+  community:
+    - label: Hothouse Flasher
+      url: https://clevelandmusicco.github.io/HothouseFlasher/
+    - label: HothouseExamples wiki
+      url: https://github.com/clevelandmusicco/HothouseExamples/wiki
+related: [guitarml-funbox, pedalpcb-terrarium]
+notes: >-
+  The hardware is open source (CC BY-SA 4.0), with design files in the
+  open-source-pedals repository. Compatible with the Daisy Seed and Seed3. Most
+  binaries in recent releases can enter DFU mode by holding both footswitches
+  for two seconds; Earth, Mars and Venus excepted.
+image:
+  src: /images/devices/cleveland-hothouse.jpg
+  style: photo
+  alt: Front view of the assembled Cleveland Music Co. Hothouse DSP pedal in a white enclosure
+  width: 1000
+  height: 1000
+  credit: Cleveland Music Co.
+  license: manufacturer product image
+  source_url: https://clevelandmusicco.com/hothouse-diy-digital-signal-processing-platform-kit/
+  original_url: https://clevelandmusicco.com/cdn/shop/files/hothouse-front-1k.png

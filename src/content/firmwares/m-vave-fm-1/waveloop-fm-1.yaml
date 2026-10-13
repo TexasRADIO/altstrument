@@ -1,0 +1,27 @@
+device: m-vave-fm-1
+name: WaveLoop FM-1
+summary: >-
+  Felucca controlled from an Arturia MiniLab 3: four track faders, knobs that follow the track, preset
+  and engine browsing, a master DJ filter, momentary effect pads, session resume.
+description: >-
+  Published from a fork named ELI7VH/Felucca. Releases are labelled WaveLoop Kit / WaveLoop FM-1 with
+  a midiNN suffix.
+status: active
+authors:
+- name: ELI7VH
+  url: https://github.com/ELI7VH
+source: https://github.com/ELI7VH/Felucca
+source_status: open
+license: GPL-3.0-only
+homepage: https://eli7vh.github.io/Felucca/
+distribution: browser-installer
+install_notes: Browser WebMIDI installer on the project page.
+brick_risk: true
+tags: [controller-mode, midi, performance, fx]
+versions:
+- version: 1.0.5.2-midi23
+  date: 2026-10-09
+  url: https://github.com/ELI7VH/Felucca/releases/tag/1.0.5.2-midi23
+- version: 1.0.5.2-midi22
+  date: 2026-10-09
+  url: https://github.com/ELI7VH/Felucca/releases/tag/1.0.5.2-midi22

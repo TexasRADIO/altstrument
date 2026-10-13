@@ -1,0 +1,21 @@
+device: elektron-digitakt
+name: DigiSplash
+summary: "Boot-splash mods for the Digitakt mk1 (OS 1.53) and Digitone mk1 / Keys (OS 1.43): animated splash screens, the unreachable rare stock animation, and a PNG/GIF generator."
+status: active
+authors:
+  - name: DigiAlchemydsp
+    url: https://github.com/DigiAlchemydsp
+source: https://github.com/DigiAlchemydsp/DigiSplash
+source_status: open
+license: GPL-2.0-or-later
+distribution: patch-your-own
+requires_stock: 1.53 (Digitakt), 1.43 (Digitone)
+install_notes: elekloader mods; need the matching core mod.
+tags: [boot-splash, ui]
+versions:
+  - version: v1.1
+    date: 2026-09-30
+    url: https://github.com/DigiAlchemydsp/DigiSplash/releases/tag/v1.1
+  - version: v1.0
+    date: 2026-09-29
+    url: https://github.com/DigiAlchemydsp/DigiSplash/releases/tag/v1.0

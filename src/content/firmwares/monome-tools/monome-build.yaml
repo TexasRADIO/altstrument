@@ -1,0 +1,19 @@
+device: monome-tools
+name: monome-build
+kind: tool
+summary: Container build image with the AVR32 cross-compiler and LaTeX doc tools for monome Eurorack modules, usable with Docker or containerd; currently builds Teletype from its root Makefile.
+description: >-
+  Run it against a Teletype checkout with `docker run -v $(pwd):/target -t
+  dewb/monome-build`. An update in July 2026 added arm64 builds and a new
+  fork of avr32-toolchain.
+status: active
+authors:
+  - name: Michael Dewberry
+    url: https://github.com/Dewb
+source: https://github.com/Dewb/monome-build
+source_status: open
+license: unspecified
+license_notes: No LICENSE file in the repository.
+homepage: https://github.com/Dewb/monome-build
+distribution: source-only
+tags: [sdk, flasher]

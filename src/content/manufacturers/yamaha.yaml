@@ -1,0 +1,12 @@
+name: Yamaha
+website: https://www.yamaha.com/
+logo:
+  src: /images/logos/yamaha.svg
+  alt: Yamaha logo
+  width: 950
+  height: 262
+  credit: Yamaha
+  license: public domain (text logo)
+  source_url: https://commons.wikimedia.org/wiki/File:Yamaha_logo_text.svg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/3/32/Yamaha_logo_text.svg
+  monochrome: true

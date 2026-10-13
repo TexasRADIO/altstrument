@@ -1,0 +1,12 @@
+name: Chase Bliss
+website: https://www.chasebliss.com/
+logo:
+  src: /images/logos/chase-bliss.png
+  alt: Chase Bliss Audio logo
+  width: 260
+  height: 166
+  credit: Chase Bliss Audio
+  license: public domain (text logo)
+  source_url: https://commons.wikimedia.org/wiki/File:Chase_Bliss_Audio_Logo.png
+  original_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Chase_Bliss_Audio_Logo.png
+  monochrome: false

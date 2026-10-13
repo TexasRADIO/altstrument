@@ -1,0 +1,20 @@
+device: monome-tools
+name: multipass
+kind: tool
+summary: scanner_darkly's framework for writing alternative firmwares once and building them for white whale, earthsea, meadowphysics, ansible and Teletype, as a thin layer over libavr32 with an event queue, timers and CV/gate helpers.
+description: >-
+  Projects add multipass as a submodule and compile with Docker, GitHub Actions
+  or a local AVR32 toolchain. Firmware built with it includes polyearthsea and
+  the teluxn uxn emulator for Teletype. monome's docs credit it as the
+  way to write your own ansible firmware. The last commit is from August 2024.
+status: dormant
+authors:
+  - name: scanner_darkly
+    url: https://github.com/scanner-darkly
+source: https://github.com/scanner-darkly/multipass
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own files.
+homepage: https://github.com/scanner-darkly/multipass/wiki
+distribution: source-only
+tags: [sdk, platform]

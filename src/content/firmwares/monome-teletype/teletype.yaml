@@ -1,0 +1,34 @@
+device: monome-teletype
+name: teletype
+summary: >-
+  Official open-source Teletype firmware: the scripting language and ops, scenes, grid and MIDI support, plus the manual source and a simple command parser and simulator, built on libavr32.
+description: >-
+  New ops arrive mostly as contributed pull requests to this repository
+  (the 5.0.0 notes credit drum ops, support for multiple faderbanks and many
+  contributors) rather than through long-lived forks. Release zips are attached
+  to each GitHub release. Flashing replaces the whole image; back up scenes
+  first. The community Dewb/monome-build Docker image can build it.
+status: active
+authors:
+  - name: monome
+    url: https://monome.org
+  - name: Contributors
+    url: https://github.com/monome/teletype/graphs/contributors
+source: https://github.com/monome/teletype
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own files.
+homepage: https://monome.org/docs/teletype/
+distribution: download
+install_notes: Follow monome's modular update guide with dfu-programmer and the update_firmware.command script from the release zip.
+tags: [platform, scripting, sequencer, i2c, grid]
+versions:
+  - version: v5.0.0
+    date: 2024-01-08
+    url: https://github.com/monome/teletype/releases/tag/v5.0.0
+  - version: v4.0.0
+    date: 2021-07-10
+    url: https://github.com/monome/teletype/releases/tag/v4.0.0
+  - version: v3.2.0
+    date: 2020-04-22
+    url: https://github.com/monome/teletype/releases/tag/v3.2.0

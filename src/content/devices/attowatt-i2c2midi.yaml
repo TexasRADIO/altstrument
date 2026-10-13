@@ -1,0 +1,27 @@
+name: i2c2midi
+manufacturer: attowatt
+category: eurorack
+tagline: Open DIY 2HP Teletype expander that speaks i2c and MIDI
+platform: Teensy 3.2 / 3.6 / 4.1
+links:
+  manufacturer: https://github.com/attowatt/i2c2midi
+  community:
+    - label: llllllll.co (lines forum)
+      url: https://llllllll.co/
+notes: >-
+  A DIY module and firmware project that adds MIDI in and out to monome
+  Teletype through dedicated I2M ops, which the release notes say work with
+  official Teletype firmware 5.0.0 and later. The firmware is compiled in the
+  Arduino IDE with Teensyduino, with defines selecting MKI or MKII and the
+  Teensy model. Back up Teletype scenes before reflashing Teletype.
+related: [monome-teletype, bpcmusic-telex, monome-crow]
+image:
+  src: /images/devices/attowatt-i2c2midi.jpg
+  style: photo
+  alt: attowatt i2c2midi MK2 Eurorack module, front panel and angled view showing the Teensy board
+  width: 1200
+  height: 752
+  credit: attowatt
+  license: project photo, published in the official i2c2midi repository
+  source_url: https://github.com/attowatt/i2c2midi
+  original_url: https://raw.githubusercontent.com/attowatt/i2c2midi/main/hardware/hardware-MK2/pictures/i2c2midi_MK2_shot.jpg

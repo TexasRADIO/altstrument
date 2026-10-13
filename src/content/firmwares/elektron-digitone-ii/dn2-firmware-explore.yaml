@@ -1,0 +1,32 @@
+device: elektron-digitone-ii
+name: dn2_firmware_explore
+summary: Digitone II mods plus the dnfw inspect/modify/rebuild tool, also in-browser. Hardware-confirmed mods include lfo4, arpmodes, lfowaves, midiarp, layermidi, fxmod and the lfolength fix.
+description: >-
+  Code and documentation only; the user supplies the OS file and each mod checks
+  it against the version it was measured on. The mods table lists lfo4 (a fourth
+  LFO), arpmodes (SHUF and RAND), lfowaves (seven new waveforms), fxmod, moddest,
+  midiarp, layermidi, arpplocks, bootscreen, reloadconfirm, transients, songguard
+  and lfolength (fixes TRIG MODE ONE and HALF, confirmed on hardware on
+  2026-10-09 on an audio track; MIDI tracks emulator-tested). lfo4, lfowaves and
+  bootscreen exclude each other. A wavetable machine called Waverider is in
+  development.
+status: active
+authors:
+  - name: angellinares
+    url: https://github.com/angellinares
+source: https://github.com/angellinares/dn2_firmware_explore
+source_status: open
+license: AGPL-3.0-or-later
+homepage: https://angellinares.github.io/dn2_firmware_explore/
+distribution: patch-your-own
+requires_stock: "1.11"
+install_notes: >-
+  Apply with `dnfw mods apply` or in the browser on the project site, which
+  produces the same file byte for byte with nothing uploaded. Each mod verifies your
+  OS file before writing.
+tags: [lfo, fx, midi, boot-splash, research, editor, bugfixes]
+versions:
+  - version: lfolength
+    date: 2026-10-09
+    url: https://github.com/angellinares/dn2_firmware_explore
+    notes: Confirmed on hardware (audio track) on this date; no tagged releases.

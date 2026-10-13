@@ -1,0 +1,31 @@
+device: music-thing-workshop-computer
+name: Program card library
+kind: tool
+summary: The ComputerCard C++ library and starter code, plus the program card index that the individual card entries in this directory are synced from.
+description: >-
+  Cards are numbered folders under releases/ that each hold a UF2 and/or
+  source, a README and an info.yaml with creator, version, status and
+  license. The index at computer.musicthing.co.uk groups them into
+  collections and filters by creator, tag and size. Chris Johnson's
+  ComputerCard (v0.4.0, 2026-06-14, MIT) is a header-only C++ library for
+  Pico SDK and Arduino, with a VS Code DevContainer for building, flashing
+  and debugging. Starter code also exists for CircuitPython and MicroPython.
+status: active
+authors:
+  - name: Tom Whitwell
+    url: https://github.com/TomWhitwell
+  - name: Chris Johnson
+    url: https://github.com/TomWhitwell/Workshop_Computer/tree/main/Demonstrations%2BHelloWorlds/PicoSDK/ComputerCard
+source: https://github.com/TomWhitwell/Workshop_Computer
+source_status: open
+license: unspecified
+license_notes: >-
+  No LICENSE file at the repository root. The ComputerCard library is MIT and
+  each card declares its own license in info.yaml (MIT, GPL-3.0, CC BY-NC-SA
+  3.0, or left blank).
+homepage: https://computer.musicthing.co.uk/
+distribution: download
+install_notes: >-
+  Copy a card's UF2 onto the card as described in the Music Thing install
+  guide at musicthing.co.uk/workshopsystem/program-cards/install/.
+tags: [cards, platform, sdk]

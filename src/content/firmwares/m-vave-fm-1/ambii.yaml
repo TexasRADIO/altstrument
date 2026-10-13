@@ -1,0 +1,20 @@
+device: m-vave-fm-1
+name: AMBII
+summary: >-
+  Performance and recording interface firmware built on Melodee: four tracks with scoped pattern actions,
+  drum ratchets, automation graphs, shared delay and reverb, Galaxy and Dark Matter themes. Development
+  preview only.
+description: >-
+  The README states it is not ready for device installation: there is no qualified FM-1 release image,
+  the browser prototype only simulates the instrument, and the installer scaffold has hardware transport
+  disabled. The aroum hub links an author repository (MilkBoyG/Ambii) that returns 404; the JalopyMusic
+  repository is the one that exists.
+status: announced
+authors:
+- name: MilkBoyG / JalopyMusic
+  url: https://github.com/JalopyMusic
+source: https://github.com/JalopyMusic/fm1-milkboyg-ambii
+source_status: open
+license: GPL-3.0-only
+distribution: source-only
+tags: [sequencer, ui, fx, emulator]

@@ -1,0 +1,24 @@
+device: elektron-digitakt
+name: digihealth
+summary: Performance and diagnostics mod for the Digitakt mk1. FAST AUDIO runs the render's hot code from on-chip SRAM, cutting DSP load; SYSTEM INFO shows CPU, DSP, RAM and sample memory in the top bar. Also builds for Digitone mk1.
+description: >-
+  The author measured the audio render at 537 to 480 microseconds per block and
+  DSP load from 80.5 to 72.0 percent on a unit. Version 1.0 is the Digitakt build
+  and 1.1 adds the Digitone build.
+status: active
+authors:
+  - name: irpina
+    url: https://github.com/irpina
+source: https://github.com/irpina/digihealth
+source_status: open
+license: GPL-2.0-or-later
+distribution: patch-your-own
+requires_stock: 1.53 / 1.54
+tags: [ui]
+versions:
+  - version: v1.1
+    date: 2026-10-02
+    url: https://github.com/irpina/digihealth/releases/tag/v1.1
+  - version: v1.0
+    date: 2026-09-26
+    url: https://github.com/irpina/digihealth/releases/tag/v1.0

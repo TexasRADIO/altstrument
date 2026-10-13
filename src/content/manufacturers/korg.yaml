@@ -1,0 +1,12 @@
+name: Korg
+website: https://www.korg.com/
+logo:
+  src: /images/logos/korg.svg
+  alt: Korg logo
+  width: 1024
+  height: 352
+  credit: Korg
+  license: public domain (text logo)
+  source_url: https://commons.wikimedia.org/wiki/File:Korg_logo.svg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/3/3a/Korg_logo.svg
+  monochrome: true

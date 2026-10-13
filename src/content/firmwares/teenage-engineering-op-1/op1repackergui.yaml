@@ -1,0 +1,19 @@
+device: teenage-engineering-op-1
+name: op1REpackerGUI
+kind: tool
+summary: Desktop GUI for op1repacker for macOS (Apple silicon) and Windows 10/11, with extras including the Glitter theme engine for building custom colour themes.
+status: active
+authors:
+  - name: epixjava
+    url: https://github.com/epixjava
+source: https://github.com/epixjava/op1REpackerGUI
+source_status: open
+license: MIT
+distribution: patch-your-own
+install_notes: Works on an official firmware file you supply; the result is installed through the OP-1's normal update mode.
+tags: [editor, ui, palette]
+versions:
+  - version: main @ 59a7e84
+    date: 2026-07-11
+    url: https://github.com/epixjava/op1REpackerGUI/commit/59a7e84
+    notes: No tagged releases; this is the latest commit.

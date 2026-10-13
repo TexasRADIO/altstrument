@@ -1,0 +1,34 @@
+name: grid
+manufacturer: monome
+category: controller
+tagline: Backlit button-grid controller, 40h to 2022-era grid one / zero
+platform: AVR8 (40h, monome kit), RP2040 (2022 and later)
+links:
+  manufacturer: https://monome.org/docs/grid/
+  community:
+    - label: llllllll.co (lines forum)
+      url: https://llllllll.co/
+    - label: monome grid editions
+      url: https://monome.org/docs/grid/editions/
+    - label: monome on GitHub
+      url: https://github.com/monome
+notes: >-
+  The 40h, monome kit and early series grids have public firmware sources
+  (some under non-commercial CC terms), while the 2022 grid, grid one and grid
+  zero take monome's open iii firmware, which can switch back to the original
+  serial mode. Grids from 2020-2021 and the older FTDI-based editions cannot run iii; use
+  the viii browser emulator instead. Most grid apps run on the host or norns
+  through serialosc and are software. No repository for 2011-2021 grid
+  firmware was found. DIY grid clones (NeoTrellis-based) are covered by the
+  neotrellis-monome entry.
+related: [monome-arc, monome-norns, monome-tools]
+image:
+  src: /images/devices/monome-grid.jpg
+  style: photo
+  alt: monome grid controller, a flat aluminium grid of backlit buttons, lit and connected by a USB cable
+  width: 800
+  height: 450
+  credit: monome
+  license: manufacturer product image
+  source_url: https://monome.org/docs/grid/
+  original_url: https://monome.org/docs/grid/images/grid.jpg

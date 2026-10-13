@@ -1,0 +1,35 @@
+device: mutable-instruments-stages
+name: Stages multi-mode firmware (bipolar)
+summary: Fork of joeSeggiola's Stages firmware adding bipolar LFOs, retrigger control, harmonic oscillator, six DAHDSR envelopes and a random segment type, on top of official v1.2 and the extended sequencer.
+description: >-
+  Segment generator additions include very slow and audio-rate LFOs,
+  resettable LFOs, quantized hold and step segments, start and end value
+  tracking and probabilistic gates. The advanced segment generator mode adds
+  random segments (double-scroll attractor, Turing-style shift register, random
+  LFO, clocked random LFO), slew with independent rise and fall, and
+  attenuverter segments. Chaining is supported. Each release ships a normal and
+  a flipped (upside-down) image.
+status: active
+authors:
+  - name: Bryan Head (qiemem)
+    url: https://github.com/qiemem
+  - name: joeSeggiola
+    url: https://github.com/joeSeggiola
+source: https://github.com/qiemem/eurorack/tree/bipolar/stages
+source_status: open
+license: MIT
+license_notes: Inherits from Mutable Instruments; repository README states STM32 code is MIT.
+homepage: https://github.com/qiemem/eurorack/releases
+distribution: download
+install_notes: Download the WAV (normal or flipped) and follow the official Stages firmware update procedure.
+tags: [lfo, envelopes, random, quantizer, synth-engine]
+versions:
+  - version: v1.3.0
+    date: 2024-04-17
+    url: https://github.com/qiemem/eurorack/releases/tag/v1.3.0
+  - version: v1.1.0
+    date: 2020-12-23
+    url: https://github.com/qiemem/eurorack/releases/tag/v1.1.0
+  - version: v1.0.2
+    date: 2020-10-15
+    url: https://github.com/qiemem/eurorack/releases/tag/v1.0.2

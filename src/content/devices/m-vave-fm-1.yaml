@@ -1,0 +1,44 @@
+name: FM-1
+manufacturer: M-VAVE
+category: synth
+tagline: Pocket 6-operator FM synth, 27 keys, colour screen, TRS MIDI
+platform: JieLi AC791N (WL82), dual-core pi32v2
+stock_firmware: V15 (2026-07-30)
+links:
+  manufacturer: https://www.cuvave.com/product?id=fm-1
+  community:
+  - label: >-
+      aroum/fm1-custom-fw (curated directory, REVERSE_ENGINEERING.md, fm1_flasher.py)
+    url: https://github.com/aroum/fm1-custom-fw
+  - label: fm1-editor.com firmware directory
+    url: https://fm1-editor.com/firmware/
+  - label: cicloid/awesome-fm-1
+    url: https://github.com/cicloid/awesome-fm-1
+  - label: AL-255/FM-1-RE (reverse engineering, WTFPL)
+    url: https://github.com/AL-255/FM-1-RE
+  - label: r/MVaveFM1
+    url: https://www.reddit.com/r/MVaveFM1/
+notes: >-
+  Flash is single-bank. AL-255/FM-1-RE states that the update protocol is not a demonstrated recovery
+  mechanism and that ROM recovery, rollback and safe interrupted-write behaviour are not established,
+  so there is no established recovery path if a write is interrupted. The aroum hub documents community
+  recovery attempts (plain-USB mask-ROM mode with jl-uboot-tool, RP2040 USB_KEY dongles) that FM-1-RE
+  has not verified; treat them as unconfirmed. Do not unplug during a write, and take a backup first where
+  the installer offers one. Community advice is to return to stock V15 before flashing a different custom
+  firmware rather than flashing one over another. Installs are done from browser WebMIDI installers (Chrome
+  or Edge, USB) or a Python script; most return to V15 through M-VAVE's M-UPGRADE or the installer's own
+  restore. Entries that patch the stock image (macropad patch, czietz patcher) are patch-your-own and
+  need your own V15 (or V14) file; never share the patched result. Stock firmware is V15, released 2026-07-30.
+  Hubs: aroum/fm1-custom-fw (curated directory plus REVERSE_ENGINEERING.md), fm1-editor.com/firmware,
+  cicloid/awesome-fm-1, AL-255/FM-1-RE (WTFPL). The same SoC family runs the SMK-37 Pro / Elite keyboards.
+related: [m-vave-smk-37, m-vave-chocolate]
+image:
+  src: /images/devices/m-vave-fm-1.webp
+  style: photo
+  alt: "M-VAVE FM-1 FM synthesizer, top view"
+  width: 868
+  height: 528
+  credit: M-VAVE
+  license: manufacturer product image
+  source_url: https://www.m-vave.com/product.html?id=fm-1
+  original_url: https://www.m-vave.com/images/products/fm-1.webp

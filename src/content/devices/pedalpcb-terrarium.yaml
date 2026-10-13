@@ -1,0 +1,26 @@
+name: Terrarium
+manufacturer: PedalPCB
+category: pedal
+tagline: Daisy Seed pedal PCB with six knobs and two footswitches
+platform: Electrosmith Daisy Seed
+links:
+  manufacturer: https://www.pedalpcb.com/product/pcb351/
+  community:
+    - label: Terrarium build docs
+      url: https://docs.pedalpcb.com/project/Terrarium.pdf
+related: [cleveland-hothouse, guitarml-funbox]
+notes: >-
+  A 125B-format PCB for a Daisy Seed. Pedal firmware for it is flashed with the
+  Electrosmith web programmer or DFU, so no manufacturer firmware is replaced.
+  The GuitarML Seed pedal and the bkshepherd Guitar Pedal framework both run on
+  the Terrarium hardware.
+image:
+  src: /images/devices/pedalpcb-terrarium.jpg
+  style: photo
+  alt: PedalPCB Terrarium (PCB351) circuit board layout, top view
+  width: 1020
+  height: 1200
+  credit: PedalPCB
+  license: manufacturer product image
+  source_url: https://www.pedalpcb.com/product/pcb351/
+  original_url: https://www.pedalpcb.com/wp-content/uploads/2020/10/Terrarium.png

@@ -1,0 +1,22 @@
+device: noise-engineering-legio
+name: Unda Legio
+summary: Official full phase-modulation voice designed for chaining into multivoice patches.
+description: >-
+  Official Noise Engineering firmware for the 6 HP Legio platform. Runs on any
+  Legio module. Manual: https://noiseengineering.us/manuals/unda-legio/
+status: active
+authors:
+  - name: Noise Engineering
+    url: https://noiseengineering.us
+source_status: closed
+license: proprietary
+license_notes: >-
+  Closed-source official firmware, free to Legio owners.
+homepage: https://noiseengineering.us/products/unda-legio/
+distribution: download
+install_notes: >-
+  Swap from the Noise Engineering firmware portal
+  (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
+  (Chrome, Edge or Opera). Free for Legio owners.
+tags: [official, voice, phase-modulation]
+versions: []

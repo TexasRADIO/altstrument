@@ -1,0 +1,153 @@
+---
+import Base from '@/layouts/Base.astro';
+import FirmwareCard from '@/components/FirmwareCard.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import Prose from '@/components/Prose.astro';
+import { CATEGORY_LABELS } from '@/content/schema';
+import { getDevicesWithFirmwares, hostOf, plural, type DeviceItem } from '@/lib/catalog';
+import { imageCreditLabel, isSocialImage, logoCreditLabel, looksLikeSpdx, spdxUrl } from '@/lib/labels';
+
+export async function getStaticPaths() {
+  const devices = await getDevicesWithFirmwares();
+  return devices.map((device) => ({
+    params: { slug: device.id },
+    props: { device, related: devices.filter((o) => device.data.related.includes(o.id)) },
+  }));
+}
+
+interface Props { device: DeviceItem; related: DeviceItem[] }
+const { device, related } = Astro.props;
+const { data } = device;
+const firmwares = device.firmwares.filter((f) => f.data.kind === 'firmware');
+const tools = device.firmwares.filter((f) => f.data.kind === 'tool');
+const none = device.firmwares.length === 0;
+const image = data.image;
+const logo = image ? undefined : device.logo;
+const description = `${data.name} by ${data.manufacturer}: ${
+  none ? 'no custom firmware listed yet' : plural(device.firmwares.length, 'custom firmware or tool') + ' listed'
+}${data.tagline ? `. ${data.tagline}` : ''}.`;
+---
+<Base
+  title={`${data.name} (${data.manufacturer})`}
+  description={description}
+  image={image && isSocialImage(image) ? { src: image.src, alt: image.alt } : undefined}
+>
+  <Breadcrumb items={[{ label: 'Devices', href: '/' }, { label: CATEGORY_LABELS[data.category], href: `/#cat-${data.category}` }]} />
+
+  <div class:list={[(image || logo) && 'lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:items-start lg:gap-8']}>
+  <header>
+    <h1 class="text-2xl">{data.name}</h1>
+    <p class="mt-1 text-muted">
+      <a href={`/manufacturers/${device.manufacturerSlug}`}>{data.manufacturer}</a>
+      <span aria-hidden="true"> · </span>{CATEGORY_LABELS[data.category]}
+    </p>
+    {data.tagline && <p class="mt-1">{data.tagline}</p>}
+
+    <dl class="mt-4 grid max-w-[68ch] grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-sm">
+      {data.platform && (<><dt class="text-muted">Platform</dt><dd class="mono">{data.platform}</dd></>)}
+      {data.stock_firmware && (<><dt class="text-muted">Stock firmware</dt><dd class="mono">{data.stock_firmware}</dd></>)}
+      {data.links.manufacturer && (
+        <><dt class="text-muted">Manufacturer</dt><dd><a href={data.links.manufacturer} rel="noopener">{hostOf(data.links.manufacturer)}</a></dd></>
+      )}
+      {data.links.community.length > 0 && (
+        <>
+          <dt class="text-muted">Community</dt>
+          <dd>
+            <ul class="flex flex-wrap gap-x-3">
+              {data.links.community.map((l) => <li><a href={l.url} rel="noopener">{l.label}</a></li>)}
+            </ul>
+          </dd>
+        </>
+      )}
+      {related.length > 0 && (
+        <>
+          <dt class="text-muted">Related</dt>
+          <dd>
+            <ul class="flex flex-wrap gap-x-3">
+              {related.map((r) => <li><a href={r.url}>{r.data.name}</a></li>)}
+            </ul>
+          </dd>
+        </>
+      )}
+    </dl>
+  </header>
+
+  {image && (
+    <figure class="mt-5 max-w-[30rem] lg:mt-0">
+      <div class:list={['overflow-hidden rounded border border-line', image.style === 'line-art' ? 'bg-surface' : 'bg-surface-2']}>
+        <img
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          decoding="async"
+          data-style={image.style}
+          class="block h-auto max-h-[24rem] w-full object-contain"
+        />
+      </div>
+      <figcaption class="mt-1.5 text-xs text-muted">
+        {imageCreditLabel(image)},{' '}
+        {looksLikeSpdx(image.license)
+          ? <a href={spdxUrl(image.license)} rel="noopener">{image.license}</a>
+          : image.license},{' '}
+        via <a href={image.source_url} rel="noopener">{hostOf(image.source_url)}</a>
+      </figcaption>
+    </figure>
+  )}
+  {logo && (
+    <figure class="mt-5 max-w-[30rem] lg:mt-0">
+      <div class="max-w-[200px] overflow-hidden rounded border border-line bg-surface p-3">
+        <img
+          src={logo.src}
+          alt={logo.alt}
+          width={logo.width}
+          height={logo.height}
+          decoding="async"
+          data-style="logo"
+          data-monochrome={logo.monochrome ? 'true' : undefined}
+          class="block h-auto max-h-24 w-full object-contain"
+        />
+      </div>
+      <figcaption class="mt-1.5 text-xs text-muted">
+        {logoCreditLabel(logo)},{' '}
+        {looksLikeSpdx(logo.license)
+          ? <a href={spdxUrl(logo.license)} rel="noopener">{logo.license}</a>
+          : logo.license},{' '}
+        via <a href={logo.source_url} rel="noopener">{hostOf(logo.source_url)}</a>
+      </figcaption>
+    </figure>
+  )}
+  </div>
+
+  {data.notes && (
+    <section aria-labelledby="notes-h" class:list={['mt-6 rounded border border-line-strong bg-surface p-3 sm:p-4', none && 'border-l-4']}>
+      <h2 id="notes-h" class:list={['mb-2', none ? 'text-lg' : 'text-base']}>Notes</h2>
+      <Prose text={data.notes} class={none ? 'text-base' : 'text-sm'} />
+    </section>
+  )}
+
+  {none && (
+    <section class="mt-6" aria-labelledby="fw-h">
+      <h2 id="fw-h" class="text-lg">Firmware</h2>
+      <p class="mt-2 text-muted">Nothing listed yet. Know of something? See <a href="/about#contribute">how to contribute</a>.</p>
+    </section>
+  )}
+
+  {firmwares.length > 0 && (
+    <section class="mt-8" aria-labelledby="fw-h">
+      <h2 id="fw-h" class="mb-3 border-b border-line pb-1 text-lg">Firmware <span class="mono text-sm font-normal text-muted">{firmwares.length}</span></h2>
+      <ul class="flex flex-col gap-3">
+        {firmwares.map((f) => <li><FirmwareCard firmware={f} /></li>)}
+      </ul>
+    </section>
+  )}
+
+  {tools.length > 0 && (
+    <section class="mt-8" aria-labelledby="tools-h">
+      <h2 id="tools-h" class="mb-3 border-b border-line pb-1 text-lg">Tools <span class="mono text-sm font-normal text-muted">{tools.length}</span></h2>
+      <ul class="flex flex-col gap-3">
+        {tools.map((f) => <li><FirmwareCard firmware={f} /></li>)}
+      </ul>
+    </section>
+  )}
+</Base>

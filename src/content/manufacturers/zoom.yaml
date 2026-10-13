@@ -1,0 +1,12 @@
+name: Zoom
+website: https://zoomcorp.com/
+logo:
+  src: /images/logos/zoom.svg
+  alt: Zoom logo
+  width: 144
+  height: 21
+  credit: Zoom Corporation
+  license: public domain (text logo)
+  source_url: https://commons.wikimedia.org/wiki/File:Zoom_Corporation_logo.svg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Zoom_Corporation_logo.svg
+  monochrome: false

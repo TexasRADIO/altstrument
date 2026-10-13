@@ -1,0 +1,29 @@
+device: m-vave-fm-1
+name: FoMni-1
+summary: >-
+  Omnichord-style chord harp: the 16 white keys strum, the 11 black keys pick the chord, with rhythm patterns,
+  auto bass and effects.
+status: active
+authors:
+- name: Charles Vestal
+  url: https://github.com/charlesvestal
+source: https://github.com/charlesvestal/fm1-fomni
+source_status: open
+license: GPL-3.0-only
+homepage: https://charlesvestal.github.io/fm1-fomni/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer, which can also put M-VAVE firmware back. Browser emulator on the same site.
+  FuMi-1 and FiMba-1 are forks.
+brick_risk: true
+tags: [chords, synth-engine, performance]
+versions:
+- version: 0.3.2
+  date: 2026-10-08
+  url: https://github.com/charlesvestal/fm1-fomni/releases/tag/v0.3.2
+- version: 0.3.1
+  date: 2026-10-08
+  url: https://github.com/charlesvestal/fm1-fomni/releases/tag/v0.3.1
+- version: '0.3'
+  date: 2026-10-07
+  url: https://github.com/charlesvestal/fm1-fomni/releases/tag/v0.3

@@ -1,0 +1,46 @@
+device: teenage-engineering-op-1
+name: op1r
+summary: Patcher that turns the official R246 image into a custom firmware with new synth engines, tape echo, Clouds and Elements reverb ports, a quad LFO, a Euclidean sequencer, punch in/out, 6-channel USB audio and a sample editor.
+description: >-
+  Adds supersaw, fmbell and granular synth engines, an animated lab screen for
+  the stock iter synth, custom FX (tape echo, a Mutable Instruments Clouds
+  port, an Elements reverb port) usable on instruments and as master FX, a quad
+  LFO, a Euclidean sequencer with four patterns, punch in/out at tape markers,
+  synth and drum sample editors, a count-in, Oblique Strategies cards, a
+  resource monitor, tape markers, USB MIDI CC control, 6-channel USB audio out
+  and a hidden OP-Z controller mode. The patcher checks the input image against
+  the SHA-256 of the original R246 file and refuses anything else. A browser
+  version of the patcher is available. The repository was created on 2026-10-09
+  and has been releasing several numbered builds a day.
+status: active
+authors:
+  - name: pcppcp
+    url: https://github.com/pcppcp
+source: https://github.com/pcppcp/op1r
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  GPL-3.0-or-later with an additional permission (GPL-3.0 section 7) allowing
+  the program to be combined with the Teenage Engineering firmware and conveyed,
+  provided the op1r parts stay under the GPL. The OP-1 firmware itself is not
+  covered, and the repository contains no firmware.
+homepage: https://pcppcp.github.io/op1r/web/
+distribution: patch-your-own
+requires_stock: R246
+install_notes: >-
+  Patch your own official R246 image (op1_246.op1) with the web patcher or the
+  Python script and install the result like any OP-1 update. The bootloader is
+  not modified, so the original image can be flashed back.
+brick_risk: false
+tags: [synth-engine, fx, sequencer, usb-audio, usb-midi, granular, reverb, delay, lfo, controller-mode, ui]
+versions:
+  - version: op1r 26
+    date: 2026-10-13
+    url: https://github.com/pcppcp/op1r/blob/main/CHANGELOG.md
+    notes: Fixes a crash when the dots sequencer saves.
+  - version: op1r 22
+    date: 2026-10-12
+    url: https://github.com/pcppcp/op1r/blob/main/CHANGELOG.md
+  - version: op1r (initial release)
+    date: 2026-10-09
+    url: https://github.com/pcppcp/op1r/blob/main/CHANGELOG.md

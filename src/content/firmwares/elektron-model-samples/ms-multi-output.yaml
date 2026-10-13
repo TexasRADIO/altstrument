@@ -1,0 +1,18 @@
+device: elektron-model-samples
+name: ms-multi-output
+summary: Six channels of per-track USB audio for Model:Samples and Model:Cycles (48 kHz, 32-bit), so each track records as its own stem. Ships patch sources and a build script, not firmware.
+status: active
+authors:
+  - name: Scott Metoyer
+    url: https://github.com/scottmetoyer
+source: https://github.com/scottmetoyer/ms-multi-output
+source_status: open
+license: MIT
+distribution: patch-your-own
+requires_stock: "1.13"
+install_notes: >-
+  Pick the build for the instrument you own. The Samples and Cycles-crossflash
+  builds are hardware-verified; the native Model:Cycles packaging has never been
+  flashed to a real Cycles. The device still reports OS 1.13.
+tags: [usb-audio, machines]
+versions: []

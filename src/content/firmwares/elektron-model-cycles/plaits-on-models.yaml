@@ -1,0 +1,16 @@
+device: elektron-model-cycles
+name: plaits-on-models
+summary: "Mutable Instruments Plaits engines in fixed point as a PLAITS machine for Model:Cycles OS 1.13 (and Model:Samples running the Cycles OS): waveshaping, FM, VA, bass drum, grain, chords, swarm, wavetable and six-operator FM. Emulator-only so far."
+description: One knob picks the engine and can be p-locked per step. The README says it works in emulation and is not yet confirmed on hardware.
+status: active
+authors:
+  - name: DMDaudio
+    url: https://github.com/DMDaudio
+source: https://github.com/DMDaudio/plaits-on-models
+source_status: open
+license: MIT
+distribution: source-only
+requires_stock: "1.13"
+install_notes: Build from your own copy of the official OS; no firmware is distributed.
+tags: [machines, synth-engine, wavetable, fm, emulator]
+versions: []

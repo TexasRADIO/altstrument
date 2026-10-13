@@ -1,0 +1,28 @@
+name: MicroFreak
+manufacturer: Arturia
+category: synth
+tagline: Hybrid digital/analog paraphonic synth
+stock_firmware: 5.0.0.2084
+links:
+  manufacturer: https://www.arturia.com/products/hardware-synths/microfreak/overview
+  community:
+    - label: Freakier Firmware Labs
+      url: https://freakierfirmware.com/microfreak/
+    - label: SuperFreaker compatibility table
+      url: https://freakierfirmware.com/compatibility/
+notes: >-
+  The only custom firmware found, SuperFreaker, supports official firmware
+  5.0.0.2084 and nothing newer; its patcher rejects any other file, and its
+  authors advise not updating the official firmware until a newer version is
+  listed as ported. Modified builds are loaded through Arturia MIDI Control
+  Center's force upgrade, and the same step restores the official file.
+image:
+  src: /images/devices/arturia-microfreak.jpg
+  style: photo
+  alt: Top-down view of the Arturia MicroFreak hybrid synthesizer with its touch keyboard (cropped from the product photo)
+  width: 1000
+  height: 772
+  credit: Arturia
+  license: manufacturer product image
+  source_url: https://www.arturia.com/products/hardware-synths/microfreak/overview
+  original_url: https://medias.arturia.net/images/products/microfreak/gallery/05.jpg

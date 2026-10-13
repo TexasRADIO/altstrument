@@ -1,0 +1,28 @@
+name: M8 Headless
+manufacturer: Dirtywave
+category: groovebox
+tagline: Full M8 tracker on a bare Teensy 4.1 with a host display client
+platform: Teensy 4.1
+stock_firmware: 6.6.3E
+links:
+  manufacturer: https://dirtywave.com/products/m8-tracker
+  community:
+    - label: M8 Headless setup guide
+      url: https://github.com/Dirtywave/M8Docs/blob/main/docs/M8HeadlessSetup.md
+    - label: M8 display client (TouchDesigner)
+      url: https://github.com/DirtyWave/M8DisplayTouchdesigner
+notes: >-
+  Covers the headless build only: the M8 firmware running on a Teensy 4.1
+  with the display and keys handled by a host computer over USB. The
+  firmware is published by Dirtywave itself, so this is the vendor's own
+  build, not a third-party mod.
+image:
+  src: /images/devices/dirtywave-m8.jpg
+  style: photo
+  alt: Top-down view of the Dirtywave M8 tracker (cropped from the product photo)
+  width: 1031
+  height: 1200
+  credit: Dirtywave
+  license: manufacturer product image
+  source_url: https://dirtywave.com/products/m8-tracker
+  original_url: "https://dirtywave.com/cdn/shop/products/m8front_2048x.png?v=1635187892"

@@ -1,0 +1,22 @@
+device: elektron-digitone
+name: digitables
+summary: "M8-style pitch tables for the Digitone mk1: a TBL page and table editor, up to 1500 steps a second, with both LFOs able to move table speed."
+status: active
+authors:
+  - name: irpina
+    url: https://github.com/irpina
+source: https://github.com/irpina/digitables
+source_status: open
+license: GPL-2.0-or-later
+distribution: patch-your-own
+requires_stock: 1.43 / 1.44
+install_notes: elekloader mod on core-dn1 3.0; separate files for OS 1.43 and 1.44.
+tags: [sequencer, lfo, ui]
+versions:
+  - version: "1.4"
+    date: 2026-10-07
+    url: https://github.com/irpina/digitables/commits/main
+    notes: Commit date; no GitHub release yet. Both LFOs move table speed; one source for 1.43 and 1.44.
+  - version: v1.3
+    date: 2026-10-04
+    url: https://github.com/irpina/digitables/releases/tag/v1.3

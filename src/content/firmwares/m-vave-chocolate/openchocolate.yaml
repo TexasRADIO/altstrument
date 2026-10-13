@@ -1,0 +1,28 @@
+device: m-vave-chocolate
+name: OpenChocolate
+kind: tool
+summary: >-
+  Web-based configuration client for the Chocolate Plus footswitch over Web MIDI, with a reverse-engineered
+  SysEx protocol spec, USB captures and read-back of per-mode settings.
+description: >-
+  Reads the device's configuration on connect and edits Program Change, Custom and Advanced Custom modes,
+  MIDI channel, the TRS jack function and polarity, with JSON snapshot import and export and a MIDI monitor.
+  Describes itself as FOSS but the repository has no LICENSE file, so the licence is recorded as unspecified.
+  Targets the Chocolate Plus (also sold as FC2 / FootCtrl Plus).
+status: active
+authors:
+- name: majabojarska
+  url: https://github.com/majabojarska
+source: https://github.com/majabojarska/OpenChocolate
+source_status: open
+license: unspecified
+license_notes: No LICENSE file in the repository.
+distribution: source-only
+install_notes: >-
+  Run the app from source (npm install, npm run dev) in a Web MIDI browser such as Chrome or Edge.
+tags: [config-tool, midi, research]
+versions:
+- version: main
+  date: 2026-09-07
+  url: https://github.com/majabojarska/OpenChocolate
+  notes: No tagged releases; date is the last push.

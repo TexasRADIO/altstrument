@@ -1,0 +1,26 @@
+device: monome-ansible
+name: ansible-ev
+summary: >-
+  evnoj's ansible fork with Kria extensions: clock division up to 256 per parameter, a mod-hold function, a non-enveloped TXo oscillator mode, scale transposition and an alternate-octave parameter. Built from source.
+description: >-
+  The main-ev branch carries 26 commits on top of upstream, from
+  June 2025 to September 2026. Changes in its history include per-parameter clock
+  division beyond 16, stored clock-division coordinates in saved JSON presets, a
+  JSON validation helper, W/syn in AR mode and a different duration-to-velocity range
+  for ii output. No prebuilt releases are published.
+status: active
+authors:
+  - name: Evan Johnson
+    url: https://github.com/evnoj
+source: https://github.com/evnoj/ansible-ev
+source_status: open
+license: GPL-2.0-only
+license_notes: Inherited from monome/ansible (GPLv2).
+homepage: https://github.com/evnoj/ansible-ev/tree/main-ev
+distribution: source-only
+requires_stock: monome/ansible main branch
+tags: [sequencer, grid, i2c]
+versions:
+  - version: main-ev (branch head)
+    date: 2026-09-04
+    url: https://github.com/evnoj/ansible-ev/tree/main-ev

@@ -1,0 +1,23 @@
+device: elektron-octatrack
+name: octa-panel
+kind: tool
+summary: Real-time Octatrack emulator with sound and a virtual front panel in the browser, for developing and testing OS 1.40C mods before flashing. Built on octabam.
+description: >-
+  Runs both DSP cores with CoreAudio output and persistent card images. The
+  repository is a fork of octabam; its tags track Octatrick module releases.
+status: active
+authors:
+  - name: Tim Hastie
+    url: https://github.com/timhastie
+source: https://github.com/timhastie/octa-panel
+source_status: open
+license: MIT
+license_notes: Same MIT terms as octabam (Sam Banks); portions of the analysis tooling come from OCTAMAX, also MIT.
+distribution: source-only
+requires_stock: 1.40C
+install_notes: Build locally and supply your own OS 1.40C file.
+tags: [emulator, research, sdk]
+versions:
+  - version: octatrick-2.9
+    date: 2026-09-29
+    url: https://github.com/timhastie/octa-panel/releases/tag/octatrick-2.9

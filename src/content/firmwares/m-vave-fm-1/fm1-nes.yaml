@@ -1,0 +1,22 @@
+device: m-vave-fm-1
+name: FM-1 NES
+summary: >-
+  Experimental NES emulator: the 27 keys are the controller and the screen is the TV. A worked example
+  in a source-only kit for writing bare-metal FM-1 firmware; no music, no game included.
+description: >-
+  Documents application-only updates (app.bin) that preserve the stock USB bootloader, USB diagnostics
+  and the SDK integration. No installer page or prebuilt release. Third-party components keep their own
+  licences (THIRD_PARTY.md).
+status: active
+authors:
+- name: Keitark
+  url: https://github.com/Keitark
+source: https://github.com/Keitark/fm1-nes
+source_status: open
+license: Apache-2.0
+license_notes: >-
+  Project is Apache-2.0; the badge also lists GPLv3 and MIT components; see THIRD_PARTY.md.
+distribution: source-only
+install_notes: Build from source; see GETTING_STARTED.md and APP_UPDATES.md.
+brick_risk: true
+tags: [emulator, game, sdk, research]

@@ -1,0 +1,24 @@
+device: m-vave-smk-37
+name: Baud Girl SMK-37+VA
+summary: >-
+  Closed-source port of Baud Girl's FM-1+VA to the SMK-37 Pro and Elite (and the Donner Starrykey-37 Play
+  and EROK MKE-P37): VA, FM and 8-bit engines, 64-step sequencer, knob banks on K5 to K8.
+description: >-
+  Same feature set as FM-1+VA on the 37-key hardware: patterns up to 64 steps with per-step ratchet, chance,
+  gate and length, chaining into songs. Version numbers are shared with FM-1+VA.
+status: active
+authors:
+- name: Baud Girl
+  url: https://baudgirl.com/
+source_status: closed
+license: proprietary
+homepage: https://baudgirl.com/work/SMK-37+VA
+distribution: browser-installer
+install_notes: >-
+  Browser installer on the project page (Chrome or Edge). See FM-1+VA for the shared install notes.
+brick_risk: true
+tags: [synth-engine, sequencer, fm, performance]
+versions:
+- version: '101'
+  date: 2026-10-12
+  url: https://baudgirl.com/work/SMK-37+VA

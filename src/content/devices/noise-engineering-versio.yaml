@@ -1,0 +1,49 @@
+name: Versio
+manufacturer: Noise Engineering
+category: eurorack
+tagline: 10 HP stereo DSP module that runs a library of swappable firmwares
+platform: Electrosmith Daisy Seed (STM32H750, libDaisy)
+links:
+  manufacturer: https://noiseengineering.us/pages/world-of-versio
+  community:
+    - label: Noise Engineering firmware swap portal
+      url: https://noiseengineering.us/portal/firmware/
+    - label: Noise Engineering firmware index (Versio)
+      url: https://github.com/Maxhodges/noise-engineering-firmware-index
+    - label: libDaisy
+      url: https://github.com/electro-smith/libDaisy
+    - label: Daisy Web Programmer
+      url: https://flash.daisy.audio/
+notes: >-
+  Versio is one 10 HP hardware module. Every firmware in Noise Engineering's
+  library runs on any Versio, and swapping is free: connect over USB in a
+  WebUSB browser (Chrome, Edge or Opera) at the Firmware Swap page,
+  noiseengineering.us/portal/firmware. Desmodus, Ampla, Electus, Imitor,
+  Lacrima, Melotus, Polydactyl, Ruina and the rest are firmwares, not
+  separate hardware, although several were originally sold as separately
+  panelled modules under those names. Hot-swap overlays and printable panels
+  show each firmware's controls. Noise Engineering supports third-party
+  Versio firmware built with libDaisy (the FAQ points to examples in the
+  libDaisy repository) or Max gen~ via Oopsy; the hot-swap feature only works with
+  official firmware, so returning from a third-party image needs the button
+  combo swap. Most community images install by selecting a custom file on
+  the swap page; some (Cithara Versio) need the Daisy bootloader flow from
+  flash.daisy.audio. The official library is closed source. The community
+  index also lists closed binaries that are only linked from ModWiggler
+  threads (Megatron, Campestria, Multi Versio, Reticulum, Praetereo,
+  Repetit, Proteus); they are not catalogued here because those threads
+  could not be checked. SUPA Versio (EMƎ) is another third-party firmware,
+  covered in a Noise Engineering guest post, but its download links sit on
+  the author's Linktree and were not verified. Third-party Versio firmware
+  does not run on Alia or Legio, which are different hardware.
+related: [noise-engineering-alia, noise-engineering-legio, electrosmith-daisy-patch]
+image:
+  src: /images/devices/noise-engineering-versio.png
+  style: photo
+  alt: Noise Engineering Versio platform pictured with the Desmodus Versio firmware panel (black panel render on transparent background)
+  width: 600
+  height: 1200
+  credit: Noise Engineering
+  license: manufacturer product image
+  source_url: https://noiseengineering.us/products/versio/
+  original_url: https://cdn.shopify.com/s/files/1/0552/0923/0485/products/desmodus-versio-black-1024x2048.png

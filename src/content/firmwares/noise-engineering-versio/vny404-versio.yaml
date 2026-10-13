@@ -1,0 +1,15 @@
+device: noise-engineering-versio
+name: VNY404 Versio
+summary: Lo-fi vinyl and cassette simulator inspired by the Roland SP-404, with wow and flutter pitch fluctuation and a compressor with trigger-in ducking. Sold as a Gumroad download.
+description: >-
+  Listed in the community index as updated June 2026; the Gumroad page text
+  could not be read, so price and version are not recorded.
+status: active
+authors:
+  - name: Acidclank
+    url: https://acidclank.gumroad.com/
+source_status: binary-only
+license: unspecified
+license_notes: No license text found.
+homepage: https://acidclank.gumroad.com/l/VNY404
+tags: [fx]

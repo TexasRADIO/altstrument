@@ -1,0 +1,39 @@
+device: sequential-prophet-600
+name: P600FW
+summary: Firmware remake for the Prophet-600 that runs on a Teensy++ board in the Z80 socket. Adds faster envelopes, unison with detune, a rebuilt voice assigner, MIDI out, SysEx patch dumps and arpeggiator clock sync.
+description: >-
+  Written by GliGli; since 2022 the project is also maintained by Imogen (Image
+  et Son), who publishes an improved v2022+ series with a user manual. The
+  stable 2.0 release added a new user interface, assigner rework with unison
+  track latch, MIDI out and SysEx patch dumps, arpeggiator sync to MIDI clock,
+  unison detune, a dedicated vibrato and automatic modulation after a delay.
+  The repository's alpha series restarted development in 2021/22 and recently
+  moved storage to an external 24LC512 I2C EEPROM. A prebuilt Teensy programmer
+  HEX file was added in April 2026. The README notes an unpublished 2.1 RC3
+  from 2015.
+status: active
+authors:
+  - name: GliGli
+    url: https://github.com/gligli
+  - name: Imogen
+    url: https://www.image-et-son.com/
+source: https://github.com/gligli/p600fw
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Source code is GPL-3.0. The project page states the prebuilt binaries are
+  free for non-commercial use and asks for contact about commercial licensing.
+homepage: https://gligli.github.io/p600fw/
+distribution: download
+install_notes: >-
+  Requires the modified Teensy++ board fitted in the Z80 socket. Flash the HEX
+  with Teensy Loader or build it from source with AVR-GCC.
+tags: [synth-engine, polyphony, midi, lfo, performance, bugfixes]
+versions:
+  - version: main @ 20285dd (Teensy programmer HEX)
+    date: 2026-04-13
+    url: https://github.com/gligli/p600fw/commit/20285dd
+    notes: Latest commit; alpha series, no tagged releases.
+  - version: Stable 2.0
+    url: https://gligli.github.io/p600fw/
+    notes: Last stable release on the project page; marked outdated there in favour of the 2022+ series.

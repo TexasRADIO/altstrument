@@ -1,0 +1,32 @@
+device: novation-launchpad-pro
+name: lpp-performance-cfw
+summary: Custom firmware for the Launchpad Pro MK1 that keeps the stock modes and Ableton Live integration and adds a Performance mode with fast LED updates, Piano mode, custom mode slots, a palette editor and a SysEx API.
+description: >-
+  By mat1jaczyyy, built on the open framework. Performance mode accepts Top
+  Lights as normal Note On messages and shows velocities through the selected
+  palette, removing the need for Top Lights plugins. Setup mode opens with a
+  single press, and the firmware offers three custom palettes editable on the
+  device, three built-in palettes, MK2 layout emulation and a boot animation.
+  The README claims considerably faster LED updating, especially with Apollo
+  Studio. The repository contains an
+  unbrick guide that requires an ST-LINK and opening the unit, for cases where
+  the bootloader is no longer reachable.
+status: dormant
+authors:
+  - name: mat1jaczyyy
+    url: https://github.com/mat1jaczyyy
+source: https://github.com/mat1jaczyyy/lpp-performance-cfw
+source_status: open
+license: BSD-3-Clause
+homepage: https://fw.mat1jaczyyy.com/
+distribution: browser-installer
+install_notes: >-
+  Install with the Launchpad Firmware Utility by choosing Launchpad Pro (CFW),
+  or send the generated SysEx messages while the unit is in bootloader mode.
+brick_risk: false
+tags: [performance, palette, midi, controller-mode, sdk]
+versions:
+  - version: master @ b764a83
+    date: 2024-03-04
+    url: https://github.com/mat1jaczyyy/lpp-performance-cfw/commit/b764a83
+    notes: No tagged releases; this is the latest commit.

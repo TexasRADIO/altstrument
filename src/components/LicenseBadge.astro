@@ -1,0 +1,18 @@
+---
+import Badge from './Badge.astro';
+import { isSpdx, spdxUrl, LICENSE_SENTINELS } from '@/lib/labels';
+interface Props { license: string }
+const { license } = Astro.props;
+const spdx = isSpdx(license);
+---
+{
+  spdx ? (
+    <Badge tone="gray" mono href={spdxUrl(license)} title={`${license} on spdx.org`}>
+      {license}
+    </Badge>
+  ) : (
+    <Badge tone="gray" mono plain title={LICENSE_SENTINELS[license]}>
+      {license}
+    </Badge>
+  )
+}

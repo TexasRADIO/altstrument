@@ -1,0 +1,31 @@
+device: mutable-instruments-plaits
+name: Plaits Palette
+summary: Browser firmware builder for Plaits. Assign stock, Braids-ported, alternate, experimental and community models to the 32 slots, set options, and export a WAV or Intel HEX build.
+description: >-
+  Free web tool from Rubato Audio. Besides model selection it covers chord
+  tables (up to 16, with a library of 20 to start from), wave and wave-terrain
+  banks, FREQUENCY knob locking, TRIG / MODEL / LEVEL input behaviour, aux
+  output mode, Sync In, linear through-zero FM and a 50 kHz Fast FM mode. A
+  live flash estimate is checked against the 224 KB limit; the page says the
+  estimate can run slightly low and the ARM build is authoritative. Rubato's
+  page links its source to github.com/lylepmills/eurorack, which holds the
+  builder code and an export recipe for turning a saved configuration into a
+  local firmware build. Launch coverage: Synthtopia and Synth Anatomy, August
+  2026.
+status: active
+authors:
+  - name: Rubato Audio
+    url: https://rubato.audio
+source: https://github.com/lylepmills/eurorack
+source_status: open
+license: MIT
+license_notes: >-
+  Per the repository README (STM32 code is MIT, inherits from Mutable
+  Instruments). The rubato.audio page states no license for the hosted
+  builder itself, and Rubato's separate /license page covers other products.
+homepage: https://rubato.audio/plaits-palette
+distribution: browser-installer
+install_notes: >-
+  Build in the browser, download the WAV, and apply it with the normal Plaits
+  audio firmware update procedure. The HEX export is for hardware programmers.
+tags: [synth-engine, wavetable, editor]

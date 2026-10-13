@@ -1,0 +1,30 @@
+name: Model:Samples
+manufacturer: Elektron
+category: sampler
+tagline: 6-track sample-based groovebox
+stock_firmware: "1.13"
+links:
+  manufacturer: https://www.elektron.se/support-downloads/modelsamples
+  community:
+    - label: elektronmods.com
+      url: https://elektronmods.com/
+    - label: elektron-model-tweaks web flasher
+      url: https://drumkilla.github.io/elektron-model-tweaks/flasher/
+notes: >-
+  Mods target OS 1.13 and patch the official .syx you supply. Model:Samples
+  shares most of its firmware with the Model:Cycles; elektron-model-tweaks and
+  ms-multi-output are filed here; Modded Cycles, Model-TG and plaits-on-models
+  are filed under elektron-model-cycles and say which parts also run here. Elektron does not permit sharing mod files or
+  links on Elektronauts (policy of 2026-09-16); community discussion moved to
+  elektronmods.com and modwerk.app.
+related: [elektron-model-cycles]
+image:
+  src: /images/devices/elektron-model-samples.webp
+  style: photo
+  alt: "Elektron Model:Samples, front view"
+  width: 1200
+  height: 627
+  credit: Elektron
+  license: manufacturer press kit
+  source_url: https://www.elektron.se/press
+  original_url: https://www.elektron.se/wp-content/uploads/2026/09/Elektron-Press-Kit.zip

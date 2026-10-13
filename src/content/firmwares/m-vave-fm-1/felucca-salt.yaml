@@ -1,0 +1,23 @@
+device: m-vave-fm-1
+name: Felucca [Salt]
+summary: >-
+  Felucca fork with a hardware-style browser Studio that also plays without an FM-1, TRS MIDI
+  input with full expression handling, selectable clock sources, 20 screen palettes and preset favourites.
+status: active
+authors:
+- name: Chance Roth (ChanceTheMaker)
+  url: https://github.com/ChanceTheMaker
+source: https://github.com/ChanceTheMaker/Felucca
+source_status: open
+license: GPL-3.0-only
+homepage: https://chancethemaker.github.io/Felucca/webapp/installer/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer; leaves through M-VAVE's M-UPGRADE. Studio at /webapp/editor/.
+brick_risk: true
+tags: [synth-engine, midi, editor, ui]
+versions:
+- version: 0.9-salt14
+  date: 2026-10-05
+  url: https://github.com/ChanceTheMaker/Felucca/releases/tag/v0.9-salt14
+  notes: Marked pre-release. Commits continued to 2026-10-12.

@@ -1,0 +1,33 @@
+device: elektron-model-samples
+name: elektron-model-tweaks
+summary: "Web flasher and command-line tweaks for Model:Samples and Model:Cycles OS 1.13: 16-channel USB audio, latching mute, trig preview, scrolling names, M:S-only stereo samples and time-stretch. Includes the Model:Cycles tweaks."
+description: >-
+  Mods are .elemod files, one folder per device, linked into your firmware by
+  elekloader's linker. The web flasher can download the built file or send it over
+  USB MIDI from Chrome or Edge. Some tweaks are also carried by Modded Cycles and
+  Model-TG. The README warns modification voids the warranty and could brick the
+  device.
+status: active
+authors:
+  - name: drumkilla
+    url: https://github.com/drumkilla
+source: https://github.com/drumkilla/elektron-model-tweaks
+source_status: open
+license: MIT
+license_notes: The vendored ms-multi-output code keeps its own MIT notice by Scott Metoyer (LICENSE-ms-multi-output).
+homepage: https://drumkilla.github.io/elektron-model-tweaks/flasher/
+distribution: browser-installer
+requires_stock: "1.13"
+install_notes: Use the web flasher with your own .syx, then send it with Elektron Transfer or straight over USB MIDI.
+brick_risk: true
+tags: [usb-audio, sampler, ui, flasher]
+versions:
+  - version: v2.1.0
+    date: 2026-10-11
+    url: https://github.com/drumkilla/elektron-model-tweaks/releases/tag/v2.1.0
+  - version: v1.2.0
+    date: 2026-10-05
+    url: https://github.com/drumkilla/elektron-model-tweaks/releases/tag/v1.2.0
+  - version: v1.1.0
+    date: 2026-10-04
+    url: https://github.com/drumkilla/elektron-model-tweaks/releases/tag/v1.1.0

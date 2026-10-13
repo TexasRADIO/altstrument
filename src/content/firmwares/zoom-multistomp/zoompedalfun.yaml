@@ -1,0 +1,21 @@
+device: zoom-multistomp
+name: ZoomPedalFun
+kind: tool
+summary: Collection of tips, reverse-engineering notes and scripts for Zoom B1On, B1XFour and G1XFour pedals, later extended to G5, G3n, G5n and MS-70CDR, with Ctrlr panels. Use at your own risk.
+description: >-
+  The README also links to related projects: Zoom Firmware Editor, zoom-zt2,
+  g200kg's zoom-ms-utility, Johnny Marnell's zoom-stomp, SysExTones g1on,
+  PiPedalController, zdownload, the zoom-dev MIDI docs and MultistompMidi.
+status: maintained
+authors:
+  - name: Steve Hookings (shooking)
+    url: https://github.com/shooking
+source: https://github.com/shooking/ZoomPedalFun
+source_status: open
+license: CC0-1.0
+tags: [research, midi, editor]
+versions:
+  - version: main @ b7a4240
+    date: 2025-02-23
+    url: https://github.com/shooking/ZoomPedalFun/commit/b7a4240
+    notes: No tagged releases; this is the latest commit.

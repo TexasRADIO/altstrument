@@ -1,0 +1,31 @@
+device: electrosmith-daisy-patch
+name: Owlsy
+summary: OpenWare port that turns Daisy hardware into an OWL device. Loads existing OWL patches (Pure Data, gen~, Faust) over SysEx; supports Daisy Patch, Bluemchen, Patch.Init() / Patch SM and Daisy Pod.
+description: >-
+  Binary compatible with upstream OwlProgram and Rebel Technology patches.
+  Adds quad-channel audio on Daisy Patch, a USB audio interface mode, SD card
+  support with a browser menu, and a System menu with bootloader update over
+  MIDI. Pod support (60 patches, 40 parameters) arrived in v25.1. Announcement
+  and release thread is on the Daisy community forum.
+status: dormant
+authors:
+  - name: Stas (antisvin)
+    url: https://github.com/antisvin
+source: https://github.com/antisvin/OpenWare_Owlsy
+source_status: open
+license: GPL-2.0-only
+license_notes: Repository LICENSE is GPL v2 (inherited from Rebel Technology OpenWare).
+homepage: https://community.daisy.audio/t/owlsy-announcements-releases/2277
+distribution: download
+tags: [platform, midi, usb-audio]
+versions:
+  - version: owlsy-v25.2-rc1
+    date: 2023-04-10
+    url: https://github.com/antisvin/OpenWare_Owlsy/releases/tag/owlsy-v25.2-rc1
+    notes: Pre-release.
+  - version: owlsy-v25.1
+    date: 2023-03-13
+    url: https://github.com/antisvin/OpenWare_Owlsy/releases/tag/owlsy-v25.1
+  - version: owlsy-v25.0.0
+    date: 2023-01-25
+    url: https://github.com/antisvin/OpenWare_Owlsy/releases/tag/owlsy-v25.0.0

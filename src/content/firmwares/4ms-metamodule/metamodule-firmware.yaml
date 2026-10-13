@@ -1,0 +1,30 @@
+device: 4ms-metamodule
+name: MetaModule firmware
+summary: Official open-source firmware for the MetaModule. Runs virtual patches built from native and ported plugin modules, with MIDI expander and VCV expander support as of v2.4.0.
+description: >-
+  v2.4.0 added MIDI expander support, CPU load re-balancing and VCV expander
+  modules. Plugins are built against the separate plugin SDK. The MetaModule
+  name may not be used in derivative works.
+status: active
+authors:
+  - name: 4ms Company
+    url: https://4ms.company/
+source: https://github.com/4ms/metamodule
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  LICENSE.md grants GPLv3 or any later version. Third-party libraries keep
+  their own licenses in their subdirectories.
+homepage: https://metamodule.info
+distribution: download
+tags: [platform]
+versions:
+  - version: firmware-v2.4.0
+    date: 2026-10-02
+    url: https://github.com/4ms/metamodule/releases/tag/firmware-v2.4.0
+  - version: firmware-v2.3.1
+    date: 2026-08-26
+    url: https://github.com/4ms/metamodule/releases/tag/firmware-v2.3.1
+  - version: firmware-v2.3.0
+    date: 2026-08-03
+    url: https://github.com/4ms/metamodule/releases/tag/firmware-v2.3.0

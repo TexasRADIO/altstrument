@@ -1,0 +1,23 @@
+name: Preset
+manufacturer: Polyend
+category: eurorack
+tagline: Eurorack module with pads, knobs, buttons and CV I/O
+platform: NXP MK20DX256
+links:
+  manufacturer: https://polyend.com/
+  community:
+    - label: PresetSandbox releases
+      url: https://github.com/polyend/PresetSandbox/releases
+notes: >-
+  Polyend publishes an open sandbox project for writing your own firmware.
+  Builds are flashed with the Polyend Tool.
+image:
+  src: /images/devices/polyend-preset.jpg
+  style: photo
+  alt: Front panel of the Polyend Preset Eurorack module, with its pad grid and nine encoders
+  width: 780
+  height: 886
+  credit: Polyend
+  license: manufacturer product image
+  source_url: https://polyend.com/manuals/preset-manual/
+  original_url: https://polyend-website.fra1.digitaloceanspaces.com/wp-content/uploads/2020/06/01084823/Screenshot-2020-08-28-at-15.49.58.png

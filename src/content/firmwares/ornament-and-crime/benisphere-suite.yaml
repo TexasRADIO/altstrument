@@ -1,0 +1,23 @@
+device: ornament-and-crime
+name: Benisphere Suite
+summary: Hemisphere Suite fork with extra applets and enhancements, at the cost of the o_C-style apps. Retired by its author, whose README points to Phazerville.
+status: archived
+authors:
+  - name: benirose
+    url: https://github.com/benirose
+source: https://github.com/benirose/O_C-BenisphereSuite
+source_status: open
+license: MIT
+license_notes: >-
+  No LICENSE file in the repository. Inherits from Hemisphere Suite (MIT
+  headers on applets) and the GPLv3-based o_C core.
+homepage: https://github.com/benirose/O_C-BenisphereSuite/wiki
+distribution: download
+tags: [sequencer, quantizer, lfo, envelopes]
+versions:
+  - version: BSSv1.3.1
+    date: 2022-11-17
+    url: https://github.com/benirose/O_C-BenisphereSuite/releases/tag/BSSv1.3.1
+  - version: BSSv1.3
+    date: 2022-10-14
+    url: https://github.com/benirose/O_C-BenisphereSuite/releases/tag/BSSv1.3

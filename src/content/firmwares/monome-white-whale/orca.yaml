@@ -1,0 +1,35 @@
+device: monome-white-whale
+name: Orca (white whale)
+summary: >-
+  scanner_darkly's alternative firmware for white whale: a grid and arc sequencer with preset banks, separate scales for CV A and B, arc rotate and mutate, and external clock division and multiplication.
+description: >-
+  Distributed as a zip per GitHub release. Release 2.5 added separate scales
+  for the two CV outputs; 2.6 added saving individual presets and banks, scale
+  editing on arc4 and moved libavr32 to a submodule. This is the original
+  Orca firmware, not the Orca live-coding sequencer. Later work by the same author
+  continued in the multipass framework.
+status: dormant
+authors:
+  - name: scanner_darkly
+    url: https://github.com/scanner-darkly
+source: https://github.com/scanner-darkly/monome-mods
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own files.
+homepage: https://github.com/scanner-darkly/monome-mods/releases
+distribution: download
+requires_stock: White whale hardware
+install_notes: Flash like any monome module with dfu-programmer; the repository README points to monome's modular docs for toolchain and flashing.
+tags: [sequencer, grid, scales]
+versions:
+  - version: v2.6
+    date: 2016-11-24
+    url: https://github.com/scanner-darkly/monome-mods/releases/tag/v2.6
+    notes: GitHub pre-release.
+  - version: v2.5
+    date: 2015-12-17
+    url: https://github.com/scanner-darkly/monome-mods/releases/tag/v2.5
+  - version: v2.4
+    date: 2015-12-15
+    url: https://github.com/scanner-darkly/monome-mods/releases/tag/v2.4
+    notes: GitHub pre-release.

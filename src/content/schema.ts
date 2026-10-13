@@ -1,0 +1,287 @@
+/**
+ * Shared Zod schemas for the catalog.
+ *
+ * Used by both Astro's content collections (src/content.config.ts) and the
+ * standalone validator (scripts/validate.ts), so the rules live in one place.
+ */
+import { z } from 'astro/zod';
+
+export const CATEGORIES = [
+  'synth',
+  'groovebox',
+  'sampler',
+  'drum-machine',
+  'controller',
+  'foot-controller',
+  'pedal',
+  'eurorack',
+  'diy-platform',
+  'tools',
+  'other',
+] as const;
+
+export const CATEGORY_LABELS: Record<Category, string> = {
+  synth: 'Synths',
+  groovebox: 'Grooveboxes',
+  sampler: 'Samplers',
+  'drum-machine': 'Drum machines',
+  controller: 'Controllers',
+  'foot-controller': 'Foot controllers',
+  pedal: 'Pedals & multi-FX',
+  eurorack: 'Eurorack & modular',
+  'diy-platform': 'DIY platforms',
+  tools: 'Cross-device tools',
+  other: 'Other',
+};
+
+export const STATUSES = [
+  'active', // commits or releases within roughly the last year
+  'maintained', // stable, infrequent updates, author still responsive
+  'dormant', // no activity for a long time, still usable
+  'archived', // explicitly archived or abandoned by the author
+  'announced', // publicly announced, nothing downloadable yet
+  'unknown',
+] as const;
+
+export const SOURCE_STATUSES = [
+  'open', // full source published
+  'patcher-only', // patch tooling is public, the firmware changes themselves are not
+  'binary-only', // only compiled images are distributed
+  'closed', // nothing public
+] as const;
+
+export const DISTRIBUTIONS = [
+  'download', // prebuilt image you flash yourself
+  'browser-installer', // WebMIDI / WebUSB installer page
+  'patch-your-own', // tool patches a stock firmware file you supply
+  'commercial', // paid
+  'source-only', // you must build it yourself
+] as const;
+
+export const KINDS = [
+  'firmware', // replaces or modifies what runs on the device
+  'tool', // host-side tool that supports the scene (editor, flasher, emulator, SDK)
+] as const;
+
+/**
+ * Accepted license values: an SPDX identifier from this list, or one of the
+ * two sentinels. Extend the list when a new license shows up in the catalog.
+ */
+export const LICENSES = [
+  'MIT',
+  'BSD-2-Clause',
+  'BSD-3-Clause',
+  'Apache-2.0',
+  'GPL-2.0-only',
+  'GPL-2.0-or-later',
+  'GPL-3.0-only',
+  'GPL-3.0-or-later',
+  'LGPL-2.1-or-later',
+  'LGPL-3.0-or-later',
+  'AGPL-3.0-only',
+  'AGPL-3.0-or-later',
+  'MPL-2.0',
+  'Unlicense',
+  'WTFPL',
+  'CC0-1.0',
+  'CC-BY-4.0',
+  'CC-BY-SA-4.0',
+  'CC-BY-NC-4.0',
+  'CC-BY-NC-SA-4.0',
+  'CC-BY-SA-3.0',
+  'CC-BY-NC-SA-3.0',
+  'PolyForm-Noncommercial-1.0.0',
+  'Elastic-2.0',
+  'proprietary', // sentinel: all rights reserved / custom non-open terms
+  'unspecified', // sentinel: no license file or statement found
+] as const;
+
+const url = z.url();
+const slug = z
+  .string()
+  .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, 'must be lowercase kebab-case');
+
+export const linkSchema = z.object({
+  label: z.string().min(1),
+  url,
+});
+
+/**
+ * A device photo we are allowed to redistribute. Files live under
+ * public/images/devices/ and are pre-sized (max 1200px wide). Credit and
+ * license are shown on the device page; never add an image without them.
+ */
+export const imageSchema = z.object({
+  /** Site-relative path, e.g. /images/devices/elektron-octatrack.svg */
+  src: z.string().regex(/^\/images\/devices\/[a-z0-9-]+\.(svg|jpg|png|webp)$/),
+  /**
+   * photo: a redistributable photograph, shown as-is.
+   * line-art: our own monochrome vector rendering produced by tools/lineart
+   * from a product image (black strokes on transparent; the UI inverts it in
+   * dark mode). Credit names the product image it was drawn after.
+   */
+  style: z.enum(['photo', 'line-art']).default('photo'),
+  alt: z.string().min(1).max(200),
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+  /** Who to credit, e.g. "Photo: Jane Doe" or "Elektron press kit". */
+  credit: z.string().min(1),
+  /** SPDX id (CC-BY-SA-4.0, CC0-1.0, ...) or a short phrase such as "manufacturer press kit, reuse permitted". */
+  license: z.string().min(1),
+  /** Page the image was taken from, where the license can be verified. */
+  source_url: url,
+  /** Optional: the original file URL. */
+  original_url: url.optional(),
+});
+
+/**
+ * A manufacturer logo used as the fallback visual when a device has no
+ * product image. Only logos we may redistribute: public-domain text logos
+ * (Wikimedia Commons PD-textlogo / PD-simple / CC0) or a manufacturer press
+ * kit that permits use. Files live under public/images/logos/.
+ */
+export const logoSchema = z.object({
+  src: z.string().regex(/^\/images\/logos\/[a-z0-9-]+\.(svg|png|webp|jpg)$/),
+  alt: z.string().min(1).max(200),
+  width: z.number().int().positive(),
+  height: z.number().int().positive(),
+  credit: z.string().min(1),
+  /** e.g. "public domain (text logo)", "CC0-1.0", "manufacturer press kit" */
+  license: z.string().min(1),
+  source_url: url,
+  original_url: url.optional(),
+  /** true when the logo is a single dark colour, so the UI may invert it in dark mode */
+  monochrome: z.boolean().default(true),
+});
+
+/**
+ * One file per manufacturer under src/content/manufacturers/<slug>.yaml,
+ * where <slug> = slugify(name) and name matches the `manufacturer` string
+ * used on device files exactly.
+ */
+export const manufacturerSchema = z.object({
+  name: z.string().min(1),
+  website: url.optional(),
+  logo: logoSchema.optional(),
+  notes: z.string().optional(),
+});
+
+export const deviceSchema = z.object({
+  name: z.string().min(1),
+  manufacturer: z.string().min(1),
+  category: z.enum(CATEGORIES),
+  /** Short free-text, e.g. "pocket FM synth" or "8-track sampler". */
+  tagline: z.string().max(140).optional(),
+  /** MCU / SoC / DSP family. Useful for cross-linking similar hardware. */
+  platform: z.string().optional(),
+  /** The stock OS version most mods currently target. */
+  stock_firmware: z.string().optional(),
+  links: z
+    .object({
+      manufacturer: url.optional(),
+      community: z.array(linkSchema).default([]),
+    })
+    .default({ community: [] }),
+  /** Device-level caveats: brick risk, policy notes, "no custom firmware exists". */
+  notes: z.string().optional(),
+  /** Other devices that share firmware or hardware (device slugs). */
+  related: z.array(slug).default([]),
+  image: imageSchema.optional(),
+});
+
+export const authorSchema = z.object({
+  name: z.string().min(1),
+  url: url.optional(),
+});
+
+export const versionSchema = z.object({
+  version: z.string().min(1),
+  /** ISO date. Omit rather than guess. */
+  date: z.coerce.date().optional(),
+  url: url.optional(),
+  notes: z.string().optional(),
+});
+
+export const firmwareBaseSchema = z.object({
+  name: z.string().min(1),
+  kind: z.enum(KINDS).default('firmware'),
+  summary: z.string().min(1).max(280),
+  /** Longer free text, plain prose. */
+  description: z.string().optional(),
+  status: z.enum(STATUSES).default('unknown'),
+  authors: z.array(authorSchema).min(1),
+  source: url.optional(),
+  source_status: z.enum(SOURCE_STATUSES),
+  license: z.enum(LICENSES),
+  /** When the license needs a qualifier, e.g. "patch/ directory excluded" or "+ linking exception". */
+  license_notes: z.string().optional(),
+  /** Primary non-repo link: project site, forum thread, installer page. */
+  homepage: url.optional(),
+  distribution: z.enum(DISTRIBUTIONS).optional(),
+  /** Which stock firmware version(s) this targets, if specific. */
+  requires_stock: z.string().optional(),
+  install_notes: z.string().optional(),
+  /** Set when flashing carries a known, documented risk of bricking. */
+  brick_risk: z.boolean().default(false),
+  tags: z.array(z.string().regex(/^[a-z0-9-]+$/)).default([]),
+  versions: z.array(versionSchema).default([]),
+  /**
+   * Set on entries a build-time loader creates from an upstream data file
+   * (e.g. a repo's info.yaml). Points at that file. Such entries have no file
+   * in this repo; fix them upstream instead.
+   */
+  generated_from: url.optional(),
+});
+
+/**
+ * Cross-field rules that Zod enforces for both Astro and the validator.
+ */
+export function refineFirmware<T extends z.ZodType<FirmwareData>>(schema: T) {
+  return schema.superRefine((fw, ctx) => {
+    if (fw.source_status === 'open' && !fw.source) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['source'],
+        message: 'source URL is required when source_status is "open"',
+      });
+    }
+    if (fw.source_status === 'closed' && fw.source) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['source'],
+        message: 'source_status "closed" contradicts having a source URL; use "patcher-only" or "binary-only"',
+      });
+    }
+    if (!fw.source && !fw.homepage) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['homepage'],
+        message: 'every entry needs at least one of source or homepage',
+      });
+    }
+    const seen = new Set<string>();
+    fw.versions.forEach((v, i) => {
+      if (seen.has(v.version)) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['versions', i, 'version'],
+          message: `duplicate version "${v.version}"`,
+        });
+      }
+      seen.add(v.version);
+    });
+  });
+}
+
+export type Category = (typeof CATEGORIES)[number];
+export type Status = (typeof STATUSES)[number];
+export type SourceStatus = (typeof SOURCE_STATUSES)[number];
+export type Distribution = (typeof DISTRIBUTIONS)[number];
+export type License = (typeof LICENSES)[number];
+export type Kind = (typeof KINDS)[number];
+export type DeviceData = z.infer<typeof deviceSchema>;
+export type DeviceImage = z.infer<typeof imageSchema>;
+export type ManufacturerData = z.infer<typeof manufacturerSchema>;
+export type ManufacturerLogo = z.infer<typeof logoSchema>;
+export type FirmwareData = z.infer<typeof firmwareBaseSchema>;
+export type Version = z.infer<typeof versionSchema>;

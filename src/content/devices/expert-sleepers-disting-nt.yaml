@@ -1,0 +1,26 @@
+name: disting NT
+manufacturer: Expert Sleepers
+category: eurorack
+tagline: Algorithm-based DSP module with 12 inputs and 6 outputs
+links:
+  manufacturer: https://www.expert-sleepers.co.uk/distingNT.html
+  community:
+    - label: distingNT_API
+      url: https://github.com/expertsleepersltd/distingNT_API
+    - label: nt_helper editor
+      url: https://github.com/No-Such-Device/nt_helper
+notes: >-
+  The main firmware is closed. Community work arrives as plugins built against
+  the C++ API (added in firmware 1.7.0): compiled .o files copied to the
+  plugins folder on the SD card. They add algorithms to the stock firmware and
+  are not replacement firmware.
+image:
+  src: /images/devices/expert-sleepers-disting-nt.jpg
+  style: photo
+  alt: Front panel of the Expert Sleepers disting NT Eurorack module showing its start-up screen
+  width: 1200
+  height: 1200
+  credit: Expert Sleepers
+  license: manufacturer product image
+  source_url: https://www.expert-sleepers.co.uk/distingNT.html
+  original_url: https://www.expert-sleepers.co.uk/distingNT_files/stacks-image-d7c4bfe-1200x1200.jpg

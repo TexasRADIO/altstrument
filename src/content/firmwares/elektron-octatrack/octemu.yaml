@@ -1,0 +1,16 @@
+device: elektron-octatrack
+name: octemu
+kind: tool
+summary: Octatrack emulator and development environment for firmware customizations.
+status: active
+authors:
+  - name: Mark Roberts (markandrus)
+    url: https://github.com/markandrus
+source: https://github.com/markandrus/octemu
+source_status: open
+license: MIT
+license_notes: License is in LICENSE.md.
+distribution: source-only
+requires_stock: 1.40C
+tags: [emulator, sdk]
+versions: []

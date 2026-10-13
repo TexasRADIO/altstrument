@@ -1,0 +1,28 @@
+device: elektron-digitone-ii
+name: dn2-cfw
+summary: "Custom firmware research for the Digitone II OS 1.12: a research notebook, a brickcheck safety gate, a SHARC virtual machine, and new effects (flanger, tape delay, compressor) written in C. No Elektron firmware included."
+description: >-
+  The author's lab notebook, made public. Per the README, seven builds have run
+  on a real unit: a stock rebuild, a flanger in place of the chorus, a tape delay
+  in place of the stock delay, a hook-bus core with a test MIDI mod, and a
+  parameter table moved to free memory with room for 63 more knobs. The
+  roadmap includes a three-band master compressor and the arpeggiator on MIDI
+  tracks. tools/brickcheck runs 12 checks that every candidate image must pass
+  before flashing; recovery from the STARTUP menu over DIN MIDI was tested on the
+  unit. Builds are made locally; no images are distributed.
+status: active
+authors:
+  - name: naturarum
+    url: https://github.com/naturarum
+source: https://github.com/naturarum/dn2-cfw
+source_status: open
+license: GPL-2.0-or-later
+distribution: source-only
+requires_stock: "1.12"
+tags: [fx, research]
+versions:
+  - version: GT01 lab build
+    date: 2026-10-13
+    url: https://github.com/naturarum/dn2-cfw
+    notes: Latest hardware-run build listed in the README on this date; images are not distributed.
+

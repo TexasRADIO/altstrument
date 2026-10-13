@@ -1,0 +1,17 @@
+name: meadowphysics
+manufacturer: monome
+category: eurorack
+tagline: Cascading counter rhythm sequencer (discontinued)
+platform: AVR32 (AT32UC3B)
+stock_firmware: "2.2.1"
+links:
+  manufacturer: https://monome.org/docs/meadowphysics/
+  community:
+    - label: llllllll.co (lines forum)
+      url: https://llllllll.co/
+    - label: monome modular firmware update guide
+      url: https://monome.org/docs/modular/update/
+notes: >-
+  Legacy monome module with open firmware; the same app also runs on ansible.
+  The last official release is from 2021. Back up before flashing.
+related: [monome-white-whale, monome-earthsea, monome-ansible, monome-tools]

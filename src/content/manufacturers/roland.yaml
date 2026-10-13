@@ -1,0 +1,12 @@
+name: Roland
+website: https://www.roland.com/
+logo:
+  src: /images/logos/roland.svg
+  alt: Roland logo
+  width: 367
+  height: 80
+  credit: Roland Corporation
+  license: public domain (text logo)
+  source_url: https://commons.wikimedia.org/wiki/File:Roland_logo.svg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/b/be/Roland_logo.svg
+  monochrome: true

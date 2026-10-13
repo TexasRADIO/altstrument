@@ -1,0 +1,28 @@
+device: m-vave-fm-1
+name: Hortator
+summary: >-
+  Drum-machine firmware on Felucca: eight tracks of TR-808, TR-909 and Plaits drum models and samples,
+  64-step sequencer with motion recording, Mutable Instruments Grids, a ducking compressor, resonators
+  and live effects.
+status: active
+authors:
+- name: DEADACTIVE
+  url: https://github.com/DeadActive
+source: https://github.com/DeadActive/hortator
+source_status: open
+license: GPL-3.0-only
+license_notes: A C port of the Grids pattern engine is GPL-3.0-or-later; see LICENSING.md.
+homepage: https://deadactive.github.io/hortator/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer; leaves through M-VAVE's M-UPGRADE. Browser emulator runs the real firmware
+  compiled to WebAssembly. Beta per the fm1-editor.com directory.
+brick_risk: true
+tags: [drums, sequencer, sampler, fx, performance]
+versions:
+- version: 0.16.0
+  date: 2026-10-11
+  url: https://github.com/DeadActive/hortator/releases/tag/drum-v0.16.0
+- version: 0.14.0
+  date: 2026-10-08
+  url: https://github.com/DeadActive/hortator/releases/tag/drum-v0.14.0

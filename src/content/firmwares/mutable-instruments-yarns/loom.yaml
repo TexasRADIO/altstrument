@@ -1,0 +1,32 @@
+device: mutable-instruments-yarns
+name: Loom
+summary: Yarns firmware with a cue sequencer, a looper-style sequencer with polyphonic recording, 27 oscillator shapes, ADSR envelopes, new paraphonic layouts and expanded MIDI CC support.
+description: >-
+  Also adds a sequencer-programmed arpeggiator, new polyphonic voice
+  allocation algorithms and flexible hold-pedal behaviour. Some original
+  features are cut to make room (the sequencer holds 30 notes instead of 64).
+  Presets saved under Loom do not load on stock firmware and vice versa; run
+  INIT after switching. The author says installation is at your own risk.
+status: active
+authors:
+  - name: Chris Rogers (rcrogers)
+    url: https://github.com/rcrogers
+source: https://github.com/rcrogers/yarns-loom
+source_status: open
+license: MIT
+license_notes: Stated in the repository README; no separate LICENSE file; code derives from Mutable Instruments (MIT).
+distribution: download
+install_notes: >-
+  Download yarns-loom.syx from the latest release and follow the official
+  Yarns firmware update procedure.
+tags: [midi, sequencer, looper, synth-engine, envelopes]
+versions:
+  - version: v3.2.0
+    date: 2026-05-30
+    url: https://github.com/rcrogers/yarns-loom/releases/tag/v3.2.0
+  - version: v3.1.0
+    date: 2026-04-18
+    url: https://github.com/rcrogers/yarns-loom/releases/tag/v3.1.0
+  - version: v3.0.0
+    date: 2025-06-22
+    url: https://github.com/rcrogers/yarns-loom/releases/tag/v3.0.0

@@ -1,0 +1,20 @@
+device: m-vave-fm-1
+name: Rainbow mode
+summary: >-
+  Music toy for small children, built on Felucca: every key shows its note in its own colour, 40 animal
+  friends each bring a picture, sound and beat, with a volume limiter. Holding HOME and SAVE opens the
+  full Felucca synth.
+status: active
+authors:
+- name: joshbartlettband-web
+  url: https://github.com/joshbartlettband-web
+source: https://github.com/joshbartlettband-web/felucca-rainbow
+source_status: open
+license: GPL-3.0-only
+homepage: https://joshbartlettband-web.github.io/felucca-rainbow/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer with an emulator; it can put V15 back. No numbered releases. An SMK-37 build
+  exists (rainbow37).
+brick_risk: true
+tags: [performance, synth-engine]

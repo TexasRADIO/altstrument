@@ -1,0 +1,23 @@
+device: elektron-octatrack
+name: midisc
+summary: MIDI scene locks (MIDISC2.1) for OS 1.40C, with midisc-patcher; rebuild from your own stock OS.
+status: active
+authors:
+  - name: bkkbrls-del
+    url: https://github.com/bkkbrls-del
+source: https://github.com/bkkbrls-del/midisc
+source_status: open
+license: MIT
+license_notes: Same MIT terms as octabam (Sam Banks); portions of the analysis tooling come from OCTAMAX, also MIT.
+distribution: patch-your-own
+requires_stock: 1.40C
+install_notes: Rebuild from your own OS 1.40C; no firmware is distributed.
+tags: [midi, sequencer]
+versions:
+  - version: MIDISC2.1
+    date: 2026-10-08
+    url: https://github.com/bkkbrls-del/midisc
+    notes: Current revision named in the repository description; date is the last commit.
+  - version: 1.40MIDISC
+    date: 2026-09-11
+    url: https://github.com/bkkbrls-del/midisc/releases/tag/1.40MIDISC

@@ -1,0 +1,29 @@
+device: monome-earthsea
+name: earthsea
+summary: Official open-source earthsea firmware, the grid keyboard that records note patterns and shape-memory CV gestures, updated for the latest grids in 2021.
+description: >-
+  Release 1.9.5 adds support for the latest grids; earlier 1.9.x releases date
+  from 2017. An earthsea app is also built into ansible. The standalone
+  repository has been idle since 2021.
+status: dormant
+authors:
+  - name: monome
+    url: https://monome.org
+source: https://github.com/monome/earthsea
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own files.
+homepage: https://monome.org/docs/earthsea/
+distribution: download
+install_notes: Follow monome's modular update guide (dfu-programmer, update_firmware.command in the release zip).
+tags: [platform, sequencer, grid]
+versions:
+  - version: v1.9.5
+    date: 2021-06-03
+    url: https://github.com/monome/earthsea/releases/tag/v1.9.5
+  - version: v1.9.4
+    date: 2017-06-19
+    url: https://github.com/monome/earthsea/releases/tag/v1.9.4
+  - version: v1.9.2
+    date: 2017-02-10
+    url: https://github.com/monome/earthsea/releases/tag/v1.9.2

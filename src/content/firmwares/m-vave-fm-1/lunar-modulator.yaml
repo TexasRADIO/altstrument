@@ -1,0 +1,20 @@
+device: m-vave-fm-1
+name: Lunar Modulator
+summary: >-
+  Open firmware project with engines derived from Mutable Instruments modules, a Movy-style sequencer
+  and a playable browser simulator. Has not yet run on an FM-1.
+description: >-
+  Intergalactic Modulation Station. The README says the firmware is not installed on an FM-1 yet; it runs
+  on a desktop and in the included browser simulator. No releases. Some engines (303, 909, 808) come from
+  fm1-x0x and are included only in builds with a GPL switch on. The repo also holds an RP2040 USB_KEY
+  recovery-dongle design (dongle/).
+status: announced
+authors:
+- name: ip2k
+  url: https://github.com/ip2k
+source: https://github.com/ip2k/lunar-modulator
+source_status: open
+license: MIT
+license_notes: MIT for the project; builds that include fm1-x0x-derived engines are GPL.
+distribution: source-only
+tags: [synth-engine, sequencer, emulator, research]

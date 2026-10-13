@@ -1,0 +1,25 @@
+device: m-vave-fm-1
+name: AMB-1
+summary: >-
+  Generative ambient machine inspired by Music for Airports: starts playing at power-on with unsynced
+  tape loops, a gliding bass and quiet Euclidean percussion.
+status: active
+authors:
+- name: Charles Vestal
+  url: https://github.com/charlesvestal
+source: https://github.com/charlesvestal/fm1-amb
+source_status: open
+license: GPL-3.0-only
+homepage: https://charlesvestal.github.io/fm1-amb/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer, which can also restore M-VAVE firmware. Plays in a browser first.
+brick_risk: true
+tags: [synth-engine, performance]
+versions:
+- version: '1.1'
+  date: 2026-10-10
+  url: https://github.com/charlesvestal/fm1-amb/releases/tag/v1.1
+- version: '0.9'
+  date: 2026-10-10
+  url: https://github.com/charlesvestal/fm1-amb/releases/tag/v0.9

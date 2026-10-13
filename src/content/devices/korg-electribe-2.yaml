@@ -1,0 +1,29 @@
+name: Electribe 2 / 2 Sampler
+manufacturer: Korg
+category: groovebox
+tagline: Pattern-based groovebox in synth and sampler variants
+platform: TI Sitara CPU + Blackfin DSP
+stock_firmware: "2.02"
+links:
+  manufacturer: https://www.korg.com/us/products/dj/electribe_sampler/
+  community:
+    - label: Hacktribe wiki
+      url: https://github.com/bangcorrupt/hacktribe/wiki
+    - label: Freetribe docs
+      url: https://bangcorrupt.github.io/freetribe-docs/
+notes: >-
+  The stock updater writes straight to flash, so a bad write can leave the
+  unit unable to boot. The Hacktribe wiki documents a Debrick procedure that
+  needs a JTAG header or SPI flash access. Hacktribe patches the Electribe 2
+  Sampler 2.02 firmware and can also be applied to the synth model after
+  editing the file header.
+image:
+  src: /images/devices/korg-electribe-2.png
+  style: photo
+  alt: Top-down view of the red Korg electribe sampler (Electribe 2 Sampler, a member of the Electribe 2 family)
+  width: 1082
+  height: 632
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/dj/electribe_sampler/
+  original_url: https://cdn.korg.com/us/products/upload/f111f8df8c92776281b7ea177ee94579_pc.png

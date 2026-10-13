@@ -1,0 +1,19 @@
+device: elektron-digitakt
+name: DigiCandy
+summary: Full-panel image overlay for the Digitakt mk1 (OS 1.53) and Digitone mk1 / Keys (OS 1.43). A key combo covers the 128x64 screen with an image while everything keeps running.
+description: Digitakt uses TRK + YES, Digitone uses MIDI + YES. Ships ready-built .elemod overlays in the repository.
+status: active
+authors:
+  - name: DigiAlchemydsp
+    url: https://github.com/DigiAlchemydsp
+source: https://github.com/DigiAlchemydsp/DigiCandy
+source_status: open
+license: GPL-2.0-or-later
+license_notes: Code and tools are GPL-2.0-or-later; the bundled overlay images are for personal, educational and non-commercial use.
+distribution: patch-your-own
+requires_stock: 1.53 (Digitakt), 1.43 (Digitone)
+tags: [ui, boot-splash]
+versions:
+  - version: v1.0
+    date: 2026-09-30
+    url: https://github.com/DigiAlchemydsp/DigiCandy/releases/tag/v1.0

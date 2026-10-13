@@ -1,0 +1,21 @@
+device: m-vave-fm-1
+name: fm1-polyseq
+summary: >-
+  Polyphonic 16-step sequencer and a bare-metal hardware abstraction layer for the FM-1 written in strict
+  C99, zero-malloc, targeting the pi32v2 CPU. Published as source only.
+description: >-
+  The repository carries no LICENSE file, so the licence is recorded as unspecified although the source
+  is publicly readable. The chip is named as AC7911B8 in the repository description. Listed by fm1-editor.com
+  on its watch list.
+status: active
+authors:
+- name: NOVALENTI
+  url: https://github.com/NOVALENTI
+source: https://github.com/NOVALENTI/fm1-polyseq
+source_status: open
+license: unspecified
+license_notes: No LICENSE file in the repository.
+distribution: source-only
+install_notes: Compile from source.
+brick_risk: true
+tags: [sequencer, sdk, platform]

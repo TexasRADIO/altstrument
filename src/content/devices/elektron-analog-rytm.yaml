@@ -1,0 +1,31 @@
+name: Analog Rytm MKI / MKII
+manufacturer: Elektron
+category: drum-machine
+tagline: Analog and sample drum machine
+stock_firmware: "1.73"
+links:
+  manufacturer: https://www.elektron.se/explore/analog-rytm-mkii
+  community:
+    - label: elektronmods.com
+      url: https://elektronmods.com/
+    - label: Chopshop
+      url: https://chopshop-synth.pages.dev/
+notes: >-
+  Mods target OS 1.73. Elektron's support pages now serve only OS 1.74, which
+  current mods do not support and which a unit cannot easily be taken back from
+  (unverified; Chopshop advises asking Elektron support). Keep Elektron's
+  original 1.73 file. Mods leave the recovery code untouched; recovery uses the
+  startup menu over DIN MIDI. Elektron does not permit sharing mod files or
+  links on Elektronauts (policy of 2026-09-16); community discussion moved to
+  elektronmods.com and modwerk.app.
+related: [elektron-analog-keys, elektron-tools]
+image:
+  src: /images/devices/elektron-analog-rytm.webp
+  style: photo
+  alt: "Elektron Analog Rytm MKII, top view"
+  width: 1200
+  height: 666
+  credit: Elektron
+  license: manufacturer press kit
+  source_url: https://www.elektron.se/press
+  original_url: https://www.elektron.se/wp-content/uploads/2026/09/Elektron-Press-Kit.zip

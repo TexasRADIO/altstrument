@@ -1,0 +1,28 @@
+name: aleph
+manufacturer: monome
+category: other
+tagline: Open-source standalone sound computer (legacy)
+platform: AVR32 (AT32UC3A) + Blackfin BF533 DSP
+links:
+  manufacturer: https://monome.org/docs/aleph/
+  community:
+    - label: llllllll.co (lines forum)
+      url: https://llllllll.co/
+    - label: aleph on GitHub
+      url: https://github.com/monome/aleph
+notes: >-
+  Aleph is in monome's legacy docs section but its repository is still under
+  development. Its firmware is an AVR32 application plus a Blackfin DSP module,
+  loaded from the SD card by the bootloader, so new DSP modules and apps can be
+  built from source instead of patching a closed OS.
+related: [monome-norns, monome-tools]
+image:
+  src: /images/devices/monome-aleph.jpg
+  style: photo
+  alt: monome aleph sound computer, top panel with knobs, display and jacks, and the end panel with audio jacks
+  width: 860
+  height: 512
+  credit: monome
+  license: CC-BY-4.0 (monome docs)
+  source_url: https://monome.org/docs/aleph/information/
+  original_url: https://raw.githubusercontent.com/monome/docs/gh-pages/aleph/images/aleph-back.jpg

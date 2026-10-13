@@ -1,0 +1,23 @@
+device: elektron-digitakt-ii
+name: digitakt2-perform
+summary: Two elekloader mods for PERFORM KIT on the Digitakt II OS 1.17. perform-direct makes PRESET toggle the mode; perform-levels keeps track levels when you leave it.
+description: >-
+  perform-levels works on a unit, and perform-direct's key swap works (an earlier
+  version had a PERSONALIZE on/off row). The two together have been linted and
+  built but not yet run on a unit. elekloader support for the Digitakt II is
+  experimental.
+status: active
+authors:
+  - name: toonst
+    url: https://github.com/toonst
+source: https://github.com/toonst/digitakt2-perform
+source_status: open
+license: GPL-2.0-or-later
+distribution: patch-your-own
+requires_stock: "1.17"
+install_notes: elekloader mods; supply your own official OS 1.17 file.
+tags: [performance, ui]
+versions:
+  - version: v1.0
+    date: 2026-10-04
+    url: https://github.com/toonst/digitakt2-perform/releases/tag/v1.0

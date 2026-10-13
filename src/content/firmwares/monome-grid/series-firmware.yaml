@@ -1,0 +1,19 @@
+device: monome-grid
+name: monome series firmware (tehn/monome-firmware)
+summary: Early monome firmware sources by board revision, including the gs64 and gs128 grayscale grids, with folders gs64rec10, gs64rec11, gs128, 64rec09, 128bus, 256bus and 2011.
+description: >-
+  Brian Crabtree's collection of firmware for monome devices of that period
+  (README dated 2010, last commit February 2013). The README maps folders to board revisions, for example gs64
+  rec10 for serials 600-799, rec11 for serials 800 and up, and gs128 for all
+  gs128.
+status: dormant
+authors:
+  - name: Brian Crabtree
+    url: https://github.com/tehn
+source: https://github.com/tehn/monome-firmware
+source_status: open
+license: CC-BY-NC-SA-3.0
+license_notes: Per the README, firmwares are CC BY-NC-SA 3.0 and mostly for non-commercial use; contact monome with questions.
+homepage: https://monome.org/docs/grid/editions/
+distribution: source-only
+tags: [platform, grid]

@@ -1,0 +1,31 @@
+device: mutable-instruments-rings
+name: Rings alt firmware / Mini-Elements
+summary: Rings alt firmware with frequency locking, two Mini-Elements modes using an internal Elements exciter, alternate chord tables, Hold on Strum and a basic waveform on the EVEN output.
+description: >-
+  Frequency lock leaves V/Oct and FM working. In the Mini-Elements modes the
+  frequency knob sets exciter timbre (Bow, Blow, Strike). Three alternate
+  chord tables cover the Easter Egg and Western Chords modes. Long-pressing
+  both buttons opens an options menu. Internal sample rate drops from 48 kHz
+  to 32 kHz and internal CV slewing is removed. Firmware downloaded before
+  2022-02-27 cannot reach calibration. Attention returned in March 2026 after
+  a video demo and a Synthtopia write-up, though the Rings code itself has not
+  changed since 2022.
+status: dormant
+authors:
+  - name: Lyle Mills
+    url: https://github.com/lylepmills
+source: https://github.com/lylepmills/eurorack/tree/master/alt_firmwares
+source_status: open
+license: MIT
+license_notes: Inherits from Mutable Instruments; repository README states STM32 code is MIT.
+homepage: https://www.matrixsynth.com/2026/03/mutable-instruments-rings-alternative.html
+distribution: download
+install_notes: >-
+  Combined bootloader and firmware hex is in alt_firmwares/hex_files. Recalibrate
+  if you flashed before 2022-02-27.
+tags: [synth-engine, physical-modeling, chords]
+versions:
+  - version: Mini-Elements bootloader combo hex
+    date: 2022-04-30
+    url: https://github.com/lylepmills/eurorack/tree/master/alt_firmwares/hex_files
+    notes: Date is the commit that uploaded the hex file; the repository has no tagged releases.

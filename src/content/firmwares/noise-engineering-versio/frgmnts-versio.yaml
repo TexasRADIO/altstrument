@@ -1,0 +1,16 @@
+device: noise-engineering-versio
+name: FRGMNTS Versio
+summary: Live-focused multi-effect hosting four curated effects (glitch / fragment, tape, WASH delay, reverb). Sold as a Gumroad download.
+description: >-
+  Listed in the community index as updated May 2026; the Gumroad page text
+  could not be read, so price and version are not recorded.
+status: active
+authors:
+  - name: Acidclank
+    url: https://acidclank.gumroad.com/
+source_status: binary-only
+license: unspecified
+license_notes: No license text found.
+homepage: https://acidclank.gumroad.com/l/frgmntsversio
+distribution: commercial
+tags: [fx, delay, reverb]

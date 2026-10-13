@@ -1,0 +1,25 @@
+device: elektron-syntakt
+name: Syntakt Firmware Workbench
+summary: Browser workbench for Syntakt OS 1.41. Load your own official file, put your own single-cycle or chord waves into the SY CHORD machine, and add the Deja Vu random-step LFO shapes. Hardware-tested on one unit.
+description: >-
+  31 SY CHORD waves can be replaced, with values between them morphing; accepts
+  single-cycle WAV files of any length and builds chord waves (major to ninths,
+  any inversion). Everything runs in the browser tab; nothing is uploaded and the
+  site cannot talk to the instrument. The project advises trying the manual's
+  restore procedure once with the official file before flashing.
+status: active
+authors:
+  - name: Bezronczek
+    url: https://github.com/Bezronczek
+source: https://github.com/Bezronczek/syntakt-firmware-workbench
+source_status: open
+license: MIT
+distribution: patch-your-own
+requires_stock: "1.41"
+install_notes: Back up projects with Elektron Transfer, build in the browser from your own OS file, then flash it yourself.
+tags: [synth-engine, wavetable, lfo, editor]
+versions:
+  - version: Wave bank and Deja Vu LFO notes
+    date: 2026-09-24
+    url: https://github.com/Bezronczek/syntakt-firmware-workbench
+    notes: Last commit; no tagged releases.

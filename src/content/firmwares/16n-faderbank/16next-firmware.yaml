@@ -1,0 +1,31 @@
+device: 16n-faderbank
+name: 16next firmware
+summary: >-
+  RP2040 firmware for next-generation faderbanks such as the 16nx: class-compliant USB MIDI, TRS MIDI type A or B, monome-style i2c and sixteen CV outputs, written in the Pico SDK and configured in the web editor.
+description: >-
+  Version 3.1.0 added 14-bit CC data per channel. The README warns that
+  upgrading from before 3.1.0 can leave some channels in high-resolution mode,
+  so check the configuration in the editor afterwards. It could run on other
+  RP2040 boards with enough pins. Prebuilt UF2 files are attached to releases.
+status: active
+authors:
+  - name: 16n faderbank project
+    url: https://github.com/16n-faderbank
+source: https://github.com/16n-faderbank/16next_firmware
+source_status: open
+license: MIT
+homepage: https://github.com/16n-faderbank/16nx
+distribution: download
+requires_stock: 16nx revision C or another RP2040 board
+install_notes: Copy the release UF2 to the RP2040 in bootloader mode, then check settings in the web editor.
+tags: [platform, midi, usb-midi, i2c]
+versions:
+  - version: v3.1.1
+    date: 2025-06-30
+    url: https://github.com/16n-faderbank/16next_firmware/releases/tag/v3.1.1
+  - version: v3.1.0
+    date: 2025-01-23
+    url: https://github.com/16n-faderbank/16next_firmware/releases/tag/v3.1.0
+  - version: v3.0.3
+    date: 2024-10-25
+    url: https://github.com/16n-faderbank/16next_firmware/releases/tag/v3.0.3

@@ -1,0 +1,27 @@
+device: 4ms-metamodule
+name: MetaModule plugin SDK and examples
+kind: tool
+summary: SDK with a VCV Rack wrapper for compiling existing Rack plugin source into MetaModule plugins, plus native plugin support. The examples repository builds Airwindows, Fundamental, Venom, Bogaudio and many other ports.
+description: >-
+  The SDK (github.com/4ms/metamodule-plugin-sdk) is a CMake project that needs
+  arm-none-eabi-gcc. The examples repository (github.com/4ms/metamodule-plugin-examples)
+  vendors community and VCV-ported plugins as submodules, some with small
+  changes, and publishes per-plugin builds for each firmware version. It
+  also holds two native examples (Airwindows and NativeExample).
+status: active
+authors:
+  - name: 4ms Company
+    url: https://4ms.company/
+source: https://github.com/4ms/metamodule-plugin-sdk
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  SDK root code is GPLv3 or later with the MetaModule Plugin License
+  Exception (GPLv3 section 7) and a commercial option. The examples repository
+  carries per-submodule licenses; derivative work may fall under the originals.
+homepage: https://github.com/4ms/metamodule-plugin-examples
+distribution: source-only
+tags: [sdk]
+versions:
+  - version: api-v2.4.0
+    url: https://github.com/4ms/metamodule-plugin-sdk/tags

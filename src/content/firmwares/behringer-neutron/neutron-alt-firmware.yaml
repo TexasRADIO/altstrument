@@ -1,0 +1,24 @@
+device: behringer-neutron
+name: Neutron alternate firmware
+summary: Alternate firmware for the Behringer Neutron, written for the Cortex-M0 with a polyphonic LFO, band-limited hard sync and waveshaping shown in the author's demo videos. The author considers it abandoned.
+description: >-
+  The README says everything works and runs fast, but that the code is heavily
+  optimised for Cortex-M0 and is hard to maintain, and that the author no longer
+  owns the synth. The prebuilt files, a manual and ST's DFU tool for Windows
+  were moved from OneDrive to a GitHub release in June 2026. Author demo videos
+  cover poly LFO, hard sync and waveshaping.
+status: archived
+authors:
+  - name: mrf-r
+    url: https://github.com/mrf-r
+source: https://github.com/mrf-r/Neutron
+source_status: open
+license: GPL-3.0-only
+distribution: download
+install_notes: Flash over DFU using ST's tool on Windows or dfu-util on macOS and Linux.
+tags: [synth-engine, lfo]
+versions:
+  - version: r15f
+    date: 2026-06-23
+    url: https://github.com/mrf-r/Neutron/releases/tag/r15f
+    notes: Release date is when the files were re-hosted on GitHub; the original build date is not stated.

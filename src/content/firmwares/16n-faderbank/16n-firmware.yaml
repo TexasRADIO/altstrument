@@ -1,0 +1,31 @@
+device: 16n-faderbank
+name: 16n firmware
+summary: >-
+  Teensy firmware for the original 16n faderbank: sixteen CCs over USB and TRS MIDI, sixteen CV outputs and monome-style i2c, with 14-bit MIDI support since 2.2.0.
+description: >-
+  The repository also holds the electronics, panel files and build docs. The
+  2.2.0 release is firmware-only and adds 14-bit support to every USB and TRS
+  channel. Configuration is done in the web editor. Firmware is MIT and hardware is CC-BY-SA-4.0.
+status: maintained
+authors:
+  - name: 16n faderbank project
+    url: https://github.com/16n-faderbank
+source: https://github.com/16n-faderbank/16n
+source_status: open
+license: MIT
+license_notes: Per LICENSE.md the firmware is MIT; hardware and artwork are CC-BY-SA-4.0.
+homepage: https://16n-faderbank.github.io/
+distribution: download
+requires_stock: 16n faderbank (Teensy 3.2), hardware 1.x
+install_notes: Flash the release hex with Teensy Loader; configure afterwards in the web editor.
+tags: [platform, midi, usb-midi, i2c]
+versions:
+  - version: v2.2.0
+    date: 2025-04-06
+    url: https://github.com/16n-faderbank/16n/releases/tag/v2.2.0
+  - version: v2.1.1
+    date: 2023-04-03
+    url: https://github.com/16n-faderbank/16n/releases/tag/v2.1.1
+  - version: v2.1.0
+    date: 2020-12-29
+    url: https://github.com/16n-faderbank/16n/releases/tag/v2.1.0

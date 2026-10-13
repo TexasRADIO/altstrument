@@ -1,0 +1,21 @@
+device: noise-engineering-versio
+name: Pyros Versio
+summary: Nine-mode stereo distortion ported from Audiority's Pyros plugin, with pre-distortion low cut, post-distortion high cut, bias, bipolar feedback and a radio mode.
+description: >-
+  Free; the download links are sent after entering a name and email address.
+  A custom PDF panel overlay is included. Needs Chrome for the firmware
+  upload.
+status: active
+authors:
+  - name: Audiority
+    url: https://www.audiority.com/
+source_status: binary-only
+license: unspecified
+license_notes: No license text on the product page.
+homepage: https://www.audiority.com/shop/pyros-versio/
+distribution: download
+tags: [fx]
+versions:
+  - version: "1.0"
+    url: https://www.audiority.com/shop/pyros-versio/
+    notes: Released April 2026 per the product page.

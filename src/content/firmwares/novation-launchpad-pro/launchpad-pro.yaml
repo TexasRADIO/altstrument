@@ -1,0 +1,27 @@
+device: novation-launchpad-pro
+name: launchpad-pro (open firmware framework)
+kind: tool
+summary: Novation's open firmware framework for the Launchpad Pro MK1, written by Dave Hodder. A simplified app API and build environment, not the factory firmware; strips Ableton integration and setup menus. Base for most custom builds.
+description: >-
+  Published by Dave Hodder with Focusrite-Novation. The README explains that the
+  factory source was not released; instead the repository provides a build
+  environment, application entry points and a library of low-level code
+  compiled into launchpad_pro.a. Ableton integration and the setup and
+  navigation functions are removed, the Live USB MIDI port is gone, and the
+  device enumerates with a different name and USB PID. The last commit is from
+  November 2018.
+status: dormant
+authors:
+  - name: Dave Hodder (dvhdr)
+    url: https://github.com/dvhdr
+source: https://github.com/dvhdr/launchpad-pro
+source_status: open
+license: BSD-3-Clause
+distribution: source-only
+install_notes: Build with Docker or Vagrant and flash the generated SysEx file through the bootloader (hold Setup while powering on).
+tags: [platform, sdk, midi]
+versions:
+  - version: master @ 315d8d1
+    date: 2018-11-23
+    url: https://github.com/dvhdr/launchpad-pro/commit/315d8d1
+    notes: No tagged releases; this is the latest commit.

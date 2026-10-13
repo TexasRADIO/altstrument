@@ -1,0 +1,33 @@
+device: mutable-instruments-clouds
+name: Kammerl Beat-Repeat
+summary: Clouds firmware adding a clocked beat-repeat and slicing mode ported from the Kammerl Kaske VST suite, plus a multiband Spectral Clouds mode that replaces the spectral processor.
+description: >-
+  Beat-Repeat needs a clock on the Trigger input. It slices the live input
+  continuously and lets you choose among the eight most recent slices, with
+  quantized loop start and size, four pitch modes, feedback and scratch-style
+  modulation. The three original granular modes are kept. Hold button B for
+  five seconds to cycle the new modes.
+status: dormant
+authors:
+  - name: Julius Kammerl
+    url: https://github.com/jkammerl
+source: https://github.com/jkammerl/eurorack
+source_status: open
+license: MIT
+license_notes: Inherits from Mutable Instruments; repository README states STM32 code is MIT.
+homepage: https://www.kammerl.de/audio/clouds/
+distribution: download
+install_notes: >-
+  Hold FREEZE while powering on, then play the firmware WAV into IN L with all
+  other inputs unplugged. The project page warns of a small risk of bricking.
+brick_risk: true
+tags: [fx, looper, granular]
+versions:
+  - version: V0.42
+    date: 2017-06-25
+    url: https://github.com/jkammerl/eurorack
+    notes: Date is the commit that added V0.42; the project has no tagged releases.
+  - version: V0.31
+    date: 2017-04-13
+    url: https://github.com/jkammerl/eurorack
+    notes: Date is the commit that added V0.31.

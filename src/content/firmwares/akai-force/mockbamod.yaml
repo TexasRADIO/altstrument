@@ -1,0 +1,44 @@
+device: akai-force
+name: MockbaMod
+summary: "Overlay for the Force that keeps Akai's factory firmware and loads extras from an SD card: scene follow actions, tempo automation, hidden screens, SSH/SFTP and an add-on manager."
+description: >-
+  The author states that MockbaMod is not a custom firmware: older versions
+  used a lightly modified image that checks for the SD card, and without the
+  card the unit runs stock. Features listed in the README include scene
+  automation (follow actions), foot controller triggering, access to hidden
+  MPC Key 61 screens, multi-boot of older firmware, SSH/SFTP, custom arpeggios,
+  absolute and relative tempo automation (beta) and an add-on manager. Add-ons
+  include PushLua, DropSeq, Euclidier, RiffMaker4T, SoX, dxSEX, VNCServer and
+  MidiLoop. A RackForce add-on (0.2.0-beta, a modular MIDI rack) was announced
+  on mpc-forums in July 2026; its repository could not be confirmed. Builds for
+  Force firmware 3.5 and above are distributed through the project Discord.
+  Forum commenters in 2026 describe the project as slowing or discontinued,
+  which is informal.
+status: maintained
+authors:
+  - name: MockbaTheBorg
+    url: https://github.com/MockbaTheBorg
+source: https://github.com/MockbaTheBorg/MockbaMod
+source_status: binary-only
+license: unspecified
+license_notes: >-
+  No license file. The repository holds the SD card skeleton, scripts and
+  docs; firmware images and the MidiLoop binary are distributed separately.
+homepage: https://discord.gg/HvNBpArSSa
+distribution: download
+requires_stock: Force 3.2.5 to 3.3.0 (repo images); newer builds via Discord
+install_notes: >-
+  Apply the modded image through the normal USB update and extract the SD card
+  contents to an exFAT card named 662522. Read the whole README first. Latest
+  README commit is 2025-11-10.
+tags: [sequencer, loader, midi]
+versions:
+  - version: SD card 4.08
+    url: https://github.com/MockbaTheBorg/MockbaMod
+    notes: Listed in the README for MockbaMod up to 3.3.
+  - version: MidiLoop 4.056
+    url: https://github.com/MockbaTheBorg/MockbaMod
+    notes: Listed in the README as the latest MidiLoop.
+  - version: Firmware image 3.3.0.0
+    url: https://github.com/MockbaTheBorg/MockbaMod
+    notes: Listed in the README for Force firmware 3.3.x and below.

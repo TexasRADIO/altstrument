@@ -1,0 +1,15 @@
+device: elektron-tools
+name: digikit
+kind: tool
+summary: ColdFire control-CPU emulator that boots the real Digitakt II and Digitone II OS (1.16 and 1.11) and shows its screen, plus static analysis tools for the SHARC+ DSP code. Groundwork for new machines and sounds.
+status: active
+authors:
+  - name: m-dwyer
+    url: https://github.com/m-dwyer
+source: https://github.com/m-dwyer/digikit
+source_status: open
+license: GPL-2.0-or-later
+license_notes: The LICENSE file is the GPL v2 text; verify "or later" terms in file headers before relying on it.
+distribution: source-only
+tags: [emulator, research]
+versions: []

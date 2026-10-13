@@ -1,0 +1,18 @@
+device: monome-walk
+name: walk
+summary: >-
+  Official source for walk, monome's two-footswitch gate and logic module: ATtiny24 firmware with Makefile and flash script. No tagged releases.
+description: >-
+  The repository contains walk.c, a Makefile for an ATtiny24 target and a
+  flash.sh script. The last commit is from January 2016.
+status: dormant
+authors:
+  - name: monome
+    url: https://monome.org
+source: https://github.com/monome/walk
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own files.
+homepage: https://monome.org/docs/walk/
+distribution: source-only
+tags: [platform]

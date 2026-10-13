@@ -1,0 +1,30 @@
+device: mutable-instruments-braids
+name: Braids Renaissance
+summary: Beta Braids firmware adding SAM speech oscillators (16 words each), ten new chord algorithms and an inverted-encoder setting for DIY units.
+description: >-
+  Two speech models, SAM1 and SAM2, port the C64-era SAM synthesizer: Timbre
+  scrubs through the selected word, Color switches words, and a trigger plays
+  the word at natural speed. With the quantizer in a diatonic mode the chord
+  models stay in key; the x6 modes stack six oscillators across the scale.
+  Removed relative to Braids 1.9: the text editor, morse code easter egg,
+  QPSK and the original WTx4 (replaced by WTCH). The author labels it beta
+  with no warranty.
+status: dormant
+authors:
+  - name: Tom Burns (boourns)
+    url: https://github.com/boourns
+source: https://github.com/boourns/eurorack
+source_status: open
+license: MIT
+license_notes: Inherits from Mutable Instruments; repository README states STM32 code is MIT.
+homepage: https://burns.ca/eurorack.html
+distribution: download
+install_notes: Follow the official Braids firmware update procedure; the author recommends starting from stock v1.8 or later.
+tags: [synth-engine, chords]
+versions:
+  - version: "0.4"
+    date: 2018-11-28
+    url: https://github.com/boourns/eurorack/releases/tag/renaissance-0.4
+  - version: "0.3"
+    date: 2018-02-15
+    url: https://github.com/boourns/eurorack/releases/tag/v0.3.0

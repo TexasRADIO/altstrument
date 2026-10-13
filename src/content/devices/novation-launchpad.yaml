@@ -1,0 +1,25 @@
+name: Launchpad family (MK3-era)
+manufacturer: Novation
+category: controller
+tagline: Launchpad X, Mini MK3 and Pro MK3 grid controllers
+links:
+  manufacturer: https://novationmusic.com/products/launchpad-x
+  community:
+    - label: Launchpad Firmware Utility
+      url: https://fw.mat1jaczyyy.com/
+related: [novation-launchpad-pro]
+notes: >-
+  Novation has not opened the MK3 firmware, and no replacement OS was found for
+  the Launchpad X, Mini MK3 or Pro MK3. The only third-party tool is a utility
+  that patches stock firmware images for these units. For the original Launchpad
+  Pro, see the Launchpad Pro (MK1) entry.
+image:
+  src: /images/devices/novation-launchpad.png
+  style: photo
+  alt: Novation Launchpad X 8x8 RGB pad grid controller, top-down view (representative of the Launchpad MK3 family)
+  width: 1200
+  height: 1200
+  credit: Novation
+  license: manufacturer product image
+  source_url: https://novationmusic.com/products/launchpad-x
+  original_url: https://cdn11.bigcommerce.com/s-itgb7ssiy1/images/stencil/1280x1280/products/204/1253/Launchpad-X-Top-2400-2400__28614.1773158733.png

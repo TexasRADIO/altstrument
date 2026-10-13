@@ -1,0 +1,24 @@
+name: DX9
+manufacturer: Yamaha
+category: synth
+tagline: Four-operator FM synth
+links:
+  community:
+    - label: DX9/7 project
+      url: https://github.com/ajxs/yamaha_dx97
+notes: >-
+  The replacement ROM needs the DX9's mask ROM swapped for an EPROM. Per the
+  project FAQ, early DX9s used two 2764-series EPROMs and later ones a single
+  27128, so a single-chip socket will likely be required. The first install of
+  any version fills the synth's parameters with random data until reset by
+  holding FUNCTION at boot; back up patches first.
+image:
+  src: /images/devices/yamaha-dx9.jpg
+  style: photo
+  alt: Front view of the Yamaha DX9 four-operator FM synthesizer, from Yamaha's 50th-anniversary synthesizer chronology
+  width: 600
+  height: 400
+  credit: Yamaha
+  license: manufacturer archive image
+  source_url: https://usa.yamaha.com/products/contents/music_production/synth_50th/chronology/index01.html
+  original_url: https://usa.yamaha.com/files/b_1983-2_DX9_d3017107724b5ef21777ecc30aabf563.jpg

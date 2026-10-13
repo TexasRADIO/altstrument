@@ -1,0 +1,37 @@
+device: korg-electribe-2
+name: Freetribe
+summary: Ground-up open-source replacement firmware and API for the Electribe 2, still at a developer stage with basic examples rather than a finished instrument.
+description: >-
+  Built from original code and open-source components rather than patching
+  Korg's firmware. Hardware initialisation and drivers are largely done:
+  serial MIDI over the TRS port, the 128x64 display, backlight and LED
+  control, panel control callbacks, commands to the Blackfin DSP and an audio
+  module API. USB, SD card, DSP block processing and dynamic app loading are
+  listed as planned. Tags v0.1.0 to v0.1.3 exist but there are no formal
+  releases.
+status: active
+authors:
+  - name: bangcorrupt
+    url: https://github.com/bangcorrupt
+source: https://github.com/bangcorrupt/freetribe
+source_status: open
+license: AGPL-3.0-or-later
+license_notes: README states AGPL-3.0; source file headers grant version 3 or later.
+homepage: https://bangcorrupt.github.io/freetribe-docs/
+distribution: source-only
+install_notes: >-
+  Developer-stage project. See the getting started guide in the docs.
+tags: [sdk, os, midi]
+versions:
+  - version: v0.1.3
+    date: 2025-10-29
+    url: https://github.com/bangcorrupt/freetribe/tree/v0.1.3
+    notes: Date is the tagged commit.
+  - version: v0.1.2
+    date: 2025-06-28
+    url: https://github.com/bangcorrupt/freetribe/tree/v0.1.2
+    notes: Date is the tagged commit.
+  - version: v0.1.1
+    date: 2025-06-21
+    url: https://github.com/bangcorrupt/freetribe/tree/v0.1.1
+    notes: Date is the tagged commit.

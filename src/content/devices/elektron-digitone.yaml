@@ -1,0 +1,30 @@
+name: Digitone / Digitone Keys (mk1)
+manufacturer: Elektron
+category: synth
+tagline: 8-voice FM synth
+platform: ColdFire + DSP
+stock_firmware: "1.43 / 1.44"
+links:
+  manufacturer: https://www.elektron.se/explore/digitone
+  community:
+    - label: elektronmods.com
+      url: https://elektronmods.com/
+    - label: Modwerk
+      url: https://modwerk.app/
+notes: >-
+  Mods target OS 1.43 and 1.44 for both the desktop Digitone and Digitone
+  Keys, loaded with elekloader, which builds a custom .syx from the stock file
+  you supply and leaves the bootloader untouched. Elektron does not permit
+  sharing mod files or links on Elektronauts (policy of 2026-09-16); community
+  discussion moved to elektronmods.com and modwerk.app.
+related: [elektron-digitakt, elektron-digitone-ii, elektron-tools]
+image:
+  src: /images/devices/elektron-digitone.webp
+  style: photo
+  alt: "Elektron Digitone (mk1), angled view"
+  width: 1200
+  height: 818
+  credit: Elektron
+  license: manufacturer product image
+  source_url: https://web.archive.org/web/20220516055854/https://www.elektron.se/products/digitone/
+  original_url: https://web.archive.org/web/20220516055854im_/https://www.elektron.se/wp-content/uploads/2018/01/qvtvgbar_angle_web.png

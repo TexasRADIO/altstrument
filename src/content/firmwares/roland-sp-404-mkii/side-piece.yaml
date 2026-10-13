@@ -1,0 +1,19 @@
+device: roland-sp-404-mkii
+name: Side-Piece
+summary: Announced OS layer for the SP-404MKII with a ducker, per-bus filter, lo-fi and EQ, four LFOs and four Euclidean rhythm lanes. Not yet downloadable.
+description: >-
+  Runs on top of Roland's own system. The site lists a kick-triggered or
+  tempo-synced ducker, a filter and lo-fi on every bus on a new FX screen,
+  four LFOs with twelve shapes, a four-band EQ on every bus, four Euclidean
+  lanes that play a pad while a pattern runs, and a frequency chop that
+  splits one pad across four pads. The site says "releasing soon" for build
+  12b and states that nothing is downloadable yet. A browser simulator with
+  lessons is available.
+status: announced
+authors:
+  - name: Freakier Firmware Labs LLC
+    url: https://freakierfirmware.com
+source_status: closed
+license: proprietary
+homepage: https://freakierfirmware.com
+tags: [fx, lfo, filter, sequencer]

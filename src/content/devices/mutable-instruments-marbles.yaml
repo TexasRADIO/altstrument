@@ -1,0 +1,23 @@
+name: Marbles
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Random sampler / clocked random generator (discontinued)
+platform: STM32F4
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/marbles/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
+  is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name.
+image:
+  src: /images/devices/mutable-instruments-marbles.jpg
+  style: photo
+  alt: Front panel of the Mutable Instruments Marbles Eurorack module
+  width: 853
+  height: 1200
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/marbles/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/marbles/images/front.jpg

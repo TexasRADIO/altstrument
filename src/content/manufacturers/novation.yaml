@@ -1,0 +1,12 @@
+name: Novation
+website: https://novationmusic.com/
+logo:
+  src: /images/logos/novation.png
+  alt: Novation logo
+  width: 600
+  height: 120
+  credit: Novation
+  license: public domain (text logo)
+  source_url: https://commons.wikimedia.org/wiki/File:Novation_logo.png
+  original_url: https://upload.wikimedia.org/wikipedia/commons/0/0f/Novation_logo.png
+  monochrome: true

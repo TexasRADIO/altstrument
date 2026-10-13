@@ -1,0 +1,15 @@
+device: elektron-digitakt-ii
+name: dt2-machine-lab
+summary: "Emulator-only lab for custom Digitakt II machines on OS 1.16: a SINE test machine, then ports of Plaits engines (VA, 2-op FM, bass drum, waveshaping, additive, granular formant) run as SHARC code. Not confirmed on hardware."
+status: active
+authors:
+  - name: lalzart
+    url: https://github.com/lalzart
+source: https://github.com/lalzart/dt2-machine-lab/tree/initial-machine-lab
+source_status: open
+license: unspecified
+license_notes: No license file in the repository. Work lives on the initial-machine-lab branch.
+distribution: source-only
+requires_stock: "1.16"
+tags: [machines, synth-engine, research, emulator]
+versions: []

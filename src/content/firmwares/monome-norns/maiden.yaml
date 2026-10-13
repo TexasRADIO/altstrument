@@ -1,0 +1,20 @@
+device: monome-norns
+name: maiden
+kind: tool
+summary: Self-contained web-based code editor and REPL for norns, made of a backend HTTP server and a single-page web app, used to edit scripts and talk to the system.
+status: active
+authors:
+  - name: monome
+    url: https://monome.org
+source: https://github.com/monome/maiden
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE is GPLv3; no "or later" grant found in project files.
+homepage: https://monome.org/docs/norns/
+distribution: download
+tags: [scripting, editor]
+versions:
+  - version: v1.1.6
+    date: 2022-03-22
+    url: https://github.com/monome/maiden/releases/tag/v1.1.6
+    notes: Latest tagged release; the repository still receives commits (July 2026).

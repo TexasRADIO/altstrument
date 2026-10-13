@@ -1,0 +1,30 @@
+name: Digitone II
+manufacturer: Elektron
+category: synth
+tagline: 16-track FM synth
+platform: ColdFire + SHARC+ DSP (ADSP-21569)
+stock_firmware: "1.11 / 1.12"
+links:
+  manufacturer: https://www.elektron.se/explore/digitone-ii
+  community:
+    - label: elektronmods.com
+      url: https://elektronmods.com/
+    - label: Modwerk
+      url: https://modwerk.app/
+notes: >-
+  Mods target OS 1.11; dn2-cfw targets 1.12. Projects
+  here patch your own stock .syx; none ship Elektron firmware, and the
+  bootloader is untouched. Elektron does not permit sharing mod files or links
+  on Elektronauts (policy of 2026-09-16); community discussion moved to
+  elektronmods.com and modwerk.app.
+related: [elektron-digitakt-ii, elektron-digitone, elektron-tools]
+image:
+  src: /images/devices/elektron-digitone-ii.webp
+  style: photo
+  alt: "Elektron Digitone II, top view"
+  width: 1200
+  height: 864
+  credit: Elektron
+  license: manufacturer press kit
+  source_url: https://www.elektron.se/press
+  original_url: https://www.elektron.se/wp-content/uploads/2026/09/Elektron-Press-Kit.zip

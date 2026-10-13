@@ -1,0 +1,35 @@
+name: Legio
+manufacturer: Noise Engineering
+category: eurorack
+tagline: 6 HP stereo oscillator and effects platform with 23 official firmwares
+platform: Electrosmith Daisy Seed (libDaisy)
+links:
+  manufacturer: https://noiseengineering.us/pages/world-of-legio
+  community:
+    - label: Noise Engineering firmware swap portal
+      url: https://noiseengineering.us/portal/firmware/
+    - label: libDaisy
+      url: https://github.com/electro-smith/libDaisy
+    - label: Legio example firmware (DaisyExamples)
+      url: https://github.com/electro-smith/DaisyExamples/tree/master/legio
+notes: >-
+  Legio is one 6 HP hardware module with stereo audio in and out, pitch
+  tracking and a few parameters. Every Legio firmware runs on any Legio and
+  swapping is free through the Firmware Swap page,
+  noiseengineering.us/portal/firmware, from a WebUSB browser. The library
+  grew from 7 firmwares to 23 in Noise Engineering's Legioverload release,
+  which introduced the Legio drum kit. Noise Engineering documents libDaisy support
+  and an example project for writing custom Legio firmware, but no
+  third-party Legio firmware was found, and Versio or Alia firmwares do not
+  run on it (different hardware).
+related: [noise-engineering-versio, noise-engineering-alia]
+image:
+  src: /images/devices/noise-engineering-legio.png
+  style: photo
+  alt: Noise Engineering Legio platform pictured with the Librae Legio firmware panel (black panel render on transparent background)
+  width: 600
+  height: 1200
+  credit: Noise Engineering
+  license: manufacturer product image
+  source_url: https://noiseengineering.us/products/legio/
+  original_url: https://cdn.shopify.com/s/files/1/0552/0923/0485/products/librae-legio-black-1024x2048.png

@@ -1,0 +1,32 @@
+device: m-vave-fm-1
+name: FiMba-1
+summary: >-
+  Physically modelled kalimba / mbira: modelled tines and resonator bodies, thumb-roll chords on the black
+  keys, mbira pattern generator, tape, grains, reverb and delay.
+status: active
+authors:
+- name: J. Adam Sowers (jadamsowers)
+  url: https://github.com/jadamsowers
+source: https://github.com/jadamsowers/fm1-fimba
+source_status: open
+license: GPL-3.0-only
+license_notes: Built on Felucca, X0X and FoMni; see LICENSING.md.
+homepage: https://jadamsowers.github.io/fm1-fimba/
+distribution: browser-installer
+install_notes: >-
+  Installs and plays in a browser from the project page (WebMIDI, USB). Beta releases.
+brick_risk: true
+tags: [physical-modeling, synth-engine, sequencer, fx, granular, chords]
+versions:
+- version: 0.6.1 beta
+  date: 2026-10-13
+  url: https://github.com/jadamsowers/fm1-fimba/releases/tag/v0.6.1
+  notes: Marked pre-release.
+- version: 0.6.0 beta
+  date: 2026-10-08
+  url: https://github.com/jadamsowers/fm1-fimba/releases/tag/v0.6.0
+  notes: Marked pre-release.
+- version: 0.5.2 beta
+  date: 2026-10-08
+  url: https://github.com/jadamsowers/fm1-fimba/releases/tag/v0.5.2
+  notes: Marked pre-release.

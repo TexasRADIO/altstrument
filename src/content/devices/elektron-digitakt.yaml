@@ -1,0 +1,32 @@
+name: Digitakt (mk1)
+manufacturer: Elektron
+category: sampler
+tagline: 8-track sampler
+platform: ColdFire + DSP
+stock_firmware: "1.53 / 1.54"
+links:
+  manufacturer: https://www.elektron.se/explore/digitakt
+  community:
+    - label: elektronmods.com
+      url: https://elektronmods.com/
+    - label: Modwerk
+      url: https://modwerk.app/
+notes: >-
+  Mods target OS 1.53 and 1.54 and are loaded with elekloader, which builds a
+  custom .syx from the stock file you supply and leaves the bootloader
+  untouched, so the official OS restores the unit; recovery over physical DIN
+  MIDI from the startup menu is the documented fallback. Some mods are built
+  for 1.53 only (DigiFilter, DigiSplash). Elektron does not permit sharing mod
+  files or links on Elektronauts (policy of 2026-09-16); community discussion
+  moved to elektronmods.com and modwerk.app.
+related: [elektron-digitone, elektron-digitakt-ii, elektron-tools]
+image:
+  src: /images/devices/elektron-digitakt.jpg
+  style: photo
+  alt: "Elektron Digitakt (mk1), top view"
+  width: 1200
+  height: 978
+  credit: Elektron
+  license: manufacturer product image
+  source_url: https://web.archive.org/web/20220516062713/https://www.elektron.se/products/digitakt/
+  original_url: https://web.archive.org/web/20210903170424im_/https://www.elektron.se/wp-content/uploads/2021/06/Digitakt_Above_background.jpg

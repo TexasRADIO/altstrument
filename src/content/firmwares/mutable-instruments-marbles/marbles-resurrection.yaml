@@ -1,0 +1,33 @@
+device: mutable-instruments-marbles
+name: Marbles alternative firmware (Resurrection)
+summary: Adds a chord mode, X clock as T reset or hold, CV-selectable quantizer scales and roots, extra Deja Vu loop buffer modes and loop save/load to Marbles.
+description: >-
+  Entered with a long press of the t range button. Alternatives cover T rate
+  CV as Deja Vu loop length or start position, T jitter CV as X scale slot
+  select, X spread CV as X quantizer root, five chord modes and five Deja Vu
+  buffer-size modes, plus a Markov algorithm for t mode in normal operation.
+  Loop sequences can be saved to and loaded from RAM (volatile). Builds target
+  Marbles firmware v1.2 and later. The author also published Rings firmware
+  releases in the same repository.
+status: dormant
+authors:
+  - name: ukyzky
+    url: https://github.com/ukyzky
+source: https://github.com/ukyzky/eurorack
+source_status: open
+license: MIT
+license_notes: Inherits from Mutable Instruments; repository README states STM32 code is MIT.
+homepage: https://github.com/ukyzky/eurorack/releases
+distribution: download
+requires_stock: v1.2 or later (v11.3); a v1.3 build exists as a pre-release
+tags: [random, quantizer, chords, scales, sequencer]
+versions:
+  - version: 1.3 alternative v0.1.0 (pre-release)
+    date: 2023-06-28
+    url: https://github.com/ukyzky/eurorack/releases/tag/marbles_v1.3_alternative_v0.1.0
+  - version: v11.3
+    date: 2022-08-13
+    url: https://github.com/ukyzky/eurorack/releases/tag/marbles_alternative_v11_3
+  - version: v11.2
+    date: 2022-08-13
+    url: https://github.com/ukyzky/eurorack/releases/tag/marbles_alternative_v11_2

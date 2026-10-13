@@ -1,0 +1,20 @@
+device: monome-tools
+name: diii web
+kind: tool
+summary: Browser live-coding editor and REPL for iii devices over Web Serial (Chromium browsers), installable as an offline PWA; also reboots a grid into its bootloader for iii updates.
+description: >-
+  The iii counterpart of web-druid (for crow). The README says the repository,
+  formerly named web-diii, holds the source of the static web app hosted at
+  monome.org/diii; docs are in the iii section of the monome site.
+status: active
+authors:
+  - name: monome
+    url: https://monome.org
+source: https://github.com/monome/web-diii
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE is GPLv3; no "or later" grant found in project files.
+homepage: https://monome.org/diii
+distribution: browser-installer
+install_notes: Open the page in Chrome, Edge or Opera, click connect and pick the iii device.
+tags: [scripting, editor, flasher]

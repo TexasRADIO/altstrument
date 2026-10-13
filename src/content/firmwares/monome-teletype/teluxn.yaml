@@ -1,0 +1,21 @@
+device: monome-teletype
+name: teluxn
+summary: >-
+  uxn emulator firmware for Teletype: load compiled .rom files from a USB stick, pick one with the PARAM knob and run it with the module's screen, controller and gpio devices.
+description: >-
+  Built on the multipass framework. The README says up to the first eight roms
+  on the drive are available, and a table maps uxn system, screen, controller
+  and gpio devices to Teletype hardware. It replaces the Teletype image, so
+  reflash the official firmware to go back. The repository has not changed since June 2021.
+status: dormant
+authors:
+  - name: csboling
+    url: https://github.com/csboling
+source: https://github.com/csboling/teluxn
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is GPLv2; the repository vendors the multipass framework (also GPLv2).
+homepage: https://wiki.xxiivv.com/site/uxn.html
+distribution: source-only
+requires_stock: Teletype hardware
+tags: [emulator, research]

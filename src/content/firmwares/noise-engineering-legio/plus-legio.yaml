@@ -1,0 +1,22 @@
+device: noise-engineering-legio
+name: Plus Legio
+summary: Official full additive voice with internal envelope and LFOs, plus stereo phase-modulation inputs.
+description: >-
+  Official Noise Engineering firmware for the 6 HP Legio platform. Runs on any
+  Legio module. Manual: https://noiseengineering.us/manuals/plus-legio/
+status: active
+authors:
+  - name: Noise Engineering
+    url: https://noiseengineering.us
+source_status: closed
+license: proprietary
+license_notes: >-
+  Closed-source official firmware, free to Legio owners.
+homepage: https://noiseengineering.us/products/plus-legio/
+distribution: download
+install_notes: >-
+  Swap from the Noise Engineering firmware portal
+  (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
+  (Chrome, Edge or Opera). Free for Legio owners.
+tags: [official, voice, additive]
+versions: []

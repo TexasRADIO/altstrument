@@ -1,0 +1,22 @@
+device: elektron-digitakt
+name: DigiFilter
+summary: Extra per-track filter modes (BP, BP2, COMB, TRASH) for the Digitakt mk1, as an elekloader mod for OS 1.53 only.
+status: active
+authors:
+  - name: DigiAlchemydsp
+    url: https://github.com/DigiAlchemydsp
+source: https://github.com/DigiAlchemydsp/DigiFilter
+source_status: open
+license: GPL-2.0-or-later
+distribution: patch-your-own
+requires_stock: "1.53"
+install_notes: Format-2 elekloader mod. No OS 1.54 build yet; digi1_mods ports its copy for testing.
+tags: [filter, fx]
+versions:
+  - version: v1.0k
+    date: 2026-10-06
+    url: https://github.com/DigiAlchemydsp/DigiFilter/releases/tag/v1.0k
+    notes: Latest tag; no GitHub release.
+  - version: v1.0i.2
+    date: 2026-10-04
+    url: https://github.com/DigiAlchemydsp/DigiFilter/releases/tag/v1.0i.2

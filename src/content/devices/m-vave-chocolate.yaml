@@ -1,0 +1,28 @@
+name: Chocolate / Chocolate Plus
+manufacturer: M-VAVE
+category: foot-controller
+tagline: Bluetooth MIDI footswitch controller
+links:
+  manufacturer: https://www.cuvave.com/product?id=chocolate-plus
+  community:
+  - label: OpenChocolate protocol spec
+    url: https://github.com/majabojarska/OpenChocolate/blob/main/reverse-engineering/MIDI-protocol-spec.md
+  - label: cbix/mvave-chocolate-sysex
+    url: https://github.com/cbix/mvave-chocolate-sysex
+notes: >-
+  No custom firmware exists for these devices. Firmware updates are official only, from M-VAVE. The projects
+  listed here are host-side configuration tools that speak the stock SysEx protocol over USB or Web MIDI
+  to change switch assignments, or companion apps that remap its MIDI output on a computer. They do not
+  replace the footswitch's firmware. Per cbix's notes, SysEx configuration over BLE MIDI did not work,
+  and USB configuration only worked while the official app was running.
+related: [m-vave-fm-1, m-vave-smk-37]
+image:
+  src: /images/devices/m-vave-chocolate.webp
+  style: photo
+  alt: "M-VAVE Chocolate MIDI foot controller, top view"
+  width: 937
+  height: 241
+  credit: M-VAVE
+  license: manufacturer product image
+  source_url: https://www.m-vave.com/product.html?id=chocolate
+  original_url: https://www.m-vave.com/images/products/chocolate.webp

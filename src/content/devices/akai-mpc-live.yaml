@@ -1,0 +1,31 @@
+name: MPC Live / Live II / X / One / Key 61
+manufacturer: Akai Professional
+category: sampler
+tagline: Linux-based standalone MPC generation
+platform: Embedded Linux (shared base with Force)
+links:
+  manufacturer: https://www.akaipro.com/products/collections/mpc/
+  community:
+    - label: MPC-LiveXplore wiki
+      url: https://github.com/TheKikGen/MPC-LiveXplore/wiki
+notes: >-
+  Existing mods patch Akai's update images rather than replacing the
+  application. Reports on mpc-forums in 2026 suggest rooting newer firmware on
+  second-generation hardware (Live II) is harder because the update image is
+  checked, and that the patch has to be redone after each Akai update. Akai
+  has made no statement on this and the reports are unconfirmed.
+related:
+  - akai-force
+  - akai-mpc500
+  - akai-mpc1000
+  - akai-mpc2000
+image:
+  src: /images/devices/akai-mpc-live.jpg
+  style: photo
+  alt: "Akai Professional MPC Live II, top view (MPC Live family)"
+  width: 1200
+  height: 675
+  credit: Akai Professional
+  license: manufacturer product image
+  source_url: https://www.akaipro.com/mpc-live-2/
+  original_url: https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fb0e73766c5aa49de93eea8bcb969a7cb

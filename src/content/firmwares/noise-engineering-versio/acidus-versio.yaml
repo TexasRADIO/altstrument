@@ -1,0 +1,32 @@
+device: noise-engineering-versio
+name: Acidus Versio
+summary: TB-303 emulator for Versio, a trimmed port of Robin Schmidt's Open303 with switchable parameter ranges for the original, Devilfish-mod and Synthdad modes.
+description: >-
+  Written by Blue Nautilus (Seaside Modular) in C++ on libDaisy; the Open303
+  sequencer was removed to fit the hardware. Featured in a guest post on the
+  Noise Engineering blog. The repository holds the prebuilt .bin, a PDF
+  manual and faceplate files.
+status: maintained
+authors:
+  - name: Blue Nautilus
+    url: https://github.com/abluenautilus
+source: https://github.com/abluenautilus/AcidusVersio
+source_status: open
+license: MIT
+license_notes: >-
+  Per the repository LICENSE.txt, which carries Robin Schmidt's Open303 MIT
+  notice.
+homepage: https://github.com/abluenautilus/AcidusVersio/releases/tag/v1.0.1
+distribution: download
+install_notes: >-
+  Download AcidusVersio.bin from the release and select it as a custom file
+  on Noise Engineering's firmware portal
+  (https://noiseengineering.us/portal/firmware/).
+tags: [synth-engine, emulator, acid]
+versions:
+  - version: v1.0.1
+    date: 2024-08-24
+    url: https://github.com/abluenautilus/AcidusVersio/releases/tag/v1.0.1
+  - version: v1.0.0
+    date: 2024-04-26
+    url: https://github.com/abluenautilus/AcidusVersio/releases/tag/v1.0.0

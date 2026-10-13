@@ -1,0 +1,45 @@
+---
+import Base from '@/layouts/Base.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import DeviceCard from '@/components/DeviceCard.astro';
+import { getDevicesWithFirmwares, getManufacturerEntries, groupByManufacturer, hostOf, plural, type Manufacturer } from '@/lib/catalog';
+
+export async function getStaticPaths() {
+  const [devices, entries] = await Promise.all([getDevicesWithFirmwares(), getManufacturerEntries()]);
+  const manufacturers = groupByManufacturer(devices, entries);
+  return manufacturers.map((manufacturer) => ({ params: { slug: manufacturer.slug }, props: { manufacturer } }));
+}
+
+interface Props { manufacturer: Manufacturer }
+const { manufacturer: m } = Astro.props;
+---
+<Base
+  title={m.name}
+  description={`${plural(m.devices.length, 'device')} by ${m.name} with ${plural(m.firmwareCount, 'listed custom firmware or tool', 'listed custom firmwares and tools')}.`}
+>
+  <Breadcrumb items={[{ label: 'Devices', href: '/' }, { label: m.name }]} />
+  <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+    {m.logo && (
+      <img
+        src={m.logo.src}
+        alt=""
+        aria-hidden="true"
+        width={m.logo.width}
+        height={m.logo.height}
+        decoding="async"
+        data-style="logo"
+        data-monochrome={m.logo.monochrome ? 'true' : undefined}
+        class="block h-12 w-auto max-w-[min(100%,12rem)] object-contain object-left"
+      />
+    )}
+    <h1 class="text-2xl">{m.name}</h1>
+  </div>
+  <p class="mt-1 text-muted">
+    {plural(m.devices.length, 'device')}, {plural(m.firmwareCount, 'firmware entry', 'firmware entries')}
+    {m.website && (<><span aria-hidden="true"> · </span><a href={m.website} rel="noopener">{hostOf(m.website)}</a></>)}
+  </p>
+  <h2 class="sr-only">Devices</h2>
+  <ul class="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    {m.devices.map((d) => <li><DeviceCard device={d} showManufacturer={false} /></li>)}
+  </ul>
+</Base>

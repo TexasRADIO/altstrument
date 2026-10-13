@@ -1,0 +1,32 @@
+name: 16n faderbank / 16nx
+manufacturer: 16n faderbank project
+category: controller
+tagline: Open 16-fader MIDI / CV / i2c controller (Teensy 16n, RP2040 16nx)
+platform: Teensy 3.2 (16n), RP2040 (16nx)
+stock_firmware: "16n 2.2.0 / 16next 3.1.1"
+links:
+  manufacturer: https://16n-faderbank.github.io/
+  community:
+    - label: 16n wiki and user guide
+      url: https://github.com/16n-faderbank/16n/wiki
+    - label: 16n web editor
+      url: https://16n-faderbank.github.io/editor
+    - label: llllllll.co (lines forum)
+      url: https://llllllll.co/
+notes: >-
+  16n is a monome-lineage open-hardware faderbank that sends USB and TRS MIDI,
+  CV and monome-style i2c to Teletype, ansible and similar modules. Firmware is
+  MIT and hardware is CC-BY-SA-4.0. The original Teensy 16n and the RP2040
+  16nx have separate firmware repositories and are configured with the
+  same browser editor.
+related: [monome-teletype, monome-ansible, bpcmusic-telex]
+image:
+  src: /images/devices/16n-faderbank.jpg
+  style: photo
+  alt: 16n faderbank controller, sixteen faders in a silver panel, seen from above at an angle
+  width: 1200
+  height: 900
+  credit: 16n faderbank project
+  license: project photo, published in the official 16n repository
+  source_url: https://github.com/16n-faderbank/16n
+  original_url: https://raw.githubusercontent.com/16n-faderbank/16n/main/faderbank.jpg

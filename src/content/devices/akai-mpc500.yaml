@@ -1,0 +1,27 @@
+name: MPC500
+manufacturer: Akai Professional
+category: sampler
+tagline: Compact MPC sampler and sequencer
+stock_firmware: "1.31"
+links:
+  community:
+    - label: Open500 site and installer
+      url: https://m45k.github.io/open500/
+notes: >-
+  Open500 only adds a small loader to the OS file you supply. The bootloader
+  is never touched, so flashing the original OS removes it.
+related:
+  - akai-mpc-live
+  - akai-mpc1000
+  - akai-mpc2000
+  - akai-force
+image:
+  src: /images/devices/akai-mpc500.webp
+  style: photo
+  alt: "Akai Professional MPC500, top view"
+  width: 845
+  height: 562
+  credit: Akai Professional
+  license: manufacturer product image
+  source_url: https://web.archive.org/web/20080318183915/http://www.akaipro.com:80/mpc500
+  original_url: https://web.archive.org/web/20081115232942im_/http://www.akaipro.com/stuff/contentmgr/files/0/c919083247fac26192ff3061a8bf65b6/large/mpc500_top_lg.png

@@ -1,0 +1,26 @@
+name: Braids
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Macro oscillator (discontinued)
+platform: STM32
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/braids/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
+  is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name.
+  Bees-in-the-Trees (Braids) and Dead Man's Catch (Peaks) live in the same
+  Mutated Mutables repository.
+related: [mutable-instruments-peaks]
+image:
+  src: /images/devices/mutable-instruments-braids.jpg
+  style: photo
+  alt: Front panel of the Mutable Instruments Braids Eurorack module
+  width: 752
+  height: 1200
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/braids/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/braids/images/front.jpg

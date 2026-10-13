@@ -1,0 +1,33 @@
+device: yamaha-dx9
+name: DX9/7
+summary: Replacement ROM for the DX9 that restores six-operator operation, the pitch envelope, DX7-style operator scaling and MIDI velocity sensitivity, making the synth patch-compatible with the DX7.
+description: >-
+  Not a patch but a new ROM assembled from the original DX9 binary, code from
+  the DX7 V1.8 ROM and new code. Described by the author as thoroughly tested
+  and ready for everyday use. A known issue is slower real-time control than a
+  DX7 because of the pitch EG processing on the DX9's slower CPU. Newer versions
+  store patches at a fixed location in external RAM, so upgrades should not
+  corrupt patch memory, but the original published version did not.
+status: dormant
+authors:
+  - name: ajxs
+    url: https://github.com/ajxs
+source: https://github.com/ajxs/yamaha_dx97
+source_status: open
+license: GPL-3.0-or-later
+distribution: download
+install_notes: >-
+  Burn the ROM to an EPROM and fit it in place of the DX9's mask ROM. Back up
+  patches, and hold FUNCTION while powering on after installing to initialise
+  parameter memory. The author will help people who cannot burn an EPROM.
+tags: [fm, synth-engine, velocity, midi]
+versions:
+  - version: v1.0.2
+    date: 2024-06-20
+    url: https://github.com/ajxs/yamaha_dx97/releases/tag/v1.0.2
+  - version: v1.0.1
+    date: 2024-06-12
+    url: https://github.com/ajxs/yamaha_dx97/releases/tag/v1.0.1
+  - version: v1.0.0
+    date: 2024-01-29
+    url: https://github.com/ajxs/yamaha_dx97/releases/tag/v1.0.0

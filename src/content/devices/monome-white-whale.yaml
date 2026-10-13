@@ -1,0 +1,18 @@
+name: white whale
+manufacturer: monome
+category: eurorack
+tagline: Probabilistic grid step sequencer (discontinued)
+platform: AVR32 (AT32UC3B)
+stock_firmware: "1.6.0"
+links:
+  manufacturer: https://monome.org/docs/whitewhale/
+  community:
+    - label: llllllll.co (lines forum)
+      url: https://llllllll.co/
+    - label: monome modular firmware update guide
+      url: https://monome.org/docs/modular/update/
+notes: >-
+  White whale is a legacy monome module. Its firmware is open and it is a
+  target of the multipass alternative-firmware framework; Kria and Orca are the
+  well-known alternative firmwares. Back up before flashing; an update replaces the whole image.
+related: [monome-meadowphysics, monome-earthsea, monome-ansible, monome-teletype, monome-tools]

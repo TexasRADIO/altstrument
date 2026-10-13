@@ -1,0 +1,27 @@
+device: novation-launchpad
+name: Launchpad Firmware Utility
+kind: tool
+summary: Browser WebMIDI tool that updates Launchpad firmware and applies patches to stock images, including custom colour palettes and the Apollo Studio Fast LED mod. It also installs the Launchpad Pro CFW.
+description: >-
+  Runs at fw.mat1jaczyyy.com. Features per the README are custom palettes, the
+  Apollo Studio Fast LED mod and installing the latest custom firmware on the
+  Launchpad Pro. A hidden mode allows flashing custom SysEx files. The
+  repository includes a ghidra directory and an x-fast-led-hack directory. It patches
+  stock images and does not replace the operating system on MK3-era units.
+status: active
+authors:
+  - name: mat1jaczyyy
+    url: https://github.com/mat1jaczyyy
+source: https://github.com/mat1jaczyyy/LP-Firmware-Utility
+source_status: open
+license: unspecified
+license_notes: No license file in the repository.
+homepage: https://fw.mat1jaczyyy.com/
+distribution: browser-installer
+install_notes: Needs a browser with WebMIDI support and a connected Launchpad.
+tags: [flasher, palette, editor, midi]
+versions:
+  - version: master @ 9eaf70d
+    date: 2026-03-16
+    url: https://github.com/mat1jaczyyy/LP-Firmware-Utility/commit/9eaf70d
+    notes: No tagged releases; this is the latest commit.

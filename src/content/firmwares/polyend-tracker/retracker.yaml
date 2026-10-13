@@ -1,0 +1,30 @@
+device: polyend-tracker
+name: RETracker
+kind: tool
+summary: Python reverse-engineering framework that patches Tracker firmware 1.5.0 to add a USB RAWHID handler for memory dumps, memory writes, running code and SD card file transfer.
+description: >-
+  Applies unofficial patches to the stock .ptf firmware, replacing the
+  Tracker's existing but unused USB RAWHID handler. The author built it after
+  Polyend removed the official file transfer feature in firmware 1.4.0. File
+  transfer goes from host to the SD card only. Includes demos of position
+  independent code that can be sent to and run on the device. Last pushed
+  2024-06-19, and the stock firmware has moved on since 1.5.0.
+status: dormant
+authors:
+  - name: patois
+    url: https://github.com/patois
+source: https://github.com/patois/RETracker
+source_status: open
+license: unspecified
+license_notes: No license file in the repository.
+distribution: patch-your-own
+requires_stock: "1.5.0"
+install_notes: >-
+  Run fwtool.py -b on your own PolyendTracker_1.5.0.ptf, then copy the result
+  to the /firmware/ folder on the SD card. See DEPENDENCIES.md for the Python
+  requirements.
+tags: [research, loader]
+versions:
+  - version: master (last push 2024-06-19)
+    date: 2024-06-19
+    url: https://github.com/patois/RETracker

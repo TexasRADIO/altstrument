@@ -1,0 +1,35 @@
+device: korg-volca-fm
+name: Pajen unofficial firmware
+summary: Unofficial volca fm firmware that adds MIDI note velocity, Yamaha-compatible SysEx for editing from Dexed, chorus control CCs, patch and pattern load CCs and LFO fixes.
+description: >-
+  Version 1.08 added velocity on incoming MIDI notes, a switch between Yamaha
+  compatibility and Korg single-patch SysEx, CCs for chorus on/off, width and
+  speed, patch and pattern loading by CC, a mod wheel mapping, and fixes to
+  the LFO sample-and-hold scale, waveform sign and a digital pop. Version 1.09
+  adds tweaking patches from a DX7-compatible editor such as Dexed and
+  automating patch parameters from a sequencer. Two files, sys_1 and sys_2,
+  are needed. The original download was taken down and ranzee.com hosts a
+  mirror. Applies to the original volca fm only. Community reports say it
+  needs more than 100 mA, so use a supply with headroom.
+status: dormant
+authors:
+  - name: Pajen
+source_status: closed
+license: unspecified
+license_notes: No license statement on the announcement or the mirror. Binary WAV files only.
+homepage: https://www.reddit.com/r/volcas/comments/dj7f7v/volca_fm_firmware_108_unofficial_velocity_on_note/
+distribution: download
+install_notes: >-
+  Played into the volca fm as audio like Korg's updates. Both sys_1 and sys_2
+  files are needed. The new features can be switched off in the global menu.
+tags: [velocity, midi, lfo, fx, bugfixes]
+versions:
+  - version: "1.09"
+    date: 2020-02-18
+    url: https://ranzee.com/volca-fm-firmware-1-09-unofficial/
+  - version: 1.09RC2
+    url: https://ranzee.com/volca-fm-firmware-1-09-unofficial/
+    notes: Release-candidate files; the mirror page says to check this first.
+  - version: "1.08"
+    date: 2019-10-19
+    url: https://ranzee.com/korg-volca-fm-firmware-1-08-unofficial-update/

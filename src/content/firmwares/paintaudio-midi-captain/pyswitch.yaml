@@ -1,0 +1,37 @@
+device: paintaudio-midi-captain
+name: PySwitch
+summary: Full replacement firmware for PaintAudio MIDI Captain controllers, built for Kemper Profilers and the Boomerang III looper. Bidirectional state sync, expression pedals, MIDI routing over USB and DIN, and a web-based configurator with an emulator.
+description: >-
+  Written in CircuitPython by Thomas Weber (Tunetown) and developed generically
+  so other devices can be supported by adding adapter classes. Configuration is
+  by Python scripts or graphically in the PySwitch Emulator, which can also
+  control a real Kemper from the browser and save to a connected controller over
+  Web MIDI. Switches and pedals can run any number of actions. Builds on the
+  hardware reverse engineering by gstrotmann (see MidiCaptain4Kemper). Latest
+  release adds a tuner display element and a Line 6 HX Stomp example. Can run
+  next to the original PaintAudio firmware (multi-boot).
+status: active
+authors:
+  - name: Thomas Weber (Tunetown)
+    url: https://github.com/Tunetown
+source: https://github.com/Tunetown/PySwitch
+source_status: open
+license: GPL-3.0-or-later
+license_notes: Applies to all code except the bundled Adafruit libraries and fonts, which keep their own licenses.
+homepage: https://pyswitch.tunetown.de/
+distribution: download
+install_notes: >-
+  Mount the controller as a USB drive, back up its contents, copy the project's
+  content folder to the drive, unmount, reboot, then configure with the web
+  emulator.
+tags: [controller-mode, midi, ui, looper, editor]
+versions:
+  - version: 2.4.9
+    date: 2026-07-07
+    url: https://github.com/Tunetown/PySwitch/releases/tag/2.4.9
+  - version: 2.4.8
+    date: 2025-09-04
+    url: https://github.com/Tunetown/PySwitch/releases/tag/2.4.8
+  - version: 2.4.7
+    date: 2025-07-16
+    url: https://github.com/Tunetown/PySwitch/releases/tag/2.4.7

@@ -1,0 +1,20 @@
+device: teenage-engineering-op-1
+name: op1-glitter
+kind: tool
+summary: Python script that applies a JSON colour theme to an official OP-1 firmware file, producing a themed .op1 update. Uses op1repacker.
+status: maintained
+authors:
+  - name: Nanobot567
+    url: https://github.com/Nanobot567
+source: https://github.com/Nanobot567/op1-glitter
+source_status: open
+license: unspecified
+license_notes: No license file in the repository.
+distribution: patch-your-own
+install_notes: Requires Python 3.10+ and op1repacker. Back up the OP-1 first, then update through te-boot (hold COM while powering on).
+tags: [palette, ui, editor]
+versions:
+  - version: main @ 816901e
+    date: 2025-04-04
+    url: https://github.com/Nanobot567/op1-glitter/commit/816901e
+    notes: No tagged releases; this is the latest commit.

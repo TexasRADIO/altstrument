@@ -1,0 +1,30 @@
+device: meloaudio-midi-commander
+name: midi-commander-custom
+summary: Open firmware for the MeloAudio MIDI Commander configured from a spreadsheet. Sends program change with bank select, CC (momentary, toggle or timed), notes and pitch bend, across 8 banks of 8 buttons with up to 10 chained commands each.
+description: >-
+  Configuration is made in a Google Sheets template, exported as CSV and loaded
+  to the unit over USB by a Python script. It supports start/stop messages,
+  per-command MIDI channels, bank name strings and pass-through of sync/start/
+  stop from USB to the DIN output. The author describes the builds as dev
+  versions with likely bugs. Expression pedal inputs and battery management were
+  listed as still to come. The author stopped maintaining it; the README points
+  to forks that have added features and fixed bugs. The repository is archived
+  on GitHub; the last functional change noted in the README is 24 April 2022,
+  when the display driver moved to DMA.
+status: archived
+authors:
+  - name: harvie256
+    url: https://github.com/harvie256
+  - name: eliericha
+    url: https://github.com/eliericha
+source: https://github.com/harvie256/midi-commander-custom
+source_status: open
+license: MIT
+distribution: download
+install_notes: Load the generated .dfu file with the DFU update tool, as for the official firmware, then load a configuration from the spreadsheet with the Python tool.
+tags: [midi, controller-mode, editor]
+versions:
+  - version: DFU build (24 Apr 2022)
+    date: 2022-04-24
+    url: https://github.com/harvie256/midi-commander-custom
+    notes: Latest change described in the README; the repository was later archived with a no-maintenance notice.

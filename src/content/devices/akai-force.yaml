@@ -1,0 +1,29 @@
+name: Force
+manufacturer: Akai Professional
+category: groovebox
+tagline: Standalone clip-launching production instrument
+platform: Embedded Linux (shared base with the standalone MPCs)
+links:
+  manufacturer: https://www.akaipro.com/force/
+  community:
+    - label: MockbaMod Discord
+      url: https://discord.gg/HvNBpArSSa
+    - label: MPC-LiveXplore wiki
+      url: https://github.com/TheKikGen/MPC-LiveXplore/wiki
+notes: >-
+  Mods here keep Akai's factory application. MockbaMod loads extras from an SD
+  card, and with no card inserted the unit runs stock. IamForce2 from the
+  MPC-LiveXplore project goes the other way and runs Force software on MPC
+  hardware.
+related:
+  - akai-mpc-live
+image:
+  src: /images/devices/akai-force.jpg
+  style: photo
+  alt: "Akai Professional Force, top view"
+  width: 1200
+  height: 675
+  credit: Akai Professional
+  license: manufacturer product image
+  source_url: https://www.akaipro.com/force/
+  original_url: https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Ff5a82cad890e4f3bb5e4d30ef3aa0005

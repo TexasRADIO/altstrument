@@ -1,0 +1,33 @@
+device: attowatt-i2c2midi
+name: i2c2midi firmware
+summary: >-
+  Firmware for the DIY i2c2midi Teletype expander: adds MIDI notes, CC, chords, a looping buffer and MIDI input to Teletype through I2M ops, over TRS and USB host, with 8-voice polyphony per channel.
+description: >-
+  The release notes say v5.0.4 is a bugfix release for both the MKI and MKII
+  hardware and works with official Teletype firmware 5.0.0 and later. The
+  firmware is an Arduino sketch compiled with Teensyduino; defines select
+  MKI (Teensy 3.2) or MKII (Teensy 3.6 or 4.1). The README also credits a crow
+  library by mreid. Hardware files and a build guide are in the same repository.
+status: active
+authors:
+  - name: attowatt
+    url: https://github.com/attowatt
+source: https://github.com/attowatt/i2c2midi
+source_status: open
+license: unspecified
+license_notes: No LICENSE file; the README does not state a license.
+homepage: https://github.com/attowatt/i2c2midi
+distribution: download
+requires_stock: i2c2midi MKI or MKII module; Teletype 5.0.0 or later
+install_notes: Open firmware/i2c2midi_firmware/i2c2midi_firmware.ino in Teensyduino, set the hardware defines and upload; do not connect Euro power and USB at the same time.
+tags: [midi, usb-midi, i2c]
+versions:
+  - version: v5.0.4
+    date: 2025-08-19
+    url: https://github.com/attowatt/i2c2midi/releases/tag/v5.0.4
+  - version: v5.0.3
+    date: 2025-07-07
+    url: https://github.com/attowatt/i2c2midi/releases/tag/v5.0.3
+  - version: v5.0.2
+    date: 2025-01-02
+    url: https://github.com/attowatt/i2c2midi/releases/tag/v5.0.2

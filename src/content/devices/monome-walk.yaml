@@ -1,0 +1,15 @@
+name: walk
+manufacturer: monome
+category: eurorack
+tagline: Two-footswitch gate and logic module (legacy)
+platform: ATtiny24
+links:
+  manufacturer: https://monome.org/docs/walk/
+  community:
+    - label: llllllll.co (lines forum)
+      url: https://llllllll.co/
+notes: >-
+  Walk is in monome's legacy docs section, built for use with Teletype and
+  White Whale. Its source in monome/walk has no tagged releases and has not
+  changed since 2016, so there is no prebuilt download there.
+related: [monome-white-whale, monome-teletype]

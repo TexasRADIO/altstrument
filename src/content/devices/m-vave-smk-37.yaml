@@ -1,0 +1,36 @@
+name: SMK-37 Pro / Elite
+manufacturer: M-VAVE
+category: synth
+tagline: 37-key keyboard with built-in FM synth, 16 RGB pads, 8 encoders, 4 faders
+platform: JieLi AC791N (WL82), same SoC family as the FM-1
+links:
+  manufacturer: https://www.cuvave.com/product?id=smk-37-elite
+  community:
+  - label: genkigenki SMK-37 firmware installer
+    url: https://genkigenki.github.io/smk37/
+  - label: fm1-to-smk37 porting kit
+    url: https://github.com/genkigenki/fm1-to-smk37
+  - label: aroum/fm1-custom-fw (FM-1 hub)
+    url: https://github.com/aroum/fm1-custom-fw
+  - label: probonopd SMK-37 PRO reverse-engineering notes
+    url: https://gist.github.com/probonopd/18b3ed65a69d0229eb630c47d7e316dc
+notes: >-
+  Shares the JieLi AC791N (WL82) chip, second-stage bootloader, update loader and chip key with the FM-1;
+  only the panel wiring and flash map differ, so Felucca-family FM-1 firmware can be ported by replacing
+  the board layer. Ports and mods are unofficial and install at your own risk. The fm1-to-smk37 flash-safety
+  guide warns that the unit holds per-device data in SPI flash (factory key and pad calibration at 0xC1000,
+  Bluetooth pairing data at 0xC0000, chip key and MAC at 0xFF000) that must never be overwritten. Baud
+  Girl's SMK-37+VA also lists the Donner Starrykey-37 Play and EROK MKE-P37 as supported. The FM-1 recovery
+  caveats (single-bank flash, no established recovery path per AL-255/FM-1-RE) should be assumed to apply
+  here too.
+related: [m-vave-fm-1, m-vave-chocolate]
+image:
+  src: /images/devices/m-vave-smk-37.webp
+  style: photo
+  alt: "M-VAVE SMK-37 Pro MIDI keyboard, top view"
+  width: 957
+  height: 393
+  credit: M-VAVE
+  license: manufacturer product image
+  source_url: https://www.m-vave.com/product.html?id=smk-37-pro
+  original_url: https://www.m-vave.com/images/products/smk-37-pro-nobg.webp

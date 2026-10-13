@@ -1,0 +1,27 @@
+name: Funbox
+manufacturer: GuitarML
+category: pedal
+tagline: Stereo DIY guitar pedal platform for the Daisy Seed
+platform: Electrosmith Daisy Seed
+links:
+  manufacturer: https://github.com/GuitarML/FunBox
+  community:
+    - label: Funbox build guide
+      url: https://medium.com/@keyth72/funbox-build-guide-afbd8046121e
+related: [cleveland-hothouse, pedalpcb-terrarium]
+notes: >-
+  Open hardware with KiCad design files in the repository (125B enclosure, about
+  $120 to $150 to build per the README). Programs are loaded with the Electrosmith
+  web programmer or a make target; some modules (Mars, Neptune) use SRAM and
+  need the Daisy bootloader. Funbox effects have been ported to the Cleveland
+  Hothouse.
+image:
+  src: /images/devices/guitarml-funbox.jpg
+  style: photo
+  alt: Assembled GuitarML Funbox v3 pedal with six knobs, three toggle switches and two footswitches
+  width: 480
+  height: 640
+  credit: GuitarML / Keith Bloemer
+  license: manufacturer product image
+  source_url: https://github.com/GuitarML/FunBox
+  original_url: https://github.com/GuitarML/Funbox/raw/main/hardware/images/funbox_v3_front.jpg

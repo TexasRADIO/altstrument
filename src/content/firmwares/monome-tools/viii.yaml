@@ -1,0 +1,22 @@
+device: monome-tools
+name: viii
+kind: tool
+summary: >-
+  Virtual iii that runs in the browser: the iii Lua VM, file system and scripts run locally, talking to any mext-protocol grid or arc over Web Serial and sending MIDI through WebMIDI.
+description: >-
+  Intended for grids and arcs that cannot run the iii firmware natively, such
+  as older FTDI-based editions and DIY grids. No hardware is needed to run
+  scripts. Windows needs the FTDI virtual COM port driver for FTDI-based
+  devices.
+status: active
+authors:
+  - name: Dune Desormeaux
+    url: https://github.com/dessertplanet
+source: https://github.com/dessertplanet/viii
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE is GPLv3; no "or later" grant found in project files.
+homepage: https://dessertplanet.github.io/viii/
+distribution: browser-installer
+install_notes: Quit serialosc, open the page in a browser with WebSerial and WebMIDI, click connect and select the grid or arc.
+tags: [emulator, scripting, grid]

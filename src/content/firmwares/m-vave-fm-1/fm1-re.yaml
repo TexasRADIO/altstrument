@@ -1,0 +1,26 @@
+device: m-vave-fm-1
+name: FM-1-RE
+kind: tool
+summary: >-
+  Reverse-engineering repository for the FM-1: architecture, boot chain, OTA protocol analysis, decompiled
+  M-UPGRADE, Ghidra setup and a Linux USB-MIDI OTA client (fm1_ota.py).
+description: >-
+  Finds the stock firmware's synth engine is derived from Dexed/msfa. Its safety status states that the
+  update protocol is not a demonstrated recovery mechanism and that ROM recovery, rollback and safe interrupted-write
+  behaviour for the single-bank layout are not established; read TODO_aug2.md before using any flash utility.
+  The earlier experimental custom firmware is kept on the with-custom-firmware branch.
+status: active
+authors:
+- name: AL-255
+  url: https://github.com/AL-255
+source: https://github.com/AL-255/FM-1-RE
+source_status: open
+license: WTFPL
+distribution: source-only
+brick_risk: true
+tags: [research, flasher]
+versions:
+- version: main
+  date: 2026-09-08
+  url: https://github.com/AL-255/FM-1-RE
+  notes: No tagged releases; date is the last commit.

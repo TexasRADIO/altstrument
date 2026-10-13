@@ -1,0 +1,24 @@
+device: m-vave-fm-1
+name: PurpleMonkey FM-1
+summary: >-
+  Toddler instrument: any key plays a pentatonic FM note or a drum over a backing beat, with four animated
+  animal friends on screen and no menus.
+status: active
+authors:
+- name: Quixotic7
+  url: https://github.com/Quixotic7
+source: https://github.com/Quixotic7/PurpleMonkeyFM1
+source_status: open
+license: GPL-3.0-only
+homepage: https://quixotic7.github.io/PurpleMonkeyFM1/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer; update mode is OCT- + OCT+ + HOME held 5 s. Read docs/PURPLEMONKEY.md (Install,
+  rollback) first. Browser emulator at /emu/.
+brick_risk: true
+tags: [performance, synth-engine, fm]
+versions:
+- version: '0.11'
+  date: 2026-10-10
+  url: https://github.com/Quixotic7/PurpleMonkeyFM1/releases/tag/v0.11
+  notes: Marked pre-release; first public beta.

@@ -1,0 +1,23 @@
+device: elektron-octatrack
+name: PassOS
+summary: Octatrack MK1 mod with 36 Digitone II scales across twelve roots on MIDI tracks and a STOP guard, on top of stock OS 1.40C. Nothing is placed on the DSP, so stock FX are untouched.
+description: >-
+  MIDI NOTE SETUP's two empty cells become SCL and ROT, using the Digitone II's
+  thirty-six scales in Appendix E order. Built on octabam, whose README is kept
+  alongside. The project states that no built image is ever distributed.
+status: active
+authors:
+  - name: theremoteviewer
+    url: https://github.com/theremoteviewer
+source: https://github.com/theremoteviewer/octa-passos
+source_status: open
+license: MIT
+license_notes: Same MIT terms as octabam (Sam Banks); portions of the analysis tooling come from OCTAMAX, also MIT.
+distribution: patch-your-own
+requires_stock: 1.40C
+install_notes: Build from your own OS 1.40C using octabam's toolchain; PassOS 1.0 runs on the author's hardware.
+tags: [scales, midi, sequencer, performance]
+versions:
+  - version: v1.0
+    date: 2026-09-28
+    url: https://github.com/theremoteviewer/octa-passos/releases/tag/v1.0

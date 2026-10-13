@@ -1,0 +1,38 @@
+device: synthstrom-deluge
+name: Deluge Community Firmware
+summary: Community-developed Deluge firmware, hosted by Synthstrom Audible. Adds a DX7-style FM engine, compressor, audio export, velocity view, chord keyboards, custom scales and many UI and sequencer changes.
+description: >-
+  Synthstrom Audible open-sourced the Deluge firmware and this repository is
+  where development continues. Stable releases are named after composers; the
+  latest is 1.2.1 (Chopin). Version 1.2.0 added DX7 emulation, a compressor
+  blend control, multi-track audio export, velocity automation and a velocity
+  view, chord keyboard layouts, custom scales and tempo automation in arranger
+  view. Nightly beta builds are published on the repository's beta release
+  page (the build dated 2026-10-13 was current when this entry was written);
+  they may contain bugs.
+status: active
+authors:
+  - name: Synthstrom Audible community contributors
+    url: https://github.com/SynthstromAudible
+source: https://github.com/SynthstromAudible/DelugeFirmware
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  LICENSE file is GPL version 3; source file headers grant version 3 or any
+  later version.
+homepage: https://delugecommunity.com/
+distribution: download
+install_notes: >-
+  Follow the update guide. Back up the SD card before updating.
+tags: [fx, sequencer, synth-engine, fm, ui, chords, scales, velocity]
+versions:
+  - version: 1.2.1 (Chopin)
+    date: 2025-05-12
+    url: https://github.com/SynthstromAudible/DelugeFirmware/releases/tag/release_1_2_1
+    notes: Bugfix release on 1.2.0; fixes audio clicks when recording and when scrolling or zooming in song row view.
+  - version: 1.2.0 (Chopin)
+    date: 2024-12-26
+    url: https://github.com/SynthstromAudible/DelugeFirmware/releases/tag/v1.2.0
+  - version: 1.1.1 (Beethoven)
+    date: 2024-08-27
+    url: https://github.com/SynthstromAudible/DelugeFirmware/releases/tag/release_1_1_1

@@ -1,0 +1,36 @@
+device: monome-grid
+name: iii (grid)
+summary: monome's firmware that turns 2022-and-later grids into standalone Lua-scripted instruments with a USB-MIDI and serial REPL, a small on-device file system and startup scripts; it can switch back to serial mode.
+description: >-
+  Scripts are written in Lua and stored on the device, and a grid in iii mode
+  appears as USB-MIDI and USB-TTY. Installation is a UF2 copy in bootloader
+  mode (hold the pushbutton near the USB port while connecting); later updates
+  can be started from the diii browser tool. The 2020-2021 grids and older
+  FTDI-based grids are not supported and can use viii instead. The monome
+  docs mark the iii pages as preliminary ahead of 1.0.0.
+status: active
+authors:
+  - name: monome
+    url: https://monome.org
+  - name: tehn
+    url: https://codeberg.org/tehn
+source: https://codeberg.org/tehn/iii
+source_status: open
+license: GPL-3.0-only
+license_notes: Docs state GPLv3 and LICENSE.txt is GPLv3 text; no per-file "or later" grants found. The docs ask people not to clone monome designs for commercial purposes.
+homepage: https://monome.org/docs/iii/
+distribution: download
+requires_stock: 2022 grid, grid one, grid zero
+install_notes: Copy the UF2 for your grid edition (iii-grid-2022, iii-grid-one or iii-grid-zero) to the bootloader drive. If you ran a beta firmware, run fs_reformat() and restart.
+tags: [platform, scripting, usb-midi, grid]
+versions:
+  - version: v1.1.2
+    date: 2026-04-18
+    url: https://github.com/monome/iii/releases/tag/v1.1.2
+  - version: v1.1.1
+    date: 2026-03-24
+    url: https://github.com/monome/iii/releases/tag/v1.1.1
+  - version: v1.1.0
+    date: 2026-03-22
+    url: https://github.com/monome/iii/releases/tag/v1.1.0
+    notes: Adds an on-device file system.

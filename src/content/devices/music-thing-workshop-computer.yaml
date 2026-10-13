@@ -1,0 +1,33 @@
+name: Workshop System Computer
+manufacturer: Music Thing Modular
+category: eurorack
+tagline: RP2040 module whose firmware lives on swappable program cards
+platform: RP2040
+links:
+  manufacturer: https://www.musicthing.co.uk/workshopsystem/
+  community:
+    - label: Program card library
+      url: https://computer.musicthing.co.uk/
+    - label: Workshop_Computer repository
+      url: https://github.com/TomWhitwell/Workshop_Computer
+notes: >-
+  The Computer runs whatever program is on its card, so the card library is
+  the firmware scene. The repository's releases folder held 133 card folders
+  as of 2026-10-13; each carries its own info.yaml with a license field that
+  some cards leave blank. Starter code exists for Pico SDK, Arduino,
+  CircuitPython and MicroPython; Chris Johnson's ComputerCard header library
+  (MIT) is the most developed.
+  The per-card entries on this page are fetched at build time from each
+  card's info.yaml in the Workshop_Computer repository. Corrections to a card
+  entry belong upstream, not in this catalog. program-card-library is the
+  only hand-written entry here.
+image:
+  src: /images/devices/music-thing-workshop-computer.jpg
+  style: photo
+  alt: Music Thing Modular Workshop System in its case, seen from above, with the Workshop Computer module at the left of the panel
+  width: 1200
+  height: 900
+  credit: Music Thing Modular
+  license: manufacturer product image
+  source_url: https://www.musicthing.co.uk/workshopsystem/
+  original_url: https://musicthing.co.uk/images/MTM_Workshop-System-above.jpg

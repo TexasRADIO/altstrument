@@ -1,0 +1,21 @@
+device: monome-grid
+name: neotrellis-monome
+summary: Firmware sketches that make Adafruit NeoTrellis boards behave as a monome-compatible grid clone, with folders for RP2040, Teensy, Feather M4, NeoTrellis M4 and M0 boards.
+description: >-
+  This runs on the clone hardware you build yourself, not on a monome grid.
+  The README says current work centers on Raspberry Pi Pico (RP2040) boards;
+  older Teensy builds work with monome modules while RP2040 builds have
+  had problems with ansible and Teletype. The clone is plug and play with norns (from update 210607)
+  and Fates. The repository also contains an enclosure design.
+status: active
+authors:
+  - name: okyeron
+    url: https://github.com/okyeron
+source: https://github.com/okyeron/neotrellis-monome
+source_status: open
+license: unspecified
+license_notes: No LICENSE file in the repository.
+homepage: https://github.com/okyeron/neotrellis-monome
+distribution: source-only
+requires_stock: DIY NeoTrellis grid hardware
+tags: [grid]

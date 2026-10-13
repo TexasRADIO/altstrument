@@ -1,0 +1,31 @@
+name: Digitakt II
+manufacturer: Elektron
+category: sampler
+tagline: 16-track sampler
+platform: ColdFire + SHARC+ DSP (ADSP-21569)
+stock_firmware: "1.17"
+links:
+  manufacturer: https://www.elektron.se/explore/digitakt-ii
+  community:
+    - label: elektronmods.com
+      url: https://elektronmods.com/
+    - label: Modwerk
+      url: https://modwerk.app/
+notes: >-
+  Early days: OS 1.16 and 1.17 are targeted; nothing here is a polished
+  release yet. Research is split between a ColdFire control side and a SHARC+
+  audio side. elekloader support for 1.17 is experimental. Mods patch the stock
+  .syx you supply and leave the bootloader untouched. Elektron does not permit
+  sharing mod files or links on Elektronauts (policy of 2026-09-16); community
+  discussion moved to elektronmods.com and modwerk.app.
+related: [elektron-digitone-ii, elektron-digitakt, elektron-tools]
+image:
+  src: /images/devices/elektron-digitakt-ii.webp
+  style: photo
+  alt: "Elektron Digitakt II, top view"
+  width: 1200
+  height: 864
+  credit: Elektron
+  license: manufacturer press kit
+  source_url: https://www.elektron.se/press
+  original_url: https://www.elektron.se/wp-content/uploads/2026/09/Elektron-Press-Kit.zip

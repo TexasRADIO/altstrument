@@ -1,0 +1,12 @@
+name: Arturia
+website: https://www.arturia.com/
+logo:
+  src: /images/logos/arturia.png
+  alt: Arturia logo
+  width: 957
+  height: 178
+  credit: Arturia
+  license: public domain (text logo)
+  source_url: https://commons.wikimedia.org/wiki/File:ArturiaLogo.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/a/a5/ArturiaLogo.jpg
+  monochrome: true

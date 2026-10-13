@@ -1,0 +1,27 @@
+device: m-vave-fm-1
+name: GHOULBOX
+summary: >-
+  Dungeon-synth and dark-ambient groovebox on a Felucca 1.4.1 base: cathedral HALL reverb, worn-cassette
+  TAPE effect, a hurdy-gurdy engine with buzzing trompette, drone latching, historical temperaments and
+  dozens of dungeon sounds.
+status: active
+authors:
+- name: Jason Persinger
+  url: https://github.com/jasonpersinger
+source: https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth
+source_status: open
+license: GPL-3.0-only
+homepage: https://ghoulbox.messy.quest/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer (ghoulbox.messy.quest/webapp/installer/) that saves a full backup first. Browser
+  emulator on the same site. An SMK-37 build exists in the genkigenki fork of Felucca.
+brick_risk: true
+tags: [synth-engine, fx, performance, sequencer]
+versions:
+- version: '2.1'
+  date: 2026-10-12
+  url: https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth/releases/tag/ghoulbox-v2.1
+- version: '2.0'
+  date: 2026-10-12
+  url: https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth/releases/tag/ghoulbox-v2.0

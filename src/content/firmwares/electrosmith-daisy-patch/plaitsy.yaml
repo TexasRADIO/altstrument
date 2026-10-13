@@ -1,0 +1,28 @@
+device: electrosmith-daisy-patch
+name: Plaitsy
+summary: Port of Mutable Instruments Plaits to Daisy Patch, the first project in the Mutable Daisies series. Monophonic (low latency) and polyphonic (up to four voices) builds exist.
+description: >-
+  The repository plans further ports (Elements, Rings, Braids, Blades, Clouds,
+  Beads) with a shared UI and preset system; only Plaits had been released at
+  last check. Flashing needs the Daisy bootloader.
+status: active
+authors:
+  - name: Cyberduck (CyberDuck79)
+    url: https://github.com/CyberDuck79
+source: https://github.com/CyberDuck79/Mutables_Daisies
+source_status: open
+license: MIT
+license_notes: Per the repository README; covers Mutable Instruments code, libDaisy / DaisySP and the port code. No LICENSE file.
+homepage: https://community.daisy.audio/t/plaitsy-plaits-port-for-patch-mutable-daisies/8982
+distribution: download
+tags: [synth-engine, wavetable]
+versions:
+  - version: plaitsy_v1.4
+    date: 2026-02-02
+    url: https://github.com/CyberDuck79/Mutables_Daisies/releases/tag/plaitsy_v1.4
+  - version: plaitsy_v1.4m
+    date: 2026-02-02
+    url: https://github.com/CyberDuck79/Mutables_Daisies/releases/tag/plaitsy_v1.4m
+  - version: plaitsy_v1.3p
+    date: 2026-01-25
+    url: https://github.com/CyberDuck79/Mutables_Daisies/releases/tag/plaitsy_v1.3p

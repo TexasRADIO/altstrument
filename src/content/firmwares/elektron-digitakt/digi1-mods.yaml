@@ -1,0 +1,41 @@
+device: elektron-digitakt
+name: digi1_mods
+summary: Suite of Digitakt mk1 mods - Digi Mono synth machines and chords, Digi Macro (eight Plaits engines), Digi Matrix LFO routing, Digi Utilities scope/tuner, Digi EQ and Digi Poly - as elekloader mods for OS 1.53 and 1.54.
+description: >-
+  Formerly DT1_8_POLY_OSC. Digi Poly (2.0a) plays chords on any audio track by
+  borrowing other tracks' voices. Digi Mono (0.22) adds seven synth machines plus
+  CHORDS. Digi Macro (1.0) ports eight Plaits engines and needs Digi Mono; it
+  froze on an earlier build and the fix is not yet hardware-tested. Digi Matrix
+  (1.0c) routes any track's LFO to any parameter in 8 slots per pattern. Digi
+  Utilities (1.9a) adds waveform, spectrum and X-Y scope, tuner and track
+  activity. Digi EQ (1.0c) is a four-band master EQ on every output. digichain
+  (1.3) lets several machine mods share a build. Every mod needs elekloader's
+  core 2.1. The repo ships ready-built .elemod files, with no firmware.
+status: active
+authors:
+  - name: gdeo607
+    url: https://github.com/gdeo607
+source: https://github.com/gdeo607/digi1_mods
+source_status: open
+license: MIT
+license_notes: Applies to the original code and documentation only; the manufacturer's OS is not covered, and included mods by other authors keep their own licences.
+distribution: patch-your-own
+requires_stock: 1.53 / 1.54
+install_notes: >-
+  Tick the mods in elekloader and supply your own official OS file. Only the main
+  OS section is modified; bootloader stays official. RISKS.md calls the bricking
+  risk low but not zero and recommends keeping a DIN MIDI interface for recovery.
+tags: [machines, synth-engine, chords, polyphony, lfo, midi, fx, ui]
+versions:
+  - version: Digi Mono 0.22
+    url: https://github.com/gdeo607/digi1_mods/blob/main/CHANGELOG.md
+    notes: Hardware confirmed.
+  - version: Digi Macro 1.0
+    url: https://github.com/gdeo607/digi1_mods/blob/main/CHANGELOG.md
+    notes: Engine fix not yet tested on a unit.
+  - version: Digi Poly 2.0a
+    notes: Hardware confirmed.
+  - version: Digi Utilities 1.9a
+    notes: Hardware confirmed.
+  - version: Digi Matrix 1.0c
+    notes: Hardware confirmed. Digi EQ 1.0c is also hardware confirmed.

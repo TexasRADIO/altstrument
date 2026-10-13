@@ -1,0 +1,28 @@
+name: MetaModule
+manufacturer: 4ms Company
+category: eurorack
+tagline: Virtual modular host that runs ported VCV-style plugins in a module
+links:
+  manufacturer: https://metamodule.info
+  community:
+    - label: MetaModule firmware repository
+      url: https://github.com/4ms/metamodule
+    - label: Plugin SDK examples
+      url: https://github.com/4ms/metamodule-plugin-examples
+    - label: 4ms forum
+      url: https://forum.4ms.info/
+notes: >-
+  The firmware and plugin SDK are open, so the scene is mostly plugins: VCV
+  Rack modules recompiled with the SDK wrapper, plus native plugins. The
+  MetaModule name may not be used in derivative works; phrases such as
+  "for MetaModule" are allowed when promoting a plugin.
+image:
+  src: /images/devices/4ms-metamodule.jpg
+  style: photo
+  alt: Front panel of the 4ms Meta Module Eurorack module with its colour display showing a voice page
+  width: 900
+  height: 876
+  credit: 4ms Company
+  license: manufacturer product image
+  source_url: https://4mscompany.com/metamodule
+  original_url: https://4mscompany.com/MetaModule/meta_front141.jpg

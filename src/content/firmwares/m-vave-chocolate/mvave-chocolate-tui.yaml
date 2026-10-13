@@ -1,0 +1,24 @@
+device: m-vave-chocolate
+name: mvave-chocolate-tui
+kind: tool
+summary: >-
+  Linux terminal UI that writes Chocolate switch configuration with SysEx via amidi: 16-switch grid (4
+  banks of 4), mode switching, real-time MIDI monitor, auto-detection.
+description: >-
+  Needs Go and alsa-utils, with the Chocolate in USB (U) mode rather than HOST. Written so a Windows VM
+  or Wine is not needed to change footswitch assignments.
+status: active
+authors:
+- name: WilsonNet
+  url: https://github.com/WilsonNet
+source: https://github.com/WilsonNet/mvave-chocolate-tui
+source_status: open
+license: GPL-3.0-or-later
+distribution: source-only
+install_notes: go run . on Linux with alsa-utils installed.
+tags: [config-tool, midi]
+versions:
+- version: main
+  date: 2026-06-15
+  url: https://github.com/WilsonNet/mvave-chocolate-tui
+  notes: No tagged releases; date is the last commit.

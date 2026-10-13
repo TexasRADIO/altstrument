@@ -1,0 +1,30 @@
+device: elektron-tools
+name: elekloader
+kind: tool
+summary: Mod loader for Elektron firmware. Pick .elemod mods, supply your own stock OS file, and it builds a custom .syx locally, checks mods against each other and never touches the bootloader. Browser and desktop apps.
+description: >-
+  Supported: Digitakt mk1 1.53/1.54, Digitone mk1 and Keys 1.43/1.44, Octatrack
+  MKI/MKII 1.40C (whole builds; linkable mods boot on an MKII, not yet run on an
+  MKI). Digitakt II 1.17 is experimental. Mods can only change the main OS, and
+  each output is re-read and verified before being written, so the stock file
+  always recovers the device. The ecosystem of Digitakt and Digitone mods in this
+  catalog builds on it.
+status: active
+authors:
+  - name: irpina
+    url: https://github.com/irpina
+source: https://github.com/irpina/elekloader
+source_status: open
+license: GPL-2.0-or-later
+homepage: https://irpina.github.io/elekloader/
+distribution: browser-installer
+tags: [loader, flasher, sdk]
+versions:
+  - version: v0.4.0
+    date: 2026-10-02
+    url: https://github.com/irpina/elekloader/releases/tag/v0.4.0
+    notes: Latest stable release.
+  - version: kit v0.5.0
+    date: 2026-10-09
+    url: https://github.com/irpina/elekloader/releases/tag/kit-v0.5.0
+    notes: Pre-release.

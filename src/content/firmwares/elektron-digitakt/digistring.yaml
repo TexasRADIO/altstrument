@@ -1,0 +1,24 @@
+device: elektron-digitakt
+name: digistring
+summary: STRING, a Karplus-Strong plucked string SRC machine for the Digitakt mk1, running through the normal AMP, filter, mixer and FX path.
+description: Works with Digimono and digislicer. Ships as an elekloader mod for OS 1.53 and 1.54.
+status: active
+authors:
+  - name: Alez22
+    url: https://github.com/Alez22
+source: https://github.com/Alez22/digistring
+source_status: open
+license: MIT
+distribution: patch-your-own
+requires_stock: 1.53 / 1.54
+install_notes: Add the mod in elekloader with your own official OS file.
+tags: [machines, synth-engine, physical-modeling]
+versions:
+  - version: v0.8.0
+    date: 2026-10-05
+    url: https://github.com/Alez22/digistring/releases/tag/v0.8.0
+    notes: Adds OS 1.54 support.
+  - version: v0.7.0
+    date: 2026-10-03
+    url: https://github.com/Alez22/digistring/releases/tag/v0.7.0
+    notes: Adds STRING-fast.

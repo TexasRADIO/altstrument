@@ -1,0 +1,405 @@
+@import "tailwindcss";
+
+/* ---------- Color tokens ---------- */
+:root {
+  color-scheme: light;
+
+  --bg: #f8f8f4;
+  --surface: #ffffff;
+  --surface-2: #efefe9;
+  --line: #d6d6cc;
+  --line-strong: #a9a99d;
+  --fg: #1a1a17;
+  --muted: #55554d;
+  --accent: #0a6262;
+  --accent-hover: #063f3f;
+  --focus: #0b5fd0;
+
+  --green-fg: #14532d;  --green-bg: #e2f3e5;  --green-bd: #a3d4ad;
+  --blue-fg: #1e3a8a;   --blue-bg: #e3ebfb;   --blue-bd: #aebfee;
+  --amber-fg: #6f3a00;  --amber-bg: #faedd0;  --amber-bd: #e0be76;
+  --red-fg: #86191a;    --red-bg: #fbe4e1;    --red-bd: #e3a39d;
+  --gray-fg: #44443e;   --gray-bg: #ebebe4;   --gray-bd: #c9c9bf;
+  --violet-fg: #482880; --violet-bg: #eee7fa; --violet-bd: #c8b4ec;
+}
+
+/*
+ * Dark palette. CSS cannot share one block between a media query and an
+ * attribute selector, so the tokens appear twice: keep both copies identical.
+ *   1. Follow the system unless the user forced light (data-theme="light").
+ *   2. Forced dark (data-theme="dark"), regardless of the system setting.
+ * data-theme is set before first paint by the inline script in Base.astro.
+ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --bg: #111312;
+    --surface: #191c1b;
+    --surface-2: #222625;
+    --line: #353b39;
+    --line-strong: #5a625f;
+    --fg: #e7e8e3;
+    --muted: #a3a79f;
+    --accent: #66d3c6;
+    --accent-hover: #9be8de;
+    --focus: #8ab8ff;
+
+    --green-fg: #8fe3a4;  --green-bg: #12301b;  --green-bd: #28593b;
+    --blue-fg: #a9c6ff;   --blue-bg: #14233f;   --blue-bd: #2e4c84;
+    --amber-fg: #f3c870;  --amber-bg: #35260a;  --amber-bd: #6d5116;
+    --red-fg: #ffaba3;    --red-bg: #3a1514;    --red-bd: #7c2f2b;
+    --gray-fg: #c4c7c0;   --gray-bg: #262a29;   --gray-bd: #454c49;
+    --violet-fg: #d0b9ff; --violet-bg: #2a1f45;  --violet-bd: #56428c;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #111312;
+  --surface: #191c1b;
+  --surface-2: #222625;
+  --line: #353b39;
+  --line-strong: #5a625f;
+  --fg: #e7e8e3;
+  --muted: #a3a79f;
+  --accent: #66d3c6;
+  --accent-hover: #9be8de;
+  --focus: #8ab8ff;
+
+  --green-fg: #8fe3a4;  --green-bg: #12301b;  --green-bd: #28593b;
+  --blue-fg: #a9c6ff;   --blue-bg: #14233f;   --blue-bd: #2e4c84;
+  --amber-fg: #f3c870;  --amber-bg: #35260a;  --amber-bd: #6d5116;
+  --red-fg: #ffaba3;    --red-bg: #3a1514;    --red-bd: #7c2f2b;
+  --gray-fg: #c4c7c0;   --gray-bg: #262a29;   --gray-bd: #454c49;
+  --violet-fg: #d0b9ff; --violet-bg: #2a1f45;  --violet-bd: #56428c;
+}
+
+/*
+ * Line-art images are black strokes on transparent; invert them in dark mode so
+ * the strokes turn light. Photos are never inverted. Same two selectors as the
+ * tokens above (system dark unless forced light; forced dark).
+ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) img[data-style="line-art"] {
+    filter: invert(1);
+    opacity: 0.92;
+  }
+}
+:root[data-theme="dark"] img[data-style="line-art"] {
+  filter: invert(1);
+  opacity: 0.92;
+}
+
+/*
+ * Manufacturer logos (fallback visual) are dark single-colour wordmarks when
+ * data-monochrome="true"; invert those in dark mode, same two selectors as above.
+ * Full-colour logos are left alone.
+ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) img[data-style="logo"][data-monochrome="true"] {
+    filter: invert(1);
+  }
+}
+:root[data-theme="dark"] img[data-style="logo"][data-monochrome="true"] {
+  filter: invert(1);
+}
+
+/* Map tokens to Tailwind utilities (bg-surface, text-muted, border-line, ...). */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-red-fg: var(--red-fg);
+  --color-red-bg: var(--red-bg);
+  --color-red-bd: var(--red-bd);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+@layer base {
+  html {
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 1rem;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    overflow-wrap: break-word;
+  }
+  a {
+    color: var(--accent);
+    text-underline-offset: 0.18em;
+  }
+  a:hover {
+    color: var(--accent-hover);
+  }
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  code,
+  kbd {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+  }
+  h1,
+  h2,
+  h3 {
+    line-height: 1.25;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  /* Theme toggle: shows the icon for the theme a click switches to (sun while
+     dark, moon while light); data-mode on the button is the current theme. */
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: -0.375rem -0.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.375rem;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .theme-toggle:hover {
+    color: var(--fg);
+    background: var(--surface-2);
+    border-color: var(--line);
+  }
+  .theme-toggle svg {
+    display: none;
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+  .theme-toggle[data-mode="dark"] .i-sun,
+  .theme-toggle[data-mode="light"] .i-moon {
+    display: block;
+  }
+
+  /* Device photos: fixed-aspect thumbnail box shared by the image and its placeholder. */
+  .thumb {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--surface-2);
+    color: var(--muted);
+  }
+  /* Show the whole product rather than a crop; the box background letterboxes odd aspect ratios. */
+  .thumb img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 4%;
+    box-sizing: border-box;
+  }
+  /* Line art is pre-padded, so show it whole on the card's own surface. */
+  .thumb[data-style="line-art"] {
+    background: var(--surface);
+  }
+  .thumb img[data-style="line-art"] {
+    object-fit: contain;
+  }
+  /* Manufacturer logo as the fallback visual: centered, muted, on the placeholder surface. */
+  .thumb[data-style="logo"] {
+    background: var(--surface);
+  }
+  .thumb img[data-style="logo"] {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 55%;
+    height: 40%;
+    padding: 0;
+    object-fit: contain;
+    opacity: 0.75;
+  }
+  .thumb-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    padding: 0.5rem;
+    text-align: center;
+    background: var(--surface); /* same surface as line-art thumbs */
+  }
+  /* No image and no logo: the manufacturer name set as a plain wordmark, then the category. */
+  .thumb-wordmark {
+    display: block;
+    max-width: 80%;
+    font-size: clamp(1rem, 2.6vw, 1.6rem);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.15;
+    text-align: center;
+    overflow-wrap: anywhere;
+    color: var(--fg);
+    opacity: 0.8;
+  }
+  .thumb-initial {
+    font-size: 1.75rem;
+    line-height: 1;
+    font-weight: 200; /* thin, to echo the line-art style */
+    color: var(--line-strong);
+  }
+  .thumb-label {
+    font-size: 0.6875rem;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  @media (min-width: 40rem) {
+    .thumb-initial { font-size: 2.25rem; }
+    .thumb-label { font-size: 0.75rem; }
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+  }
+
+  .prose-plain p {
+    max-width: 68ch;
+    white-space: pre-line;
+  }
+  .prose-plain p + p {
+    margin-top: 0.7em;
+  }
+
+  /* Badges */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    height: 1.3rem;
+    padding: 0 0.45rem;
+    font-size: 0.72rem;
+    line-height: 1;
+    font-weight: 500;
+    white-space: nowrap;
+    border-radius: 0.25rem;
+    border: 1px solid var(--tone-bd);
+    background: var(--tone-bg);
+    color: var(--tone-fg);
+    text-decoration: none;
+  }
+  .badge.mono {
+    font-size: 0.72rem;
+  }
+  a.badge {
+    color: var(--tone-fg);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+  a.badge:hover {
+    color: var(--tone-fg);
+    text-decoration-thickness: 2px;
+  }
+  .tone-green { --tone-fg: var(--green-fg); --tone-bg: var(--green-bg); --tone-bd: var(--green-bd); }
+  .tone-blue { --tone-fg: var(--blue-fg); --tone-bg: var(--blue-bg); --tone-bd: var(--blue-bd); }
+  .tone-amber { --tone-fg: var(--amber-fg); --tone-bg: var(--amber-bg); --tone-bd: var(--amber-bd); }
+  .tone-red { --tone-fg: var(--red-fg); --tone-bg: var(--red-bg); --tone-bd: var(--red-bd); }
+  .tone-gray { --tone-fg: var(--gray-fg); --tone-bg: var(--gray-bg); --tone-bd: var(--gray-bd); }
+  .tone-violet { --tone-fg: var(--violet-fg); --tone-bg: var(--violet-bg); --tone-bd: var(--violet-bd); }
+  .badge.is-plain {
+    background: transparent;
+    border-style: dashed;
+    --tone-fg: var(--muted);
+    --tone-bd: var(--line-strong);
+  }
+
+  /* Version / recent tables: stacked rows on narrow screens */
+  .vtable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .vtable th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: var(--muted);
+    padding: 0.35rem 0.75rem 0.35rem 0;
+    border-bottom: 1px solid var(--line-strong);
+  }
+  .vtable td {
+    padding: 0.4rem 0.75rem 0.4rem 0;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .vtable td.nowrap {
+    white-space: nowrap;
+  }
+  @media (max-width: 40rem) {
+    .vtable thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+    }
+    .vtable,
+    .vtable tbody,
+    .vtable tr,
+    .vtable td {
+      display: block;
+    }
+    .vtable tr {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .vtable td {
+      border: 0;
+      padding: 0.05rem 0;
+    }
+    .vtable td[data-label]:not(.no-label)::before {
+      content: attr(data-label) ": ";
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-family: var(--font-sans);
+    }
+    .vtable td:empty {
+      display: none;
+    }
+    .vtable td.nowrap {
+      white-space: normal;
+    }
+  }
+}
+
+/*
+ * Index grouping. Both groupings are in the HTML; the inline script in
+ * SearchBox.astro sets html[data-grouping] before the lists are parsed.
+ * Without JS the manufacturer view shows.
+ */
+[data-group-view="category"] {
+  display: none;
+}
+html[data-grouping="category"] [data-group-view="category"] {
+  display: block;
+}
+html[data-grouping="category"] [data-group-view="manufacturer"] {
+  display: none;
+}

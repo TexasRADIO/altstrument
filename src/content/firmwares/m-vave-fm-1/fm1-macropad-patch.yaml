@@ -1,0 +1,32 @@
+device: m-vave-fm-1
+name: FM-1 Macropad Patch
+summary: >-
+  Binary patch for stock V15 that makes all 55 inputs (14 buttons, 27 keys, 7 knobs in both directions)
+  send USB-MIDI notes, for use as a macro pad with a host-side translator.
+description: >-
+  Does not turn the FM-1 into a macro pad by itself: a computer app must translate the notes into shortcuts.
+  Screen and LEDs stay dark, the settings screen is unreachable after patching, and the MASTER knob still
+  sets volume without sending MIDI. The repository contains no M-VAVE firmware; docs/PATCHES.md lists
+  the original byte sequences for verification.
+status: active
+authors:
+- name: smememe
+  url: https://github.com/smememe
+source: https://github.com/smememe/fm1-macropad-patch
+source_status: open
+license: MIT
+license_notes: >-
+  MIT covers the author's code only. M-VAVE firmware and the original byte sequences remain M-VAVE's.
+homepage: https://smememe.github.io/fm1-macropad-patch/
+distribution: patch-your-own
+requires_stock: V15
+install_notes: >-
+  Download FM-1.fwsc (V15) from M-VAVE yourself, patch it in the browser (WebAssembly) or with fm1patch.py,
+  then flash with the usual update tools. The README states that no recovery method for this model is
+  known. Input monitor page included.
+brick_risk: true
+tags: [patch, controller-mode, usb-midi, midi]
+versions:
+- version: 1.0.0
+  date: 2026-10-12
+  url: https://github.com/smememe/fm1-macropad-patch/releases/tag/v1.0.0

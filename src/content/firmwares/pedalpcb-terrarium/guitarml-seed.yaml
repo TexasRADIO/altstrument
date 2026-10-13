@@ -1,0 +1,23 @@
+device: pedalpcb-terrarium
+name: Seed (GuitarML)
+summary: "Multi-effect firmware for the PedalPCB Terrarium: neural amp and overdrive models, reverb, delay, tremolo and a five-minute reversible looper. Prebuilt .bin on the release page."
+description: >-
+  Uses the Terrarium platform, so an already-built Terrarium can run it by
+  flashing the release .bin. Neural models were trained with the ns-capture
+  branch of Automated-GuitarAmpModelling and recreate three amplifiers and one
+  overdrive pedal. The repository includes a PDF manual, a UV print file and a
+  Tayda drill template for a complete Seed pedal.
+status: dormant
+authors:
+  - name: Keith Bloemer (GuitarML)
+    url: https://github.com/GuitarML
+source: https://github.com/GuitarML/Seed
+source_status: open
+license: GPL-3.0-only
+distribution: download
+install_notes: Download the .bin from the v1.0 release and flash it to the Daisy Seed with the Electrosmith web programmer or DFU.
+tags: [amp-sim, reverb, delay, looper, fx]
+versions:
+  - version: v1.0
+    date: 2023-12-08
+    url: https://github.com/GuitarML/Seed/releases/tag/v1.0

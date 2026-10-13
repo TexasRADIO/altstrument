@@ -1,0 +1,37 @@
+name: norns / norns shield / Fates
+manufacturer: monome
+category: diy-platform
+tagline: Open Lua + SuperCollider sound computer on Raspberry Pi hardware
+platform: Raspberry Pi (CM3 in norns; 3B, 3B+, 4B in shield and Fates), Linux
+stock_firmware: "norns 2.9.4 (stable); 3.0.x pre-releases"
+links:
+  manufacturer: https://monome.org/docs/norns/
+  community:
+    - label: llllllll.co (lines forum)
+      url: https://llllllll.co/
+    - label: norns.community (script catalog)
+      url: https://norns.community/
+    - label: monome on GitHub
+      url: https://github.com/monome
+    - label: norns shield (DIY hardware)
+      url: https://github.com/monome/norns-shield
+    - label: Fates (DIY norns board)
+      url: https://github.com/okyeron/fates
+notes: >-
+  norns, the DIY norns shield and compatible boards such as Fates run the same
+  open-source software; shield and Fates disk images differ from the standard
+  norns image, and any of them can then use SYSTEM > UPDATE for the current OS
+  release. Scripts and mods written in Lua or SuperCollider run on the stock OS
+  and are software, not firmware, so they are not catalogued here; browse them
+  at norns.community and discuss on the lines forum (llllllll.co).
+related: [monome-grid, monome-arc, monome-crow, monome-tools]
+image:
+  src: /images/devices/monome-norns.jpg
+  style: photo
+  alt: Front view of the monome norns sound computer with its OLED screen, knobs and buttons
+  width: 800
+  height: 533
+  credit: monome
+  license: manufacturer product image
+  source_url: https://monome.org/docs/norns/
+  original_url: https://monome.org/docs/norns/image/norns-grey.jpeg

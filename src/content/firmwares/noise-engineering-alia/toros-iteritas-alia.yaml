@@ -1,0 +1,22 @@
+device: noise-engineering-alia
+name: Toros Iteritas Alia
+summary: Official three-operator phase-modulation oscillator firmware.
+description: >-
+  Listed by NE under FM and PM. Runs on any Alia module. Manual:
+  https://noiseengineering.us/manuals/toros-iteritas-alia/
+status: active
+authors:
+  - name: Noise Engineering
+    url: https://noiseengineering.us
+source_status: closed
+license: proprietary
+license_notes: >-
+  Closed-source official firmware, free to Alia owners.
+homepage: https://noiseengineering.us/products/toros-iteritas-alia/
+distribution: download
+install_notes: >-
+  Swap from the Noise Engineering firmware portal
+  (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
+  (Chrome, Edge or Opera). Free for Alia owners.
+tags: [official, oscillator, phase-modulation, fm]
+versions: []

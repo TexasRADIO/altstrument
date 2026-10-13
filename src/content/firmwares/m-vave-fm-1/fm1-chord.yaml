@@ -1,0 +1,24 @@
+device: m-vave-fm-1
+name: fm1-chord
+summary: >-
+  Chord machine on Felucca: white keys play and strum the scale's chords like an Omnichord, black keys
+  add sevenths, ninths, suspensions and borrowed chords, with a chord sequencer, drum loops, looper and
+  ear trainer.
+status: active
+authors:
+- name: math0ne
+  url: https://github.com/math0ne
+source: https://github.com/math0ne/fm1-chord
+source_status: open
+license: GPL-3.0-only
+distribution: download
+install_notes: Installs from a terminal with a script from the source; no browser installer.
+brick_risk: true
+tags: [chords, sequencer, drums, performance]
+versions:
+- version: '0.3'
+  date: 2026-10-09
+  url: https://github.com/math0ne/fm1-chord/releases/tag/v0.3
+- version: '0.2'
+  date: 2026-10-09
+  url: https://github.com/math0ne/fm1-chord/releases/tag/v0.2

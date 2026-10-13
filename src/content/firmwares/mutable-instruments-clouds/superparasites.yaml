@@ -1,0 +1,29 @@
+device: mutable-instruments-clouds
+name: Superparasites
+summary: Clouds, Parasites and Kammerl Beat-Repeat merged into one eight-mode image for Grayscale Supercell and Microcell hardware only.
+description: >-
+  Modes: Granular, Pitch shifter / time stretch, Looping delay, Spectral
+  madness, Oliverb, Resonestor, Beat Repeat and Spectral Clouds. Separate
+  build targets exist for Supercell and Microcell because of inverted pots.
+  After Later Audio Monsoon and Typhoon ship Parasites / Superparasites-based
+  firmware; they are not catalogued separately.
+status: dormant
+authors:
+  - name: Patrick Dowling
+    url: https://github.com/patrickdowling
+source: https://github.com/patrickdowling/superparasites
+source_status: open
+license: MIT
+license_notes: Inherits from Mutable Instruments; repository README states STM32 projects are MIT.
+homepage: https://github.com/patrickdowling/superparasites/releases
+distribution: download
+requires_stock: Grayscale Supercell or Microcell hardware
+install_notes: >-
+  Not compatible with other Clouds hardware: it uses platform-specific drivers
+  and a custom linker script. The author calls the bootloader the least tested
+  part.
+tags: [granular, reverb, looper, fx, platform]
+versions:
+  - version: v1.0
+    date: 2019-07-18
+    url: https://github.com/patrickdowling/superparasites/releases/tag/v1.0

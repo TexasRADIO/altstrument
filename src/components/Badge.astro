@@ -1,0 +1,17 @@
+---
+import type { Tone } from '@/lib/labels';
+interface Props {
+  tone: Tone;
+  href?: string;
+  title?: string;
+  mono?: boolean;
+  plain?: boolean;
+}
+const { tone, href, title, mono = false, plain = false } = Astro.props;
+const Tag = href ? 'a' : 'span';
+---
+<Tag
+  class:list={['badge', `tone-${tone}`, { mono, 'is-plain': plain }]}
+  href={href}
+  title={title}
+  rel={href ? 'noopener' : undefined}><slot /></Tag>

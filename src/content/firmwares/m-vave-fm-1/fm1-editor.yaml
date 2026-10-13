@@ -1,0 +1,26 @@
+device: m-vave-fm-1
+name: FM1 Editor & Librarian
+kind: tool
+summary: >-
+  Browser-based DX7-style voice editor and patch librarian for the FM-1: every voice parameter and the
+  FM-1 effects chain, bank import and export over SysEx, bundled DX7 bank catalog. Also hosts the fm1-editor.com
+  firmware directory.
+description: >-
+  Runs entirely in the browser with banks kept in IndexedDB. The firmware directory at fm1-editor.com/firmware
+  tracks every firmware known to run on the FM-1 with a latest version and update date, and flags which
+  ones the editor supports (stock V15 and Baud Girl). The site's repository is benny-sparra/fm1-dx7-patch-importer,
+  whose homepage field is fm1-editor.com.
+status: active
+authors:
+- name: Ben Sparrow (benny-sparra)
+  url: https://github.com/benny-sparra
+source: https://github.com/benny-sparra/fm1-dx7-patch-importer
+source_status: open
+license: MIT
+homepage: https://fm1-editor.com/
+tags: [editor, config-tool, midi]
+versions:
+- version: main
+  date: 2026-10-12
+  url: https://github.com/benny-sparra/fm1-dx7-patch-importer
+  notes: No tagged releases; date is the last push.

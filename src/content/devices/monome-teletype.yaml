@@ -1,0 +1,32 @@
+name: teletype
+manufacturer: monome
+category: eurorack
+tagline: Scriptable Eurorack event trigger and CV scripting module
+platform: AVR32 (AT32UC3B)
+stock_firmware: "5.0.0"
+links:
+  manufacturer: https://monome.org/docs/teletype/
+  community:
+    - label: llllllll.co (lines forum)
+      url: https://llllllll.co/
+    - label: monome modular firmware update guide
+      url: https://monome.org/docs/modular/update/
+    - label: monome on GitHub
+      url: https://github.com/monome
+notes: >-
+  Teletype firmware is open and the community routinely adds ops through pull
+  requests to monome/teletype rather than shipping long-lived forks. Flashing
+  replaces the whole image, so back up scenes first and ignore the scene-overwrite
+  prompt unless you mean to erase them. The repository also includes a small
+  command parser and simulator in its simulator directory.
+related: [monome-ansible, monome-white-whale, monome-crow, bpcmusic-telex, attowatt-i2c2midi, monome-tools]
+image:
+  src: /images/devices/monome-teletype.jpg
+  style: photo
+  alt: Front panel of the monome teletype Eurorack module (cropped from the product photo)
+  width: 470
+  height: 610
+  credit: monome
+  license: manufacturer product image
+  source_url: https://monome.org/docs/teletype/
+  original_url: https://monome.org/docs/teletype/images/tt.jpg

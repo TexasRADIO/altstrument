@@ -1,0 +1,38 @@
+---
+import type { DeviceItem } from '@/lib/catalog';
+import { plural } from '@/lib/catalog';
+interface Props { device: DeviceItem; showManufacturer?: boolean }
+const { device, showManufacturer = true } = Astro.props;
+const { data } = device;
+const n = device.firmwares.length;
+const image = data.image;
+const logo = image ? undefined : device.logo;
+---
+<article class="relative flex h-full flex-row overflow-hidden rounded border border-line bg-surface hover:border-line-strong sm:flex-col">
+  <div class="w-28 shrink-0 self-start border-r border-line sm:w-auto sm:self-auto sm:border-b sm:border-r-0">
+    {image ? (
+      <div class="thumb" data-style={image.style}>
+        <img src={image.src} alt={image.alt} width={image.width} height={image.height} data-style={image.style} loading="lazy" decoding="async" />
+      </div>
+    ) : logo ? (
+      <div class="thumb" data-style="logo">
+        <img src={logo.src} alt="" aria-hidden="true" width={logo.width} height={logo.height} data-style="logo" data-monochrome={logo.monochrome ? 'true' : undefined} loading="lazy" decoding="async" />
+      </div>
+    ) : (
+      <div class="thumb thumb-placeholder" aria-hidden="true">
+        <span class="thumb-wordmark">{data.manufacturer}</span>
+      </div>
+    )}
+  </div>
+  <div class="flex min-w-0 flex-1 flex-col gap-1 p-3">
+    <h3 class="text-base">
+      <a href={device.url} class="text-fg no-underline after:absolute after:inset-0 after:content-[''] hover:underline">{data.name}</a>
+    </h3>
+    {showManufacturer && <p class="text-sm text-muted">{data.manufacturer}</p>}
+    {data.tagline && <p class="text-sm">{data.tagline}</p>}
+    <p class="mt-auto flex flex-wrap items-baseline justify-between gap-x-3 pt-1 text-xs text-muted">
+      <span class={n === 0 ? '' : 'font-medium text-fg'}>{n === 0 ? 'none listed yet' : plural(n, 'firmware')}</span>
+      {data.platform && <span class="mono">{data.platform}</span>}
+    </p>
+  </div>
+</article>

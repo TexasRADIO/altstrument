@@ -1,0 +1,20 @@
+device: monome-arc
+name: Monome Arc Clone
+summary: Open hardware and ATmega88p firmware for a protocol-compatible DIY clone of the monome arc that works with serialosc, flashed with an AVR ISP programmer.
+description: >-
+  The firmware runs on the clone board, not on a monome arc. The README says
+  assembly needs an AVR ISP programmer, avrdude and an FTDI EEPROM flash, and
+  asks users not to post clone problems on the monome forums but to contact
+  the author by email.
+status: active
+authors:
+  - name: Johannes Neumann
+    url: https://github.com/TheSlowGrowth
+source: https://github.com/TheSlowGrowth/MonomeArcClone
+source_status: open
+license: GPL-3.0-or-later
+license_notes: Per license.txt, files in the firmware folder are GPL v3 or later; all other files (hardware, case, docs) are CC-BY-SA-4.0.
+homepage: https://github.com/TheSlowGrowth/MonomeArcClone
+distribution: source-only
+requires_stock: DIY arc-clone hardware
+tags: [platform]

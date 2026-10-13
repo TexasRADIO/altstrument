@@ -1,0 +1,36 @@
+device: monome-arc
+name: iii (arc)
+summary: >-
+  monome's iii firmware for the 2025 arc, which has a pushbutton: standalone Lua scripts on the arc itself, USB-MIDI and a serial REPL, with a serialosc mode for use with norns, ansible and computers.
+description: >-
+  The 2025 arc ships with iii support, so it needs no separate install; this
+  entry tracks the arc build that is published beside the grid builds in each
+  iii release (iii-arc.uf2). Hold the key while powering up to return the arc
+  to serialosc mode. Older arcs cannot run it; viii runs iii scripts in a
+  browser against them instead. Example scripts named in the docs include
+  cycles, erosion and snows.
+status: active
+authors:
+  - name: monome
+    url: https://monome.org
+  - name: tehn
+    url: https://codeberg.org/tehn
+source: https://codeberg.org/tehn/iii
+source_status: open
+license: GPL-3.0-only
+license_notes: Docs state GPLv3 and LICENSE.txt is GPLv3 text; no per-file "or later" grants found.
+homepage: https://monome.org/docs/iii/
+distribution: download
+requires_stock: 2025 arc (with pushbutton)
+install_notes: The UF2 is attached to each iii release; see the iii docs for entering the bootloader. The docs describe the diii browser tool for restarting a grid into it.
+tags: [platform, scripting, usb-midi]
+versions:
+  - version: v1.1.2
+    date: 2026-04-18
+    url: https://github.com/monome/iii/releases/tag/v1.1.2
+  - version: v1.1.1
+    date: 2026-03-24
+    url: https://github.com/monome/iii/releases/tag/v1.1.1
+  - version: v1.1.0
+    date: 2026-03-22
+    url: https://github.com/monome/iii/releases/tag/v1.1.0

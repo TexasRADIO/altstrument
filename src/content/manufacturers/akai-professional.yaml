@@ -1,0 +1,12 @@
+name: Akai Professional
+website: https://www.akaipro.com/
+logo:
+  src: /images/logos/akai-professional.svg
+  alt: Akai Professional logo
+  width: 815
+  height: 338
+  credit: Akai Professional
+  license: public domain (text logo)
+  source_url: https://commons.wikimedia.org/wiki/File:AKAI_professional_logo.svg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/d/de/AKAI_professional_logo.svg
+  monochrome: true

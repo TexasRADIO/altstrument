@@ -1,0 +1,32 @@
+device: m-vave-fm-1
+name: April OS
+summary: >-
+  Sampling groovebox on a Felucca base: 32 sample slots of 3 seconds, 8-track sequencer, slice and loop
+  editor, recording through a computer or phone microphone.
+description: >-
+  The repository holds the installer page and assets, not the firmware's source, so this is listed as
+  binary-only. Its README says Felucca-derived code must remain GPL-3.0-only when distributed, while the
+  repository's own LICENSE file is MIT.
+status: active
+authors:
+- name: beashoko
+  url: https://github.com/beashoko
+source: https://github.com/beashoko/april-os
+source_status: binary-only
+license: MIT
+license_notes: >-
+  LICENSE file is MIT, but the README states Felucca-derived code stays GPL-3.0-only. Firmware source
+  is not in the repository.
+homepage: https://beashoko.github.io/april-os/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer from the project page. Beta per the fm1-editor.com directory.
+brick_risk: true
+tags: [sampler, sequencer]
+versions:
+- version: '1.1'
+  date: 2026-10-10
+  url: https://github.com/beashoko/april-os
+  notes: >-
+    Beta. Version and date from the fm1-editor.com/firmware hub; repository has no release tags (last
+    commit 2026-10-10).

@@ -1,0 +1,23 @@
+device: befaco-lich
+name: OpenWare
+summary: Rebel Technology's OWL firmware that Lich and Witch run. Loads patches written in Pure Data, Max gen~ or Faust from the Rebel Technology patch library over MIDI.
+description: >-
+  Source covers several Rebel Technology devices (including Wizard, Alchemist
+  and Magus) and builds with STM32CubeMX plus arm-none-eabi-gcc. Last
+  release on master is v22.5.0; the Owlsy port brings OpenWare to Daisy
+  hardware.
+status: dormant
+authors:
+  - name: Rebel Technology
+    url: https://www.rebeltech.org/
+source: https://github.com/RebelTechnology/OpenWare
+source_status: open
+license: GPL-2.0-only
+license_notes: Repository LICENSE is the GPL v2 text.
+homepage: https://www.befaco.org/lich/
+distribution: download
+tags: [platform]
+versions:
+  - version: v22.5.0
+    date: 2023-03-05
+    url: https://github.com/RebelTechnology/OpenWare/releases/tag/v22.5.0

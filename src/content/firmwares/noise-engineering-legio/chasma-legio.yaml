@@ -1,0 +1,22 @@
+device: noise-engineering-legio
+name: Chasma Legio
+summary: "Official mid/side dynamics processor: compression and limiting applied to the mid and side of a stereo signal."
+description: >-
+  Similar to Librae Legio, which processes in plain stereo. Runs on any Legio
+  module. Manual: https://noiseengineering.us/manuals/chasma-legio/
+status: active
+authors:
+  - name: Noise Engineering
+    url: https://noiseengineering.us
+source_status: closed
+license: proprietary
+license_notes: >-
+  Closed-source official firmware, free to Legio owners.
+homepage: https://noiseengineering.us/products/chasma-legio/
+distribution: download
+install_notes: >-
+  Swap from the Noise Engineering firmware portal
+  (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
+  (Chrome, Edge or Opera). Free for Legio owners.
+tags: [official, dynamics, mid-side]
+versions: []

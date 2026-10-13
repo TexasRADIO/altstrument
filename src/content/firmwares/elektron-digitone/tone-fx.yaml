@@ -1,0 +1,33 @@
+device: elektron-digitone
+name: Tone+FX
+summary: "Master FX suite for the Digitone mk1 / Keys OS 1.43: ring mod, shelf EQ, lo-fi crush, wavefolder, a five-mode modulation insert, metering, a PERFORM page of momentary pads and a boot splash."
+description: >-
+  A set of elekloader mods packaged together as one .elemod (tonefx-3.2b). Seven
+  master pages on FUNC + LFO; the PERFORM page's 16 trigs act as performance pads.
+  Needs the core-dn1 mod. The release repository ships built packages only; the
+  development source is in the DigiAlchemydsp/RingTone repository.
+status: active
+authors:
+  - name: DigiAlchemydsp
+    url: https://github.com/DigiAlchemydsp
+source: https://github.com/DigiAlchemydsp/RingTone
+source_status: open
+license: GPL-2.0-or-later
+license_notes: Everything is GPL-2.0-or-later. The Tone-FX release repo ships only built .elemod packages; source is the separate RingTone development repo.
+homepage: https://github.com/DigiAlchemydsp/Tone-FX/releases
+distribution: patch-your-own
+requires_stock: "1.43"
+install_notes: Install core-dn1 and the tonefx elemod in elekloader with your own OS 1.43 file.
+tags: [fx, performance, ui]
+versions:
+  - version: v3.2b
+    date: 2026-10-12
+    url: https://github.com/DigiAlchemydsp/Tone-FX/releases/tag/v3.2b
+    notes: Separate WAVE pitch and stereo depths; fold split from crush.
+  - version: v3.2a
+    date: 2026-10-12
+    url: https://github.com/DigiAlchemydsp/Tone-FX/releases/tag/v3.2a
+    notes: Adds the PERFORM page.
+  - version: v3.1i
+    date: 2026-10-12
+    url: https://github.com/DigiAlchemydsp/Tone-FX/releases/tag/v3.1i
