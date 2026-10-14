@@ -18,6 +18,11 @@ install_notes: >-
   Does not install through Noise Engineering's updater; use the Daisy
   bootloader flow at flash.daisy.audio, as noted in the community index.
 tags: [physical-modeling, scales, fx]
+video:
+  url: https://www.youtube.com/watch?v=SwKUoph0esM
+  title: "CitharaVersio Sound Demo2026 06 23 11 03 21"
+  credit: "Samuel Burt"
+  first_party: true
 versions:
   - version: tag
     date: 2026-06-23

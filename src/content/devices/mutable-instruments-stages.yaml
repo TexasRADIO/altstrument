@@ -2,6 +2,12 @@ name: Stages
 manufacturer: Mutable Instruments
 category: eurorack
 tagline: Segment generator / envelope (discontinued)
+description: >-
+  Stages is a 14HP Eurorack segment generator from Mutable Instruments, produced
+  from 2018 to 2022. Six segments, each of which can be a ramp, a hold or a
+  step, are grouped according to which gate inputs are patched, so the same
+  panel can act as a multi-stage envelope, several separate envelopes or an LFO.
+  It uses an STM32F373 at 72 MHz and a DAC8168.
 platform: STM32F3
 links:
   manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/stages/

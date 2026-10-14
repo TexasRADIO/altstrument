@@ -21,6 +21,12 @@ homepage: https://github.com/ukyzky/eurorack/releases
 distribution: download
 requires_stock: v1.2 or later (v11.3); a v1.3 build exists as a pre-release
 tags: [random, quantizer, chords, scales, sequencer]
+image:
+  url: https://raw.githubusercontent.com/ukyzky/eurorack/marbles_resurrection/marbles/doc/manual.png
+  alt: Cheat sheet from the Marbles alternative firmware README showing the extra settings mode controls
+  credit: ukyzky
+  source_url: https://github.com/ukyzky/eurorack/tree/marbles_resurrection/marbles
+  first_party: true
 versions:
   - version: 1.3 alternative v0.1.0 (pre-release)
     date: 2023-06-28

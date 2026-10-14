@@ -16,6 +16,12 @@ install_notes: >-
   Browser WebMIDI installer; leaves through M-VAVE's M-UPGRADE. Studio at /webapp/editor/.
 brick_risk: true
 tags: [synth-engine, midi, editor, ui]
+image:
+  url: https://raw.githubusercontent.com/ChanceTheMaker/Felucca/main/web/screenshots/stage.jpg
+  alt: "Felucca Salt Studio in the Stage Red theme, with browser audio and oscilloscope"
+  credit: "ChanceTheMaker"
+  source_url: https://github.com/ChanceTheMaker/Felucca
+  first_party: true
 versions:
 - version: 0.9-salt14
   date: 2026-10-05

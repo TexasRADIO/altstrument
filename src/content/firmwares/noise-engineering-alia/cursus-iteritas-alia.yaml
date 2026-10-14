@@ -19,4 +19,10 @@ install_notes: >-
   (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
   (Chrome, Edge or Opera). Free for Alia owners.
 tags: [official, oscillator, wavetable]
+video:
+  url: https://www.youtube.com/watch?v=4xICssDsw0U
+  title: "Cursus Iteritas Alia wavetable oscillator from Noise Engineering"
+  credit: Noise Engineering
+  first_party: true
+  found_via: https://noiseengineering.us/products/alia/
 versions: []

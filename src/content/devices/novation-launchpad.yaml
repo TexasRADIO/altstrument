@@ -2,6 +2,12 @@ name: Launchpad family (MK3-era)
 manufacturer: Novation
 category: controller
 tagline: Launchpad X, Mini MK3 and Pro MK3 grid controllers
+description: >-
+  This entry groups Novation's third-generation Launchpad grid controllers:
+  the Launchpad X and Mini MK3 from 2019 and the Launchpad Pro MK3 from 2020.
+  Each has an 8x8 grid of RGB pads for launching clips, playing notes and
+  controlling software such as Ableton Live. The Pro MK3 is the largest of the
+  three and adds a standalone sequencer and extra MIDI connectivity.
 links:
   manufacturer: https://novationmusic.com/products/launchpad-x
   community:

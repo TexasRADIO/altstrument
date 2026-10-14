@@ -2,6 +2,12 @@ name: Model:Samples
 manufacturer: Elektron
 category: sampler
 tagline: 6-track sample-based groovebox
+description: >-
+  The Model:Samples is a compact six-track sample-based groovebox made by Elektron.
+  It has six velocity-sensitive pads, 64 MB of sample
+  memory, and a resonant multimode filter, LFO, delay and reverb on each track.
+  Its sequencer uses Elektron's parameter locks, and each track can alternatively
+  send MIDI.
 stock_firmware: "1.13"
 links:
   manufacturer: https://www.elektron.se/support-downloads/modelsamples

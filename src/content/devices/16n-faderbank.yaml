@@ -2,6 +2,13 @@ name: 16n faderbank / 16nx
 manufacturer: 16n faderbank project
 category: controller
 tagline: Open 16-fader MIDI / CV / i2c controller (Teensy 16n, RP2040 16nx)
+description: >-
+  The 16n is an open-source controller with sixteen faders, built around a
+  Teensy 3.2 and sending MIDI over USB and a TRS MIDI jack, plus monome-style
+  i2c for modules such as Teletype. The 16nx is the later revision, built on
+  an RP2040 microcontroller with its own firmware repository. Both are
+  published as open hardware and are usually built from the project's files or
+  from kits.
 platform: Teensy 3.2 (16n), RP2040 (16nx)
 stock_firmware: "16n 2.2.0 / 16next 3.1.1"
 links:

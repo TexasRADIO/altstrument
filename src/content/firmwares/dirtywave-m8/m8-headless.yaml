@@ -25,6 +25,11 @@ install_notes: >-
   Flash the .hex from the repository's Releases folder to the Teensy 4.1 and
   run a display and input client on the host. See the setup guide.
 tags: [sequencer, sampler, synth-engine, fm, midi]
+video:
+  url: https://www.youtube.com/watch?v=gf1Blf8M7XE
+  title: "DIY Dirtywave M8 headless using a Teensy 4.1 microcomputer"
+  credit: Floyd Steinberg
+  first_party: false
 versions:
   - version: 6.6.3E
     date: 2026-10-05

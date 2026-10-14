@@ -2,6 +2,12 @@ name: MPC2000 / 2000XL
 manufacturer: Akai Professional
 category: sampler
 tagline: MPC sampler and sequencer in Classic and XL versions
+description: >-
+  The MPC2000 is a 16-pad sampler and sequencer from Akai Professional,
+  introduced in 1997. It plays 32 voices from 16-bit, 44.1 kHz stereo samples,
+  has a multi-track sequencer, and stores data on a built-in floppy drive. The
+  2000XL is the revised version with a larger display and an updated operating
+  system.
 stock_firmware: 1.72 (Classic) / 1.20 (XL)
 links:
   community:

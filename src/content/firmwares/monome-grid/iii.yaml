@@ -23,6 +23,11 @@ distribution: download
 requires_stock: 2022 grid, grid one, grid zero
 install_notes: Copy the UF2 for your grid edition (iii-grid-2022, iii-grid-one or iii-grid-zero) to the bootloader drive. If you ran a beta firmware, run fs_reformat() and restart.
 tags: [platform, scripting, usb-midi, grid]
+video:
+  url: https://www.youtube.com/watch?v=eKVdHipnsoY
+  title: "26.04.05 kria_iii demo monome one, iii"
+  credit: "aktsom"
+  first_party: false
 versions:
   - version: v1.1.2
     date: 2026-04-18

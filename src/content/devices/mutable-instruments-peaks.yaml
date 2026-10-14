@@ -2,6 +2,12 @@ name: Peaks
 manufacturer: Mutable Instruments
 category: eurorack
 tagline: Dual function generator / drum synth (discontinued)
+description: >-
+  Peaks is an 8HP Eurorack module from Mutable Instruments, produced from 2014
+  to 2017, that packs two channels of several simple functions into one panel.
+  Each channel can act as an ADSR envelope, an LFO or tap-tempo LFO, or an
+  808-style kick or snare drum model. It uses an STM32F103 at 72 MHz and a
+  DAC8552 for 16-bit output at 48 kHz.
 platform: STM32
 links:
   manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/peaks/

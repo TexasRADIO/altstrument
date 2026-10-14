@@ -20,6 +20,12 @@ install_notes: >-
   Installs from the browser at genkigenki.github.io/smk37. Unofficial; install at your own risk.
 brick_risk: true
 tags: [chords, synth-engine, performance]
+image:
+  url: https://genkigenki.github.io/smk37/assets/shot-fomni37.png
+  alt: "FoMni37 screen on the SMK-37 display"
+  credit: "genkigenki"
+  source_url: https://genkigenki.github.io/smk37/
+  first_party: true
 versions:
 - version: smk37-0.2
   date: 2026-10-13

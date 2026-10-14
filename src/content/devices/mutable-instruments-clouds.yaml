@@ -2,6 +2,12 @@ name: Clouds
 manufacturer: Mutable Instruments
 category: eurorack
 tagline: Texture synthesizer / granular processor (discontinued)
+description: >-
+  Clouds is an 18HP Eurorack granular texture processor designed by Émilie
+  Gillet and sold by Mutable Instruments from 2015 to 2017. It records incoming
+  stereo audio into a buffer of one to eight seconds and plays back clouds of
+  grains from it, followed by a diffusion network and reverb. The module uses an
+  STM32F405 at 168 MHz and a WM8731 codec.
 platform: STM32F4
 links:
   manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/clouds/

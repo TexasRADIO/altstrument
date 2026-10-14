@@ -18,6 +18,12 @@ install_notes: >-
   emulator on the same site. An SMK-37 build exists in the genkigenki fork of Felucca.
 brick_risk: true
 tags: [synth-engine, fx, performance, sequencer]
+video:
+  url: https://www.youtube.com/watch?v=NMSw1_wnCwQ
+  title: "GHOULBOX 2.0 – Dungeon Synth Firmware for the M-VAVE FM-1 (Free & Open Source)"
+  credit: "GHOULBOX"
+  first_party: true
+  found_via: https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth
 versions:
 - version: '2.1'
   date: 2026-10-12

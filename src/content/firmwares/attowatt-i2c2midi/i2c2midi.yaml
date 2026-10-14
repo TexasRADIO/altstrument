@@ -21,6 +21,11 @@ distribution: download
 requires_stock: i2c2midi MKI or MKII module; Teletype 5.0.0 or later
 install_notes: Open firmware/i2c2midi_firmware/i2c2midi_firmware.ino in Teensyduino, set the hardware defines and upload; do not connect Euro power and USB at the same time.
 tags: [midi, usb-midi, i2c]
+video:
+  url: https://www.youtube.com/watch?v=gbjeL4ZColA
+  title: "i2c2midi — Teletype OPs Example Patches"
+  credit: "attowatt"
+  first_party: true
 versions:
   - version: v5.0.4
     date: 2025-08-19

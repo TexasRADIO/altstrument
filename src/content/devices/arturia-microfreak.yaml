@@ -2,6 +2,12 @@ name: MicroFreak
 manufacturer: Arturia
 category: synth
 tagline: Hybrid digital/analog paraphonic synth
+description: >-
+  The MicroFreak is a compact hybrid synthesizer from Arturia, released in
+  2019. It combines a digital oscillator with several synthesis modes, an
+  analog filter, and a pressure-sensitive flat keyboard with polyphonic
+  aftertouch. It is paraphonic with four voices, and includes a sequencer,
+  arpeggiator and a modulation matrix.
 stock_firmware: 5.0.0.2084
 links:
   manufacturer: https://www.arturia.com/products/hardware-synths/microfreak/overview

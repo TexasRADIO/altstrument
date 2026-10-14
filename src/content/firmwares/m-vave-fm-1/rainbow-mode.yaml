@@ -18,3 +18,9 @@ install_notes: >-
   exists (rainbow37).
 brick_risk: true
 tags: [performance, synth-engine]
+image:
+  url: https://joshbartlettband-web.github.io/felucca-rainbow/screen-3.png
+  alt: "Rainbow mode screen showing a unicorn under a rainbow, named at the bottom"
+  credit: "joshbartlettband-web"
+  source_url: https://joshbartlettband-web.github.io/felucca-rainbow/
+  first_party: true

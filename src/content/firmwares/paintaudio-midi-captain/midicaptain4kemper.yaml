@@ -20,6 +20,12 @@ distribution: download
 requires_stock: PaintAudio KPP firmware 3.5
 install_notes: Hold switch 1 while powering on to mount the USB drive, then copy the files from the src folder to the device.
 tags: [controller-mode, midi, ui]
+image:
+  url: https://raw.githubusercontent.com/gstrotmann/MidiCaptain4Kemper/main/doc/images/midicaptain_with_custom_firmware.jpg
+  alt: "MIDI Captain Mini 6 running MidiCaptain4Kemper, with the display showing the Kemper rig name and four effect slots"
+  credit: "gstrotmann"
+  source_url: https://github.com/gstrotmann/MidiCaptain4Kemper
+  first_party: true
 versions:
   - version: main @ 7f0e031
     date: 2025-01-08

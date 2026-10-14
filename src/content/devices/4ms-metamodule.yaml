@@ -2,6 +2,13 @@ name: MetaModule
 manufacturer: 4ms Company
 category: eurorack
 tagline: Virtual modular host that runs ported VCV-style plugins in a module
+description: >-
+  MetaModule is a Eurorack module from 4ms Company that runs virtual software
+  modules, including ports of VCV Rack modules, on real knobs and jacks. It has
+  six CV/audio inputs, two gate inputs and six CV/audio outputs, all 24-bit at
+  48 kHz and DC-coupled, plus twelve mappable knobs, an encoder, a USB-C port
+  for MIDI devices and drives, and a microSD slot. Patches can be built on the
+  module or exported from VCV Rack.
 links:
   manufacturer: https://metamodule.info
   community:

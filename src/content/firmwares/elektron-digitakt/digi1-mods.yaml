@@ -26,6 +26,11 @@ install_notes: >-
   OS section is modified; bootloader stays official. RISKS.md calls the bricking
   risk low but not zero and recommends keeping a DIN MIDI interface for recovery.
 tags: [machines, synth-engine, chords, polyphony, lfo, midi, fx, ui]
+video:
+  url: https://www.youtube.com/watch?v=csozk_qx11o
+  title: "Digitakt OG MO digimono test"
+  credit: mac_art
+  first_party: false
 versions:
   - version: Digi Mono 0.22
     url: https://github.com/gdeo607/digi1_mods/blob/main/CHANGELOG.md

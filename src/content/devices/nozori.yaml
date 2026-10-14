@@ -2,6 +2,12 @@ name: Nozori
 manufacturer: nozoid
 category: eurorack
 tagline: Multi-module platform with open Arduino firmware
+description: >-
+  Nozori is a pair of 12HP Eurorack hardware platforms from the French maker
+  nozoid, the Nozori 68 and Nozori 84. Each combines a digital core with
+  potentiometers, a three-position switch, two LEDs and audio and CV jacks.
+  Jumper settings select which pre-programmed module the hardware behaves as,
+  such as an oscillator, filter, envelope or effect.
 platform: Arduino IDE firmware
 links:
   manufacturer: https://www.nozoid.com/nozori-68

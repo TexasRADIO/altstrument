@@ -2,6 +2,13 @@ name: arc
 manufacturer: monome
 category: controller
 tagline: Four-encoder knob controller with LED rings
+description: >-
+  The arc is a USB controller from monome, first released in 2011, made of high-
+  resolution rotary encoders each surrounded by a ring of 64 LEDs. Current
+  models have 1024 ticks per revolution and 16-step LED brightness, and earlier
+  editions came in two-knob and four-knob sizes. It does nothing on its own: the
+  application it is connected to, such as one running on a computer, norns,
+  ansible or crow, defines how movement maps to sound and light.
 links:
   manufacturer: https://monome.org/docs/arc/
   community:

@@ -16,6 +16,12 @@ license: unspecified
 homepage: https://www.elektronauts.com/t/digipad-launchpad-pro-for-digitakt-and-synths/56942
 distribution: download
 tags: [controller-mode, midi, scales, performance, sampler]
+video:
+  url: https://www.youtube.com/watch?v=qgUTbQJJg3M
+  title: "DigiPAD | Launchpad Pro for Digitakt and synths"
+  credit: Fenix Song Music
+  first_party: true
+  found_via: https://www.elektronauts.com/t/digipad-launchpad-pro-for-digitakt-and-synths/56942
 versions:
   - version: First official version
     date: 2018-05-30

@@ -23,6 +23,12 @@ install_notes: >-
   Browser emulator available.
 brick_risk: true
 tags: [sequencer, sampler, synth-engine, fx, performance, ui]
+image:
+  url: https://raw.githubusercontent.com/dspaudio/orbit/main/docs/orbit-demo-0.3.png
+  alt: "ORBIT 0.3 demo on the Event Tape screen"
+  credit: "dspaudio"
+  source_url: https://github.com/dspaudio/orbit
+  first_party: true
 versions:
 - version: 0.7.0
   date: 2026-10-12

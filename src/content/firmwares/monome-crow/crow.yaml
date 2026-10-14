@@ -22,6 +22,11 @@ homepage: https://monome.org/docs/crow/
 distribution: download
 install_notes: Run `druid firmware` on a computer, use fledge on norns, or follow the manual update guide. Windows may need a WinUSB driver (Zadig) for DFU.
 tags: [platform, scripting, i2c, envelopes, lfo]
+video:
+  url: https://www.youtube.com/watch?v=HDTI9HBMf3o
+  title: "ambient talkie: ep 54 - CROW a basic overview"
+  credit: "tworoundrobins"
+  first_party: false
 versions:
   - version: v4.0.5
     date: 2023-07-25

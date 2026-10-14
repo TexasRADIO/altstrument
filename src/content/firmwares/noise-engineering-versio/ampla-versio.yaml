@@ -19,4 +19,9 @@ install_notes: >-
   (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
   (Chrome, Edge or Opera). Free for Versio owners.
 tags: [official, vca, envelope, utility, filter]
+video:
+  url: https://www.youtube.com/watch?v=9XV7cLatfpQ
+  title: "The Bat Verb | Part 04 | Ampla Versio firmware | Desmodus Versio"
+  credit: "Cinematic Laboratory"
+  first_party: false
 versions: []

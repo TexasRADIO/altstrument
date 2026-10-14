@@ -2,6 +2,12 @@ name: Launchpad Pro (MK1)
 manufacturer: Novation
 category: controller
 tagline: 8x8 pad grid controller with USB and DIN MIDI
+description: >-
+  The Launchpad Pro (MK1) is an 8x8 grid controller from Novation, released in
+  2015. It has 64 RGB velocity- and pressure-sensitive pads surrounded by
+  function buttons, and offers USB and DIN MIDI connections. It can run
+  standalone as well as work as a controller, and Novation published an open
+  firmware framework for it.
 platform: STM32
 links:
   manufacturer: https://novationmusic.com/products/launchpad-pro

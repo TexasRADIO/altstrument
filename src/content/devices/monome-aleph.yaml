@@ -2,6 +2,13 @@ name: aleph
 manufacturer: monome
 category: other
 tagline: Open-source standalone sound computer (legacy)
+description: >-
+  The aleph is a standalone digital sound computer designed by Ezra Buchla and
+  Brian Crabtree and announced by monome in 2013. It has four audio and four CV
+  inputs and outputs, optical encoders, assignable keys, an OLED display, USB
+  host and device ports, an ii jack and an SD card slot. A 32-bit AVR32
+  microcontroller handles control and a 533 MHz Blackfin BF533 DSP handles
+  audio. monome describes it as a precursor to norns.
 platform: AVR32 (AT32UC3A) + Blackfin BF533 DSP
 links:
   manufacturer: https://monome.org/docs/aleph/

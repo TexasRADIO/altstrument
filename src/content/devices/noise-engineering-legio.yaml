@@ -2,6 +2,12 @@ name: Legio
 manufacturer: Noise Engineering
 category: eurorack
 tagline: 6 HP stereo oscillator and effects platform with 23 official firmwares
+description: >-
+  Legio is a 6 HP Eurorack module from Noise Engineering, introduced in June
+  2022 with the Virt Iter Legio oscillator and the Librae Legio dynamics
+  processor. It is a stereo-in, stereo-out oscillator and DSP platform: one
+  fixed panel and hardware design whose function is set by the loaded
+  algorithm, such as an oscillator, filter, percussion voice or effect.
 platform: Electrosmith Daisy Seed (libDaisy)
 links:
   manufacturer: https://noiseengineering.us/pages/world-of-legio

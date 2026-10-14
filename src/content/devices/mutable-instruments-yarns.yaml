@@ -2,6 +2,13 @@ name: Yarns
 manufacturer: Mutable Instruments
 category: eurorack
 tagline: MIDI-to-CV interface (discontinued)
+description: >-
+  Yarns is a 12HP Eurorack MIDI-to-CV interface from Mutable Instruments,
+  produced from 2014 to 2020. It converts MIDI into pitch, gate and modulation
+  voltages for up to four voices or parts, in monophonic, polyphonic or
+  multitimbral modes, and includes an arpeggiator, a sequencer per part and a
+  Euclidean pattern generator. It runs on an STM32F103 at 72 MHz with a 16-bit
+  DAC.
 platform: STM32F1
 links:
   manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/yarns/

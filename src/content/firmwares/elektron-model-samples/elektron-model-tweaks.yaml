@@ -21,6 +21,12 @@ requires_stock: "1.13"
 install_notes: Use the web flasher with your own .syx, then send it with Elektron Transfer or straight over USB MIDI.
 brick_risk: true
 tags: [usb-audio, sampler, ui, flasher]
+image:
+  url: https://raw.githubusercontent.com/drumkilla/elektron-model-tweaks/main/docs/mods/media/smpl-edit-length.png
+  alt: Model:Samples screen showing the Sample Edit waveform popup, with the whole sample above and a zoomed view below
+  credit: drumkilla
+  source_url: https://github.com/drumkilla/elektron-model-tweaks
+  first_party: true
 versions:
   - version: v2.1.0
     date: 2026-10-11

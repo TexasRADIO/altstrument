@@ -22,6 +22,11 @@ distribution: source-only
 install_notes: >-
   Developer-stage project. See the getting started guide in the docs.
 tags: [sdk, os, midi]
+video:
+  url: https://www.youtube.com/watch?v=Me8ERFfEsyI
+  title: 'Freetribe Monosynth Example'
+  credit: bangcorrupt
+  first_party: true
 versions:
   - version: v0.1.3
     date: 2025-10-29

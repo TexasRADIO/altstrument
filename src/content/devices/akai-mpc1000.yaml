@@ -2,6 +2,12 @@ name: MPC1000 / 2500
 manufacturer: Akai Professional
 category: sampler
 tagline: MPC1000-series sampler and sequencer
+description: >-
+  The MPC1000 is a compact sampler and sequencer from Akai Professional,
+  introduced in the early 2000s with a 4x4 grid of 16 pads, 32-voice playback
+  and Compact Flash storage. The MPC2500 followed as a larger revision with
+  more I/O and up to 128 MB of RAM. Both belong to the second
+  generation of MPC hardware that came after the MPC2000 series.
 links:
   community:
     - label: JJOS site

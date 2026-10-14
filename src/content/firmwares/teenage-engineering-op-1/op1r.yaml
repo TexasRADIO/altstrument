@@ -33,6 +33,12 @@ install_notes: >-
   not modified, so the original image can be flashed back.
 brick_risk: false
 tags: [synth-engine, fx, sequencer, usb-audio, usb-midi, granular, reverb, delay, lfo, controller-mode, ui]
+image:
+  url: https://raw.githubusercontent.com/pcppcp/op1r/main/docs/images/synth_supersaw.png
+  alt: "Supersaw synth engine screen from op1r, showing a chainsaw graphic with four knob indicators, rendered from the OP-1 screen code"
+  credit: "pcppcp"
+  source_url: https://github.com/pcppcp/op1r
+  first_party: true
 versions:
   - version: op1r 26
     date: 2026-10-13

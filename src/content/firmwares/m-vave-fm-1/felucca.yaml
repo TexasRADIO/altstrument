@@ -26,6 +26,11 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, sequencer, fx, usb-audio, midi, wavetable, granular, physical-modeling, fm, editor,
   platform]
+video:
+  url: https://www.youtube.com/watch?v=EzFknmhtKZk
+  title: "Mvave FM-1 | Felucca Firmware - Multi Sequencer, 9 Engines, Scale Mode - First Look"
+  credit: "Stanley Gurvich"
+  first_party: false
 versions:
 - version: '1.6'
   date: 2026-10-13

@@ -2,6 +2,13 @@ name: Octatrack MKI / MKII
 manufacturer: Elektron
 category: sampler
 tagline: 8-track performance sampler
+description: >-
+  The Octatrack is a performance sampler and sequencer made by Elektron, first
+  released in 2010 and later revised as the MKII. It has eight audio tracks, each
+  able to hold two effects, plus eight MIDI tracks, a crossfader for morphing
+  between scenes, and four audio inputs for live sampling. Audio runs on a
+  DSP56300-family DSP with a ColdFire CPU, and samples load from a CompactFlash
+  card into RAM or are streamed from it.
 platform: Motorola DSP56300 + ColdFire
 stock_firmware: 1.40C
 links:

@@ -18,6 +18,12 @@ license: GPL-3.0-or-later
 homepage: https://erbubar23.github.io/bubba-machine/
 distribution: source-only
 tags: [drums, sampler, sequencer, synth-engine, wavetable, emulator]
+image:
+  url: https://raw.githubusercontent.com/Erbubar23/bubba-machine/main/assets/screens/37-pads.png
+  alt: "Bubba Machine pad sampler screen showing a waveform with the selected pad in brackets"
+  credit: "Erbubar23"
+  source_url: https://github.com/Erbubar23/bubba-machine
+  first_party: true
 versions:
 - version: 0.5.0-beta
   date: 2026-10-12

@@ -19,4 +19,10 @@ install_notes: >-
   (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
   (Chrome, Edge or Opera). Free for Legio owners.
 tags: [official, dynamics, compressor]
+video:
+  url: https://www.youtube.com/watch?v=WNRty18VE6E
+  title: "Librae Legio - dynamics processor in 6HP from Noise Engineering"
+  credit: Noise Engineering
+  first_party: true
+  found_via: https://noiseengineering.us/products/legio/
 versions: []

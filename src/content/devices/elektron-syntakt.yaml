@@ -2,6 +2,12 @@ name: Syntakt
 manufacturer: Elektron
 category: groovebox
 tagline: 12-track drum and synth groovebox
+description: >-
+  The Syntakt is a 12-track drum and synth groovebox made by Elektron. Four of
+  its tracks use analog drum and cymbal machines and eight use digital machines,
+  with an analog effects block that can also process external audio. Its
+  sequencer offers patterns of up to 64 steps with parameter locks, and it works
+  with Elektron's Overbridge software over USB.
 stock_firmware: "1.41"
 links:
   manufacturer: https://www.elektron.se/explore/syntakt

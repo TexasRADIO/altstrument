@@ -21,6 +21,12 @@ install_notes: >-
   from M-VAVE to roll back.
 brick_risk: true
 tags: [sequencer, synth-engine, performance]
+image:
+  url: https://raw.githubusercontent.com/y6zkcqnf5r-hue/fm1-fm80s/main/assets/logo/fm80s-splash.png
+  alt: "FM80S boot splash: a striped synthwave sun over a neon grid"
+  credit: "Floydus"
+  source_url: https://github.com/y6zkcqnf5r-hue/fm1-fm80s
+  first_party: true
 versions:
 - version: '0.1'
   url: https://github.com/y6zkcqnf5r-hue/fm1-fm80s

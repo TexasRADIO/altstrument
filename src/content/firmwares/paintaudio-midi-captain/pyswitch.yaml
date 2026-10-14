@@ -25,6 +25,11 @@ install_notes: >-
   content folder to the drive, unmount, reboot, then configure with the web
   emulator.
 tags: [controller-mode, midi, ui, looper, editor]
+video:
+  url: https://www.youtube.com/watch?v=Wg-Eg7iIyRA
+  title: "Kemper and MidiCaptain Controller with pyswitch OS"
+  credit: "SLATEBOY"
+  first_party: false
 versions:
   - version: 2.4.9
     date: 2026-07-07

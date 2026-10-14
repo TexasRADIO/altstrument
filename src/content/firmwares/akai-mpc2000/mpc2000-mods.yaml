@@ -31,6 +31,12 @@ install_notes: >-
   result to your boot medium. The author recommends running the built-in memory
   test on the original OS first and booting the XL from a card or floppy.
 tags: [sampler, filter, ui]
+video:
+  url: https://www.youtube.com/watch?v=7yQey_p1Yhs
+  title: "MPC 2000 and 2000xl mods pack - for free"
+  credit: vubeatz
+  first_party: true
+  found_via: https://vubeatz.com/mpc-mods.html
 versions:
   - version: "2.0"
     date: 2026-10-08

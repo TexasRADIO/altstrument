@@ -15,6 +15,12 @@ homepage: https://timchurches.github.io/Mutated-Mutables/
 distribution: download
 requires_stock: Braids 1.7 base
 tags: [synth-engine, sequencer, lfo, random]
+video:
+  url: https://www.youtube.com/watch?v=GrlohD0lSRE
+  title: "Bees-in-Trees version 3q demonstration"
+  credit: Tim Churches
+  first_party: true
+  found_via: https://timchurches.github.io/Mutated-Mutables/
 versions:
   - version: v4.1.1
     date: 2015-04-26

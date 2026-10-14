@@ -27,6 +27,11 @@ install_notes: >-
 brick_risk: true
 tags: [sequencer, synth-engine, drums, sampler, fx, performance, usb-audio, midi, fm, physical-modeling,
   editor]
+video:
+  url: https://www.youtube.com/watch?v=yedcHP3jy5s
+  title: "Using the M-VAVE FM-1 with SLOOP Custom Firmware | First Go"
+  credit: "Darren Lock Music"
+  first_party: false
 versions:
 - version: '2.6'
   date: 2026-10-11

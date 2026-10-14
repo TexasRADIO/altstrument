@@ -20,6 +20,12 @@ distribution: patch-your-own
 requires_stock: 1.40C
 install_notes: One-command build from your own OS 1.40C file; no firmware is included.
 tags: [synth-engine, fm, scales, chords, usb-audio, usb-midi, performance]
+video:
+  url: https://www.youtube.com/watch?v=1DqUzvs8J3U
+  title: 'Custom Octatrack firmware. FM machine, glide, scales, chords, direct jump.'
+  credit: Timott_Unsupervised
+  first_party: true
+  found_via: https://github.com/timhastie/octatrick
 versions:
   - version: MKI hardware-tested builds
     date: 2026-09-26

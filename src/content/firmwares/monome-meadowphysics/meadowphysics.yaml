@@ -16,6 +16,11 @@ homepage: https://monome.org/docs/meadowphysics/
 distribution: download
 install_notes: Follow monome's modular update guide (dfu-programmer, update_firmware.command in the release zip).
 tags: [platform, sequencer, grid, random]
+video:
+  url: https://www.youtube.com/watch?v=O7lEoO6r5Ec
+  title: "Meadowphysics Ambient ~ Eurorack"
+  credit: "Emily A. Sprague"
+  first_party: false
 versions:
   - version: v2.2.1
     date: 2021-06-03

@@ -2,6 +2,12 @@ name: MIDI Captain (Nano 4 / Mini 6 / 10)
 manufacturer: PaintAudio
 category: foot-controller
 tagline: CircuitPython-based MIDI foot controllers with colour displays
+description: >-
+  The MIDI Captain is a family of MIDI foot controllers from PaintAudio, sold in
+  several sizes such as the Nano 4, Mini 6 and a 10-switch model. Each has RGB-
+  lit footswitches and a small colour display, and the units appear to a
+  computer as a USB drive for loading configuration files. They send MIDI over
+  USB or DIN and are commonly used to control amp modelers and effects units.
 platform: CircuitPython
 links:
   manufacturer: https://paintaudio.com/

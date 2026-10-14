@@ -18,6 +18,11 @@ license_notes: >-
 homepage: https://metamodule.info
 distribution: download
 tags: [platform]
+video:
+  url: https://www.youtube.com/watch?v=RQwzlIZjT0k
+  title: "MetaModule firmware version 2.0 is here!"
+  credit: 4ms Company
+  first_party: true
 versions:
   - version: firmware-v2.4.0
     date: 2026-10-02

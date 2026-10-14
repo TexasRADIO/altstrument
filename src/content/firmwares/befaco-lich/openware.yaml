@@ -17,6 +17,11 @@ license_notes: Repository LICENSE is the GPL v2 text.
 homepage: https://www.befaco.org/lich/
 distribution: download
 tags: [platform]
+video:
+  url: https://www.youtube.com/watch?v=R_fmbWGKmiM
+  title: "Running OWL Patches in Your Web Browser"
+  credit: Rebel Technology
+  first_party: true
 versions:
   - version: v22.5.0
     date: 2023-03-05

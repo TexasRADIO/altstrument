@@ -2,6 +2,12 @@ name: volca sample
 manufacturer: Korg
 category: sampler
 tagline: 10-part sample player with 16-step sequencer
+description: >-
+  The volca sample is a compact digital sample sequencer made by Korg, released in
+  2015 as part of its volca series. It has ten parts that play 16-bit samples at
+  31.25 kHz from 4 MB of memory (about 65 seconds), with room for 100 samples.
+  A 16-step sequencer with motion sequencing drives it, and the unit has sync
+  in/out and MIDI in.
 links:
   manufacturer: https://www.korg.com/us/products/dj/volca_sample/
   community:

@@ -17,6 +17,12 @@ license: GPL-3.0-only
 distribution: download
 install_notes: Flash over DFU using ST's tool on Windows or dfu-util on macOS and Linux.
 tags: [synth-engine, lfo]
+video:
+  url: https://www.youtube.com/watch?v=ZnCN-DqfH8Q
+  title: "Behringer Neutron custom firmware"
+  credit: man125403
+  first_party: true
+  found_via: https://github.com/mrf-r/Neutron
 versions:
   - version: r15f
     date: 2026-06-23

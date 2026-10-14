@@ -2,6 +2,12 @@ name: monome cross-device tools
 manufacturer: monome
 category: tools
 tagline: Emulators, build tooling and editors for monome modules, grids and arcs
+description: >-
+  This entry groups host-side tools that serve more than one monome device
+  rather than a single product. It covers the libavr32 library and multipass
+  framework behind the AVR32 Eurorack modules, a Docker build image, the monome-
+  rack emulation of monome modules in VCV Rack, and the diii and viii editors
+  and emulators for iii-mode grids and arcs.
 links:
   manufacturer: https://monome.org/docs/
   community:

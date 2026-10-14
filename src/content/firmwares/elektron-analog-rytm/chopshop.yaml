@@ -25,4 +25,10 @@ install_notes: >-
   OS 1.74 for Rytm; a unit on 1.74 cannot take these files and going back is
   unverified. Recovery uses the startup menu over DIN MIDI.
 tags: [sampler, sequencer, editor, chords]
+video:
+  url: https://www.youtube.com/watch?v=_a39Z8hSeAc
+  title: "ChopShop Demo [CHOP samples on Rytm](Custom Elektron Analog Firmware)"
+  credit: Bandersong
+  first_party: true
+  found_via: https://github.com/bandersong/chopshop
 versions: []

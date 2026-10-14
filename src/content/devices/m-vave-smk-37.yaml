@@ -2,6 +2,11 @@ name: SMK-37 Pro / Elite
 manufacturer: M-VAVE
 category: synth
 tagline: 37-key keyboard with built-in FM synth, 16 RGB pads, 8 encoders, 4 faders
+description: >-
+  A compact USB MIDI keyboard controller from M-VAVE, released in 2025, that also works as a standalone
+  synthesizer. Its built-in sound engine is a DX7-style FM synth that can load DX7 patches, and it adds a
+  64-step sequencer with eight stored patterns and an arpeggiator. It has a 1.54-inch display, USB-C for
+  power and data, Bluetooth MIDI and 3.5 mm MIDI in and out jacks.
 platform: JieLi AC791N (WL82), same SoC family as the FM-1
 links:
   manufacturer: https://www.cuvave.com/product?id=smk-37-elite

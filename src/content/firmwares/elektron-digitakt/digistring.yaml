@@ -13,6 +13,12 @@ distribution: patch-your-own
 requires_stock: 1.53 / 1.54
 install_notes: Add the mod in elekloader with your own official OS file.
 tags: [machines, synth-engine, physical-modeling]
+image:
+  url: https://raw.githubusercontent.com/Alez22/digistring/main/site/media/screen.jpg
+  alt: Digitakt display showing the DIGISTRING machine page with TUNE, EXC, STIFF, SAMP, POS, SOFT, TONE and DECAY knobs
+  credit: Alez22
+  source_url: https://alez22.github.io/digistring/
+  first_party: true
 versions:
   - version: v0.8.0
     date: 2026-10-05

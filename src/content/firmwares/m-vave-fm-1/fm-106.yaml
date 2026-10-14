@@ -18,6 +18,12 @@ distribution: browser-installer
 install_notes: Browser WebMIDI installer; see the repository README.
 brick_risk: true
 tags: [synth-engine, usb-audio, editor, midi]
+image:
+  url: https://raw.githubusercontent.com/PatttF/fm-106/main/docs/fm106_screen.png
+  alt: "FM-106 screen in Juno mode with VCF/DCO sliders and a keyboard"
+  credit: "PatttF"
+  source_url: https://github.com/PatttF/fm-106
+  first_party: true
 versions:
 - version: Beta2
   date: 2026-10-12

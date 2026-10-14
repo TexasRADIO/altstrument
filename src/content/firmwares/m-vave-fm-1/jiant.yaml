@@ -20,6 +20,11 @@ install_notes: >-
   Back up flash first.
 brick_risk: true
 tags: [synth-engine, sequencer, fx, fm, editor]
+video:
+  url: https://www.youtube.com/watch?v=V0hWbV5841c
+  title: "JIANT FM: a living, bio-synthetic firmware for the M-VAVE FM-1"
+  credit: "JIANT"
+  first_party: true
 versions:
 - version: 0.6.70
   url: https://github.com/juanjiant-bit/JIANT

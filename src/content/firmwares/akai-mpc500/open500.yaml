@@ -27,6 +27,12 @@ install_notes: >-
   in your browser, flash the result, then load add-on WAVs from the sample
   list.
 tags: [fx, sequencer, sampler, loader]
+video:
+  url: https://www.youtube.com/watch?v=ETZ7N6kh8hg
+  title: "I gave my MPC500 live FX, a grid sequencer and auto chop — Open500"
+  credit: maskisnotmyrealname
+  first_party: true
+  found_via: https://m45k.github.io/open500/
 versions:
   - version: v11 (loader v10)
     date: 2026-09-29

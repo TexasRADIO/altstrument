@@ -2,6 +2,13 @@ name: meadowphysics
 manufacturer: monome
 category: eurorack
 tagline: Cascading counter rhythm sequencer (discontinued)
+description: >-
+  Meadowphysics is a Eurorack module from monome that uses a connected grid to
+  control eight counters, one per row, each counting down to zero and firing an
+  event at its own output jack. Events can also toggle outputs, reset counts or
+  apply rules to other counters, which produces polyrhythmic and generative
+  patterns. The clock can be internal or external and is divisible per counter,
+  and the sequence keeps running when the grid is disconnected.
 platform: AVR32 (AT32UC3B)
 stock_firmware: "2.2.1"
 links:

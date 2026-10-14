@@ -2,6 +2,11 @@ name: MIDI Commander
 manufacturer: MeloAudio
 category: foot-controller
 tagline: Eight-button MIDI foot controller with a small display
+description: >-
+  The MIDI Commander is a USB MIDI foot controller from MeloAudio, built
+  around an STM32F103 microcontroller. It has a row of footswitches, a small
+  OLED display, a USB port and MIDI connectors, and is used to send program
+  changes and controller messages to amps, effects processors and software.
 platform: STM32F103
 links:
   community:

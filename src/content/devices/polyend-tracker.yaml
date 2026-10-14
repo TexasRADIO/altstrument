@@ -2,6 +2,13 @@ name: Tracker
 manufacturer: Polyend
 category: groovebox
 tagline: Standalone tracker-style sequencer and sampler
+description: >-
+  The Tracker is a standalone sampler, synthesizer and sequencer from Polyend
+  that takes its workflow from the tracker software that
+  originated on the Amiga. It has a mechanical keyboard, 48 backlit pads, a
+  large screen and a haptic knob, and plays samples as sampler, wavetable or
+  granular instruments. It records from line or microphone inputs and has an FM
+  radio, stereo output, MIDI in and out, and USB-C.
 stock_firmware: 1.9.2
 links:
   manufacturer: https://polyend.com/tracker/

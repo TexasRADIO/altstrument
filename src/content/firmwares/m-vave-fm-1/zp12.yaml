@@ -21,6 +21,11 @@ distribution: browser-installer
 install_notes: Browser WebMIDI installer from the project site. Sample editor in the browser.
 brick_risk: true
 tags: [drums, sampler, sequencer, fx, performance]
+video:
+  url: https://www.youtube.com/watch?v=3dN7DrobRK0
+  title: "I Turned the M-VAVE FM-1 Into an SP-1200 Style 12-Bit Sampler (Free Custom Firmware)"
+  credit: "zvenson"
+  first_party: true
 versions:
 - version: '2.2'
   date: 2026-10-10

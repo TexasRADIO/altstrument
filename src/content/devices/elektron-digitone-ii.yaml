@@ -2,6 +2,13 @@ name: Digitone II
 manufacturer: Elektron
 category: synth
 tagline: 16-track FM synth
+description: >-
+  The Digitone II is a desktop digital synthesizer from Elektron, announced in
+  October 2024 as the successor to the Digitone. It has sixteen tracks and
+  sixteen voices, four synth machines (Wavetone, Swarmer, FM Tone and FM Drum)
+  and a sequencer with patterns of up to 128 steps. It shares its enclosure and
+  hardware platform with the Digitakt II, built around a ColdFire control
+  processor and a SHARC+ DSP.
 platform: ColdFire + SHARC+ DSP (ADSP-21569)
 stock_firmware: "1.11 / 1.12"
 links:

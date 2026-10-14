@@ -2,6 +2,12 @@ name: i2c2midi
 manufacturer: attowatt
 category: eurorack
 tagline: Open DIY 2HP Teletype expander that speaks i2c and MIDI
+description: >-
+  i2c2midi is a DIY open-source 2HP Eurorack module by attowatt that adds MIDI
+  to the monome Teletype through dedicated I2M ops. It sends notes, CC and other
+  messages out through a TRS jack and USB host and receives MIDI over USB host,
+  with 16 channels and 8-voice polyphony per channel. It runs on a Teensy and
+  also works with crow through a separate library.
 platform: Teensy 3.2 / 3.6 / 4.1
 links:
   manufacturer: https://github.com/attowatt/i2c2midi

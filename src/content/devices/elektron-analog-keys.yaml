@@ -2,6 +2,12 @@ name: Analog Keys
 manufacturer: Elektron
 category: synth
 tagline: 4-voice analog keyboard synth
+description: >-
+  The Analog Keys is a four-voice analog synthesizer from Elektron with a 37-key
+  velocity- and aftertouch-sensitive keyboard, released in December 2013. It
+  uses the same synth architecture as the Analog Four, with two oscillators and
+  two filters per voice, and adds Elektron's parameter-lock sequencer and
+  onboard effects.
 stock_firmware: "1.56"
 links:
   community:

@@ -2,6 +2,12 @@ name: Mirage
 manufacturer: Ensoniq
 category: sampler
 tagline: 1984 keyboard sampler
+description: >-
+  The Mirage is an eight-voice, 61-key sampling keyboard introduced in 1984 as
+  Ensoniq's first product. It records 8-bit samples into 128 KB of memory and
+  passes each voice through an analog resonant low-pass filter. Samples and
+  the operating system load from a built-in 3.5-inch floppy drive, and it has
+  MIDI. Keyboard and rack-module versions were sold until 1988.
 stock_firmware: MASOS v2
 links:
   community:

@@ -22,6 +22,12 @@ install_notes: >-
   Installs from the browser at genkigenki.github.io/smk37. Unofficial; install at your own risk.
 brick_risk: true
 tags: [sequencer, synth-engine, drums, performance, usb-audio]
+video:
+  url: https://www.youtube.com/watch?v=HqUAT-hULgU
+  title: "SMK37 Makkuro37 Firmware, Snoop37 Firmware"
+  credit: "genkiginko"
+  first_party: true
+  found_via: https://genkigenki.github.io/smk37/
 versions:
 - version: 2.6.1
   date: 2026-10-13

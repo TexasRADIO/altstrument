@@ -22,6 +22,11 @@ install_notes: >-
   ships SMK-37+VA for the SMK-37.
 brick_risk: true
 tags: [synth-engine, sequencer, fm, fx, performance, midi]
+video:
+  url: https://www.youtube.com/watch?v=jfuoEBIUsEE
+  title: "M-Vave FM-1 | Now is VA Synthesizer | Full Tutorial of New Engine & Sequencer"
+  credit: "NatLife Sounds"
+  first_party: false
 versions:
 - version: '101'
   date: 2026-10-12

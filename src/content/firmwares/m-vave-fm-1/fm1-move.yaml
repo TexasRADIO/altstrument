@@ -21,3 +21,9 @@ install_notes: >-
   on hardware yet; do not install on a unit you cannot recover.
 brick_risk: true
 tags: [sequencer, performance, ui, drums]
+image:
+  url: https://raw.githubusercontent.com/Nicodesy06/FM1-MOVE/fm1-move/dev/assets/readme/screens.png
+  alt: "FM1 Move screens rendered by the firmware"
+  credit: "Nicodesy06"
+  source_url: https://github.com/Nicodesy06/FM1-MOVE
+  first_party: true

@@ -16,6 +16,12 @@ install_notes: >-
   Browser WebMIDI installer, which can also restore M-VAVE firmware. Plays in a browser first.
 brick_risk: true
 tags: [synth-engine, performance]
+image:
+  url: https://raw.githubusercontent.com/charlesvestal/fm1-amb/main/docs/img/screen-garden.png
+  alt: "AMB-1 screen on the FM-1, showing the generative garden view"
+  credit: "Charles Vestal"
+  source_url: https://github.com/charlesvestal/fm1-amb
+  first_party: true
 versions:
 - version: '1.1'
   date: 2026-10-10

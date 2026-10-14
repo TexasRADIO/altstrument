@@ -21,6 +21,11 @@ homepage: https://burns.ca/eurorack.html
 distribution: download
 install_notes: Follow the official Braids firmware update procedure; the author recommends starting from stock v1.8 or later.
 tags: [synth-engine, chords]
+video:
+  url: https://www.youtube.com/watch?v=hCaFaz2w3y4
+  title: "Mutable Instruments Braids - Renaissance ALT FIRMWARE!"
+  credit: The Unperson
+  first_party: false
 versions:
   - version: "0.4"
     date: 2018-11-28

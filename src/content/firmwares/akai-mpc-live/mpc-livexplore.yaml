@@ -23,6 +23,12 @@ install_notes: >-
   See the README and wiki. Flash bootstrap SD card images with an image-writing
   tool; SSH images are installed through the normal update path.
 tags: [research, loader]
+video:
+  url: https://www.youtube.com/watch?v=x_guX13cvb8
+  title: "Force on MPC : sandbox booting from a custom usb key on a MPC Live"
+  credit: TheKik Gen
+  first_party: true
+  found_via: https://github.com/TheKikGen/MPC-LiveXplore
 versions:
   - version: SSH image for MPC 3.4.2.13
     url: https://github.com/TheKikGen/MPC-LiveXplore

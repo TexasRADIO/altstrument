@@ -21,6 +21,12 @@ distribution: browser-installer
 install_notes: Browser WebMIDI installer from the project site; it can put sloopDX back.
 brick_risk: true
 tags: [game, emulator]
+video:
+  url: https://www.youtube.com/shorts/dCOmvZW9SWU
+  title: "Can it run Doom? M-VAVE FM-1 Firmware Wars edition"
+  credit: "zvenson"
+  first_party: true
+  found_via: https://github.com/zvenson/fm1doom
 versions:
 - version: '0.5'
   date: 2026-10-07

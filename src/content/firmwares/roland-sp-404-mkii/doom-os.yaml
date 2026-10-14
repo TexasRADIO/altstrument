@@ -31,6 +31,11 @@ install_notes: >-
   SD card, hold SHIFT while powering on and press the VALUE knob. Running the
   updater with Roland's original file restores stock.
 tags: [sequencer, performance, ui, os]
+video:
+  url: https://www.youtube.com/watch?v=I5r-e3XpZmQ
+  title: "Is this the future of SP-404MKII firmware?! (DOOM OS Overview)"
+  credit: "SPVIDZ"
+  first_party: false
 versions:
   - version: 0.6.2-alpha (build 3824)
     date: 2026-10-06

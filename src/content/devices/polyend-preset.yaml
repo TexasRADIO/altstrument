@@ -2,6 +2,13 @@ name: Preset
 manufacturer: Polyend
 category: eurorack
 tagline: Eurorack module with pads, knobs, buttons and CV I/O
+description: >-
+  The Preset is a 22 HP Eurorack module from Polyend that recalls presets and
+  records control voltage sequences. A grid of 32 pads selects among 32 banks of
+  32 presets, and nine clickable, colour-lit encoders set the values. The module
+  has nine CV outputs that can send notes, gates, fixed values or recorded
+  automation of up to 30 seconds, plus one input for recording, selecting
+  presets by voltage or advancing on a gate. It has no display.
 platform: NXP MK20DX256
 links:
   manufacturer: https://polyend.com/

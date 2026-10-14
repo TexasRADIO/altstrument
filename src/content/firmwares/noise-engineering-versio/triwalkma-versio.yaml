@@ -13,6 +13,12 @@ homepage: https://github.com/onoma2/TriwalkmaVersio
 distribution: download
 install_notes: Prebuilt TriwalkmaVersio_05.bin is in the repository; flash with the Daisy Web Programmer.
 tags: [looper]
+image:
+  url: "https://raw.githubusercontent.com/onoma2/TriwalkmaVersio/main/triwalkma.png"
+  alt: "Triwalkma Versio panel overlay labelling Blend, Regen, left, mid, right, Wand and Dub controls"
+  credit: "onoma2"
+  source_url: https://github.com/onoma2/TriwalkmaVersio
+  first_party: true
 versions:
   - version: TriwalkmaVersio_05.bin
     url: https://github.com/onoma2/TriwalkmaVersio

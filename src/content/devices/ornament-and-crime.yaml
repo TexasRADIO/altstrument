@@ -2,6 +2,13 @@ name: Ornament & Crime (o_C, uO_C, ORN8)
 manufacturer: Ornament & Crime (open hardware)
 category: eurorack
 tagline: Teensy-based quad CV / trigger module with OLED
+description: >-
+  Ornament & Crime (o_C) is an open-source Eurorack module with four 16-bit CV
+  outputs, four CV inputs, digital inputs, an OLED display and two encoders. The
+  original is a 14HP design by mxmxmx built around a Teensy 3.2 and a DAC8565,
+  and a smaller 8HP version (uO_C) and a Teensy 4.1 based board (ORN8) followed.
+  Its stock software was developed by Patrick Dowling, mxmxmx and Tim Churches,
+  and it reuses some code from Mutable Instruments modules.
 platform: Teensy 3.2 / 4.0 / 4.1
 links:
   manufacturer: https://ornament-and-cri.me/

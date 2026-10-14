@@ -19,3 +19,9 @@ install_notes: >-
   Build, then install with tools/fm1_install.py; return to stock with the X0X web installer.
 brick_risk: true
 tags: [sequencer, performance, ui]
+image:
+  url: https://raw.githubusercontent.com/cmlarsen/fm1-rocket-os/main/docs/img/readme/modes-live-pads.png
+  alt: "LIVE mode PADS layer on the FM-1 screen, as rendered by the firmware"
+  credit: "cmlarsen"
+  source_url: https://github.com/cmlarsen/fm1-rocket-os
+  first_party: true

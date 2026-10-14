@@ -15,6 +15,12 @@ distribution: download
 install_notes: Installs from a terminal with a script from the source; no browser installer.
 brick_risk: true
 tags: [chords, sequencer, drums, performance]
+image:
+  url: https://raw.githubusercontent.com/math0ne/fm1-chord/main/screenshots/home_c7.png
+  alt: "fm1-chord home screen showing a C7 chord"
+  credit: "math0ne"
+  source_url: https://github.com/math0ne/fm1-chord
+  first_party: true
 versions:
 - version: '0.3'
   date: 2026-10-09

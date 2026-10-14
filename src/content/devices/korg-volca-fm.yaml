@@ -2,6 +2,12 @@ name: volca fm
 manufacturer: Korg
 category: synth
 tagline: Compact 6-operator FM synth with 16-step sequencer
+description: >-
+  The volca fm is a compact digital FM synthesizer made by Korg, released in 2016
+  as part of its volca series. It has three-voice polyphony, six operators and
+  32 algorithms, and can load Yamaha DX7 SysEx patches. A 16-step sequencer with
+  motion sequencing stores up to 16 patterns, and the touch keyboard records
+  notes into it.
 links:
   manufacturer: https://www.korg.com/us/products/dj/volca_fm/
   community:

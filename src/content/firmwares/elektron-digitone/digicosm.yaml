@@ -11,6 +11,11 @@ license: GPL-2.0-or-later
 distribution: patch-your-own
 requires_stock: 1.43 / 1.44
 tags: [fx]
+video:
+  url: https://www.youtube.com/watch?v=uTnWqPjG6G4
+  title: "DigiCosm - a Hologram Microcosm Inspired Mod for the Digitone 1"
+  credit: pspsps
+  first_party: false
 versions:
   - version: v0.1
     date: 2026-10-09

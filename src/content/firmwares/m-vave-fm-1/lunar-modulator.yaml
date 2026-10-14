@@ -18,3 +18,9 @@ license: MIT
 license_notes: MIT for the project; builds that include fm1-x0x-derived engines are GPL.
 distribution: source-only
 tags: [synth-engine, sequencer, emulator, research]
+image:
+  url: https://raw.githubusercontent.com/ip2k/lunar-modulator/main/assets/screenshots/screen-macro.png
+  alt: "Lunar Modulator Macro screen with the VA Pair model and Harmonics, Timbre and Morph sliders"
+  credit: "ip2k"
+  source_url: https://github.com/ip2k/lunar-modulator
+  first_party: true

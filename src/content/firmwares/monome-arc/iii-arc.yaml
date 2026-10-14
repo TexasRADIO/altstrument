@@ -24,6 +24,11 @@ distribution: download
 requires_stock: 2025 arc (with pushbutton)
 install_notes: The UF2 is attached to each iii release; see the iii docs for entering the bootloader. The docs describe the diii browser tool for restarting a grid into it.
 tags: [platform, scripting, usb-midi]
+video:
+  url: https://www.youtube.com/watch?v=dnNqcb3_JhI
+  title: "rake - monome arc iii - rake arps like a stringed instrument"
+  credit: "Quixotic7"
+  first_party: false
 versions:
   - version: v1.1.2
     date: 2026-04-18

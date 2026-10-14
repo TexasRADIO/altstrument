@@ -16,6 +16,12 @@ install_notes: >-
   Browser WebMIDI installer and emulator on the project page. Releases also ship a FuMi-X.Y.Z.sf2 SoundFont.
 brick_risk: true
 tags: [chords, synth-engine, fm, performance]
+image:
+  url: https://raw.githubusercontent.com/cartesive/fumi-1/main/docs/img/screen-home.png
+  alt: "FuMi-1 home screen showing the Koto voice with trill, vibrato and reverb knobs"
+  credit: "cartesive"
+  source_url: https://github.com/cartesive/fumi-1
+  first_party: true
 versions:
 - version: 1.0.7
   date: 2026-10-11

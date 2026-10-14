@@ -2,6 +2,13 @@ name: Deluge
 manufacturer: Synthstrom Audible
 category: groovebox
 tagline: Portable sequencer, synthesizer and sampler
+description: >-
+  The Deluge is a portable standalone sequencer, synthesizer and sampler from
+  Synthstrom Audible, a New Zealand company. It has a 16 by 8 grid of 128 RGB
+  pads, subtractive, wavetable and FM synth engines, and a sampler that streams
+  from an SD card. The unit offers up to 64 synth voices, MIDI and CV/gate
+  outputs, audio I/O including a built-in microphone, and a rechargeable
+  battery. It is built around a Renesas RZ/A1L processor.
 platform: Renesas RZ/A1L (Arm Cortex-A9)
 stock_firmware: 1.2.1
 links:

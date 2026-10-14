@@ -2,6 +2,12 @@ name: Digitone / Digitone Keys (mk1)
 manufacturer: Elektron
 category: synth
 tagline: 8-voice FM synth
+description: >-
+  The Digitone is a desktop four-operator FM synthesizer from Elektron, released
+  in 2018. It has eight voices shared across four synth tracks, plus four MIDI
+  tracks, and uses Elektron's parameter-lock step sequencer. A 37-key version,
+  the Digitone Keys, followed in 2019 and shares the same engine and firmware
+  line.
 platform: ColdFire + DSP
 stock_firmware: "1.43 / 1.44"
 links:

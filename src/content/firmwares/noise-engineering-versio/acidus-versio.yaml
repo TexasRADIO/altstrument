@@ -23,6 +23,11 @@ install_notes: >-
   on Noise Engineering's firmware portal
   (https://noiseengineering.us/portal/firmware/).
 tags: [synth-engine, emulator, acid]
+video:
+  url: https://www.youtube.com/watch?v=JOKCHAt-3OM
+  title: "Modular Makeover: Turning the Noise Engineering Versio into a 303 voice"
+  credit: "Blue Nautilus"
+  first_party: true
 versions:
   - version: v1.0.1
     date: 2024-08-24

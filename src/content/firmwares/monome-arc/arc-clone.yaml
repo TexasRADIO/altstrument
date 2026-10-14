@@ -18,3 +18,8 @@ homepage: https://github.com/TheSlowGrowth/MonomeArcClone
 distribution: source-only
 requires_stock: DIY arc-clone hardware
 tags: [platform]
+video:
+  url: https://www.youtube.com/watch?v=K9FgJvkKmf4
+  title: "diy monome arc - early prototype"
+  credit: "TheSlowGrowth"
+  first_party: true

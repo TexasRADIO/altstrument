@@ -32,6 +32,11 @@ install_notes: >-
   contents to an exFAT card named 662522. Read the whole README first. Latest
   README commit is 2025-11-10.
 tags: [sequencer, loader, midi]
+video:
+  url: https://www.youtube.com/watch?v=XxU1bfDu7g4
+  title: "How to Turn the Akai Force into a BEAST! (MockbaMod Firmware 2024)"
+  credit: Dream Static Sounds
+  first_party: false
 versions:
   - version: SD card 4.08
     url: https://github.com/MockbaTheBorg/MockbaMod

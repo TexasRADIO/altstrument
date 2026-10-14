@@ -23,6 +23,11 @@ install_notes: >-
   Played into the volca fm as audio like Korg's updates. Both sys_1 and sys_2
   files are needed. The new features can be switched off in the global menu.
 tags: [velocity, midi, lfo, fx, bugfixes]
+video:
+  url: https://www.youtube.com/watch?v=LpsWfjiwGUg
+  title: 'Volca FM firmware 108 Unofficial - finally a velocity fix!'
+  credit: ranzee
+  first_party: false
 versions:
   - version: "1.09"
     date: 2020-02-18

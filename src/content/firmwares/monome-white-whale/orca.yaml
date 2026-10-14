@@ -21,6 +21,11 @@ distribution: download
 requires_stock: White whale hardware
 install_notes: Flash like any monome module with dfu-programmer; the repository README points to monome's modular docs for toolchain and flashing.
 tags: [sequencer, grid, scales]
+video:
+  url: https://www.youtube.com/watch?v=upeqYIQH97E
+  title: "orca - alternative firmware for white whale and arc"
+  credit: "scanner darkly"
+  first_party: true
 versions:
   - version: v2.6
     date: 2016-11-24

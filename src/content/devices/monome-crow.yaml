@@ -2,6 +2,13 @@ name: crow
 manufacturer: monome / Whimsical Raps
 category: eurorack
 tagline: Scriptable USB-to-CV Lua module (discontinued)
+description: >-
+  crow is a 2HP Eurorack module from monome and Whimsical Raps with two CV
+  inputs, four 16-bit CV outputs, a USB port and an ii/i2c connection on the
+  rear. It runs a Lua scripting environment on an STM32F722 microcontroller and
+  stores a complete script, so it keeps responding to CV and ii messages with no
+  computer attached. Scripts are loaded from norns, from a computer through the
+  druid terminal tool, or from Max and Max for Live.
 platform: STM32F722
 stock_firmware: "4.0.5"
 links:

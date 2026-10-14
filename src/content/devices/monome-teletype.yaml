@@ -2,6 +2,12 @@ name: teletype
 manufacturer: monome
 category: eurorack
 tagline: Scriptable Eurorack event trigger and CV scripting module
+description: >-
+  Teletype is an 18HP Eurorack module from monome, released in 2015, in which
+  short text scripts are assigned to eight trigger inputs and set four CV
+  outputs and four trigger outputs. Scripts, patterns and scenes are edited with
+  a USB keyboard plugged into the front panel, and the module runs without the
+  keyboard attached. It can also talk to other modules over the ii bus.
 platform: AVR32 (AT32UC3B)
 stock_firmware: "5.0.0"
 links:

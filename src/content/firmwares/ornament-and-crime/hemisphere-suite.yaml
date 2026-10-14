@@ -16,6 +16,11 @@ homepage: https://github.com/Chysn/O_C-HemisphereSuite
 distribution: download
 requires_stock: Teensy 3.2 o_C hardware
 tags: [sequencer, quantizer, lfo, envelopes]
+video:
+  url: https://www.youtube.com/watch?v=dg_acylaMZU
+  title: "Hemispheres for Ornament and Crime Part 1: Installation, getting started, and 5 patch ideas"
+  credit: SynthDad
+  first_party: false
 versions:
   - version: HSv1.99 Repeating
     date: 2022-06-19

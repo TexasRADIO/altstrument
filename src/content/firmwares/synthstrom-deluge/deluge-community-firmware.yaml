@@ -25,6 +25,11 @@ distribution: download
 install_notes: >-
   Follow the update guide. Back up the SD card before updating.
 tags: [fx, sequencer, synth-engine, fm, ui, chords, scales, velocity]
+video:
+  url: https://www.youtube.com/watch?v=IiwvwLqUmq4
+  title: "New Deluge Community Firmware 1.2 Features! DX7, Audio Export, Velocity View #synthstromdeluge"
+  credit: "Bay Mud"
+  first_party: false
 versions:
   - version: 1.2.1 (Chopin)
     date: 2025-05-12

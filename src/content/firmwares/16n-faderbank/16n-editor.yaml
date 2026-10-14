@@ -19,6 +19,12 @@ homepage: https://16n-faderbank.github.io/editor
 distribution: browser-installer
 install_notes: Open the hosted editor in a WebMIDI-capable browser with the faderbank connected.
 tags: [editor]
+video:
+  url: https://www.youtube.com/watch?v=3n2_3b55qWY
+  title: "16n Faderbank: Firmware 2.0.0 Introduction"
+  credit: Tom Armitage
+  first_party: true
+  found_via: https://github.com/16n-faderbank/16n-editor
 versions:
   - version: v2.0.4
     date: 2023-04-18

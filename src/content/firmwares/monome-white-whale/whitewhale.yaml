@@ -17,6 +17,11 @@ homepage: https://monome.org/docs/whitewhale/
 distribution: download
 install_notes: Follow monome's modular update guide (dfu-programmer, update_firmware.command in the release zip). A flash replaces the whole image including presets.
 tags: [platform, sequencer, grid, random]
+video:
+  url: https://www.youtube.com/watch?v=RaG5OtmVUOc
+  title: "Monome White Whale Modular synth jam"
+  credit: "yank"
+  first_party: false
 versions:
   - version: v1.6.0
     date: 2021-06-03

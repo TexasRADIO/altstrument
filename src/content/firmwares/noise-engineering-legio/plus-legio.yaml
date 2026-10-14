@@ -19,4 +19,10 @@ install_notes: >-
   (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
   (Chrome, Edge or Opera). Free for Legio owners.
 tags: [official, voice, additive]
+video:
+  url: https://www.youtube.com/watch?v=Aiu3YBos3JI
+  title: "Plus Legio: Full additive voice on the Legio platform"
+  credit: Noise Engineering
+  first_party: true
+  found_via: https://noiseengineering.us/products/legio/
 versions: []

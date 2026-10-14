@@ -2,6 +2,13 @@ name: M8 Headless
 manufacturer: Dirtywave
 category: groovebox
 tagline: Full M8 tracker on a bare Teensy 4.1 with a host display client
+description: >-
+  The M8 is a tracker-style sequencer, synthesizer and sampler designed by
+  Timothy Lamb and sold by Dirtywave, with the first M8 Model:01 units
+  shipping in 2021. It runs eight tracks of assignable instruments, including
+  FM, wavetable and virtual analog synth engines and sample playback, and
+  sends MIDI. The headless version runs the same software on a bare Teensy 4.1
+  and relies on a computer or handheld client for the display and keys.
 platform: Teensy 4.1
 stock_firmware: 6.6.3E
 links:

@@ -2,6 +2,13 @@ name: OpenDeck boards
 manufacturer: Shantea Controls
 category: diy-platform
 tagline: Open MIDI and OSC controller platform for custom hardware
+description: >-
+  OpenDeck is an open-source platform for building MIDI controllers, developed
+  by Shantea Controls in Zagreb, Croatia. It handles buttons, encoders,
+  potentiometers and force-sensitive resistors as inputs, drives single-colour
+  and RGB LEDs, and supports Nextion touchscreens. Controllers send USB MIDI and
+  DIN MIDI, with BLE MIDI and OSC on selected boards, and are configured through
+  a browser-based configurator.
 platform: RP2040, ESP32-S3, STM32, nRF, Teensy 4 (Zephyr RTOS)
 links:
   manufacturer: https://shanteacontrols.com/

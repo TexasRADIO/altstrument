@@ -2,6 +2,13 @@ name: grid
 manufacturer: monome
 category: controller
 tagline: Backlit button-grid controller, 40h to 2022-era grid one / zero
+description: >-
+  The grid is monome's line of USB button-grid controllers, made since 2006. It
+  has no fixed function: when connected to a computer, norns or a Eurorack
+  module, the application determines what it does, for example a sequencer or
+  sample cutter. Editions range from the 8x8 40h and the 64, 128 and 256-key
+  series grids to the 16-step variable-brightness grids from 2012 onward and the
+  RP2040-based grid one (8x16) and grid zero (16x16) of 2023.
 platform: AVR8 (40h, monome kit), RP2040 (2022 and later)
 links:
   manufacturer: https://monome.org/docs/grid/

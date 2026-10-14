@@ -17,3 +17,8 @@ distribution: source-only
 requires_stock: Nozori 68 or 84 hardware
 install_notes: Update procedure is documented at nozoid.com/update-nozori-software.
 tags: [platform]
+video:
+  url: https://www.youtube.com/watch?v=T3NY9tAG_Ms
+  title: "Nozori 68, multimod filter"
+  credit: ch nry
+  first_party: true

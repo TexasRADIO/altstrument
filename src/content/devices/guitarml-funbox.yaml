@@ -2,6 +2,12 @@ name: Funbox
 manufacturer: GuitarML
 category: pedal
 tagline: Stereo DIY guitar pedal platform for the Daisy Seed
+description: >-
+  Funbox is an open-source stereo digital guitar pedal design by Keith Bloemer
+  of GuitarML, first released in 2024. Its PCB, with KiCad design files in the
+  GitHub repository, hosts an Electrosmith Daisy Seed (an STM32H750 audio
+  board) in a 125B enclosure with six knobs, three toggle switches and two
+  footswitches.
 platform: Electrosmith Daisy Seed
 links:
   manufacturer: https://github.com/GuitarML/FunBox

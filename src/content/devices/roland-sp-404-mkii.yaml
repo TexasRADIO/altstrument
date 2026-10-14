@@ -2,6 +2,13 @@ name: SP-404MKII
 manufacturer: Roland
 category: sampler
 tagline: 16-pad sampler with onboard effects and pattern sequencer
+description: >-
+  The SP-404MKII is a compact sampler from Roland, released in 2021 as the
+  successor to the SP-404 line. It has 16 velocity-sensitive RGB pads plus a sub
+  pad, 32-voice polyphony, 16 GB of internal storage and a graphic OLED display.
+  The unit includes a large set of bus effects, a pattern sequencer with real-time
+  and step recording, a mic and guitar input, MIDI in and out, and USB-C audio.
+  It can run from mains power, USB, or AA batteries.
 stock_firmware: "5.52"
 links:
   manufacturer: https://www.roland.com/global/products/sp-404mk2/

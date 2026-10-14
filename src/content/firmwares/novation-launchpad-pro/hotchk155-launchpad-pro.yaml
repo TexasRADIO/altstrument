@@ -10,6 +10,11 @@ source_status: open
 license: BSD-3-Clause
 distribution: source-only
 tags: [platform, sdk]
+video:
+  url: https://www.youtube.com/watch?v=OWO5yih11nE
+  title: "Launchpad Pro custom firmware.. first attempts!"
+  credit: Jason Hotchkiss
+  first_party: true
 versions:
   - version: master @ 10ee62e
     date: 2015-09-27

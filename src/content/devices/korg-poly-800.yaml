@@ -2,6 +2,14 @@ name: Poly-800 / EX-800
 manufacturer: Korg
 category: synth
 tagline: Eight-voice DCO polysynth and its rack module
+description: >-
+  The Poly-800 is an eight-voice polyphonic synthesizer made by Korg, introduced in
+  1983, and the EX-800 is its keyboardless rack version from 1984. Each voice uses
+  a digitally controlled oscillator (DCO) with sawtooth and square waves, and
+  all voices share one resonant low-pass filter. A Double mode trades polyphony
+  for two oscillators per voice, and the Poly-800 stores 64 patches with cassette
+  backup and has a 256-step sequencer. Its low price, battery operation and
+  joystick were distinguishing features.
 platform: 80C85
 links:
   community:

@@ -20,6 +20,12 @@ install_notes: >-
   the same site.
 brick_risk: true
 tags: [drums, synth-engine, sequencer, fx, usb-audio, performance]
+video:
+  url: https://www.youtube.com/watch?v=cZLYrZaLDUk
+  title: "m-vave fm-1 x0x firmware higher state of consciousness"
+  credit: "Charles Vestal"
+  first_party: true
+  found_via: https://github.com/charlesvestal/fm1-x0x
 versions:
 - version: 1.0.6
   date: 2026-10-11

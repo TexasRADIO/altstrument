@@ -20,3 +20,9 @@ install_notes: >-
   paths and their limits.
 brick_risk: true
 tags: [platform, sdk, synth-engine, sequencer, editor]
+image:
+  url: https://raw.githubusercontent.com/w0ts/optimist/main/assets/screens/editor-drums.png
+  alt: "Optimist web editor showing the drum track step sequencer grid"
+  credit: "w0ts"
+  source_url: https://github.com/w0ts/optimist
+  first_party: true

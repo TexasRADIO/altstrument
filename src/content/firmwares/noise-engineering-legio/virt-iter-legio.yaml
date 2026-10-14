@@ -19,4 +19,10 @@ install_notes: >-
   (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
   (Chrome, Edge or Opera). Free for Legio owners.
 tags: [official, oscillator]
+video:
+  url: https://www.youtube.com/watch?v=lEUll05FRds
+  title: "Virt Iter Legio - stereo oscillator in 6HP from Noise Engineering"
+  credit: Noise Engineering
+  first_party: true
+  found_via: https://noiseengineering.us/products/legio/
 versions: []

@@ -19,4 +19,9 @@ install_notes: >-
   (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
   (Chrome, Edge or Opera). Free for Versio owners.
 tags: [official, delay, experimental]
+video:
+  url: https://www.youtube.com/watch?v=ciZdXQJlmCo
+  title: "Imitor Versio - stereo delay module and DSP platform for Eurorack"
+  credit: "Noise Engineering"
+  first_party: true
 versions: []

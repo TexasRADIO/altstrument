@@ -26,6 +26,11 @@ install_notes: >-
   Build from your own stock 1.40C .syx, then flash with Elektron Transfer or
   from the CF card. Bootloader is not modified.
 tags: [fx, machines, usb-audio, usb-midi, bugfixes]
+video:
+  url: https://www.youtube.com/watch?v=GGpkCyshUak
+  title: 'Octabam testing round 1'
+  credit: Sam Banks
+  first_party: true
 versions:
   - version: "REC THRESHOLD (PR #687)"
     date: 2026-10-13

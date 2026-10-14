@@ -2,6 +2,12 @@ name: Plaits
 manufacturer: Mutable Instruments
 category: eurorack
 tagline: Macro oscillator (discontinued)
+description: >-
+  Plaits is a 12HP Eurorack macro oscillator designed by Émilie Gillet and sold
+  by Mutable Instruments from 2018 to 2022. It offers sixteen synthesis models
+  split between pitched sounds and noise or percussion, with two outputs,
+  internal modulation and a built-in low-pass gate. The module runs on an
+  STM32F373 at 72 MHz with a PCM5100A DAC.
 platform: STM32F3
 links:
   manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/plaits/

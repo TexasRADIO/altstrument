@@ -17,6 +17,12 @@ install_notes: >-
   rollback) first. Browser emulator at /emu/.
 brick_risk: true
 tags: [performance, synth-engine, fm]
+image:
+  url: https://raw.githubusercontent.com/Quixotic7/PurpleMonkeyFM1/main/docs/img/pm_screens.png
+  alt: "Collage of PurpleMonkey FM-1 screens"
+  credit: "Quixotic7"
+  source_url: https://github.com/Quixotic7/PurpleMonkeyFM1
+  first_party: true
 versions:
 - version: '0.11'
   date: 2026-10-10

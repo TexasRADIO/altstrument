@@ -29,3 +29,8 @@ install_notes: >-
   Build in the browser, download the WAV, and apply it with the normal Plaits
   audio firmware update procedure. The HEX export is for hardware programmers.
 tags: [synth-engine, wavetable, editor]
+video:
+  url: https://www.youtube.com/watch?v=UAgslFPZEC0
+  title: "Plaits Palette: Customize Your Mutable Instruments Plaits"
+  credit: The Unperson
+  first_party: false

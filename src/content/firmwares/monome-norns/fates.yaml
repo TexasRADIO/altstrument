@@ -23,6 +23,11 @@ distribution: download
 requires_stock: Raspberry Pi 3B+ or 4B on a Fates board; 220321 or later for on-device updates
 install_notes: Run SYSTEM > UPDATE while connected to the internet, or upload the release tgz to ~/update/ over SFTP. Back up scripts first.
 tags: [platform, os]
+video:
+  url: https://www.youtube.com/watch?v=0mBcM201sXI
+  title: "Allinaire Live: Monome Norns/Fates + ARC. Granular Synthesis. New Atlantis"
+  credit: "Allinaire"
+  first_party: false
 versions:
   - version: v2.9.3 (build 250926)
     date: 2025-10-07

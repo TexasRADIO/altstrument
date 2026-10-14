@@ -19,6 +19,11 @@ license_notes: >-
 homepage: https://ornament-and-cri.me/
 distribution: download
 tags: [platform, sequencer, quantizer, lfo, envelopes]
+video:
+  url: https://www.youtube.com/watch?v=SDgQd3wpV5U
+  title: "Ornament and Crime: Original and Hemispheres Firmware Overview"
+  credit: After Later Audio
+  first_party: false
 versions:
   - version: "1.3.6"
     date: 2019-10-07

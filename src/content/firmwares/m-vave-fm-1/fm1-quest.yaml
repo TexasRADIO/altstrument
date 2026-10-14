@@ -18,6 +18,12 @@ install_notes: >-
   over it.
 brick_risk: true
 tags: [game, sequencer, ui, performance]
+video:
+  url: https://www.youtube.com/watch?v=ITECI2cEHsU
+  title: "FM1 Quest v0.2 • And How I turned a M-VAVE FM-1 synthesizer into a pixel-art RPG"
+  credit: "Heric Reis"
+  first_party: true
+  found_via: https://fm1.quest/
 versions:
 - version: build 38
   date: 2026-10-12

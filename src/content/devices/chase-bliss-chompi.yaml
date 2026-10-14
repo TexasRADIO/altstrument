@@ -2,6 +2,13 @@ name: CHOMPI
 manufacturer: Chase Bliss
 category: sampler
 tagline: Chromatic sampler and tape-music instrument
+description: >-
+  CHOMPI is a portable sampler from CHOMPI Club, now part of Chase Bliss,
+  introduced in 2023. It has a built-in microphone, an internal battery, a
+  stereo aux input and a two-octave chromatic keyboard of mechanical switches,
+  with a screenless interface of RGB LEDs and push-button encoders. Sample
+  playback, envelopes, a filter and a single-knob delay and reverb section run on
+  an Electrosmith Daisy Seed.
 platform: Electrosmith Daisy Seed
 stock_firmware: TAPE 2.0
 links:

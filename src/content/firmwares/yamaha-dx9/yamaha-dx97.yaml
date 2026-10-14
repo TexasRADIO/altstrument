@@ -21,6 +21,11 @@ install_notes: >-
   patches, and hold FUNCTION while powering on after installing to initialise
   parameter memory. The author will help people who cannot burn an EPROM.
 tags: [fm, synth-engine, velocity, midi]
+video:
+  url: https://www.youtube.com/watch?v=AdHSHtNyd9g
+  title: "Synthesizer Upcycle | Yamaha DX9 to DX7 | plus cap repair |🎶🔌🎹 |"
+  credit: "TailBiterz Synthesizers"
+  first_party: false
 versions:
   - version: v1.0.2
     date: 2024-06-20

@@ -2,6 +2,12 @@ name: Braids
 manufacturer: Mutable Instruments
 category: eurorack
 tagline: Macro oscillator (discontinued)
+description: >-
+  Braids is a 16HP Eurorack macro oscillator designed by Émilie Gillet and sold
+  by Mutable Instruments from 2013 to 2017. A single voice offers a selection of
+  synthesis models, including virtual analog waveforms, FM, plucked and bowed
+  strings, drum models, wavetables and filtered noise. It runs on an STM32F103
+  at 72 MHz with a 16-bit DAC.
 platform: STM32
 links:
   manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/braids/

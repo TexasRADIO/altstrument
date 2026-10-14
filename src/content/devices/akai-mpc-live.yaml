@@ -2,6 +2,13 @@ name: MPC Live / Live II / X / One / Key 61
 manufacturer: Akai Professional
 category: sampler
 tagline: Linux-based standalone MPC generation
+description: >-
+  This entry covers Akai Professional's standalone MPC line, which runs the
+  MPC software on an embedded Linux system without a computer. The line
+  started in 2017 with the MPC X and MPC Live and later added the MPC Live II,
+  MPC One and MPC Key 61, the first MPC with a built-in keyboard. Models share
+  16 velocity-sensitive RGB pads and a multi-touch display, with 7-inch
+  screens on the Live, Live II, One and Key 61.
 platform: Embedded Linux (shared base with Force)
 links:
   manufacturer: https://www.akaipro.com/products/collections/mpc/

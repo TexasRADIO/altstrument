@@ -2,6 +2,13 @@ name: white whale
 manufacturer: monome
 category: eurorack
 tagline: Probabilistic grid step sequencer (discontinued)
+description: >-
+  White Whale is a Eurorack module from monome that turns a connected grid into
+  a probabilistic step sequencer. A 16-step loop is the base, with each grid
+  column a step offering four trigger outputs and two 0-10V CV values, along
+  with step mutes with a chance setting, sixteen patterns and quantizing scale
+  maps. Timing comes from an internal clock knob or an external clock input, and
+  playback continues when the grid is disconnected.
 platform: AVR32 (AT32UC3B)
 stock_firmware: "1.6.0"
 links:

@@ -27,6 +27,12 @@ install_notes: >-
   The firmware README covers setting up the development environment, building
   and loading onto a CHOMPI. MD5 checksums are provided with the release.
 tags: [sampler, sequencer, synth-engine, sdk]
+video:
+  url: https://www.youtube.com/watch?v=jn9Ni3wdc1Q
+  title: "CHOMPI is Open Source!"
+  credit: "chase bliss"
+  first_party: true
+  found_via: https://www.chompiclub.com/opensource
 versions:
   - version: TAPE 2.0
     date: 2026-09-29

@@ -12,6 +12,11 @@ distribution: patch-your-own
 requires_stock: 1.53 / 1.54
 install_notes: Add the mod in elekloader with your own official OS file. The repo distributes source, not a modified OS.
 tags: [machines, synth-engine, fm]
+video:
+  url: https://www.youtube.com/watch?v=MCUgnHykwOY
+  title: "DT-FM: Turn your Digitakt MK1 into a Digitone(?)"
+  credit: MikkoOnBass
+  first_party: true
 versions:
   - version: v1.2.1
     date: 2026-10-09

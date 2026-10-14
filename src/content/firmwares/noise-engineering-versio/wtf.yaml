@@ -15,6 +15,12 @@ homepage: https://2020.dubrussell.com/resources/wtf/
 distribution: download
 install_notes: Select WTF-1.1.bin as a custom file on Noise Engineering's firmware page.
 tags: [granular, looper, fx]
+video:
+  url: https://www.youtube.com/watch?v=c-M2nF3q-fY
+  title: "WTF! The Granular Effect Firmware for the Noise Engineering Versio Platform"
+  credit: "DUB-Russell"
+  first_party: true
+  found_via: https://2020.dubrussell.com/resources/wtf/
 versions:
   - version: "1.1"
     url: https://2020.dubrussell.com/resources/wtf/

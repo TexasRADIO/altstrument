@@ -13,4 +13,9 @@ distribution: source-only
 requires_stock: "1.53"
 install_notes: Build with elekloader checked out beside it and your own stock OS 1.53 file; see the repo README.
 tags: [machines, granular]
+video:
+  url: https://www.youtube.com/watch?v=Fqvag_qFDVo
+  title: "digitakt granular"
+  credit: karplus+
+  first_party: false
 versions: []

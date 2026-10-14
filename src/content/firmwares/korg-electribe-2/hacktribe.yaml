@@ -28,6 +28,12 @@ install_notes: >-
   needs the file header edited with the provided script.
 brick_risk: true
 tags: [sampler, synth-engine, fx, filter, midi, scales]
+video:
+  url: https://www.youtube.com/watch?v=6nOlA89R85A
+  title: 'Korg Electribe 2 Hacktribe - Exploring the New Oscillators'
+  credit: Random Noise
+  first_party: true
+  found_via: https://github.com/bangcorrupt/hacktribe/wiki/Features
 versions:
   - version: main (last commit 2025-06-30)
     date: 2025-06-30

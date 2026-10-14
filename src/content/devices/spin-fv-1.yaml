@@ -2,6 +2,13 @@ name: FV-1 based pedals
 manufacturer: Spin Semiconductor
 category: pedal
 tagline: Pedals built around the Spin FV-1 DSP chip
+description: >-
+  This entry covers guitar pedals and DIY effect boards that use the Spin
+  Semiconductor FV-1, a 28-pin digital signal processor chip for audio effects
+  such as reverb, delay and modulation. The chip has a stereo ADC and DAC, three
+  potentiometer inputs, eight built-in programs and room for eight more in an
+  external EEPROM. Many commercial and hobbyist pedals use the FV-1, and the
+  entries here are tools and program collections for it.
 platform: Spin FV-1 DSP
 links:
   manufacturer: http://spinsemi.com/products.html

@@ -14,6 +14,11 @@ license_notes: >-
 homepage: https://timchurches.github.io/Mutated-Mutables/
 distribution: download
 tags: [envelopes, lfo, random]
+video:
+  url: https://www.youtube.com/watch?v=_6Mb4XY1wlA
+  title: "Work-in-progress internal FM of LFOs in Dead Man's Catch modified firmware for the MI Peaks module"
+  credit: Tim Churches
+  first_party: true
 versions:
   - version: v0.7-beta
     date: 2016-12-07

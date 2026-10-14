@@ -2,6 +2,12 @@ name: MPC500
 manufacturer: Akai Professional
 category: sampler
 tagline: Compact MPC sampler and sequencer
+description: >-
+  The MPC500 is a compact, battery-capable MPC sampler and sequencer announced
+  by Akai Professional in 2006. Unlike larger MPCs it has 12 velocity-
+  sensitive pads, and it records 16-bit, 44.1 kHz audio with 32-voice playback
+  and a 48-track sequencer. Samples and projects are stored on a Compact Flash
+  card, and the unit can run from six AA batteries or a mains adapter.
 stock_firmware: "1.31"
 links:
   community:

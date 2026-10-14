@@ -22,6 +22,12 @@ install_notes: >-
   OCT- while powering on).
 brick_risk: true
 tags: [fm, synth-engine, sequencer, drums, chords, fx, usb-audio, editor]
+video:
+  url: https://www.youtube.com/watch?v=qas9XWBgpL4
+  title: "M-VAVE FM-1 firmware sloopDX - Baud Girl + Sloop = DX7 engine + Sequencer + FM drums = FM Groovebox"
+  credit: "zvenson"
+  first_party: true
+  found_via: https://github.com/zvenson/dxsloop
 versions:
 - version: '3.5'
   date: 2026-10-10

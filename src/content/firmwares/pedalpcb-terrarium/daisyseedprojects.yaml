@@ -17,6 +17,12 @@ license: MIT
 distribution: download
 install_notes: Flash a release build to the Daisy Seed, or build the Software/GuitarPedal project for your hardware target.
 tags: [platform, fx, amp-sim, reverb, delay, lfo]
+video:
+  url: https://www.youtube.com/watch?v=ZkLnS43acQo
+  title: "Daisy Seed Guitar Pedal Board"
+  credit: "Keith Shepherd"
+  first_party: true
+  found_via: https://github.com/bkshepherd/DaisySeedProjects
 versions:
   - version: v1.6.1
     date: 2026-09-26

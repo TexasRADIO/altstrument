@@ -28,6 +28,11 @@ install_notes: >-
   because the bootloader may be faulty.
 brick_risk: true
 tags: [granular, reverb, delay, physical-modeling, fx]
+video:
+  url: https://www.youtube.com/watch?v=apgmvYbG_zQ
+  title: "Clouds Parasite - 1. Oliverb Mode"
+  credit: Matthias Puech
+  first_party: true
 versions:
   - version: clouds-v2.01
     date: 2016-09-29

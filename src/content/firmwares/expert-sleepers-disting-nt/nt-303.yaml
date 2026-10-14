@@ -12,6 +12,11 @@ homepage: https://github.com/thorinside/nt_303/releases
 distribution: download
 install_notes: Copy nt_303.o from the release to the plugins folder on the disting NT SD card.
 tags: [synth-engine, emulator]
+video:
+  url: https://www.youtube.com/watch?v=CQ_JqHlxDWI
+  title: "Exploring the NT 303 plug-in on the Expert Sleepers Disting NT eurorack synth module"
+  credit: voltryx
+  first_party: false
 versions:
   - version: v0.7.1
     date: 2026-03-08

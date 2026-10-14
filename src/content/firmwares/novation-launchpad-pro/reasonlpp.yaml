@@ -10,6 +10,12 @@ source_status: open
 license: BSD-3-Clause
 distribution: source-only
 tags: [platform, sdk]
+image:
+  url: https://raw.githubusercontent.com/vjosset/reasonlpp/master/ReasonLPPGlobalControls.png
+  alt: Pad layout of the ReasonLPP firmware on a Launchpad Pro, with the global control buttons highlighted
+  credit: vjosset
+  source_url: https://github.com/vjosset/reasonlpp
+  first_party: true
 versions:
   - version: master @ 36fe8fb
     date: 2020-03-10

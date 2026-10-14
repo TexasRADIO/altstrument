@@ -2,6 +2,13 @@ name: OP-1 (original)
 manufacturer: Teenage Engineering
 category: synth
 tagline: Portable synth, sampler and tape sequencer
+description: >-
+  The OP-1 is a portable synthesizer, sampler and sequencer from Teenage
+  Engineering of Stockholm, released in 2011. It combines multiple synth and
+  drum engines, built-in effects, several sequencers, a four-track tape-style
+  recorder and an FM radio for sampling. The device has a small colour display,
+  four colour-coded encoders, a rechargeable battery and USB audio and MIDI. A
+  Blackfin DSP runs the instrument.
 platform: Analog Devices Blackfin
 stock_firmware: R246
 links:

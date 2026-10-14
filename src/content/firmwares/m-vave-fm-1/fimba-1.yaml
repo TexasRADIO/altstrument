@@ -17,6 +17,12 @@ install_notes: >-
   Installs and plays in a browser from the project page (WebMIDI, USB). Beta releases.
 brick_risk: true
 tags: [physical-modeling, synth-engine, sequencer, fx, granular, chords]
+image:
+  url: https://raw.githubusercontent.com/jadamsowers/fm1-fimba/main/docs/img/ringing.png
+  alt: "FiMba-1 screen showing the tines ringing"
+  credit: "jadamsowers"
+  source_url: https://github.com/jadamsowers/fm1-fimba
+  first_party: true
 versions:
 - version: 0.6.1 beta
   date: 2026-10-13

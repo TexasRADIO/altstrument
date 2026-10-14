@@ -15,6 +15,12 @@ distribution: browser-installer
 install_notes: Browser WebMIDI installer, or flash the prebuilt .fwsc image.
 brick_risk: true
 tags: [synth-engine, wavetable, sequencer, ui]
+image:
+  url: https://raw.githubusercontent.com/SikkenWorks/ETCH/main/ETCH.jpeg
+  alt: "FM-1 running ETCH, with a wavetable shape on its screen and the web tool open behind it"
+  credit: "SikkenWorks"
+  source_url: https://github.com/SikkenWorks/ETCH
+  first_party: true
 versions:
 - version: 1.20 RC
   date: 2026-10-12

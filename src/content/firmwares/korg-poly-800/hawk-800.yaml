@@ -22,6 +22,12 @@ homepage: https://www.hawk800.com/
 distribution: download
 install_notes: Needs the HAWK-800 hardware board installed in the synth; the firmware zip on SourceForge is for existing kits.
 tags: [midi, lfo, filter, synth-engine, performance]
+video:
+  url: https://www.youtube.com/watch?v=s36VDjadaTc
+  title: 'Korg Poly 800 and EX 800 with HAWK-800 mod kit'
+  credit: korgpolyex800
+  first_party: true
+  found_via: https://www.hawk800.com/examples.php
 versions:
   - version: 2.68a
     url: https://sourceforge.net/projects/hawk800/

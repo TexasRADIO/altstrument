@@ -18,6 +18,11 @@ license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own 
 homepage: https://monome.org/docs/ansible/
 distribution: download
 tags: [sequencer, grid]
+video:
+  url: https://www.youtube.com/watch?v=fyU1y87TAC8
+  title: "Polyphasic Calisthenics: Monome Ansible Kria"
+  credit: "Dudadius | Spindles Soundscapes"
+  first_party: false
 versions:
   - version: v0.4
     date: 2016-12-02

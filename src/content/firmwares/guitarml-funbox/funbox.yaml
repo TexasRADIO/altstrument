@@ -21,6 +21,12 @@ license_notes: LICENSE.txt, copyright Keith Bloemer 2024. Submodules such as Dai
 distribution: download
 install_notes: Flash a release .bin with the Electrosmith web programmer or `make program-dfu`; Mars and Neptune use SRAM and need the bootloader method.
 tags: [platform, amp-sim, reverb, delay, looper, granular, fx]
+video:
+  url: https://www.youtube.com/watch?v=e60Wy_VvJX8
+  title: "Mars - Amp Sim and Delay for Funbox"
+  credit: "GuitarML"
+  first_party: true
+  found_via: https://github.com/GuitarML/FunBox
 versions:
   - version: main @ c0409dd (Cassini sampler)
     date: 2026-07-10

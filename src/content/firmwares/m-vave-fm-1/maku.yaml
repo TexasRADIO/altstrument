@@ -17,6 +17,12 @@ install_notes: >-
   SMK-37 port exists (see maku37).
 brick_risk: true
 tags: [synth-engine, performance, granular, physical-modeling]
+image:
+  url: https://raw.githubusercontent.com/okumurari2/maku/main/docs/screenshot-pulse.png
+  alt: "MAKU Pulse screen with four track level bars, density, preset and algorithm values"
+  credit: "okumurari2"
+  source_url: https://github.com/okumurari2/maku
+  first_party: true
 versions:
 - version: '0.1'
   date: 2026-10-11

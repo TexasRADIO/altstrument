@@ -22,6 +22,11 @@ distribution: browser-installer
 requires_stock: "1.13"
 install_notes: Drop your official OS file into the flasher page, pick mods, download and send with Elektron Transfer or flash over USB. Back up first.
 tags: [usb-audio, machines, synth-engine, fx, sequencer, lfo, filter, boot-splash]
+video:
+  url: https://www.youtube.com/watch?v=TqtP1UYZCqM
+  title: 'Third-party Firmware on the Elektron Model:Cycles - New Synths, Sample Playback & More!'
+  credit: Matt Greer Music
+  first_party: false
 versions:
   - version: Release 1.54
     date: 2026-10-12

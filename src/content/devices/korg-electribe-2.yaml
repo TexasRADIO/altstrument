@@ -2,6 +2,13 @@ name: Electribe 2 / 2 Sampler
 manufacturer: Korg
 category: groovebox
 tagline: Pattern-based groovebox in synth and sampler variants
+description: >-
+  The Electribe 2 is a pattern-based groovebox made by Korg. The synth version
+  appeared in 2014 and an Electribe 2 Sampler variant followed, both with 16 pads
+  that double as step keys. The synth model combines analog-modeling and PCM
+  oscillators and the sampler records and plays user samples, with insert effects
+  per part and 24-voice maximum polyphony. Internally it pairs a TI Sitara CPU
+  with a Blackfin DSP.
 platform: TI Sitara CPU + Blackfin DSP
 stock_firmware: "2.02"
 links:

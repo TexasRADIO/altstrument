@@ -13,3 +13,8 @@ source_status: closed
 license: unspecified
 homepage: https://cdm.link/2018/09/hack-a-launchpad-pro-into-a-16-channel-step-sequencer-free/
 tags: [sequencer, performance, midi]
+video:
+  url: https://www.youtube.com/watch?v=F1gPLTqKO34
+  title: "Launchpad Pro as 32 step sequencer"
+  credit: faQteur
+  first_party: true

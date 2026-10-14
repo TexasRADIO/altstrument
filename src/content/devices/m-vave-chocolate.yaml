@@ -2,6 +2,11 @@ name: Chocolate / Chocolate Plus
 manufacturer: M-VAVE
 category: foot-controller
 tagline: Bluetooth MIDI footswitch controller
+description: >-
+  The Chocolate and Chocolate Plus are compact MIDI footswitch controllers from M-VAVE, each with four
+  programmable switches. They connect over Bluetooth MIDI, USB-C or a TRS MIDI output and run from a
+  built-in rechargeable battery. Switch assignments are set with M-VAVE's CubeSuite app, which talks to
+  the unit over a SysEx configuration protocol.
 links:
   manufacturer: https://www.cuvave.com/product?id=chocolate-plus
   community:

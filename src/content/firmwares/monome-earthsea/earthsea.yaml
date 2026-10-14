@@ -17,6 +17,11 @@ homepage: https://monome.org/docs/earthsea/
 distribution: download
 install_notes: Follow monome's modular update guide (dfu-programmer, update_firmware.command in the release zip).
 tags: [platform, sequencer, grid]
+video:
+  url: https://www.youtube.com/watch?v=GkY2-xNwjDw
+  title: "monome earthsea / just friends eurorack"
+  credit: "mlogger"
+  first_party: false
 versions:
   - version: v1.9.5
     date: 2021-06-03

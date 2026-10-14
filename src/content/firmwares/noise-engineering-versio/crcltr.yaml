@@ -16,6 +16,12 @@ homepage: https://github.com/s3g/crcltr/releases
 distribution: download
 install_notes: Upload the .bin with the Daisy Web Programmer (flash.daisy.audio).
 tags: [looper]
+image:
+  url: "https://raw.githubusercontent.com/s3g/crcltr/main/CRCLTR_V1.png"
+  alt: "CRCLTR V1 faceplate showing loop rate, crossfade, blend and gain controls with record switches and jacks"
+  credit: "s3g"
+  source_url: https://github.com/s3g/crcltr
+  first_party: true
 versions:
   - version: v1.0.1
     date: 2024-01-25

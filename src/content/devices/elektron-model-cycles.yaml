@@ -2,6 +2,13 @@ name: Model:Cycles
 manufacturer: Elektron
 category: groovebox
 tagline: 6-track FM groovebox
+description: >-
+  The Model:Cycles is a compact six-track FM groovebox made by Elektron and
+  released in 2020. It packages a simplified version of the Digitone's FM engine
+  as six voices, each with four macro controls, driven by a six-track sequencer
+  with parameter locks and patterns up to 64 steps. Delay and reverb are built in,
+  and it is part of Elektron's lower-priced Model series alongside the
+  Model:Samples.
 stock_firmware: "1.13"
 links:
   manufacturer: https://www.elektron.se/support-downloads/modelcycles

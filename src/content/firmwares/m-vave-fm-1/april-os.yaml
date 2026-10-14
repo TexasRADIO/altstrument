@@ -23,6 +23,12 @@ install_notes: >-
   Browser WebMIDI installer from the project page. Beta per the fm1-editor.com directory.
 brick_risk: true
 tags: [sampler, sequencer]
+image:
+  url: https://raw.githubusercontent.com/beashoko/april-os/main/assets/readme/features.webp
+  alt: "April OS record, edit and play screens on the FM-1"
+  credit: "beashoko"
+  source_url: https://github.com/beashoko/april-os
+  first_party: true
 versions:
 - version: '1.1'
   date: 2026-10-10

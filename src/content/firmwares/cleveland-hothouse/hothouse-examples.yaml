@@ -21,6 +21,12 @@ homepage: https://clevelandmusicco.github.io/HothouseFlasher/
 distribution: browser-installer
 install_notes: Flash a binary from the latest release with the Hothouse Flasher, or build an example with the Daisy toolchain.
 tags: [platform, fx, flasher, sdk, delay, reverb]
+video:
+  url: https://www.youtube.com/watch?v=RR4Hccq0VbE
+  title: "\"Flick\" Guitar Effects Pedal Demo (for Daisy Seed / Hothouse)"
+  credit: "Boyd Timothy"
+  first_party: true
+  found_via: https://github.com/clevelandmusicco/HothouseExamples/wiki/Hothouse-Examples
 versions:
   - version: v26.05.02
     date: 2026-05-25

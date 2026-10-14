@@ -30,6 +30,12 @@ install_notes: >-
   firmware.phazerville.com. Updating from older versions can reset saved
   settings; calibration is unaffected.
 tags: [sequencer, quantizer, midi, usb-audio, platform, fx]
+video:
+  url: https://www.youtube.com/watch?v=kT94mBjvVQI
+  title: "Ornament and Crime Teensy 4.1 with Phazerville. What's New and Improved?"
+  credit: SynthDad
+  first_party: true
+  found_via: https://github.com/djphazer/O_C-Phazerville
 versions:
   - version: v1.14 (T32 only)
     date: 2026-08-30

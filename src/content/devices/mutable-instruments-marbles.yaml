@@ -2,6 +2,12 @@ name: Marbles
 manufacturer: Mutable Instruments
 category: eurorack
 tagline: Random sampler / clocked random generator (discontinued)
+description: >-
+  Marbles is an 18HP Eurorack random sampler and clocked random generator from
+  Mutable Instruments, produced from 2018 to 2022. It combines a jittery master
+  clock and a two-channel random rhythm generator with three random voltage
+  outputs that can be quantized with a programmable scale. The module is built
+  around an STM32F405 at 168 MHz and a DAC8164.
 platform: STM32F4
 links:
   manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/marbles/

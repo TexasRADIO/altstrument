@@ -29,6 +29,11 @@ install_notes: >-
   Requires the modified Teensy++ board fitted in the Z80 socket. Flash the HEX
   with Teensy Loader or build it from source with AVR-GCC.
 tags: [synth-engine, polyphony, midi, lfo, performance, bugfixes]
+video:
+  url: https://www.youtube.com/watch?v=Jqx42xgwtP0
+  title: "SCI Prophet-600 with GliGli's firmware update"
+  credit: "Martin Aulkjær Ottesen"
+  first_party: false
 versions:
   - version: main @ 20285dd (Teensy programmer HEX)
     date: 2026-04-13

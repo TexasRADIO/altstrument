@@ -2,6 +2,12 @@ name: earthsea
 manufacturer: monome
 category: eurorack
 tagline: Pattern-recording grid keyboard and shape-memory CV (discontinued)
+description: >-
+  Earthsea is a Eurorack module from monome that uses a connected grid as its
+  playing surface, mapping the grid to a map of tones for melodies and recording
+  performances as patterns. It has three shape CV outputs set by panel knobs,
+  plus separate position and edge outputs, and keeps sixteen pattern slots per
+  preset. Looped patterns continue to play when the grid is disconnected.
 platform: AVR32 (AT32UC3B)
 stock_firmware: "1.9.5"
 links:

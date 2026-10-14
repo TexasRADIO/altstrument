@@ -2,6 +2,12 @@ name: Digitakt II
 manufacturer: Elektron
 category: sampler
 tagline: 16-track sampler
+description: >-
+  The Digitakt II is Elektron's successor to the Digitakt, announced in April
+  2024. It has sixteen tracks that can each be set to mono, stereo or MIDI, 400
+  MB of sample memory, a 128 x 64 pixel OLED display and a sequencer with
+  patterns of up to 128 steps. The hardware pairs a ColdFire control processor
+  with a SHARC+ DSP.
 platform: ColdFire + SHARC+ DSP (ADSP-21569)
 stock_firmware: "1.17"
 links:

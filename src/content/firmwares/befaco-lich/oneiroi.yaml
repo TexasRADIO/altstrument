@@ -16,6 +16,11 @@ homepage: https://github.com/Befaco/Oneiroi/releases
 distribution: browser-installer
 install_notes: Use a Web MIDI browser (Chrome or Chromium recommended) and the patch from the latest release.
 tags: [synth-engine, looper, fx]
+video:
+  url: https://www.youtube.com/watch?v=BDvLvHlAMz8
+  title: "Oneiroi Jam - Befaco"
+  credit: Befacosynth
+  first_party: true
 versions:
   - version: v1.2.2
     date: 2025-11-06

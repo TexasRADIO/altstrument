@@ -19,6 +19,12 @@ distribution: patch-your-own
 requires_stock: "1.43"
 install_notes: Install core-dn1 and the tonefx elemod in elekloader with your own OS 1.43 file.
 tags: [fx, performance, ui]
+image:
+  url: https://raw.githubusercontent.com/DigiAlchemydsp/RingTone/main/docs/img/ui-ring.png
+  alt: The RING page of the Tone+FX mod on the Digitone mk1
+  credit: DigiAlchemydsp
+  source_url: https://github.com/DigiAlchemydsp/RingTone
+  first_party: true
 versions:
   - version: v3.2b
     date: 2026-10-12

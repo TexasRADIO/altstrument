@@ -23,6 +23,12 @@ install_notes: >-
   Download and install from the JJOS site. Per community reports, holding TAP
   TEMPO at boot switches back to the previously installed OS.
 tags: [os, sampler, sequencer, ui]
+video:
+  url: https://www.youtube.com/watch?v=RRW78Z1pGgE
+  title: "MPC1000 & MPC2500 JJ OS128XL"
+  credit: JJSOFT
+  first_party: true
+  found_via: http://www7a.biglobe.ne.jp/~mpc1000/
 versions:
   - version: OS2XL 3.89
     date: 2026-10-10

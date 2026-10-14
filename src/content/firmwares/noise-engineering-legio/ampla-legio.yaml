@@ -19,4 +19,10 @@ install_notes: >-
   (https://noiseengineering.us/portal/firmware/) over USB in a WebUSB browser
   (Chrome, Edge or Opera). Free for Legio owners.
 tags: [official, filter, utility]
+video:
+  url: https://www.youtube.com/watch?v=CEq80CEi0WQ
+  title: "Ampla Legio multimode filter-gate with vactrol-inspired ASD envelope from Noise Engineering"
+  credit: Noise Engineering
+  first_party: true
+  found_via: https://noiseengineering.us/products/legio/
 versions: []

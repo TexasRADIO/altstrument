@@ -22,6 +22,12 @@ install_notes: >-
   other inputs unplugged. The project page warns of a small risk of bricking.
 brick_risk: true
 tags: [fx, looper, granular]
+video:
+  url: https://www.youtube.com/watch?v=zwkYR_1FmfQ
+  title: "Kammerl Beat-Repeat Mode in Mutable Instrument's Clouds"
+  credit: Julius Kammerl
+  first_party: true
+  found_via: https://www.kammerl.de/audio/clouds/
 versions:
   - version: V0.42
     date: 2017-06-25

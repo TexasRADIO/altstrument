@@ -22,6 +22,11 @@ homepage: http://www.tauntek.com/Matrix1000Firmware.htm
 distribution: download
 install_notes: Program a 27C256 EPROM with the image and fit it in place of the stock system ROM.
 tags: [midi, bugfixes, performance]
+video:
+  url: https://www.youtube.com/watch?v=Xgbr6s0Hzgo
+  title: "Oberheim Matrix-1000 Firmware Comparison: Original 1.11 vs 1.20 Tauntek Custom"
+  credit: "Forlorn Synths of Yore"
+  first_party: false
 versions:
   - version: v1.20
     url: http://www.tauntek.com/Matrix1000Firmware.htm

@@ -20,6 +20,11 @@ distribution: download
 requires_stock: TELEXo or TELEXi module with a Teensy 3.2 / 3.6
 install_notes: Open the module's hex in Teensy Loader with the Teensy connected to USB and the module unpowered.
 tags: [platform, i2c]
+video:
+  url: https://www.youtube.com/watch?v=xc2L1CXW6Iw
+  title: "Teletype Grid Telex Polysynth"
+  credit: "Brendon Cassidy"
+  first_party: true
 versions:
   - version: v.022
     date: 2021-09-18

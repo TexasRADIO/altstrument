@@ -2,6 +2,13 @@ name: ansible
 manufacturer: monome
 category: eurorack
 tagline: Grid / arc / Teletype / MIDI companion module (discontinued)
+description: >-
+  Ansible is a 6HP Eurorack module from monome, announced in 2016, that connects
+  to a grid, an arc or a USB MIDI device and makes it the module's interface.
+  Its modes include the Kria and Meadowphysics sequencers, Earthsea, the arc-
+  based Levels and Cycles, and MIDI voice allocation with arpeggiation. It can
+  also be wired to a Teletype over the ii bus for extra inputs and outputs and
+  remote control.
 platform: AVR32 (AT32UC3B)
 stock_firmware: "3.2.0"
 links:

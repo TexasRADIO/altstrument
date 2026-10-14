@@ -2,6 +2,11 @@ name: FM-1
 manufacturer: M-VAVE
 category: synth
 tagline: Pocket 6-operator FM synth, 27 keys, colour screen, TRS MIDI
+description: >-
+  The FM-1 is a battery-powered pocket FM synthesizer made by M-VAVE and released in mid-2026. It has a
+  six-operator FM engine with 32 algorithms and up to 12 voices, a 27-key silicone keyboard, seven
+  knobs, a colour TFT screen and a 16-step sequencer. It has a built-in speaker, a 3.5 mm stereo output,
+  and MIDI over USB, Bluetooth LE and a 3.5 mm TRS input, with the engine running on a JieLi AC791N SoC.
 platform: JieLi AC791N (WL82), dual-core pi32v2
 stock_firmware: V15 (2026-07-30)
 links:

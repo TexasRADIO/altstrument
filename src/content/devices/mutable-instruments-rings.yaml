@@ -2,6 +2,12 @@ name: Rings
 manufacturer: Mutable Instruments
 category: eurorack
 tagline: Resonator (discontinued)
+description: >-
+  Rings is a 14HP Eurorack resonator from Mutable Instruments, produced from
+  2015 to 2022. It excites a modal resonator, a bank of sympathetic strings or a
+  non-linear string model from an audio input or an internal exciter, and it can
+  play these polyphonically with up to four voices. The hardware uses an
+  STM32F405 at 168 MHz and a WM8731 codec.
 platform: STM32F4
 links:
   manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/rings/

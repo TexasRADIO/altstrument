@@ -2,6 +2,12 @@ name: Terrarium
 manufacturer: PedalPCB
 category: pedal
 tagline: Daisy Seed pedal PCB with six knobs and two footswitches
+description: >-
+  The Terrarium is a bare printed circuit board from PedalPCB that carries an
+  Electrosmith Daisy Seed and the controls of a digital effects pedal, listed in
+  2020. It is designed for a 125B enclosure with top-mounted jacks and provides
+  six potentiometers, four toggle switches, two momentary footswitches and two
+  LEDs. The builder supplies the Daisy Seed, components and enclosure.
 platform: Electrosmith Daisy Seed
 links:
   manufacturer: https://www.pedalpcb.com/product/pcb351/

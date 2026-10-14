@@ -2,6 +2,12 @@ name: Daisy Patch / Pod / Patch.init()
 manufacturer: Electrosmith
 category: eurorack
 tagline: Daisy-based Eurorack and desktop hardware for custom DSP firmware
+description: >-
+  This entry covers hardware from Electrosmith built on its Daisy embedded audio
+  platform, whose Daisy Seed module uses an STM32H750 processor. Daisy Patch is
+  a Eurorack module with quad 24-bit audio I/O, Patch.init() is another Eurorack
+  module on the platform, and Daisy Pod is a small desktop board with knobs, an
+  encoder and buttons.
 platform: Electrosmith Daisy (libDaisy, DaisySP)
 links:
   manufacturer: https://electro-smith.com/

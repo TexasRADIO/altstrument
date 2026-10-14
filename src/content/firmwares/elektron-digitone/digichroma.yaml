@@ -11,6 +11,12 @@ license: GPL-2.0-or-later
 distribution: patch-your-own
 requires_stock: 1.43 / 1.44
 tags: [fx]
+image:
+  url: https://raw.githubusercontent.com/irpina/digichroma/main/docs/page1-chroma.png
+  alt: DIGICHROMA page 1 with TILT, RATE, TIME, MIX and the four modules AMOUNT knobs
+  credit: irpina
+  source_url: https://github.com/irpina/digichroma
+  first_party: true
 versions:
   - version: v0.1
     date: 2026-10-09

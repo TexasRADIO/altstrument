@@ -26,6 +26,11 @@ homepage: https://monome.org/docs/ansible/
 distribution: download
 install_notes: Follow monome's modular update guide (dfu-programmer, update_firmware.command in the release zip). Back up first; a flash replaces presets.
 tags: [platform, sequencer, grid, i2c, midi]
+video:
+  url: https://www.youtube.com/watch?v=ySJjQlKXAYo
+  title: "Monome Ansible First Encounter"
+  credit: "Dudadius | Spindles Soundscapes"
+  first_party: false
 versions:
   - version: v3.2.0
     date: 2025-04-01

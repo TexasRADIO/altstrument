@@ -2,6 +2,12 @@ name: Lich / Witch (OpenWare)
 manufacturer: Befaco / Rebel Technology
 category: eurorack
 tagline: OWL-platform modules that load patches from a library
+description: >-
+  Lich is a 12HP Eurorack module made by Befaco in Barcelona in collaboration
+  with Rebel Technology, and it carries on the OWL platform. It has stereo audio
+  input and output at 48 kHz and 24 bits, four knobs summed with CV inputs, two
+  CV outputs, gate inputs and a gate output, a display for patch selection, and
+  USB host and device ports.
 platform: STM32 (Rebel Technology OWL)
 links:
   manufacturer: https://www.befaco.org/lich/

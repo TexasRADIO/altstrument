@@ -2,6 +2,12 @@ name: Analog Rytm MKI / MKII
 manufacturer: Elektron
 category: drum-machine
 tagline: Analog and sample drum machine
+description: >-
+  The Analog Rytm is an eight-voice drum machine from Elektron that combines
+  analog drum synthesis with a sample layer on each voice, first released in
+  2014. It has twelve velocity- and pressure-sensitive pads, an analog multimode
+  filter and overdrive per voice, and the Elektron parameter-lock sequencer. A
+  revised MKII version followed in 2017.
 stock_firmware: "1.73"
 links:
   manufacturer: https://www.elektron.se/explore/analog-rytm-mkii

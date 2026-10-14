@@ -2,6 +2,11 @@ name: Elektron cross-device tools
 manufacturer: Elektron
 category: tools
 tagline: Loaders, emulators and analysis tools for several Elektron boxes
+description: >-
+  This entry groups host-side software that works across more than one Elektron
+  instrument, rather than a single device. It covers the loader used to apply
+  mods to the Digitakt and Digitone families, emulators of their firmware, an OS
+  container tool and a Ghidra module for the DSP56300 processor family.
 links:
   community:
     - label: elektronmods.com

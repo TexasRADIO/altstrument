@@ -2,6 +2,13 @@ name: Force
 manufacturer: Akai Professional
 category: groovebox
 tagline: Standalone clip-launching production instrument
+description: >-
+  The Force is a standalone clip-launching production instrument from Akai
+  Professional, announced in January 2019. It has an 8x8 RGB clip-launch
+  matrix, a 7-inch multi-touch display, eight touch-sensitive knobs with small
+  OLED displays, and a separate set of 16 velocity- and pressure-sensitive
+  pads. It records and sequences without a computer and provides two audio
+  inputs, four audio outputs, MIDI and CV I/O.
 platform: Embedded Linux (shared base with the standalone MPCs)
 links:
   manufacturer: https://www.akaipro.com/force/

@@ -19,6 +19,12 @@ install_notes: >-
   your own risk.
 brick_risk: true
 tags: [synth-engine, performance]
+video:
+  url: https://www.youtube.com/watch?v=HqUAT-hULgU
+  title: "SMK37 Makkuro37 Firmware, Snoop37 Firmware"
+  credit: "genkiginko"
+  first_party: true
+  found_via: https://genkigenki.github.io/smk37/
 versions:
 - version: '0.1'
   date: 2026-10-11

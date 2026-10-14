@@ -2,6 +2,13 @@ name: Alia
 manufacturer: Noise Engineering
 category: eurorack
 tagline: 10 HP oscillator and voice platform with swappable Iteritas firmwares
+description: >-
+  Alia is a 10 HP Eurorack module from Noise Engineering that serves as a
+  common hardware platform for a family of digital voices, with a panel of
+  seven knobs and two switches. It was launched with the Basimilus Iteritas
+  Alia drum synthesizer, which succeeded the earlier fixed-function Basimilus
+  Iteritas Alter module. Printable or sold overlays relabel the panel for
+  whichever algorithm is loaded.
 platform: Electrosmith Daisy-based DSP platform
 links:
   manufacturer: https://noiseengineering.us/pages/world-of-alia

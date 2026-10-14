@@ -23,6 +23,12 @@ install_notes: >-
   modified image. Flash with Elektron Transfer. The bootloader is never touched;
   [FUNC] + power on then [TRIG 3] recovers the unit even if the OS is corrupt.
 tags: [research, ui, sequencer, scales]
+image:
+  url: https://raw.githubusercontent.com/mxldyn/octamax/main/docs/img/slice-playhead.jpg
+  alt: Octatrack screen showing the OCTAMAX slice playhead view, with slice 1 playing in a framed square and a progress bar
+  credit: mxldyn
+  source_url: https://github.com/mxldyn/octamax
+  first_party: true
 versions:
   - version: 2.0 BETA
     notes: Adds SLICE PLAYHEAD view and persistent PERSONALIZE toggles. Beta, tested on one MKII.

@@ -25,6 +25,11 @@ install_notes: >-
   or send the generated SysEx messages while the unit is in bootloader mode.
 brick_risk: false
 tags: [performance, palette, midi, controller-mode, sdk]
+video:
+  url: https://www.youtube.com/watch?v=6RfCKHeGWe0
+  title: "Performance-optimized Custom Firmware for the Launchpad Pro"
+  credit: mat1jaczyyy
+  first_party: true
 versions:
   - version: master @ b764a83
     date: 2024-03-04

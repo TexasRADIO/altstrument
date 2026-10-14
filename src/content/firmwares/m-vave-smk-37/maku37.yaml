@@ -18,6 +18,12 @@ install_notes: >-
   Installs from the browser at genkigenki.github.io/smk37. Unofficial; install at your own risk.
 brick_risk: true
 tags: [synth-engine, performance]
+image:
+  url: https://genkigenki.github.io/smk37/assets/shot-maku37.png
+  alt: "MAKU37 screen on the SMK-37 display"
+  credit: "genkigenki"
+  source_url: https://genkigenki.github.io/smk37/
+  first_party: true
 versions:
 - version: '0.1'
   date: 2026-10-12

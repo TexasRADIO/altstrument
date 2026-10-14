@@ -19,6 +19,12 @@ homepage: https://shanteacontrols.com/
 distribution: download
 install_notes: Choose a supported board, flash a release build, then configure in the browser configurator over USB or the network.
 tags: [midi, platform, ui, controller-mode]
+video:
+  url: https://www.youtube.com/watch?v=1W1kFQp4PLs
+  title: "OpenDeck configurator 2026"
+  credit: "Shantea Controls"
+  first_party: true
+  found_via: https://github.com/shanteacontrols/OpenDeck
 versions:
   - version: v8.5.2
     date: 2026-08-03

@@ -15,6 +15,12 @@ license_notes: No license text on the product page.
 homepage: https://www.audiority.com/shop/pyros-versio/
 distribution: download
 tags: [fx]
+video:
+  url: https://www.youtube.com/watch?v=JM1IVWr3tYg
+  title: "Audiority Pyros @Versio - Custom Firmware for Noise Engineering Versio - Live Demo"
+  credit: "Audiority TV"
+  first_party: true
+  found_via: https://www.audiority.com/shop/pyros-versio/
 versions:
   - version: "1.0"
     url: https://www.audiority.com/shop/pyros-versio/

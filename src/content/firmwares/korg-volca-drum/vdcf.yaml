@@ -28,6 +28,11 @@ install_notes: >-
   firmware intact, according to the README. Hold PLAY while powering on to
   check the version.
 tags: [sequencer, filter, fx, midi, performance]
+video:
+  url: https://www.youtube.com/watch?v=KMIR9ekU9i4
+  title: 'hj Firmware v1.21 - Quick Feature Guide | Custom Firmware for KORG volca drum'
+  credit: hj-oja
+  first_party: true
 versions:
   - version: "1.21"
     date: 2026-09-11

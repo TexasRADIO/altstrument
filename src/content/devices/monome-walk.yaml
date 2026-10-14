@@ -2,6 +2,13 @@ name: walk
 manufacturer: monome
 category: eurorack
 tagline: Two-footswitch gate and logic module (legacy)
+description: >-
+  Walk is a Eurorack module from monome that turns two footswitches into gate
+  signals. Each footswitch has momentary and toggle outputs, and a central
+  section adds logic functions of the two switch states, so six outputs are
+  available at once. It is built around an ATtiny24 microcontroller and draws 12
+  mA from the +12V rail, and its outputs can clock or trigger other modules such
+  as Teletype.
 platform: ATtiny24
 links:
   manufacturer: https://monome.org/docs/walk/

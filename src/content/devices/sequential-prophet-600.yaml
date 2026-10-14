@@ -2,6 +2,12 @@ name: Prophet-600
 manufacturer: Sequential Circuits
 category: synth
 tagline: Six-voice analog polysynth
+description: >-
+  The Prophet-600 is a six-voice analog polyphonic synthesizer made by
+  Sequential Circuits in 1982. Each voice has two digitally controlled
+  oscillators, and the synth stores 100 programs in battery-backed memory. It
+  was one of the first synthesizers to include a MIDI interface. A Z80
+  microprocessor runs the instrument.
 platform: Z80
 links:
   community:

@@ -2,6 +2,13 @@ name: Matrix-1000
 manufacturer: Oberheim
 category: synth
 tagline: Rack-mount analog polysynth module
+description: >-
+  The Matrix-1000 is a one-rack-space analog synthesizer module from Oberheim,
+  introduced in the late 1980s as a compact version of the Matrix-6. It has six
+  voices, each with two digitally controlled oscillators, a resonant low-pass
+  filter, envelopes and LFOs, and holds 1,000 patches (800 factory and 200
+  user). It has almost no front-panel editing, so sounds are normally edited
+  over MIDI from a computer. The control board is built around a Motorola 6809.
 platform: Motorola 6809
 stock_firmware: "1.11"
 links:

@@ -2,6 +2,13 @@ name: Workshop System Computer
 manufacturer: Music Thing Modular
 category: eurorack
 tagline: RP2040 module whose firmware lives on swappable program cards
+description: >-
+  The Workshop System Computer is an 8HP Eurorack module designed by Tom
+  Whitwell of Music Thing Modular as part of the Workshop System, which was
+  designed for an April 2024 residency. It is based on the RP2040
+  microcontroller and has three knobs, a three-way switch, and paired audio/CV,
+  pulse and pitch-CV inputs and outputs. The program it runs is stored on a
+  small removable card.
 platform: RP2040
 links:
   manufacturer: https://www.musicthing.co.uk/workshopsystem/

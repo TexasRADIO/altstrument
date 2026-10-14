@@ -15,6 +15,12 @@ homepage: https://jasmineandolivetrees.com/pages/stray-drum-versio-firmware
 distribution: download
 install_notes: Select StrayDrumV0.bin as a custom file on Noise Engineering's firmware page.
 tags: [synth-engine]
+image:
+  url: "https://cdn.shopify.com/s/files/1/0728/9874/0557/files/Screenshot_2023-09-07_at_22.35.15.png?v=1694118970"
+  alt: "Stray Drum Versio panel overlay labelling Pitch, Feedback, Attack, Spread, Amount, Decay and Mode controls"
+  credit: "Jasmine & Olive Trees"
+  source_url: https://jasmineandolivetrees.com/pages/stray-drum-versio-firmware
+  first_party: true
 versions:
   - version: V0
     url: https://jasmineandolivetrees.com/pages/stray-drum-versio-firmware

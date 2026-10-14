@@ -2,6 +2,13 @@ name: norns / norns shield / Fates
 manufacturer: monome
 category: diy-platform
 tagline: Open Lua + SuperCollider sound computer on Raspberry Pi hardware
+description: >-
+  norns is a small open-source sound computer from monome built around a
+  Raspberry Pi Compute Module, with an OLED screen, three encoders, three keys
+  and four USB ports. Scripts are written in Lua and sound engines in
+  SuperCollider, edited from a computer through the maiden web interface. The
+  norns shield, which adds the same interface to a standard Raspberry Pi, and
+  the community Fates board provide the same environment on other hardware.
 platform: Raspberry Pi (CM3 in norns; 3B, 3B+, 4B in shield and Fates), Linux
 stock_firmware: "norns 2.9.4 (stable); 3.0.x pre-releases"
 links:

@@ -12,6 +12,12 @@ license: MIT
 distribution: patch-your-own
 install_notes: Works on an official firmware file you supply; the result is installed through the OP-1's normal update mode.
 tags: [editor, ui, palette]
+video:
+  url: https://www.youtube.com/watch?v=3t-Za3p9LSk
+  title: "op1REpackerGUI macOS Install Guide"
+  credit: "Master of Jack"
+  first_party: true
+  found_via: https://github.com/epixjava/op1REpackerGUI
 versions:
   - version: main @ 59a7e84
     date: 2026-07-11

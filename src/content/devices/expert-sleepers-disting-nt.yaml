@@ -2,6 +2,13 @@ name: disting NT
 manufacturer: Expert Sleepers
 category: eurorack
 tagline: Algorithm-based DSP module with 12 inputs and 6 outputs
+description: >-
+  The disting NT is a 22HP Eurorack DSP module from Expert Sleepers of the UK
+  and the successor to the disting EX in a line that began with the original
+  disting in 2014. It has twelve DC-coupled inputs and six outputs, with two
+  more outputs on a breakout, and a MicroSD card slot. The module runs a user-
+  selected list of algorithms at the same time, covering synthesis, effects,
+  sampling, sequencing and utilities.
 links:
   manufacturer: https://www.expert-sleepers.co.uk/distingNT.html
   community:

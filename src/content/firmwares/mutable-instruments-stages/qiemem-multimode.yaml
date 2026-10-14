@@ -23,6 +23,12 @@ homepage: https://github.com/qiemem/eurorack/releases
 distribution: download
 install_notes: Download the WAV (normal or flipped) and follow the official Stages firmware update procedure.
 tags: [lfo, envelopes, random, quantizer, synth-engine]
+video:
+  url: https://www.youtube.com/watch?v=_-rgoM_oNE0
+  title: "Mutable Instruments Stages - Alternative Firmware by Qiemem"
+  credit: Peakae
+  first_party: true
+  found_via: https://github.com/qiemem/eurorack/tree/bipolar/stages
 versions:
   - version: v1.3.0
     date: 2024-04-17

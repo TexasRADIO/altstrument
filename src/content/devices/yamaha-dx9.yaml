@@ -2,6 +2,12 @@ name: DX9
 manufacturer: Yamaha
 category: synth
 tagline: Four-operator FM synth
+description: >-
+  The DX9 is a four-operator FM synthesizer made by Yamaha in 1983 as a lower-
+  cost relative of the six-operator DX7. It has 16-note polyphony, eight FM
+  algorithms and 20 preset voices, and user voices can be saved to cassette
+  tape. It has no analog filter, since the sound comes entirely from FM
+  synthesis.
 links:
   community:
     - label: DX9/7 project

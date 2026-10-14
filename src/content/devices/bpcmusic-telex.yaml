@@ -3,6 +3,13 @@ manufacturer: Brendon Cassidy (bpcmusic)
 category: eurorack
 tagline: >-
   Open DIY Teletype expanders: output (TXo) and input (TXi) over i2c
+description: >-
+  TELEX is a family of 4HP Eurorack expanders by Brendon Cassidy (bpcmusic) that
+  add inputs and outputs to the monome Teletype over the ii bus. The TELEXo
+  output module has four trigger outputs and four CV outputs, and the TELEXi
+  input module has four CV potentiometers and four CV inputs. Up to eight of
+  each type can be addressed independently, and each module is built around a
+  Teensy.
 platform: Teensy 3.2 / 3.6
 links:
   manufacturer: https://github.com/bpcmusic/telex

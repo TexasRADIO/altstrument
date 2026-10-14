@@ -23,6 +23,11 @@ homepage: https://monome.org/docs/norns/
 distribution: download
 install_notes: Connect norns to the internet and use SYSTEM > UPDATE, or upload the release tgz to the device's update directory.
 tags: [platform, os, scripting, sampler]
+video:
+  url: https://www.youtube.com/watch?v=E5XIEVon4Ak
+  title: "monome norns review // community soul in a music computer // 10 scripts explored"
+  credit: "loopop"
+  first_party: false
 versions:
   - version: v3.0.2
     date: 2026-08-19

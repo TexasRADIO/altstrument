@@ -17,6 +17,12 @@ install_notes: >-
   FuMi-1 and FiMba-1 are forks.
 brick_risk: true
 tags: [chords, synth-engine, performance]
+video:
+  url: https://www.youtube.com/watch?v=pahaM6nzucE
+  title: "FoMni-1 - Omnichord inspired firmware for FM-1"
+  credit: "Charles Vestal"
+  first_party: true
+  found_via: https://github.com/charlesvestal/fm1-fomni
 versions:
 - version: 0.3.2
   date: 2026-10-08

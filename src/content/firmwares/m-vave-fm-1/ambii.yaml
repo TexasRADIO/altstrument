@@ -18,3 +18,9 @@ source_status: open
 license: GPL-3.0-only
 distribution: source-only
 tags: [sequencer, ui, fx, emulator]
+image:
+  url: https://raw.githubusercontent.com/JalopyMusic/fm1-milkboyg-ambii/main/prototype/evidence/usability-controls-final-home-browser.png
+  alt: "AMBII browser prototype of the FM-1, showing the four-track home screen"
+  credit: "Jalopy Music"
+  source_url: https://github.com/JalopyMusic/fm1-milkboyg-ambii
+  first_party: true

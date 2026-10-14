@@ -18,6 +18,11 @@ distribution: patch-your-own
 requires_stock: "1.13"
 install_notes: Build per docs/BUILD.md from your own OS file; the docs include a going-back-to-stock section.
 tags: [sampler, machines, granular, wavetable, fx]
+video:
+  url: https://www.youtube.com/watch?v=v16v6CMg0YM
+  title: 'I added a sampler to the Elektron Model:Cycles (and a lot more) | Model-TG'
+  credit: TinyGreg
+  first_party: true
 versions:
   - version: v1.1.0
     date: 2026-10-02

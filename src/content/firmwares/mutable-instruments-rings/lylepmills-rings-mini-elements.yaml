@@ -24,6 +24,11 @@ install_notes: >-
   Combined bootloader and firmware hex is in alt_firmwares/hex_files. Recalibrate
   if you flashed before 2022-02-27.
 tags: [synth-engine, physical-modeling, chords]
+video:
+  url: https://www.youtube.com/watch?v=sL9mI7QlKo8
+  title: "Mutable Instruments Rings - Alternative Firmware!"
+  credit: The Unperson
+  first_party: false
 versions:
   - version: Mini-Elements bootloader combo hex
     date: 2022-04-30

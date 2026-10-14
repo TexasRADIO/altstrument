@@ -21,6 +21,11 @@ install_notes: >-
   Installed the same way as Korg's official updates. Applies to the original
   volca sample.
 tags: [sampler, polyphony, velocity, midi]
+video:
+  url: https://www.youtube.com/watch?v=bvBqQHeZ6w4
+  title: 'Volca Sample Demo // how extended bar filter brFL works? \\ unofficial Pajen Firmware'
+  credit: MakeYourBeats
+  first_party: false
 versions:
   - version: Beta 7
     date: 2020-03-27

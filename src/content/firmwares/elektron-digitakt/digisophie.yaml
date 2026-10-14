@@ -17,6 +17,11 @@ distribution: patch-your-own
 requires_stock: 1.53 / 1.54
 install_notes: Add the mod in elekloader (0.4.0 or later) with your own official OS file and flash the result.
 tags: [machines, synth-engine, performance]
+video:
+  url: https://www.youtube.com/watch?v=cqC-jPWhXbg
+  title: "Digisophie: percussion synth for Digitakt 1"
+  credit: Soejrd
+  first_party: true
 versions:
   - version: v1.1.13
     date: 2026-10-02

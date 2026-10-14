@@ -13,6 +13,12 @@ license_notes: >-
   is an AVR module, so upstream AVR code is GPL-3.0 as well.
 distribution: download
 tags: [fx]
+video:
+  url: https://www.youtube.com/watch?v=lWKPzUoxJjY
+  title: "Twigs: Alternate Firmware for Mutable Instruments Branches"
+  credit: officefern
+  first_party: true
+  found_via: https://github.com/arirusso/twigs
 versions:
   - version: v1.0.2
     date: 2020-08-28

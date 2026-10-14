@@ -17,6 +17,12 @@ license: GPL-3.0-only
 distribution: download
 install_notes: Download the .bin from the v1.0 release and flash it to the Daisy Seed with the Electrosmith web programmer or DFU.
 tags: [amp-sim, reverb, delay, looper, fx]
+video:
+  url: https://www.youtube.com/watch?v=G6pMcl99Tug
+  title: "Seed by GuitarML - Pedalboard in a Box"
+  credit: "GuitarML"
+  first_party: true
+  found_via: https://github.com/GuitarML/Seed
 versions:
   - version: v1.0
     date: 2023-12-08

@@ -2,6 +2,13 @@ name: volca drum
 manufacturer: Korg
 category: drum-machine
 tagline: 6-part digital percussion synth with motion sequencing
+description: >-
+  The volca drum is a six-part digital percussion synthesizer made by Korg as
+  part of its compact volca series. Each part has two layers,
+  each with an oscillator, pitch modulator and amp envelope, and a waveguide
+  resonator effect adds physically modeled resonance. A 16-step sequencer with
+  motion sequencing records knob movements, and the unit has sync in/out and
+  MIDI in.
 stock_firmware: "1.14"
 links:
   manufacturer: https://www.korg.com/us/products/dj/volca_drum/

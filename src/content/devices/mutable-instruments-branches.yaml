@@ -2,6 +2,12 @@ name: Branches
 manufacturer: Mutable Instruments
 category: eurorack
 tagline: Dual bernoulli gate (discontinued)
+description: >-
+  Branches is a 6HP Eurorack dual Bernoulli gate from Mutable Instruments, first
+  built in 2014. Each trigger or gate arriving at an input is routed at random
+  to one of two outputs, with a probability set by a knob and CV input, which
+  makes it useful for probabilistic sequencing and generative patches. It is
+  built around an ATmega88p microcontroller running at 8 MHz.
 platform: ATmega88 (AVR)
 links:
   manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/branches/
