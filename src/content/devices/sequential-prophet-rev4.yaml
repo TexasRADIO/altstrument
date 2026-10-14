@@ -1,0 +1,22 @@
+name: Prophet-5 / Prophet-10 Rev4
+manufacturer: Sequential Circuits
+category: synth
+tagline: Analog polysynth reissue, five or ten voices
+description: >-
+  The Prophet-5 Rev4 and Prophet-10 Rev4 are Sequential's reissues of the
+  original Prophet-5 and Prophet-10, sharing one operating system. Both have
+  two oscillators per voice, a filter switchable between the Rev1/2 SSI and
+  Rev3 Curtis designs, and a Vintage knob that adds the pitch and envelope
+  drift of earlier revisions. They add velocity, aftertouch, polyphonic glide,
+  MIDI and USB to the original panel layout, and come as keyboards or desktop
+  modules.
+platform: ADSP-SC57x (ARM + SHARC+)
+stock_firmware: Main OS 2.1.0
+links:
+  manufacturer: https://sequential.com/prophet-5-10/
+  community: []
+notes: >-
+  Main OS updates are SysEx files sent over USB, with a bootloader recovery
+  path documented by Sequential if an update fails to boot. Mods patch
+  Sequential's own Main OS file, which you download yourself; the OS is not
+  redistributed. The stock OS has no arpeggiator or sequencer.

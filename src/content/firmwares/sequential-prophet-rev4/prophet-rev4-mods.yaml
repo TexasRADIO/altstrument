@@ -1,0 +1,42 @@
+device: sequential-prophet-rev4
+name: prophet-rev4-mods
+summary: Patch for Sequential's Main OS 2.1.0 that adds an arpeggiator, a 512-step polyphonic sequencer, keyboard octave shift and per-program arp and sequence memory to the Prophet-5 and Prophet-10 Rev4, all from the front panel.
+description: >-
+  The arpeggiator has Up, Down, Up/Down, Random and Assign modes over 1 to 4
+  octaves, HOLD latch, 40 to 300 BPM by knob or tap tempo, MIDI clock sync and
+  thirteen note values including triplets and swing. The sequencer records up
+  to 512 steps of chords (10 notes each, with velocity), rests and ties from the
+  keyboard or MIDI, plays forward, backward or pendulum, transposes from a key,
+  and can feed the arpeggiator as a chord progression. Arp settings are saved
+  with each program, and a Recorded user program also stores its sequence in an
+  unused area of the synth's flash. Holding A440 at power-on bypasses the patch.
+  The project builds on an arpeggiator mod that circulated privately and keeps
+  its control layout (A440 as the arp button). Verified on a Prophet-10 Rev4;
+  the Prophet-5 Rev4 is untested on hardware.
+status: active
+authors:
+  - name: David Rainsford
+    url: https://github.com/dangerous
+source: https://github.com/dangerous/prophet-rev4-mods
+source_status: open
+license: MIT
+license_notes: Covers the project's own code and tooling; Sequential's OS is not redistributed.
+homepage: https://dangerous.github.io/prophet-rev4-mods/
+distribution: patch-your-own
+requires_stock: Main OS 2.1.0
+install_notes: >-
+  Download Sequential's Main OS 2.1.0 (prophet5_main_2.1.0.syx), drop it on the
+  browser patcher, which checks the input and output against known hashes, and
+  send the patched file over USB as SysEx like an official update (Globals, MIDI
+  SysEx = USB). Send the original 2.1.0 file to go back to stock. Recovery from a
+  failed update is through Sequential's documented bootloader procedure.
+tags: [arpeggiator, sequencer, chords, midi, performance]
+versions:
+  - version: 2.3.0
+    date: 2026-10-10
+    url: https://github.com/dangerous/prophet-rev4-mods/blob/main/CHANGELOG.md
+    notes: Adds gate length (A440 + Amp Decay); program and sequence layout changed, re-save earlier programs.
+  - version: 2.2.0
+    date: 2026-10-09
+    url: https://github.com/dangerous/prophet-rev4-mods/blob/main/CHANGELOG.md
+    notes: Sequences saved with user programs in flash.
