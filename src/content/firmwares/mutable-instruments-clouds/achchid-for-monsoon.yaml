@@ -1,0 +1,36 @@
+device: mutable-instruments-clouds
+name: AChChid for Monsoon
+summary: Firmware for the After Later Audio Monsoon, a Clouds clone, that turns it into a TB-303-style voice with the Braids macro oscillator as its sole sound source, run through an Open303 filter and envelope.
+description: >-
+  Targets the Monsoon and compatible Clouds-architecture hardware using the
+  stock Monsoon bootloader, not the original Mutable Instruments Clouds. The
+  panel sliders map to cutoff, resonance, envelope modulation and decay, while
+  the knobs select the Braids model, timbre, colour and accent depth; TRIG plays
+  a note and FREEZE accents it. The project labels itself an MVP, with Braids
+  not yet checked across every model and pitch range. Ports the AChChid voice
+  from the author's ChooChooTracker project.
+status: active
+authors:
+  - name: Pierre-Emmanuel Surga (paiheulevrai)
+    url: https://github.com/paiheulevrai
+source: https://github.com/paiheulevrai/achchid4monsoon
+source_status: open
+license: MIT
+license_notes: >-
+  No LICENSE file in the repository. The README states that the STM32 firmware
+  code follows the upstream Mutable Instruments MIT licence and that upstream
+  hardware material is CC-BY-SA 3.0.
+distribution: download
+requires_stock: Monsoon bootloader (Clouds-compatible audio update)
+install_notes: >-
+  Hold the panel Freeze button while powering on and release it when the Freeze
+  LED pulses, then play achchid.wav at 48 kHz into the left input. The
+  bootloader stays installed, so the stock Monsoon firmware can be restored
+  with its normal update WAV.
+brick_risk: false
+tags: [synth-engine, filter, oscillator]
+versions:
+  - version: v0.1.0-mvp
+    date: 2026-09-22
+    url: https://github.com/paiheulevrai/achchid4monsoon/releases/tag/v0.1.0-mvp
+    notes: First public MVP.

@@ -39,6 +39,7 @@ src/
   pages/                      Astro pages
 scripts/
   validate.ts                 catalog validator (runs before build and in CI)
+.claude/skills/discover/      /discover skill: gather script, config and prompt
 ```
 
 ## Local development
@@ -61,6 +62,8 @@ Builds need `SITE_URL` set to the public base URL the site is deployed to (for e
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add a device or firmware, the field reference, and the pull request checklist.
+
+To look for firmware and devices not yet in the catalog, run the `/discover` skill in Claude Code (see CONTRIBUTING.md, "Finding new entries").
 
 ## Licensing
 

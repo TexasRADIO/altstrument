@@ -1,0 +1,47 @@
+device: roland-sp-404-mkii
+name: DM-404
+kind: tool
+summary: Windows emulator that runs Roland's own SP-404MKII system program 5.52 on an emulated i.MX RT1060 in a QEMU fork, with an on-screen panel, MIDI, TouchOSC control and a VST3 plugin for DAW tracks.
+description: >-
+  You supply your own copy of Roland's system program on first run; none of
+  Roland's files are in the repository or the release package. The emulator
+  boots the unit to its main screen with blank or existing projects, and
+  supports pads, knobs, the VALUE encoder, LEDs, sampling, resampling, skip
+  back, a 16 GB internal drive and an SD card image. The 48 effects run in a
+  stand-in built on DaisySP, because the unit's effects chip firmware is
+  encrypted. MIDI ports, MIDI learn and clock work, and the DM-404 Link VST3
+  plugin carries audio and MIDI to and from a DAW track. The unit's USB audio
+  and MIDI device is not emulated, and only Windows 64-bit builds exist so far.
+status: active
+authors:
+  - name: Nicholas Petty
+    url: https://github.com/nickpetty
+source: https://github.com/nickpetty/dm-404
+source_status: open
+license: AGPL-3.0-or-later
+license_notes: >-
+  Mixed licences by directory. The app and plugin (frontend/) are
+  AGPL-3.0-or-later because of JUCE; the QEMU machine models and patches are
+  GPL-2.0-or-later; the effects engine, tools and docs are MIT, with LGPL-2.1
+  for the DaisySP-LGPL parts it links. Roland's firmware is not included.
+distribution: download
+requires_stock: "5.52"
+install_notes: >-
+  Bring your own firmware: download Roland's SP-404MKII system program 5.52 from
+  Roland's support page and give the zip or SP404MKII_APP1.bin to the app when it
+  asks. Unzip a release anywhere, keeping the qemu folder next to DM-404.exe.
+  Copy the VST3 file to your VST3 folder to use the plugin. Nothing is flashed to
+  hardware.
+tags: [emulator, fx, midi, sampler]
+versions:
+  - version: v0.1.4
+    date: 2026-10-14
+    url: https://github.com/nickpetty/dm-404/releases/tag/v0.1.4
+    notes: Adds TouchOSC control of the panel.
+  - version: v0.1.3
+    date: 2026-10-06
+    url: https://github.com/nickpetty/dm-404/releases/tag/v0.1.3
+    notes: Panel layout and scrolling fixes.
+  - version: v0.1.2
+    date: 2026-09-30
+    url: https://github.com/nickpetty/dm-404/releases/tag/v0.1.2

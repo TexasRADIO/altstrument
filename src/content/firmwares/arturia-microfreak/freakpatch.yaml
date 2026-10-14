@@ -1,0 +1,38 @@
+device: arturia-microfreak
+name: ThisFirmwareDoesNotExist (freakpatch)
+summary: Python patcher that applies community patches to your own copy of Arturia's official 5.0.0.2084 update file. The Release patch splits Decay and Release on separate controls, and a second patch adds MIDI CCs for the mod matrix.
+description: >-
+  The repository holds the patch machine code with its assembly source, the hook
+  addresses and the checksum of the one official file the tool accepts; it
+  contains no Arturia code. freakpatch refuses any other input, checks that the
+  output has the stock length and that only declared bytes changed, and writes a
+  patched .mff next to the input. The default Release patch makes the Dec/Rel knob
+  set Decay only and puts Release on Shift + Decay, with its own MIDI CC (72 by
+  default) and storage in presets. The release-matrix build adds a CC for the 34
+  mod matrix amounts that have none on stock firmware, and some of those CCs may
+  overlap controls the stock firmware reads, possibly the Vocoder bands, which is
+  untested. Docs map the stock image to help others write patches. The author
+  states the project was written with Claude Code.
+status: active
+authors:
+  - name: ThisFreakDoesntExist
+    url: https://github.com/ThisFreakDoesntExist
+source: https://github.com/ThisFreakDoesntExist/ThisFirmwareDoesNotExist
+source_status: open
+license: MIT
+license_notes: Covers the repository only; the MicroFreak firmware belongs to Arturia and is not included.
+distribution: patch-your-own
+requires_stock: 5.0.0.2084
+install_notes: >-
+  Needs Python 3.11 or newer and the official microfreak_Firmware_Update_5.0.0.2084.mff
+  from Arturia or MIDI Control Center's own copy. Run freakpatch on it, then flash
+  the patched file with MIDI Control Center. Do not share patched files. If the
+  synth stays on the boot logo, hold Shift + Arp + Oct while powering on and flash
+  the official file; flashing the official file always restores stock.
+brick_risk: true
+tags: [midi, envelopes, synth-engine, patch]
+versions:
+  - version: v0.2.0
+    date: 2026-10-13
+    url: https://github.com/ThisFreakDoesntExist/ThisFirmwareDoesNotExist/tree/v0.2.0
+    notes: Git tag; no GitHub release page.

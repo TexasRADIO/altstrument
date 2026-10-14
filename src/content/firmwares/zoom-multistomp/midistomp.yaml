@@ -1,0 +1,58 @@
+device: zoom-multistomp
+name: MIDISTOMP
+summary: Patched OS for the Zoom MS-50G, MS-60B and MS-70CDR, built from your own MS-50G 3.10 updater, that adds MIDI program change, MIDI CC, MIDI clock with Start and Stop, a tempo screen and footswitch hold options.
+description: >-
+  A builder program writes a patched updater from Zoom's official MS-50G 3.10
+  updater, which you then run with Zoom's own flasher; it refuses any other file
+  and never rewrites the bootloader, so update mode stays available for recovery.
+  Added features include program change for loading patches, CC control of the
+  six effect slots and every knob, a MIDI menu for per-message receive and channel,
+  tempo set by clock, knob or tap with a tempo lock across patches, and a HOLD FOR
+  footswitch option for tuner, tempo or momentary use. Tested only on an MS-60B
+  flashed with the MS-50G firmware; the MS-50G and MS-70CDR are untested. It pairs
+  with the author's custom effects, which follow its tempo and Start and Stop. The
+  repository also holds a parser and build tool for the pedals' updaters.
+status: active
+authors:
+  - name: Luca Matturro (matujuice)
+    url: https://github.com/matujuice
+source: https://github.com/matujuice/zoom-ms-midistomp
+source_status: open
+license: MIT
+distribution: patch-your-own
+requires_stock: "3.10"
+install_notes: >-
+  Download Zoom's official MS-50G 3.10 updater, drag it onto MIDISTOMP-builder.exe
+  from the releases page and run the updater it writes. Zoom's own updater takes
+  the pedal back to stock. The author warns that flashing modified firmware can
+  brick a pedal and points to docs/safety.md in the repository.
+brick_risk: true
+tags: [midi, performance, fx, ui, patch]
+video:
+  url: https://www.youtube.com/watch?v=YFTa55yCxsM
+  title: zoom ms midistomp v1.0 8 (Turn on Subtitles)
+  credit: ToMatu
+  first_party: true
+  found_via: https://github.com/matujuice/zoom-ms-midistomp#demo
+versions:
+  - version: v1.0
+    date: 2026-10-09
+    url: https://github.com/matujuice/zoom-ms-midistomp/releases/tag/v1.0
+    notes: Adds the MIDI menu, tempo screen, tempo lock and HOLD FOR options.
+  - version: v0.6
+    date: 2026-10-09
+    url: https://github.com/matujuice/zoom-ms-midistomp/releases/tag/v0.6
+  - version: v0.5
+    date: 2026-10-09
+    url: https://github.com/matujuice/zoom-ms-midistomp/releases/tag/v0.5
+  - version: v0.4
+    date: 2026-10-08
+    url: https://github.com/matujuice/zoom-ms-midistomp/releases/tag/v0.4
+  - version: v0.3
+    date: 2026-10-08
+    url: https://github.com/matujuice/zoom-ms-midistomp/releases/tag/v0.3
+    notes: MIDI clock sets the tempo.
+  - version: v0.2
+    date: 2026-10-08
+    url: https://github.com/matujuice/zoom-ms-midistomp/releases/tag/v0.2
+    notes: Adds MIDI program change and CC.

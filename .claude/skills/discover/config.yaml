@@ -1,0 +1,141 @@
+# Configuration for the /discover skill and its gather script
+# (.claude/skills/discover/candidates.ts). Reviewed data: edit by hand, commit
+# changes like any other catalog change.
+
+# Default lookback window in days for feeds, GitHub searches and prior-art commits.
+since_days: 14
+
+# Sent on every feed request. lines (llllllll.co) refuses non-browser agents.
+user_agent: "Mozilla/5.0 (compatible; firmware-world-discover/0.1; +https://firmware.world)"
+
+# Case-insensitive substrings. A feed item is kept when its title or summary
+# contains one of these, or names a device in the catalog. Deliberately narrow:
+# "mod" and "hack" alone match too much modular-synth news.
+keywords:
+  - firmware
+  - custom os
+  - alternative os
+  - alternative firmware
+  - custom firmware
+  - third-party firmware
+  - unofficial
+  - open source
+  - open-source
+  - hacked
+  - jailbreak
+  - reverse engineer
+  - reverse-engineer
+
+# RSS or Atom feeds. `prefiltered: true` means every item already matches
+# (a search feed), so the keyword filter is skipped.
+feeds:
+  - label: CDM
+    url: https://cdm.link/feed/
+  - label: Matrixsynth
+    url: https://www.matrixsynth.com/feeds/posts/default?alt=rss
+  - label: Synthtopia
+    url: https://www.synthtopia.com/feed/
+  - label: Gearnews
+    url: https://www.gearnews.com/feed/
+  - label: Synth Anatomy
+    url: https://synthanatomy.com/feed
+  - label: Elektronauts
+    url: https://www.elektronauts.com/latest.rss
+  - label: lines
+    url: https://llllllll.co/latest.rss
+  - label: MOD WIGGLER
+    url: https://modwiggler.com/forum/feed.php
+  - label: r/synthesizers (firmware search)
+    url: https://www.reddit.com/r/synthesizers/search.rss?q=firmware&sort=new&restrict_sr=on
+    prefiltered: true
+  - label: r/synthdiy (firmware search)
+    url: https://www.reddit.com/r/synthdiy/search.rss?q=firmware&sort=new&restrict_sr=on
+    prefiltered: true
+  - label: r/eurorack (firmware search)
+    url: https://www.reddit.com/r/eurorack/search.rss?q=firmware&sort=new&restrict_sr=on
+    prefiltered: true
+
+# GitHub repository search queries. The script appends `fork:false pushed:>DATE`.
+github_queries:
+  - '"custom firmware" synth'
+  - '"custom firmware" sampler'
+  - '"custom firmware" groovebox'
+  - '"custom firmware" eurorack'
+  - '"alternative firmware" synth'
+  - '"alternative firmware" eurorack'
+  - '"alternative firmware" module'
+  - '"open source firmware" pedal'
+  - '"open source firmware" midi controller'
+  - 'topic:eurorack firmware'
+  - 'topic:synthesizer firmware'
+  - 'topic:synth firmware'
+
+# One search per device in src/content/devices. {name} is the device display
+# name, {manufacturer} the manufacturer. Requiring the manufacturer keeps
+# generic names (Force, Tracker, Arc) from pulling in unrelated projects.
+device_query_template: '{manufacturer} "{name}" firmware'
+
+# Other catalogs of music-gear firmware. Recent commits here often mean a new project.
+prior_art_repos:
+  - Lapin/awesome-music-gear-firmware
+  - aroum/fm1-custom-fw
+  - Maxhodges/noise-engineering-firmware-index
+  - pichenettes/mutable-instruments-documentation
+
+# Candidates the maintainer looked at and rejected. The skill appends here.
+# A GitHub URL matches by owner/repo; any other URL matches as a prefix.
+ignore:
+  - url: https://github.com/cmlarsen/fm1-zed
+    reason: byte-identical copy of Felucca v1.5.1 with only the README changed
+    date: 2026-10-14
+  - url: https://github.com/yuki-kwkm/NE_Legio
+    reason: empty repository
+    date: 2026-10-14
+  - url: https://github.com/ChanceTheMaker/doom-fm1-smk
+    reason: bundles the official M-VAVE FM-1 V15 .fwsc in the repo and installer site
+    date: 2026-10-14
+  - url: https://github.com/romanjeff/syntaktful
+    reason: research notes and a design draft only, nothing flashable
+    date: 2026-10-14
+  - url: https://github.com/userx14/CircuitTracksReverseEngineering
+    reason: research notes plus committed device flash and RAM dumps
+    date: 2026-10-14
+  - url: https://github.com/ugufru/oberheim-matrix-1000
+    reason: firmware and hardware documentation only, no firmware or tool
+    date: 2026-10-14
+  - url: https://github.com/peterswimm/korg-cm3-research
+    reason: research notes only, nothing flashable or runnable yet
+    date: 2026-10-14
+  - url: https://github.com/PocketMidi/KB1
+    reason: hardware controller for the Tracker Mini, not firmware for an existing device
+    date: 2026-10-14
+  - url: https://github.com/darkfader/audiobrick
+    reason: amplifier board firmware, not music-instrument hardware
+    date: 2026-10-14
+  - url: https://github.com/hnaderi/teslasynth
+    reason: drives Tesla coils and transformers, not an existing music device
+    date: 2026-10-14
+  - url: https://github.com/reales/retromulator
+    reason: desktop emulation app for many classic synths, not firmware or a device-specific tool
+    date: 2026-10-14
+  - url: https://github.com/estuariolabs/tolhuin-chord
+    reason: firmware for the author's own ESP32 instrument, not an existing device
+    date: 2026-10-14
+  - url: https://github.com/napolitano/eurorack-clock-firmware
+    reason: firmware for the author's own DIY module, not an existing device
+    date: 2026-10-14
+  - url: https://github.com/joanaldojhon-droid/-BATERIA-CASEIRA-COM-ARDUINO-JDRUMS-V22-6-PREMIUM
+    reason: Arduino drum controller build, not firmware for an existing device
+    date: 2026-10-14
+  - url: https://github.com/slomkowski/automatic-usb-mains-switch
+    reason: USB relay module, not music hardware
+    date: 2026-10-14
+  - url: https://github.com/lylepmills/eurorack-patterns
+    reason: C++ design-pattern library, not firmware or a device tool
+    date: 2026-10-14
+  - url: https://github.com/shard76-dark/MothDeck-ambient-house-groovebox-firmware-for-M5Stack-Cardputer-ADV-
+    reason: M5Stack Cardputer is a general-purpose gadget, not music hardware
+    date: 2026-10-14
+  - url: https://github.com/Denys/embedded-audio-mine
+    reason: link collection, not a firmware project
+    date: 2026-10-14

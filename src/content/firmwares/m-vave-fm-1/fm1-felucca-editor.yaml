@@ -1,0 +1,37 @@
+device: m-vave-fm-1
+name: Felucca Editor (SysEx scripts)
+kind: tool
+summary: >-
+  Python scripts for Windows that drive Felucca 1.5 over its SysEx editor protocol: write four-track
+  arrangements, manage project slots and song chains, and read or set parameters from the command line.
+description: >-
+  Talks to winmm.dll through ctypes, so it has no third-party dependencies. Covers Felucca 1.5's track and
+  global parameters, 64 steps per track, four project slots and the sixteen-row song chain, driven from an
+  arrangement JSON file. Includes reference notes on the frame format and parameter ranges, plus a Claude
+  skill file for generating arrangements. The README is in Chinese. Windows only; close any browser MIDI
+  session first because the device input is exclusive. Multi-row chains with repeat above one are noted as
+  unstable.
+status: active
+authors:
+- name: Hunter Xiong (hunterxiong2026)
+  url: https://github.com/hunterxiong2026
+source: https://github.com/hunterxiong2026/fm1-felucca-editor-2026
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Targets Felucca 1.5 specifically. Clone the repository and run the scripts with Python 3.10 or newer in a
+  separate virtual environment; mido is only needed for MIDI export.
+brick_risk: false
+tags: [editor, midi, scripting, sequencer]
+versions:
+- version: 1.3.0
+  date: 2026-10-13
+  url: https://github.com/hunterxiong2026/fm1-felucca-editor-2026/releases/tag/v1.3.0
+  notes: Felucca v1.5 support.
+- version: 1.1.0
+  date: 2026-10-09
+  url: https://github.com/hunterxiong2026/fm1-felucca-editor-2026/releases/tag/v1.1.0
+- version: 1.0.0
+  date: 2026-10-06
+  url: https://github.com/hunterxiong2026/fm1-felucca-editor-2026/releases/tag/v1.0.0

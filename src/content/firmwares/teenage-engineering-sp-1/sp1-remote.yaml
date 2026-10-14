@@ -1,0 +1,29 @@
+device: teenage-engineering-sp-1
+name: SP-1 Remote
+summary: Turns the SP-1 into a generic four-fader, four-button MIDI controller that sends CCs over USB MIDI and the TRS sync jack, with a control table defined in one source file.
+description: >-
+  The default profile maps the faders and buttons to controls on the PopGoblin
+  string synth running on a Tiliqua, but only one table in the source
+  (firmware/src/profile.c) is specific to it. Two buttons save and recall
+  presets, and presets persist across power cycles. The README reports that
+  USB MIDI and TRS MIDI out work on hardware and lists host-side tests for the
+  decision logic.
+status: active
+authors:
+  - name: Morten Wagner
+    url: https://github.com/mortenwagner
+source: https://github.com/mortenwagner/sp1-remote
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Build with Zephyr v4.3.1 and flash build/zephyr/zephyr.bin with the
+  Solderless utility in Chrome or Edge. Holding Track 1 and Track 4 for about
+  1.2 seconds while the firmware runs resets into the bootloader.
+brick_risk: false
+tags: [midi, usb-midi, performance]
+versions:
+  - version: main @ 03bc636
+    date: 2026-08-08
+    url: https://github.com/mortenwagner/sp1-remote/commit/03bc636
+    notes: No tagged releases; this is the latest commit.

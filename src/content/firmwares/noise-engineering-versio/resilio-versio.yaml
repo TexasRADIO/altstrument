@@ -1,0 +1,52 @@
+device: noise-engineering-versio
+name: Resilio Versio
+summary: Dub-style spring reverb with a tape echo in front, a steep low-cut tone control, a throw button and gate for one-shot sends, and clean, tape or valve colouring of the reverb. Also released as a macOS AU/VST3 plugin.
+description: >-
+  Seven knobs each have a CV input, with two switches, a button and a gate.
+  The spring sound follows a published physical model and the same DSP core
+  runs in the firmware, an offline renderer and the plugin. The README
+  states that the author directed the sound and that the code was written
+  with Claude. The project site has a manual, starting-point settings and a
+  changelog. Releases from 2026-10-01 to 2026-10-06 are marked in their notes
+  as pre-public builds shared with friends.
+status: active
+authors:
+  - name: Jesse Bauer
+    url: https://github.com/jeffebauer
+source: https://github.com/jeffebauer/resilio-versio
+source_status: open
+license: MIT
+license_notes: >-
+  Firmware and tools are MIT per the README. The macOS plugin binaries are
+  AGPL-3.0 because they are built with JUCE.
+homepage: https://resilio-versio.vercel.app
+distribution: download
+install_notes: >-
+  Download resilio-versio-firmware.bin from the latest release and install it
+  with Noise Engineering's Firmware Swap page in Chrome, with the module
+  powered from USB only. The README warns never to connect USB and Eurorack
+  power at the same time. Firmware Swap restores the stock firmware.
+tags: [reverb, delay, fx, emulator]
+image:
+  url: "https://raw.githubusercontent.com/jeffebauer/resilio-versio/main/docs/minisite/assets/renders/hero-monolith.jpg"
+  alt: "Render of a Versio module with Resilio panel art on a dark stage, showing Blend, Tone, Decay, Splash, Wobble, Tension and Drive knobs, two switches, a Throw button and the jack rows"
+  credit: "Jesse Bauer"
+  source_url: https://github.com/jeffebauer/resilio-versio
+  first_party: true
+versions:
+  - version: v2026.10.07-0671d22
+    date: 2026-10-07
+    url: https://github.com/jeffebauer/resilio-versio/releases/tag/v2026.10.07-0671d22
+    notes: First public release.
+  - version: v2026.10.06-a6c70a4
+    date: 2026-10-06
+    url: https://github.com/jeffebauer/resilio-versio/releases/tag/v2026.10.06-a6c70a4
+    notes: Pre-public test build.
+  - version: v2026.10.02-cef6a77-candidate-F
+    date: 2026-10-02
+    url: https://github.com/jeffebauer/resilio-versio/releases/tag/v2026.10.02-cef6a77-candidate-F
+    notes: Pre-public candidate, marked as a prerelease.
+  - version: v2026.10.01-1d18fce
+    date: 2026-10-01
+    url: https://github.com/jeffebauer/resilio-versio/releases/tag/v2026.10.01-1d18fce
+    notes: Pre-public test build.

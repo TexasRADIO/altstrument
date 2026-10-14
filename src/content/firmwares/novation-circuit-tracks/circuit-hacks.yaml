@@ -1,0 +1,49 @@
+device: novation-circuit-tracks
+name: CIRCUIT-HACKS
+summary: Patches for the Circuit Tracks 1.2.1 firmware that add shortcuts, a Master FX performance view, extra MIDI-track engines, a step-drummer, pattern chains and more, applied in the browser to your own Novation update file.
+description: >-
+  Applies patches to Novation's official 1.2.1 (build 4486) update file, in a
+  browser page or with a Python script, and checks the result against published
+  hashes. Changes include shortcuts and Clear + knob defaults, drum knobs that
+  follow the panel labels, a Master FX view with effects, a song pointer and a
+  glitch pad, line, oscillator, VA-drum and granular engines for the MIDI tracks,
+  a step-drummer, sample capture, and a changelog of RC and beta versions (the
+  beta adds pattern chains, nudge and playback orders). The repository also
+  holds builders, emulators and illustrated manuals in Spanish and English.
+  Each release candidate has an "S" variant without features that write to the
+  SD card by themselves. The author says the project was developed with Claude.
+status: active
+authors:
+  - name: Ghillermo
+    url: https://github.com/Ghillermo
+source: https://github.com/Ghillermo/CIRCUITS-HACKS-RC
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the project's own tools, patches and documentation. It does not cover
+  Novation's firmware, which is not included, or third-party dependencies; the
+  dsptool patches apply to dsp56300 (GPL-3.0).
+homepage: https://ghillermo.github.io/CIRCUITS-HACKS-RC/en.html
+distribution: browser-installer
+requires_stock: 1.2.1 build 4486
+install_notes: >-
+  Download Novation's official 1.2.1 update yourself, open tools/rc_uploader.html
+  in Chrome or Edge, pick the official file and a version, and send it over
+  Web MIDI; or build the .syx with tools/patch_official.py. Back up the SD card
+  first. RC0.9S is the variant that never writes to the card by itself, and B1.3
+  is a beta with features not yet tested on hardware. The bootloader is not
+  touched: Scales + Preset + Note at power-on returns to the official firmware.
+tags: [sequencer, fx, midi, performance, ui, synth-engine]
+versions:
+  - version: B1.3
+    date: 2026-10-14
+    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/3d6d25211a0fee1282df9303be07f27891dce815
+    notes: Beta; RC0.9 plus features not yet tested on hardware. Date is the commit date.
+  - version: RC0.9S
+    date: 2026-10-14
+    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/3d6d25211a0fee1282df9303be07f27891dce815
+    notes: Safer variant that does not write to the SD card by itself.
+  - version: RC0.9
+    date: 2026-10-14
+    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/3d6d25211a0fee1282df9303be07f27891dce815
+    notes: Makes the internal-memory pack read-only to the mod.

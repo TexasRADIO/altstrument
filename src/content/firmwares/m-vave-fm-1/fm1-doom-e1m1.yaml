@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: FM-1 Doom E1M1
+summary: >-
+  Port of Doom's first level (E1M1) to the FM-1, with title screen, sound and music, on rp2040-doom and
+  Felucca's hardware layer, installed from a browser page.
+description: >-
+  Squeezes one level into the chip's 1 MB of flash and 512 KB of RAM, drawing on the 240x240 screen with the
+  keys and knobs as controls. The firmware keeps Felucca's update loader, accepts a new firmware over USB
+  in every state and never writes the boot code; holding HOME at power-on gives a screen that only waits for
+  an update. Game data is not in the repository: the installer page fetches id Software's shareware
+  DOOM1.WAD into the visitor's browser (or takes your own copy) and prepares it there. Separate from the
+  FM-1 Doom entry by zvenson, which uses a different engine and the Freedoom data.
+status: active
+authors:
+- name: Sean O'Hollaren (seanohollaren)
+  url: https://github.com/seanohollaren
+source: https://github.com/seanohollaren/fm1-doom
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Engine is GPL-2.0-or-later (Doom via Chocolate Doom and rp2040-doom, whose additions are BSD-3-Clause);
+  Felucca's hardware layer is GPL-3.0-only. No game data is stored in the repository.
+homepage: https://doom.deadlockinteractive.com/
+distribution: browser-installer
+install_notes: >-
+  Chrome or Edge over USB. The author describes it as experimental, installed and played on one FM-1. A
+  failure before the recovery screen runs can only be fixed with extra hardware (see NOTES.md, Recovery).
+  tools/fm1boot.py and tools/fm1restore.py back up and restore the whole flash through the chip's USB boot
+  mode.
+brick_risk: true
+tags: [game]
+versions:
+- version: main @ bde8893
+  date: 2026-10-13
+  url: https://github.com/seanohollaren/fm1-doom/commit/bde88936a14e50276edebf684e60458f05926da8
+  notes: No tagged releases; this is the latest commit.

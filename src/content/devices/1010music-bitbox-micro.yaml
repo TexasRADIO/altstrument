@@ -1,0 +1,20 @@
+name: Bitbox Micro
+manufacturer: 1010music
+category: eurorack
+tagline: 18 HP touchscreen sampler module
+description: >-
+  The Bitbox Micro is an 18 HP Eurorack sampler from 1010music with a 2 inch
+  touchscreen. Each preset has eight stereo sample pads, eight assignable inputs
+  that can act as audio, gate, CV or clock inputs, and three stereo or six mono
+  outputs plus a master stereo output. It has 64 MB of internal memory and
+  streams longer samples from a microSD card.
+stock_firmware: 2.3.4
+links:
+  manufacturer: https://1010music.com/product/bitbox-micro
+  community:
+    - label: Mod Wiggler thread
+      url: https://www.modwiggler.com/forum/viewtopic.php?t=302078
+notes: >-
+  The patcher here edits an official 2.3.4 image you supply yourself and leaves
+  the module's separate bootloader alone, so putting 1010music's own firmware
+  back on the card restores a stock unit.

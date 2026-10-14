@@ -1,0 +1,32 @@
+device: mutable-instruments-tools
+name: mi-sim
+kind: tool
+summary: macOS simulator that runs the unmodified Mutable Instruments firmware for Plaits, Rings and Elements block by block against a virtual panel, with Python bindings, a GUI with live audio and a test suite.
+description: >-
+  Pulls the upstream pichenettes/eurorack source in as a submodule and replaces
+  only the STM32 drivers, so the real UI, calibration and flash-settings code
+  run as on hardware. Pots, CV jacks, buttons, LEDs and virtual flash are
+  exposed for scripting and tests. The layout is per module so others can be
+  added. A guide in the repository covers encoding firmware for the audio
+  bootloader and flashing real modules.
+status: active
+authors:
+  - name: dongxu (c4pt0r)
+    url: https://github.com/c4pt0r
+source: https://github.com/c4pt0r/mi-sim
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the simulator code. The bundled upstream firmware keeps its own
+  licences (MIT for STM32 modules, GPL for AVR modules).
+distribution: source-only
+install_notes: >-
+  Clone with submodules, install cmake and ninja, and run make build and make
+  gui MODULE=rings (or plaits, elements). Needs Apple clang on macOS.
+brick_risk: false
+tags: [emulator, research, sdk]
+versions:
+  - version: main @ 58c28e0
+    date: 2026-09-25
+    url: https://github.com/c4pt0r/mi-sim/commit/58c28e0b20acc91c9e2769fb149e6a8b0664a7d3
+    notes: No tagged releases; this is the latest commit.

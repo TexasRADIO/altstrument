@@ -23,6 +23,17 @@ Some entries are not files in this repository. They are fetched from an upstream
 - To change how fields are mapped (status, license, tags), edit the loader in `src/loaders/workshop-computer.ts`.
 - Builds need network access for these entries. The loader caches on the directory listing's ETag, so an unchanged upstream costs one request. Set `GITHUB_TOKEN` to raise the GitHub API rate limit, or `FIRMWARE_WORLD_SKIP_REMOTE=1` to build offline from the cached data store.
 
+## Finding new entries
+
+The repository ships a Claude Code skill, `/discover`, that looks for custom firmware projects and devices missing from the catalog. Run it in a Claude Code session opened at the repository root. It:
+
+1. runs `pnpm discover:candidates`, which reads synth news and forum feeds, searches GitHub, and checks the catalogs listed under "Prior art" in the README, then drops anything already linked from `src/content`;
+2. researches each remaining candidate against the rules in this file;
+3. writes draft device and firmware YAML and runs `pnpm validate`;
+4. stops without committing, so you review the files like any other change.
+
+Feeds, search queries, keywords and the list of rejected candidates live in `.claude/skills/discover/config.yaml`. Rejected candidates are recorded under `ignore` with a reason so they are not shown again; edit that list by hand to un-reject one. `pnpm discover:candidates --help` lists the gather script's flags for running it on its own.
+
 ## Device template
 
 ```yaml

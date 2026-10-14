@@ -1,0 +1,39 @@
+device: hermetic-modular-alchemy-lab
+name: mi-alchemy
+summary: Ports of Mutable Instruments Clouds, Elements, Marbles, Plaits, Warps (Parasites), Beads and a Warps variant called Meld to the Alchemy Lab V2, each as its own firmware image chosen from the SD card.
+description: >-
+  The DSP is vendored from the open-source pichenettes/eurorack tree (and
+  Parasites for Warps) with minimal changes, and a shim maps each module's
+  controls onto the Lab's six pots, three buttons and ten jacks. Every firmware
+  has the same SD-card firmware picker, autosaves its panel to the card after a
+  change, and shows last session's CPU peak at boot. Elements needs an extra
+  samples file on the card for its exciters. Both releases are marked
+  pre-release and had not been run on a module at release.
+status: active
+authors:
+  - name: Tim Cox (timncox)
+    url: https://github.com/timncox
+source: https://github.com/timncox/mi-alchemy
+source_status: open
+license: MIT
+license_notes: >-
+  Vendored Mutable Instruments code is MIT (Émilie Gillet); Warps comes from
+  Parasites by Matthias Puech. The LICENSE file lists the other vendored
+  components.
+distribution: download
+requires_stock: Alchemy Lab V2 board
+install_notes: >-
+  Copy the .bin files into /alchemy on the Lab's SD card, plus elements.smp
+  into /mi for Elements, then switch firmware from the Settings page. The
+  README says nothing has been flashed or heard on hardware yet.
+brick_risk: false
+tags: [synth-engine, fx, granular, platform]
+versions:
+  - version: v0.2.0
+    date: 2026-10-13
+    url: https://github.com/timncox/mi-alchemy/releases/tag/v0.2.0
+    notes: Pre-release. Adds Beads and moves saved panel settings to the SD card.
+  - version: v0.1.0
+    date: 2026-09-30
+    url: https://github.com/timncox/mi-alchemy/releases/tag/v0.1.0
+    notes: Pre-release. First six ports.

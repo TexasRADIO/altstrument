@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: fm1-bootloader
+summary: >-
+  Open C bootloader for the FM-1 and SMK-37 Pro/Elite, reconstructed from JieLi's generic one, with a recovery
+  key that drops into USB download mode and a recovery menu.
+description: >-
+  Starts from a byte-identical C reconstruction of the generic AC79 bootloader that the stock firmware ships,
+  then splits it into ordinary modules and removes support for external RAM and large flash chips that these
+  devices lack. It adds a recovery key held at power-on that resets the chip into its ROM USB download mode, so
+  a damaged flash can be rewritten over a normal cable, and a menu that reports whether the installed app is
+  intact, boots a damaged app anyway, wipes user data or enters download mode. Boot checks the CRC of each app
+  file. Builds are per board and carry an identity block so an installer can refuse the wrong device. An
+  official M-VAVE update puts the stock bootloader back. The author's M-Flasher can install it.
+status: active
+authors:
+- name: Julius Vitkauskas (jvitkauskas)
+  url: https://github.com/jvitkauskas
+source: https://github.com/jvitkauskas/fm1-bootloader
+source_status: open
+license: Apache-2.0
+license_notes: >-
+  Inherits Apache-2.0 from JieLi's AC79 SDK, from which it is reconstructed. The LZ4 decoder stays under
+  BSD-2-Clause (see NOTICE).
+distribution: source-only
+install_notes: >-
+  Build on x86-64 Linux with JieLi's clang toolchain in /opt/jieli (make for the FM-1, make BOARD=smk37 for the
+  SMK-37 Pro and Elite). Install a build only on the device it was built for. The README says this build is not
+  tested on hardware and that a broken bootloader can brick the unit, so first make sure you can reach JieLi's
+  download mode. A bootloader write is the one thing its own recovery cannot repair.
+brick_risk: true
+tags: [loader, flasher, research]
+versions:
+- version: main @ 14b26f4
+  date: 2026-10-13
+  url: https://github.com/jvitkauskas/fm1-bootloader/commit/14b26f4faaa8876bcd266ceeba0b73d522a0b050
+  notes: No tagged releases; this is the latest commit.

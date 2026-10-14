@@ -1,0 +1,39 @@
+device: mutable-instruments-clouds
+name: Lenticular
+summary: Clouds firmware that rebuilds the granular mode around grain-spacing statistics (clump-free washes, quasiperiodic and rigid arpeggio timing), adds chord and detuned-pair grains, and replaces the spectral mode with a formant-preserving pitch shifter.
+description: >-
+  The texture control walks from evenly spaced grains through quasiperiodic and
+  random timing to a fixed arpeggio-style grid. Grains can land on chord tones,
+  be paired as detuned twins, and be replayed as the same cloud on each trigger.
+  Voice mode, which takes the place of the spectral mode, transposes voice or
+  bass while keeping formants. Stretch and the looping delay remain as in stock
+  Clouds. A separate alpha build targets Supercell-architecture modules such as
+  the Typhoon and was untested on hardware at release.
+status: active
+authors:
+  - name: Combust (ErnestG4)
+    url: https://github.com/ErnestG4
+source: https://github.com/ErnestG4/Lenticular
+source_status: open
+license: unspecified
+license_notes: >-
+  No LICENSE file in the repository. The README says it is built on Clouds
+  (MIT) from Lyle Mills' eurorack tree and does not state a licence of its own.
+distribution: download
+install_notes: >-
+  Standard Clouds audio update: hold the blend button at power-up and play the
+  release WAV into the left input at full line level. The README warns that the
+  audio transfer is fragile and to flash again if the module does not boot. Use
+  the Clouds WAV only on original-architecture modules and the Typhoon WAV only
+  on Supercell-architecture ones.
+brick_risk: true
+tags: [granular, chords, fx, pitch-shift]
+versions:
+  - version: typhoon-v0.8.0-alpha
+    date: 2026-10-07
+    url: https://github.com/ErnestG4/Lenticular/releases/tag/typhoon-v0.8.0-alpha
+    notes: Pre-release. Build for Typhoon and Supercell-architecture modules; not verified on hardware.
+  - version: v0.8.0
+    date: 2026-10-07
+    url: https://github.com/ErnestG4/Lenticular/releases/tag/v0.8.0
+    notes: Pre-release. First public release; adds Voice mode.

@@ -1,0 +1,36 @@
+device: noise-engineering-versio
+name: Iterum Versio
+summary: Clockable stereo delay with delay times up to 60 seconds, ping-pong, cross and stereo routing, skew between channels, probabilistic reverse, freeze and a DJ filter in the feedback path.
+description: >-
+  Delay times follow either free-running time ranges or ratios of an external
+  clock on the FSU jack, and changes in time can behave like tape, crossfade
+  or jump. Feedback goes up to 110 percent, held by soft saturation. The
+  repository also holds build instructions and panel artwork for a 10 HP
+  panel. The author states it is independent and not affiliated with Noise
+  Engineering.
+status: active
+authors:
+  - name: Alessandro Capano
+    url: https://github.com/alexain
+source: https://github.com/alexain/iterum-versio
+source_status: open
+license: MIT
+license_notes: Per the repository LICENSE file.
+homepage: https://github.com/alexain/iterum-versio/releases/tag/v1.0.0
+distribution: download
+install_notes: >-
+  Download IterumVersio.bin from the release, put the Daisy Seed in DFU mode
+  (hold BOOT, press and release RESET, release BOOT) and flash it with the
+  Daisy Web Programmer (flash.daisy.audio) in Chrome or Edge. Keep a copy of
+  the Noise Engineering firmware to switch back.
+tags: [delay, fx, filter]
+image:
+  url: "https://raw.githubusercontent.com/alexain/iterum-versio/main/docs/panel.png"
+  alt: "Iterum Versio panel artwork on a black panel showing Mix, Skew, Time, Filter, Feedback, Range and Reverse knobs, Route and Change switches, a Freeze button, CV jacks and the Clock jack"
+  credit: "Alessandro Capano"
+  source_url: https://github.com/alexain/iterum-versio
+  first_party: true
+versions:
+  - version: v1.0.0
+    date: 2026-10-14
+    url: https://github.com/alexain/iterum-versio/releases/tag/v1.0.0

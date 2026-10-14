@@ -1,0 +1,22 @@
+name: MU2000
+manufacturer: Yamaha
+category: synth
+tagline: 64-part XG tone generator with sampler and plug-in slots
+description: >-
+  The MU2000 is a rack-style tone generator from Yamaha, released in 1999 as
+  the top model of the MU series. It is 64-part multitimbral with 128-note
+  polyphony and supports General MIDI, GM2 and XG, and it has a 4 MB user
+  sampler, a SmartMedia card slot and three slots for PLG expansion boards.
+  It has two A/D inputs for guitar or microphone, an optical digital output and
+  USB. Under the hood it uses an SH-2 family CPU and two SWP30 tone-generator
+  chips.
+platform: Hitachi SH7043 with two Yamaha SWP30
+links:
+  manufacturer: https://www.yamaha.com/en/about/innovation/collection/detail/2087
+  community:
+    - label: S-MU2000 project site
+      url: https://tarboh.github.io/S-MU2000/
+notes: >-
+  A free Yamaha firmware update added Roland GS support and effects and made
+  the unit an MU2000EX. The only catalogued entry runs the original firmware in
+  an emulator and requires ROMs extracted from your own unit.

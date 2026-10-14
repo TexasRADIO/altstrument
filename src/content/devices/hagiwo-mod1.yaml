@@ -1,0 +1,23 @@
+name: MOD1
+manufacturer: HAGIWO
+category: diy-platform
+tagline: 4HP Arduino Nano Eurorack module for custom CV and gate sketches
+description: >-
+  MOD1 is an open-source 4HP Eurorack module by the maker HAGIWO, built around
+  an Arduino Nano-compatible board. It has four 0 to 5 V jacks that can be set
+  up as inputs or outputs, three potentiometers, a button and an LED, and runs
+  from +12 V only. Its function is set by the Arduino sketch uploaded to it, so
+  the same hardware can act as an LFO, sequencer, quantizer or other CV and
+  gate tool.
+platform: Arduino Nano (ATmega328P)
+links:
+  manufacturer: https://note.com/solder_state/n/nc05d8e8fd311
+  community:
+    - label: HAGIWO on YouTube
+      url: https://www.youtube.com/@HAGIWO
+notes: >-
+  Firmware is written as Arduino sketches and uploaded over USB with the Arduino
+  IDE or a browser-based uploader, so any sketch can replace what is on the
+  board. The maker's build page does not state a licence for the hardware or
+  the example code.
+related: []

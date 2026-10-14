@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: Mycelium
+summary: >-
+  Forest, psytrance, goa and hi-tech themed firmware built on Felucca and SLOOP, with original drum assets,
+  icons and four factory songs. Test release; a full physical listening and controls test is outstanding.
+description: >-
+  Published by the mandalars.org project as a package identity of its own (FM-1_900) that includes the Felucca
+  update loader. The source is supplied as a zip archive in the repository. The README says a fresh
+  reproducible build has not been done, and it notes that the project's browser studio uses a different sound
+  engine from the hardware firmware.
+status: active
+authors:
+- name: megagott
+  url: https://github.com/megagott
+source: https://github.com/megagott/mycelium-fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Firmware code is GPL-3.0-only; upstream copyright notices and asset-specific licences are kept in the
+  source zip's LICENSING.md.
+homepage: https://www.mandalars.org/mandalars/fm1/
+distribution: download
+install_notes: >-
+  Download the .fwsc from the repository's releases (SHA-256 is in the README) and follow the instructions on
+  the project's page. Back up your work first. Recovery may need FM-1-transporter.
+brick_risk: true
+tags: [synth-engine, sequencer, drums, ui]
+image:
+  url: https://raw.githubusercontent.com/megagott/mycelium-fm1/main/mycelium-fm1-display-original.jpg
+  alt: "Photo of an FM-1 screen showing the Mycelium logo, mandalars.org, Mycelium 1.0 and SLOOP / Felucca"
+  credit: "megagott"
+  source_url: https://github.com/megagott/mycelium-fm1
+  first_party: true
+versions:
+- version: 1.0-test
+  date: 2026-10-14
+  url: https://github.com/megagott/mycelium-fm1/releases/tag/v1.0-test
+  notes: Test release; marked as a pre-release.

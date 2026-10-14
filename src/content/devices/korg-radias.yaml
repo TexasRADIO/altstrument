@@ -1,0 +1,17 @@
+name: RADIAS
+manufacturer: Korg
+category: synth
+tagline: Four-timbre virtual analog synth with vocoder
+description: >-
+  The RADIAS is a virtual analog synthesizer from Korg that uses its MMT
+  modeling engine. Each program has four timbres with two oscillators, dual
+  filters, modulation sequencers and insert effects, plus a 24-voice
+  polyphony limit, an arpeggiator, step sequencers and a 16-band vocoder. It
+  was also sold as a rack module, and Korg's last system update is version
+  2.00.
+links:
+  manufacturer: https://www.korg.com/us/support/download/software/1/197/3291/
+notes: >-
+  The only catalogued entry is a reimplementation that runs in the browser
+  without any firmware; its desktop and interpreter modes need data from your
+  own unit.

@@ -1,0 +1,56 @@
+device: m-vave-fm-1
+name: M-Flasher
+kind: tool
+summary: >-
+  Windows and Linux app that backs up, restores and installs FM-1 and SMK-37 Pro/Elite firmware through the
+  chip's USB download mode, so it also works on a unit whose firmware is broken.
+description: >-
+  Talks to the JieLi AC791N's built-in UBOOT1.00 download mode, reads the whole 1 MiB flash twice before
+  writing, saves a backup first, writes only the 4 KiB sectors that change and reads everything back. It
+  installs M-VAVE .fwsc packages as published (or custom packages in the same format), installs the open
+  bootloader from the same author's fm1-bootloader project, and can put the stock bootloader back. A flash
+  map shows what each sector holds and which ones a write will touch. Supports the FM-1 and the SMK-37 Pro
+  and Elite; the author's testing so far was on an SMK-37 Pro, with an FM-1 not yet tried. Linux needs the
+  SCSI generic driver; macOS is not supported.
+status: active
+authors:
+- name: Julius Vitkauskas (jvitkauskas)
+  url: https://github.com/jvitkauskas
+source: https://github.com/jvitkauskas/m-flasher
+source_status: open
+license: MIT
+license_notes: >-
+  Bundles JieLi's WL82 USB flash loader (from jl-uboot-tool, for which JieLi has published no license) and
+  the Apache-2.0 open bootloader builds; see flasher/data/NOTICE.md in the repository.
+distribution: download
+install_notes: >-
+  Windows build is an unsigned zip that asks for administrator rights; Linux runs from source with Python
+  3.9+ and the sg driver. A unit with the stock bootloader and working stock firmware cannot enter download
+  mode from its keys, so install the open bootloader first (a USB_KEY dongle or M-VAVE's own updater on the
+  SMK-37 Pro). Bring your own official .fwsc files from M-VAVE; none are included.
+brick_risk: true
+tags: [flasher, loader, utility]
+image:
+  url: https://raw.githubusercontent.com/jvitkauskas/m-flasher/main/docs/screenshot.jpg
+  alt: >-
+    M-Flasher window with an LCD panel reading SMK-37 Pro / Elite in download mode, a firmware install
+    pending, and a 256-sector flash map with 153 sectors highlighted
+  credit: Julius Vitkauskas
+  source_url: https://github.com/jvitkauskas/m-flasher
+  first_party: true
+versions:
+- version: 0.2.0
+  date: 2026-10-14
+  url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.2.0
+  notes: Pre-release. New front-panel window with a live flash map.
+- version: 0.1.2
+  date: 2026-10-14
+  url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.1.2
+  notes: Bundles a newer open bootloader build.
+- version: 0.1.1
+  date: 2026-10-13
+  url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.1.1
+- version: 0.1.0
+  date: 2026-10-13
+  url: https://github.com/jvitkauskas/m-flasher/tree/v0.1.0
+  notes: Git tag; no GitHub release page.

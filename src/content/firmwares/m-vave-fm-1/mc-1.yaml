@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: MC-1
+summary: >-
+  Original 1990s-style groovebox: three melodic parts with LA- or 303-inspired engines (128 presets), a 16-lane
+  synthesized drum part with eight kits, 64 patterns, song mode, effects and an arpeggiator.
+description: >-
+  Not an emulation of any Roland product and without Roland data. Patterns have 16 steps; parts can be
+  recorded live, step-edited, accented and slid, and pattern changes queue to the next bar. A song screen
+  chains up to 128 entries. It has USB MIDI, TRS MIDI in and stereo USB audio out. Hardware support is
+  copied from ORBIT. The README states the 0.3.0 host tests pass but that no boot, listening, USB or timing
+  test has yet been done on an FM-1.
+status: active
+authors:
+- name: dspaudio
+  url: https://github.com/dspaudio
+source: https://github.com/dspaudio/mc-1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Code and generated assets are GPL-3.0-only; the 16 instrument recordings (VSCO 2 Community Edition) and
+  their converted PCM data are CC0-1.0 (NOTICE.md). Restricted upstream artwork and sample packs are excluded.
+homepage: https://dspaudio.github.io/mc-1/
+distribution: source-only
+install_notes: >-
+  Build the experimental .fwsc package with tools/build_package.py (BUILDING.md). The author says installing it
+  on hardware is unverified. Saves use two flash banks at 0x99000..0xAAFFF that other firmware may share. Hold
+  OCT- and OCT+ for five seconds while stopped to reach UBOOT.
+brick_risk: true
+tags: [sequencer, drums, synth-engine, fx, midi, usb-audio, emulator]
+image:
+  url: https://raw.githubusercontent.com/dspaudio/mc-1/main/docs/drums.png
+  alt: "MC-1 drum screen: a 16-lane step grid for the BASE 808 kit above four dials labelled sound, step, hit and level"
+  credit: "dspaudio"
+  source_url: https://github.com/dspaudio/mc-1
+  first_party: true
+versions:
+- version: main @ 5214cea
+  date: 2026-10-14
+  url: https://github.com/dspaudio/mc-1/commit/5214cea
+  notes: No tagged releases; this is the latest commit. The README describes it as experimental 0.3.0.

@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: Skiff
+summary: >-
+  Six-track groovebox forked from Felucca: 14 synth and drum engines, 64-step sequencer with trig conditions and
+  parameter locks, pattern pool and songs, performance layer, FM6 editing on the unit and a browser editor.
+description: >-
+  Fork of Felucca 1.1.5 that keeps its engines, sounds and file formats, so Felucca sounds and projects load.
+  Each page draws what its knobs do, and holding HOME shows every control's job. Version 1.1 adds editing of
+  every FM6 operator value on the FM-1 and a graph of the operator envelopes. It has a web editor, a browser
+  emulator and a stereo USB audio input for recording the master on a computer.
+status: active
+authors:
+- name: illuminus5
+  url: https://github.com/illuminus5
+source: https://github.com/illuminus5/skiff
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Bundled fonts, ported DSP and SDK files keep their own licences (LICENSES/); the Hügelton Sample Pack is
+  GPL-3.0-only, not CC0.
+homepage: https://illuminus5.github.io/skiff/
+distribution: browser-installer
+install_notes: >-
+  Browser installer in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc from the releases page.
+  The installer page can return the FM-1 to official V15 after saving a backup. An FM-1 stuck in boot mode
+  (WL80UBOOT) can be recovered with tools/fm1_install.py or FM-1 Transporter.
+brick_risk: true
+tags: [synth-engine, sequencer, drums, fm, fx, performance, editor, emulator, usb-audio, midi]
+image:
+  url: https://raw.githubusercontent.com/illuminus5/skiff/main/docs/skiff.png
+  alt: "Six Skiff screens: home with six tracks, a step page, perform, the mixer, delay and the shift key map"
+  credit: "illuminus5"
+  source_url: https://github.com/illuminus5/skiff
+  first_party: true
+versions:
+- version: '1.1'
+  date: 2026-10-13
+  url: https://github.com/illuminus5/skiff/releases/tag/v1.1
+  notes: FM6 operator values editable on the unit, with an envelope graph and an init-from-sine patch.
+- version: '1.0'
+  date: 2026-10-12
+  url: https://github.com/illuminus5/skiff/releases/tag/v1.0

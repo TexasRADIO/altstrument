@@ -1,0 +1,35 @@
+device: korg-radias
+name: Rustias
+kind: tool
+summary: Rust reimplementation of the RADIAS that runs as a browser synthesizer without firmware, with desktop and headless modes that can also run an original system image you supply.
+description: >-
+  The browser build compiles the synthesis engine to WebAssembly and plays it
+  through an AudioWorklet, with oscillators, filters, envelopes, LFOs, virtual
+  patches, effects, a drum kit, a step sequencer, macros and recording. It can
+  import RADIAS Librarian .rdl banks you provide. The workspace also contains
+  an interpreter that runs the original SH3 and C55 firmware, a desktop
+  instrument and a headless debugger; those need firmware and program data from
+  your own unit. The README says results are compared with a C++ reference
+  emulator and do not establish equivalence with real hardware.
+status: active
+authors:
+  - name: fushugaku
+    url: https://github.com/fushugaku
+source: https://github.com/fushugaku/Rustias
+source_status: open
+license: unspecified
+license_notes: No LICENSE file or license statement in the repository. The bundled TR-909 drum set keeps its own terms, which allow free copying but not modification or distribution for profit.
+homepage: https://fushugaku.github.io/Rustias/
+distribution: source-only
+install_notes: >-
+  The hosted browser instrument needs no firmware. Desktop and interpreter
+  modes need firmware, a program bank and DSP data from your own RADIAS (bring
+  your own firmware); none is included. Build with Cargo, and scripts/build-web.sh
+  for the WebAssembly version.
+brick_risk: false
+tags: [emulator, synth-engine, research]
+versions:
+  - version: main @ ed4cfa8
+    date: 2026-10-13
+    url: https://github.com/fushugaku/Rustias/commit/ed4cfa8
+    notes: No tagged releases; this is the latest commit.

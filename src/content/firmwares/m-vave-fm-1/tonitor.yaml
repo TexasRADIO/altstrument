@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: Tonitor
+summary: >-
+  Non-groovebox firmware for electroacoustic and live ambient playing: six layers with FM, ANIMA and CALIGULA
+  engines, a free looper per layer, latched drones, granulator, crusher and reverb. No tempo or step sequencer.
+description: >-
+  Each layer has two voices, its own engine, and a looper that holds up to ten overdubs of different lengths.
+  New sounds are drawn by generators, steered toward an ambient or an experimental path, and the four knobs
+  can become macros for reshaping the sound live. The screen uses very large type and high contrast for low
+  vision. It has 64 session slots and 64 presets per engine, and a browser installer that reads what the FM-1
+  runs before writing. Built on Felucca and SLOOP; sessions are saved in the area SLOOP uses for projects.
+status: active
+authors:
+- name: Nuno Zimas
+  url: https://github.com/nzimas
+source: https://github.com/nzimas/tonitor
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The firmware and the browser installer are GPL-3.0-only. The website, logo and documentation written for
+  the project are MIT; bundled third-party parts (msfa, fonts, SDK files) keep their own licences, listed in
+  LICENSING.md.
+homepage: https://nzimas.github.io/tonitor/
+distribution: browser-installer
+install_notes: >-
+  Browser installer in Chrome, Edge or Opera over USB; it installs over M-VAVE's firmware, SLOOP, Felucca or
+  an earlier Tonitor. Saving sessions overwrites SLOOP projects stored in the same flash area. Hold OCT-
+  while switching on for USB rescue mode, then install again. Return to M-VAVE's firmware with M-VAVE's own
+  updater.
+brick_risk: true
+tags: [synth-engine, looper, granular, fx, reverb, fm, performance, ui]
+versions:
+- version: main @ 8e7463d
+  date: 2026-10-14
+  url: https://github.com/nzimas/tonitor/commit/8e7463d
+  notes: No tagged releases; this is the latest commit. The changelog lists 0.23 as the newest version.

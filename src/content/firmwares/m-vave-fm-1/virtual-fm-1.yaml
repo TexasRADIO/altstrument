@@ -1,0 +1,55 @@
+device: m-vave-fm-1
+name: Virtual FM-1
+kind: tool
+summary: >-
+  Standalone app and VST3/AU/LV2 plugin that plays the FM-1's FM engine and syncs presets and patterns both
+  ways with an FM-1 running FM-1+VA, Felucca, SLOOP or Melodee.
+description: >-
+  Uses the Dexed-derived msfa engine, with a DX7-style editor, the FM-1's effects chain, a 64-step
+  sequencer and an arpeggiator that follow the host transport. Each instance is set to one firmware: M-VAVE
+  stock, baud girl's FM-1+VA, Felucca, SLOOP or Melodee. Felucca, SLOOP and Melodee run from their own
+  vendored source, with their screens and front panels. Two-way sync with hardware needs FM-1+VA 0.97 or
+  one of the supported open firmwares; on M-VAVE stock it can send but not read back. Presets and patterns
+  export as JSON, with a schema. FM-1+VA's virtual-analogue engine is not modelled yet and plays through the
+  FM engine. Windows, macOS and Linux builds; hardware sync on Linux is untested.
+status: active
+authors:
+- name: Jacob Schooley (jbschooley)
+  url: https://github.com/jbschooley
+source: https://github.com/jbschooley/Virtual-FM-1
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  Vendored Felucca, SLOOP and Melodee are GPL-3.0-only. The Melodee sources include Casio CZ-1 tones and
+  Sequential Prophet-5 programs as sound data, with no licence granted (see THIRD_PARTY.md).
+distribution: download
+install_notes: >-
+  Installers on the releases page (macOS pkg, Windows exe, Linux tarball) are unsigned; the OS will warn
+  once. A software-only instance needs no FM-1. Set the firmware menu to whatever the connected unit runs
+  before syncing.
+brick_risk: false
+tags: [editor, midi, synth-engine, sequencer, fm, fx]
+image:
+  url: https://raw.githubusercontent.com/jbschooley/Virtual-FM-1/main/docs/images/fm-editor.png
+  alt: >-
+    Virtual FM-1 plugin window with a preset list on the left and the six-operator FM editor with algorithm
+    diagram for the preset SYN LEAD 1, above an on-screen keyboard
+  credit: Jacob Schooley
+  source_url: https://github.com/jbschooley/Virtual-FM-1
+  first_party: true
+versions:
+- version: 0.9.1
+  date: 2026-10-14
+  url: https://github.com/jbschooley/Virtual-FM-1/releases/tag/v0.9.1
+- version: 0.9.0
+  date: 2026-10-13
+  url: https://github.com/jbschooley/Virtual-FM-1/releases/tag/v0.9.0
+- version: 0.8.0
+  date: 2026-10-09
+  url: https://github.com/jbschooley/Virtual-FM-1/releases/tag/v0.8.0
+- version: 0.7.0
+  date: 2026-10-09
+  url: https://github.com/jbschooley/Virtual-FM-1/releases/tag/v0.7.0
+- version: 0.6.0
+  date: 2026-10-08
+  url: https://github.com/jbschooley/Virtual-FM-1/releases/tag/v0.6.0

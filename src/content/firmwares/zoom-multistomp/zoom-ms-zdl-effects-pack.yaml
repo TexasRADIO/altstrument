@@ -1,0 +1,62 @@
+device: zoom-multistomp
+name: Matujuice Zoom MS ZDL effects pack
+summary: "Eleven free custom ZDL effects for Zoom MultiStomp pedals, aimed at synths and drum machines, with source: wavefolder, dual pitch shifter, pitch-tracked choir, Euclidean gate, dub siren, glitch, scrub and freeze, delay, pump, distortion and sweep."
+description: >-
+  The effects are loaded onto the pedal with Zoom's Effect Manager and are built
+  from source with the free TI C6000 compiler on a linker toolchain taken from
+  ZoomMultistompZDL. The tempo effects are written for the MIDISTOMP custom
+  firmware, where they take tempo from MIDI clock, restart on MIDI Start and keep
+  running after Stop; on stock firmware they run at 120 BPM. Release v1.5 keeps
+  older builds with their own Tempo knob. Some effects listed in the README are on
+  the main branch before a release. Tested on an MS-60B running MS-50G firmware;
+  the MS-50G, MS-70CDR and other models are untested.
+status: active
+authors:
+  - name: Luca Matturro (matujuice)
+    url: https://github.com/matujuice
+source: https://github.com/matujuice/zoom-ms-zdl-effects-pack
+source_status: open
+license: MIT
+license_notes: Copyright is shared with Roman Rusinov for the build toolchain and docs taken from ZoomMultistompZDL.
+distribution: download
+install_notes: >-
+  Download a release, unzip it and load the .ZDL files with Zoom Effect Manager
+  using Read Effects from folder. Effects with IDs in the 480 to 496 range can
+  collide with other custom effects; the README explains how to change an ID and
+  rebuild.
+tags: [fx, wavefolder, delay, midi, synth-engine]
+image:
+  url: https://raw.githubusercontent.com/matujuice/zoom-ms-zdl-effects-pack/main/release/covers.png
+  alt: Grid of the eleven effect screen covers as the pedal shows them, each with three knob labels, from WaveFold and DualShift to DirtBox, GridDly and Sweep
+  credit: matujuice
+  source_url: https://github.com/matujuice/zoom-ms-zdl-effects-pack
+  first_party: true
+versions:
+  - version: v1.6
+    date: 2026-10-08
+    url: https://github.com/matujuice/zoom-ms-zdl-effects-pack/releases/tag/v1.6
+    notes: Tempo effects follow the custom firmware's tempo; SyncEQ removed.
+  - version: v1.5
+    date: 2026-10-08
+    url: https://github.com/matujuice/zoom-ms-zdl-effects-pack/releases/tag/v1.5
+  - version: v1.4
+    date: 2026-10-05
+    url: https://github.com/matujuice/zoom-ms-zdl-effects-pack/releases/tag/v1.4
+  - version: v1.3
+    date: 2026-10-05
+    url: https://github.com/matujuice/zoom-ms-zdl-effects-pack/releases/tag/v1.3
+  - version: v1.2
+    date: 2026-10-05
+    url: https://github.com/matujuice/zoom-ms-zdl-effects-pack/releases/tag/v1.2
+  - version: v1.1
+    date: 2026-10-03
+    url: https://github.com/matujuice/zoom-ms-zdl-effects-pack/releases/tag/v1.1
+  - version: v1.02
+    date: 2026-10-02
+    url: https://github.com/matujuice/zoom-ms-zdl-effects-pack/releases/tag/v1.02
+  - version: v1.01
+    date: 2026-10-01
+    url: https://github.com/matujuice/zoom-ms-zdl-effects-pack/releases/tag/v1.01
+  - version: v1.0.0
+    date: 2026-10-01
+    url: https://github.com/matujuice/zoom-ms-zdl-effects-pack/releases/tag/v1.0.0

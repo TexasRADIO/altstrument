@@ -1,0 +1,46 @@
+device: m-vave-fm-1
+name: winampFM
+summary: >-
+  SLOOP 2.6 fork that restyles the FM-1 interface as a Winamp 2.x window, with the sound list as a
+  playlist, a tape-deck loop recorder, effect sliders and 28 full-screen visualizers.
+description: >-
+  Built on SLOOP 2.6, so the SLOOP engines, sounds and controls carry over. The home screen is a
+  Winamp-style main window and the sound list works as a playlist. Recording shows a reel-to-reel
+  display and sets the tempo from the take. Other additions are a PARTY page that chooses which
+  tracks play, a TAPES carousel for copying sounds between tracks, Brazilian instrument sounds and
+  extra menu options. The project site has an in-browser 3D simulator that runs the firmware compiled
+  to WebAssembly.
+status: active
+authors:
+- name: hericdk
+  url: https://github.com/hericdk
+source: https://github.com/hericdk/winampFM
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README and the LICENSE file state GPL-3.0-only. Firmware/LICENSING.md, inherited from Felucca,
+  keeps the icon atlas and panel image under separate terms and carries a section 7 additional
+  permission; sampled sounds are CC0 recordings.
+homepage: https://hericdk.github.io/winampFM/
+distribution: browser-installer
+install_notes: >-
+  Open the project site in Chrome or Edge, connect the FM-1 over USB and press install. The package
+  is also in the repository's release folder. To reach USB rescue mode and reinstall a firmware,
+  hold OCT- alone while switching the FM-1 on.
+brick_risk: true
+tags: [ui, looper, fx, performance]
+image:
+  url: https://raw.githubusercontent.com/hericdk/winampFM/main/media/playlist.jpg
+  alt: "winampFM main window with spectrum, BPM and four track buttons above a sound playlist"
+  credit: "hericdk"
+  source_url: https://hericdk.github.io/winampFM/
+  first_party: true
+versions:
+- version: '0.12'
+  date: 2026-10-14
+  url: https://github.com/hericdk/winampFM/tree/v0.12
+  notes: Adds 28 full-screen visualizers. Git tag; no GitHub release page.
+- version: '0.11'
+  date: 2026-10-14
+  url: https://github.com/hericdk/winampFM/tree/v0.11
+  notes: Fixes knobs not responding on the device. Git tag; no GitHub release page.

@@ -1,0 +1,18 @@
+name: SP-808 Groove Sampler
+manufacturer: Roland
+category: sampler
+tagline: Zip-disk groove sampler with D-Beam and a step modulator
+description: >-
+  The SP-808 Groove Sampler is a discontinued sampler and phrase recorder from
+  Roland. It records and plays audio on removable 100 MB Zip disks, with eight
+  tracks, 16 sample pads per bank, 64 banks and an onboard effects section that
+  includes reverb, chorus, delay and a step modulator. Two D-Beam infrared
+  controllers and three assignable knobs are used for live control. The SP-808EX
+  is a later variant of the same design.
+platform: Renesas H8S + ESP2 DSP
+stock_firmware: "1.05"
+links:
+  manufacturer: https://www.roland.com/global/products/sp-808/
+  community:
+    - label: sp-808-disk-studio
+      url: https://github.com/yuyoi/sp-808-disk-studio

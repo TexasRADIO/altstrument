@@ -1,0 +1,71 @@
+device: teenage-engineering-sp-1
+name: SP-1 Tape Looper
+summary: Four-track, tape-style looper firmware for the SP-1 with sixteen songs, stereo recording, effects pages, bounce and a browser tool for transferring loops.
+description: >-
+  Audio is fed in over USB-C, recorded to the four tracks with the track
+  buttons and played back layered, with the rocker changing speed and pitch
+  together like tape. Version 3 records in stereo and adds eight effect pages,
+  per-track reverse and isolate, a beat grid and a speed range of 0.25x to
+  1.5x. Loops and settings are stored per song on the SP-1's internal storage.
+  A browser page connects over USB serial to download or upload tracks as WAV
+  or MP3. The 3.0 update changes the storage format, so existing songs must be
+  backed up first.
+status: active
+authors:
+  - name: chattock
+    url: https://github.com/chattock
+  - name: marcabisamra
+    url: https://github.com/marcabisamra
+source: https://github.com/chattock/sp1-tape-looper
+source_status: open
+license: MIT
+homepage: https://sp1-tape-looper.vercel.app/
+distribution: download
+install_notes: >-
+  Flash sp1_looper.bin from the release page with the Solderless utility; hold
+  Track 1 and Track 4 for 3 seconds while the looper runs, or while plugging in
+  USB, to reach the bootloader. Updating from 2.x to 3.x reformats loop storage
+  on first boot, so use the transfer page's Download all first.
+brick_risk: false
+tags: [looper, fx, usb-audio, performance]
+versions:
+  - version: v3.1.1-official
+    date: 2026-09-13
+    url: https://github.com/chattock/sp1-tape-looper/releases/tag/v3.1.1-official
+  - version: v3.0.0-official
+    date: 2026-09-07
+    url: https://github.com/chattock/sp1-tape-looper/releases/tag/v3.0.0-official
+    notes: Stereo recording and effects; changes the storage format.
+  - version: v2.7.2-official
+    date: 2026-08-17
+    url: https://github.com/chattock/sp1-tape-looper/releases/tag/v2.7.2-official
+  - version: v2.7.1-official
+    date: 2026-08-14
+    url: https://github.com/chattock/sp1-tape-looper/releases/tag/v2.7.1-official
+  - version: v2.7.0
+    date: 2026-08-12
+    url: https://github.com/chattock/sp1-tape-looper/releases/tag/v2.7.0
+  - version: v2.6.0
+    date: 2026-08-04
+    url: https://github.com/chattock/sp1-tape-looper/releases/tag/v2.6.0
+  - version: v2.5.0
+    date: 2026-07-29
+    url: https://github.com/chattock/sp1-tape-looper/releases/tag/v2.5.0
+  - version: v2.4.0
+    date: 2026-07-26
+    url: https://github.com/chattock/sp1-tape-looper/releases/tag/v2.4.0
+  - version: v2.3.1
+    date: 2026-07-26
+    url: https://github.com/chattock/sp1-tape-looper/releases/tag/v2.3.1
+  - version: v2.3.0
+    date: 2026-07-26
+    url: https://github.com/chattock/sp1-tape-looper/releases/tag/v2.3.0
+  - version: v2.2.0
+    date: 2026-07-25
+    url: https://github.com/chattock/sp1-tape-looper/releases/tag/v2.2.0
+  - version: v2.1.0
+    date: 2026-07-24
+    url: https://github.com/chattock/sp1-tape-looper/releases/tag/v2.1.0
+  - version: v2.0.0
+    date: 2026-07-23
+    url: https://github.com/chattock/sp1-tape-looper/releases/tag/v2.0.0

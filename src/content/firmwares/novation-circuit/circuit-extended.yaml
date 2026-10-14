@@ -1,0 +1,60 @@
+device: novation-circuit
+name: Circuit Extended Firmware
+summary: Browser-flashed patch for the original Circuit 1.8 firmware that adds Scale Follow, drum sample start, distortion type selection, a drum Filter LFO and Shift-Macro automation.
+description: >-
+  Adds a Scale Follow toggle (Shift + Scales) so drum pitch tracks the master
+  scale, per-drum sample start, one of seven distortion algorithms per drum, an
+  eight-speed Filter LFO and recording of these Shift-Macro moves. A newer
+  experimental performance build adds pitch bend, mod wheel and aftertouch
+  input, and the uploader can also rewrite the Circuit's MIDI CC numbers, with a
+  Korg NTS-1 preset. The README says the performance build had one unexplained
+  crash in hardware testing. Not compatible with Circuit Tracks, Circuit Rhythm
+  or Circuit Mono Station. The author credits OpenAI Codex for reverse-engineering
+  and implementation help.
+status: active
+authors:
+  - name: tracelistener
+    url: https://github.com/tracelistener
+source: https://github.com/tracelistener/tracelistener-circuit-extended
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the project's original code and documentation only. Novation firmware
+  is third-party material. The project's uploader page includes a prebuilt
+  patched update image, which contains Novation's code.
+homepage: https://tracelistener.github.io/tracelistener-circuit-extended/
+distribution: browser-installer
+requires_stock: 1.8 build 3592
+install_notes: >-
+  Back up the Circuit in Novation Components first, then close Components and
+  other MIDI software. Power on holding Scales + Note + Velocity to enter the
+  bootloader, open the uploader in Chrome or Edge, pick the Bootloader port and
+  upload. Stock firmware can be reinstalled through Novation Components.
+tags: [synth-engine, fx, lfo, scales, midi, performance]
+versions:
+  - version: 0.5.0
+    date: 2026-07-31
+    url: https://github.com/tracelistener/tracelistener-circuit-extended/blob/main/CHANGELOG.md
+    notes: Per-drum Filter LFO and Shift automation. Listed in the changelog; no tag or release page.
+  - version: v0.4.2
+    date: 2026-07-27
+    url: https://github.com/tracelistener/tracelistener-circuit-extended/releases/tag/v0.4.2
+    notes: Fixes Synth 1 patch changes altering drum distortion.
+  - version: v0.4.1
+    date: 2026-07-22
+    url: https://github.com/tracelistener/tracelistener-circuit-extended/releases/tag/v0.4.1
+  - version: v0.4.0
+    date: 2026-07-22
+    url: https://github.com/tracelistener/tracelistener-circuit-extended/releases/tag/v0.4.0
+    notes: Adds sample start.
+  - version: v0.3.0
+    date: 2026-07-22
+    url: https://github.com/tracelistener/tracelistener-circuit-extended/releases/tag/v0.3.0
+    notes: Adds drum distortion selection.
+  - version: v0.2.0
+    date: 2026-07-21
+    url: https://github.com/tracelistener/tracelistener-circuit-extended/releases/tag/v0.2.0
+  - version: v0.1.0
+    date: 2026-07-21
+    url: https://github.com/tracelistener/tracelistener-circuit-extended/tree/v0.1.0
+    notes: Git tag; no GitHub release page.

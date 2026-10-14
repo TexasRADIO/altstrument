@@ -1,0 +1,31 @@
+device: teenage-engineering-sp-1
+name: marisko
+summary: Early-stage community custom firmware for the SP-1, currently a minimal Zephyr base with LED animation, a watchdog and a power-off-to-bootloader button.
+description: >-
+  Built on Zephyr and the nRF Connect SDK using the SP-1-dev hardware
+  documentation. The README says the project is at a very early stage and
+  lists only a bouncing LED animation across the four playback LEDs, a
+  Function button that powers off into the bootloader, and a watchdog that
+  prevents boot loops. A command-line companion, rome, handles flashing and
+  loading stems. The author notes that an AI model assisted with the code
+  and commit messages.
+status: active
+authors:
+  - name: softmodded
+    url: https://github.com/softmodded
+source: https://github.com/softmodded/marisko
+source_status: open
+license: MIT
+license_notes: The README states MIT; the repository has no LICENSE file.
+distribution: source-only
+install_notes: >-
+  Build from source (see BUILDING.md in the repository) and flash with the
+  Solderless utility or the rome command-line tool. The SP-1 has no hard reset;
+  press Function to power off, then any button or USB to return to the
+  bootloader.
+brick_risk: false
+tags: [platform, os]
+versions:
+  - version: v0.0.1
+    date: 2026-06-21
+    url: https://github.com/softmodded/marisko/releases/tag/v0.0.1

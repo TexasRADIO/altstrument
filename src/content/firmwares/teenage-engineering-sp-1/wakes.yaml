@@ -1,0 +1,58 @@
+device: teenage-engineering-sp-1
+name: Wakes
+summary: Semimodular synth firmware for the SP-1 that combines Mutable Instruments Plaits and Marbles with new performance, preset and USB audio and MIDI features.
+description: >-
+  Runs Plaits as the sound source and Marbles as a random sequencer, each
+  played from the SP-1's faders and buttons. Later releases add USB audio out,
+  USB MIDI, four preset slots saved as .prst files and a storage mode in which
+  the SP-1 appears as a drive on the computer. The README says the engine
+  assignments, MIDI behaviour and audio levels are editable through text files,
+  and states that the project is unaffiliated with Teenage Engineering or
+  Mutable Instruments.
+status: active
+authors:
+  - name: Worldwave
+    url: https://github.com/Worldwave
+source: https://github.com/Worldwave/Wakes
+source_status: open
+license: MIT
+license_notes: A few files are Apache-2.0 because they derive from Zephyr; the NOTICE file lists them. Plaits, Marbles and stmlib are by Emilie Gillet (MIT) and are included unmodified.
+distribution: download
+install_notes: >-
+  Flash a .bin from the release page with the Solderless utility (hold T1+T4
+  while connecting USB-C). First-time users flash the "fresh" build once, which
+  formats the SP-1's eMMC and erases what is on it; later updates use the
+  regular build so storage is kept. The README warns that stock firmware cannot
+  be restored after flashing.
+brick_risk: false
+tags: [synth-engine, performance, midi, usb-audio]
+versions:
+  - version: v0.8.0
+    date: 2026-10-09
+    url: https://github.com/Worldwave/Wakes/releases/tag/v0.8.0
+    notes: Adds device storage, four preset slots and a fresh-format build.
+  - version: v0.7.2
+    date: 2026-10-07
+    url: https://github.com/Worldwave/Wakes/releases/tag/v0.7.2
+  - version: v0.7.1
+    date: 2026-10-06
+    url: https://github.com/Worldwave/Wakes/releases/tag/v0.7.1
+  - version: v0.7.0
+    date: 2026-10-06
+    url: https://github.com/Worldwave/Wakes/releases/tag/v0.7.0
+    notes: Adds USB audio output.
+  - version: v0.6.1
+    date: 2026-10-05
+    url: https://github.com/Worldwave/Wakes/releases/tag/v0.6.1
+  - version: v0.6.0
+    date: 2026-10-05
+    url: https://github.com/Worldwave/Wakes/releases/tag/v0.6.0
+  - version: v0.5.0
+    date: 2026-10-04
+    url: https://github.com/Worldwave/Wakes/releases/tag/v0.5.0
+  - version: v0.4.8
+    date: 2026-10-01
+    url: https://github.com/Worldwave/Wakes/releases/tag/v0.4.8
+  - version: v0.4.6
+    date: 2026-09-27
+    url: https://github.com/Worldwave/Wakes/releases/tag/v0.4.6

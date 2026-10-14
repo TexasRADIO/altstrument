@@ -1,0 +1,48 @@
+device: roland-sp-404-mkii
+name: Tallfree
+summary: Screen-reader firmware for the SP-404MKII based on system program 5.52. A speech engine reads screen titles, menu items, values, sample names and pad steps aloud so a blind musician can use the display-driven functions.
+description: >-
+  Speech is produced on the SP itself by OpenEVV, a reimplementation of IBM's
+  Embedded ViaVoice, and plays through the main outputs over whatever the unit
+  is playing; it is not recorded when you sample or resample. Reading covers
+  screen titles, the selected menu item, changed values, effect names, on and
+  off states of GATE, LOOP, REVERSE, BPM SYNC and EXT SOURCE, file and folder
+  names and the step each pad sets in TR-REC. Speed, pitch, voice, volume,
+  abbreviations and screen reading are set from a menu opened with SHIFT and
+  EXIT. The firmware changes 13 bytes of Roland's 5.52 image and adds a small
+  boot loader; to make room for the engine the looper and skip-back buffer is
+  halved, from 27.3 to 13.65 seconds per channel. The speech engine is a
+  separate file that copies itself into internal memory after the first boot.
+status: active
+authors:
+  - name: Mudb0y
+    url: https://github.com/Mudb0y
+source: https://github.com/Mudb0y/tallfree
+source_status: open
+license: MIT
+license_notes: >-
+  Covers Tallfree's own code. Release zips also contain Roland's unchanged
+  SP404MKII_APP0.bin, which belongs to Roland, and TALLFREE.BIN, which includes
+  OpenEVV (MIT) and IBM language data under the terms in OpenEVV's NOTICE file.
+distribution: download
+requires_stock: "5.52"
+install_notes: >-
+  Format an SD card of up to 32 GB as FAT32, unzip a release onto it, hold SHIFT
+  while switching on and press the VALUE knob, then delete the two .bin files
+  from the card after the update. Installing Roland's own system program the same
+  way restores stock. If the unit will not start after an engine update, an empty
+  file named NOENGINE in the TALLFREE folder starts it without the engine.
+tags: [voice, ui, os, accessibility]
+versions:
+  - version: "2026.10.06"
+    date: 2026-10-06
+    url: https://github.com/Mudb0y/tallfree/releases/tag/2026.10.06
+    notes: New speech engine that reads file lists, the pattern screen and recording settings; firmware unchanged.
+  - version: "2026.09.29"
+    date: 2026-09-29
+    url: https://github.com/Mudb0y/tallfree/releases/tag/2026.09.29
+    notes: New speech engine that reads many more screens; firmware unchanged.
+  - version: "2026.09.26"
+    date: 2026-09-26
+    url: https://github.com/Mudb0y/tallfree/releases/tag/2026.09.26
+    notes: First release.

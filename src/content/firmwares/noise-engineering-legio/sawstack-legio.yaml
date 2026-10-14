@@ -1,0 +1,32 @@
+device: noise-engineering-legio
+name: Sawstack Legio
+summary: Five-voice supersaw oscillator with detune, three morph modes (stack, rich, sub), a stereo VCA width switch, encoder pitch trim and V/Oct and gate inputs. The same DSP core also builds as a macOS AU/VST3 plugin.
+description: >-
+  The README describes the target as a Legio with a Daisy Patch SM (STM32H750)
+  and gives a calibration procedure for the V/Oct input, since ADC offset and
+  gain differ between modules. The gate input hard-syncs the voices. It is
+  one of three Legio firmwares by the same author.
+status: active
+authors:
+  - name: Carl Tashian
+    url: https://github.com/tashian
+source: https://github.com/tashian/legio-sawstack
+source_status: open
+license: MIT
+license_notes: >-
+  Firmware source is MIT per the repository LICENSE. Plugin binaries built
+  from plugin/ are also subject to JUCE's AGPL-3.0 terms unless a commercial
+  JUCE license is held.
+homepage: https://github.com/tashian/legio-sawstack
+distribution: source-only
+install_notes: >-
+  No prebuilt binary. Build with make in firmware/ and flash with make
+  program-dfu after entering the bootloader (hold BOOT and press RESET on the
+  Patch SM). Calibrate V/Oct as described in the README. Noise Engineering's
+  firmware portal restores the stock firmware.
+tags: [oscillator, synth-engine]
+versions:
+  - version: main @ c3ce998
+    date: 2026-09-22
+    url: https://github.com/tashian/legio-sawstack/commit/c3ce998
+    notes: No tagged releases; this is the latest commit.

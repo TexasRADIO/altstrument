@@ -1,0 +1,19 @@
+name: Circuit
+manufacturer: Novation
+category: groovebox
+tagline: original 2015 groovebox with two synth and four drum tracks
+description: >-
+  The Circuit is a groovebox from Novation, released in 2015. It has two
+  polyphonic synth tracks and four sample-based drum tracks, played and
+  sequenced on an 8x4 grid of RGB velocity-sensitive pads with eight macro
+  knobs. Unlike the later Circuit Tracks it has no MIDI tracks, and its
+  samples are loaded through Novation's Components software.
+platform: ARM + DSP56300
+stock_firmware: "1.8"
+links:
+  manufacturer: https://novationmusic.com/circuit/circuit
+related: [novation-circuit-tracks]
+notes: >-
+  The custom firmware here targets the official 1.8 update (build 3592) and is
+  entered through the Circuit's bootloader, which a custom image does not
+  replace. Stock firmware can be reinstalled through Novation Components.

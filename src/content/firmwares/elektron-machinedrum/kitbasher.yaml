@@ -1,0 +1,36 @@
+device: elektron-machinedrum
+name: Kitbasher
+kind: tool
+summary: Browser tool that builds a Machinedrum OS update with extra sound models added next to the stock machines, from an OS file you load.
+description: >-
+  Runs entirely in the browser: you load your own OS file, say whether the unit
+  has the UW option, pick models from categorized cards, optionally edit samples
+  and arrange the machine menu, then download the .syx or send it over Web MIDI
+  from Chrome. Supported bases are stock OS 1.63, X.14, a 26A09 beta and an MDX
+  X.20 B beta. Optional settings on some bases add MIDI chromatic note input,
+  note names on the pitch knob and a fix for unmute latency. Model sources for
+  analog recreations, community voices, a Noise Plethora port and other models
+  are in the repository. Not affiliated with Elektron or MDX.
+status: active
+authors:
+  - name: etcetc000
+    url: https://github.com/etcetc000
+source: https://github.com/etcetc000/kitbasher
+source_status: open
+license: GPL-3.0-or-later
+license_notes: Individual models carry their own licenses, listed in docs/MODELS.md.
+homepage: https://kitbasher.xyz
+distribution: browser-installer
+requires_stock: 1.63 / X.14 / 26A09 beta / MDX X.20 B
+install_notes: >-
+  Back up kits, patterns and your current OS file first, since sending that file
+  again restores the unit. Build on kitbasher.xyz, then power on holding FUNCTION,
+  choose MIDI UPGRADE and send the .syx. Rebuilds should reuse your earlier
+  layout file so saved kits keep finding their machines. X.20 B is tested in
+  emulation only.
+tags: [machines, synth-engine, editor, sampler]
+versions:
+  - version: main @ 10420ec
+    date: 2026-10-14
+    url: https://github.com/etcetc000/kitbasher/commit/10420ec
+    notes: No tagged releases; this is the latest commit.

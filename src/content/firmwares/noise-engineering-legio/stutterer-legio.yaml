@@ -1,0 +1,29 @@
+device: noise-engineering-legio
+name: Stutterer Legio
+summary: Stereo stutter, tape delay and DJ filter chain with clock sync, inertial tape speed on the encoder, selectable stutter subdivisions, a clock multiplier switch and a wet/dry switch.
+description: >-
+  Audio runs through the stutter, then the tape delay, a DJ filter and a soft
+  clipper. The gate input is an external clock that falls back to 120 BPM
+  after two seconds without edges, and holding the encoder at power-up starts
+  a bypass mode. The V/Oct input is read but currently ignored. One of three
+  Legio firmwares by the same author.
+status: active
+authors:
+  - name: Carl Tashian
+    url: https://github.com/tashian
+source: https://github.com/tashian/legio-stutterer
+source_status: open
+license: MIT
+license_notes: Per the repository LICENSE file.
+homepage: https://github.com/tashian/legio-stutterer
+distribution: source-only
+install_notes: >-
+  No prebuilt binary. Build with make and flash with make program-dfu after
+  entering the bootloader (hold BOOT and press RESET on the Patch SM).
+  Noise Engineering's firmware portal restores the stock firmware.
+tags: [fx, delay, looper, filter]
+versions:
+  - version: main @ 0ba65ca
+    date: 2026-09-22
+    url: https://github.com/tashian/legio-stutterer/commit/0ba65ca
+    notes: No tagged releases; this is the latest commit.

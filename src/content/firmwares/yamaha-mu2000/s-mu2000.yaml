@@ -1,0 +1,43 @@
+device: yamaha-mu2000
+name: S-MU2000
+kind: tool
+summary: Unofficial VST3, CLAP and Audio Unit plug-in that emulates the MU2000's CPU and tone-generator chips and runs the unmodified original firmware from ROMs you extract yourself.
+description: >-
+  Emulates the SH7043 processor and two SWP30 chips, using chip code taken from
+  MAME, so voices and behaviour come from the real firmware. It runs as a
+  plug-in on Windows, Linux and macOS, as a standalone window with the front
+  panel and LCD drawn on screen, and in a browser. The author compares output
+  with recordings of real hardware over S/PDIF. Program and wave ROMs are not
+  included and must be dumped from your own MU2000, using tools in the
+  repository; the project asks users not to redistribute those images. The
+  project states it is not affiliated with Yamaha.
+status: active
+authors:
+  - name: tarboh
+    url: https://github.com/tarboh
+source: https://github.com/tarboh/S-MU2000
+source_status: open
+license: BSD-3-Clause
+license_notes: Parts derive from MAME device code that is individually BSD-3-Clause; copyright notices are collected in NOTICE.txt.
+homepage: https://tarboh.github.io/S-MU2000/
+distribution: download
+requires_stock: ROM images dumped from your own MU2000
+install_notes: >-
+  Bring your own firmware. Dump the 4 MB program ROM and 32 MB wave ROM from your
+  own unit with the tools in doc/dump, then point the plug-in at the folder.
+  Dumping with the repository's own dumper writes into the unit's firmware
+  area, which the author says Yamaha's updater can restore; a MIDI-only route
+  that leaves the firmware untouched is also described. The release is a rolling
+  unsigned snapshot.
+brick_risk: false
+tags: [emulator, synth-engine, research]
+image:
+  url: https://raw.githubusercontent.com/tarboh/S-MU2000/main/doc/mu_screenshot.png
+  alt: S-MU2000 standalone window showing the MU2000 front panel with a green LCD of part levels, the button grid and the data dial
+  credit: tarboh
+  source_url: https://github.com/tarboh/S-MU2000
+  first_party: true
+versions:
+  - version: continuous
+    url: https://github.com/tarboh/S-MU2000/releases/tag/continuous
+    notes: Rolling pre-release rebuilt from main; no versioned releases.

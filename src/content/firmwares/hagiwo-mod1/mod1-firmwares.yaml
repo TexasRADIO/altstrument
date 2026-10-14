@@ -1,0 +1,31 @@
+device: hagiwo-mod1
+name: mod1_firmwares
+summary: Collection of Arduino sketches for the HAGIWO MOD1, including a three-channel LFO, a Grids-style drum pattern generator, a quantizer, a Euclidean sequencer, a Turing-machine with sample and hold, an attenuverter and a percussion envelope.
+description: >-
+  Each sketch lives in its own folder and documents its pin assignments for the
+  MOD1's pots, jacks, button and LED. Others in the repository are a simple
+  knob-to-CV and latch utility, a one-button drum sequencer, a CV sequence
+  recorder marked as work in progress, and MS-20 converter sketches. The
+  percussion sketch modifies another builder's dual attack-decay design to
+  behave like the Befaco Percall.
+status: active
+authors:
+  - name: knzet
+    url: https://github.com/knzet
+source: https://github.com/knzet/mod1_firmwares
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file lists copyright for knzet (2026) and Robert Heel (2025).
+distribution: source-only
+install_notes: >-
+  Open a sketch in the Arduino IDE and upload it to the MOD1's Arduino Nano. If
+  uploads fail, the MOD1 build page suggests switching the processor option to
+  the other ATmega328P bootloader setting.
+brick_risk: false
+tags: [lfo, sequencer, quantizer, drums, utility, random]
+versions:
+  - version: main @ 456ffab
+    date: 2026-09-16
+    url: https://github.com/knzet/mod1_firmwares/commit/456ffab5c817b3109123253130753e6b9072aa17
+    notes: No tagged releases; this is the latest commit.

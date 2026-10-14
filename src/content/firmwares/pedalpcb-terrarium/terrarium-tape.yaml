@@ -1,0 +1,27 @@
+device: pedalpcb-terrarium
+name: Terrarium Tape
+summary: Tape-wear effect for the Terrarium with wow, flutter, dropouts, saturation and hiss, plus a bypass footswitch and a hold-to-slow tape-stop footswitch.
+description: >-
+  Uses a modulated delay for slow wow and fast flutter, with a wear control that
+  darkens the bandwidth and adds compression and noise, and a dropout rate
+  control. Four toggles add hiss, a darker tone, unstable modulation and extra
+  saturation. The signal path is mono and the result is sent to both Seed
+  outputs.
+status: active
+authors:
+  - name: Aalenberg
+    url: https://github.com/Aalenberg
+source: https://github.com/Aalenberg/terrarium-tape
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Build with the Arm GNU toolchain and the libDaisy submodule, then flash the
+  Daisy Seed over DFU with make program-dfu.
+brick_risk: false
+tags: [tape, lofi, fx]
+versions:
+  - version: main @ b9a183b
+    date: 2026-10-09
+    url: https://github.com/Aalenberg/terrarium-tape/commit/b9a183b4314fe7a4023d9d2feccd9d354bba62b0
+    notes: No tagged releases; this is the latest commit.

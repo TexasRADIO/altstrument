@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: Niagara Drift
+summary: >-
+  Drone synth: two always-on drones with partner and sub oscillators, resonant filters, an LFO with two waves,
+  a rhythmic swell, delay and reverb, 16 scenes and slow automatic drift.
+description: >-
+  Each drone has a waveform blend from sine to square, a partner oscillator at an interval, a sub or
+  subharmonic, noise and a self-oscillating filter. The drones can be linked by pitch, hard sync or filter
+  cross-modulation. Parameter changes glide over a set morph time, and a motion loop records knob moves. Built
+  on FoMni, X0X and Felucca's platform. A browser emulator runs the same code with sound.
+status: active
+authors:
+- name: Evan Yerburgh
+  url: https://github.com/evanyerburgh
+source: https://github.com/evanyerburgh/niagara-drift
+source_status: open
+license: GPL-3.0-only
+homepage: https://evanyerburgh.github.io/niagara-drift/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc from the releases page.
+  The installer's Back to M-VAVE's firmware option writes V15 back; a failed start twice in a row enters a
+  safe mode the installer can still reach. The author has tested it on one unit so far.
+brick_risk: true
+tags: [synth-engine, lfo, fx, reverb, delay, performance, emulator]
+image:
+  url: https://raw.githubusercontent.com/evanyerburgh/niagara-drift/main/docs/img/panel.png
+  alt: "FM-1 panel diagram labelling what each knob, button and key does in Niagara Drift, with the Play 1 screen showing two drone waveforms"
+  credit: "evanyerburgh"
+  source_url: https://github.com/evanyerburgh/niagara-drift
+  first_party: true
+versions:
+- version: 0.1-beta
+  date: 2026-10-14
+  url: https://github.com/evanyerburgh/niagara-drift/releases/tag/v0.1-beta
+  notes: First public version; marked as a pre-release.

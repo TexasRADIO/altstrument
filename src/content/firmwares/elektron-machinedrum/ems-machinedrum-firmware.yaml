@@ -1,0 +1,34 @@
+device: elektron-machinedrum
+name: ems-machinedrum-firmware
+summary: Custom Machinedrum OS with independent track lengths and speeds, per-trig conditions and microtiming, pattern and kit management tools, 128 kits and many MDX-derived fixes, built in the browser from your OS file.
+description: >-
+  The current build is a beta. It includes features from MDX up to about X.14
+  (new machines, per-track tonal tuning, extra LFO shapes), and adds track
+  lengths and speeds from 1/8x to 2x, wrap and chain settings, trig conditions,
+  per-trig microtiming, clone and insert pattern shortcuts, track swapping in
+  the kit editor, per-track output routing, a Monomachine song link and
+  compressed UW sample backups. Kit capacity grows from 64 to 128 and song slots
+  drop from 32 to 12, and songs in slots 13 to 32 are corrupted on boot unless
+  moved first. The repository holds the changelog and release only; the patcher
+  is a page on the author's website.
+status: active
+authors:
+  - name: June Kiff (emuyia)
+    url: https://github.com/emuyia
+source: https://github.com/emuyia/ems-machinedrum-firmware
+source_status: patcher-only
+license: unspecified
+license_notes: No license file or statement; the repository holds documentation and a patch release.
+homepage: https://www.junes.website/goodies/fw-patcher
+distribution: patch-your-own
+install_notes: >-
+  Use the browser patcher on the author's site with your own official Machinedrum
+  OS file, which it checks against a known hash. Back up projects first, and move
+  songs out of slots 13 to 32. Beta builds can change behaviour destructively
+  between releases, so read the changelog before updating.
+tags: [sequencer, machines, ui, performance, usb-midi]
+versions:
+  - version: 26A09-beta
+    date: 2026-10-09
+    url: https://github.com/emuyia/ems-machinedrum-firmware/releases/tag/26A09-beta
+    notes: Pre-release.

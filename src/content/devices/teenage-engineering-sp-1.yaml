@@ -1,0 +1,26 @@
+name: SP-1
+manufacturer: Teenage Engineering
+category: other
+tagline: Unreleased stem player that doubles as an nRF52840 dev board
+description: >-
+  The SP-1 is a handheld stem player designed by Teenage Engineering that was
+  never officially released. It has four faders, four track buttons, a speaker,
+  a USB-C port, a TRS sync jack and an internal eMMC card that holds the song
+  stems. Units that were built reached buyers as-is through liquidation and
+  online resellers, and the community has since documented the board and written
+  new firmware for its Nordic nRF52840 microcontroller.
+platform: Nordic nRF52840
+links:
+  community:
+    - label: SP-1-dev hardware documentation and wiki
+      url: https://github.com/timknapen/SP-1-dev
+    - label: Solderless firmware utility and stem loader
+      url: https://solderless.engineering
+    - label: Adafruit guide to hacking the SP-1
+      url: https://learn.adafruit.com/hacking-the-teenage-engineering-sp-1
+notes: >-
+  Teenage Engineering has no product page, support or documentation for the
+  SP-1. The bootloader can be re-entered by holding Track 1 and Track 4 while
+  plugging in USB, and the firmware entries here flash through the browser-based
+  Solderless utility without opening the case. Several of them state that the
+  stock firmware cannot be restored once replaced.

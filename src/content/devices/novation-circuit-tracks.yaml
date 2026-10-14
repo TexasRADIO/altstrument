@@ -1,0 +1,24 @@
+name: Circuit Tracks
+manufacturer: Novation
+category: groovebox
+tagline: standalone groovebox with two synth, four drum and two MIDI tracks
+description: >-
+  The Circuit Tracks is a battery-powered groovebox from Novation. It has two
+  six-voice polyphonic synth tracks, four sample-based drum tracks and two
+  six-voice MIDI tracks for external gear, played and sequenced on 32
+  velocity-sensitive RGB pads. Patterns are 32 steps and can be chained, and
+  reverb, delay, sidechain and a master compressor are built in. Samples and
+  projects are stored on a microSD card.
+platform: STM32F745 + DSP56724
+stock_firmware: 1.2.1
+links:
+  manufacturer: https://novationmusic.com/products/circuit-tracks
+  community:
+    - label: Matrixsynth write-up
+      url: https://www.matrixsynth.com/2026/10/novation-circuit-tracks-hack.html
+related: [novation-circuit]
+notes: >-
+  The custom firmware here is built from Novation's official 1.2.1 update file,
+  which you download from Novation yourself; the project does not distribute
+  it. The bootloader is left untouched, so holding Scales, Preset and Note at
+  power-on gets back to the official firmware.

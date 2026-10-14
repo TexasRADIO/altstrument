@@ -1,0 +1,45 @@
+device: 1010music-bitbox-micro
+name: Bitbox Micro firmware patch
+summary: Python patcher that edits your own 2.3.4 image to put delay and reverb sends, pad envelopes, LFOs, the compressor and a new master EQ and filter on MIDI, plus Flip UI, Clk Loss and ProgChange settings.
+description: >-
+  Reads an official Bitbox Micro 2.3.4 image, refuses anything else, and writes
+  a patched image whose splash reads "community fw". Per-pad parameters and the
+  five compressor controls become MIDI CCs, and a master EQ and filter with ten
+  algorithms is added. The 2.3.8-mod release adds three settings on the module:
+  Flip UI for upside-down mounting, Clk Loss to hold the last tempo when a clock
+  stops, and a ProgChange option that ignores repeats of the loaded preset. The
+  author states it is unofficial and that 1010music neither wrote nor endorses
+  it, and asks that support requests not go to 1010music.
+status: active
+authors:
+  - name: modularpatcher
+    url: https://github.com/modularpatcher
+source: https://github.com/modularpatcher/bitbox-micro-fw-patch
+source_status: open
+license: MIT
+license_notes: >-
+  Covers patch_micro.py and the documentation only. 1010music's firmware is not
+  included and no rights over it are granted.
+homepage: https://modularpatcher.github.io/bitbox-micro-fw-patch/
+distribution: patch-your-own
+requires_stock: 2.3.4
+install_notes: >-
+  Download the stock 2.3.4 image (MICRO234.zip) from 1010music yourself, run
+  patch_micro.py on its MICRO.BIN, and copy the result to the microSD card.
+  Never share a patched image. The README says the bootloader is not touched, so
+  the module cannot be bricked, and flashing stock back before service is
+  advised.
+tags: [midi, fx, lfo, ui, performance]
+versions:
+  - version: 2.3.8-mod
+    date: 2026-10-09
+    url: https://github.com/modularpatcher/bitbox-micro-fw-patch/commit/66b0a0b
+    notes: Adds Flip UI, Clk Loss and ProgChange settings. Date is the commit date.
+  - version: 2.3.7-mod
+    date: 2026-09-05
+    url: https://github.com/modularpatcher/bitbox-micro-fw-patch/commit/5d8b6d6
+    notes: Adds a master EQ and filter with ten algorithms.
+  - version: 2.3.6-mod
+    date: 2026-09-02
+    url: https://github.com/modularpatcher/bitbox-micro-fw-patch/commit/4e750eb
+    notes: Adds MIDI control of the master compressor.

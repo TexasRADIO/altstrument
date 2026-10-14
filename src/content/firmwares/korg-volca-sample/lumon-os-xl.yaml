@@ -1,0 +1,40 @@
+device: korg-volca-sample
+name: LUMON OS XL
+summary: Unofficial firmware for the first-generation volca sample, built from Korg's 1.42 image. Adds per-step eight-bar Predictability, microtiming, ratchets, intra-bar looping, musical pitch scales and a LIVE page with beat repeat, backcue gestures and freeze.
+description: >-
+  Version 1.0 is distributed as an updater WAV and a bundle that install through
+  the volca sample's normal audio update; the instrument shows LUMON OS at start-up.
+  Predictability lets each of the 16 steps in each of the ten parts follow one of 16
+  eight-bar play patterns. Other changes include microtiming of plus or minus 15
+  units of 1/32 step, trigger echo, up to four ratchet strokes, sixteen SPEED
+  scales, sixteen equal sample zones, audio pattern export, a tempo-synced lo-fi
+  delay and a quantised freeze effect. The author credits Pajen's earlier firmware
+  for research and ideas such as bar filtering and access to extra reverb programs,
+  and states the build input is Korg 1.42, not Pajen's image. The repository
+  publishes the extension sources, but the images also contain Korg's code and the
+  author grants no redistribution license. A companion tool, Volca Studio XL
+  (MIT), can also transfer the firmware.
+status: active
+authors:
+  - name: The DataBeat Project
+    url: https://github.com/MicheleDataBeat
+source: https://github.com/MicheleDataBeat/lumon-os-xl
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  The README states that no open-source or redistribution license is granted. The
+  repository holds the LUMON extension sources (C and assembly) but not Korg's
+  firmware; generated images contain Korg code and data.
+homepage: https://github.com/MicheleDataBeat/lumon-os-xl/releases/tag/v1.0
+distribution: download
+install_notes: >-
+  Play the updater WAV from the release into the volca sample using Korg's audio
+  update procedure; Korg 1.41 or 1.42 does not need to be installed first. The
+  README links an installation guide, and the native version check can show 1.60,
+  which is the updater transport version rather than the release number.
+tags: [sampler, sequencer, performance, fx, os, velocity]
+versions:
+  - version: v1.0
+    date: 2026-10-14
+    url: https://github.com/MicheleDataBeat/lumon-os-xl/releases/tag/v1.0
+    notes: First release.

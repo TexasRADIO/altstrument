@@ -1,0 +1,37 @@
+device: 1010music-bluebox
+name: BlueLex
+summary: Patcher for the bluebox Eurorack edition 1.5.1 firmware that adds a CPU meter, four new reverb styles, extra reverb and delay controls, a compressor meter, a master saturator and a USB Out mode setting.
+description: >-
+  Patches an official 1.5.1 BLUEEURO.BIN, in a browser page or with a Python
+  script, and keeps all stock features. The new reverb styles are an FDN hall and
+  ports of MVerb, Squall and Freeverb. The delay gains pitch, drift and a send
+  into the reverb, and the settings page gains a saturator after the compressor.
+  The USB Out setting switches between all 18 channels and the master pair. The
+  author says the CPU meter, reverb and delay additions run on a real unit,
+  while the compressor meter, saturator and USB Out were only tested in an
+  emulator. Projects saved with the mod do not load on stock firmware.
+status: active
+authors:
+  - name: lexnels
+    url: https://github.com/lexnels
+source: https://github.com/lexnels/bluelex-bluebox-euro
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no license file. src/rev_mverb.h is a port of MVerb and is
+  stated to be GPL-3.0; other ports carry their own upstream licenses.
+homepage: https://lexnels.github.io/bluelex-bluebox-euro/
+distribution: patch-your-own
+requires_stock: 1.5.1
+install_notes: >-
+  Needs your own official BLUEEURO.BIN, version 1.5.1. Patch it in the web page
+  or with the Python patcher in releases/, copy the result to the root of the
+  microSD card and boot while holding the A button, as for an official update.
+  Back up the card first. To go back, delete projects saved on the mod and the
+  settings files, then install the stock file the same way.
+tags: [fx, reverb, delay, ui]
+versions:
+  - version: "0.15"
+    date: 2026-10-05
+    url: https://github.com/lexnels/bluelex-bluebox-euro/commit/95ba800
+    notes: Adds the USB Out setting. Date is the commit date.

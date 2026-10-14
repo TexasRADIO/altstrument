@@ -1,0 +1,33 @@
+device: teenage-engineering-sp-1
+name: rome
+kind: tool
+summary: Command-line companion for marisko that flashes firmware through the SP-1 bootloader, encodes and uploads stems over USB and runs device diagnostics.
+description: >-
+  Written in Rust with a vendored libusb. It flashes a .bin over the
+  bootloader's serial interface, powers the device into the bootloader, and
+  manages songs on the eMMC by converting four stereo stems to 8-channel IMA
+  ADPCM and uploading them. A fresh device must be formatted with rome before
+  music is loaded. The repository also contains a desktop GUI and an Android
+  app, and the project site documents all three. The README says rome is
+  required to use marisko.
+status: active
+authors:
+  - name: jackiscool123123121
+    url: https://github.com/jackiscool123123121
+source: https://github.com/jackiscool123123121/rome
+source_status: open
+license: MIT
+homepage: https://sp1.jackiscool.com
+distribution: download
+install_notes: >-
+  Desktop GUI builds for macOS and Windows are on the release page. For the
+  CLI, use the README one-line script (it builds with Cargo) or cargo build
+  --release. Run rome format once on a new device before adding songs; it
+  erases the eMMC. Stem upload talks to the running
+  firmware over raw USB, so Linux may need a udev rule.
+brick_risk: false
+tags: [flasher, editor]
+versions:
+  - version: v0.4.0
+    date: 2026-09-02
+    url: https://github.com/jackiscool123123121/rome/releases/tag/v0.4.0

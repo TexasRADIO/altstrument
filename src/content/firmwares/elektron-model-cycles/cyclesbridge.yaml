@@ -1,0 +1,34 @@
+device: elektron-model-cycles
+name: CyclesBridge
+kind: tool
+summary: Windows companion app and VST3 plugin that carry the six USB audio tracks of a Model:Cycles running custom firmware into a DAW, for an Overbridge-like workflow. Tested with Ableton Live only.
+description: >-
+  Needs custom firmware on the Model:Cycles that exposes six audio tracks over
+  USB; the README points to the Modded Cycles flasher for that. A standalone app
+  reads the unit through an ASIO device and passes the audio to the VST3 plugin,
+  which outputs it per track in the host. The README advises using two audio
+  devices, setting both to 48 kHz and keeping buffers small, and describes a MIDI
+  clock sync delay setting in Ableton to correct clock offset. The author states
+  the software was written with an LLM and has been tested only on Windows 11
+  with Ableton Live 12, ASIO4ALL and one audio interface. No Elektron firmware is
+  included.
+status: active
+authors:
+  - name: robertfrombadlistener
+    url: https://github.com/robertfrombadlistener
+source: https://github.com/robertfrombadlistener/CyclesBridge
+source_status: open
+license: MIT
+license_notes: Third-party components are listed in THIRD_PARTY_NOTICES.md in the repository.
+distribution: download
+install_notes: >-
+  Flash a firmware that provides six USB audio tracks first (the README names
+  Modded Cycles). Copy the CyclesBridge.vst3 folder to your VST3 directory, run
+  the standalone app, pick the ASIO device and configure it for the Model:Cycles.
+  The repository includes prebuilt Windows binaries alongside the source.
+tags: [usb-audio, midi]
+versions:
+  - version: main @ 29b2017
+    date: 2026-10-01
+    url: https://github.com/robertfrombadlistener/CyclesBridge/commit/29b20175ed8db11ff85b60e49213f25da65fb91c
+    notes: No tagged releases; this is the latest commit.

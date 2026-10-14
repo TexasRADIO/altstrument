@@ -1,0 +1,31 @@
+device: m-vave-fm-1
+name: Slipway
+kind: tool
+summary: >-
+  Windows app that lists community FM-1 firmware, checks downloads against published hashes and installs
+  them through Felucca's own installer, with a stock-first rule and a USB recovery guide.
+description: >-
+  Reads the community firmware catalogue at fm1.designburgapps.com, falls back to GitHub releases, and shows
+  author, version and release date for each entry. Downloads go into a visible folder and are checked
+  against the catalogue's SHA-256 before use. It saves your own copy of M-VAVE's V15 first, then refuses a
+  custom install until that copy exists and asks for stock to be put back between custom firmwares.
+  Installs run Felucca's fm1_install.py (downloaded on first use, not modified). Includes a rescue flow and a
+  written recovery guide for a black-screen unit in WL82 UBOOT1.00 mode. Only a few firmwares have had
+  their key combinations checked; the rest are flagged as not checked.
+status: active
+authors:
+- name: Discodave-Glitch
+  url: https://github.com/Discodave-Glitch
+source: https://github.com/Discodave-Glitch/slipway
+source_status: open
+license: MIT
+distribution: download
+install_notes: >-
+  Needs Windows and Python 3.10 or newer. Unzip the release and run install.bat, which installs the MIDI
+  libraries it needs and makes shortcuts. Supply your own copy of M-VAVE's V15 firmware; none is bundled.
+brick_risk: true
+tags: [flasher, loader, utility]
+versions:
+- version: '1.0'
+  date: 2026-10-14
+  url: https://github.com/Discodave-Glitch/slipway/releases/tag/v1.0

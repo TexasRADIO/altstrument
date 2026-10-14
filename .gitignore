@@ -9,3 +9,6 @@ dist/
 
 # wrangler
 .wrangler/
+
+# discover skill output
+discover-candidates.json

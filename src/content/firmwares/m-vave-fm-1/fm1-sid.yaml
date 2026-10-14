@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: FM-1 SID
+summary: >-
+  Turns the FM-1 into a Commodore 64 SID synth with twelve instruments, a three-track step sequencer and stereo
+  effects, and also plays C64 tunes by running their own 6502 code.
+description: >-
+  Built on Felucca's hardware layer, with the SID chip rendered by reSID 0.16 or by the author's own integer
+  model and a driver that plays it the way C64 music does. In synth mode the note keys play twelve instruments,
+  the knobs set cutoff, resonance, attack and release, and a three-track, 16-step sequencer and a chorus, delay
+  and reverb sit on top. In player mode it runs PSID tunes on an emulated 6502 and draws the voices, sync, ring
+  modulation and filter on the screen; RSID tunes are not supported. Tunes are appended after the firmware
+  image as a pack. The same code runs as a web page that plays tunes from the HVSC archive, and the FM-1
+  emulator entry names it as one of the firmwares it runs. The README says it has run in the emulator only and
+  has not been tried on a real FM-1.
+status: active
+authors:
+- name: Joakim Eriksson (joakimeriksson)
+  url: https://github.com/joakimeriksson
+source: https://github.com/joakimeriksson/fm1-emu/tree/master/fm1-sid
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The player firmware and effects are GPL-3.0-only because they build on Felucca's HAL and effects code, and
+  they link reSID 0.16, which is GPL-2.0-or-later. The author's own SID model and synth driver are BSD-2-Clause.
+  It also ships three Apache-2.0 files from JieLi's AC79 SDK. The rest of the fm1-emu repository is MIT.
+homepage: https://joakimeriksson.github.io/fm1-emu/fm1-sid/
+distribution: download
+install_notes: >-
+  The repository carries a ready-made update package, fm1-sid/web/sidplayer.fwsc, and build scripts that need
+  JieLi's Linux toolchain and fetch their GPL dependencies on demand. The README gives no install procedure for a
+  real unit and says it has not been run on one. It uses Felucca's update loader. Hold OCT- and OCT+ for three
+  seconds to enter its USB update mode.
+brick_risk: true
+tags: [synth-engine, sequencer, fx, emulator, research]
+versions:
+- version: master @ 687ce7d
+  date: 2026-10-13
+  url: https://github.com/joakimeriksson/fm1-emu/commit/687ce7d7425ddbcc9d2fb3888b92200e4eb58936
+  notes: >-
+    No tagged releases; this is the latest commit touching fm1-sid/. The emulator's firmware list labels the
+    package 0.1.

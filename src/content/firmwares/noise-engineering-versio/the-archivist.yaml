@@ -1,0 +1,31 @@
+device: noise-engineering-versio
+name: The Archivist
+summary: Capture-and-recall performance processor with a tape mode (loop, splice, echo, wow and flutter, wear) and a granular mode that stores audio at reduced sample rates, with eight retention strata of increasing decimation.
+description: >-
+  A Detuned Transmissions firmware. Capture is triggered from the FSU button
+  or the right input, and a settings page stores global options across
+  reboots and reflashes. The top part of the pitch CV range adds Shepard tone
+  and seeded sequence zones. Source code is not published; the repository
+  holds the prebuilt binary, a README manual and a license file.
+status: active
+authors:
+  - name: Jason Hockman
+    url: https://detunedtransmissions.com/
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  All rights reserved. The binary is free to flash on Versio hardware for
+  personal or commercial music-making; resale, bundling and modification are
+  not permitted without written permission. Source is not published.
+homepage: https://github.com/jhockman/the-archivist
+distribution: download
+install_notes: >-
+  Download the-archivist.bin from the repository, put Versio into DFU mode
+  and load the file with Noise Engineering's Versio firmware wizard or the
+  Daisy Web Programmer (flash.daisy.audio).
+tags: [granular, looper, tape, lofi, fx]
+versions:
+  - version: main @ 752e48d
+    date: 2026-10-13
+    url: https://github.com/jhockman/the-archivist/commit/752e48d
+    notes: No tagged releases; this is the latest commit.

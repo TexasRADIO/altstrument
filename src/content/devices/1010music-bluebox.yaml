@@ -1,0 +1,17 @@
+name: bluebox (Eurorack edition)
+manufacturer: 1010music
+category: eurorack
+tagline: 30 HP digital mixer and recorder
+description: >-
+  The bluebox Eurorack edition is a 30 HP digital mixer, recorder and effects
+  module from 1010music, based on the desktop bluebox. It mixes twelve mono or
+  six stereo tracks with a four-band EQ per track, plus reverb, delay and a
+  global compressor, and records 48 kHz, 24-bit WAV files to microSD. It has
+  twelve mono inputs, six CV inputs, four mono outputs, a headphone output and
+  USB-C audio and MIDI.
+stock_firmware: 1.5.1
+links:
+  manufacturer: https://dealer.1010music.com/product/bluebox-for-eurorack-compact-digital-mixer-recorder
+notes: >-
+  The desktop bluebox runs different firmware, and the mod here targets the
+  Eurorack edition only.

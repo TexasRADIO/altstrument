@@ -1,0 +1,26 @@
+name: Machinedrum
+manufacturer: Elektron
+category: drum-machine
+tagline: 16-track drum synthesizer and sequencer
+description: >-
+  The Machinedrum is a drum machine from Elektron, first released in 2001 and
+  later revised as the SPS-1UW MKII (2007) and SPS-1UW+ MKII (2010). It has 16
+  tracks, each loaded with one of its synthesis machines, a per-track effects
+  chain and master reverb, delay, EQ and dynamics sections. The UW versions add
+  a sample-playback engine, and Elektron's parameter-lock sequencer is built in.
+stock_firmware: "1.63"
+links:
+  manufacturer: https://www.elektron.se/support-downloads/machinedrum
+  community:
+    - label: elektronmods.com
+      url: https://elektronmods.com/
+    - label: Modwerk
+      url: https://modwerk.app/
+notes: >-
+  Both entries build an OS update from an official file you supply and are sent
+  to the unit as a SysEx update, so sending the original OS file again restores
+  the unit; neither project distributes Elektron firmware. Elektron does not
+  permit sharing mod files or links on Elektronauts (policy of 2026-09-16, as
+  noted on the other Elektron devices); community discussion moved to
+  elektronmods.com and modwerk.app.
+related: [elektron-octatrack, elektron-tools]

@@ -1,0 +1,29 @@
+device: noise-engineering-legio
+name: Drifter Legio
+summary: Moves a value along random Bezier curves to auto-pan audio, crossfade between two inputs or pan a CV signal, with controls for center point, wander depth, rate and edge behavior (clip, fold, wrap).
+description: >-
+  The left switch selects audio pan, crossfade or CV pan mode. Rate is
+  free-running or clocked from the gate input, and the encoder switches to a
+  curve-shape edit mode. CV pan reads the V/Oct jack as a plain voltage and
+  has an optional calibration. One of three Legio firmwares by the same
+  author.
+status: active
+authors:
+  - name: Carl Tashian
+    url: https://github.com/tashian
+source: https://github.com/tashian/legio-drifter
+source_status: open
+license: MIT
+license_notes: Per the repository LICENSE file.
+homepage: https://github.com/tashian/legio-drifter
+distribution: source-only
+install_notes: >-
+  No prebuilt binary. Build with make and flash with make program-dfu after
+  entering the bootloader (hold BOOT and press RESET on the Patch SM).
+  Noise Engineering's firmware portal restores the stock firmware.
+tags: [random, utility]
+versions:
+  - version: main @ 01a1785
+    date: 2026-09-22
+    url: https://github.com/tashian/legio-drifter/commit/01a1785
+    notes: No tagged releases; this is the latest commit.

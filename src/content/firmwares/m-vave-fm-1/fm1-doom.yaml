@@ -16,7 +16,7 @@ license: GPL-3.0-only
 license_notes: >-
   Engine is GPL-2.0-or-later (doomgeneric / Chocolate Doom); combined with the GPL-3.0 hardware layer
   the firmware as a whole is GPL-3.0. FreeDM game data is BSD-3-Clause.
-homepage: https://doom.deadlockinteractive.com/
+homepage: https://dx7.designburgapps.com/doom/
 distribution: browser-installer
 install_notes: Browser WebMIDI installer from the project site; it can put sloopDX back.
 brick_risk: true

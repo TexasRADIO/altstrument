@@ -1,0 +1,35 @@
+device: m-vave-fm-1
+name: TripDeck
+summary: >-
+  Psychedelic synth where every page is a full-screen animated picture driven by its four knobs: sitar, pad,
+  organ and FM bell voices, spiral echo, shimmer reverb, vowel filter, scale lock, arpeggiator and sequencer.
+description: >-
+  Ten pages, each drawn as a different animation, with the knobs changing the sound and the picture together.
+  A TRIP mode lets the colouring parameters drift on their own, and HOME double-tap mutates the patch. It has
+  eight patches, a 32-step sequencer, USB MIDI and USB audio. Built on CyberDeck and Dinghy.
+status: active
+authors:
+- name: anonymousacademe
+  url: https://github.com/anonymousacademe
+source: https://github.com/anonymousacademe/FM-1-TripDeck
+source_status: open
+license: GPL-3.0-only
+distribution: source-only
+install_notes: >-
+  Build build/tripdeck.fwsc with ./build.sh (JieLi toolchain and three AC79 SDK files needed) and install it
+  with tools/fm1_install.py. Hold OCT- while switching on for USB rescue. The README points to the FM-1
+  Firmware Hub for returning to other firmware or to the official one. The first start replaces settings saved
+  by CyberDeck or an earlier TripDeck.
+brick_risk: true
+tags: [synth-engine, ui, fx, reverb, sequencer, scales, usb-audio, midi]
+image:
+  url: https://raw.githubusercontent.com/anonymousacademe/FM-1-TripDeck/main/docs/pictures.png
+  alt: "Ten TripDeck screens in a grid: kaleidoscope, tunnel, rainbow waves, plasma, spiral echo, ripples, rose window, galaxy, starfield and a chequered horizon, each with four parameter labels"
+  credit: "anonymousacademe"
+  source_url: https://github.com/anonymousacademe/FM-1-TripDeck
+  first_party: true
+versions:
+- version: '0.2'
+  date: 2026-10-14
+  url: https://github.com/anonymousacademe/FM-1-TripDeck/tree/v0.2
+  notes: Git tag; no GitHub release page.

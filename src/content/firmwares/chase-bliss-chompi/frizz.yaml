@@ -1,0 +1,49 @@
+device: chase-bliss-chompi
+name: FRIZZ
+summary: Alternative firmware that turns the CHOMPI into a stereo looper and performance effects box, with thirteen punch-in effects, four FX scenes, input and mic routing, a master compressor and MIDI clock and CC control over TRS and USB.
+description: >-
+  Forked from the WAVE firmware in the CHOMPI open-source release. The looper
+  records free-length loops or loops locked to bars of an incoming MIDI clock, with
+  semitone varispeed, reverse and scrub on the transport knob. Effects sit on the
+  white keys and play while held or latch with SHIFT; scenes store every effect's
+  settings and can be recalled, morphed or crossfaded in time. Input comes from AUX
+  or the built-in microphone, and can run through or past the effects. Several
+  effects are ported from Bastl Instruments' Kastle 2 FX Wizard. The firmware
+  installs from the SD card, leaves the bootloader alone and can run beside TAPE,
+  TEMPO and WAVE through the multi-firmware launcher. The author states that it
+  was written with Claude Code and tested on a software model of the CHOMPI, on
+  hardware, and by hand before each release.
+status: active
+authors:
+  - name: ZUHcYa
+    url: https://github.com/ZUHcYa
+source: https://github.com/ZUHcYa/FrizZ
+source_status: open
+license: MIT
+license_notes: The CHOMPI name and marks are not covered; see TRADEMARKS.md in the repository.
+homepage: https://frizz.friedrichwagner.eu
+distribution: download
+install_notes: >-
+  Copy FRIZZ.bin to the SD card, or install it beside the stock firmwares with the
+  multi-firmware launcher. It keeps scenes and settings in its own FRIZZ folder and
+  returns to stock the same way.
+tags: [looper, fx, midi, sdk, performance]
+versions:
+  - version: v1.0.1
+    date: 2026-10-13
+    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v1.0.1
+    notes: Documentation update; the firmware image is identical to v1.0.0.
+  - version: v1.0.0
+    date: 2026-10-13
+    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v1.0.0
+    notes: First stable release; the controls, MIDI map and scene format are fixed from here.
+  - version: v0.11
+    date: 2026-10-10
+    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v0.11
+  - version: v0.10
+    date: 2026-10-08
+    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v0.10
+  - version: v0.9
+    date: 2026-10-06
+    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v0.9
+    notes: First public release.
