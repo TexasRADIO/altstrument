@@ -1,10 +1,11 @@
 ---
 import Base from '@/layouts/Base.astro';
 import FirmwareCard from '@/components/FirmwareCard.astro';
+import FirmwareFilter from '@/components/FirmwareFilter.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import Prose from '@/components/Prose.astro';
 import { CATEGORY_LABELS } from '@/content/schema';
-import { getDevicesWithFirmwares, hostOf, plural, type DeviceItem } from '@/lib/catalog';
+import { getDevicesWithFirmwares, hostOf, plural, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
 import { imageCreditLabel, isSocialImage, logoCreditLabel, looksLikeSpdx, spdxUrl } from '@/lib/labels';
 
 export async function getStaticPaths() {
@@ -30,6 +31,9 @@ const counts = [
 const description = `${data.name} by ${data.manufacturer}: ${
   none ? 'no custom firmware listed yet' : `${counts} listed`
 }${data.tagline ? `. ${data.tagline}` : ''}.`;
+// Lowercased search text for the firmware filter; matches the haystack FirmwareFilter splits into terms.
+const filterText = (f: FirmwareItem) =>
+  [f.data.name, f.data.summary, ...f.data.authors.map((a) => a.name), ...f.data.tags].join(' ').toLowerCase();
 ---
 <Base
   title={`${data.name} (${data.manufacturer})`}
@@ -141,20 +145,24 @@ const description = `${data.name} by ${data.manufacturer}: ${
     </section>
   )}
 
+  {device.firmwares.length >= 8 && (
+    <div class="mt-8"><FirmwareFilter firmwares={device.firmwares} /></div>
+  )}
+
   {firmwares.length > 0 && (
-    <section class="mt-8" aria-labelledby="fw-h">
-      <h2 id="fw-h" class="mb-3 border-b border-line pb-1 text-lg">Firmware <span class="mono text-sm font-normal text-muted">{firmwares.length}</span></h2>
+    <section class="mt-8" aria-labelledby="fw-h" data-fw-section>
+      <h2 id="fw-h" class="mb-3 border-b border-line pb-1 text-lg">Firmware <span class="mono text-sm font-normal text-muted" data-fw-count>{firmwares.length}</span></h2>
       <ul class="flex flex-col gap-3">
-        {firmwares.map((f) => <li><FirmwareCard firmware={f} /></li>)}
+        {firmwares.map((f) => <li data-fw={f.slug} data-status={f.data.status} data-source={f.data.source_status} data-license={f.data.license} data-q={filterText(f)}><FirmwareCard firmware={f} /></li>)}
       </ul>
     </section>
   )}
 
   {tools.length > 0 && (
-    <section class="mt-8" aria-labelledby="tools-h">
-      <h2 id="tools-h" class="mb-3 border-b border-line pb-1 text-lg">Tools <span class="mono text-sm font-normal text-muted">{tools.length}</span></h2>
+    <section class="mt-8" aria-labelledby="tools-h" data-fw-section>
+      <h2 id="tools-h" class="mb-3 border-b border-line pb-1 text-lg">Tools <span class="mono text-sm font-normal text-muted" data-fw-count>{tools.length}</span></h2>
       <ul class="flex flex-col gap-3">
-        {tools.map((f) => <li><FirmwareCard firmware={f} /></li>)}
+        {tools.map((f) => <li data-fw={f.slug} data-status={f.data.status} data-source={f.data.source_status} data-license={f.data.license} data-q={filterText(f)}><FirmwareCard firmware={f} /></li>)}
       </ul>
     </section>
   )}

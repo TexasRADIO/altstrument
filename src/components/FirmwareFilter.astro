@@ -1,0 +1,159 @@
+---
+import { SOURCE_STATUSES, STATUSES } from '@/content/schema';
+import type { FirmwareItem } from '@/lib/catalog';
+import { SOURCE_INFO, STATUS_INFO } from '@/lib/labels';
+interface Props { firmwares: FirmwareItem[] }
+const { firmwares } = Astro.props;
+
+function tally(values: string[]): Map<string, number> {
+  const m = new Map<string, number>();
+  for (const v of values) m.set(v, (m.get(v) ?? 0) + 1);
+  return m;
+}
+const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+const licenseLabel = (l: string) => (l === 'proprietary' || l === 'unspecified' ? cap(l) : l);
+
+const statusCounts = tally(firmwares.map((f) => f.data.status));
+const sourceCounts = tally(firmwares.map((f) => f.data.source_status));
+const licenseCounts = tally(firmwares.map((f) => f.data.license));
+
+interface Opt { value: string; label: string }
+interface Select { id: string; label: string; all: string; options: Opt[] }
+const selects: Select[] = [
+  {
+    id: 'fwf-st',
+    label: 'Status',
+    all: 'All statuses',
+    options: STATUSES.filter((s) => statusCounts.has(s)).map((s) => ({
+      value: s,
+      label: `${STATUS_INFO[s].label} (${statusCounts.get(s)})`,
+    })),
+  },
+  {
+    id: 'fwf-src',
+    label: 'Source',
+    all: 'All sources',
+    options: SOURCE_STATUSES.filter((s) => sourceCounts.has(s)).map((s) => ({
+      value: s,
+      label: `${cap(SOURCE_INFO[s].label)} (${sourceCounts.get(s)})`,
+    })),
+  },
+  {
+    id: 'fwf-lic',
+    label: 'License',
+    all: 'All licenses',
+    options: [...licenseCounts.entries()]
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .map(([l, n]) => ({ value: l, label: `${licenseLabel(l)} (${n})` })),
+  },
+  // A select with a single value filters nothing, so leave it out.
+].filter((s) => s.options.length >= 2);
+---
+<form id="fw-filter" role="search" class="flex flex-col gap-2 sm:flex-row sm:items-end" hidden>
+  <div class="flex-1">
+    <label for="fwf-q" class="block text-sm font-medium">Search firmware</label>
+    <input
+      id="fwf-q"
+      type="search"
+      autocomplete="off"
+      placeholder="Name, author, tag, summary"
+      class="mt-1 w-full rounded border border-line-strong bg-surface px-3 py-2 text-base text-fg placeholder:text-muted"
+    />
+  </div>
+  {selects.length > 0 && (
+    <div class="grid grid-cols-2 gap-2 sm:flex">
+      {selects.map((s, i) => (
+        <div class:list={['min-w-0', selects.length % 2 === 1 && i === selects.length - 1 && 'col-span-2 sm:col-span-1']}>
+          <label for={s.id} class="block text-sm font-medium">{s.label}</label>
+          <select id={s.id} class="mt-1 w-full rounded border border-line-strong bg-surface px-2 py-2 text-base text-fg sm:w-auto sm:px-3">
+            <option value="">{s.all}</option>
+            {s.options.map((o) => <option value={o.value}>{o.label}</option>)}
+          </select>
+        </div>
+      ))}
+    </div>
+  )}
+</form>
+<p id="fwf-status" class="mt-2 min-h-[1.5em] text-sm text-muted" role="status" aria-live="polite" hidden></p>
+<p id="fwf-none" class="mt-4 text-muted" hidden>No entries match. Try fewer words or clear a filter.</p>
+<script is:inline>
+  (function () {
+    function init() {
+      var form = document.getElementById('fw-filter');
+      var q = document.getElementById('fwf-q');
+      if (!form || !q) return;
+      var status = document.getElementById('fwf-status');
+      var none = document.getElementById('fwf-none');
+      // Each select is optional: the component omits any with fewer than two values.
+      var sels = [
+        { param: 'status', attr: 'data-status', el: document.getElementById('fwf-st') },
+        { param: 'source', attr: 'data-source', el: document.getElementById('fwf-src') },
+        { param: 'license', attr: 'data-license', el: document.getElementById('fwf-lic') }
+      ];
+      var items = Array.prototype.slice.call(document.querySelectorAll('[data-fw]'));
+      var sections = Array.prototype.slice.call(document.querySelectorAll('[data-fw-section]'));
+      var total = items.length;
+
+      function apply() {
+        var terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+        var shown = 0;
+        items.forEach(function (li) {
+          var hay = li.getAttribute('data-q') || '';
+          var m = terms.every(function (t) { return hay.indexOf(t) !== -1; });
+          for (var i = 0; m && i < sels.length; i++) {
+            if (sels[i].el && sels[i].el.value && li.getAttribute(sels[i].attr) !== sels[i].el.value) m = false;
+          }
+          li.hidden = !m;
+          if (m) shown++;
+        });
+        sections.forEach(function (s) {
+          var all = s.querySelectorAll('[data-fw]').length;
+          var vis = s.querySelectorAll('[data-fw]:not([hidden])').length;
+          s.hidden = vis === 0;
+          var n = s.querySelector('[data-fw-count]');
+          if (n) {
+            n.textContent = vis === all ? String(vis) : vis + ' of ' + all;
+            n.setAttribute('aria-label', (vis === all ? '' : vis + ' of ') + all + (all === 1 ? ' entry' : ' entries'));
+          }
+        });
+        var filtering = terms.length > 0 || sels.some(function (s) { return s.el && s.el.value; });
+        status.hidden = !filtering;
+        status.textContent = filtering ? shown + ' of ' + total + ' entries match' : '';
+        none.hidden = shown !== 0;
+        sync();
+      }
+
+      // Mirrors the controls into the query string so a filtered view can be shared.
+      function sync() {
+        try {
+          var u = new URL(location.href);
+          function put(k, v) { if (v) u.searchParams.set(k, v); else u.searchParams.delete(k); }
+          put('q', q.value.trim());
+          sels.forEach(function (s) { put(s.param, s.el ? s.el.value : ''); });
+          history.replaceState(history.state, '', u.pathname + u.search + u.hash);
+        } catch (e) {}
+      }
+
+      function restore() {
+        var p;
+        try { p = new URLSearchParams(location.search); } catch (e) { return; }
+        q.value = p.get('q') || '';
+        sels.forEach(function (s) {
+          var v = p.get(s.param);
+          if (!s.el || !v) return;
+          var ok = Array.prototype.some.call(s.el.options, function (o) { return o.value === v; });
+          if (ok) s.el.value = v;
+        });
+      }
+
+      restore();
+      form.hidden = false;
+      form.addEventListener('submit', function (e) { e.preventDefault(); });
+      q.addEventListener('input', apply);
+      sels.forEach(function (s) { if (s.el) s.el.addEventListener('change', apply); });
+      apply();
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+  })();
+</script>
