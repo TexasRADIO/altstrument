@@ -1,0 +1,44 @@
+device: synthux-touch-2
+name: Audrey II Touch
+summary: "Port of the Audrey II feedback horrorscape synth to the Touch 2: a Karplus-Strong feedback loop excited from the pads or external audio, with an official faceplate and MIDI CC map."
+description: >-
+  Audrey II Touch excites a feedback loop to create drifting drones, and it
+  can also be driven by external audio (left input channel) as an effect on
+  drum loops, melodies or voice. Knobs set the excitation threshold, input
+  gain, dry/wet, reverb size and low-pass and high-pass filters, and pads
+  P03 to P09 excite different frequencies. The repository includes a manual
+  with the MIDI CC map and a faceplate design, and Synthux sells the matching
+  Audrey II Touch faceplate separately.
+status: active
+authors:
+  - name: Nick Donaldson
+    url: https://github.com/ndonald2
+  - name: Alberto Berera
+    url: https://github.com/AlbertoBerera
+  - name: Rosa Schuurmans
+    url: https://github.com/vitrinekast
+  - name: Vladislav Litvinenko (bleeptools)
+    url: https://github.com/bleeptools
+source: https://github.com/Synthux-Academy/AudreyTouch
+source_status: open
+license: MIT
+homepage: https://www.synthux.academy/firmware
+distribution: download
+install_notes: >-
+  Flash AudreyTouch.bin from the latest release with the Daisy Seed web
+  programmer (flash.daisy.audio) or Synthux's firmware page. The README
+  advises starting with the knobs fully counter-clockwise and raising the
+  excitation amount and input gain slowly.
+tags: [synth, feedback, drone, karplus-strong, effect, midi, open-source, touch-2]
+video:
+  url: https://www.youtube.com/watch?v=7TgSYVZVNeI
+  title: Synthux Audrey for Touch. new firmware & faceplate available (not the crappy drawing on my blank)
+  credit: Jon Waterschoot
+  first_party: false
+versions:
+  - version: v1.1.0
+    date: 2026-07-30
+    url: https://github.com/Synthux-Academy/AudreyTouch/releases/tag/v1.1.0
+  - version: v1.0.0
+    date: 2026-02-19
+    url: https://github.com/Synthux-Academy/AudreyTouch/releases/tag/v1.0.0

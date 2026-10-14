@@ -1,0 +1,29 @@
+device: synthux-simple-fix
+name: NoiseGen1
+summary: "Generative noise synthesizer and audio destruction processor for the Simple Fix: 11 DSP noise patches stepped with the toggle switch, three knobs for density, register and input mangling."
+description: >-
+  NoiseGen1 combines eleven noise engines in one Arduino sketch for the Daisy
+  Seed on the Simple Fix: a cascaded-FM core, sub drone, crackle bursts, a noise
+  wall fired in bursts, radio static, an industrial grinder, metal scrape, an
+  input-only mangler, harsh noise wall, FM boiling and cut-up collage. The
+  switch advances to the next patch and the on-board LED blinks the patch
+  number. The knobs set event density, base frequency range and the amount of
+  destruction applied to the audio input. Synthux's July 2026 community
+  highlights newsletter features it.
+status: active
+authors:
+  - name: Creature From The Black
+    url: https://github.com/creaturefromtheblack
+source: https://github.com/creaturefromtheblack/NoiseGen1
+source_status: open
+license: CC0-1.0
+homepage: https://www.youtube.com/watch?v=cxutqD77l-4
+distribution: source-only
+install_notes: Open NoiseGen1.ino in the Arduino IDE with Daisy support and upload it to the Seed on the Simple Fix. The controls use pins A0 to A2 and D18.
+tags: [noise, generative, effects, arduino, open-source, simple-fix]
+video:
+  url: https://www.youtube.com/watch?v=cxutqD77l-4
+  title: NoiseGen1 | Free Firmware for Daisy Seed | 11 DSP Noise Machines
+  credit: Creature From The Black
+  first_party: true
+  found_via: https://github.com/creaturefromtheblack/NoiseGen1

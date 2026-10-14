@@ -1,0 +1,33 @@
+device: synthux-touch-2
+name: Terrarium
+summary: Self-evolving sound ecosystem for the Touch 2 where each pad plants an organism that is born, ages, feeds, is hunted and leaves mutated descendants.
+description: >-
+  Terrarium models sound as a population. Pads plant or feed organisms drawn
+  from eighteen types in three families (drones, fauna and critters) across two
+  banks and six synthesis engines. Organisms audibly age, draw on a shared
+  energy pool that produces bloom and collapse cycles, inherit mutated motifs,
+  and can be stalked by predators. Six knobs, two faders and two three-position
+  switches (biome and temporal mode) are the controls. The repository also
+  includes optional display firmware for a touch screen, and a web manual with
+  an in-browser emulator. Only binaries are published.
+status: active
+authors:
+  - name: StubeMusic (ymillion)
+    url: https://github.com/ymillion
+source: https://github.com/ymillion/terrarium-Touch2-Firmware
+source_status: binary-only
+license: unspecified
+license_notes: The repository has no license file and contains the compiled .bin files and bootloader, display firmware binaries, the README and images only.
+homepage: https://terrarium-touch2.vercel.app/
+distribution: download
+install_notes: Download Terrarium-V1.bin from the repository and flash it to the Daisy Seed, for example with the Daisy Seed web programmer. The repository also contains a Daisy bootloader file and display firmware for the optional screen.
+tags: [generative, synth, ambient, ecosystem, display, touch-2]
+video:
+  url: https://www.youtube.com/watch?v=zz007xUIqAE
+  title: TerrARium is alive inside the Synthux Touch2 - A self-evolving sound ecosystem
+  credit: StubeMusic
+  first_party: true
+  found_via: https://terrarium-touch2.vercel.app/
+versions:
+  - version: V1
+    url: https://github.com/ymillion/terrarium-Touch2-Firmware

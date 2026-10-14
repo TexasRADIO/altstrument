@@ -1,0 +1,27 @@
+device: synthux-simple-designer
+name: Simple Canvas
+summary: Cordless patchable West Coast synthesizer for the Simple Designer inspired by the Buchla Easel, with wiring cheat sheet, hardware files and a prebuilt binary.
+description: >-
+  Canvas is a synth made with the Simple Designer kit and a Daisy Seed, inspired
+  by Don Buchla's Easel and developed in cooperation with Synthux. The
+  repository has a
+  canvas.bin to flash, the source, build instructions, hardware files and a PDF
+  wiring cheat sheet.
+status: maintained
+authors:
+  - name: Lucas Bonvin
+  - name: Synthux Academy
+    url: https://github.com/Synthux-Academy
+source: https://github.com/Synthux-Academy/simple-designer-instruments/tree/main/official/canvas
+source_status: open
+license: MIT
+homepage: https://github.com/Synthux-Academy/simple-designer-instruments/tree/main/official/canvas
+distribution: download
+install_notes: Download canvas.bin and flash it with the Daisy Seed web programmer; HOW_TO_BUILD.md covers building from source.
+tags: [synth, west-coast, buchla, open-source, simple-designer]
+image:
+  url: https://raw.githubusercontent.com/Synthux-Academy/simple-designer-instruments/HEAD/official/canvas/resources/pictures/DSC01556-post.png
+  alt: The Canvas synthesizer, a black panel with knobs, sliders and switches built on the Simple Designer
+  credit: Lucas Bonvin
+  source_url: https://github.com/Synthux-Academy/simple-designer-instruments/tree/main/official/canvas
+  first_party: true

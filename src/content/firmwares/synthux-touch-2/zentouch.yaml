@@ -1,0 +1,37 @@
+device: synthux-touch-2
+name: ZenTouch
+summary: Karplus-Strong thumb-piano instrument for the Touch 2 with nine kalimba-style tines, eight voices, twelve scales and a three-layer audio looper.
+description: >-
+  ZenTouch lays nine playable tines across the Touch 2 pads in a kalimba
+  pattern with the scale root at the centre pad. A knob selects one of eight
+  Karplus-Strong voices and another sweeps a twelve-scale arc drawn mostly from
+  Japanese, Chinese and Indian scales. One switch adds a fifth or a third on
+  every tine, the other shifts octaves for new notes, and an audio-buffer
+  looper with three overdub layers does not use up voices. The web manual has
+  an in-browser emulator and downloadable faceplates. Only binaries are
+  published.
+status: active
+authors:
+  - name: StubeMusic (ymillion)
+    url: https://github.com/ymillion
+source: https://github.com/ymillion/zentouch-Touch2-Firmware
+source_status: binary-only
+license: unspecified
+license_notes: The repository has no license file and contains the compiled .bin files, the README and printable faceplates only.
+homepage: https://zentouch-touch2.vercel.app/
+distribution: download
+install_notes: Download the newest ZenTouch .bin (V3 at last check) from the repository and flash it to the Daisy Seed, for example with the Daisy Seed web programmer. The manual covers calibration of the pads.
+tags: [synth, karplus-strong, physical-modelling, looper, scales, touch-2]
+video:
+  url: https://www.youtube.com/watch?v=_z7fOBitQDU
+  title: "New firmware: Here is the #ZenTouch demo presentation. An improvisation using #synthux #touch2"
+  credit: StubeMusic
+  first_party: true
+  found_via: https://zentouch-touch2.vercel.app/
+versions:
+  - version: V3
+    url: https://github.com/ymillion/zentouch-Touch2-Firmware
+  - version: V2
+    url: https://github.com/ymillion/zentouch-Touch2-Firmware
+  - version: V1.1
+    url: https://github.com/ymillion/zentouch-Touch2-Firmware

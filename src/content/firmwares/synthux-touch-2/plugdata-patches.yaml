@@ -1,0 +1,29 @@
+device: synthux-touch-2
+name: Simple Touch Plugdata patches
+summary: Jon Waterschoot's collection of Plugdata (Pure Data) patches and ready-to-flash binaries for the Touch 2 and Simple Fix, including FM BleepBloop, Selfdistort Touch and Frequencyshift Touch.
+description: >-
+  A repository of Plugdata patches compiled for the Daisy Seed and mapped to the
+  Touch's pads, knobs and faders, mostly for the Simple Touch and some for the
+  Simple Fix. The finished ones are FM BleepBloop (a sequenceable FM sound
+  generator), Selfdistort Touch (an input distortion that can self-oscillate) and
+  Frequencyshift Touch, and the repository also has Plugdata board definition
+  JSON files for several modified boards, hardware test patches and unfinished
+  experiments. Several folders include a compiled .bin next to the patch.
+status: maintained
+authors:
+  - name: Jon Waterschoot
+    url: https://github.com/jonwaterschoot
+source: https://github.com/jonwaterschoot/Synthux-Simple-Touch-Plugdata
+source_status: open
+license: unspecified
+license_notes: The repository has no license file.
+homepage: https://github.com/jonwaterschoot/Synthux-Simple-Touch-Plugdata
+distribution: download
+install_notes: Flash the .bin from a patch's folder to the Daisy Seed, or open the .pd patch in Plugdata with the supplied board JSON and export it to the Daisy Seed yourself.
+tags: [plugdata, pure-data, effects, fm, distortion, open-source, touch-2, simple-fix]
+video:
+  url: https://www.youtube.com/watch?v=csmBTfaORss
+  title: "plugdata patch for Synthux Simple Touch: selfdistort-touch (dry demo)"
+  credit: Jon Waterschoot
+  first_party: true
+  found_via: https://github.com/Synthux-Academy/awesome-synthux

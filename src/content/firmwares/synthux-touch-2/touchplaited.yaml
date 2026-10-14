@@ -1,0 +1,52 @@
+device: synthux-touch-2
+name: TouchPlaited
+summary: "Firmware for the Touch 2 based on Mutable Instruments Plaits: all 24 Plaits models as a touch synth with arpeggiator and recorder, plus a 16-step generative drum sequencer, MIDI and optional OLED."
+description: >-
+  TouchPlaited has three play modes: basic pitch (one model played from pads or
+  MIDI), arp/melody (an arpeggiator and a layered two-bar note recorder, each
+  with its own sound) and a 16-step generative drum sequencer with preloaded
+  patterns per genre. The modes can sound at the same time, subject to voice
+  stealing. It sends and receives MIDI over USB and TRS, supports MIDI and CV
+  clock, and can drive an optional 128x32 OLED mounted on the faceplate. The
+  firmware is derived from Émilie Gillet's Plaits code (MIT). A web visualizer,
+  pattern editor and manual are published on GitHub Pages.
+status: active
+authors:
+  - name: Jon Waterschoot
+    url: https://github.com/jonwaterschoot
+source: https://github.com/jonwaterschoot/TouchPlaited
+source_status: open
+license: MIT
+license_notes: Based on Mutable Instruments Plaits, copyright 2018 Émilie Gillet, MIT.
+homepage: https://jonwaterschoot.github.io/TouchPlaited/
+distribution: download
+install_notes: >-
+  The firmware runs from QSPI flash, so the Daisy bootloader must be installed
+  on the Seed once before the app. The README gives a Web Programmer path
+  (flash.daisy.audio, Chromium-based browser) and a dfu-util path for both the
+  bootloader and TouchPlaited.bin from the releases page.
+tags: [synth, plaits, mutable-instruments, drum-sequencer, arpeggiator, midi, oled, open-source, touch-2]
+image:
+  url: https://raw.githubusercontent.com/jonwaterschoot/TouchPlaited/HEAD/img/TouchPlaited_dynamicvisualizer.png
+  alt: The TouchPlaited web visualizer showing the Touch 2 panel mirrored with its current parameters
+  credit: Jon Waterschoot
+  source_url: https://github.com/jonwaterschoot/TouchPlaited
+  first_party: true
+versions:
+  - version: v1.9.0
+    date: 2026-08-08
+    url: https://github.com/jonwaterschoot/TouchPlaited/releases/tag/v1.9.0
+    notes: Adds a bank of eleven fixed kicks.
+  - version: v1.8.0
+    date: 2026-08-07
+    url: https://github.com/jonwaterschoot/TouchPlaited/releases/tag/v1.8.0
+  - version: v1.7.0
+    date: 2026-08-03
+    url: https://github.com/jonwaterschoot/TouchPlaited/releases/tag/v1.7.0
+  - version: v1.6.0
+    date: 2026-07-28
+    url: https://github.com/jonwaterschoot/TouchPlaited/releases/tag/v1.6.0
+    notes: Adds support for a physical OLED screen.
+  - version: v1.0.0
+    date: 2026-07-07
+    url: https://github.com/jonwaterschoot/TouchPlaited/releases/tag/v1.0.0

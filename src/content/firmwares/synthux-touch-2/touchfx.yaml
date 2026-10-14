@@ -1,0 +1,27 @@
+device: synthux-touch-2
+name: TouchFX
+summary: "Official effects processor for the Touch 2: modulated delay, reverb, three drive and three bit-crush zones switched from the pads, with per-effect bypass."
+description: >-
+  TouchFX turns the Touch 2 into an effects unit for its stereo input. The
+  README lists a delay with mix, feedback, time and modulation speed and
+  amount, a reverb with send, mix and size, and three drive and three bit-crush
+  effects (A, B and C) triggered from the pads, with amount and mix set by
+  knobs while a pad is held. Separate pads bypass the whole unit, the delay and
+  the reverb, and the left switch toggles momentary or latched pad behaviour.
+  TouchFX has a dedicated faceplate in the Touch 2 kit.
+status: active
+authors:
+  - name: Synthux Academy
+    url: https://github.com/Synthux-Academy
+source: https://github.com/Synthux-Academy/TouchFX
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file; the earlier DaisyDuino version in simple-touch-instruments is MIT.
+homepage: https://www.synthux.academy/firmware
+distribution: download
+install_notes: Download TouchFX.bin from the release and flash it from Synthux's firmware page or the Daisy Seed web programmer.
+tags: [effects, delay, reverb, distortion, bitcrusher, open-source, touch-2]
+versions:
+  - version: v1.0.0
+    date: 2026-10-01
+    url: https://github.com/Synthux-Academy/TouchFX/releases/tag/v1.0.0

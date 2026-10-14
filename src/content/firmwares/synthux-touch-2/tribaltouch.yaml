@@ -1,0 +1,33 @@
+device: synthux-touch-2
+name: TribalTouch
+summary: Seven-voice generative percussion instrument for the Touch 2 with synthesised drums, a Euclidean rhythm engine, three scenes, sidechain master chain and USB MIDI clock sync.
+description: >-
+  TribalTouch synthesises seven drum voices (kick, low tom, snare, FM hat,
+  crash, mid tom and clap) with no samples. Hits and length are set per voice and
+  a Euclidean algorithm places the hits, tracking eight-bar phrases with
+  turnaround fills and a Chaos control for the noisy voices. Switch A rescales
+  the grid to 16, 8 or 12 steps and switch B selects one of three scenes that
+  also act as save slots. The master chain sidechain-ducks the kit from the
+  kick, USB MIDI provides clock sync and note input, and a hot-pluggable touch
+  display is optional. Only binaries are published.
+status: active
+authors:
+  - name: StubeMusic (ymillion)
+    url: https://github.com/ymillion
+source: https://github.com/ymillion/tribaltouch-Touch2-Firmware
+source_status: binary-only
+license: unspecified
+license_notes: The repository has no license file and contains the compiled .bin files and bootloader, display firmware binaries, the README and images only.
+homepage: https://tribaltouch.vercel.app/
+distribution: download
+install_notes: Download TribalTouch-V1.bin from the repository and flash it to the Daisy Seed, for example with the Daisy Seed web programmer. A separate TribalTouch-Display-V1.bin and display firmware are provided for the optional screen.
+tags: [drum-machine, generative, euclidean, percussion, midi, display, touch-2]
+video:
+  url: https://www.youtube.com/watch?v=n5UApJmsRkc
+  title: TribalTouch - Final Test before release  - Synthux Touch2 Firmware
+  credit: StubeMusic
+  first_party: true
+  found_via: https://tribaltouch.vercel.app/
+versions:
+  - version: V1
+    url: https://github.com/ymillion/tribaltouch-Touch2-Firmware

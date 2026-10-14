@@ -1,0 +1,50 @@
+device: synthux-spotykach
+name: sk-engines
+summary: Fork of the official firmware that turns the Spotykach into a platform with swappable DSP engines, from granular looper and delays to drum machine, Plaits, Rings, Csound and ChucK builds.
+description: >-
+  sk-engines keeps the Spotykach's panel, pads, knobs, clock, CV and SD card
+  behaviour fixed and makes the DSP engine underneath interchangeable, with one
+  firmware binary per engine. The README lists more than twenty engines,
+  including the original granular looper, tape and shuttle loopers, delay and
+  reverb effects, a four-voice Euclidean drum machine, ports of Mutable
+  Instruments Rings and Plaits, and scriptable Csound and ChucK builds. Some
+  engines need an SD card prepared with the project's tools, and some run from
+  QSPI flash. Engines derived from GPL code (qdelay and glitch) are GPLv3.
+status: active
+authors:
+  - name: shakfu
+    url: https://github.com/shakfu
+source: https://github.com/shakfu/sk-engines
+source_status: open
+license: MIT
+license_notes: The qdelay and glitch engines are GPLv3, as are firmware builds that include them; vendored third-party DSP keeps its own upstream license.
+homepage: https://github.com/shakfu/sk-engines/releases
+distribution: download
+install_notes: >-
+  Pick a sk-<engine>-<version>.bin from the releases page, connect the rear
+  USB-C port of the Spotykach main PCB, hold Reset for about three seconds
+  until the pads breathe white, then flash with make ENGINE=<engine>
+  program-dfu or dfu-util. Looper and player engines read the SD card, and the
+  firmware does not convert files, so use the card tools shipped with each
+  release. The README notes that the Spotykach bootloader ships in the
+  repository as bootloader-spotykach-v2.bin.
+tags: [looper, effects, granular, plaits, rings, csound, chuck, open-source, daisy-seed]
+image:
+  url: https://raw.githubusercontent.com/shakfu/sk-engines/HEAD/docs/media/engines-architecture.svg
+  alt: Diagram of the sk-engines architecture, separating the fixed Spotykach platform from the swappable DSP engine
+  credit: shakfu
+  source_url: https://github.com/shakfu/sk-engines
+  first_party: true
+versions:
+  - version: 0.6.1
+    date: 2026-07-31
+    url: https://github.com/shakfu/sk-engines/releases/tag/0.6.1
+  - version: 0.6.0
+    date: 2026-07-31
+    url: https://github.com/shakfu/sk-engines/releases/tag/0.6.0
+  - version: 0.5.1
+    date: 2026-06-25
+    url: https://github.com/shakfu/sk-engines/releases/tag/0.5.1
+  - version: 0.5.0
+    date: 2026-06-22
+    url: https://github.com/shakfu/sk-engines/releases/tag/0.5.0

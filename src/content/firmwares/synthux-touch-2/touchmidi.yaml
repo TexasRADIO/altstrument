@@ -1,0 +1,26 @@
+device: synthux-touch-2
+name: TouchMIDI (Synthux)
+summary: Synthux's firmware that turns the Touch 2 into a USB MIDI controller; the mapping is set in config.h.
+description: >-
+  TouchMIDI sends the Touch 2's pads, knobs, faders and switches as USB MIDI.
+  The README points to config.h in the repository for the control mapping and
+  provides a prebuilt binary and build steps. The repository has not changed
+  since August 2024; Francesco Di Maggio's separate TouchMIDI adds pressure
+  output and host templates.
+status: dormant
+authors:
+  - name: Vladislav Litvinenko (bleeptools)
+    url: https://github.com/bleeptools
+  - name: Synthux Academy
+    url: https://github.com/Synthux-Academy
+source: https://github.com/Synthux-Academy/TouchMIDI
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file.
+homepage: https://github.com/Synthux-Academy/TouchMIDI
+distribution: download
+install_notes: >-
+  Download TouchMIDI.bin from the repository and flash it with the Daisy Seed
+  web programmer, or build it with the Daisy toolchain and upload with make
+  program-dfu.
+tags: [midi, controller, usb-midi, open-source, touch-2]

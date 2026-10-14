@@ -1,0 +1,39 @@
+name: Simple Fix
+manufacturer: Synthux Academy
+category: diy-platform
+tagline: Small Daisy Seed prototyping board with a few knobs, switches and jacks
+description: >-
+  Simple Fix is a compact PCB from Synthux Academy for quick synth and effect
+  sketches. The kit pairs the Fix board with a Daisy Seed, and the product page
+  says the board can also take a Teensy or an Arduino Nano. The Daisy kit
+  includes two mono jacks, four 10K trimmers and two switches, and the board
+  leaves room to add more controls.
+platform: Electrosmith Daisy Seed (STM32H750, Arm Cortex-M7)
+links:
+  manufacturer: https://synthux.academy/store/kit-simple-fix
+  community:
+    - label: simple-fix-instruments (official examples)
+      url: https://github.com/Synthux-Academy/simple-fix-instruments
+    - label: Synthux Academy on GitHub
+      url: https://github.com/Synthux-Academy
+    - label: awesome-synthux (community link list)
+      url: https://github.com/Synthux-Academy/awesome-synthux
+notes: >-
+  The Fix is meant as a starting point, so firmware is whatever sketch or
+  program you load onto the Seed. Synthux's own examples are DaisyDuino
+  (Arduino IDE) sketches; community firmware is compiled with libDaisy or
+  Arduino and flashed with the Daisy Web Programmer or dfu-util after putting
+  the Seed in DFU mode (hold BOOT, tap RESET). Because the control layout is
+  small, the same firmware sometimes also runs on the Touch 2 and Simple
+  Designer boards, but check the pin mapping first.
+related: [synthux-touch-2, synthux-simple-designer, synthux-audrey-ii]
+image:
+  src: /images/devices/synthux-simple-fix.webp
+  style: photo
+  alt: Top-down view of the Simple Fix board with a Daisy Seed, three knobs and two jacks fitted
+  width: 1140
+  height: 940
+  credit: Synthux Academy
+  license: manufacturer product image
+  source_url: https://synthux.academy/store/kit-simple-fix
+  original_url: https://cdn.shopify.com/s/files/1/0615/8912/7349/files/Simple-Fix-Synthux-Academy-0-kit.jpg

@@ -1,0 +1,40 @@
+name: Audrey II
+manufacturer: Synthux Academy
+category: synth
+tagline: Feedback-driven Karplus-Strong drone synth on a Simple Designer board
+description: >-
+  Audrey II is a feedback synthesizer sold by Synthux Academy as a DIY kit and
+  as an assembled unit, built on the Simple Designer PCB with a Daisy Seed. The
+  store lists 96 kHz and 24-bit audio. Its signal chain feeds a Karplus-Strong
+  string model through distortion, reverb, filters and a long delay back into
+  the string, and it makes no sound until the feedback control is raised. It
+  was derived from an earlier Audrey DIY project, and version 1 and 2 share the
+  same code.
+platform: Electrosmith Daisy Seed (STM32H750, Arm Cortex-M7)
+links:
+  manufacturer: https://synthux.academy/store/audrey-ii
+  community:
+    - label: Audrey II assembly tutorial (Notion)
+      url: https://tsemah.notion.site/Audrey-II-Assembly-Tutorial-1736331933b8809f8412f94f634622a5
+    - label: Synthux firmware uploader and releases
+      url: https://www.synthux.academy/firmware
+    - label: Audrey videos playlist (Synthux Audrey II and Audrey Touch)
+      url: https://www.youtube.com/playlist?list=PL5C3-eYoi3VaNFiLZdAEt40glv4YsTCFm
+notes: >-
+  The Seed is programmed over USB. Synthux's instructions use a prebuilt .bin
+  and the Daisy Web Programmer in Chrome (put the Seed in bootloader mode,
+  use a data-capable cable), or the Daisy toolchain and dfu-util to build it
+  yourself. The same instrument also exists as a firmware for the Touch 2
+  (Audrey Touch), listed under that device. Hardware mods such as a gate input
+  are discussed on the Synthux Discord.
+related: [synthux-simple-designer, synthux-touch-2, synthux-spotykach]
+image:
+  src: /images/devices/synthux-audrey-ii.webp
+  style: photo
+  alt: Front panel of the Audrey II synthesizer with its concentric rings and knobs
+  width: 1200
+  height: 743
+  credit: Synthux Academy
+  license: manufacturer product image
+  source_url: https://synthux.academy/store/audrey-ii
+  original_url: https://cdn.shopify.com/s/files/1/0615/8912/7349/files/Audrey-II-Synthux-Academy-2025.jpg

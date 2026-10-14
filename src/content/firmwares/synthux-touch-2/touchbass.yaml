@@ -1,0 +1,47 @@
+device: synthux-touch-2
+name: TouchBass
+summary: Official polyphonic subtractive synth for the Touch 2 with two oscillators, filter, arpeggiator with Euclidean patterns, reverb and a MIDI CC map.
+description: >-
+  TouchBass is one of the instruments that has its own faceplate in the Touch 2
+  kit. The README describes two oscillators (the second can act as a sound
+  source or as AM), a resonant filter with envelope amount, an arpeggiator
+  controlled by pattern, pitch and envelope randomisation knobs, reverb, and
+  a choice of three scales. It plays monophonically or
+  paraphonically and responds to MIDI control changes. Source for the C++
+  version lives in its own repository, with older DaisyDuino sketches in
+  simple-touch-instruments.
+status: active
+authors:
+  - name: Vladislav Litvinenko (bleeptools)
+    url: https://github.com/bleeptools
+  - name: Synthux Academy
+    url: https://github.com/Synthux-Academy
+source: https://github.com/Synthux-Academy/TouchBass
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file; the older sketches in simple-touch-instruments are MIT.
+homepage: https://www.synthux.academy/firmware
+distribution: download
+install_notes: >-
+  Download TouchBass.bin from the latest release and flash it with the Daisy
+  Seed web programmer or Synthux's firmware page, or build it with the Daisy
+  toolchain (make libs, then make, then make program-dfu).
+tags: [synth, subtractive, arpeggiator, midi, open-source, touch-2]
+video:
+  url: https://www.youtube.com/watch?v=yXJ_aMJK8lg
+  title: "Introducing: Touch Bass!"
+  credit: Synthux Academy
+  first_party: true
+versions:
+  - version: v1.0.4
+    date: 2026-09-21
+    url: https://github.com/Synthux-Academy/TouchBass/releases/tag/v1.0.4
+  - version: v1.0.3
+    date: 2026-07-15
+    url: https://github.com/Synthux-Academy/TouchBass/releases/tag/v1.0.3
+  - version: v1.0.2
+    date: 2026-05-31
+    url: https://github.com/Synthux-Academy/TouchBass/releases/tag/v1.0.2
+  - version: v1.0.0
+    date: 2025-11-12
+    url: https://github.com/Synthux-Academy/TouchBass/releases/tag/v1.0.0

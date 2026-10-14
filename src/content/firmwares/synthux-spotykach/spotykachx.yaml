@@ -1,0 +1,39 @@
+device: synthux-spotykach
+name: SpotykachX
+summary: Experimental fork of the official 1.2.0 firmware where deck A switches between sound and effect engines such as an Audrey II voice, an oscillator and a Benjolin.
+description: >-
+  SpotykachX is built on the official Spotykach firmware 1.2.0. According to its
+  README it is a work in progress in which deck A can switch between different
+  sound and effect engines, and it lists a Valhalla-style reverb, Microcosm
+  Mosaic, Plaits, Rings and Elements as planned. The README says the project was
+  mainly written with Codex. A demo video linked from the README shows the first
+  engines.
+status: active
+authors:
+  - name: chenhaoyt2025
+    url: https://github.com/chenhaoyt2025
+source: https://github.com/chenhaoyt2025/SpotykachX
+source_status: open
+license: MIT
+homepage: https://github.com/chenhaoyt2025/SpotykachX/releases
+distribution: download
+install_notes: >-
+  Download the .bin from the releases page, or build it with make (output
+  build/spotykachx.bin). Put the Spotykach into its USB bootloader DFU mode and
+  run make program-dfu, as with the official firmware. Control and MIDI
+  mappings are documented in CONTROL_MAPPING.md and MIDI_CONTROL.md in the
+  repository.
+tags: [looper, effects, engines, experimental, open-source, daisy-seed]
+video:
+  url: https://www.youtube.com/watch?v=51p9QNl07N8
+  title: "Custom SpotykachX Firmware Test 1 (All engines) #Spotykach #tiliqua"
+  credit: NoiseHOHO
+  first_party: true
+  found_via: https://github.com/chenhaoyt2025/SpotykachX#readme
+versions:
+  - version: v0.2
+    date: 2026-08-13
+    url: https://github.com/chenhaoyt2025/SpotykachX/releases/tag/v0.2
+  - version: v0.1
+    date: 2026-08-13
+    url: https://github.com/chenhaoyt2025/SpotykachX/releases/tag/v0.1

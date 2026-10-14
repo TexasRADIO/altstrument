@@ -1,0 +1,22 @@
+device: synthux-simple-designer
+name: Simple Designer instruments (official)
+summary: "Synthux's repository of instruments and sketches for the Simple Designer board: official Audrey II, Canvas and Spotykach folders, plus workshop example sketches for FM, oscillator, filter and subtractive synths."
+description: >-
+  The repository has an official folder with Audrey II (several firmware
+  binaries and source), Canvas (a Buchla Easel-inspired West Coast synth) and a
+  Spotykach folder, and a sketches folder with Arduino workshop examples: simple
+  FM, oscillator, oscillator and filter, subtractive MIDI, subtractive with
+  overdrive, and a plain subtractive synth. Several instruments are also
+  published in their own repositories, which are listed separately.
+status: active
+authors:
+  - name: Synthux Academy
+    url: https://github.com/Synthux-Academy
+source: https://github.com/Synthux-Academy/simple-designer-instruments
+source_status: open
+license: MIT
+license_notes: The repository root has no LICENSE file. The sketches, official/audrey-ii and official/canvas folders each include an MIT license (copyright Electrosmith, Infrasonic Audio and Lucas Bonvin respectively).
+homepage: https://synthux.academy/store/simple-designer-kit
+distribution: source-only
+install_notes: Flash a prebuilt .bin from an official folder with the Daisy Web Programmer, or upload a workshop sketch from the Arduino IDE or with make upload EXAMPLE=<name> using arduino-cli.
+tags: [collection, arduino, examples, synth, open-source, simple-designer]

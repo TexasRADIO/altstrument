@@ -1,0 +1,25 @@
+device: synthux-touch-2
+name: Touch Degenerator
+summary: Layered stereo looper for the Touch 2 that irreversibly degrades the recorded material, after William Basinski's Disintegration Loops; a port of the Workshop Computer card.
+description: >-
+  Degenerator records a loop of up to 60 seconds in a stereo buffer and lets you
+  shape it by adding and removing material while it degrades. Nothing is stored
+  across power cycles because the buffer clears on boot. This version is a port
+  of the author's Degenerator card for the Music Thing Modular Workshop
+  Computer, rebuilt for the Touch 2's two switches, six knobs, two faders and
+  twelve pressure-sensitive pads. The project is hosted on Codeberg.
+status: active
+authors:
+  - name: Joep Vermaat
+    url: https://codeberg.org/johantv
+source: https://codeberg.org/johantv/Touch-Degenerator
+source_status: open
+license: MIT
+homepage: https://codeberg.org/johantv/Touch-Degenerator/releases
+distribution: download
+install_notes: Download degenerator-v1.0.0.bin from the Codeberg release and flash it to the Daisy Seed in DFU mode, or build it with the ARM toolchain and run make program-dfu.
+tags: [looper, degradation, tape, ambient, open-source, touch-2, workshop-computer]
+versions:
+  - version: v1.0.0
+    date: 2026-10-05
+    url: https://codeberg.org/johantv/Touch-Degenerator/releases/tag/v1.0.0

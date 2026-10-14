@@ -1,0 +1,37 @@
+name: Simple Designer
+manufacturer: Synthux Academy
+category: diy-platform
+tagline: Daisy Seed board with 80 control slots for building your own instrument
+description: >-
+  Simple Designer is a larger PCB from Synthux Academy with 80 slots for
+  potentiometers, switches and jacks, intended for building a complete
+  instrument around a Daisy Seed. The kit contains the Designer board, a Fix
+  board, a Daisy Seed, Rogan knobs, twelve 10K pots, a slide pot, switches,
+  jacks and hookup wires. Several Synthux instruments, including Audrey and
+  Canvas, started on this board.
+platform: Electrosmith Daisy Seed (STM32H750, Arm Cortex-M7)
+links:
+  manufacturer: https://synthux.academy/store/simple-designer-kit
+  community:
+    - label: simple-designer-instruments (official)
+      url: https://github.com/Synthux-Academy/simple-designer-instruments
+    - label: Synthux Academy on GitHub
+      url: https://github.com/Synthux-Academy
+    - label: awesome-synthux (community link list)
+      url: https://github.com/Synthux-Academy/awesome-synthux
+notes: >-
+  The board is wired by the builder, so each instrument ships with its own
+  wiring and firmware. Official firmware binaries are flashed to the Daisy
+  Seed with the Daisy Web Programmer (Chrome or Edge, Seed in bootloader
+  mode) or built with the Daisy toolchain and dfu-util.
+related: [synthux-audrey-ii, synthux-simple-fix, synthux-touch-2, synthux-spotykach]
+image:
+  src: /images/devices/synthux-simple-designer.webp
+  style: photo
+  alt: Simple Designer kit from above, with the populated board, knobs, switches and yellow wires
+  width: 1200
+  height: 1029
+  credit: Synthux Academy
+  license: manufacturer product image
+  source_url: https://synthux.academy/store/simple-designer-kit
+  original_url: https://cdn.shopify.com/s/files/1/0615/8912/7349/files/00-Simple-Designer-Synth-Synthux-Academy-0-kit_bfba6ac6-8a58-4150-99b8-a4388f8bc1f7.jpg

@@ -1,0 +1,47 @@
+name: Touch 2 (Simple Touch)
+manufacturer: Synthux Academy
+category: diy-platform
+tagline: Daisy Seed touch instrument with swappable faceplates, one board for many firmwares
+description: >-
+  Touch 2, developed under the name Simple Touch, is a touch-controlled
+  instrument from Synthux Academy built around an Electrosmith Daisy Seed. It
+  has 12 touch pads, six trim knobs, two faders, two switches, a stereo input
+  and a stereo output, and comes with swappable faceplates (one of them blank)
+  that match the official firmwares. Synthux sells it assembled and as a DIY
+  kit.
+platform: Electrosmith Daisy Seed (STM32H750, Arm Cortex-M7)
+links:
+  manufacturer: https://synthux.academy/store/simple-touch-2
+  community:
+    - label: Synthux firmware uploader and releases
+      url: https://www.synthux.academy/firmware
+    - label: Synthux Academy on GitHub
+      url: https://github.com/Synthux-Academy
+    - label: Community projects directory
+      url: https://synthux-academy.github.io/community-instruments/
+    - label: awesome-synthux (community link list)
+      url: https://github.com/Synthux-Academy/awesome-synthux
+notes: >-
+  The instrument is the Daisy Seed plus a fixed control layout, so firmware
+  simply replaces the application on the Seed and each firmware chooses what
+  the pads (P00 to P11), knobs and faders (S30 to S37) and switches do. The
+  official firmwares can be flashed from Synthux's web uploader, which pulls
+  the GitHub releases and uses WebUSB in a Chromium-based browser. The Daisy
+  Web Programmer (flash.daisy.audio) or dfu-util with a .bin file also work.
+  Put the Seed into DFU mode by holding BOOT and tapping RESET. Larger
+  firmwares such as TouchPlaited run from QSPI flash and need the Daisy
+  bootloader installed on the Seed first. Synthux's store page warns against
+  connecting Eurorack-level signals to the inputs without attenuation. Other
+  Daisy Seed firmware builds for the same pin layout can run here, but only
+  those that name the Touch are listed in this catalog.
+related: [synthux-simple-fix, synthux-simple-designer, synthux-audrey-ii, synthux-spotykach, electrosmith-daisy-patch]
+image:
+  src: /images/devices/synthux-touch-2.webp
+  style: photo
+  alt: Simple Touch 2 board with the Touch FX faceplate fitted, seen from above
+  width: 730
+  height: 1030
+  credit: Synthux Academy
+  license: manufacturer product image
+  source_url: https://synthux.academy/store/simple-touch-2
+  original_url: https://cdn.shopify.com/s/files/1/0615/8912/7349/files/Simple-Touch-22-Synthux-Academy.jpg

@@ -1,0 +1,33 @@
+device: synthux-spotykach
+name: Spotykach WAV Builder
+kind: tool
+summary: Browser app for converting, trimming and organising samples into the 6-tape, 6-slot card layout the Spotykach expects, with sample packs and an editor for its config.txt.
+description: >-
+  The Spotykach reads 48 kHz stereo 32-bit float WAV files from its SD card,
+  with six tapes of six slots each and only the first 42 seconds of a slot
+  used. WAV Builder converts and trims audio to that format, lets you browse
+  and collect sample packs, build projects of tapes and slots with notes, write
+  a ready card, import recordings made on the Spotykach, edit the device's
+  config.txt (MIDI channels, preloading, transport, slice mode) and mangle
+  random snippets into one file. It runs in the browser and works best in
+  desktop Chrome or Edge.
+status: active
+authors:
+  - name: Jon Waterschoot
+    url: https://github.com/jonwaterschoot
+source: https://github.com/jonwaterschoot/spotykach_WAV_builder
+source_status: open
+license: WTFPL
+homepage: https://jonwaterschoot.github.io/spotykach_WAV_builder/
+install_notes: Nothing to install. Open the web app, then write the result to the Spotykach's SD card.
+tags: [sample-manager, sd-card, web-app, wav]
+image:
+  url: https://raw.githubusercontent.com/jonwaterschoot/spotykach_WAV_builder/HEAD/public/img/screenshots/WAVbuilder_screenshot-tape-notes.png
+  alt: Spotykach WAV Builder showing a project's tape and slot list with waveforms and notes
+  credit: Jon Waterschoot
+  source_url: https://github.com/jonwaterschoot/spotykach_WAV_builder
+  first_party: true
+versions:
+  - version: 4.2.0
+    date: 2026-10-13
+    notes: Adds Sample Mangler.

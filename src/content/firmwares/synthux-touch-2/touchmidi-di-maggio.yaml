@@ -1,0 +1,32 @@
+device: synthux-touch-2
+name: TouchMIDI (Francesco Di Maggio)
+summary: USB-MIDI controller firmware for the Touch 2 that sends note, per-pad pressure, poly and channel aftertouch, and knob, fader and switch CCs, with host templates.
+description: >-
+  This TouchMIDI sends pads P00 to P09 as notes 48 to 64 and P10 and P11 as
+  notes 36 and 38, with velocity from the strike peak. Every pad also reports
+  continuous pressure as polyphonic aftertouch and as CC30 to CC41, with channel
+  aftertouch carrying the maximum. Knobs send CC14 to CC19, the faders CC20 and
+  CC21, and the switches CC80 and CC81, and the LED can be driven by CC111. The
+  device name, channel, notes and CC numbers are set in config.h, and the
+  repository includes host templates.
+status: active
+authors:
+  - name: Francesco Di Maggio
+    url: https://github.com/francesco-di-maggio
+source: https://github.com/francesco-di-maggio/TouchMIDI
+source_status: open
+license: MIT
+homepage: https://github.com/francesco-di-maggio/TouchMIDI/releases
+distribution: download
+install_notes: >-
+  Download TouchMIDI.bin from the releases page and flash it with the Daisy
+  Seed web programmer, or build with make libs and make and upload with make
+  program-dfu (hold BOOT, press RESET, release BOOT).
+tags: [midi, controller, usb-midi, aftertouch, open-source, touch-2]
+versions:
+  - version: v0.1.1
+    date: 2026-10-05
+    url: https://github.com/francesco-di-maggio/TouchMIDI/releases/tag/v0.1.1
+  - version: v0.1.0
+    date: 2026-10-04
+    url: https://github.com/francesco-di-maggio/TouchMIDI/releases/tag/v0.1.0

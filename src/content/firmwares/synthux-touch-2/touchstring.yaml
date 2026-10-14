@@ -1,0 +1,45 @@
+device: synthux-touch-2
+name: TouchString
+summary: Official polyphonic physical-modelling string synth for the Touch 2 with pluck and bow excitation, velocity-sensitive pads, an arpeggiator and seven scales.
+description: >-
+  TouchString plays seven strings from pads P03 to P09, with pluck, pluck plus
+  bow and bow exciter modes, velocity and aftertouch response, string damping,
+  keyboard octave shifts, a latchable or momentary arpeggiator with tap tempo,
+  reverb and seven built-in scales (three handpan tunings, major, natural
+  minor and two pentatonics). It can switch between polyphonic and monophonic
+  voicing and accepts external audio input. Version 2 added polyphony, bowing
+  and touch sensitivity; Vincent Maurer keeps a fork under the name
+  TouchString(s) that has released slightly newer builds.
+status: active
+authors:
+  - name: Vincent Maurer
+    url: https://github.com/vincent-maurer
+  - name: Rosa Schuurmans
+    url: https://github.com/vitrinekast
+  - name: Vladislav Litvinenko (bleeptools)
+    url: https://github.com/bleeptools
+source: https://github.com/Synthux-Academy/TouchString
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file.
+homepage: https://www.synthux.academy/firmware
+distribution: download
+install_notes: >-
+  Flash the precompiled TouchString.bin from the releases page with the Daisy
+  Seed web programmer (flash.daisy.audio) or Synthux's firmware page.
+  Vincent Maurer's fork at github.com/vincentltm/TouchString publishes the same
+  binary under its own releases.
+tags: [synth, physical-modelling, karplus-strong, polyphonic, arpeggiator, open-source, touch-2]
+video:
+  url: https://www.youtube.com/watch?v=lsqrXFyhXEY
+  title: TouchString(s)
+  credit: Vincent
+  first_party: true
+  found_via: https://www.synthux.academy/news
+versions:
+  - version: v2.0.0
+    date: 2026-10-05
+    url: https://github.com/Synthux-Academy/TouchString/releases/tag/v2.0.0
+  - version: v1.1.0
+    date: 2026-07-14
+    url: https://github.com/Synthux-Academy/TouchString/releases/tag/v1.1.0

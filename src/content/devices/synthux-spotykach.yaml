@@ -1,0 +1,44 @@
+name: Spotykach
+manufacturer: Synthux Academy
+category: sampler
+tagline: Dual-deck looper with touch pads, CV and clock I/O, running open firmware on a Daisy Seed
+description: >-
+  Spotykach is a dual-deck performance looper from Synthux Academy, the
+  company's first finished instrument rather than a kit. Each of its two stereo
+  decks has reel, slice and drift modes, with 12 touch pads, CV and gate
+  inputs, a clock input, two modulation sources, MIDI I/O, a headphone output
+  and an SD card slot for saved tapes. It runs on a Daisy Seed, with audio
+  hardware at 48 kHz and 24 bits, and is powered over USB-C or a 15 V supply.
+platform: Electrosmith Daisy Seed (STM32H750, Arm Cortex-M7)
+links:
+  manufacturer: https://synthux.academy/store/spotykach
+  community:
+    - label: Spotykach manual
+      url: https://synthux.academy/spotykach/manual
+    - label: Synthux firmware uploader and releases
+      url: https://www.synthux.academy/firmware
+    - label: Spotykach performance videos (playlist)
+      url: https://www.youtube.com/playlist?list=PL5C3-eYoi3Vb1_j0t6kHQF1s98jKagaKP
+    - label: awesome-synthux (community link list)
+      url: https://github.com/Synthux-Academy/awesome-synthux
+notes: >-
+  The official firmware is open source and Synthux invites forks. Unlike the
+  other Synthux instruments, Spotykach uses its own bootloader (the repository
+  carries bootloader-spotykach-v2.bin) that accepts USB DFU updates only on the
+  USB-C port on the rear of the main PCB, not the port on the Daisy Seed. Use
+  a data-capable cable, hold Reset on the back for about three seconds until
+  the lights under the bottom pads breathe white, then flash the .bin. The
+  official README warns that a bad flash can temporarily brick the unit until
+  the bootloader, the firmware or both are reinstalled. Alternative firmwares
+  replace the DSP but keep the same panel and bootloader.
+related: [synthux-audrey-ii, synthux-simple-designer, synthux-touch-2, electrosmith-daisy-patch]
+image:
+  src: /images/devices/synthux-spotykach.webp
+  style: photo
+  alt: Top-down view of the Spotykach front panel with its gold artwork, knobs, jacks and LED rings
+  width: 488
+  height: 370
+  credit: Synthux Academy
+  license: manufacturer product image
+  source_url: https://synthux.academy/store/spotykach
+  original_url: https://cdn.shopify.com/s/files/1/0615/8912/7349/files/250503-Spotykach-Overhead.jpg

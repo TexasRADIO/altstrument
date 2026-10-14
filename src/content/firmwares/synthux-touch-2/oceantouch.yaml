@@ -1,0 +1,36 @@
+device: synthux-touch-2
+name: OceanTouch
+summary: Dual-delay and reverb workstation for the Touch 2 with 27 effect zones, three routing modes, 12 performance pads, tap tempo and class-compliant USB MIDI.
+description: >-
+  OceanTouch turns the Touch 2 into an effects processor with three engines, a
+  reverb and two delays (A and B), each with nine effect zones, for 27 in
+  total. Delay and reverb types range from tape and analogue delays to shimmer,
+  galaxy and low-bit bitcrushing. The delays can run in parallel, A into B, or
+  B into A, the twelve pads give freezes, reverse washes and time dives, and the
+  unit enumerates as a driverless USB MIDI device. An interactive web manual
+  documents the signal flow, knob matrix and MIDI mapping. Version 1.1 added
+  makeup gain and output protection. Only binaries are published.
+status: active
+authors:
+  - name: StubeMusic (ymillion)
+    url: https://github.com/ymillion
+source: https://github.com/ymillion/OceanTouch-Touch2-Firmware
+source_status: binary-only
+license: unspecified
+license_notes: The repository has no license file and contains the compiled .bin files, the README and printable faceplates only.
+homepage: https://oceantouch.vercel.app/
+distribution: download
+install_notes: Download the latest OceanEngine .bin from the repository and flash it to the Daisy Seed, for example with the Daisy Seed web programmer.
+tags: [effects, delay, reverb, midi, tap-tempo, touch-2]
+video:
+  url: https://www.youtube.com/watch?v=EAGfnLNAbpY
+  title: "Exploring the #OceanTouch Firmware on #Synthux #Touch2"
+  credit: StubeMusic
+  first_party: true
+  found_via: https://oceantouch.vercel.app/
+versions:
+  - version: V1.1
+    url: https://github.com/ymillion/OceanTouch-Touch2-Firmware
+    notes: Adds 6 dB digital makeup gain and upgraded output protection.
+  - version: V1.0
+    url: https://github.com/ymillion/OceanTouch-Touch2-Firmware

@@ -1,0 +1,37 @@
+device: synthux-audrey-ii
+name: Audrey II (official firmware)
+summary: "Official firmware for Audrey II: a Karplus-Strong string fed back through distortion, reverb, EQ filters and a long delay, silent until the feedback control is raised."
+description: >-
+  Audrey II feeds an inaudible stream of white noise into a Karplus-Strong string
+  model, takes the string output through a soft-clipping distortion, a reverb and
+  gentle low-pass and high-pass filters, and returns it to the string through a
+  longer delay line called the body. Nothing sounds until the outer feedback gain
+  rises, and a tape-like delay with feedback that can grow without bound adds
+  warbling and distortion. The same engine was ported to the Touch 2 as Audrey
+  II Touch. The repository README links a build video and assembly guide.
+status: active
+authors:
+  - name: Nick Donaldson
+    url: https://github.com/ndonald2
+  - name: Roey Tsemah
+    url: https://github.com/roeytsemah
+source: https://github.com/Synthux-Academy/Audrey-II
+source_status: open
+license: MIT
+homepage: https://synthux.academy/store/audrey-ii
+distribution: download
+install_notes: >-
+  Download the latest .bin (the README links audrey-ii-v3.bin in
+  simple-designer-instruments), open the Daisy Web Programmer in Chrome, put the
+  Seed in bootloader mode with a data-capable USB cable, choose the file and
+  press Program. Building needs the Daisy toolchain and make.
+tags: [synth, feedback, drone, karplus-strong, open-source, simple-designer, daisy-seed]
+video:
+  url: https://www.youtube.com/watch?v=6eIFWffv6EY
+  title: This Synth Feedbacks BETTER than GUITAR.
+  credit: Synthux Academy
+  first_party: true
+versions:
+  - version: v1.0.3
+    date: 2026-08-03
+    url: https://github.com/Synthux-Academy/Audrey-II/releases/tag/v1.0.3

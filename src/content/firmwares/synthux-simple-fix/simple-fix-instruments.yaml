@@ -1,0 +1,23 @@
+device: synthux-simple-fix
+name: Simple Fix instruments (official examples)
+summary: "Synthux's official DaisyDuino example instruments for the Simple Fix board: arpeggiator, drum machine, looper, multivoice arpeggiator and drone, and string, string delay and string reverb."
+description: >-
+  The repository contains eight DaisyDuino (Arduino) sketches in its daisyduino
+  folder: simple-arpeggiator, simple-drum-machine, simple-looper,
+  simple-multivoice-arpeggiated, simple-multivoice-drone, simple-string,
+  simple-string-delay and simple-string-reverb. They are meant as starting
+  points for people building a first synth on the Fix. A separate
+  simple-templates repository holds template projects for the Fix, Touch and
+  Designer boards.
+status: dormant
+authors:
+  - name: Synthux Academy
+    url: https://github.com/Synthux-Academy
+source: https://github.com/Synthux-Academy/simple-fix-instruments
+source_status: open
+license: MIT
+license_notes: Copyright held by Stichting PTM Academy (LICENSE.md).
+homepage: https://synthux.academy/store/kit-simple-fix
+distribution: source-only
+install_notes: Open a sketch from the daisyduino folder in the Arduino IDE with the DaisyDuino library installed, select the Daisy Seed and upload.
+tags: [collection, daisyduino, arduino, examples, open-source, simple-fix]

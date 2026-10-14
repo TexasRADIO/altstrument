@@ -20,7 +20,7 @@ notes: >-
   flashed over the Daisy bootloader. Ports of Mutable Instruments code to
   Patch follow the same terms as the original (MIT, no use of the Mutable
   name).
-related: [noise-engineering-versio, befaco-lich]
+related: [noise-engineering-versio, befaco-lich, synthux-touch-2, synthux-simple-fix, synthux-simple-designer, synthux-audrey-ii, synthux-spotykach]
 image:
   src: /images/devices/electrosmith-daisy-patch.jpg
   style: photo

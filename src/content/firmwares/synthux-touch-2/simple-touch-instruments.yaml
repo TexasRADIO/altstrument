@@ -1,0 +1,28 @@
+device: synthux-touch-2
+name: Simple Touch instruments (official collection)
+summary: "Synthux's original repository of Touch instruments: DaisyDuino sketches for TouchBass, TouchString, TouchFX, a drone, drum machine, looper and slicer, plus libDaisy C++ projects including Audrey Touch."
+description: >-
+  The first official firmware repository for the board. Most instruments are
+  DaisyDuino (Arduino) sketches in the daisyduino folder: TouchBass, TouchDrone,
+  TouchDrumMachine, TouchFX, TouchLooper, TouchSlicer and TouchString. A
+  libdaisy folder holds C++ projects such as Audrey Touch, a touch arpeggiator
+  and a touch looper. Synthux is moving the main instruments into their own
+  repositories, which are listed separately.
+status: maintained
+authors:
+  - name: Synthux Academy
+    url: https://github.com/Synthux-Academy
+  - name: Vladislav Litvinenko (bleeptools)
+    url: https://github.com/bleeptools
+  - name: Rosa Schuurmans
+    url: https://github.com/vitrinekast
+  - name: Jon Waterschoot
+    url: https://github.com/jonwaterschoot
+source: https://github.com/Synthux-Academy/simple-touch-instruments
+source_status: open
+license: MIT
+license_notes: Copyright held by Stichting PTM Academy (LICENSE.md).
+homepage: https://www.synthux.academy/firmware
+distribution: source-only
+install_notes: Open a sketch from the daisyduino folder with the DaisyDuino library in the Arduino IDE and upload it to the Daisy Seed, or build a libdaisy project with the Daisy toolchain.
+tags: [collection, daisyduino, arduino, examples, open-source, touch-2]
