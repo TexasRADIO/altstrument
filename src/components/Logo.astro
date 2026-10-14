@@ -1,0 +1,24 @@
+---
+// Firmware World mark: a DIP chip with "FW" knocked out of the package.
+// Drawn on a 32-unit grid and meant to render at 32px (or 16/64): straight edges sit on whole
+// units so they stay sharp at 1x and 2x. Pins are 1 unit wide, so their centers are on .5.
+// public/favicon.svg is the pinless, enlarged variant of this mark.
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+// Mask/clip ids must be unique if the mark renders more than once on a page.
+const id = `logo-${Math.random().toString(36).slice(2, 8)}`;
+---
+<svg class={className} viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id={`${id}-cap`}><rect x="0" y="11" width="32" height="10" /></clipPath>
+    <mask id={`${id}-fw`}>
+      <rect width="32" height="32" fill="#fff" />
+      <path d="M8 11H14V13H10V15H13V17H10V21H8Z" fill="#000" />
+      <path d="M15.9 9.5L17.75 22.5L19.6 9.5L21.45 22.5L23.3 9.5" fill="none" stroke="#000" stroke-width="1.9" stroke-linejoin="bevel" clip-path={`url(#${id}-cap)`} />
+    </mask>
+  </defs>
+  <path d="M6 9.5H2.5M6 13.5H2.5M6 18.5H2.5M6 22.5H2.5M26 9.5H29.5M26 13.5H29.5M26 18.5H29.5M26 22.5H29.5" fill="none" stroke="currentColor" stroke-width="1" />
+  <rect x="6" y="6" width="20" height="20" rx="3" fill="currentColor" mask={`url(#${id}-fw)`} />
+</svg>

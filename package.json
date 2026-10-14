@@ -11,7 +11,8 @@
     "check": "astro check",
     "validate": "tsx scripts/validate.ts",
     "discover:candidates": "tsx .claude/skills/discover/candidates.ts",
-    "astro": "astro"
+    "astro": "astro",
+    "icons": "tsx scripts/build-icons.ts"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
@@ -22,6 +23,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^22",
     "fast-xml-parser": "5.11.2",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.15",
     "typescript": "^5.9.0",

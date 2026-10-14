@@ -1,9 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <style>
-    .bg { fill: #0a6262; }
-    .fg { fill: #f8f8f4; }
-    @media (prefers-color-scheme: dark) { .bg { fill: #66d3c6; } .fg { fill: #111312; } }
+    .body { fill: #0a6262; }
+    @media (prefers-color-scheme: dark) { .body { fill: #66d3c6; } }
   </style>
-  <rect class="bg" x="2" y="2" width="28" height="28" rx="5"/>
-  <path class="fg" d="M10 8h12v3.5h-8v3h6.5V18H14v6h-4z"/>
+  <defs>
+    <clipPath id="cap"><rect x="0" y="8" width="32" height="16"/></clipPath>
+    <mask id="fw">
+      <rect width="32" height="32" fill="#fff"/>
+      <path d="M4 8H13V11H7V14H11V17H7V24H4Z" fill="#000"/>
+      <path d="M15.85 6L18.6 26L21.4 6L24.2 26L26.95 6" fill="none" stroke="#000" stroke-width="2.9" stroke-linejoin="bevel" clip-path="url(#cap)"/>
+    </mask>
+  </defs>
+  <rect class="body" x="1" y="1" width="30" height="30" rx="5" mask="url(#fw)"/>
 </svg>
