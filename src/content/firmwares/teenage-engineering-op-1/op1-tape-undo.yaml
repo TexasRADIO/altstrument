@@ -1,0 +1,49 @@
+device: teenage-engineering-op-1
+name: OP-1 Tape Undo / Redo
+summary: Unofficial full OS image for the original OP-1 that adds tape undo / redo (hold TAPE and press left or right to step through up to 7 takes), bundled with op1r's synths, effects and sequencers, MIDI CC control and a scale mode.
+description: >-
+  Undo covers recordings, punch-ins, overdubs and loop recordings, plus lift,
+  drop, slide, split and join, with the tape stopped or playing. A popup modelled
+  on the OP-1 Field's shows each step, history survives power off, and undo works
+  on units with nearly full tape storage. Build #248 added the popup and snapshot
+  naming (up to 12 characters) on a tape-reel screen. Build #249 folds in pcppcp's
+  op1r (supersaw, FM bell and granular synths, tape, Clouds and reverb effects
+  usable as master FX, a quad LFO, euclid and dots sequencers) and adds MIDI CC
+  control, a scale mode and a storage bar on the COM screen. A customize page
+  lists each component and lets you choose which to include. Not affiliated with
+  Teenage Engineering.
+status: active
+authors:
+  - name: Maiko Pruett
+    url: https://maikopruett.com/
+source_status: binary-only
+license: unspecified
+license_notes: >-
+  No license statement and no published source. Build #249 includes components
+  from op1r, which is GPL-3.0-or-later.
+homepage: https://maikopruett.com/op-1
+distribution: download
+install_notes: >-
+  Download the prebuilt .op1 image and install it through the OP-1's update
+  mode like an official OS. The page links Teenage Engineering's official #246
+  build alongside it, and warns to flash at your own risk.
+tags: [tape, synth-engine, fx, sequencer, usb-midi, scales, ui]
+image:
+  url: https://maikopruett.com/og-op-1.png
+  alt: Line drawing of an OP-1 whose screen shows the undo / redo popup, captioned op-1 tape undo / redo, custom firmware os #248
+  credit: Maiko Pruett
+  source_url: https://maikopruett.com/op-1
+  first_party: true
+versions:
+  - version: "#249"
+    date: 2026-10-11
+    url: https://maikopruett.com/op-1
+    notes: Adds op1r's synths, effects and sequencers, MIDI CC, scale mode; undo for lift, drop, slide, split and join.
+  - version: "#248"
+    date: 2026-10-09
+    url: https://maikopruett.com/op-1
+    notes: Undo / redo popup and snapshot naming.
+  - version: "#247"
+    date: 2026-10-09
+    url: https://maikopruett.com/op-1
+    notes: First tape undo / redo build.
