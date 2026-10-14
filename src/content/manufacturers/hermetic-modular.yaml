@@ -1,0 +1,13 @@
+name: Hermetic Modular
+website: https://hermeticmodular.com/
+notes: Seattle Eurorack maker run by Luke Pendergrass. Its Alchemy Lab module is a field-programmable platform that runs any of the company's firmwares, flashed from a browser, and its MIT-licensed Alchemy SDK and board support are published on GitHub (github.com/hermetic-modular). A second platform, Azoth, is announced as coming soon.
+logo:
+  src: /images/logos/hermetic-modular.svg
+  alt: Hermetic Modular wordmark
+  width: 508
+  height: 51
+  credit: Hermetic Modular
+  license: manufacturer press kit, cleared for editorial use (recoloured from white to black, as the press kit permits)
+  source_url: https://hermeticmodular.com/press
+  original_url: https://hermeticmodular.com/press/logos/hm-wordmark.svg
+  monochrome: true

@@ -1,0 +1,53 @@
+device: hermetic-modular-alchemy-lab
+name: Spagyros
+summary: Official stereo end-of-chain performance effects firmware with three effect slots in series, chosen from nine effects such as DJ filter, beat repeat and chopper, and stereo recording to the SD card.
+description: >-
+  Spagyros chains three effects in series, one per row of pots: the left pot
+  sets depth and the right pot a character macro, a button cycles each row's
+  effect, and pressing two buttons bypasses everything. The nine effects
+  include a DJ filter, bit crusher, riser, chopper, beat repeat,
+  reverse/slow, phaser, DJ echo and a space reverb, each with extra
+  parameters set from the web programmer and stored in presets. It follows a
+  24 PPQN external clock and can record its stereo output to the SD card as
+  WAV files.
+status: active
+authors:
+  - name: Hermetic Modular
+    url: https://hermeticmodular.com/
+source_status: closed
+license: proprietary
+license_notes: Closed-source official firmware, included with the Alchemy Lab. Built on the MIT-licensed Alchemy SDK.
+homepage: https://hermeticmodular.com/modules/alchemy-lab/spagyros
+distribution: browser-installer
+install_notes: >-
+  Flash from the Hermetic Modular web programmer (hermeticmodular.com/program)
+  over the front USB-C port in a Chromium-based browser. SD recording needs a
+  FAT32-formatted card.
+tags: [official, fx, performance, filter, distortion, recorder]
+video:
+  url: https://www.youtube.com/watch?v=U-V_9Z4ImVI
+  title: Hermetic Modular - Launch Announcement
+  credit: Hermetic Modular
+  first_party: true
+  found_via: https://hermeticmodular.com/modules/alchemy-lab/spagyros
+versions:
+  - version: v2.1.1
+    date: 2026-09-29
+    url: https://hermeticmodular.com/modules/alchemy-lab/spagyros/notes
+    notes: Fixes the B3 button colour while the SD recorder is idle.
+  - version: v2.1.0
+    date: 2026-09-04
+    url: https://hermeticmodular.com/modules/alchemy-lab/spagyros/notes
+    notes: Per-row lock clearing, steadier clock handling at 24 PPQN, filtered pots.
+  - version: v2.0.0
+    date: 2026-08-21
+    url: https://hermeticmodular.com/modules/alchemy-lab/spagyros/notes
+    notes: Rows can be configured from the browser, per-effect parameters, interactive manual and panel settings.
+  - version: v1.1.0
+    date: 2026-07-22
+    url: https://hermeticmodular.com/modules/alchemy-lab/spagyros/notes
+    notes: Records the stereo output to the SD card.
+  - version: v1.0.0
+    date: 2026-07-09
+    url: https://hermeticmodular.com/modules/alchemy-lab/spagyros/notes
+    notes: Initial public release.

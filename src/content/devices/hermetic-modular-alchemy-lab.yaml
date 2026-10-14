@@ -1,0 +1,49 @@
+name: Alchemy Lab
+manufacturer: Hermetic Modular
+category: eurorack
+tagline: 12 HP Daisy-based Eurorack platform with field-programmable jacks, 102 RGB LEDs and an open MIT SDK
+description: >-
+  Alchemy Lab is a 12 HP Eurorack module from Hermetic Modular that serves as
+  a hardware platform for interchangeable firmwares. It has six pots, three
+  buttons, stereo audio in and out, six CV jacks that firmware can switch
+  between input and output, and 102 RGB LEDs arranged as rings around the
+  pots, plus a microSD slot, a front USB-C port with USB-MIDI and a rear
+  SPI/I2C expansion header.
+
+  The platform is sold with Hermetic Modular's Echoa, Spagyros and Capicola
+  firmwares, and buying it includes future releases. Firmware is swapped and
+  presets are backed up from the web programmer in a Chromium browser.
+platform: STM32H750 at 480 MHz, Electrosmith Daisy ecosystem (64 MB SDRAM, 16 MB QSPI flash)
+links:
+  manufacturer: https://hermeticmodular.com/modules/alchemy-lab
+  community:
+    - label: Hermetic Modular web programmer (WebUSB)
+      url: https://hermeticmodular.com/program
+    - label: Manuals
+      url: https://hermeticmodular.com/manuals
+    - label: Alchemy SDK documentation
+      url: https://hermeticmodular.com/docs
+    - label: Hermetic Modular on GitHub
+      url: https://github.com/hermetic-modular
+    - label: Hermetic Modular Discord
+      url: https://discord.gg/FEEEQFdd2G
+notes: >-
+  Any Alchemy Lab firmware runs on any Alchemy Lab; the panel is swapped to
+  match. Official firmwares are flashed from the web programmer over the
+  front USB-C port, which needs a Chromium-based browser (Chrome, Edge or
+  Brave) and backs up and migrates presets during updates. The module uses a
+  fork of the Electrosmith Daisy bootloader, so custom builds can also be
+  flashed with dfu-util after holding B3 through the boot window. The Echoa
+  and Spagyros sources are not published; the Alchemy SDK they are built on,
+  the board support package and the bootloader are open under MIT.
+related: []
+image:
+  src: /images/devices/hermetic-modular-alchemy-lab.webp
+  style: photo
+  alt: Alchemy Lab without a panel, its six pots surrounded by lit RGB LED rings, beside the Spagyros and Echoa front panels
+  width: 1200
+  height: 740
+  credit: Hermetic Modular
+  license: manufacturer press kit, cleared for editorial use
+  source_url: https://hermeticmodular.com/press
+  original_url: https://hermeticmodular.com/press/photos/product-basic/DSC00287.jpg

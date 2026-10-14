@@ -1,0 +1,55 @@
+device: hermetic-modular-alchemy-lab
+name: Alchemy SDK
+kind: tool
+summary: Hermetic Modular's MIT-licensed C++ SDK for Alchemy Lab firmware, combining a Daisy-style board support package with an optional framework for pages, pot catch, parameter locks, CV routing, presets, LED animations and USB HostLink.
+description: >-
+  The Alchemy SDK has two layers. The board support package gives direct
+  access to the pins, LED chain and drivers of the interface board and the
+  Daisy DSP core, following libDaisy conventions. The framework on top is
+  opt-in and provides the user interface conventions used by Echoa and
+  Spagyros: virtual knobs with LED ring styles, pages and shift layers, pot
+  catch, parameter locks, CV routing for the field-programmable jacks, preset
+  storage, settings pages, a clip indicator, USB-MIDI and HostLink for
+  talking to the web programmer, and firmware-authored manuals. The SDK is in
+  beta, and its APIs and preset formats may change. The alchemy-template
+  repository packages its stereo EQ example as a starting project, and the
+  alchemy-lab-bootloader repository holds the module's fork of the Daisy
+  bootloader.
+status: active
+authors:
+  - name: Hermetic Modular
+    url: https://hermeticmodular.com/
+source: https://github.com/hermetic-modular/alchemy-sdk
+source_status: open
+license: MIT
+homepage: https://hermeticmodular.com/docs
+distribution: source-only
+install_notes: >-
+  Start from github.com/hermetic-modular/alchemy-template, which vendors the
+  SDK and libDaisy as git submodules and builds with the standard Daisy make
+  workflow. Building needs cmake 3.21 or later, ninja and arm-none-eabi-gcc 12
+  or later; dfu-util flashes the result over the front USB-C port.
+tags: [sdk, open-source, daisy, platform, ui]
+image:
+  url: https://hermeticmodular.com/og/docs/og-docs-index.jpg
+  alt: Alchemy SDK Documentation title card over a rack of Hermetic Modular Eurorack modules
+  credit: Hermetic Modular
+  source_url: https://github.com/hermetic-modular/alchemy-sdk
+  first_party: true
+versions:
+  - version: v0.12.0
+    date: 2026-09-29
+    url: https://github.com/hermetic-modular/alchemy-sdk/releases/tag/v0.12.0
+    notes: USB diagnostics share the HostLink connection; selector fixes.
+  - version: v0.11.0
+    date: 2026-09-05
+    url: https://github.com/hermetic-modular/alchemy-sdk/releases/tag/v0.11.0
+    notes: Clock-following parameter locks, shift layers as pages, pots no longer drift at idle.
+  - version: v0.10.0
+    date: 2026-08-20
+    url: https://github.com/hermetic-modular/alchemy-sdk/releases/tag/v0.10.0
+    notes: Firmware-authored manuals and a clip indicator.
+  - version: v0.9.0
+    date: 2026-08-12
+    url: https://github.com/hermetic-modular/alchemy-sdk/releases/tag/v0.9.0
+    notes: First versioned release; configurable parameter lock length.

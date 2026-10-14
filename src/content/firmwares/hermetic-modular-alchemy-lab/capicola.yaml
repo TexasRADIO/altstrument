@@ -1,0 +1,47 @@
+device: hermetic-modular-alchemy-lab
+name: Capicola
+summary: Open-source real-time time stretcher and pitch shifter that snaps to input transients to stay on the beat, with envelope followers and trigger outputs, built on the keyframe extrema sampling method from a DAFx26 paper.
+description: >-
+  Capicola, by Heavylight Industries in collaboration with Hermetic Modular,
+  reduces incoming audio to keyframes at its local peaks and valleys and
+  stretches it by overlap-add between them, with pitch and time controlled
+  separately. When a transient passes the threshold the read head jumps back
+  to the present, so stretched audio stays aligned to the rhythm of the
+  input. The Quality control sets how much the keyframe representation is
+  compressed, and distortion is applied to the keyframes before
+  interpolation. Input and output envelope followers and their triggers can
+  modulate the knobs internally or go out on the CV jacks. The method is
+  described in the paper "Keyframe Time Stretching via Extrema Sampling"
+  presented at DAFx26.
+status: active
+authors:
+  - name: Heavylight Industries
+    url: https://github.com/heavylight-industries
+source: https://github.com/heavylight-industries/capicola
+source_status: open
+license: AGPL-3.0-only
+license_notes: LICENSE is the GNU AGPL v3; no "or later" grant was found in the README or source headers checked.
+homepage: https://hermeticmodular.com/modules/alchemy-lab/capicola
+distribution: download
+install_notes: >-
+  Flash from the Hermetic Modular web programmer, or download capicola.bin
+  from the GitHub releases, hold B3 through the roughly two-second boot window
+  to enter update mode, and flash over the front USB-C port with dfu-util.
+  Building from source needs cmake, ninja and arm-none-eabi-gcc; the Alchemy
+  SDK and libDaisy are git submodules.
+tags: [time-stretch, pitch-shift, granular, envelope-follower, fx, research, open-source]
+video:
+  url: https://www.youtube.com/watch?v=yNfbBzEpoaM
+  title: introducing Capicola.
+  credit: Heavylight Industries
+  first_party: true
+  found_via: https://hermeticmodular.com/modules/alchemy-lab/capicola
+versions:
+  - version: v1.1.0
+    date: 2026-10-09
+    url: https://github.com/heavylight-industries/capicola/releases/tag/v1.1.0
+    notes: Two jacks become CV inputs by default, panel save history and load, SHIFT snap to defaults, interactive manual.
+  - version: v1.0.0
+    date: 2026-10-02
+    url: https://github.com/heavylight-industries/capicola/releases/tag/v1.0.0
+    notes: First public firmware.

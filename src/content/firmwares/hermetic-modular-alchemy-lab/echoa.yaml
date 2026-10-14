@@ -1,0 +1,53 @@
+device: hermetic-modular-alchemy-lab
+name: Echoa
+summary: Official stereo dual delay with four delay lines that move from comb resonance through echo to reverb, with series, parallel, mono and spectral routing, per-line engine character, presets and parameter locks.
+description: >-
+  Echoa runs two stereo delay lines, four lines in total, each with its own
+  time, feedback, mix, damping, diffusion and multitap settings. Delay times
+  range from 1 ms to 16 s, so short settings give Karplus-Strong style comb
+  resonance and high diffusion turns a line into a reverb tail. Each line can
+  use a digital, BBD, tape or vinyl engine. The six CV inputs are assignable
+  with per-input amounts, and the firmware has 16 preset slots, parameter
+  locks of up to 16 seconds on every pot, and a colorblind-safe LED palette.
+status: active
+authors:
+  - name: Hermetic Modular
+    url: https://hermeticmodular.com/
+source_status: closed
+license: proprietary
+license_notes: Closed-source official firmware, included with the Alchemy Lab. Built on the MIT-licensed Alchemy SDK.
+homepage: https://hermeticmodular.com/modules/alchemy-lab/echoa
+distribution: browser-installer
+install_notes: >-
+  Flash from the Hermetic Modular web programmer (hermeticmodular.com/program)
+  over the front USB-C port in a Chromium-based browser. Presets saved on
+  1.3.0 read as empty on 1.4.0, and presets from 1.0.0 cannot be loaded by
+  1.1.0; updating through the web programmer backs up and migrates them.
+tags: [official, delay, reverb, fx, presets]
+video:
+  url: https://www.youtube.com/watch?v=U-V_9Z4ImVI
+  title: Hermetic Modular - Launch Announcement
+  credit: Hermetic Modular
+  first_party: true
+  found_via: https://hermeticmodular.com/modules/alchemy-lab/echoa
+versions:
+  - version: v1.4.0
+    date: 2026-09-04
+    url: https://hermeticmodular.com/modules/alchemy-lab/echoa/notes
+    notes: Filtered pots, parameter locks that arm on first touch; new preset format, migrated by the web programmer.
+  - version: v1.3.0
+    date: 2026-08-21
+    url: https://hermeticmodular.com/modules/alchemy-lab/echoa/notes
+    notes: Interactive manual in the web programmer and a rebuilt clipping light.
+  - version: v1.2.0
+    date: 2026-08-14
+    url: https://hermeticmodular.com/modules/alchemy-lab/echoa/notes
+    notes: B2 + B3 jumps to the first page; parameter locks extended to 16 seconds.
+  - version: v1.1.0
+    date: 2026-07-17
+    url: https://hermeticmodular.com/modules/alchemy-lab/echoa/notes
+    notes: Colorblind-safe LED palette.
+  - version: v1.0.0
+    date: 2026-07-09
+    url: https://hermeticmodular.com/modules/alchemy-lab/echoa/notes
+    notes: Initial public release.
