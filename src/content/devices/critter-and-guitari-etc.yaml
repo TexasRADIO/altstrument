@@ -1,0 +1,27 @@
+name: ETC (ETC Television Center)
+manufacturer: Critter & Guitari
+category: other
+tagline: Earlier Critter & Guitari video synthesizer that runs Python/Pygame modes from a USB drive
+description: >-
+  The ETC Television Center, or ETC, is Critter & Guitari's earlier video
+  synthesizer and the closest relative of the EYESY. It turns audio and MIDI
+  into HDMI video, using modes written in Python with the Pygame library.
+  The modes, along with screenshots, live on a small USB drive plugged into
+  the unit, and the ETC will only work properly with that drive attached.
+links:
+  manufacturer: https://github.com/critterandguitari/ETC_Manual
+  community:
+    - label: ETC manual source (GitHub)
+      url: https://github.com/critterandguitari/ETC_Manual
+    - label: Patchstorage ETC platform (community modes)
+      url: https://patchstorage.com/platform/etc/
+    - label: Critter & Guitari on GitHub
+      url: https://github.com/critterandguitari
+notes: >-
+  The unit's operating system is on an internal microSD card that the manual
+  tells owners not to remove or modify, and no OS image for the ETC is
+  published, so the user-replaceable part is the Modes folder on the USB drive:
+  copy mode folders in from a computer, or edit them over WiFi with the web
+  editor (a USB WiFi adapter is a separate purchase). The EYESY replaced it
+  with a newer OS and the same mode approach.
+related: [critter-and-guitari-eyesy]

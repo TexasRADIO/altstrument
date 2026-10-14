@@ -1,0 +1,26 @@
+device: critter-and-guitari-etc
+name: ETC modes
+summary: Critter & Guitari's Python/Pygame modes for the ETC video synthesizer, scope modes (S) and trigger modes (T) such as classic scopes, grids, fonts and rotating shapes, one folder per mode.
+description: >-
+  The ETC_Modes repository holds the modes that shipped on the ETC's USB
+  drive, and a second repository, ETC_Modes_Extra, holds more. Each mode is a
+  folder containing a main.py that draws with Pygame. The repository has no
+  license file, so the terms are not stated there.
+status: dormant
+authors:
+  - name: Critter & Guitari
+    url: https://www.critterandguitari.com/
+source: https://github.com/critterandguitari/ETC_Modes
+source_status: open
+license: unspecified
+license_notes: No license file or statement in the repository.
+homepage: https://github.com/critterandguitari/ETC_Manual
+distribution: download
+requires_stock: ETC
+install_notes: Copy the mode folder into the Modes folder at the top level of the ETC's USB drive, with the ETC shut down first, as the manual describes.
+tags: [modes, python, pygame, video]
+video:
+  url: https://www.youtube.com/watch?v=7RNzsSFqo9w
+  title: Critter & Guitari - ETC Image Modes
+  credit: Critter & Guitari
+  first_party: true

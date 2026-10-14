@@ -1,0 +1,34 @@
+device: critter-and-guitari-organelle-1
+name: Orac
+summary: A modular environment for the Organelle built on Pure Data, where synths, effects and sequencers are ready-made modules you chain, with presets and MIDI learn.
+description: >-
+  Orac, by Mark Harris (TheTechnobear), lets you run several patches at once
+  and route audio and control between them. The first Patchstorage release
+  asks for Organelle OS 3.1, which is the original Organelle's OS line, and
+  the 2.0 release followed in May 2019. The project is also built for the
+  Raspberry Pi and Bela.
+status: dormant
+authors:
+  - name: Mark Harris (TheTechnobear)
+    url: https://github.com/TheTechnobear
+source: https://github.com/TheTechnobear/Orac
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE is GPLv3; no "or later" grant was checked in the source files.
+homepage: https://patchstorage.com/orac-2-0-for-organelle/
+distribution: download
+install_notes: Download the Orac package from Patchstorage, copy the .zop file into the Patches folder on a USB drive, load the drive on the Organelle and choose the Install entry in the patch menu.
+tags: [modular, pure-data, patches, platform]
+video:
+  url: https://www.youtube.com/watch?v=-m8p9E-WGWE
+  title: "Organelle just got 10X better. So did open source music-making: ORAC explained"
+  credit: loopop
+  first_party: true
+  found_via: https://github.com/TheTechnobear/Orac#readme
+versions:
+  - version: "2.0"
+    date: 2019-05-17
+    url: https://github.com/TheTechnobear/Orac/releases/tag/2.0
+  - version: "1.0"
+    date: 2018-05-15
+    url: https://github.com/TheTechnobear/Orac/releases/tag/1.0

@@ -1,0 +1,42 @@
+device: critter-and-guitari-pocket-piano-201
+name: 201 Pocket Piano software
+summary: >-
+  Open source software for the 201 Pocket Piano: the mother Pure Data patch, the six pattern and six synth or sampler module slots, and the C controller program that reads keys and knobs.
+description: >-
+  The 201-PocketPiano repository splits the system into a Pure Data patch that
+  does synthesis, MIDI, sequencing and module loading, and a C controller
+  program that sends key and knob events to Pd as OSC. Pattern modules take
+  MIDI notes in and send notes out, synth modules receive notes and three
+  knob values and output audio, and each module is a numbered folder with a
+  module.pd file. The user manual links the v1.1 disk image, while the
+  repository's newest tags are v1.2 and v1.3 with no attached release builds.
+status: dormant
+authors:
+  - name: Critter & Guitari
+    url: https://www.critterandguitari.com/
+source: https://github.com/critterandguitari/201-PocketPiano
+source_status: open
+license: BSD-3-Clause
+license_notes: LICENSE.txt grants BSD 3-Clause terms to files copyright Critter & Guitari; imported files carry their own authors and licenses in their comments.
+homepage: https://critterandguitari.github.io/cg-docs/Other%20Instruments/pp201/
+distribution: download
+install_notes: >-
+  Modes and patterns are added through USB-C Disk Mode by copying numbered
+  folders onto the card. For a full reset, write the disk image linked in
+  section 9.1 of the manual with balenaEtcher; this erases the card.
+tags: [os, modes, patterns, pure-data, faust]
+video:
+  url: https://www.youtube.com/watch?v=NjF_befOGBk
+  title: Critter & Guitari - Making a Track with the 201 Pocket Piano
+  credit: Critter & Guitari
+  first_party: true
+  found_via: https://www.critterandguitari.com/pages/museum
+versions:
+  - version: v1.3
+    date: 2024-07-21
+    url: https://github.com/critterandguitari/201-PocketPiano/tree/v1.3
+    notes: Date of the tagged commit.
+  - version: v1.2
+    date: 2024-01-18
+    url: https://github.com/critterandguitari/201-PocketPiano/tree/v1.2
+    notes: Date of the tagged commit.

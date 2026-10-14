@@ -1,0 +1,32 @@
+device: critter-and-guitari-5-moons
+name: 5 Moons OS
+summary: 5 Moons system software, a Pure Data recorder program with controller code and disk-mode scripts, delivered as a microSD disk image that resets the unit to factory state.
+description: >-
+  The 5-Moons repository holds the Pure Data patch, the C code and ATmega164
+  firmware for the controller, and shell scripts for the disk mode and
+  partition handling. The manual links the 5 Moons v1.0 image as the current
+  OS release and notes that a larger card flashed with it gives a bigger
+  recording partition.
+status: dormant
+authors:
+  - name: Critter & Guitari
+    url: https://www.critterandguitari.com/
+source: https://github.com/critterandguitari/5-Moons
+source_status: open
+license: BSD-3-Clause
+license_notes: LICENSE.txt grants BSD 3-Clause terms to files copyright Critter & Guitari; imported files carry their own authors and licenses in their comments.
+homepage: https://critterandguitari.github.io/cg-docs/Other%20Instruments/5moons/
+distribution: download
+requires_stock: 5 Moons with a microSD card of 8 GB or more
+install_notes: Write the image linked in the manual with balenaEtcher using the card slot on the rear panel. This erases the card, including recordings, so copy songs off in Disk Mode first.
+tags: [os, platform, pure-data, recorder]
+video:
+  url: https://www.youtube.com/watch?v=K09HUuf4TU8
+  title: Multitracking w/ the 5 Moons
+  credit: Critter & Guitari
+  first_party: true
+  found_via: https://www.critterandguitari.com/pages/museum
+versions:
+  - version: v1.0
+    url: https://critterandguitari.github.io/cg-docs/Other%20Instruments/5moons/
+    notes: Disk image named in the user manual.

@@ -1,0 +1,28 @@
+device: critter-and-guitari-eyesy
+name: stereopsis
+summary: Unofficial faster video engine and fifteen extra audio-reactive modes for EYESY OS 3.1, with a browser control page and a way back to the stock engine, installed over WiFi from a computer.
+description: >-
+  stereopsis is a fork of Critter & Guitari's engine that runs at 60 frames a
+  second, adds a browser page on the EYESY with live preview and controls,
+  audio analysis for modes, a per-mode render size, and fifteen new modes
+  such as drone-swarm text and fluid simulation. It also adds the factory
+  modes published after OS 3.1. Holding Shift and Persist for a second
+  switches back to Critter & Guitari's engine. The README states it is not
+  affiliated with or endorsed by Critter & Guitari.
+status: active
+authors:
+  - name: FreeMark
+    url: https://github.com/FreeMark
+source: https://github.com/FreeMark/eyesy-stereopsis
+source_status: open
+license: MIT
+homepage: https://github.com/FreeMark/eyesy-stereopsis
+distribution: download
+requires_stock: EYESY OS 3.1
+install_notes: Put the EYESY on WiFi through the USB adapter, note its IP address on the WiFi screen, and run the repository's install.py from a computer with Python 3.7 or newer on the same network. The README describes removing it again the same way.
+tags: [engine, modes, video, python, web-ui]
+versions:
+  - version: "0.11"
+    date: 2026-10-04
+    url: https://github.com/FreeMark/eyesy-stereopsis
+    notes: Date of the commit named "stereopsis 0.11".

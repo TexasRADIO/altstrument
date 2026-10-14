@@ -1,0 +1,50 @@
+device: critter-and-guitari-organelle
+name: Organelle OS
+summary: Official Organelle operating system, a Linux disk image with the C++ menu application that loads Pure Data patches and drives the keys, knobs and OLED, plus WiFi, MIDI and a browser editor.
+description: >-
+  The Organelle_OS repository holds the menu application, system scripts and
+  platform files for the Organelle. Its README describes a hardware layer for
+  the Organelle M (Raspberry Pi CM3) and the Organelle S2 (CM4), and a single
+  image that boots on both. Version 5, announced in April 2026, covers the
+  Organelle M, S and S2, groups the factory patches into PLAY and EXPLORE
+  folders, adds a browser-based code editor and a web terminal, and installs
+  Lua, ChucK and Faust. It does not support the original Organelle.
+status: active
+authors:
+  - name: Critter & Guitari
+    url: https://www.critterandguitari.com/
+source: https://github.com/critterandguitari/Organelle_OS
+source_status: open
+license: BSD-3-Clause
+license_notes: LICENSE.txt grants BSD 3-Clause terms to files copyright Critter & Guitari; imported files carry their own authors and licenses in their comments.
+homepage: https://critterandguitari.github.io/cg-docs/Organelle/og_sms2/
+distribution: download
+requires_stock: Organelle M, S or S2 (not the original Organelle)
+install_notes: >-
+  Download the disk image linked in section 7.1 of the user manual
+  (OGSMS2_v5.1.img.zip for OS 5.1), write the zipped file to a microSD card of
+  8 GB or more with balenaEtcher, and put the card back in the unit. This
+  erases the card, so back up patches first. Check the version under
+  Settings > Info.
+tags: [os, platform, pure-data, linux, editor]
+video:
+  url: https://www.youtube.com/watch?v=a5P7I7kWdOE
+  title: New Synths for Organelle!
+  credit: Critter & Guitari
+  first_party: true
+versions:
+  - version: v5.1
+    date: 2026-04-27
+    url: https://github.com/critterandguitari/Organelle_OS/tree/v5.1
+    notes: Date of the tagged commit.
+  - version: v5.0
+    date: 2026-04-03
+    url: https://github.com/critterandguitari/Organelle_OS/tree/v5.0
+    notes: Date of the tagged commit.
+  - version: v4.4
+    date: 2025-08-01
+    url: https://github.com/critterandguitari/Organelle_OS/tree/v4.4
+    notes: Date of the tagged commit.
+  - version: v4.1
+    date: 2021-05-13
+    url: https://github.com/critterandguitari/Organelle_OS/releases/tag/v4.1

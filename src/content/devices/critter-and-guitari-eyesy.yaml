@@ -1,0 +1,48 @@
+name: EYESY
+manufacturer: Critter & Guitari
+category: other
+tagline: Audio-reactive video synthesizer whose visuals are Python/Pygame modes
+description: >-
+  EYESY is a video synthesizer from Critter & Guitari that turns incoming
+  audio and MIDI into live visuals, output over HDMI or composite video. A
+  Raspberry Pi Compute Module runs the visuals, and each "mode" is a Python
+  script that draws with the Pygame library; five knobs and a row of buttons
+  control the current mode, and scenes store favourite settings. Modes and
+  scenes can be managed from a browser through the built-in web editor once
+  EYESY is on WiFi through a USB adapter.
+platform: Raspberry Pi Compute Module 3, Linux
+stock_firmware: EYESY OS 3.1
+links:
+  manufacturer: https://critterandguitari.github.io/cg-docs/EYESY/ey_os_3/
+  community:
+    - label: EYESY OS v3 user manual
+      url: https://critterandguitari.github.io/cg-docs/EYESY/ey_os_3/
+    - label: Converting modes from Python 2 to Python 3
+      url: https://critterandguitari.github.io/cg-docs/EYESY/mode_coversion/
+    - label: EYESY OS v3 announcement (forum)
+      url: https://forum.critterandguitari.com/t/new-eyesy-os-v3/10911
+    - label: Patchstorage EYESY platform (community modes)
+      url: https://patchstorage.com/platform/eyesy/
+    - label: Critter & Guitari on GitHub
+      url: https://github.com/critterandguitari
+notes: >-
+  The operating system and the modes live on a microSD card. To update, write
+  the current disk image to a card of 8 GB or more with balenaEtcher; this
+  wipes the card, so download your modes and scenes first (section 6.1 of the
+  manual). The same step restores a card that has problems, and an EYESY on
+  OS 2.3 is upgraded to OS 3 this way. If a USB drive containing a Modes
+  folder is plugged in at boot, EYESY runs its modes, scenes and settings
+  from the drive instead of the card, which is a way to try modes without
+  touching the internal card. Modes written for OS 2 need converting from
+  Python 2 to Python 3 for OS 3. The predecessor ETC has its own entry.
+related: [critter-and-guitari-etc, critter-and-guitari-organelle]
+image:
+  src: /images/devices/critter-and-guitari-eyesy.webp
+  style: photo
+  alt: Orange EYESY video synthesizer with five black knobs and wooden buttons on its top panel, seen at an angle
+  width: 1200
+  height: 614
+  credit: Critter & Guitari
+  license: manufacturer product image
+  source_url: https://critterandguitari.github.io/cg-docs/EYESY/ey_os_2/
+  original_url: https://critterandguitari.github.io/cg-docs/EYESY/images/EYESY-main.jpg

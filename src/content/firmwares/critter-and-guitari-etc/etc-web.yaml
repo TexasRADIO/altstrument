@@ -1,0 +1,16 @@
+device: critter-and-guitari-etc
+name: ETC web editor
+kind: tool
+summary: Web-based interface for editing modes on the ETC, reached from a browser when the unit is on the network through a USB WiFi adapter.
+status: dormant
+authors:
+  - name: Critter & Guitari
+    url: https://www.critterandguitari.com/
+source: https://github.com/critterandguitari/ETC_Web
+source_status: open
+license: BSD-3-Clause
+license_notes: LICENSE.txt grants BSD 3-Clause terms to files copyright Critter & Guitari; imported files carry their own authors and licenses in their comments.
+homepage: https://github.com/critterandguitari/ETC_Manual
+distribution: download
+requires_stock: ETC with a USB WiFi adapter
+tags: [editor, web-ui, modes]

@@ -1,0 +1,18 @@
+device: critter-and-guitari-eyesy
+name: EYESY Palette Picker
+kind: tool
+summary: Web page in Critter & Guitari's EYESY documentation for designing colour palettes with offset, amplitude, frequency and phase sliders per channel and copying the result as JSON. Based on a tool by Karsten Schmidt.
+status: active
+authors:
+  - name: Critter & Guitari
+    url: https://www.critterandguitari.com/
+  - name: Karsten Schmidt (original tool)
+    url: https://thi.ng/
+source: https://github.com/critterandguitari/cg-docs
+source_status: open
+license: unspecified
+license_notes: The documentation repository has no license file; the page is published as part of Critter & Guitari's documentation.
+homepage: https://critterandguitari.github.io/cg-docs/EYESY/palette_picker/
+distribution: download
+requires_stock: EYESY OS 3
+tags: [palettes, web-ui, video]

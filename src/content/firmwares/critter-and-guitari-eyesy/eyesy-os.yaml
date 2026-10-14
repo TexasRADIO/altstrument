@@ -1,0 +1,44 @@
+device: critter-and-guitari-eyesy
+name: EYESY OS
+summary: >-
+  Official EYESY operating system: the Python/Pygame video engine, web editor and file manager, delivered as a microSD disk image for the Raspberry Pi Compute Module inside EYESY.
+description: >-
+  The EYESY_OS repository holds the video engine, the web editor and file
+  manager, and the platform files for EYESY (a platform folder named
+  eyesy_cm3). OS 3, announced in March 2025, moved the modes to Python 3 and
+  added shared colour palettes, knob recording and sequencing, MIDI Program
+  Change recall of scenes, selectable HDMI resolution, loading modes and
+  scenes from a USB drive, backup to USB and an on-screen menu. Critter &
+  Guitari's forum post says it works on both the black and orange EYESY.
+status: maintained
+authors:
+  - name: Critter & Guitari
+    url: https://www.critterandguitari.com/
+source: https://github.com/critterandguitari/EYESY_OS
+source_status: open
+license: BSD-3-Clause
+license_notes: LICENSE.txt grants BSD 3-Clause terms to files copyright Critter & Guitari; imported files carry their own authors and licenses in their comments.
+homepage: https://critterandguitari.github.io/cg-docs/EYESY/ey_os_3/
+distribution: download
+requires_stock: EYESY with a microSD card of 8 GB or more
+install_notes: >-
+  Download the image linked in section 6.1 of the OS 3 manual (EYESY_v3.1),
+  write it to a microSD card with balenaEtcher, and put the card back in the
+  unit through the slot on the rear panel. This wipes the card, so download
+  your modes, scenes and screen grabs from the web editor first. A forum
+  poster reported a "Root directory is locked" error after flashing and
+  suggested trying another computer; no confirmed fix is given there.
+tags: [os, platform, python, pygame, editor, video]
+video:
+  url: https://www.youtube.com/watch?v=xIxchxVhVI0
+  title: "Critter & Guitari - EYESY Video Synthesizer [Epilepsy Warning!]"
+  credit: Critter & Guitari
+  first_party: true
+versions:
+  - version: v3.1
+    date: 2025-10-30
+    url: https://github.com/critterandguitari/EYESY_OS/tree/v3.1
+    notes: Date of the tagged commit.
+  - version: v3.0
+    url: https://forum.critterandguitari.com/t/new-eyesy-os-v3/10911
+    notes: Announced March 2025.

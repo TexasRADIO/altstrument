@@ -1,0 +1,38 @@
+name: 5 Moons
+manufacturer: Critter & Guitari
+category: sampler
+tagline: Five-track pocket recorder with a microSD-card OS and USB-C disk mode
+description: >-
+  5 Moons is a five-track pocket recorder from Critter & Guitari. It records
+  at 48 kHz, 16 bit to a microSD card, has a USB-C port that doubles as a disk
+  mode for moving recordings to a computer or DAW, and a USB 3.0 jack the
+  manual says has no function yet. The operating system and all recordings
+  are on the card. Critter & Guitari now lists it in its Museum of Retired
+  Instruments.
+links:
+  manufacturer: https://www.critterandguitari.com/pages/museum
+  community:
+    - label: 5 Moons user manual
+      url: https://critterandguitari.github.io/cg-docs/Other%20Instruments/5moons/
+    - label: 5 Moons on GitHub
+      url: https://github.com/critterandguitari/5-Moons
+notes: >-
+  Holding all five track buttons with USB-C connected enters Disk Mode, where
+  songs and files can be copied (the manual asks that song folders and file
+  names keep their numbering). The operating system is on the microSD card;
+  writing the disk image linked in the manual (5 Moons v1.0) with
+  balenaEtcher resets the unit to factory state and erases the card, and a
+  larger card flashed with that image gives a larger recording partition.
+  The repository publishes the system software but the manual documents no
+  user-installable modes.
+related: [critter-and-guitari-kaleidoloop]
+image:
+  src: /images/devices/critter-and-guitari-5-moons.webp
+  style: photo
+  alt: 5 Moons recorder in a wooden case with five faders, buttons and a USB-C cable plugged in
+  width: 400
+  height: 300
+  credit: Critter & Guitari
+  license: manufacturer product image
+  source_url: https://www.critterandguitari.com/pages/museum
+  original_url: https://critterandguitari.com/cdn/shop/t/17/assets/museum-5-moons.jpg

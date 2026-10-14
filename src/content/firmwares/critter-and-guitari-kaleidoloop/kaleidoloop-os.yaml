@@ -1,0 +1,36 @@
+device: critter-and-guitari-kaleidoloop
+name: Kaleidoloop OS and modes
+summary: Kaleidoloop system software and its six Pure Data playback modes, written to the microSD card as a disk image, with the Pd patches, controller code and hardware test in an open repository.
+description: >-
+  The Kaleidoloop repository has a pd folder with the mother patch and the
+  playback modes, and an hw folder with the code for the unit's controller and
+  a hardware test. Its history includes a "pure playback" mode and a knob
+  that speeds playback up and down, added in 2025, and a community pull
+  request merged in December 2025. The user manual links the v1.0 disk image
+  for a factory reset.
+status: active
+authors:
+  - name: Critter & Guitari
+    url: https://www.critterandguitari.com/
+source: https://github.com/critterandguitari/Kaleidoloop
+source_status: open
+license: BSD-3-Clause
+license_notes: LICENSE.txt grants BSD 3-Clause terms to files copyright Critter & Guitari; imported files carry their own authors and licenses in their comments.
+homepage: https://critterandguitari.github.io/cg-docs/Other%20Instruments/kloop/
+distribution: download
+install_notes: >-
+  Individual modes go into the unit's modes folder through USB-C Disk Mode.
+  For the full OS, write the kaleidoloop-v1.0 image linked in the manual to
+  the microSD card with balenaEtcher; this erases the card and its
+  recordings.
+tags: [os, modes, pure-data, platform, looper]
+video:
+  url: https://www.youtube.com/watch?v=CSdFNRFGmqw
+  title: Kaleidoloop - Building Layers / Changing Modes
+  credit: Critter & Guitari
+  first_party: true
+  found_via: https://www.critterandguitari.com/pages/museum
+versions:
+  - version: v1.0
+    url: https://critterandguitari.github.io/cg-docs/Other%20Instruments/kloop/
+    notes: Disk image named in the user manual.

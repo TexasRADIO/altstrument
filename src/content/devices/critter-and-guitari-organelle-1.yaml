@@ -1,0 +1,36 @@
+name: Organelle (original)
+manufacturer: Critter & Guitari
+category: diy-platform
+tagline: The original 2016 Organelle, a Linux Pure Data instrument that stopped at OS 4.0
+description: >-
+  The original Organelle is the first model of Critter & Guitari's music
+  computer, an instrument with a wooden-key keyboard, knobs and an OLED
+  screen that runs Pure Data patches on an embedded Linux system. New patches
+  are loaded from a USB stick or the microSD card. Critter & Guitari now lists
+  it in its Museum of Retired Instruments, and the later Organelle M, S and S2
+  have their own entry.
+links:
+  manufacturer: https://www.critterandguitari.com/pages/museum
+  community:
+    - label: Organelle 1 user manual (OS 4.0)
+      url: https://critterandguitari.github.io/cg-docs/Organelle/og1/
+    - label: Critter & Guitari forum
+      url: https://forum.critterandguitari.com/
+    - label: Patchstorage Organelle platform (community patches)
+      url: https://patchstorage.com/platform/organelle/
+notes: >-
+  Organelle OS 5, the current release, does not support the original Organelle.
+  The newest image for it is OG1-4.0 (OG1-3.1 before that), written to the
+  microSD card with a tool such as balenaEtcher as described in section 7.1 of
+  the user manual; flashing erases the card.
+related: [critter-and-guitari-organelle]
+image:
+  src: /images/devices/critter-and-guitari-organelle-1.webp
+  style: photo
+  alt: Original Organelle with a blue case, wooden keys, black knobs and an OLED screen, seen from above at an angle
+  width: 400
+  height: 300
+  credit: Critter & Guitari
+  license: manufacturer product image
+  source_url: https://www.critterandguitari.com/pages/museum
+  original_url: https://critterandguitari.com/cdn/shop/t/17/assets/museum-original-organelle.png

@@ -1,0 +1,33 @@
+device: critter-and-guitari-organelle
+name: Organelle patches (official library)
+summary: >-
+  Critter & Guitari's open library of Pure Data patches for the Organelle: synths, samplers, effects, hybrids and utilities, including the factory EXPLORE set, one folder per patch.
+description: >-
+  The Organelle_Patches repository groups the patches by type (Effects,
+  Hybrids, Samplers, Synthesizers, Utilities, Wepa!) and each patch is a folder
+  with a main.pd file that can be copied to the Patches folder on the card or a
+  USB drive. Critter & Guitari describes the EXPLORE folder on the current OS
+  as over a hundred patches made by it and the community. The documentation
+  site has a page for each patch. The eight newer PLAY patches ship with OS 5
+  and are also posted on Patchstorage.
+status: active
+authors:
+  - name: Critter & Guitari
+    url: https://www.critterandguitari.com/
+source: https://github.com/critterandguitari/Organelle_Patches
+source_status: open
+license: BSD-3-Clause
+license_notes: No repository-level license file; each patch folder carries a LICENSE.txt giving BSD 3-Clause terms for Critter & Guitari files, and imported code keeps its own terms.
+homepage: https://critterandguitari.github.io/cg-docs/Organelle/patches/
+distribution: download
+install_notes: Copy or install a patch folder (or its .zip or .zop file) into the Patches folder of the microSD card or a FAT32 USB drive, then choose Reload in the Storage menu.
+tags: [patches, pure-data, synth, sampler, effects]
+video:
+  url: https://www.youtube.com/watch?v=g7Yu6Xa6hqg
+  title: Organelle Demo - Nori Grains
+  credit: Critter & Guitari
+  first_party: true
+versions:
+  - version: v2.3
+    date: 2021-03-29
+    url: https://github.com/critterandguitari/Organelle_Patches/releases/tag/v2.3

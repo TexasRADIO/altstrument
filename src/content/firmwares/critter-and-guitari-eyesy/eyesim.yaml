@@ -1,0 +1,16 @@
+device: critter-and-guitari-eyesy
+name: eyesim
+kind: tool
+summary: Command-line EYESY simulator that runs a mode folder in a Pygame window with on-screen knobs and an audio file as input, for developing modes without the hardware.
+status: dormant
+authors:
+  - name: notmatthancock
+    url: https://github.com/notmatthancock
+source: https://github.com/notmatthancock/eyesim
+source_status: open
+license: MIT
+homepage: https://github.com/notmatthancock/eyesim
+distribution: download
+requires_stock: Modes written against the EYESY mode API
+install_notes: Install with pip, then run eyesim with the mode folder and an optional 16-bit WAV audio file; press the space bar to show the knob sliders.
+tags: [simulator, modes, python, pygame]

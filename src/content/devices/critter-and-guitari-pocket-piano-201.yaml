@@ -1,0 +1,39 @@
+name: 201 Pocket Piano
+manufacturer: Critter & Guitari
+category: synth
+tagline: Pocket synth with swappable Pure Data and Faust modes and patterns on microSD
+description: >-
+  The 201 Pocket Piano is a handheld synthesizer from Critter & Guitari in an
+  aluminium case with a keyboard, knobs, a sequencer, presets and MIDI. It has
+  six synth engines or sampler players, called Modes, and six arpeggio and
+  note-repeat Patterns, each a folder on its microSD card, and runs on
+  batteries or USB-C power. Critter & Guitari now lists it in its Museum of
+  Retired Instruments.
+platform: NXP i.MX6, Yocto Linux (per the project README)
+links:
+  manufacturer: https://www.critterandguitari.com/pages/museum
+  community:
+    - label: 201 Pocket Piano user manual
+      url: https://critterandguitari.github.io/cg-docs/Other%20Instruments/pp201/
+    - label: 201-PocketPiano on GitHub
+      url: https://github.com/critterandguitari/201-PocketPiano
+notes: >-
+  Connecting USB-C to a computer opens Disk Mode, where sample files and the
+  Pattern and Mode folders on the card can be added, replaced or reordered;
+  folders are named with a number 1 to 6 and a hyphen. Modes and Patterns are
+  written in Pure Data and Faust, and some Patterns are plain pattern.txt files
+  that need no programming. The README says modules follow the Orac module
+  format, but a module from Orac needs changes to run here. The operating
+  system is on the card as well; writing the disk image from the manual with
+  balenaEtcher resets the unit and erases the card.
+related: [critter-and-guitari-organelle, critter-and-guitari-kaleidoloop]
+image:
+  src: /images/devices/critter-and-guitari-pocket-piano-201.webp
+  style: photo
+  alt: 201 Pocket Piano standing upright in a black case with a column of knobs and wooden buttons and a speaker grille at the top
+  width: 400
+  height: 267
+  credit: Critter & Guitari
+  license: manufacturer product image
+  source_url: https://www.critterandguitari.com/pages/museum
+  original_url: https://critterandguitari.com/cdn/shop/t/17/assets/museum-201-pocket-piano.png

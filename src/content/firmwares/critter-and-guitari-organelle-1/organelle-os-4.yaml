@@ -1,0 +1,41 @@
+device: critter-and-guitari-organelle-1
+name: Organelle OS 4.0 (original Organelle)
+summary: Last official OS image for the original Organelle, a Linux disk image with the Pure Data patch loader, WiFi and the patch manager; OS 5 does not support this model.
+description: >-
+  The Organelle_OS repository carried a separate platform folder for the
+  original Organelle up to its v4.0 tag, and Critter & Guitari's manual for
+  the original unit links the OG1-4.0 disk image as the current release, with
+  OG1-3.1 as the previous one. Version 5 of the OS dropped support for this
+  model.
+status: dormant
+authors:
+  - name: Critter & Guitari
+    url: https://www.critterandguitari.com/
+source: https://github.com/critterandguitari/Organelle_OS
+source_status: open
+license: BSD-3-Clause
+license_notes: LICENSE.txt grants BSD 3-Clause terms to files copyright Critter & Guitari; imported files carry their own authors and licenses in their comments.
+homepage: https://critterandguitari.github.io/cg-docs/Organelle/og1/
+distribution: download
+requires_stock: Original Organelle only
+install_notes: >-
+  Download the OG1 image linked in section 7.1 of the Organelle 1 manual,
+  write the zipped file with balenaEtcher to a microSD card of 8 GB or more
+  (do not unzip it first, as the manual instructs), reinsert it and check the
+  version under Settings > Info. This erases the card.
+tags: [os, platform, pure-data, linux]
+video:
+  url: https://www.youtube.com/watch?v=TW6FAxLFzLk
+  title: Organelle - Critter & Guitari
+  credit: Critter & Guitari
+  first_party: true
+  found_via: https://www.critterandguitari.com/pages/museum
+versions:
+  - version: v4.0
+    date: 2020-02-12
+    url: https://github.com/critterandguitari/Organelle_OS/tree/v4.0
+    notes: Date of the tagged commit; image OG1-4.0.
+  - version: v3.1
+    date: 2018-04-10
+    url: https://github.com/critterandguitari/Organelle_OS/tree/v3.1
+    notes: Date of the tagged commit; image OG1-3.1.

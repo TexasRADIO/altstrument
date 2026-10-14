@@ -1,0 +1,23 @@
+device: critter-and-guitari-eyesy
+name: EYESY OS for Raspberry Pi + Pisound
+summary: Port of the EYESY operating system to a standard Raspberry Pi running Patchbox OS with a Blokas Pisound audio card, with install scripts and MIDI CC control.
+description: >-
+  This repository remixes Critter & Guitari's EYESY OS to run on a Raspberry
+  Pi with Patchbox OS and the Blokas Pisound, so EYESY visuals can run
+  without the EYESY hardware. A button press starts it and two presses stop it, and
+  the README maps MIDI CC numbers 21 to 35 to the knobs, scene and mode
+  navigation, screenshots and input gain. The repository includes a
+  step-by-step guide.
+status: active
+authors:
+  - name: Alessandro (jqrsound)
+    url: https://github.com/jqrsound
+source: https://github.com/jqrsound/EYESY_OS_for_RasPiSound
+source_status: open
+license: BSD-3-Clause
+license_notes: LICENSE copies Critter & Guitari's BSD 3-Clause text from the upstream EYESY OS, which GitHub does not detect automatically.
+homepage: https://github.com/jqrsound/EYESY_OS_for_RasPiSound
+distribution: source-only
+requires_stock: Raspberry Pi with Patchbox OS and a Blokas Pisound
+install_notes: Run the repository's install.sh on the Pi. The repository also contains a step-by-step guide.
+tags: [os, port, raspberry-pi, video, python]

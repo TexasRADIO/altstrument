@@ -1,0 +1,27 @@
+device: critter-and-guitari-eyesy
+name: EYESY modes for OS v3
+summary: >-
+  Critter & Guitari's collection of Python 3 EYESY modes: scope modes (S) and trigger modes (T) such as oscilloscopes, grid patterns, image modes and a MIDI note printer, one folder per mode.
+description: >-
+  The EYESY_Modes_OSv3 repository has more than a hundred mode folders, each
+  holding a main.py in the format the OS 3 engine loads. Names starting with
+  S are scope modes that draw the incoming audio signal continuously, and
+  names starting with T are trigger modes that draw when an event occurs. The
+  repository received batches of new modes through 2025.
+status: maintained
+authors:
+  - name: Critter & Guitari
+    url: https://www.critterandguitari.com/
+source: https://github.com/critterandguitari/EYESY_Modes_OSv3
+source_status: open
+license: BSD-2-Clause
+homepage: https://critterandguitari.github.io/cg-docs/EYESY/mode_coversion/
+distribution: download
+requires_stock: EYESY OS 3 (Python 3)
+install_notes: Zip a mode folder and upload it to the Modes folder with the web editor, or copy it to the Modes folder of a USB drive and boot EYESY with the drive plugged in.
+tags: [modes, python, pygame, video, oscilloscope]
+video:
+  url: https://www.youtube.com/watch?v=n7TaJT4EA6M
+  title: Scope Modes and Trigger Modes with the EYESY
+  credit: Critter & Guitari
+  first_party: true

@@ -1,0 +1,16 @@
+device: critter-and-guitari-eyesy
+name: EYESY Scene Converter
+kind: tool
+summary: Web page in Critter & Guitari's EYESY documentation that converts an OS 2 Scenes.csv file into a zip of OS 3 scenes to upload to the EYESY and unzip.
+status: active
+authors:
+  - name: Critter & Guitari
+    url: https://www.critterandguitari.com/
+source: https://github.com/critterandguitari/cg-docs
+source_status: open
+license: unspecified
+license_notes: The documentation repository has no license file; the page is published as part of Critter & Guitari's documentation.
+homepage: https://critterandguitari.github.io/cg-docs/EYESY/scene_converter/
+distribution: download
+requires_stock: EYESY OS 3
+tags: [scenes, web-ui, video]

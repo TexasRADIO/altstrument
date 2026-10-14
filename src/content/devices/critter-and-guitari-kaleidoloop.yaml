@@ -1,0 +1,39 @@
+name: Kaleidoloop
+manufacturer: Critter & Guitari
+category: sampler
+tagline: Pocket loop recorder whose playback modes are Pure Data patches on a microSD card
+description: >-
+  Kaleidoloop is a portable sound recorder and manipulator from Critter &
+  Guitari. It records mono 48 kHz, 16-bit audio, plays the recordings back
+  through six playback modes that warp speed, add effects or layer loops, and
+  runs from batteries or USB-C power. Each mode is a Pure Data patch, and the
+  recordings and modes are stored on its microSD card.
+links:
+  manufacturer: https://www.critterandguitari.com/pages/museum
+  community:
+    - label: Kaleidoloop user manual
+      url: https://critterandguitari.github.io/cg-docs/Other%20Instruments/kloop/
+    - label: Patchstorage Kaleidoloop platform (community modes)
+      url: https://patchstorage.com/platform/kaleidoloop/
+    - label: Kaleidoloop on GitHub
+      url: https://github.com/critterandguitari/Kaleidoloop
+notes: >-
+  With a USB-C cable to a computer, pressing Next Track and then Mode puts the
+  unit into Disk Mode, where the card shows up as a drive: recordings sit in a
+  recordings folder, and playback modes can be reordered, removed or added.
+  Each mode needs its own folder whose name starts with a number from 1 to 6,
+  containing module.pd and a copy of waveplayer~.pd-linux. The operating system
+  is on the same card; writing the manual's disk image with balenaEtcher resets
+  the unit to factory state and erases the card. Critter & Guitari now lists
+  Kaleidoloop in its Museum of Retired Instruments.
+related: [critter-and-guitari-5-moons, critter-and-guitari-pocket-piano-201]
+image:
+  src: /images/devices/critter-and-guitari-kaleidoloop.webp
+  style: photo
+  alt: Three Kaleidoloop units in different finishes, stacked, with knobs, buttons and a speaker grille
+  width: 1200
+  height: 900
+  credit: Critter & Guitari
+  license: manufacturer product image
+  source_url: https://www.critterandguitari.com/pages/museum
+  original_url: https://critterandguitari.com/cdn/shop/t/17/assets/museum-kaleidoloop.png
