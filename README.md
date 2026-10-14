@@ -56,6 +56,8 @@ pnpm preview    # serve the built site
 
 Building fetches the Music Thing Workshop Computer card entries from the upstream repository (see CONTRIBUTING.md, "Entries fetched at build time"). Set `FIRMWARE_WORLD_SKIP_REMOTE=1` to build offline from the cached data store.
 
+Builds need `SITE_URL` set to the public base URL the site is deployed to (for example `SITE_URL=https://example.com pnpm build`). It makes canonical, social-image and RSS feed links absolute; the RSS feed refuses to build without it. `pnpm dev` doesn't need it and uses the local server's address.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add a device or firmware, the field reference, and the pull request checklist.

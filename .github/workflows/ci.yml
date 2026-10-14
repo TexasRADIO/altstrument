@@ -30,3 +30,5 @@ jobs:
       - run: pnpm build
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          # CI builds are not deployed; any absolute URL will do.
+          SITE_URL: https://example.com
