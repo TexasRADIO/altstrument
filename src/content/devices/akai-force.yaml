@@ -9,7 +9,7 @@ description: >-
   OLED displays, and a separate set of 16 velocity- and pressure-sensitive
   pads. It records and sequences without a computer and provides two audio
   inputs, four audio outputs, MIDI and CV I/O.
-platform: Embedded Linux (shared base with the standalone MPCs)
+platform: Embedded Linux, shared by the standalone MPCs and Force
 links:
   manufacturer: https://www.akaipro.com/force/
   community:

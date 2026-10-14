@@ -8,7 +8,7 @@ description: >-
   GitHub repository, hosts an Electrosmith Daisy Seed (an STM32H750 audio
   board) in a 125B enclosure with six knobs, three toggle switches and two
   footswitches.
-platform: Electrosmith Daisy Seed
+platform: Electrosmith Daisy Seed (STM32H750, Arm Cortex-M7)
 links:
   manufacturer: https://github.com/GuitarML/FunBox
   community:

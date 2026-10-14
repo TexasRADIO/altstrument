@@ -7,7 +7,7 @@ description: >-
   synthesizer. Its built-in sound engine is a DX7-style FM synth that can load DX7 patches, and it adds a
   64-step sequencer with eight stored patterns and an arpeggiator. It has a 1.54-inch display, USB-C for
   power and data, Bluetooth MIDI and 3.5 mm MIDI in and out jacks.
-platform: JieLi AC791N (WL82), same SoC family as the FM-1
+platform: JieLi AC791N (WL82), dual-core pi32v2
 links:
   manufacturer: https://www.cuvave.com/product?id=smk-37-elite
   community:

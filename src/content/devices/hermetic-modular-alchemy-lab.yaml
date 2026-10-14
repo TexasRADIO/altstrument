@@ -13,7 +13,7 @@ description: >-
   The platform is sold with Hermetic Modular's Echoa, Spagyros and Capicola
   firmwares, and buying it includes future releases. Firmware is swapped and
   presets are backed up from the web programmer in a Chromium browser.
-platform: STM32H750 at 480 MHz, Electrosmith Daisy ecosystem (64 MB SDRAM, 16 MB QSPI flash)
+platform: STM32H750 (Arm Cortex-M7, 480 MHz), Electrosmith Daisy ecosystem (64 MB SDRAM, 16 MB QSPI flash)
 links:
   manufacturer: https://hermeticmodular.com/modules/alchemy-lab
   community:

@@ -8,7 +8,7 @@ description: >-
   2020. It is designed for a 125B enclosure with top-mounted jacks and provides
   six potentiometers, four toggle switches, two momentary footswitches and two
   LEDs. The builder supplies the Daisy Seed, components and enclosure.
-platform: Electrosmith Daisy Seed
+platform: Electrosmith Daisy Seed (STM32H750, Arm Cortex-M7)
 links:
   manufacturer: https://www.pedalpcb.com/product/pcb351/
   community:

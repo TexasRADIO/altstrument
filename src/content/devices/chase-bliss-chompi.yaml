@@ -9,7 +9,7 @@ description: >-
   with a screenless interface of RGB LEDs and push-button encoders. Sample
   playback, envelopes, a filter and a single-knob delay and reverb section run on
   an Electrosmith Daisy Seed.
-platform: Electrosmith Daisy Seed
+platform: Electrosmith Daisy Seed (STM32H750, Arm Cortex-M7)
 stock_firmware: TAPE 2.0
 links:
   manufacturer: https://www.chompiclub.com

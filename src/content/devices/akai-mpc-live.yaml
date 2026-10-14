@@ -9,7 +9,7 @@ description: >-
   MPC One and MPC Key 61, the first MPC with a built-in keyboard. Models share
   16 velocity-sensitive RGB pads and a multi-touch display, with 7-inch
   screens on the Live, Live II, One and Key 61.
-platform: Embedded Linux (shared base with Force)
+platform: Embedded Linux, shared by the standalone MPCs and Force
 links:
   manufacturer: https://www.akaipro.com/products/collections/mpc/
   community:

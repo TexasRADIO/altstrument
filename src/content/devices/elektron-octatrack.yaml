@@ -9,7 +9,7 @@ description: >-
   between scenes, and four audio inputs for live sampling. Audio runs on a
   DSP56300-family DSP with a ColdFire CPU, and samples load from a CompactFlash
   card into RAM or are streamed from it.
-platform: Motorola DSP56300 + ColdFire
+platform: ColdFire + Motorola DSP56300
 stock_firmware: 1.40C
 links:
   manufacturer: https://www.elektron.se/explore/octatrack-mkii

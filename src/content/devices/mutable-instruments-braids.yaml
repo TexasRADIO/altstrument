@@ -8,7 +8,7 @@ description: >-
   synthesis models, including virtual analog waveforms, FM, plucked and bowed
   strings, drum models, wavetables and filtered noise. It runs on an STM32F103
   at 72 MHz with a 16-bit DAC.
-platform: STM32
+platform: STM32F1
 links:
   manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/braids/
   community:

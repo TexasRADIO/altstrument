@@ -8,7 +8,7 @@ description: >-
   footswitches and audio jacks of a guitar pedal around an Electrosmith Daisy
   Seed or Seed3, which is bought separately. The hardware design is open source
   under CC BY-SA 4.0.
-platform: Electrosmith Daisy Seed (STM32H7)
+platform: Electrosmith Daisy Seed (STM32H750, Arm Cortex-M7)
 links:
   manufacturer: https://clevelandmusicco.com/hothouse-diy-digital-signal-processing-platform-kit/
   community:

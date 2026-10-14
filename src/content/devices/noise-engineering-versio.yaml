@@ -1,15 +1,15 @@
 name: Versio
 manufacturer: Noise Engineering
 category: eurorack
-tagline: 10 HP stereo DSP module that runs a library of swappable firmwares
+tagline: 10 HP stereo effects and DSP platform with swappable firmwares
 description: >-
-  Versio is a Eurorack effects and DSP module from Noise Engineering, built on an
-  Electrosmith Daisy Seed (STM32H750). It has stereo audio inputs and outputs,
+  Versio is a 10 HP Eurorack effects and DSP module from Noise Engineering, built
+  on an Electrosmith Daisy Seed (STM32H750). It has stereo audio inputs and outputs,
   seven knobs, two three-way switches, a button and gate input, and CV inputs for
   the knobs. Because the controls are assigned in software, printable or
   hot-swappable panel overlays label the same hardware differently for each
   effect.
-platform: Electrosmith Daisy Seed (STM32H750, libDaisy)
+platform: Electrosmith Daisy Seed (STM32H750, Arm Cortex-M7)
 links:
   manufacturer: https://noiseengineering.us/pages/world-of-versio
   community:

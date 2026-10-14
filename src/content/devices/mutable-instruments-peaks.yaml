@@ -8,7 +8,7 @@ description: >-
   Each channel can act as an ADSR envelope, an LFO or tap-tempo LFO, or an
   808-style kick or snare drum model. It uses an STM32F103 at 72 MHz and a
   DAC8552 for 16-bit output at 48 kHz.
-platform: STM32
+platform: STM32F1
 links:
   manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/peaks/
   community:

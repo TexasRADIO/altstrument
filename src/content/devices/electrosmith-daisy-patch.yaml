@@ -8,7 +8,7 @@ description: >-
   a Eurorack module with quad 24-bit audio I/O, Patch.init() is another Eurorack
   module on the platform, and Daisy Pod is a small desktop board with knobs, an
   encoder and buttons.
-platform: Electrosmith Daisy (libDaisy, DaisySP)
+platform: Electrosmith Daisy Seed and Patch SM (STM32H750, Arm Cortex-M7)
 links:
   manufacturer: https://electro-smith.com/
   community:
