@@ -27,7 +27,7 @@ notes: >-
   yourself. The same instrument also exists as a firmware for the Touch 2
   (Audrey Touch), listed under that device. Hardware mods such as a gate input
   are discussed on the Synthux Discord.
-related: [synthux-simple-designer, synthux-touch-2, synthux-spotykach]
+related: [synthux-simple-designer, synthux-touch-2, synthux-spotykach, electrosmith-daisy-patch]
 image:
   src: /images/devices/synthux-audrey-ii.webp
   style: photo

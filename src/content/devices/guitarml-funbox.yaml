@@ -14,7 +14,7 @@ links:
   community:
     - label: Funbox build guide
       url: https://medium.com/@keyth72/funbox-build-guide-afbd8046121e
-related: [cleveland-hothouse, pedalpcb-terrarium]
+related: [cleveland-hothouse, pedalpcb-terrarium, electrosmith-daisy-patch]
 notes: >-
   Open hardware with KiCad design files in the repository (125B enclosure, about
   $120 to $150 to build per the README). Programs are loaded with the Electrosmith

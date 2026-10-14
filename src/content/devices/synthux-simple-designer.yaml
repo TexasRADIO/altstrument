@@ -24,7 +24,7 @@ notes: >-
   wiring and firmware. Official firmware binaries are flashed to the Daisy
   Seed with the Daisy Web Programmer (Chrome or Edge, Seed in bootloader
   mode) or built with the Daisy toolchain and dfu-util.
-related: [synthux-audrey-ii, synthux-simple-fix, synthux-touch-2, synthux-spotykach]
+related: [synthux-audrey-ii, synthux-simple-fix, synthux-touch-2, synthux-spotykach, electrosmith-daisy-patch]
 image:
   src: /images/devices/synthux-simple-designer.webp
   style: photo

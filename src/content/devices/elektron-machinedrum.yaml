@@ -8,6 +8,7 @@ description: >-
   tracks, each loaded with one of its synthesis machines, a per-track effects
   chain and master reverb, delay, EQ and dynamics sections. The UW versions add
   a sample-playback engine, and Elektron's parameter-lock sequencer is built in.
+platform: ColdFire (MCF5206e) + 2x Motorola DSP56303
 stock_firmware: "1.63"
 links:
   manufacturer: https://www.elektron.se/support-downloads/machinedrum

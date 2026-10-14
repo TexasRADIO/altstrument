@@ -8,6 +8,7 @@ description: >-
   uses the same synth architecture as the Analog Four, with two oscillators and
   two filters per voice, and adds Elektron's parameter-lock sequencer and
   onboard effects.
+platform: ColdFire (MCF5441x)
 stock_firmware: "1.56"
 links:
   community:

@@ -2,8 +2,8 @@ device: noise-engineering-legio
 name: Sawstack Legio
 summary: Five-voice supersaw oscillator with detune, three morph modes (stack, rich, sub), a stereo VCA width switch, encoder pitch trim and V/Oct and gate inputs. The same DSP core also builds as a macOS AU/VST3 plugin.
 description: >-
-  The README describes the target as a Legio with a Daisy Patch SM (STM32H750)
-  and gives a calibration procedure for the V/Oct input, since ADC offset and
+  It is built on libDaisy's DaisyLegio board class, and the README gives a
+  calibration procedure for the V/Oct input, since ADC offset and
   gain differ between modules. The gate input hard-syncs the voices. It is
   one of three Legio firmwares by the same author.
 status: active

@@ -26,7 +26,7 @@ notes: >-
   the Seed in DFU mode (hold BOOT, tap RESET). Because the control layout is
   small, the same firmware sometimes also runs on the Touch 2 and Simple
   Designer boards, but check the pin mapping first.
-related: [synthux-touch-2, synthux-simple-designer, synthux-audrey-ii]
+related: [synthux-touch-2, synthux-simple-designer, synthux-audrey-ii, electrosmith-daisy-patch]
 image:
   src: /images/devices/synthux-simple-fix.webp
   style: photo

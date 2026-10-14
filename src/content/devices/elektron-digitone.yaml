@@ -8,7 +8,7 @@ description: >-
   tracks, and uses Elektron's parameter-lock step sequencer. A 37-key version,
   the Digitone Keys, followed in 2019 and shares the same engine and firmware
   line.
-platform: ColdFire + DSP
+platform: 2x ColdFire (MCF5441x)
 stock_firmware: "1.43 / 1.44"
 links:
   manufacturer: https://www.elektron.se/explore/digitone

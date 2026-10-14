@@ -14,7 +14,7 @@ links:
   community:
     - label: Terrarium build docs
       url: https://docs.pedalpcb.com/project/Terrarium.pdf
-related: [cleveland-hothouse, guitarml-funbox]
+related: [cleveland-hothouse, guitarml-funbox, electrosmith-daisy-patch]
 notes: >-
   A 125B-format PCB for a Daisy Seed. Pedal firmware for it is flashed with the
   Electrosmith web programmer or DFU, so no manufacturer firmware is replaced.

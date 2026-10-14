@@ -8,7 +8,7 @@ description: >-
   sixteen trig keys, a per-track filter and effects section, and Elektron's
   parameter-lock sequencer. Samples are mono, and the unit can be used as a USB
   audio and MIDI interface.
-platform: ColdFire + DSP
+platform: ColdFire (MCF5441x)
 stock_firmware: "1.53 / 1.54"
 links:
   manufacturer: https://www.elektron.se/explore/digitakt

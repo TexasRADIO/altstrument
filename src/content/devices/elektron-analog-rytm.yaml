@@ -8,6 +8,7 @@ description: >-
   2014. It has twelve velocity- and pressure-sensitive pads, an analog multimode
   filter and overdrive per voice, and the Elektron parameter-lock sequencer. A
   revised MKII version followed in 2017.
+platform: ColdFire (MCF5441x)
 stock_firmware: "1.73"
 links:
   manufacturer: https://www.elektron.se/explore/analog-rytm-mkii

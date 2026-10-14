@@ -9,6 +9,7 @@ description: >-
   with parameter locks and patterns up to 64 steps. Delay and reverb are built in,
   and it is part of Elektron's lower-priced Model series alongside the
   Model:Samples.
+platform: ColdFire (MCF5441x)
 stock_firmware: "1.13"
 links:
   manufacturer: https://www.elektron.se/support-downloads/modelcycles

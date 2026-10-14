@@ -8,6 +8,7 @@ description: >-
   memory, and a resonant multimode filter, LFO, delay and reverb on each track.
   Its sequencer uses Elektron's parameter locks, and each track can alternatively
   send MIDI.
+platform: ColdFire (MCF5441x)
 stock_firmware: "1.13"
 links:
   manufacturer: https://www.elektron.se/support-downloads/modelsamples

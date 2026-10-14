@@ -16,7 +16,7 @@ links:
       url: https://clevelandmusicco.github.io/HothouseFlasher/
     - label: HothouseExamples wiki
       url: https://github.com/clevelandmusicco/HothouseExamples/wiki
-related: [guitarml-funbox, pedalpcb-terrarium]
+related: [guitarml-funbox, pedalpcb-terrarium, electrosmith-daisy-patch]
 notes: >-
   The hardware is open source (CC BY-SA 4.0), with design files in the
   open-source-pedals repository. Compatible with the Daisy Seed and Seed3. Most

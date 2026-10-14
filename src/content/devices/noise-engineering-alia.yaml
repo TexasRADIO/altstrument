@@ -3,13 +3,13 @@ manufacturer: Noise Engineering
 category: eurorack
 tagline: 10 HP oscillator and voice platform with swappable firmwares
 description: >-
-  Alia is a 10 HP Eurorack module from Noise Engineering that serves as a
-  common hardware platform for a family of digital voices, with a panel of
+  Alia is a 10 HP Eurorack module from Noise Engineering, built on an
+  Electrosmith Daisy Seed (STM32H750), that serves as a common hardware platform for a family of digital voices, with a panel of
   seven knobs and two switches. It was launched with the Basimilus Iteritas
   Alia drum synthesizer, which succeeded the earlier fixed-function Basimilus
   Iteritas Alter module. Printable or sold overlays relabel the panel for
   whichever algorithm is loaded.
-platform: Electrosmith Daisy (reported, not confirmed by Noise Engineering)
+platform: Electrosmith Daisy Seed (STM32H750, Arm Cortex-M7)
 links:
   manufacturer: https://noiseengineering.us/pages/world-of-alia
   community:
@@ -26,10 +26,10 @@ notes: >-
   from Versio and Legio, so Versio and Legio firmwares, official or
   third-party, do not run on it. No third-party Alia firmware was found: the
   community firmware index lists Versio only, and Noise Engineering documents
-  libDaisy support for Versio and Legio but not Alia. Press coverage
-  describes Alia as Daisy-based, which Noise Engineering's own pages do not
-  state.
-related: [noise-engineering-versio, noise-engineering-legio]
+  libDaisy support for Versio and Legio but not Alia. Noise Engineering's
+  launch post says Alia uses a Daisy Seed without the external memory
+  installed, paired with an external DAC.
+related: [noise-engineering-versio, noise-engineering-legio, electrosmith-daisy-patch]
 image:
   src: /images/devices/noise-engineering-alia.png
   style: photo

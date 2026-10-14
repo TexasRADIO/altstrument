@@ -36,7 +36,7 @@ notes: >-
   flashed with dfu-util after holding B3 through the boot window. The Echoa
   and Spagyros sources are not published; the Alchemy SDK they are built on,
   the board support package and the bootloader are open under MIT.
-related: []
+related: [electrosmith-daisy-patch]
 image:
   src: /images/devices/hermetic-modular-alchemy-lab.webp
   style: photo

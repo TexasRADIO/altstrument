@@ -29,7 +29,7 @@ notes: >-
   and an example project for writing custom Legio firmware, and the first
   third-party Legio firmwares appeared in late 2026. Versio or Alia firmwares
   do not run on it (different hardware).
-related: [noise-engineering-versio, noise-engineering-alia]
+related: [noise-engineering-versio, noise-engineering-alia, electrosmith-daisy-patch]
 image:
   src: /images/devices/noise-engineering-legio.png
   style: photo
