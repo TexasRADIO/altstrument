@@ -2,8 +2,9 @@
 import Base from '@/layouts/Base.astro';
 import DeviceCard from '@/components/DeviceCard.astro';
 import SearchBox, { type IndexEntry } from '@/components/SearchBox.astro';
+import LatestVersions from '@/components/LatestVersions.astro';
 import type { DeviceItem } from '@/lib/catalog';
-import { getDevicesWithFirmwares, groupByCategory, groupByManufacturer, siteStats, plural, compareByPopularity, compareText, firmwareTotal, latestUpdate, latestUpdateOf, isoDate } from '@/lib/catalog';
+import { getDevicesWithFirmwares, groupByCategory, groupByManufacturer, siteStats, plural, compareByPopularity, compareText, firmwareTotal, latestUpdate, latestUpdateOf, isoDate, recentVersions } from '@/lib/catalog';
 
 const devices = await getDevicesWithFirmwares();
 const groups = groupByCategory(devices);
@@ -22,6 +23,7 @@ const sortAttrs = (name: string, ds: DeviceItem[]) => ({
   'data-updated': isoDate(latestUpdateOf(ds)) ?? '',
 });
 const stats = siteStats(devices);
+const latest = recentVersions(devices, 6, { onePerFirmware: true });
 const index: IndexEntry[] = devices.map((d) => ({
   id: d.id,
   name: d.data.name,
@@ -45,6 +47,10 @@ const index: IndexEntry[] = devices.map((d) => ({
     <div><dt class="text-xs uppercase tracking-wide text-muted">Firmwares</dt><dd class="mono text-xl font-semibold">{stats.firmwares}</dd></div>
     <div><dt class="text-xs uppercase tracking-wide text-muted">Manufacturers</dt><dd class="mono text-xl font-semibold">{stats.manufacturers}</dd></div>
   </dl>
+
+  <div class="mt-6">
+    <LatestVersions rows={latest} />
+  </div>
 
   <div class="mt-6">
     <SearchBox index={index} categories={groups.map((g) => g.category)} />

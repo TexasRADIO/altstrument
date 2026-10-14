@@ -1,0 +1,22 @@
+---
+import type { DeviceItem } from '@/lib/catalog';
+interface Props { device: DeviceItem; small?: boolean }
+const { device, small = false } = Astro.props;
+const { data } = device;
+const image = data.image;
+const logo = image ? undefined : device.logo;
+const size = small ? 'thumb-sm' : undefined;
+---
+{image ? (
+  <div class:list={['thumb', size]} data-style={image.style}>
+    <img src={image.src} alt={image.alt} width={image.width} height={image.height} data-style={image.style} loading="lazy" decoding="async" />
+  </div>
+) : logo ? (
+  <div class:list={['thumb', size]} data-style="logo">
+    <img src={logo.src} alt="" aria-hidden="true" width={logo.width} height={logo.height} data-style="logo" data-monochrome={logo.monochrome ? 'true' : undefined} loading="lazy" decoding="async" />
+  </div>
+) : (
+  <div class:list={['thumb thumb-placeholder', size]} aria-hidden="true">
+    <span class="thumb-wordmark">{data.manufacturer}</span>
+  </div>
+)}

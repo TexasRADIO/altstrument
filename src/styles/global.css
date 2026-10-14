@@ -258,6 +258,17 @@
     color: var(--fg);
     opacity: 0.8;
   }
+  /* Small thumbs (the homepage "Latest" cards): fill the card's height, smaller wordmark. */
+  .thumb-sm {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+  .thumb-sm img {
+    padding: 6%;
+  }
+  .thumb-sm .thumb-wordmark {
+    font-size: 0.75rem;
+  }
   .thumb-initial {
     font-size: 1.75rem;
     line-height: 1;

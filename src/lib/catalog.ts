@@ -232,13 +232,24 @@ export function compareByPopularity(a: DeviceItem, b: DeviceItem): number {
   return b.firmwares.length - a.firmwares.length || compareText(a.data.name, b.data.name);
 }
 
-/** The most recent dated versions across all firmwares, newest first. */
-export function recentVersions(devices: DeviceItem[], limit = 50): RecentVersion[] {
+/**
+ * The most recent dated versions across all firmwares, newest first.
+ * `onePerFirmware` keeps only each firmware's newest dated version, so one
+ * busy release day can't fill a short list.
+ */
+export function recentVersions(
+  devices: DeviceItem[],
+  limit = 50,
+  { onePerFirmware = false }: { onePerFirmware?: boolean } = {},
+): RecentVersion[] {
   const all: RecentVersion[] = [];
   for (const device of devices) {
     for (const firmware of device.firmwares) {
+      // versions are sorted newest first, undated last
       for (const version of firmware.versions) {
-        if (version.date) all.push({ date: version.date, version, firmware, device });
+        if (!version.date) continue;
+        all.push({ date: version.date, version, firmware, device });
+        if (onePerFirmware) break;
       }
     }
   }
