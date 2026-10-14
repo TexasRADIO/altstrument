@@ -1,0 +1,41 @@
+device: korg-sq-64
+name: Euclidean
+summary: From-scratch replacement firmware that turns the SQ-64 into a four-track Euclidean rhythm sequencer with rotation, polymetric lengths up to 64 steps, CV/gate and MIDI out, tap tempo, swing and 64 project slots. Tested only in an emulator.
+description: >-
+  Each track is an E(pulses, length) pattern with rotation, 1 to 64 steps in
+  four bars of 16, plus per-track note, gate length, mod CV level and
+  velocity. Tracks A to C drive their gate, pitch CV and mod CV jacks and MIDI
+  channels 1 to 3; track D drives trigger jack 1 and MIDI channel 10. Tempo
+  runs 20 to 300 BPM with tap tempo and 50 to 75 percent swing, with MIDI
+  clock, start and stop out and start/stop in; external clock sync is not
+  implemented. The PITCH, GATE, MOD and CONTROL keys scope the pads to one
+  parameter, keys 1 to 4 pick the bar, and LOOP loops a bar. Settings and 64
+  saved projects live in SPI flash, and the image includes its own SysEx
+  self-updater. Written from an independent specification with no Korg code;
+  the authors state it is not certified safe on hardware.
+status: active
+authors:
+  - name: Aleph Void LLC
+    url: https://alephvoid.com
+source: https://github.com/aleph-void/Korg-SQ-64-Euclidean-Firmware
+source_status: open
+license: MIT
+homepage: https://sq64.alephvoid.com
+distribution: download
+requires_stock: "Stock update mode (2.0x) for the first install"
+install_notes: >-
+  Load the prebuilt .vsb from the registry in the browser emulator, or build it
+  with make and validate it (make check, make test). To flash, take a full
+  backup under stock firmware, hold GLOBAL + PATTERN at power-on and send the
+  .vsb with the Aleph Void updater web app. The image reports version 1.0,
+  older than stock 2.0x, so the host tool's downgrade option is needed;
+  whether the stock updater accepts it is unverified. Projects share the stock
+  saved-project slots and overwrite them. Return to stock by sending Korg's
+  official .VSB through this firmware's updater.
+brick_risk: true
+tags: [sequencer, euclidean, cv-gate, midi, os]
+versions:
+  - version: main @ 1fc6579
+    date: 2026-10-12
+    url: https://github.com/aleph-void/Korg-SQ-64-Euclidean-Firmware/commit/1fc6579
+    notes: Commit pinned by the firmware registry; the image reports version 1.0.

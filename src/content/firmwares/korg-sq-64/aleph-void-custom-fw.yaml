@@ -1,0 +1,39 @@
+device: korg-sq-64
+name: AV aggregate
+summary: From-scratch SQ-64 firmware combining Aleph Void's Euclidean and LFO firmwares, with each of the four tracks switchable between a Euclidean sequencer lane and a tempo-synced LFO. Tested only in an emulator.
+description: >-
+  SHIFT plus a track key toggles that track between the two engines at any
+  time; by default A and B boot as sequencer lanes and C and D as LFOs, and the
+  mix is saved with the settings. Both engines run from one 24 PPQN transport
+  that follows incoming MIDI clock, which gives the Euclidean lanes external
+  sync they lack in the standalone firmware. PLAY resyncs and starts the
+  lanes; STOP silences them while the LFOs keep running. Each engine keeps the
+  feature set of its standalone firmware. Shares the same updater, storage map
+  and install procedure. Written from an independent specification with no
+  Korg code; the authors state it is not certified safe on hardware.
+status: active
+authors:
+  - name: Aleph Void LLC
+    url: https://alephvoid.com
+source: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-Aleph-Void-Official
+source_status: open
+license: MIT
+homepage: https://sq64.alephvoid.com
+distribution: download
+requires_stock: "Stock update mode (2.0x) for the first install"
+install_notes: >-
+  Load the prebuilt .vsb from the registry in the browser emulator, or build it
+  with make and validate it (make check, make test). To flash, take a full
+  backup under stock firmware, hold GLOBAL + PATTERN at power-on and send the
+  .vsb with the Aleph Void updater web app. The image reports version 1.0,
+  older than stock 2.0x, so the host tool's downgrade option is needed;
+  whether the stock updater accepts it is unverified. Projects share the stock
+  saved-project slots and overwrite them. Return to stock by sending Korg's
+  official .VSB through this firmware's updater.
+brick_risk: true
+tags: [sequencer, euclidean, lfo, cv-gate, midi, os]
+versions:
+  - version: main @ 600bcb2
+    date: 2026-10-13
+    url: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-Aleph-Void-Official/commit/600bcb2
+    notes: Commit pinned by the firmware registry.

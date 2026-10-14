@@ -1,0 +1,26 @@
+device: korg-sq-64
+name: SQ-64 custom firmware registry
+kind: tool
+summary: Public registry of community SQ-64 firmware; CI builds each submitted repository at a pinned commit, validates it against the specification and in the emulator, and publishes the .vsb for one-click loading in the browser emulator.
+description: >-
+  Contributors add one JSON file pointing at a public repository and an exact
+  commit. CI builds it with make, runs the specification's image profile,
+  executes the image headlessly in the emulator with its damage detectors
+  armed, and on merge publishes the image, validation reports and UI scripts
+  with a manifest. As of 2026-10-13 it lists Aleph Void's three firmwares. The
+  README states that passing these checks is not a certification that a
+  firmware is safe on a physical SQ-64.
+status: active
+authors:
+  - name: Aleph Void LLC
+    url: https://alephvoid.com
+source: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-Repo
+source_status: open
+license: MIT
+homepage: https://sq64-custom-firmware.alephvoid.com/index.json
+distribution: download
+tags: [registry, validation]
+versions:
+  - version: main @ 472dfc2
+    date: 2026-10-13
+    url: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-Repo/commit/472dfc2

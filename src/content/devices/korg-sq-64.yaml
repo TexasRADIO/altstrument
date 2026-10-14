@@ -1,0 +1,39 @@
+name: SQ-64
+manufacturer: Korg
+category: controller
+tagline: Polyphonic step sequencer with CV, gate and MIDI
+description: >-
+  The SQ-64 is Korg's hardware step sequencer: three melody tracks and one drum
+  track with 16 sub-tracks, up to 64 steps per pattern, entered on 64 lit pads
+  that also work as a keyboard. Each melody track has pitch, gate and
+  modulation CV outputs, the drum track has eight trigger outputs, and there
+  are MIDI in, two MIDI outs, sync in and out, and USB. It runs from USB or a
+  9 V adaptor in an 18 mm aluminum case.
+stock_firmware: "2.03"
+links:
+  manufacturer: https://www.korg.com/us/products/dj/sq_64/
+  community:
+    - label: SQ-64 browser emulator and device tools (Aleph Void)
+      url: https://sq64.alephvoid.com
+    - label: SQ-64 custom firmware registry
+      url: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-Repo
+notes: >-
+  System updates are .VSB files sent as SysEx over USB MIDI with the unit in
+  update mode (hold GLOBAL + PATTERN at power-on); Korg's latest is 2.03. The
+  custom firmwares listed here are from-scratch images written against an
+  independent specification and tested in an emulator. The specification's
+  board contract leaves the exact MCU part, wiring and electrical limits
+  unverified, so none is confirmed safe on a physical unit. Power loss while
+  internal flash is being programmed may be unrecoverable, and there is no
+  documented SWD/JTAG recovery path. Keep Korg's official .VSB to return to
+  stock through the installed firmware's own updater.
+image:
+  src: /images/devices/korg-sq-64.webp
+  style: photo
+  alt: Top-down view of the Korg SQ-64 step sequencer with its 64 pads
+  width: 1135
+  height: 397
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/dj/sq_64/
+  original_url: https://cdn.korg.com/us/products/upload/db297c8f879274bbbedff527f3bccfa8_pc.png

@@ -1,0 +1,25 @@
+device: korg-sq-64
+name: SQ-64 firmware specification
+kind: tool
+summary: Independent specification and Python conformance checker for SQ-64 firmware images, with an image profile (package geometry, checksums, reset vectors) and a software profile of named behavioral cases.
+description: >-
+  Version 0.8.0 defines 88 requirements, 389 named cases, seven executable
+  image checks, a machine-readable emulator interface, update and backup
+  validators and runtime watch rules. The custom firmwares and the registry CI
+  validate against it. The README states that physical hardware conformance is
+  incomplete: exact board parts and wiring, protected storage ownership,
+  electrical limits and worst-case timing still need independent
+  measurement. No Korg firmware or decompiled functions are distributed.
+status: active
+authors:
+  - name: Aleph Void LLC
+    url: https://alephvoid.com
+source: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-Spec
+source_status: open
+license: MIT
+distribution: source-only
+tags: [sdk, research, validation]
+versions:
+  - version: "0.8.0"
+    date: 2026-10-13
+    url: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-Spec/commit/588208d

@@ -1,0 +1,29 @@
+device: korg-sq-64
+name: SQ-64 emulator and device tools
+kind: tool
+summary: Browser and native SQ-64 emulator with a firmware workbench, SysEx updater and backup/restore tool, used to run and validate custom SQ-64 images and to install them on hardware.
+description: >-
+  A WebAssembly emulator built on a patched Unicorn engine that executes
+  supplied firmware against a modeled board: all 64 pads, the other buttons,
+  six encoders, LEDs and the display. It can load images from the community
+  registry after checking their SHA-256, run UI scripts, validate an image
+  against the specification, and connect to a physical SQ-64 over Web MIDI for
+  firmware transfer (update mode) and backup and restore (normal mode). The
+  authors describe the board model as experimental, not a hardware
+  certification; analog outputs and electrical timing are outside its
+  evidence. No Korg firmware is included.
+status: active
+authors:
+  - name: Aleph Void LLC
+    url: https://alephvoid.com
+source: https://github.com/aleph-void/Korg-SQ-64-Emulator
+source_status: open
+license: GPL-2.0-only
+license_notes: Includes the GPLv2 Unicorn engine with its corresponding source; bundled fonts keep their OFL licenses.
+homepage: https://sq64.alephvoid.com
+distribution: browser-installer
+tags: [emulator, flasher, backup, web-midi]
+versions:
+  - version: main @ f8c3c14
+    date: 2026-10-13
+    url: https://github.com/aleph-void/Korg-SQ-64-Emulator/commit/f8c3c14

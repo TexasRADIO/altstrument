@@ -1,0 +1,41 @@
+device: korg-sq-64
+name: LFOs
+summary: From-scratch replacement firmware that turns the SQ-64 into four tempo-synced LFOs with six waveforms, CV and gate outputs, MIDI CC streams, gating step sequences and MIDI clock following. Tested only in an emulator.
+description: >-
+  Four LFOs with sine, triangle, rise, fall, square and sample-and-hold shapes
+  and sixteen synced rates from 8 bars to 1/32, including dotted and triplet
+  values, each with depth, phase offset and its own MIDI CC on its own
+  channel. LFOs A to C can drive their mod CV, pitch CV and gate jacks; LFO D
+  pulses trigger jack 1 once per cycle. All phases come from one 24 PPQN
+  transport that follows incoming MIDI clock automatically and falls back to
+  the internal 20 to 300 BPM clock. Each pattern carries a 64-step sequence
+  that gates the LFO, editable per bar with loop and swing. Shares the
+  Euclidean firmware's updater, storage map and install procedure. Written
+  from an independent specification with no Korg code; the authors state it is
+  not certified safe on hardware.
+status: active
+authors:
+  - name: Aleph Void LLC
+    url: https://alephvoid.com
+source: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-LFOs
+source_status: open
+license: MIT
+homepage: https://sq64.alephvoid.com
+distribution: download
+requires_stock: "Stock update mode (2.0x) for the first install"
+install_notes: >-
+  Load the prebuilt .vsb from the registry in the browser emulator, or build it
+  with make and validate it (make check, make test). To flash, take a full
+  backup under stock firmware, hold GLOBAL + PATTERN at power-on and send the
+  .vsb with the Aleph Void updater web app. The image reports version 1.0,
+  older than stock 2.0x, so the host tool's downgrade option is needed;
+  whether the stock updater accepts it is unverified. Projects share the stock
+  saved-project slots and overwrite them. Return to stock by sending Korg's
+  official .VSB through this firmware's updater.
+brick_risk: true
+tags: [lfo, modulation, cv-gate, midi, os]
+versions:
+  - version: main @ f480540
+    date: 2026-10-12
+    url: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-LFOs/commit/f480540
+    notes: Commit pinned by the firmware registry.
