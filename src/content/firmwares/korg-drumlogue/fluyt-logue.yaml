@@ -1,0 +1,40 @@
+device: korg-drumlogue
+name: Fluyt
+summary: Nine engines from Felucca, the open M-VAVE FM-1 firmware, ported to the drumlogue as separate synth units with Felucca's own presets, from two-oscillator analog to six-operator FM. Also built for the microKORG2.
+description: >-
+  The units are ANALOG (two-oscillator virtual analog with a resonant filter, 12
+  presets), TRIO (three-oscillator paraphonic), PHASE (phase distortion), LOFI
+  (aliased low-bit pulse), WHEEL (tonewheel organ with rotor), NOISE (filtered
+  noise with sample-rate crush), FORMANT (vocal synthesis), DRUM (a General MIDI
+  numbered kit) and FM6 (a six-operator msfa port). Each plays from the panel,
+  a keyboard or the drumlogue's sequencer, with up to 20 parameters over five
+  pages generated from Felucca's own parameter tables. Felucca is included
+  unmodified as a submodule at v1.0.2, with its lookup tables regenerated for
+  48 kHz; three constants written into Felucca's source stay at 44.1 kHz, so
+  NOISE, FORMANT and FM6 envelopes run about 8.8% off. Felucca's sample-based
+  engines and PHYS are not ported. The same nine also build as microKORG2
+  oscillator units (see the separate microKORG2 entry).
+status: active
+authors:
+  - name: Regroove | RGRV
+    url: https://rgrv.nl/
+source: https://github.com/rgrvmusic/fluyt-logue
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Build scripts are MIT; each unit's Makefile is the logue SDK's (BSD-3-Clause,
+  KORG); the FM6 core is an msfa/Dexed port (Apache-2.0). See docs/LICENSING.md.
+homepage: https://rgrvdotnl.itch.io/fluyt-logue
+distribution: download
+requires_stock: "1.00 or later (logue SDK 2.0 units)"
+install_notes: >-
+  Download the prebuilt units from the itch.io page (name your own price, free
+  allowed) or build them with build.sh in the logue SDK container. Start the
+  drumlogue in USB mass storage mode and copy the .drmlgunit files into
+  Units/Synths, then pick the unit in the Multi-Engine part.
+tags: [synth-engine, fm, formant, organ, drums, logue-sdk]
+versions:
+  - version: v0.9
+    date: 2026-10-12
+    url: https://github.com/rgrvmusic/fluyt-logue/releases/tag/v0.9
+    notes: Initial release.

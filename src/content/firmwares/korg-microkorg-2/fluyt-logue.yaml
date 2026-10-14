@@ -1,0 +1,39 @@
+device: korg-microkorg-2
+name: Fluyt
+summary: Nine engines from Felucca, the open M-VAVE FM-1 firmware, ported to the microKORG2 as user oscillator units that play inside the instrument's own voice, filter and envelopes. Also built for the drumlogue.
+description: >-
+  The same nine Felucca engines as the drumlogue build (ANALOG, TRIO, PHASE,
+  LOFI, WHEEL, NOISE, FORMANT, DRUM and the six-operator FM6), each as an osc
+  module shown on the eight-character display as F-ANALOG, F-TRIO and so on,
+  with 13 parameters over four pages and Felucca's presets. The unit renders one
+  lane per voice and follows the instrument's pitch, so bend and glide come
+  from the microKORG2; level, pan, envelope, filter and amp are the
+  instrument's. Felucca is included unmodified at v1.0.2 with tables regenerated
+  for 48 kHz; NOISE, FORMANT and FM6 envelopes run about 8.8% off because three
+  constants in Felucca's source stay at 44.1 kHz. Sample-based engines and PHYS
+  are not ported.
+status: active
+authors:
+  - name: Regroove | RGRV
+    url: https://rgrv.nl/
+source: https://github.com/rgrvmusic/fluyt-logue
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Build scripts are MIT; the units use the logue SDK's dummy-osc Makefile
+  (BSD-3-Clause, KORG); the FM6 core is an msfa/Dexed port (Apache-2.0). See
+  docs/LICENSING.md.
+homepage: https://rgrvdotnl.itch.io/fluyt-logue
+distribution: download
+requires_stock: "2.0.0 or later (logue SDK 2.1.0 units)"
+install_notes: >-
+  Download the prebuilt units from the itch.io page (name your own price, free
+  allowed) or build them with build-microkorg2.sh. Hold the first option button
+  while powering on to enter USB mass storage mode, copy each .mk2unit into a
+  SlotN folder under Units/Oscs, then choose the oscillator (F-ANALOG and so on).
+tags: [synth-engine, oscillator, fm, formant, organ, logue-sdk]
+versions:
+  - version: v0.9
+    date: 2026-10-12
+    url: https://github.com/rgrvmusic/fluyt-logue/releases/tag/v0.9
+    notes: Initial release.
