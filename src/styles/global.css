@@ -258,10 +258,12 @@
     color: var(--fg);
     opacity: 0.8;
   }
-  /* Small thumbs (the homepage "Latest" cards): fill the card's height, smaller wordmark. */
+  /* Small thumbs (the homepage "Latest" cards): fill a positioned parent without
+     adding to its height, so tall photos don't stretch the card; smaller wordmark. */
   .thumb-sm {
+    position: absolute;
+    inset: 0;
     aspect-ratio: auto;
-    height: 100%;
   }
   .thumb-sm img {
     padding: 6%;
