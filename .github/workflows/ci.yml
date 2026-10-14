@@ -25,6 +25,8 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm validate
       - run: pnpm check
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
       - run: pnpm build
         env:
           GITHUB_TOKEN: ${{ github.token }}
