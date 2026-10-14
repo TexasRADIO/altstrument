@@ -1,0 +1,22 @@
+device: korg-logue-tools
+name: minilogue-xd-util
+kind: tool
+summary: "Python library and scripts for minilogue xd patches: pretty-print patches and libraries, and remap user oscillator or effect slots without resetting the stored user parameters."
+description: >-
+  The scripts print patch and library files in readable form, including the
+  modulation effect and user oscillator parameters 1 to 6. The remap script
+  rewrites a patch or library so that it points at a new user oscillator or
+  effect slot. This avoids the problem the author describes, where a patch whose
+  user unit moved to another slot loses all six user parameters if the slot is
+  fixed on the instrument. The results are new files that can be loaded with
+  Korg's Sound Librarian. No third-party libraries are needed.
+status: dormant
+authors:
+  - name: Alex Levenson (isnotinvain)
+    url: https://github.com/isnotinvain
+source: https://github.com/isnotinvain/minilogue-xd-util
+source_status: open
+license: AGPL-3.0-only
+homepage: https://github.com/isnotinvain/minilogue-xd-util
+distribution: source-only
+tags: [patch-library, converter, minilogue-xd, python]

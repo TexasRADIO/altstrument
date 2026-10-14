@@ -1,0 +1,20 @@
+device: korg-logue-tools
+name: logue-SDK-filter
+kind: tool
+summary: Web page that reads Korg's logue SDK unit index and adds filtering by unit type and platform and free-text search.
+description: >-
+  Korg's own unit index is a set of long tables per unit type. This page loads
+  the index from the korginc/logue-sdk repository, caches the data for ten
+  minutes, and lets visitors filter it by type and platform or search it. The
+  author says it is not affiliated with Korg. The source is a Svelte project.
+status: dormant
+authors:
+  - name: emanueldonner
+    url: https://github.com/emanueldonner
+source: https://github.com/emanueldonner/logue-sdk
+source_status: open
+license: unspecified
+license_notes: The repository has no license file.
+homepage: https://logue-sdk.vercel.app
+install_notes: Nothing to install; open the page in a browser. It lists units only and does not load them onto an instrument.
+tags: [unit-index, directory, web]

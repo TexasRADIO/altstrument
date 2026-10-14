@@ -1,0 +1,40 @@
+name: minilogue xd
+manufacturer: Korg
+category: synth
+tagline: Four-voice analog polysynth with a Multi-Engine that accepts logue SDK units
+description: >-
+  The minilogue xd is a four-voice polyphonic analog synthesizer made by Korg.
+  Each voice has two analog oscillators, a two-pole filter, two envelopes, an
+  amp and an LFO, plus a digital Multi-Engine that offers noise, VPM and user
+  oscillator types. It has modulation, delay and reverb effects that run at the
+  same time, a 16-step sequencer with motion sequencing, and voice modes for
+  poly, unison, chord and arpeggiator.
+platform: ARM Cortex-M4 (STM32F401)
+links:
+  manufacturer: https://www.korg.com/us/products/synthesizers/minilogue_xd/
+  community:
+    - label: logue SDK (minilogue xd platform)
+      url: https://github.com/korginc/logue-sdk/tree/main/platform/minilogue-xd
+notes: >-
+  Custom firmware images for the minilogue xd are not known. What the community
+  builds are user units made with the logue SDK: custom oscillators for the
+  Multi-Engine and modulation, delay and reverb effects (.mnlgxdunit files,
+  which are zip archives). Korg lists 16 user oscillator slots and 16 user
+  effect slots. Units built with SDK 1.1-0 need system firmware 2.00 or later.
+  They are loaded with Korg's Librarian application or the logue-cli command
+  line tool, and run alongside the stock firmware rather than replacing it.
+  logue-cli can also clear unit data from the instrument. Units built for the
+  prologue, minilogue xd and the original NTS-1 digital kit are binary
+  compatible with each other when the SDK version matches. The original
+  minilogue has no unit support.
+related: [korg-prologue, korg-nts-1, korg-nts-1-mkii, korg-nts-3, korg-drumlogue, korg-microkorg-2, korg-logue-tools]
+image:
+  src: /images/devices/korg-minilogue-xd.webp
+  style: photo
+  alt: Top-down view of the Korg minilogue xd keyboard
+  width: 1045
+  height: 620
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/synthesizers/minilogue_xd/
+  original_url: https://cdn.korg.com/us/products/upload/a4ffc49e08ae4319ab935f707e866361_pc.png

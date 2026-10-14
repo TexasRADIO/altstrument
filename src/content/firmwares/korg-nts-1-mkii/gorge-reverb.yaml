@@ -1,0 +1,39 @@
+device: korg-nts-1-mkii
+name: Gorge
+summary: Port of the Valley Audio Plateau reverb as a stereo revfx unit for the NTS-1 mkII, with size, decay, freeze, modulation, predelay, diffusion and high-cut controls.
+description: >-
+  Gorge is a stereo Dattorro-style plate reverb ported from Valley Audio's
+  Plateau. Knob A sets size and knob B sets decay, with dry/wet mix on the
+  delay shift. Freeze and modulation depth, rate and shape are further
+  parameters, and predelay, diffusion and high-cut sit in the shift menu
+  reached by holding the osc button. The Gumroad page warns that it is CPU
+  heavy and may cause problems alongside other demanding oscillators and
+  effects. It is sold on Gumroad (listed at 5 USD), and the source and
+  release are on GitHub.
+status: active
+authors:
+  - name: Daniel Majid Mirzakhani
+    url: https://github.com/DanielMajid
+source: https://github.com/DanielMajid/gorge_reverb
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  GitHub reports "Other" because the file is LICENSE.md; it contains a GNU
+  GPL notice for version 3 or any later version, copyright Daniel Majid
+  Mirzakhani, and the README states the same.
+homepage: https://danielmajid.gumroad.com/l/aftjoy
+distribution: download
+install_notes: >-
+  Load the Gorge.nts1mkiiunit file with KORG KONTROL Editor and sync it to
+  the device. The unit can also be built from source with the logue SDK.
+tags: [revfx, reverb, plate, freeze, nts-1-mkii, open-source]
+video:
+  url: https://www.youtube.com/watch?v=jmh4OJDH5M8
+  title: "Gorge: Valley Audio Plateau reverb for the Korg NTS-1 mkii"
+  credit: Grim Cardassian
+  first_party: true
+  found_via: https://danielmajid.gumroad.com/l/aftjoy
+versions:
+  - version: v1.0.0
+    date: 2026-08-05
+    url: https://github.com/DanielMajid/gorge_reverb/releases/tag/v1.0.0

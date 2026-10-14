@@ -1,0 +1,34 @@
+device: korg-nts-1-mkii
+name: Beatnicster NTS-1 mkII units
+summary: NORM, a custom oscillator with main and sub waveforms plus noise, and Metronome, a modfx metronome. Both have a free download and a 300 JPY support version on BOOTH.
+description: >-
+  NORM is an oscillator with separately selectable main and sub waveforms
+  (sine, square or saw), a pitch offset and detune for the sub oscillator, and
+  a white noise level on knob B; the LFO affects pitch only. Metronome runs as
+  a modfx unit so any oscillator can be played along with it, with volume on
+  knob A and off, quarter, eighth or sixteenth note timing on knob B. Each
+  BOOTH page offers a free download and a 300 JPY support version with the same
+  contents. The pages forbid redistribution. The developer's shop also lists
+  other NTS-1 mkII items, including an RC10 oscillator and a PTeq effect.
+status: dormant
+authors:
+  - name: beatnicster
+    url: https://beatnicster.booth.pm/
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  Both BOOTH pages state that redistribution is prohibited and that the
+  author is not liable for damages from use.
+homepage: https://beatnicster.booth.pm/
+distribution: download
+install_notes: >-
+  Download the zip from BOOTH and load the unit with KORG KONTROL Editor. The
+  Metronome tempo is set with the tempo control in SEQ/ARP.
+tags: [oscillator, modfx, metronome, nts-1-mkii, free]
+versions:
+  - version: NORM 1.0
+    date: 2025-02-25
+    url: https://beatnicster.booth.pm/items/6637409
+  - version: Metronome 1.0
+    date: 2025-02-08
+    url: https://beatnicster.booth.pm/items/6558042

@@ -1,0 +1,20 @@
+device: korg-nts-1
+name: Nutekt MOSC
+summary: Two-oscillator multi oscillator for the NTS-1 with sine, saw, parabola and square waves, adjustable interval between the oscillators and pulse width control.
+description: >-
+  Each of the two oscillators can be set to sine, sawtooth, parabola or square,
+  or turned off. The shape knob mixes the two, parameters set the interval
+  between them in semitones plus a fine interval, and each square wave has its
+  own pulse width. The README gives steps for loading the unit with the NTS-1
+  digital Librarian or building it with the logue SDK and logue-cli.
+status: dormant
+authors:
+  - name: Guillaume Elias
+    url: https://github.com/GuillaumeElias
+source: https://github.com/GuillaumeElias/Nutekt-MOSC
+source_status: open
+license: BSD-3-Clause
+homepage: https://github.com/GuillaumeElias/Nutekt-MOSC
+distribution: download
+install_notes: Import mosc.ntkdigunit in the NTS-1 digital Librarian and press Send All.
+tags: [oscillator, additive, open-source, nts-1]

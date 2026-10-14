@@ -1,0 +1,35 @@
+device: korg-drumlogue
+name: derselenit VINCE and FLINT 2
+summary: "Two pay-what-you-want drumlogue synth units on Gumroad: VINCE, inspired by the Kawai 100F, and FLINT 2, inspired by the Moog Prodigy."
+description: >-
+  derselenit sells two native drumlogue user synths through Gumroad at a price
+  of 0 with a suggested donation. VINCE (listed as 2.0.5, with manual and
+  presets) is inspired by the Kawai 100F and offers saw-to-pulse waveform
+  morphing, a sub-harmonic bass generator, drive, bipolar key/FM modulation,
+  BPM-synced portamento and factory presets. FLINT 2 (listed as 2.0) is
+  inspired by the Moog Prodigy and has two morphing oscillators with PWM,
+  sync, detune and glide, a ladder-style filter, separate VCA and VCF
+  envelopes and a tempo-synced LFO. Source code is not published.
+status: unknown
+authors:
+  - name: derselenit
+    url: https://derselenit.gumroad.com/
+source_status: closed
+license: proprietary
+license_notes: >-
+  Distributed as binaries through Gumroad with pay-what-you-want pricing; the
+  pages state no license terms.
+homepage: https://derselenit.gumroad.com/l/qvunak
+distribution: download
+install_notes: >-
+  Download from the Gumroad page (pay what you want, minimum 0), put the
+  drumlogue into USB mass-storage mode, copy the .drmlgunit file into
+  Units/Synths and restart. FLINT 2 is on a separate page at
+  https://derselenit.gumroad.com/l/etwemi.
+tags: [synth, drumlogue, donation, pay-what-you-want]
+image:
+  url: https://public-files.gumroad.com/76fo9n0j2150tzu00qaxeu87kwqn
+  alt: Cover image of the VINCE drumlogue synth unit from its Gumroad page
+  credit: derselenit
+  source_url: https://derselenit.gumroad.com/l/qvunak
+  first_party: true

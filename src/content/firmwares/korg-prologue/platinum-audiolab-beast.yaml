@@ -1,0 +1,35 @@
+device: korg-prologue
+name: BEAST (Platinum Audiolab)
+summary: Paid user oscillator for prologue, minilogue xd and NTS-1 modelled on Minimoog, SEM and ARP synthesizer waveshapes, with a sub oscillator, saturator, pitch and phase warble and 100+ presets.
+description: >-
+  BEAST provides a continuous Shape control through noise, sine, triangle,
+  sharktooth, saw, ramp, stairstep, square and pulse shapes, a two-octave
+  tuning range on Shift+Shape, a phase-optimised sub oscillator, a saturator
+  or exciter parameter, semi-random pitch warble, phase warble, and a virtual
+  LFO that can combine with the hardware LFO for PWM. Version 1.01 added a
+  phase control between main and sub oscillators. Over 100 presets are
+  included. The product page lists an introductory price of $20 and a manual
+  download.
+status: maintained
+authors:
+  - name: Platinum Audiolab
+    url: https://www.platinumaudiolab.com/
+homepage: https://www.platinumaudiolab.com/beast
+source_status: binary-only
+license: proprietary
+license_notes: Sold as a paid download; no source or license text is published.
+distribution: commercial
+install_notes: >-
+  Instant download after purchase. Load the unit and presets with Korg's
+  Librarian app.
+tags: [commercial, oscillator, virtual-analog, prologue, minilogue-xd, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=fNPUXDiIJ0Q
+  title: BEAST Korg Oscillator Trailer
+  credit: platinumaudiolab
+  first_party: true
+  found_via: https://www.platinumaudiolab.com/beast
+versions:
+  - version: V1.01
+    url: https://www.platinumaudiolab.com/beast
+    notes: Adds the phase control parameter.

@@ -1,0 +1,32 @@
+device: korg-prologue
+name: Sound Mangling user oscillators
+summary: Twelve paid user oscillators by Tim Shoebridge for prologue, minilogue xd and NTS-1, covering drum sounds, chords, drones, wavefolding, strings, Karplus-Strong plucks, vector synthesis and waveform morphing.
+description: >-
+  The Korg User Oscillators page of Sound Mangling lists twelve oscillators:
+  Beats, Chord, Digital Waveform, Drone, Fold, Octave, One, Pluck v2, String,
+  Three, Two and Vector Synthesis. Beats holds 28 beat-making sounds and comes
+  with ten bonus minilogue xd presets. Each is a digital download sold through
+  Sellfy (Beats from $22) and the page states that none of them work on the
+  drumlogue or NTS-1 mkII. The pages date from 2020.
+status: dormant
+authors:
+  - name: Tim Shoebridge
+    url: https://www.soundmangling.com/
+homepage: https://www.soundmangling.com/useroscillators/
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  Paid digital downloads. The site footer reads "Copyright Tim Shoebridge 2020.
+  All rights reserved."
+distribution: commercial
+install_notes: >-
+  Install the Korg MIDI USB driver and the Korg Sound Librarian for your
+  synthesizer, then send the downloaded unit to a user slot; each product
+  comes with installation instructions.
+tags: [commercial, oscillator, drum-synth, karplus-strong, wavefolder, prologue, minilogue-xd, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=3VAd6LcunmY
+  title: BEATS for Korg Minilogue XD, Prologue and NTS-1
+  credit: Tim Shoebridge
+  first_party: true
+  found_via: https://www.soundmangling.com/2020/05/14/beats-user-oscillator/

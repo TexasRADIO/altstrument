@@ -1,0 +1,33 @@
+device: korg-prologue
+name: DirtBoxSynth logue units
+summary: Paid custom oscillators and effects from DirtBoxSynth for prologue, minilogue xd and NTS-1, sold singly or in bundles. The Origami wavefolder oscillator is free for owners who sign up to the newsletter.
+description: >-
+  Korg's unit index lists 15 DirtBoxSynth units. Oscillators include FMonsta,
+  Morph (wavetables), ORGANism (drawbar organ), Origami (wavefolding), Physiq
+  (digital waveguide), polyChord (NTS-1 only), PWG and SUPAwave. Effects
+  include AMPit (distortion), Basic Autopanner, FILTAstep (tempo-synced
+  filter sequence), Filter Pack, Pan and Tremolo Pack, Resonance and the
+  Exotic Delay Pack. The store prices them in pounds from 0.99 for the
+  autopanner to 19.99 for Physiq, with bundles including a Complete
+  Oscillator Collection (29.99) and an Everything Bundle 2.0 (49.99). The
+  store page says Origami is free to prologue, minilogue xd and NTS-1 owners
+  who sign up to the newsletter. The site's last news post is from May 2020.
+status: dormant
+authors:
+  - name: DirtBoxSynth
+    url: https://www.dirtboxsynth.com/
+homepage: https://www.dirtboxsynth.com/korg-prologue-custom-oscillators/
+source_status: binary-only
+license: proprietary
+license_notes: Sold as paid downloads; no license text or source is published.
+distribution: commercial
+install_notes: >-
+  After purchase a download link is sent by e-mail. Load the unit file into a
+  user slot with Korg's Librarian app; the store has a page explaining how.
+tags: [commercial, oscillator, modfx, delfx, wavetable, distortion, delay, prologue, minilogue-xd, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=S8zOibZnA-0
+  title: MOD FX Bundle 2 for Minilogue XD, NTS-1 and Prologue
+  credit: DirtBox Synthesizers
+  first_party: true
+  found_via: https://www.dirtboxsynth.com/uncategorized/new-mod-fx-and-updates-released/

@@ -1,0 +1,38 @@
+device: korg-drumlogue
+name: FrostMod Audio Riffline and Acidbass
+summary: "Two pay-what-you-want drumlogue synth units from FrostMod Audio: Riffline, a four-voice supersaw synth, and Acidbass, a monophonic acid bass synth with a diode ladder filter."
+description: >-
+  FrostMod Audio publishes two drumlogue synth units in logue SDK 2.0 format
+  on Payhip, both with a price of 0 and optional donations. Riffline is a
+  four-voice polyphonic supersaw synth with two ADHR envelopes (amplitude and
+  modulation), one LFO per voice and a switchable 2-pole high-pass or low-pass
+  filter; the page says polyphony needs sequencing over MIDI. Acidbass is a
+  monophonic synth inspired by classic acid basslines, with a saw or square
+  oscillator, a 4-pole diode ladder filter, separate amp and filter decay
+  envelopes, distortion before or after the filter and a slide control, spread
+  over three parameter pages. Source code is not published.
+status: active
+authors:
+  - name: FrostMod Audio
+    url: https://payhip.com/FrostmodAudio
+source_status: closed
+license: proprietary
+license_notes: >-
+  Distributed as binaries through Payhip as free or pay-what-you-want; the
+  pages state no license text.
+homepage: https://payhip.com/b/aidtV
+distribution: download
+install_notes: >-
+  Download from the Payhip page (Acidbass is at https://payhip.com/b/lr6Nk),
+  put the drumlogue into USB mass-storage mode, copy the .drmlgunit file into
+  Units/Synths and restart.
+tags: [synth, supersaw, acid, drumlogue, pay-what-you-want]
+video:
+  url: https://www.youtube.com/watch?v=Nwi9KNoTff8
+  title: RIFFLINE for Drumlogue Demo
+  credit: Frostmod Audio
+  first_party: true
+versions:
+  - version: Riffline 1.0.1
+    date: 2026-03-15
+    url: https://payhip.com/b/aidtV

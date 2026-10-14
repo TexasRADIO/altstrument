@@ -1,0 +1,38 @@
+device: korg-drumlogue
+name: maxisynth
+summary: Basic drumlogue synth unit built on the Maximilian DSP library, with one oscillator, a low-pass filter and an envelope, meant as a starting point for new units.
+description: >-
+  maxisynth is a drumlogue synth unit by boochow that shows how to use the
+  Maximilian audio library with logue SDK 2.0. The main branch is a complete
+  synth with one oscillator, one low-pass filter, one envelope generator and
+  12 parameters. Two further branches hold a minimal band-limited sawtooth
+  unit and a modified dummy-synth template for Maximilian-based projects. It
+  needs a patched fork of Maximilian, which the author provides. The Korg
+  unit index lists it as a free sample unit for the drumlogue. Other
+  projects, such as maxisynthsvf and maxisnare, are forks of it.
+status: dormant
+authors:
+  - name: boochow
+    url: https://blog.boochow.com/
+source: https://github.com/boochow/maxisynth
+source_status: open
+license: MIT
+homepage: https://github.com/boochow/maxisynth
+distribution: download
+requires_stock: drumlogue 1.0.0 or later (logue SDK 2.0)
+install_notes: >-
+  Download maxisynth.drmlgunit from the release, put the drumlogue into USB
+  mass-storage mode and copy it into Units/Synths. To build it yourself, place
+  the repository and the patched Maximilian fork under platform/drumlogue and
+  use the logue SDK docker tooling.
+tags: [synth, template, drumlogue, open-source]
+image:
+  url: https://raw.githubusercontent.com/boochow/maxisynth/images/maxisynth-blockdgm.png
+  alt: Block diagram of the maxisynth unit showing oscillator, filter, envelope and parameter routing
+  credit: boochow
+  source_url: https://github.com/boochow/maxisynth
+  first_party: true
+versions:
+  - version: v1.0.0
+    date: 2023-05-14
+    url: https://github.com/boochow/maxisynth/releases/tag/v1.0.0

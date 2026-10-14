@@ -1,0 +1,26 @@
+device: korg-drumlogue
+name: CHSynth
+summary: Free two-oscillator mono synth unit for the drumlogue with six waveforms, twelve filter types, two envelopes and adjustable gate length, from Ctrl Alt Delete Ltd.
+description: >-
+  CHSynth is a synth unit for the Korg drumlogue published as a free download
+  by Ctrl Alt Delete Ltd. According to its page it has two oscillators with
+  sine, triangle, sawtooth, square, super-saw and noise waveforms, amplifier
+  and modulation envelopes, twelve filter types, pitch and cutoff modulation
+  and an adjustable gate length so steps do not need to be tied in the
+  sequencer. The Korg unit index describes it as a chord synth. The page links
+  a zipped unit file and a PDF manual and gives no version number or license
+  terms.
+status: dormant
+authors:
+  - name: Ctrl Alt Delete Ltd
+    url: https://ctrl-alt-delete.co.uk/
+source_status: binary-only
+license: unspecified
+license_notes: The download page offers the unit free of charge and states no license terms.
+homepage: https://ctrl-alt-delete.co.uk/wp/free-korg-drumlogue-synth/
+distribution: download
+install_notes: >-
+  Unzip the download, put the drumlogue into USB mass-storage mode and copy
+  the .drmlgunit file into Units/Synths, then restart. The page also links a
+  PDF manual.
+tags: [synth, chord-synth, drumlogue, free]

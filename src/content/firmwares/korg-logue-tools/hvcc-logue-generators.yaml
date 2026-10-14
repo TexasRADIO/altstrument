@@ -1,0 +1,27 @@
+device: korg-logue-tools
+name: hvcc logue generators
+kind: tool
+summary: External generators for the hvcc Pure Data compiler that turn a Pure Data patch into a logue SDK project for the NTS-1 mkII, NTS-3, drumlogue or the SDK 1 instruments.
+description: >-
+  Four repositories by boochow plug the logue SDK into hvcc, the Heavy
+  compiler for Pure Data. hvcc_nts1mkii produces oscillator, modfx, delfx or
+  revfx units for the NTS-1 mkII, hvcc_nts3kaoss produces NTS-3 units,
+  hvcc_drumlogue targets the drumlogue, and hvcc_loguesdk_v1 produces oscillator
+  units for the prologue, minilogue xd and NTS-1. The generated logue_unit
+  directory is moved into the SDK platform folder and built with make. Knob,
+  pitch, note-on and other values reach the patch through receive objects marked
+  with the hv_param attribute. Companion repositories hold example patches.
+status: active
+authors:
+  - name: boochow
+    url: https://github.com/boochow
+source: https://github.com/boochow/hvcc_nts1mkii
+source_status: open
+license: MIT
+homepage: https://blog.boochow.com/logue
+distribution: source-only
+install_notes: >-
+  Needs hvcc, the logue SDK and a host GCC/G++ (used to estimate the heap size).
+  Add the generator to PYTHONPATH and run hvcc with the -G generator option, as
+  described in each repository's README.
+tags: [pure-data, hvcc, converter, nts-1-mkii, nts-3, drumlogue, prologue, minilogue-xd, nts-1]

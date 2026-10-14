@@ -1,0 +1,31 @@
+device: korg-drumlogue
+name: AutoChord (centrevillage)
+summary: Paid drumlogue synth unit, a four-voice virtual analog synth that plays chords automatically from a chosen scale, from centrevillage; a limited trial version is available.
+description: >-
+  AutoChord is a drumlogue synth unit from centrevillage, described on its
+  product page as a virtual analog 4-poly synth that plays chords
+  automatically according to a set scale. Rotating the base scale produces
+  variants such as major and minor. The page lists a price of 500 JPY, sold
+  through the author's store, and links a manual and a free trial version in
+  which the scale is fixed to pentatonic and the LFO settings are missing.
+  centrevillage's cv_logue repository for older logue devices is a separate
+  project.
+status: unknown
+authors:
+  - name: centrevillage
+    url: https://centrevillage.net/
+source_status: closed
+license: proprietary
+license_notes: Commercial product sold as a binary; the product page states no license text.
+homepage: https://centrevillage.net/products/AutoChord.html
+distribution: commercial
+install_notes: >-
+  Buy it from the author's store (https://centrevillage.stores.jp/) or use the
+  trial version, then put the drumlogue into USB mass-storage mode and copy
+  the .drmlgunit file into Units/Synths.
+tags: [synth, chord-synth, drumlogue, commercial]
+video:
+  url: https://www.youtube.com/watch?v=qt4qzB3EYWs
+  title: AutoChord drumlogue custom synth plugin (test)
+  credit: centrevillage
+  first_party: true

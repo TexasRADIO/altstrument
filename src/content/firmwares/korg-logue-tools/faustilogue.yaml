@@ -1,0 +1,21 @@
+device: korg-logue-tools
+name: faustilogue
+kind: tool
+summary: Python script faust2logue that converts Faust DSP programs into logue custom oscillator projects, with example programs.
+description: >-
+  The faust2logue script runs the Faust compiler on a .dsp file with a logue
+  architecture file and a fast-math replacement, reads the generated JSON
+  metadata to map Faust UI widgets onto oscillator parameters, and produces an
+  oscillator project for the logue SDK. The repository includes example
+  programs such as string, FM, harpsichord and sawtooth voices. It has no README.
+status: maintained
+authors:
+  - name: Nick Smallbone
+    url: https://github.com/nick8325
+source: https://github.com/nick8325/faustilogue
+source_status: open
+license: unspecified
+license_notes: The repository has no license file.
+homepage: https://github.com/nick8325/faustilogue
+distribution: source-only
+tags: [faust, converter, oscillator, sdk]

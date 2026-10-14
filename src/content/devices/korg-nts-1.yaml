@@ -1,0 +1,43 @@
+name: Nu:Tekt NTS-1 digital kit
+manufacturer: Korg
+category: synth
+tagline: Build-it-yourself programmable synth kit with logue SDK oscillator and effect slots
+description: >-
+  The NTS-1 digital kit is a synthesizer kit from Korg's Nu:Tekt line that is
+  assembled with the included tool and needs no soldering. It has one
+  monophonic digital oscillator based on the Multi-Engine of the prologue and
+  minilogue xd, a multimode filter, one envelope and three LFOs, and three
+  stereo effect sections for modulation, delay and reverb. An arpeggiator and
+  an audio input are built in, and it is powered over USB.
+platform: ARM Cortex-M4 (STM32F446)
+links:
+  manufacturer: https://www.korg.com/us/products/dj/nts_1/
+  community:
+    - label: logue SDK (NTS-1 digital kit platform)
+      url: https://github.com/korginc/logue-sdk/tree/main/platform/nutekt-digital
+    - label: NTS-1 Librarian (Korg)
+      url: https://www.korg.com/products/dj/nts_1/librarian_contents.php
+notes: >-
+  This entry covers the original NTS-1 digital kit; the mkII has its own entry.
+  Custom firmware images are not known. What the community builds are user
+  units made with the logue SDK: custom oscillators and modulation, delay and
+  reverb effects (.ntkdigunit files, which are zip archives). Korg's Librarian
+  page lists 16 oscillator slots, one of them holding the factory Waves
+  oscillator. Units built with SDK 1.1-0 need system firmware 1.02 or later.
+  They are loaded with Korg's NTS-1 Librarian application (drag the unit onto
+  its list and send) or the logue-cli command line tool, and run alongside the
+  stock firmware rather than replacing it. The NTS-1 is monophonic, so
+  polyphonic units written for the prologue or minilogue xd may behave
+  differently. Korg also maintains a repository of hardware customization
+  files and Arduino custom panel code for this model.
+related: [korg-nts-1-mkii, korg-prologue, korg-minilogue-xd, korg-nts-3, korg-logue-tools]
+image:
+  src: /images/devices/korg-nts-1.webp
+  style: photo
+  alt: Top-down view of the assembled Korg Nu:Tekt NTS-1 digital kit
+  width: 1142
+  height: 693
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/dj/nts_1/
+  original_url: https://cdn.korg.com/us/products/upload/b44098f2585085c252777facf215222f_pc.png

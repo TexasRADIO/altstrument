@@ -1,0 +1,33 @@
+device: korg-prologue
+name: Edouard Digital units (Blinds, JP-Booo)
+summary: Two paid user oscillators by Edouard Digital for prologue, minilogue xd and NTS-1. Blinds is an eight-mode wave shaping oscillator with PWM for any waveform; JP-Booo is a Roland JP-8000 style super saw.
+description: >-
+  Blinds offers eight wave shaping modes (Blinds, Warp/Smudge, Rectify, Fold,
+  Invert, Mirror, Mix and Phase, and soft clip) with eight parameters, and a
+  free demo version is available. JP-Booo emulates the seven-saw oscillator
+  of the Roland JP-8000 with Detune and Mix controls. The store lists Blinds
+  at 49 euro, JP-Booo at 29 euro and a two-unit bundle at 69 euro. The pages
+  carry a 2018 to 2022 copyright notice.
+status: dormant
+authors:
+  - name: Edouard Digital
+    url: https://edouard.digital/
+homepage: https://edouard.digital/blinds/
+source_status: binary-only
+license: proprietary
+license_notes: Sold as paid downloads; no source or license text is published.
+distribution: commercial
+requires_stock: >-
+  prologue and minilogue xd 2.00 or later (including the voice update); NTS-1
+  1.02 or later
+install_notes: >-
+  The Blinds page says the prologue and minilogue xd need firmware 2.00 with
+  the voice update applied, otherwise the oscillator loads but its parameters
+  do nothing; the NTS-1 needs 1.02. Send the unit with Korg's Sound Librarian.
+tags: [commercial, oscillator, supersaw, pwm, wavefolder, prologue, minilogue-xd, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=qb8zntULEtE
+  title: "Blinds & JP-BOOO for Korg Prologue - Minilogue XD - NTS-1 - Edouard Digital | SynthFest France"
+  credit: SynthFest France
+  first_party: true
+  found_via: https://edouard.digital/blinds/

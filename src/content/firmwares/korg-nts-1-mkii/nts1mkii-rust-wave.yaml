@@ -1,0 +1,44 @@
+device: korg-nts-1-mkii
+name: nts1mkii-rust-wave
+summary: "Custom oscillators for the NTS-1 mkII written in Rust: a port of the logue SDK Waves oscillator, a 32-byte wavetable oscillator and a simplified 2-operator FM oscillator, plus a template."
+description: >-
+  The repository ships prebuilt units osc_waves (a Rust port of the SDK Waves
+  oscillator), osc_table32 (an oscillator driven by a 32-byte waveform
+  memory), osc_fmo2 (a simplified 2-operator FM oscillator) and osc_dummy (a
+  sine used to check the build). It also documents how to add a new unit in
+  Rust using the same workspace, and builds with the Arm GCC toolchain plus
+  cargo for thumbv7em-none-eabihf. The author's blog post is linked as the
+  project homepage.
+status: active
+authors:
+  - name: Hiromasa Tanaka (h1romas4)
+    url: https://github.com/h1romas4
+source: https://github.com/h1romas4/nts1mkii-rust-wave
+source_status: open
+license: BSD-3-Clause
+homepage: https://another.maple4ever.net/archives/3901/
+distribution: download
+install_notes: >-
+  Download the .nts1mkiiunit files from the latest release and transfer them
+  to the NTS-1 mkII. The README gives build steps for Linux, macOS and
+  Windows.
+tags: [oscillator, rust, wavetable, fm, nts-1-mkii, open-source]
+video:
+  url: https://www.youtube.com/watch?v=8V_X-8huvJ0
+  title: Rust build custom oscillator on KORG NTS-1 digital kit mkII
+  credit: Hiromasa Tanaka
+  first_party: true
+  found_via: https://github.com/h1romas4/nts1mkii-rust-wave#readme
+versions:
+  - version: v1.4.0
+    date: 2026-08-17
+    url: https://github.com/h1romas4/nts1mkii-rust-wave/releases/tag/v1.4.0
+  - version: v1.3.0
+    date: 2026-08-16
+    url: https://github.com/h1romas4/nts1mkii-rust-wave/releases/tag/v1.3.0
+  - version: v1.2.0
+    date: 2024-10-28
+    url: https://github.com/h1romas4/nts1mkii-rust-wave/releases/tag/v1.2.0
+  - version: v1.1.0
+    date: 2024-07-05
+    url: https://github.com/h1romas4/nts1mkii-rust-wave/releases/tag/v.1.1.0

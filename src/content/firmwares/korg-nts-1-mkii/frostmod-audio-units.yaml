@@ -1,0 +1,55 @@
+device: korg-nts-1-mkii
+name: Frostmod Audio units
+summary: Commercial and pay-what-you-want logue SDK units by Frostmod Audio. NTS-1 mkII has Acidbass Mini and C0mp4ct; the same shop sells microKORG2 and drumlogue units.
+description: >-
+  Frostmod Audio sells its units on Payhip. For the NTS-1 mkII there are
+  Acidbass Mini, an acid bass oscillator with a diode ladder filter and
+  square or saw wave (pay what you want, from 0 EUR), and C0mp4ct, a 4-voice
+  oscillator with two saw or pulse oscillators per voice, optional supersaw, a
+  bidirectional low/high-pass filter and two envelopes (pay what you want,
+  from 5 EUR). The same developer ID also covers microKORG2 units (Riffosc,
+  Riffgate and FM4OSC, which the product pages say need microKORG2 OS 2.0.2)
+  and drumlogue synths (Riffline and Acidbass). Riffosc, Riffgate, Riffline
+  and Acidbass list a 0 EUR minimum and FM4OSC lists 3 EUR. Only the Riffline
+  repository (documentation and licence file) is public; the units are
+  distributed as binaries. A separate small repository, frostmod/lostnotes,
+  holds a BSD-3-Clause test oscillator for NTS-1 mkII polyphonic note
+  handling and is not part of the shop.
+status: active
+authors:
+  - name: Frostmod Audio
+    url: https://payhip.com/FrostModAudio
+source: https://github.com/frostmod/riffline
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  The Riffline repository carries a "Frostmod Audio Plugin License" (free
+  personal and commercial use in music production; no modification, reverse
+  engineering or redistribution without written permission). The other shop
+  units state no terms on their product pages; treated the same way here.
+homepage: https://payhip.com/FrostModAudio
+distribution: commercial
+install_notes: >-
+  NTS-1 mkII units are loaded with KORG KONTROL Editor. The drumlogue units
+  are copied to the Units/Synths folder over USB mass-storage mode, and the
+  microKORG2 units (.mk2unit) are loaded with the Librarian app or USB
+  mass-storage mode.
+tags: [oscillator, synth, modfx, nts-1-mkii, microkorg2, drumlogue, commercial, acid, supersaw, fm]
+video:
+  url: https://www.youtube.com/shorts/ZhkjiMLUx3A
+  title: C0MP4CT v1.1 for Korg NTS-1 mkii
+  credit: Frostmod Audio
+  first_party: true
+  found_via: https://payhip.com/b/zXEHp
+versions:
+  - version: C0MP4CT 1.1.0
+    date: 2026-05-19
+    url: https://payhip.com/b/zXEHp
+    notes: Adds supersaw on both oscillators and performance improvements.
+  - version: C0MP4CT 1.0.1
+    date: 2026-05-05
+    url: https://payhip.com/b/zXEHp
+    notes: Fixes missed notes and hanging notes from voice stealing.
+  - version: Riffline 1.0
+    date: 2025-08-19
+    url: https://github.com/frostmod/riffline/releases/tag/1.0

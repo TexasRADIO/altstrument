@@ -1,0 +1,30 @@
+device: korg-nts-3
+name: Joerg Piringer NTS-3 units
+summary: "Paid genericfx units for the NTS-3 kaoss pad by Joerg Piringer: noiser, microlooper and talker, plus voicecoder and singer on his page. Each is 5 EUR on Gumroad."
+description: >-
+  noiser is a noise oscillator with white, Brownian, pulsed, filtered and
+  decimated variants. microlooper records a short buffer from the top of the
+  pad and loops it, with x setting position and y setting loop length. talker
+  speaks short phrases in a vintage computer voice (modes counter, numbers,
+  abc, vowels and spell) and the purchase includes English and German
+  versions. His NTS-3 page also lists voicecoder (a linear prediction coding
+  effect) and singer (vowel singing based on Pink Trombone), which Korg's unit
+  index does not list. Gumroad lists each at 5 EUR.
+status: active
+authors:
+  - name: Joerg Piringer
+    url: https://joerg.piringer.net/
+source_status: closed
+license: proprietary
+homepage: https://joerg.piringer.net/index.php?href=software/nts3.xml
+distribution: commercial
+install_notes: >-
+  Drop the .nts3unit file onto KORG KONTROL Editor while the NTS-3 is
+  connected, as the noiser and microlooper Gumroad pages describe.
+tags: [genericfx, nts-3, commercial, noise, looper, speech, voice]
+video:
+  url: https://www.youtube.com/watch?v=cIweHjGPHec
+  title: noiser plugin for KORG kaosspad NTS 3
+  credit: joerg piringer
+  first_party: true
+  found_via: https://joerg.piringer.net/index.php?href=software/noiser.xml

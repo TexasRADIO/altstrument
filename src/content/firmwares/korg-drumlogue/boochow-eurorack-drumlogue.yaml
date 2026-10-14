@@ -1,0 +1,40 @@
+device: korg-drumlogue
+name: Lillian (boochow eurorack_drumlogue)
+summary: Lillian is a drumlogue synth unit that ports the Mutable Instruments Braids macro oscillator, with two envelope generators and modulation routing; source is on GitHub.
+description: >-
+  eurorack_drumlogue is boochow's repository of drumlogue ports of Mutable
+  Instruments eurorack code. Its one unit is Lillian, a synth unit built on
+  the Braids macro oscillator code, with replacement lookup tables for the
+  drumlogue's 48 kHz sample rate. The unit header declares 24 parameters and 8
+  presets, including the Braids shape, timbre and color controls, two
+  envelope generators with selectable triggers, and source and intensity
+  settings for VCA, FM, timbre and color. The author's blog page offers the
+  built unit as a pay-what-you-want download with a minimum of 0, and says it
+  does not run on the prologue, minilogue xd or NTS-1; the repository itself
+  holds source only.
+status: dormant
+authors:
+  - name: boochow
+    url: https://blog.boochow.com/
+source: https://github.com/boochow/eurorack_drumlogue
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file is MIT for boochow's code, followed by the notices of the
+  bundled third-party code: Mutable Instruments' eurorack code (Emilie Gillet,
+  MIT) and the Korg logue SDK (BSD 3-Clause). GitHub reports it as "Other"
+  because the file contains several licenses.
+homepage: https://blog.boochow.com/logue/lillian
+distribution: download
+install_notes: >-
+  Get the built unit from the blog page, put the drumlogue into USB
+  mass-storage mode, copy the .drmlgunit file into Units/Synths and restart.
+  To build it yourself, clone the repository under logue-sdk/platform/drumlogue
+  with its submodules and run make in the lillian directory.
+tags: [synth, mutable-instruments-port, braids, drumlogue, open-source]
+video:
+  url: https://www.youtube.com/watch?v=81GxDqZyT9k
+  title: "Lillian: synth unit for drumlogue"
+  credit: boochow
+  first_party: true
+  found_via: https://github.com/boochow/eurorack_drumlogue#readme

@@ -1,0 +1,31 @@
+device: korg-prologue
+name: Ghost Time custom oscillators
+summary: "Seven pay-what-you-want units by Ghost Time Games for the logue family: five oscillators (Clang, Lapse, Sneq, Step, Warped), the Waver mod effect and the Slinky modulated delay."
+description: >-
+  The itch.io project describes a collection of custom oscillators for the
+  Korg prologue, minilogue xd and NTS-1, and Korg's index lists all seven units
+  for those three devices. Clang is a detuned three-sine bell oscillator, Sneq
+  is a polyrhythmic pattern generator, Warped is a lo-fi oscillator inspired by
+  Boards of Canada, Step is a per-key arpeggiator, Lapse is a stacked-LFO drone
+  generator, Waver is a warbly mod effect and Slinky is a modulated multi-tap
+  delay. The download is a set of .prlgunit files with a name-your-own-price
+  checkout. The devlog entries run from November 2020 to October 2021.
+status: dormant
+authors:
+  - name: Ghost Time Games
+    url: https://ghosttime.itch.io/
+homepage: https://ghosttime.itch.io/ghost-time-custom-oscillators-for-the-logue-family
+source_status: binary-only
+license: proprietary
+license_notes: Name-your-own-price downloads on itch.io; no source or license text is published.
+distribution: download
+install_notes: >-
+  Download the unit files from itch.io and load them with Korg's Librarian
+  app. The individual devlog pages explain each unit's parameters.
+tags: [oscillator, modfx, delfx, arpeggiator, drone, donationware, prologue, minilogue-xd, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=Jt9h38YR-8E
+  title: Warped - Logue Custom OSC - Demo
+  credit: Ghost Time Games
+  first_party: true
+  found_via: https://ghosttime.itch.io/ghost-time-custom-oscillators-for-the-logue-family/devlog/193525/warped-boc-inspired-lo-fi-oscillator

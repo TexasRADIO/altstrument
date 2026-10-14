@@ -1,0 +1,54 @@
+device: korg-drumlogue
+name: cldmnky drumlogue-units
+summary: Free collection of drumlogue units with a docs site, covering a Jupiter-8 style synth, a PPG wavetable synth, a modal synth, a SoundFont player and a Clouds reverb.
+description: >-
+  drumlogue-units is a repository of custom units for the Korg drumlogue by
+  Magnus Bengtsson (cldmnky), built with logue SDK 2 and released as
+  .drmlgunit files, one GitHub release per unit. Synth units are Drupiter (a
+  Jupiter-8 inspired polyphonic/monophonic synth with dual DCOs, hard sync and
+  cross-modulation), Pepege-Synth (a 2-voice PPG-style wavetable synth with 16
+  wavetable banks), Elementish (modal synthesis with bow, blow and strike
+  exciters, based on Mutable Instruments Elements) and Druteus (an SF2 player
+  built on TinySoundFont, shipped with 442 E-mu Proteus/1 factory patches).
+  The one effect is Clouds Reverb, a reverb unit with granular texture modes
+  based on Mutable Instruments Clouds. The README says the repository is set
+  up for AI-assisted development with GitHub Copilot custom agents, and the
+  tree also contains AGENTS.md and opencode.json files. Documentation, unit
+  pages and an installation guide are on the project's GitHub Pages site.
+status: active
+authors:
+  - name: Magnus Bengtsson (cldmnky)
+    url: https://github.com/cldmnky
+source: https://github.com/cldmnky/drumlogue-units
+source_status: open
+license: Apache-2.0
+license_notes: >-
+  The LICENSE file in the repository is the Apache License 2.0 (with the
+  template copyright line left unfilled), but the README badge and its
+  License section say the project code is MIT. The Mutable Instruments DSP
+  code the ports are based on keeps its own upstream licenses, which the
+  README notes as MIT for the STM32 code.
+homepage: https://cldmnky.github.io/drumlogue-units/
+distribution: download
+install_notes: >-
+  Download the .drmlgunit file for a unit from the GitHub releases page, put
+  the drumlogue into USB mass-storage mode and copy the file into Units/Synths
+  (synths) or Units/ReverbFXs (Clouds Reverb), then restart the drumlogue. The
+  installation guide on the docs site lists the folder for each unit.
+tags: [synth, revfx, wavetable, soundfont, mutable-instruments-port, drumlogue, open-source]
+versions:
+  - version: elementish-synth v1.4.1
+    date: 2026-10-08
+    url: https://github.com/cldmnky/drumlogue-units/releases/tag/elementish-synth/v1.4.1
+  - version: elementish-synth v1.4.0
+    date: 2026-08-10
+    url: https://github.com/cldmnky/drumlogue-units/releases/tag/elementish-synth/v1.4.0
+  - version: druteus v0.1.0
+    date: 2026-08-03
+    url: https://github.com/cldmnky/drumlogue-units/releases/tag/druteus/v0.1.0
+  - version: drupiter-synth v1.2.0
+    date: 2026-02-07
+    url: https://github.com/cldmnky/drumlogue-units/releases/tag/drupiter-synth/v1.2.0
+  - version: pepege-synth v1.1.0
+    date: 2026-02-07
+    url: https://github.com/cldmnky/drumlogue-units/releases/tag/pepege-synth/v1.1.0

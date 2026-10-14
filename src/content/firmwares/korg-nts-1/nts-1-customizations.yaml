@@ -1,0 +1,29 @@
+device: korg-nts-1
+name: nts-1-customizations
+kind: tool
+summary: "Korg's official hardware customization repository for the NTS-1 digital kit: custom panel reference board data with schematics, KiCad project, Gerbers, BOM and Arduino libraries."
+description: >-
+  The repository holds the files for the NTS-1 Custom Panel reference board
+  revision C: Arduino IDE libraries, raw Gerber data, a KiCad project, bills of
+  materials with Mouser part numbers, a PCB reference and a part placement
+  diagram, plus an Arduino Boards Manager package description. A companion web
+  site covers assembly, programming and examples. It supports building a
+  custom control surface for the instrument rather than changing the unit
+  software.
+status: dormant
+authors:
+  - name: KORG Inc.
+    url: https://www.korg.com/
+source: https://github.com/korginc/nts-1-customizations
+source_status: open
+license: BSD-3-Clause
+homepage: https://korginc.github.io/nts-1-customizations
+distribution: source-only
+tags: [hardware, custom-panel, arduino, schematic, official]
+versions:
+  - version: ArduinoBoards/1.0.1
+    date: 2020-02-14
+    url: https://github.com/korginc/nts-1-customizations/releases/tag/ArduinoBoards/1.0.1
+  - version: ArduinoBoards/1.0.0
+    date: 2020-01-14
+    url: https://github.com/korginc/nts-1-customizations/releases/tag/ArduinoBoards/1.0.0

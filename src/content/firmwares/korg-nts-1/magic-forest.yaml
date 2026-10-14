@@ -1,0 +1,25 @@
+device: korg-nts-1
+name: Magic Forest
+summary: NTS-1 oscillator that generates lo-fi forest ambience with pan flute and claves, meant to run from a latched arpeggiator.
+description: >-
+  The two encoders set the volume of the pan flute and claves group and of the
+  ambience, and the oscillator parameters tune each group separately. The
+  README suggests a latched arpeggiator with a longer pattern length for
+  instant ambience, with the EG set to Open.
+status: dormant
+authors:
+  - name: Jacob Ulmert
+    url: https://github.com/ulmert
+source: https://github.com/ulmert/magicforest
+source_status: open
+license: BSD-3-Clause
+homepage: https://github.com/ulmert/magicforest
+distribution: download
+install_notes: Upload magicforest.ntkdigunit with the NTS-1 digital Librarian.
+tags: [oscillator, ambient, sampler, open-source, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=YXMqoM_sRjw
+  title: Forest ambience oscillator - Korg Nu:Tekt NTS-1
+  credit: Jacob Ulmert
+  first_party: true
+  found_via: https://github.com/ulmert/magicforest#readme

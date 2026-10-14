@@ -1,0 +1,39 @@
+device: korg-prologue
+name: Staub (Staub Audio)
+summary: Paid user oscillator for the logue family modelled on the rave hoover sound, using a modulated saw plus two further saws an octave apart and a sub oscillator. Sold by Staub Audio for $4.99.
+description: >-
+  The product page describes Staub as an oscillator initially for the minilogue
+  xd; Korg's unit index lists it for prologue, minilogue xd and NTS-1. It
+  combines a modulated sawtooth with two additional modulated saws one octave
+  below and above and a sub oscillator, and can be layered with VCO 1 and VCO 2.
+  Version 1.1 added four demo patches without changing the oscillator. The
+  price is listed as $4.99 (plus VAT through PayPal via Gumroad), and the
+  page carries a 2019 copyright notice.
+status: dormant
+authors:
+  - name: Staub Audio
+    url: https://www.staub-audio.com/
+homepage: https://www.staub-audio.com/products/staub/
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  The page's terms grant a limited license to install the download on one
+  synthesizer at a time and forbid reverse engineering, copying,
+  redistribution or resale.
+distribution: commercial
+install_notes: >-
+  A personal download link is e-mailed after purchase. Install the Korg MIDI
+  driver and Sound Librarian first and check that the synthesizer connects.
+tags: [commercial, oscillator, hoover, supersaw, prologue, minilogue-xd, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=UQO7OjXiEH8
+  title: Staub oscillator demo #1 (Minilogue XD)
+  credit: Staub Audio
+  first_party: true
+  found_via: https://www.staub-audio.com/products/staub/
+versions:
+  - version: V1.1
+    url: https://www.staub-audio.com/products/staub/
+    notes: Four new demo patches; oscillator unchanged.
+  - version: V1.0
+    url: https://www.staub-audio.com/products/staub/

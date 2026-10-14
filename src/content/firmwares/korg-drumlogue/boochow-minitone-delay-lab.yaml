@@ -1,0 +1,37 @@
+device: korg-drumlogue
+name: boochow minitone and Delay Lab
+summary: "Two free drumlogue units from boochow instruments: minitone, a monophonic two-oscillator virtual analog synth, and Delay Lab, a stereo delay for flanger and chorus effects."
+description: >-
+  boochow instruments offers two drumlogue units as pay-what-you-want
+  downloads with a minimum of 0, linked from the author's blog. minitone is a
+  classic monophonic virtual analog synth with two oscillators, a 2-pole
+  low-pass filter, an ADSR envelope, an LFO, oscillator sync and ring
+  modulation, plus a transpose-sequence function and a pseudo-duophonic mode
+  that transposes only one oscillator from the keyboard. Delay Lab is a delay
+  unit for flanger and chorus type effects, with stereo delay lines that
+  support positive, negative and cross feedback, an LFO on the delay time and
+  filters on the delayed signal. The blog pages state that the units do not
+  run on the prologue, minilogue xd or NTS-1. Source for these two units is
+  not published.
+status: unknown
+authors:
+  - name: boochow
+    url: https://blog.boochow.com/
+source_status: closed
+license: proprietary
+license_notes: >-
+  Distributed as binaries through the author's blog with pay-what-you-want
+  pricing (minimum 0); the pages state no license text.
+homepage: https://blog.boochow.com/logue/minitone
+distribution: download
+install_notes: >-
+  Get the units from the blog pages (https://blog.boochow.com/logue/minitone
+  and https://blog.boochow.com/logue/delaylab), put the drumlogue into USB
+  mass-storage mode and copy minitone into Units/Synths and Delay Lab into
+  Units/DelayFXs, then restart.
+tags: [synth, delfx, delay, flanger, chorus, drumlogue, pay-what-you-want]
+video:
+  url: https://www.youtube.com/watch?v=uMWx0AKvfYA
+  title: "minitone: synth unit for drumlogue (short demo)"
+  credit: boochow
+  first_party: true

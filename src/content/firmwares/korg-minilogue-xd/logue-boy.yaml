@@ -1,0 +1,21 @@
+device: korg-minilogue-xd
+name: logue-boy
+summary: "Three Game Boy-inspired oscillators for the minilogue xd, prologue and NTS-1: pulse with duty cycles, LFSR noise, and a wave channel with ten Pokemon Gold and Silver style wavetables."
+description: >-
+  The Pulse oscillator has 12.5, 25, 50 and 75 percent duty cycles and an
+  envelope-like attenuation. Noise uses a 15-bit linear feedback shift register
+  with short 7-bit and long 15-bit modes. PokeGold plays ten 32-sample, 4-bit
+  wavetables with a bit resolution control from 1 to 16 bits. The repository
+  builds nine units, three oscillators for each of the three platforms, with a
+  Meson build and a CI workflow.
+status: active
+authors:
+  - name: Akiomi Kamakura
+    url: https://github.com/akiomik
+source: https://github.com/akiomik/logue-boy
+source_status: open
+license: Apache-2.0
+homepage: https://github.com/akiomik/logue-boy
+distribution: source-only
+install_notes: Clone with submodules, install the Arm toolchain and run tools/build.sh as described in the README, then load the units with Korg's librarian or logue-cli.
+tags: [oscillator, chiptune, game-boy, wavetable, open-source, minilogue-xd, prologue, nts-1]

@@ -1,0 +1,49 @@
+device: korg-prologue
+name: Hammond Eggs logue plugins
+summary: Donation-based collection of about two dozen user oscillators, mod, delay and reverb effects for prologue, minilogue xd and NTS-1 by hammondeggsmusic, from 2019 to early 2021.
+description: >-
+  Korg's index lists 25 hammondeggsmusic units for prologue, minilogue xd and
+  NTS-1: nine oscillators (including 1973, a miniKORG 700 emulation, Chips
+  2.0, Divide, Duet, Extra, Percy, Shapes and the Souper supersaws), four mod
+  effects (Buckets, Cabernet, Hera 2.0, WahWah Gate), five delay effects
+  (Arrhh!, Grit, pseudo, Vector, while(1)), six deep reverbs (Breathe, Cathedral,
+  Haze, Mist, Sniff, Theatre) and the Wave Creator sample loader. The plugin
+  pages ask for donations and say the files are used at the user's own risk.
+  The last logue-related news item on the site, the Cabernet distortion, is
+  dated January 2021. The author's old GitHub repositories for these plugins
+  now hold only notes pointing to the website.
+status: dormant
+authors:
+  - name: hammondeggsmusic
+    url: https://hammondeggsmusic.ca/
+homepage: https://hammondeggsmusic.ca/logueplugins.html
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  The site footer reads "All rights reserved". No license text accompanies the
+  downloads and the old GitHub repositories contain no license statement. The
+  author also publishes separate MIT-licensed example delay projects
+  (NTS1_BPM_stereo, NTS1_BPM_dualmono, NTS1_BPM_pingpong) on GitHub.
+distribution: download
+install_notes: >-
+  Back up the synthesizer first, then drag the unit file for your model onto a
+  user slot in Korg's Librarian app, as described on each plugin page. Donations
+  are optional.
+tags: [oscillator, modfx, delfx, revfx, reverb, chorus, distortion, looper, donationware, prologue, minilogue-xd, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=mzF_XYQW8mY
+  title: Six new deep reverbs for your KORG prologue, minilogue xd and NTS-1
+  credit: hammondeggsmusic
+  first_party: true
+  found_via: https://hammondeggsmusic.ca/logueplugins.html
+versions:
+  - version: Cabernet
+    date: 2021-01-04
+    url: https://hammondeggsmusic.ca/
+  - version: Souper 2.0
+    date: 2020-07-01
+    url: https://hammondeggsmusic.ca/
+    notes: Adds two waveforms and smoother glide.
+  - version: Breathe, Sniff, Cathedral, Theatre, Haze and Mist reverbs
+    date: 2020-06-21
+    url: https://hammondeggsmusic.ca/

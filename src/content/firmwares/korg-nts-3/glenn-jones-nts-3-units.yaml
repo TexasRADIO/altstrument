@@ -1,0 +1,36 @@
+device: korg-nts-3
+name: Glenn Jones NTS-3 units
+summary: "Collection of genericfx units for the NTS-3 kaoss pad by Glenn Jones (mrglennjones), sold on Gumroad: effects, synths and drum units, with several at a 0 GBP minimum."
+description: >-
+  Korg's unit index lists 18 NTS-3 units from this developer, all genericfx:
+  ShapeSync, Menzler Machine, The Full English, Zammo's Stash, VULPECULA,
+  JIMI Kaoss, MEUH, KaossKhord, DIZI, KaoZZy Drive, Warehouse Drum Kit,
+  U-SPLICE, DOMINATOR, RetroReverb, Drymon Echo, BitKrusher, Vangelis and
+  WINDFALL. At the time of checking, the Gumroad store listed 27 products in
+  total, including an all-units bundle. Prices are in GBP. The Full English,
+  VULPECULA, JIMI Kaoss, MEUH and Drymon Echo had a 0 minimum, and the other
+  units checked ranged from 1 to 4 GBP; Gumroad pay-what-you-want is on for all
+  of them except BitKrusher and Vangelis. Drymon Echo (tape saturation and
+  doubletracker) also has a public GitHub repository containing the unit and
+  documentation but no source or license.
+status: active
+authors:
+  - name: Glenn Jones (mrglennjones)
+    url: https://mrglennjones.gumroad.com/
+source: https://github.com/mrglennjones/drymon_echo_v2
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  The Gumroad listings and the Drymon Echo repository state no license terms.
+  Treated as proprietary because the units are sold, and the repository has no
+  license file.
+homepage: https://mrglennjones.gumroad.com/
+distribution: commercial
+install_notes: >-
+  Drag the .nts3unit file into an effect slot in KORG KONTROL Editor, as the
+  Drymon Echo README describes.
+tags: [genericfx, nts-3, commercial, delay, reverb, synth, drum-synth, looper, distortion, bitcrusher]
+versions:
+  - version: Drymon Echo (initial release)
+    date: 2026-01-25
+    url: https://github.com/mrglennjones/drymon_echo_v2/releases/tag/version

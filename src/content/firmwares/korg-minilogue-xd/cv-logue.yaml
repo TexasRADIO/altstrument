@@ -1,0 +1,27 @@
+device: korg-minilogue-xd
+name: cv_logue
+summary: "Open minilogue xd units by centrevillage: the MIST unstable harmonic oscillator and the lobit, pitchshift, reverse and stutter delay effects."
+description: >-
+  MIST is described as an unstable harmonic oscillator: two wave oscillators
+  whose second voice is pitched through a learnable scale quantizer, with a
+  collapse control for down-sampling, phase shift, mix and a delay stage for
+  feedback blur. The repository also holds the delay effects lobit, pitchshift,
+  reverse and stutter. Korg's unit index lists them for the prologue and NTS-1 as
+  well. The centrevillage site also sells AutoChord for the drumlogue.
+status: dormant
+authors:
+  - name: centrevillage
+    url: https://github.com/centrevillage
+source: https://github.com/centrevillage/cv_logue
+source_status: open
+license: MIT
+homepage: https://github.com/centrevillage/cv_logue
+distribution: source-only
+install_notes: Build with the logue SDK; the MIST folder also contains a prebuilt .mnlgxdunit.
+tags: [oscillator, delfx, open-source, minilogue-xd, prologue, nts-1]
+image:
+  url: https://raw.githubusercontent.com/centrevillage/cv_logue/master/osc/mist/MIST_Diagram.png
+  alt: Block diagram of the MIST oscillator, with two wave oscillators feeding a delay stage, a scale quantizer, and collapse, phase and shape parameters
+  credit: centrevillage
+  source_url: https://github.com/centrevillage/cv_logue/tree/master/osc/mist
+  first_party: true

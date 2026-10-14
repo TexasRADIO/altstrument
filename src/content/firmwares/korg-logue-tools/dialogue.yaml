@@ -1,0 +1,26 @@
+device: korg-logue-tools
+name: dialogue
+kind: tool
+summary: Command line tool, written in Go, that sends and receives prologue programs and user modules over MIDI.
+description: >-
+  Dialogue transfers program files (.prlgprog) and user module files
+  (.prlgunit) to and from a prologue, lists MIDI ports, and reports module
+  information for a given slot, for example delfx slot 2. At release it
+  supported only the prologue, and the author, who calls it partly a Go
+  learning project, planned support for other devices and file types.
+status: dormant
+authors:
+  - name: Juha Forsten
+    url: https://github.com/jforsten
+source: https://github.com/jforsten/dialogue
+source_status: open
+license: unspecified
+license_notes: The repository has no license file.
+homepage: https://github.com/jforsten/dialogue
+distribution: download
+install_notes: The repository publishes dated release builds; see the README for the command line options.
+tags: [librarian, midi, command-line, prologue, go]
+versions:
+  - version: "20210201-164052"
+    date: 2021-02-01
+    url: https://github.com/jforsten/dialogue/releases/tag/20210201-164052

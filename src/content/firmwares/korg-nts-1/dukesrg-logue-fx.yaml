@@ -1,0 +1,30 @@
+device: korg-nts-1
+name: logue-fx (dukesrg)
+summary: "Open collection of custom effects by dukesrg for the NTS-1, minilogue xd and prologue: Crusher, Gator, Hyper, Kompressor, Looper, Vibrator, LFO and Delay BPM, built from one wrapper header for all effect slots."
+description: >-
+  Crusher is a bit crusher and decimator, Gator a Kaossilator-style gate
+  arpeggiator, Hyper a unison effect inspired by supersaw, Kompressor a peak
+  downward compressor and expander, Looper a Kaossilator-style loop recorder,
+  Vibrator a vibrato and pitch shifter, LFO a vibrato with selectable waveform
+  and Delay BPM a delay tied to tempo. A shared header lets one source file
+  build for the modulation, delay and reverb slots, and most effects are
+  offered for all three. The third parameter control is not available in the
+  modulation slot, and the Looper shortens its loop on the NTS-1 to fit the
+  SDRAM, depending on record format and tempo.
+status: dormant
+authors:
+  - name: Oleg Burdaev (dukesrg)
+    url: https://github.com/dukesrg
+source: https://github.com/dukesrg/logue-fx
+source_status: open
+license: unspecified
+license_notes: The repository has no license file; the bundled SDK fork carries Korg's BSD-3-Clause license.
+homepage: https://github.com/dukesrg/logue-fx
+distribution: download
+install_notes: Precompiled units are on the releases page. Load them with Korg's librarian for your instrument.
+tags: [modfx, delfx, revfx, looper, compressor, bitcrusher, open-source, nts-1, minilogue-xd, prologue]
+versions:
+  - version: v1.4
+    date: 2021-05-20
+    url: https://github.com/dukesrg/logue-fx/releases/tag/v1.4
+    notes: Hyper, LFO and Vibrator fixes.

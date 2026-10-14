@@ -1,0 +1,27 @@
+device: korg-nts-3
+name: Daydream
+summary: "Five genericfx units for the NTS-3 kaoss pad: Collage, Rearrange, Underpass, Fog and Space, covering micro-loops, multi-tap delay, drone loops, granular clouds and tonal delay."
+description: >-
+  The README describes five effects that share one control scheme: pad X
+  selects a preset (off, A, B, C or D), the depth knob sets activity, and pad Y
+  sets tempo on Rearrange and Space. The units are always on and activity is
+  quantised to 10 percent steps. The README states that the units were built
+  with the logue SDK and developed with the assistance of Claude, Anthropic's
+  AI assistant, used for DSP design, C++ implementation and SDK integration.
+  Prebuilt .nts3unit files and source are in the repository.
+status: active
+authors:
+  - name: Earl of FX
+    url: https://github.com/earlofFX
+source: https://github.com/earlofFX/Daydream
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file and README give the GNU General Public License v3.0 with
+  no "or later" wording.
+homepage: https://github.com/earlofFX/Daydream
+distribution: download
+install_notes: >-
+  Load the .nts3unit files with KORG KONTROL Editor. Some effects need a couple
+  of seconds of buffered audio before they settle.
+tags: [genericfx, nts-3, granular, delay, looper, ambient, ai-assisted, open-source]

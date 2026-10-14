@@ -1,0 +1,37 @@
+name: microKORG2
+manufacturer: Korg
+category: synth
+tagline: Virtual analog synth and vocoder with logue SDK oscillator and effect units
+description: >-
+  The microKORG2 is Korg's virtual analog synthesizer and vocoder with 37 mini
+  keys and a gooseneck microphone. Patching is done on screen, and the vocal
+  processor adds pitch correction and a harmonizer. It has modulation, delay and
+  reverb effect sections, an arpeggiator, a loop recorder with undo and redo,
+  and runs on six AA batteries or an AC adaptor.
+platform: ARM Cortex-A7 (i.MX6ULZ)
+stock_firmware: "2.0.2"
+links:
+  manufacturer: https://www.korg.com/us/products/synthesizers/microkorg2/
+  community:
+    - label: logue SDK (microKORG2 platform)
+      url: https://github.com/korginc/logue-sdk/tree/main/platform/microkorg2
+notes: >-
+  System update 2.0 made the microKORG2 logue SDK compatible: it runs user
+  units built with SDK 2.1.0 (.mk2unit files), 32 slots each for oscillators,
+  modulation, delay and reverb effects. Korg's free Librarian app loads them;
+  they can also be copied in over USB mass storage (hold the first option
+  button at power-on, then a SlotN folder under Units/Oscs). A user oscillator
+  sits inside the instrument's own voice, with its envelope, filter and amp.
+  Korg states that units for the minilogue xd and NTS series are not
+  compatible.
+related: [korg-drumlogue, korg-nts-1-mkii, korg-nts-3, korg-prologue, korg-minilogue-xd, korg-logue-tools]
+image:
+  src: /images/devices/korg-microkorg-2.webp
+  style: photo
+  alt: Top-down view of the Korg microKORG2 with its 37 mini keys
+  width: 1200
+  height: 517
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/synthesizers/microkorg2/
+  original_url: https://cdn.korg.com/us/products/upload/2a1e7223b6af960cceb530796d03eca8_pc.png

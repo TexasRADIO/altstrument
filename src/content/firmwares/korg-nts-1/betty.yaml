@@ -1,0 +1,27 @@
+device: korg-nts-1
+name: Betty
+summary: "Rhythm generator oscillator for the NTS-1 and NTS-1 mkII: 16-step random patterns, three-voice polyphony from a bank of 12 samples, triggered by pressing notes or running the arpeggiator."
+description: >-
+  Betty holds 16 rhythm patterns of 16 steps each, advanced by pressing any
+  note, so running the arpeggiator gives instant playback. A pattern, or a random
+  one through the rnd parameter, can be chosen for each of three sample groups.
+  The two encoders set the amount of ducking triggered by the kick and the
+  tuning. The repository has a build for the original NTS-1 and a separate
+  build for the NTS-1 mkII.
+status: dormant
+authors:
+  - name: Jacob Ulmert
+    url: https://github.com/ulmert
+source: https://github.com/ulmert/betty
+source_status: open
+license: BSD-3-Clause
+homepage: https://github.com/ulmert/betty
+distribution: download
+install_notes: Upload betty.ntkdigunit with the NTS-1 digital Librarian, or bettymk2.nts1mkiiunit with the KORG Kontrol Editor.
+tags: [oscillator, drum-synth, rhythm, sampler, open-source, nts-1, nts-1-mkii]
+video:
+  url: https://www.youtube.com/watch?v=fk2F76We_NA
+  title: Rhythm Box Oscillator - Korg Nu:Tekt NTS-1
+  credit: Jacob Ulmert
+  first_party: true
+  found_via: https://github.com/ulmert/betty#readme

@@ -1,0 +1,38 @@
+device: korg-prologue
+name: eurorack-prologue
+summary: Ports of Mutable Instruments Plaits macro oscillator models and the Elements modal strike resonator to the Multi-Engine of the prologue, minilogue xd and NTS-1, as separate user oscillators.
+description: >-
+  The Macro Oscillator 2 units are based on Plaits and cover virtual analog
+  waveforms, waveshaping, two-operator FM, granular formant, harmonic and string
+  models, plus a wavetable oscillator that is split into six units of 8 rows by
+  4 columns to fit the 32 kB size limit. The Modal Resonator unit is based on
+  Elements and uses only the strike exciter, with a reduced filter bank and a
+  24 kHz sample rate. Each unit adds parameters in the Multi-Engine menu and a
+  second key-synced LFO. The README notes that all parameters start at their
+  minimum, that the Sound Librarian can time out while transferring a unit even
+  though the transfer completes, and that the Modal Resonator is reported silent
+  on some units, with lighter builds provided.
+status: dormant
+authors:
+  - name: Peter Allwin
+    url: https://github.com/peterall
+source: https://github.com/peterall/eurorack-prologue
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no license file. It builds on Mutable Instruments
+  firmware by Emilie Gillet (credits.txt gives the MIT terms for those parts).
+homepage: https://github.com/peterall/eurorack-prologue/releases
+distribution: download
+install_notes: Download units from the releases page and load them with Korg's librarian. Install the Modal Resonator one unit at a time if transfers fail.
+tags: [oscillator, mutable-instruments-port, plaits, elements, wavetable, fm, physical-modeling, open-source, prologue, minilogue-xd, nts-1]
+versions:
+  - version: "1.6.1"
+    date: 2020-07-28
+    url: https://github.com/peterall/eurorack-prologue/releases/tag/1.6.1
+  - version: "1.6"
+    date: 2020-07-27
+    url: https://github.com/peterall/eurorack-prologue/releases/tag/1.6
+  - version: "1.5"
+    date: 2019-11-09
+    url: https://github.com/peterall/eurorack-prologue/releases/tag/1.5

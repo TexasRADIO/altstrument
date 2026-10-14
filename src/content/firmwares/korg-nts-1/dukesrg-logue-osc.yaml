@@ -1,0 +1,30 @@
+device: korg-nts-1
+name: logue-osc (dukesrg)
+summary: Open collection of custom oscillators by dukesrg for the NTS-1, minilogue xd and prologue, including Supersaw, FastSaw, Morpheus wavetable, FMxx 4/6-operator FM with DX7 banks, and Anthologue.
+description: >-
+  The collection covers Supersaw and FastSaw (a saw with unison, the second
+  rewritten in Q31 fixed point to use less CPU), Morpheus (a wavetable
+  oscillator that takes WaveEdit-style tables), the FMxx series of 4- and
+  6-operator FM oscillators that can read Yamaha DX7, DX21 and DX11 voice banks
+  injected by script, and Anthologue, a six-VCO oscillator that reads Korg logue
+  program data. An online constructor on the project site makes customizable oscillators. The author develops and tests on the NTS-1, which has about twice the
+  CPU headroom of the prologue and minilogue xd, so some oscillators can
+  degrade on those two, especially with effects on. The README marks FM64 as
+  rough and polyphony in Supersaw as NTS-1 firmware 1.2.0 only.
+status: dormant
+authors:
+  - name: Oleg Burdaev (dukesrg)
+    url: https://github.com/dukesrg
+source: https://github.com/dukesrg/logue-osc
+source_status: open
+license: unspecified
+license_notes: The repository has no license file; the bundled SDK fork carries Korg's BSD-3-Clause license.
+homepage: https://dukesrg.github.io/logue-osc/
+distribution: download
+install_notes: Precompiled units are on the releases page. Load them with Korg's librarian for your instrument, or build them from the repository with the logue SDK.
+tags: [oscillator, wavetable, fm, supersaw, open-source, nts-1, minilogue-xd, prologue]
+versions:
+  - version: v.1.0
+    date: 2022-11-06
+    url: https://github.com/dukesrg/logue-osc/releases/tag/v.1.0
+    notes: Release titled Saws.

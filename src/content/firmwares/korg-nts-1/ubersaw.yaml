@@ -1,0 +1,28 @@
+device: korg-nts-1
+name: UberSaw
+summary: JP-8000 style super-saw oscillator for the NTS-1 with a detune curve from published research, two chord-tunable secondary oscillators, ring modulation, phase drift and an LFO.
+description: >-
+  The oscillator stacks one central and six side saws, with a mix control that
+  an LFO can modulate and a detune control based on a published curve. Two
+  secondary oscillators track the central pitch and can be tuned to octave,
+  fifth, major third or minor third chords, each with its own mix, and ring
+  modulation is linked to them. Version 1.1 added a detune lookup table to
+  reduce CPU load. The repository also has minilogue xd and prologue test
+  folders. The video linked from the README documents the build of version 1.0.
+status: dormant
+authors:
+  - name: Graham Keane
+    url: https://github.com/GrahamJamesKeane
+source: https://github.com/GrahamJamesKeane/UberSaw
+source_status: open
+license: MIT
+homepage: https://github.com/GrahamJamesKeane/UberSaw
+distribution: download
+install_notes: Load the unit file from the repository folders with Korg's librarian for your instrument.
+tags: [oscillator, supersaw, open-source, nts-1, minilogue-xd, prologue]
+video:
+  url: https://www.youtube.com/watch?v=s0rdvLjd52w
+  title: "Korg NTS-1 Nu:Tekt Digital Synthesizer Custom Oscillator Development: Roland Super-Saw Emulation"
+  credit: Graham Keane
+  first_party: true
+  found_via: https://github.com/GrahamJamesKeane/UberSaw#readme

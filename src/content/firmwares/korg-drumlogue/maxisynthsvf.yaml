@@ -1,0 +1,27 @@
+device: korg-drumlogue
+name: maxisynthsvf
+summary: Two-oscillator drumlogue synth with detune, an amplitude envelope and a state-variable filter, forked from boochow's maxisynth and built on the Maximilian library.
+description: >-
+  maxisynthsvf is a drumlogue synth unit by Yoann Lamouroux (ylmrx), forked
+  from boochow's maxisynth. Compared with the original it uses two oscillators
+  with detune and transpose, adds a dedicated amplitude envelope with longer
+  attack and decay and exponential releases from about 1 ms to several
+  seconds, and replaces the biquad with a state-variable filter. The filter
+  can be bandpass, highpass, lowpass or notch, or a custom mode that mixes the
+  four outputs. The author notes it was a first project, that glitches may
+  occur, and that presets and motion data may break between versions.
+status: dormant
+authors:
+  - name: Yoann Lamouroux (ylmrx)
+    url: https://github.com/ylmrx
+source: https://github.com/ylmrx/maxisynthsvf
+source_status: open
+license: MIT
+homepage: https://github.com/ylmrx/maxisynthsvf
+distribution: download
+requires_stock: drumlogue 1.0.0 or later (logue SDK 2.0)
+install_notes: >-
+  Put the drumlogue into USB mass-storage mode and copy the maxisynthsvf.drmlgunit
+  file from the repository into Units/Synths, then restart. Building needs the
+  patched Maximilian fork named in the README.
+tags: [synth, subtractive, svf, drumlogue, open-source]

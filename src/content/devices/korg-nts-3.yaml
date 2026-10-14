@@ -1,0 +1,36 @@
+name: Nu:Tekt NTS-3 kaoss pad kit
+manufacturer: Korg
+category: pedal
+tagline: Build-it-yourself Kaoss Pad effects kit with logue SDK generic effect slots
+description: >-
+  The NTS-3 kaoss pad kit is an effects unit from Korg's Nu:Tekt line that is
+  assembled without soldering (Korg gives under 20 minutes). It combines the Kaoss XY touch
+  pad with built-in filters, compressors, delays, reverbs and modulation
+  effects, and up to four effects can run at the same time. It has sync input and
+  output, reversible side panels, and combinations of effects can be saved.
+platform: ARM Cortex-M7 (STM32H725)
+links:
+  manufacturer: https://www.korg.com/us/products/dj/nts_3/
+  community:
+    - label: logue SDK (NTS-3 kaoss pad kit platform)
+      url: https://github.com/korginc/logue-sdk/tree/main/platform/nts-3_kaoss
+notes: >-
+  Custom firmware images are not known. The NTS-3 runs user effect units built
+  with logue SDK 2.0 (.nts3unit files). Instead of the modfx, delfx and revfx
+  types used elsewhere, it has one kind of unit, genericfx, which can be any
+  effect or even a sound generator; the SDK documentation lists 50 slots, four
+  identical effect runtimes, and system firmware 1.0.0 or later. Units are
+  loaded with Korg's KORG KONTROL Editor and appear at the end of the effects
+  list. The same unit can be loaded into several runtimes. Units run alongside
+  the stock firmware rather than replacing it.
+related: [korg-nts-1-mkii, korg-nts-1, korg-prologue, korg-minilogue-xd, korg-drumlogue, korg-microkorg-2, korg-logue-tools]
+image:
+  src: /images/devices/korg-nts-3.webp
+  style: photo
+  alt: Top-down view of the assembled Korg NTS-3 kaoss pad kit
+  width: 767
+  height: 737
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/dj/nts_3/
+  original_url: https://cdn.korg.com/us/products/upload/0646f734a73277c65dea2a4dfe25a984_pc.png

@@ -1,0 +1,39 @@
+name: Nu:Tekt NTS-1 digital kit mkII
+manufacturer: Korg
+category: synth
+tagline: Second-generation NTS-1 kit with a keyboard, sequencer and SDK 2 units
+description: >-
+  The NTS-1 digital kit mkII is the second version of Korg's Nu:Tekt synthesizer
+  kit, assembled without soldering. It replaces the ribbon controller of the
+  first model with an 18-key multitouch keyboard that can send polyphonic MIDI
+  notes, and adds an 8-step sequencer, a MIDI output and USB-C power. It keeps
+  the same case dimensions as the mkI, adds new oscillator types, modulation
+  options and effects, and can use the audio input as a modulation source.
+platform: ARM Cortex-M7 (STM32H725)
+links:
+  manufacturer: https://www.korg.com/us/products/synthesizers/nts_1_mk2/
+  community:
+    - label: logue SDK (NTS-1 mkII platform)
+      url: https://github.com/korginc/logue-sdk/tree/main/platform/nts-1_mkii
+notes: >-
+  Custom firmware images are not known. The mkII runs user units built with
+  logue SDK 2.0 (.nts1mkiiunit files), which use a different, dynamically linked
+  format from the units for the original NTS-1, prologue and minilogue xd, so
+  those must be rebuilt for this model. Per the SDK documentation there are 16
+  oscillator slots, 16 modulation effect slots, 8 delay slots and 8 reverb
+  slots, and units need system firmware 1.0.0 or later. Units are loaded with
+  Korg's KORG KONTROL Editor and appear at the end of each module's selection
+  list; the device remembers a unit by its developer and unit ID, so units can
+  be moved between slots. Units run alongside the stock firmware rather than
+  replacing it.
+related: [korg-nts-1, korg-nts-3, korg-prologue, korg-minilogue-xd, korg-drumlogue, korg-microkorg-2, korg-logue-tools]
+image:
+  src: /images/devices/korg-nts-1-mkii.webp
+  style: photo
+  alt: Top-down view of the assembled Korg NTS-1 digital kit mkII with its 18-key touch keyboard
+  width: 1152
+  height: 702
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/synthesizers/nts_1_mk2/
+  original_url: https://cdn.korg.com/us/products/upload/8614d29e0f6531faabd629c3d4d27d4d_pc.png

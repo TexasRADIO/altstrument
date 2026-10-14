@@ -1,0 +1,28 @@
+name: Korg logue SDK tools
+manufacturer: Korg
+category: tools
+tagline: SDK, unit loaders, converters and simulators shared by the logue family
+description: >-
+  This entry groups host-side software that works across more than one Korg
+  logue SDK instrument, rather than a single device. It covers the official
+  logue SDK, unit loaders and librarians, converters that turn Pure Data, Faust
+  or Rust code into logue units, and editor and build helpers. The SDK targets
+  the prologue, minilogue xd, Nu:Tekt NTS-1 digital kit and mkII, NTS-3 kaoss
+  pad kit, drumlogue and microKORG2.
+links:
+  manufacturer: https://korginc.github.io/logue-sdk/
+  community:
+    - label: logue SDK unit index (Korg)
+      url: https://korginc.github.io/logue-sdk/unit-index/
+    - label: logue SDK Discord
+      url: https://discord.com/invite/pqW5VpdQkZ
+notes: >-
+  Two unit generations exist. SDK 1.x units (.prlgunit, .mnlgxdunit,
+  .ntkdigunit) are zip files for the prologue, minilogue xd and original NTS-1,
+  built with a GNU Arm toolchain for Cortex-M4. SDK 2.x units (.nts1mkiiunit,
+  .nts3unit, .drmlgunit, .mk2unit) are dynamically linked ARM binaries for the
+  NTS-1 mkII, NTS-3, drumlogue and microKORG2, and are not interchangeable with
+  the v1 units. Units add oscillators, synths and effects alongside the stock
+  firmware; none of these tools replace it. Korg gives no technical support for
+  the SDK, and directs developers to its Discord.
+related: [korg-prologue, korg-minilogue-xd, korg-nts-1, korg-nts-1-mkii, korg-nts-3, korg-drumlogue, korg-microkorg-2]

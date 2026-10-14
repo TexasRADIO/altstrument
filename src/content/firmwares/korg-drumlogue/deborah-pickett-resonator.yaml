@@ -1,0 +1,43 @@
+device: korg-drumlogue
+name: Resonator
+summary: Karplus-Strong resonator synth for the drumlogue that excites a string model with drumlogue samples, with up to eight-note polyphony and 18 motion-sequenceable parameters.
+description: >-
+  Resonator is a drumlogue synth unit by Deborah Pickett that extends the
+  Karplus-Strong plucked-string model to produce plucked strings, struck metal
+  bars and tuned metal drums. The excitation can be any drumlogue sample
+  (the CH, OH, RS, CP and misc banks plus the user and external banks), with
+  start and end points, a level control and a selectable filter. Decay and
+  release phases have separate feedback and damping settings, and there are
+  dispersion and key-tracking controls. The blog post lists 18 parameters that
+  can all be motion-sequenced, polyphony up to eight notes, and pitch bend
+  over MIDI. The blog describes version 1.1, and a reader comment there reports
+  a freeze that the author said they would look into.
+status: archived
+authors:
+  - name: Deborah Pickett
+    url: https://www.icemoonprison.com/
+source: https://github.com/futzle/logue-sdk/tree/resonator/platform/drumlogue/resonator
+source_status: open
+license: BSD-3-Clause
+license_notes: >-
+  Released under the 3-clause BSD license; the blog post asks that the author
+  be credited in derived works. The GitHub repository that holds it, a fork
+  of the logue SDK, is archived.
+homepage: https://www.icemoonprison.com/blog/?p=780
+distribution: download
+install_notes: >-
+  Download and unzip the release, put the drumlogue into USB mass-storage mode
+  by holding Rec while powering on, copy resonator.drmlgunit into Units/Synths
+  and eject. Select the unit with Part and User, then turn the left parameter
+  knob.
+tags: [synth, physical-modelling, karplus-strong, drumlogue, open-source]
+image:
+  url: https://www.icemoonprison.com/blog/wp-content/uploads/2023/02/Extended-Karplus-Strong-block-diagram.png
+  alt: Block diagram of the extended Karplus-Strong model used by the Resonator unit
+  credit: Deborah Pickett
+  source_url: https://www.icemoonprison.com/blog/?p=780
+  first_party: true
+versions:
+  - version: resonator-v1.1.0
+    date: 2023-02-21
+    url: https://github.com/futzle/logue-sdk/releases/tag/resonator-v1.1.0

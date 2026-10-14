@@ -1,0 +1,21 @@
+device: korg-nts-1
+name: schollz logue effects
+summary: "Docker-based build setup and small effects for the NTS-1 and minilogue xd: simplepan, distortion, clipper, overdrive, pitch shift, tremolo and others, plus a pick of units from Korg's index."
+description: >-
+  Some units are the author's own, such as simplepan, a left and right pan
+  effect with rate and depth, and a distortion; others are units taken from
+  Korg's unit index and wired into one workflow. A Dockerfile and Makefile
+  build all units into one folder together with logue-cli, and make targets can
+  upload everything into chosen slots or clear the instrument and upload all.
+status: dormant
+authors:
+  - name: Zack Scholl (schollz)
+    url: https://github.com/schollz
+source: https://github.com/schollz/logue
+source_status: open
+license: unspecified
+license_notes: The repository has no license file.
+homepage: https://github.com/schollz/logue
+distribution: source-only
+install_notes: Build with the Docker environment described in the README, then upload with logue-cli.
+tags: [modfx, delfx, distortion, tremolo, pan, docker, open-source, nts-1, minilogue-xd]

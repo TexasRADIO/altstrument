@@ -1,0 +1,25 @@
+device: korg-minilogue-xd
+name: VoxHumana
+summary: Oscillator for the minilogue xd that simulates the Vox Humana preset of the Polymoog 280a with a detuned saw and pulse pair and three configurable LFOs.
+description: >-
+  The unit uses one sawtooth and one pulse oscillator, slightly detuned, with
+  three LFOs modulating the pitch of each and the pulse width. The filter,
+  envelope and effects are left to the instrument. The author built it from a
+  magazine article on the sound and notes that the Polymoog's divide-down
+  oscillators kept all keys in phase, which the minilogue xd cannot do, so chords
+  differ from the original. It was not tested on the prologue or NTS-1.
+status: dormant
+authors:
+  - name: Greg Vuki
+    url: https://github.com/vuki
+source: https://github.com/vuki/VoxHumana-Minilogue-xd
+source_status: open
+license: GPL-3.0-only
+homepage: https://github.com/vuki/VoxHumana-Minilogue-xd/releases
+distribution: download
+install_notes: Download the unit from the releases page and load it with Korg's librarian or logue-cli.
+tags: [oscillator, emulation, polymoog, open-source, minilogue-xd, prologue, nts-1]
+versions:
+  - version: 1.0.0
+    date: 2024-03-21
+    url: https://github.com/vuki/VoxHumana-Minilogue-xd/releases/tag/1.0.0

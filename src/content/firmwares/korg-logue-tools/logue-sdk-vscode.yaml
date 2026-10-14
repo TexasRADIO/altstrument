@@ -1,0 +1,26 @@
+device: korg-logue-tools
+name: logue-sdk-vscode
+kind: tool
+summary: Visual Studio Code workspace for SDK 1 projects with templates for each unit type, build tasks per instrument, unit loading and dumping, and debug profiles for ST-LINK and J-Link probes.
+description: >-
+  A template project for the prologue, minilogue xd and original NTS-1. It
+  provides oscillator, modfx, delfx and revfx templates, a wrapper header that
+  lets one source file build all effect types, and build tasks for each
+  instrument. Tasks can load a unit into the last slot of a connected
+  instrument and select it, which needs logue-cli and SendMIDI, or dump all
+  units from it, which also needs ReceiveMIDI. Debugging on real hardware
+  through an instrument's SWD interface needs an ST-LINK or J-Link probe and
+  the Cortex Debug extension. It builds on the author's own fork of the SDK,
+  which uses optimized makefiles, but can be pointed at the Korg repository.
+status: dormant
+authors:
+  - name: Oleg Burdaev (dukesrg)
+    url: https://github.com/dukesrg
+source: https://github.com/dukesrg/logue-sdk-vscode
+source_status: open
+license: unspecified
+license_notes: The repository has no license file; the bundled SDK fork carries Korg's BSD-3-Clause license.
+homepage: https://github.com/dukesrg/logue-sdk-vscode
+distribution: source-only
+install_notes: Open the folder in Visual Studio Code and accept the recommended extensions. The README describes the SDK setup, logue-cli, SendMIDI and the SVD file download.
+tags: [sdk, vscode, debugging, template, prologue, minilogue-xd, nts-1]

@@ -1,0 +1,20 @@
+device: korg-prologue
+name: logue-vosim
+summary: VOSIM oscillator, after Werner Kaegi's voice simulation system, for the prologue, minilogue xd and NTS-1, with parameters for delay, attenuation, pulse frequency and pulses per period.
+description: >-
+  VOSIM builds a sound from trains of squared sine pulses. In this unit the
+  shape knob sets the delay between pulses and shift-shape sets the attenuation,
+  while the menu parameters set the frequency, the number of pulses per period and
+  the LFO target. The repository has one folder per platform and builds with
+  make. Binaries are hosted on the author's site rather than in the repository.
+status: dormant
+authors:
+  - name: fairplay (Tyrannosaurus)
+    url: https://github.com/fairplay
+source: https://github.com/fairplay/logue-vosim
+source_status: open
+license: BSD-3-Clause
+homepage: https://tyrannosaurus.ru/posts/2020-03-10-logue-vosim.html
+distribution: download
+install_notes: Download the binaries from the author's page, or copy the platform folders into the SDK and run make.
+tags: [oscillator, vosim, voice, open-source, prologue, minilogue-xd, nts-1]

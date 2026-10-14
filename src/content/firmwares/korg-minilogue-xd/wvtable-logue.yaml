@@ -1,0 +1,31 @@
+device: korg-minilogue-xd
+name: WvTable-logue
+summary: Wavetable oscillator for the minilogue xd inspired by PPG Wave, using waves and wavetables from the PPG Wave 2.3 ROM, with wavecycle skew; untested on the prologue and NTS-1.
+description: >-
+  The oscillator uses the waves and wavetables from the PPG Wave 2.3 ROM. The author says it is not an emulation, because the original ran two
+  oscillators with sub oscillators at a sample rate near 195 kHz that the
+  Cortex-M4 cannot match. Shape selects the wavetable index and Shift-Shape sets
+  the wavecycle skew. The README says it may also work on the NTS-1 and
+  prologue but was not tested there, and is not compatible with other logue
+  instruments. A JUCE plug-in and test module are included for testing.
+status: maintained
+authors:
+  - name: Greg Vuki
+    url: https://github.com/vuki
+source: https://github.com/vuki/WvTable-logue
+source_status: open
+license: GPL-3.0-only
+homepage: https://github.com/vuki/WvTable-logue/releases
+distribution: download
+install_notes: Download the unit from the releases page and load it with Korg's librarian or logue-cli.
+tags: [oscillator, wavetable, ppg, open-source, minilogue-xd]
+versions:
+  - version: release_2.01
+    date: 2025-02-05
+    url: https://github.com/vuki/WvTable-logue/releases/tag/release_2.01
+  - version: release_2.00
+    date: 2024-12-04
+    url: https://github.com/vuki/WvTable-logue/releases/tag/release_2.00
+  - version: release_1.00
+    date: 2023-08-06
+    url: https://github.com/vuki/WvTable-logue/releases/tag/release_1.00

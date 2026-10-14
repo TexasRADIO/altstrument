@@ -1,0 +1,43 @@
+device: korg-nts-1
+name: Tweeeeeak NTS oscillators
+summary: "Free oscillators by Tweeeeeak! for the NTS-1 and NTS-1 mkII: RoaR random sound and sequence generator, ROAT, J6 chord player, Proba-B probability sequencer and a Volca Bass style triple oscillator."
+description: >-
+  RoaR generates random digital sounds and 16-step sequences from one knob and
+  can sync to the arpeggiator, sequencer or external gear. J6 is a chord player
+  and sequencer inspired by the Roland J-6, with 100 chord sets, 100 playing
+  patterns and a 16-step chord sequencer. Other oscillators include the ROAT
+  8-bit experimental oscillator, the Proba-B probability sequencer and a
+  Volca Bass style oscillator. Releases carry separate units for the original
+  NTS-1 and the mkII. Tweeeeeak! is a registered developer in Korg's SDK
+  developer ID list.
+status: active
+authors:
+  - name: Tweeeeeak!
+    url: https://github.com/tweeeeeak
+source: https://github.com/tweeeeeak/nts
+source_status: open
+license: unspecified
+license_notes: The repository has no license file; it describes the oscillators as free.
+homepage: https://github.com/tweeeeeak/nts
+distribution: download
+install_notes: Download the .ntkdigunit or .nts1mkiiunit file from the release page and load it with Korg's Librarian or KONTROL Editor.
+tags: [oscillator, sequencer, chord, random, open-source, nts-1, nts-1-mkii]
+video:
+  url: https://www.youtube.com/watch?v=vCKhyWSqCxs
+  title: RoaR OSC for Korg NTS-1
+  credit: Tweeeeeak!
+  first_party: true
+  found_via: https://github.com/tweeeeeak/nts#readme
+versions:
+  - version: roar.1.01
+    date: 2025-12-21
+    url: https://github.com/tweeeeeak/nts/releases/tag/roar.1.01
+  - version: roat.2.01
+    date: 2025-12-06
+    url: https://github.com/tweeeeeak/nts/releases/tag/roat.2.01
+  - version: roat.1.02.51
+    date: 2024-12-05
+    url: https://github.com/tweeeeeak/nts/releases/tag/roat.1.02.51
+  - version: ntsmk2.1.0.0
+    date: 2024-12-01
+    url: https://github.com/tweeeeeak/nts/releases/tag/ntsmk2.1.0.0

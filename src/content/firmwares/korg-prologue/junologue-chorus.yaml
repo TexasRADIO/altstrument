@@ -1,0 +1,41 @@
+device: korg-prologue
+name: Junologue Chorus
+summary: Juno-60 chorus emulation as a modulation effect for the prologue, minilogue xd and NTS-1, with Speed for the I, I-II and II modes and Depth for dry/wet.
+description: >-
+  The Speed knob switches between the three chorus modes, and within each mode
+  turning it clockwise brightens the timbre. The author's I-II mode runs both
+  choruses in parallel, which differs from the "both buttons in" mode of the
+  original, which is a mono vibrato. Depth sets the dry and wet ratio. Release
+  1.2-1 disables sub-voice processing on the minilogue xd and NTS-1 to reduce
+  high CPU load. Audio examples are on the author's SoundCloud, linked from the
+  README.
+status: dormant
+authors:
+  - name: Peter Allwin
+    url: https://github.com/peterall
+source: https://github.com/peterall/junologue-chorus
+source_status: open
+license: MIT
+homepage: https://github.com/peterall/junologue-chorus/releases
+distribution: download
+install_notes: Download the unit for your instrument from the releases page and load it with Korg's librarian.
+tags: [modfx, chorus, emulation, open-source, prologue, minilogue-xd, nts-1]
+image:
+  url: https://raw.githubusercontent.com/peterall/junologue-chorus/main/junologue-chorus-controls.png
+  alt: Junologue Chorus controls, a Speed knob marked I, I-II and II for mode and timbre, and a Depth knob for dry/wet
+  credit: Peter Allwin
+  source_url: https://github.com/peterall/junologue-chorus
+  first_party: true
+versions:
+  - version: 1.2-1
+    date: 2020-10-28
+    url: https://github.com/peterall/junologue-chorus/releases/tag/1.2-1
+  - version: 1.2-0
+    date: 2020-10-27
+    url: https://github.com/peterall/junologue-chorus/releases/tag/1.2-0
+  - version: 1.1-0
+    date: 2020-10-26
+    url: https://github.com/peterall/junologue-chorus/releases/tag/1.1-0
+  - version: 1.0-0
+    date: 2020-10-26
+    url: https://github.com/peterall/junologue-chorus/releases/tag/1.0-0

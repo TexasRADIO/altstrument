@@ -1,0 +1,35 @@
+name: drumlogue
+manufacturer: Korg
+category: drum-machine
+tagline: Hybrid analog/digital drum machine with logue SDK units
+description: >-
+  The drumlogue is a Korg drum machine with eleven parts: analog bass drum,
+  snare and two toms, six sample-based parts and one Multi-Engine synth part.
+  It has a 64-step sequencer with per-step probability and micro-timing, delay,
+  reverb and master effects, four individual outputs, an audio input, and a
+  USB-A port for class-compliant MIDI controllers.
+stock_firmware: "1.3.0"
+links:
+  manufacturer: https://www.korg.com/us/products/drums/drumlogue/
+  community:
+    - label: logue SDK (drumlogue platform)
+      url: https://github.com/korginc/logue-sdk/tree/main/platform/drumlogue
+notes: >-
+  The Multi-Engine part and the delay, reverb and master effects accept user
+  units built with logue SDK 2.0 (.drmlgunit files, firmware 1.00 or later), up
+  to 24 per type. Units are loaded by holding the record button at power-on to
+  enter USB mass storage mode, copying them into Units/Synths, Units/DelayFXs,
+  Units/ReverbFXs or Units/MasterFXs, ejecting, and confirming with YES; they
+  load in alphabetical order. Units run alongside the stock firmware rather than
+  replacing it.
+related: [korg-microkorg-2, korg-nts-1-mkii, korg-nts-3, korg-prologue, korg-minilogue-xd, korg-nts-1, korg-logue-tools]
+image:
+  src: /images/devices/korg-drumlogue.webp
+  style: photo
+  alt: Top-down view of the Korg drumlogue drum machine
+  width: 1134
+  height: 681
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/drums/drumlogue/
+  original_url: https://cdn.korg.com/us/products/upload/e9494596f0ac6c5be019be65171914e3_pc.png

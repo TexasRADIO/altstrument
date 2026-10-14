@@ -1,0 +1,50 @@
+device: korg-prologue
+name: Sinevibes KORG units
+summary: Sinevibes' commercial unit line for the logue family. 8 oscillators for prologue, minilogue xd and NTS-1, 21 effects for those plus NTS-1 mkII, NTS-3 and microKORG2, and two NTS-3 only effects.
+description: >-
+  The Sinevibes KORG page lists 31 units. Eight are user oscillators (Bent,
+  Dense, Flare, Groove, Node, Odds, Tube, Turbo) built for the first
+  generation devices only: prologue, minilogue xd and NTS-1 (SDK 1). The
+  effects include modulation, delay and reverb units (Albedo, Blend,
+  Corrosion, Dipole, Droplet, Eternal, Hollow, Luminance, Shift, Whirl and
+  others); 21 of them are offered for prologue, minilogue xd, NTS-1, NTS-1
+  mkII, NTS-3 and microKORG2 (SDK 1 and SDK 2 builds). Cache and Quarta are
+  multi-effects made for the NTS-3 kaoss pad only. Atom (a multi-mode
+  filter) and Drift (a wind turbulence simulator) are free downloads; the
+  other units are paid, listed at $19 for most effects, $29 to $39 for
+  oscillators and $29 each for Cache and Quarta, with bundles of all
+  oscillators ($99) and all effects ($199).
+status: active
+authors:
+  - name: Sinevibes
+    url: https://www.sinevibes.com/
+homepage: https://www.sinevibes.com/korg/
+source_status: binary-only
+license: proprietary
+license_notes: Sold as paid downloads; no source is published.
+distribution: commercial
+install_notes: >-
+  Buy or download from the product pages and load the unit file with Korg's
+  Librarian app (prologue, minilogue xd, NTS-1, microKORG2) or KORG KONTROL
+  Editor (NTS-1 mkII, NTS-3). Registered users can request updated download
+  links on the Sinevibes updates page.
+tags: [commercial, oscillator, modfx, delfx, revfx, genericfx, reverb, delay, chorus, distortion, prologue, minilogue-xd, nts-1, nts-1-mkii, nts-3, microkorg2]
+video:
+  url: https://www.youtube.com/watch?v=Lab6BEQaOYQ
+  title: Superbooth 2026 – Sinevibes plugins on microKORG2
+  credit: Sinevibes
+  first_party: true
+  found_via: https://www.sinevibes.com/korg/
+versions:
+  - version: Downgrade and Malfunction 1.0.0
+    date: 2026-08-30
+    url: https://www.sinevibes.com/updates/
+    notes: Two new effects for all six supported devices.
+  - version: Atom 1.0.0 and v2 effect builds
+    date: 2026-07-17
+    url: https://www.sinevibes.com/updates/
+    notes: Effects updated or released for NTS-1 mkII, NTS-3 and microKORG2 alongside the earlier devices.
+  - version: Cache 1.2.1
+    date: 2026-07-03
+    url: https://www.sinevibes.com/updates/
+    notes: NTS-3 only.

@@ -1,0 +1,26 @@
+device: korg-prologue
+name: Cloudlogue Reverb
+summary: Port of the Mutable Instruments Clouds reverb to the prologue, minilogue xd and NTS-1 as a reverb effect unit.
+description: >-
+  The repository holds the effect source, a manifest and the Mutable
+  Instruments dependencies, with build steps for macOS that produce a zipped
+  unit. Its README covers only installation and compiling; the released
+  1.0-0 build is a single prebuilt unit.
+status: dormant
+authors:
+  - name: Peter Allwin
+    url: https://github.com/peterall
+source: https://github.com/peterall/cloudlogue-reverb
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no license file. It builds on Mutable Instruments Clouds
+  code by Emilie Gillet.
+homepage: https://github.com/peterall/cloudlogue-reverb/releases
+distribution: download
+install_notes: Download the unit from the release page and load it with Korg's librarian, or build it with make after the setup steps in the README.
+tags: [revfx, reverb, mutable-instruments-port, clouds, open-source, prologue, minilogue-xd, nts-1]
+versions:
+  - version: 1.0-0
+    date: 2020-10-31
+    url: https://github.com/peterall/cloudlogue-reverb/releases/tag/1.0-0

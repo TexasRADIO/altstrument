@@ -1,0 +1,39 @@
+device: korg-prologue
+name: FunFM
+summary: Two-operator FM oscillator for the prologue, minilogue xd and NTS-1 with alias-suppressed operators, variable waveshape from pulse through sine to saw, bipolar modulation depth and filtered feedback.
+description: >-
+  Each of the two operators has a bandwidth control that moves its waveform
+  from pulse to sine to sawtooth in a way the author compares to low-pass
+  filtering rather than a crossfade. Operator 1 is phase modulated by operator 2,
+  which has feedback with a first-order low-pass filter, and a mix control
+  crossfades the operators. Negative modulation depth uses the absolute input,
+  which can add odd harmonics. The shape LFO is routed to the modulation depth.
+  The README warns that the NTS-1 starts parameters at minus 100, giving harsh
+  noise until depths and pitches are centered.
+status: maintained
+authors:
+  - name: Eugene Chernyh (mrf-r)
+    url: https://github.com/mrf-r
+source: https://github.com/mrf-r/FunFM-logue
+source_status: open
+license: GPL-3.0-only
+homepage: https://github.com/mrf-r/FunFM-logue/releases
+distribution: download
+install_notes: Download the unit from the releases page and load it with Korg's librarian or logue-cli.
+tags: [oscillator, fm, open-source, prologue, minilogue-xd, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=Je-KoZBqLsE
+  title: FunFM Logue oscillator
+  credit: man125403
+  first_party: true
+  found_via: https://github.com/mrf-r/FunFM-logue#readme
+versions:
+  - version: 1.2-0
+    date: 2025-07-05
+    url: https://github.com/mrf-r/FunFM-logue/releases/tag/1.2-0
+  - version: 1.1-0
+    date: 2024-03-02
+    url: https://github.com/mrf-r/FunFM-logue/releases/tag/1.1-0
+  - version: 1.0-0
+    date: 2024-02-25
+    url: https://github.com/mrf-r/FunFM-logue/releases/tag/1.0-0

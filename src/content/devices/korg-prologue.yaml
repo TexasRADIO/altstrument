@@ -1,0 +1,42 @@
+name: prologue
+manufacturer: Korg
+category: synth
+tagline: Analog polysynth with a Multi-Engine that accepts logue SDK oscillators
+description: >-
+  The prologue is a polyphonic analog synthesizer made by Korg, sold as a
+  16-voice, 61-key model and an 8-voice, 49-key model. Each voice has two
+  analog oscillators plus a digital Multi-Engine acting as a third, with noise,
+  VPM and user oscillator types, followed by one filter, two envelopes, one
+  amp and one LFO. It is bi-timbral, so two programs can be played at once, and
+  it has a modulation effect and a delay/reverb effect unit.
+platform: ARM Cortex-M4 (STM32F401)
+links:
+  manufacturer: https://www.korg.com/us/products/synthesizers/prologue/
+  community:
+    - label: logue SDK (prologue platform)
+      url: https://github.com/korginc/logue-sdk/tree/main/platform/prologue
+    - label: prologue Librarian (Korg)
+      url: https://www.korg.com/products/synthesizers/prologue/librarian_contents.php
+notes: >-
+  Custom firmware images for the prologue are not known. What the community
+  builds are user units made with the logue SDK: custom oscillators for the
+  Multi-Engine and modulation, delay and reverb effects (.prlgunit files, which
+  are zip archives). Korg lists 16 user oscillator slots and 16 user effect
+  slots. Units built with SDK 1.1-0 need system firmware 2.00 or later. They are
+  loaded with Korg's prologue Librarian application or the logue-cli command
+  line tool, and run alongside the stock firmware rather than replacing it.
+  logue-cli can also clear unit data from the instrument. Units built for the
+  prologue, minilogue xd and the original NTS-1 digital kit are binary
+  compatible with each other when the SDK version matches, though Korg
+  encourages builds optimized for each target.
+related: [korg-minilogue-xd, korg-nts-1, korg-nts-1-mkii, korg-nts-3, korg-drumlogue, korg-microkorg-2, korg-logue-tools]
+image:
+  src: /images/devices/korg-prologue.webp
+  style: photo
+  alt: Top-down view of the Korg prologue analog polysynth
+  width: 1191
+  height: 471
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/synthesizers/prologue/
+  original_url: https://cdn.korg.com/us/products/upload/b6fd5c4c4f2512c77fac60b82f6d9f89_pc.png

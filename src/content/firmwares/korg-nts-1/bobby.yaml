@@ -1,0 +1,26 @@
+device: korg-nts-1
+name: Bobby
+summary: Glitchy drum machine oscillator for the NTS-1 that fits 8-bit and 12-bit samples into about 20 kB and maps them in combinations for limited polyphony.
+description: >-
+  The two encoders set the volume of two sample groups, one holding kick, snare
+  and other sounds and one holding hi-hats. In the oscillator parameters each
+  group can be tuned separately and given random repeat and pitch. The README
+  notes that a sample is not triggered again until a note-off arrives for the
+  previous one, and recommends setting the EG to Open mode.
+status: dormant
+authors:
+  - name: Jacob Ulmert
+    url: https://github.com/ulmert
+source: https://github.com/ulmert/bobby
+source_status: open
+license: BSD-3-Clause
+homepage: https://github.com/ulmert/bobby
+distribution: download
+install_notes: Upload bobby.ntkdigunit with the NTS-1 digital Librarian.
+tags: [oscillator, drum-synth, sampler, glitch, open-source, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=v_DE3kfGsUU
+  title: Glitchy drum machine oscillator - Korg Nu:Tekt NTS-1
+  credit: Jacob Ulmert
+  first_party: true
+  found_via: https://github.com/ulmert/bobby#readme

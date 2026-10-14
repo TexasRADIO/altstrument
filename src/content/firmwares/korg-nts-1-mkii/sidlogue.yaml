@@ -1,0 +1,33 @@
+device: korg-nts-1-mkii
+name: SIDLogue
+summary: Oscillator unit for the NTS-1 mkII that emulates the Commodore 64 SID chip, with three internal voices, combined waveforms, hard sync, ring modulation and chord modes.
+description: >-
+  SIDLogue is an osc unit adapted from the FastSID code in VICE. It offers saw,
+  triangle, pulse and noise waveforms plus triangle+pulse and saw+pulse
+  blends, sync or ring modulation between its three voices, detune, glide, an
+  arpeggiator rate and chord shapes including a touch mode that builds a chord
+  from notes played together. It has no filter or envelope of its own and uses
+  the NTS-1 mkII filter, EG and LFO. Knob A is shape and knob B is grit. The
+  README lists known limitations, such as no 6581 or 8580 model selection and
+  no digi-sample playback, and also builds a browser simulator.
+status: active
+authors:
+  - name: Paul McCulloch
+    url: https://github.com/paul-mcculloch
+source: https://github.com/paul-mcculloch/sidlogue
+source_status: open
+license: GPL-2.0-or-later
+license_notes: >-
+  GitHub reports GPL-2.0. The README and source headers state version 2 or
+  later, as a derivative of FastSID from VICE.
+homepage: https://github.com/paul-mcculloch/sidlogue
+distribution: download
+install_notes: >-
+  Install the .nts1mkiiunit from the release with KORG KONTROL Editor. The
+  README notes the unit relies on the NTS-1 mkII filter and EG, so set the
+  filter cutoff up and the EG to ADSR if no sound is heard.
+tags: [oscillator, synth, chiptune, sid, commodore-64, emulator, nts-1-mkii, open-source]
+versions:
+  - version: v0.1.88
+    date: 2026-08-02
+    url: https://github.com/paul-mcculloch/sidlogue/releases/tag/v0.1.88

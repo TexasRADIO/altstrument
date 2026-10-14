@@ -1,0 +1,38 @@
+device: korg-prologue
+name: Waves2
+summary: Wavetable oscillator that shifts the harmonic distribution of the SDK's 90 built-in waveforms with the Shape knob, for the prologue, minilogue xd, NTS-1 and NTS-1 mkII.
+description: >-
+  Waves2 uses the same predefined waveforms as Korg's factory Waves oscillator
+  but plays a single waveform several times per cycle, shortening its length with
+  the Shape parameter so the harmonics move up without a filter. Shift-Shape
+  lowers the amplitude of the repeats to soften the result. Menu parameters
+  choose the waveform and set an internal shape envelope and its attack, decay
+  and intensity, the LFO attenuation and the envelope-to-amplitude amount. The
+  author has other units on his blog and Gumroad page.
+status: maintained
+authors:
+  - name: boochow
+    url: https://github.com/boochow
+source: https://github.com/boochow/Waves2
+source_status: open
+license: MIT
+homepage: https://github.com/boochow/Waves2/releases
+distribution: download
+install_notes: Download the build for your instrument from the releases page and load it with Korg's librarian or KONTROL Editor.
+tags: [oscillator, wavetable, harmonics, open-source, prologue, minilogue-xd, nts-1, nts-1-mkii]
+video:
+  url: https://www.youtube.com/watch?v=EVoXINcKjwU
+  title: "Waves 2 | Custom oscillator for Korg minilogue xd and NTS-1(demo 1)"
+  credit: boochow
+  first_party: true
+  found_via: https://github.com/boochow/Waves2#readme
+versions:
+  - version: "1.2"
+    date: 2020-08-11
+    url: https://github.com/boochow/Waves2/releases/tag/1.2
+  - version: v1.1
+    date: 2020-07-24
+    url: https://github.com/boochow/Waves2/releases/tag/v1.1
+  - version: v1.0
+    date: 2020-07-18
+    url: https://github.com/boochow/Waves2/releases/tag/v1.0

@@ -1,0 +1,33 @@
+device: korg-nts-1-mkii
+name: KORG DIY CLUB example units
+summary: "Sixteen example units by KORG staff (DIY CLUB and KORG Berlin) hosted by Korg on the logue SDK site: nine for the NTS-1 mkII and seven for the NTS-3, with source or readme archives."
+description: >-
+  Korg lists these as KORG Examples in the logue SDK unit index. The nine
+  NTS-1 mkII units are para_saw (paraphonic oscillator), metal_harmo and
+  morph_harmo (harmony oscillators), rnd_pm_perc (random phase modulation
+  percussion), rnd_glitch_gate (a delay effect), LtBK (bass and kick
+  generator), mp-osc (mono/poly-style oscillator), pendant (vector phase
+  shaping) and unisaw (supersaw-inspired oscillator). The seven NTS-3 units are
+  gate reverb (SDRAM delay-line example), x-to-note, 3d-pwc-chaos, 0xFF,
+  ML SQUARE OSC, FMDrum and nts3-osc-harmonics. They are credited to hiroki
+  matsui, oka, mngw, xia and hamatani of KORG DIY CLUB and to Fabian of KORG
+  Berlin. Each unit is a prebuilt file, and 11 of the 16 also have a source
+  archive; the rest have a readme archive or only the unit. para_saw and mp-osc
+  list a required global option setting.
+status: dormant
+authors:
+  - name: KORG DIY CLUB and KORG Berlin staff
+    url: https://korginc.github.io/logue-sdk/unit-index/korg_examples/
+source: https://github.com/korginc/logue-sdk/tree/gh-pages/KORG_Examples
+source_status: open
+license: BSD-3-Clause
+license_notes: >-
+  Taken from the license of the korginc/logue-sdk repository that hosts the
+  files on its gh-pages branch. The example archives were not unpacked to
+  check per-file headers, and five of the units ship without source.
+homepage: https://korginc.github.io/logue-sdk/unit-index/korg_examples/
+distribution: download
+install_notes: >-
+  Download the .nts1mkiiunit or .nts3unit files from the unit index page and
+  load them with KORG KONTROL Editor.
+tags: [oscillator, delfx, genericfx, example, nts-1-mkii, nts-3, open-source]

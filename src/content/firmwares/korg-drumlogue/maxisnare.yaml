@@ -1,0 +1,27 @@
+device: korg-drumlogue
+name: maxisnare
+summary: Drumlogue synth unit for louder, noisier snares and other percussion, with an oscillator and noise source, pitch envelope, waveshaper and a final EQ stage.
+description: >-
+  maxisnare is a drumlogue synth unit by Yoann Lamouroux (ylmrx), forked from
+  boochow's maxisynth. Page 1 has decay, a sine, triangle, square or saw wave
+  and an oscillator/noise balance. Page 2 adds a pitch envelope with a
+  decay and intensity setting and the poutoushaper waveshaper with a gain
+  control. Page 3 is a final EQ after the clipping stage with gain from -15 to
+  +30 dB, cutoff, resonance and a low shelf, high shelf or peak shape. The
+  README says it can also cover kicks, bass and cymbal-like sounds. The
+  repository includes a prebuilt maxisnare.drmlgunit.
+status: dormant
+authors:
+  - name: Yoann Lamouroux (ylmrx)
+    url: https://github.com/ylmrx
+source: https://github.com/ylmrx/maxisnare
+source_status: open
+license: MIT
+homepage: https://github.com/ylmrx/maxisnare
+distribution: download
+requires_stock: drumlogue 1.0.0 or later (logue SDK 2.0)
+install_notes: >-
+  Put the drumlogue into USB mass-storage mode and copy maxisnare.drmlgunit
+  into Units/Synths, then restart. Building needs the patched Maximilian fork
+  named in the README.
+tags: [synth, drum-synth, snare, drumlogue, open-source]

@@ -1,0 +1,31 @@
+device: korg-nts-1
+name: hypercubed nts-1 units
+summary: "Three open NTS-1 units: a 12-voice chord oscillator that picks major or minor chords by key, an 808-style bass oscillator, and a distortion and clip mod effect."
+description: >-
+  chords-osc plays major or minor chords chosen from a quantized key, with
+  fifths, triads, sevenths and suspended chords for notes outside the key;
+  the shape knob sets the key, the alt knob sets one to four notes, and
+  parameters choose saw, square or sine and detune. osc-808 is an 808-style bass
+  oscillator with pitch decay, phase distortion, drive and pitch attack
+  controls. distort-mod is a mod effect with soft clip, hard clip, wrap and fold
+  modes. The index entry on Korg's site lists the effect for the minilogue xd
+  and prologue as well.
+status: dormant
+authors:
+  - name: Hypercubed Music
+    url: https://github.com/hypercubed-music
+source: https://github.com/hypercubed-music/nts-1
+source_status: open
+license: unspecified
+license_notes: The repository has no license file.
+homepage: https://github.com/hypercubed-music/nts-1
+distribution: download
+install_notes: Prebuilt units are attached to the releases; load them with the NTS-1 digital Librarian.
+tags: [oscillator, modfx, chord, drum-synth, distortion, open-source, nts-1]
+versions:
+  - version: v1.1
+    date: 2021-12-13
+    url: https://github.com/hypercubed-music/nts-1/releases/tag/v1.1
+  - version: v1.0
+    date: 2021-02-05
+    url: https://github.com/hypercubed-music/nts-1/releases/tag/v1.0

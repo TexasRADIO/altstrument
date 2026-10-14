@@ -1,0 +1,41 @@
+device: korg-nts-1
+name: JabunAudio NTS-1 units
+summary: "Free or donation NTS-1 units by Nick Standing (JabunAudio): NOISE, a white noise oscillator, and the TapeFX Collection of six tape slow and stop delay effects based on DOTEC-AUDIO's StopFX."
+description: >-
+  NOISE is a Gaussian white noise oscillator derived from the sine_test example
+  in Korg's logue SDK, with parameter B adding soft clipping. The TapeFX
+  Collection contains Tapestop, Tapeslow (down to half speed) and Tapeslower
+  (down to quarter speed), each with a "nr" no-reset variant that keeps playing
+  from the buffer instead of jumping back to the live signal. Both are
+  offered as free downloads with an optional PayPal donation. The author
+  tested them on an NTS-1 only. Dates on the news pages are in day/month/year
+  order.
+status: active
+authors:
+  - name: Nick Standing (JabunAudio)
+    url: https://www.jabunaudio.com/
+homepage: https://www.jabunaudio.com/
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  Free downloads with optional donations. The TapeFX page offers the effects
+  on a use-at-your-own-risk basis; no source or license text is published.
+distribution: download
+install_notes: >-
+  Download noise.ntkdigunit, or the TapeFX zip, from the news pages and load
+  the units with Korg's Librarian app or logue-cli. The NOISE page notes that
+  mobile browsers sometimes save the file with the wrong extension.
+tags: [oscillator, noise, delfx, tape, donationware, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=9R3mLR4aC5o
+  title: "Introducing NOISE: A free white noise user oscillator for the KORG Nu:Tekt NTS-1 Digital Synth Kit!"
+  credit: Nick Standing
+  first_party: true
+  found_via: https://www.jabunaudio.com/news/introducing-noise-a-custom-white-noise-user-oscillator-for-the-korg-nutekt-nts-1-digital-synth-kit-free-download-or-donation
+versions:
+  - version: TapeFX Collection 1.0
+    date: 2026-06-03
+    url: https://www.jabunaudio.com/news/introducing-the-tapefx-collection-6-live-tape-slowstop-effects-for-the-korg-nutekt-nts-1-digital-synth-kit-free-download-or-donation
+  - version: NOISE 1.0
+    date: 2021-05-06
+    url: https://www.jabunaudio.com/news/introducing-noise-a-custom-white-noise-user-oscillator-for-the-korg-nutekt-nts-1-digital-synth-kit-free-download-or-donation

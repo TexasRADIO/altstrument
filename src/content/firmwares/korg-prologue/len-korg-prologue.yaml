@@ -1,0 +1,22 @@
+device: korg-prologue
+name: korg-prologue (len)
+summary: "Early set of prologue user units by len: organ and pluck oscillators and effects including autopan, tremolo, split, and ring and amplitude modulation from the sub timbre, with prebuilt units."
+description: >-
+  The repository has prebuilt .prlgunit files and their sources. Oscillators are a
+  five drawbar organ and a Karplus-Strong pluck; effects include autopan,
+  tremolo, split, and sub_am and sub_ringmod, which apply AM and ring
+  modulation using the main timbre as the carrier and the sub timbre as the
+  modulator. The last commits date from December 2018. The README describes
+  presets as well, though none are in the repository tree.
+status: dormant
+authors:
+  - name: len
+    url: https://github.com/len
+source: https://github.com/len/korg-prologue
+source_status: open
+license: unspecified
+license_notes: The repository has no license file.
+homepage: https://github.com/len/korg-prologue
+distribution: download
+install_notes: Download prebuilt units from the builds folder and load them with the prologue Librarian, or copy a project from src into the SDK platform folder and run make.
+tags: [oscillator, modfx, organ, pluck, tremolo, ring-modulation, open-source, prologue]

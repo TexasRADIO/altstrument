@@ -1,0 +1,44 @@
+device: korg-nts-1-mkii
+name: Squall
+summary: Port of the Mutable Instruments Clouds reverb as a revfx unit for the NTS-1 mkII, with tone, depth, freeze and scan controls. A drumlogue port exists in a separate repository.
+description: >-
+  Squall uses the reverb DSP from Mutable Instruments Clouds (by Emilie
+  Gillet). Knob A sets tone and knob B sets depth, which also drives the wet
+  amount in the one-knob style of the module. Freeze holds the reverb tail,
+  and scan colours the frozen buffer or, below 50 percent, lets a little new
+  audio in. It is sold on Gumroad as a pay-what-you-want download with a
+  suggested price of 5 USD, and the source and releases are also on GitHub. A
+  drumlogue version is in DanielMajid/squall_reverb_drumlogue (MIT, no
+  releases yet).
+status: active
+authors:
+  - name: Daniel Majid Mirzakhani
+    url: https://github.com/DanielMajid
+source: https://github.com/DanielMajid/squall_reverb
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file is MIT, but the README's closing license section says
+  GPL 3.0. The LICENSE file is followed here. The original Clouds DSP is by
+  Emilie Gillet.
+homepage: https://danielmajid.gumroad.com/l/squall
+distribution: download
+install_notes: >-
+  Open KORG KONTROL Editor, drag the .nts1mkiiunit file into the effects
+  category and sync. The unit can also be built from source with the logue
+  SDK.
+tags: [revfx, reverb, mutable-instruments-port, freeze, nts-1-mkii, drumlogue, open-source]
+video:
+  url: https://www.youtube.com/watch?v=KV_iLSJnfJs
+  title: "Squall: Clouds reverb for the Korg NTS-1 mkII"
+  credit: Grim Cardassian
+  first_party: true
+  found_via: https://danielmajid.gumroad.com/l/squall
+versions:
+  - version: v1.1
+    date: 2026-07-07
+    url: https://github.com/DanielMajid/squall_reverb/releases/tag/v1.1
+    notes: Adds freeze and scan.
+  - version: v1.0.4
+    date: 2026-05-26
+    url: https://github.com/DanielMajid/squall_reverb/releases/tag/v1.0.4

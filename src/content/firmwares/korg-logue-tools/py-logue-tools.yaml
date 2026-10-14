@@ -1,0 +1,22 @@
+device: korg-logue-tools
+name: py-logue-tools
+kind: tool
+summary: Python MIDI librarian and device manager for the NTS-1 mkII, written from Korg's MIDI implementation as an open alternative to logue-cli.
+description: >-
+  The project re-implements the librarian and device-management functions of
+  logue-cli using the MIDI implementation documents Korg publishes, and targets
+  the NTS-1 mkII and similar logue SDK devices. It runs on Python with the mido
+  library and its python-rtmidi backend, uses the unittest framework for tests,
+  and enforces formatting with Black. The author says it is not affiliated with
+  Korg.
+status: dormant
+authors:
+  - name: Tarkan Al-Kazily
+    url: https://github.com/TarkanAl-Kazily
+source: https://github.com/TarkanAl-Kazily/py-logue-tools
+source_status: open
+license: BSD-3-Clause
+homepage: https://github.com/TarkanAl-Kazily/py-logue-tools
+distribution: source-only
+install_notes: Create a virtual environment and install requirements.txt; example commands are listed in the README.
+tags: [librarian, midi, python, nts-1-mkii]

@@ -1,0 +1,34 @@
+device: korg-prologue
+name: Cain Synthesizers units
+summary: Donation-based user oscillators and effects by Pete Kuhn for prologue, minilogue xd and NTS-1, including phase distortion, Karplus-Strong, vowel and shatter oscillators plus two choruses and a rotary speaker effect.
+description: >-
+  The Cain Synthesizers site offers seven user oscillators: Cain CZ and Cain
+  CZ2 (phase distortion in the style of Casio CZ synths), Cain++
+  (Karplus-Strong), Human (vowel), KRYSTAL (a shatter model), WTF and WTF II.
+  Effects are the 3DC and Cain D choruses and the Cain LEZ rotary speaker
+  effect. Korg's index lists the oscillators and the two choruses for
+  prologue, minilogue xd and NTS-1. The author asks for a donation (the page
+  suggests amounts from 2 to 10 euro) but allows free use. The most recent
+  site post, Cain LEZ, is from June 2023.
+status: dormant
+authors:
+  - name: Pete Kuhn (Cain)
+    url: https://cain-synthesizer.com/
+homepage: https://cain-synthesizer.com/
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  Downloads are offered free of charge on a donation basis. The author asks
+  that free users link to the unit used when publishing their music. No source
+  or license text is published.
+distribution: download
+install_notes: >-
+  Download from each unit's page and load it with Korg's Librarian app or
+  logue-cli. Donations are optional.
+tags: [oscillator, modfx, phase-distortion, karplus-strong, chorus, vocal, donationware, prologue, minilogue-xd, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=SDxMn1zhcQ8
+  title: Artificial Human - non final video
+  credit: Pete Kuhn
+  first_party: true
+  found_via: https://cain-synthesizer.com/

@@ -1,0 +1,26 @@
+device: korg-drumlogue
+name: poutoushaper
+summary: Waveshaper and saturator master effect for the drumlogue with soft, hard, atan and progressive soft clip curves, a gain control and an optional final hard clip.
+description: >-
+  poutoushaper is a drumlogue master effect by Yoann Lamouroux (ylmrx). Its
+  Shape parameter selects between Soft, Hard, Atan and PSoft clipping curves,
+  Gain sets the drive into the shaper, and Clip adds a hard clipper after the
+  chosen curve. The README says it can get louder than the built-in boost. The
+  first version used Maximilian shapers; the second uses ARM NEON math and adds
+  the PSoft curve. The repository includes a prebuilt poutoushaper.drmlgunit
+  next to the source.
+status: active
+authors:
+  - name: Yoann Lamouroux (ylmrx)
+    url: https://github.com/ylmrx
+source: https://github.com/ylmrx/poutoushaper
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file and the README states no license.
+homepage: https://github.com/ylmrx/poutoushaper
+distribution: download
+install_notes: >-
+  Put the drumlogue into USB mass-storage mode and copy poutoushaper.drmlgunit
+  into Units/MasterFXs, then restart. To build it, place the repository under
+  platform/drumlogue in the logue SDK and use the docker build command.
+tags: [masterfx, distortion, saturation, waveshaper, drumlogue, open-source]

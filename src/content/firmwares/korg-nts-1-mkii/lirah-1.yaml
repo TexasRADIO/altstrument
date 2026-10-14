@@ -1,0 +1,36 @@
+device: korg-nts-1-mkii
+name: Lirah-1
+summary: "Lyra-8 style drone oscillator for the NTS-1 mkII: sine-core FM with wave folding, feedback, two AND-gated LFOs and a third assignable LFO. A 4-voice drumlogue version exists separately."
+description: >-
+  Lirah-1 is an osc unit based on James D. Cheetham's Lyre-1 project, inspired
+  by the SOMA Laboratory Lyra-8. Knob A sets FM depth and knob B sets the
+  depth of the Hyper LFO pitch jump, which comes from two internal LFOs that
+  are AND-gated. Further parameters cover both LFO rates, fold, FM and carrier
+  tuning, feedback, and a third LFO with a selectable target. It is sold on
+  Gumroad (listed at 5 USD) with the source and a release on GitHub. A 4-voice
+  polyphonic drumlogue version is in DanielMajid/lirah_4_drumlogue, which has
+  no license file.
+status: active
+authors:
+  - name: Daniel Majid Mirzakhani
+    url: https://github.com/DanielMajid
+source: https://github.com/DanielMajid/Lirah-1
+source_status: open
+license: MIT
+homepage: https://danielmajid.gumroad.com/l/lirah-1
+distribution: download
+install_notes: >-
+  Open KORG KONTROL Editor, drag the .nts1mkiiunit file into the oscillator
+  category and sync. The unit can also be built from source with the logue
+  SDK.
+tags: [oscillator, synth, fm, drone, wavefolder, lfo, nts-1-mkii, drumlogue, open-source]
+video:
+  url: https://www.youtube.com/watch?v=Blbt0Bvq2Eg
+  title: "Lirah-1: Soma Lyra voice for the Korg NTS-1 mkII"
+  credit: Grim Cardassian
+  first_party: true
+  found_via: https://danielmajid.gumroad.com/l/lirah-1
+versions:
+  - version: v1.0.0
+    date: 2026-05-26
+    url: https://github.com/DanielMajid/Lirah-1/releases/tag/v1.0.0

@@ -1,0 +1,26 @@
+device: korg-nts-1
+name: logue collection (dagargo)
+summary: "Open collection of NTS-1 units: fm4o 4-operator FM and mass multi-saw oscillators, the sola Solina chorus, and the rock phaser delay effect, built with Docker."
+description: >-
+  fm4o is a four-operator FM oscillator with two operator pairs, feedback and a
+  balance control; mass is a multi-saw oscillator with a sub oscillator, one to
+  seven voices and detune controls; sola recreates a dual mono Solina chorus;
+  rock is a dual mono four-pole phaser with a phase difference between channels,
+  written as a delay effect so it can run next to sola. The Makefile builds a
+  Docker image of the SDK and puts all units in one folder, and a make target
+  links logue-cli.
+status: dormant
+authors:
+  - name: David García Goñi
+    url: https://github.com/dagargo
+source: https://github.com/dagargo/logue-collection
+source_status: open
+license: GPL-3.0-only
+homepage: https://github.com/dagargo/logue-collection
+distribution: download
+install_notes: Run make image once, then make; the ntkdigunit files are written to platform/bin. Load them with the NTS-1 digital Librarian or logue-cli.
+tags: [oscillator, modfx, delfx, fm, chorus, phaser, open-source, nts-1]
+versions:
+  - version: "1.0"
+    date: 2024-08-20
+    url: https://github.com/dagargo/logue-collection/releases/tag/1.0

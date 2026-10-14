@@ -1,0 +1,28 @@
+device: korg-logue-tools
+name: prologue_tools
+kind: tool
+summary: Python scripts that convert patch files between the prologue and the minilogue xd, print program fields, and set the user unit number a program uses.
+description: >-
+  prlg2mnlgxd and mnlgxd2prlg translate a .prlgprog patch into a .mnlgxdprog
+  patch and back, printing warnings when something cannot be carried over, such
+  as the sub timbre, the one-shot LFO mode or a delay and reverb used together.
+  An option forces the user oscillator slot number. proginfo prints a field of a
+  program file and setunitnum changes the user unit number stored in a program.
+  Windows executables were added to the 1.01 release.
+status: dormant
+authors:
+  - name: boochow
+    url: https://github.com/boochow
+source: https://github.com/boochow/prologue_tools
+source_status: open
+license: MIT
+homepage: https://github.com/boochow/prologue_tools
+distribution: download
+tags: [patch-library, converter, prologue, minilogue-xd, python]
+versions:
+  - version: 1.01-exe
+    date: 2022-09-28
+    url: https://github.com/boochow/prologue_tools/releases/tag/1.01-exe
+  - version: 1.0-exe
+    date: 2022-09-17
+    url: https://github.com/boochow/prologue_tools/releases/tag/1.0-exe

@@ -1,0 +1,47 @@
+device: korg-prologue
+name: tsoniq logue oscillators
+summary: "tsoniq's user oscillators for prologue, minilogue xd and NTS-1: fusion and phase7 (free lite and paid pro builds), unity and ds80 (free) and viper (paid wavetable pack)."
+description: >-
+  fusion is a virtual-analogue voice with a 12/24 dB filter that mirrors the
+  front-panel VCO and VCF controls; it needs firmware 2.10 for the panel
+  functions and supports prologue and minilogue xd only. phase7 emulates the
+  JP-8000 super saw on the same two devices. unity has 15 waveform generator
+  models. viper is a pack of four oscillators with waveforms and wavetables
+  modelled on the Korg DW-8000, Kawai K3, Ensoniq ESQ-1 and PPG Wave. ds80 is
+  a free wavetable oscillator modelled on the Digisound DS-80 VCDO. The lite
+  builds of fusion and phase7, unity and ds80 are free; pro builds and viper are
+  sold through Sellfy. tSoniq also publishes MIT-licensed sample code for
+  reading front-panel controls (logue-panel-demo); that is separate from these
+  units.
+status: dormant
+authors:
+  - name: tsoniq
+    url: https://tsoniq.com/
+homepage: https://tsoniq.com/software/korg/
+source_status: binary-only
+license: proprietary
+license_notes: No source or license text is published for the units; paid builds are sold via Sellfy.
+distribution: commercial
+install_notes: >-
+  Free builds download directly (unity as a zip with the user manual and
+  builds for prologue, minilogue xd and NTS-1); paid builds are bought through
+  Sellfy. Load units with Korg's Librarian app. Downloads of fusion and phase7
+  include both prologue and minilogue xd versions.
+tags: [commercial, oscillator, wavetable, supersaw, virtual-analog, prologue, minilogue-xd, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=qc1vtLTwkG8
+  title: fusion basics
+  credit: tsoniq
+  first_party: true
+  found_via: https://tsoniq.com/software/korg/fusion/
+versions:
+  - version: ds80 1.1
+    date: 2023-12-28
+    url: https://tsoniq.com/software/korg/ds80/
+    notes: Corrected the Table parameter range and added velocity modulation of the filter EG gain.
+  - version: ds80 1.0
+    date: 2023-12-21
+    url: https://tsoniq.com/software/korg/ds80/
+  - version: viper
+    date: 2023-12-19
+    url: https://tsoniq.com/software/korg/viper/

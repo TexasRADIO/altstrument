@@ -1,0 +1,58 @@
+device: korg-drumlogue
+name: Federico Gennari drumlogue units
+summary: "Free drumlogue units from a personal logue SDK fork: FM and physical-modelling percussion synths, a drone synth, two reverbs, a percussion-ensemble delay and two master compressors."
+description: >-
+  fedemone/logue-sdk is Federico Gennari's fork of the Korg logue SDK, which
+  also hosts independently written drumlogue units under platform/drumlogue.
+  Synths are EffeMD (percussion FM based on the md-drum-synth Machinedrum-style
+  models), EffeESP32 (a port of Copych's ESP32-S3 FM drum synth engine with 59
+  patches), Brachetti (a polyphonic physical-modelling synth with 40 presets)
+  and ScrutaAstri (a drone synth based on the Moffenzeef Stargazer). Reverbs
+  are LuceAlNeon (an FDN reverb feeding five parallel effect paths) and
+  NeonLabirinto (an 8-channel FDN reverb); the delay is Tribale, which
+  produces 2 to 10 delayed copies of a hit to suggest several drummers.
+  Master effects are OmniPress, a compressor loosely inspired by the Eventide
+  Omnipressor with external sidechain, and PortaCassette, a Portastudio and
+  vinyl emulation with dbx-style noise reduction. The README carries a
+  disclaimer that the units are unofficial, experimental and unsupported, and
+  the author invites optional PayPal donations.
+status: active
+authors:
+  - name: Federico Gennari
+    url: https://github.com/fedemone
+source: https://github.com/fedemone/logue-sdk
+source_status: open
+license: BSD-3-Clause
+license_notes: >-
+  The repository's license file is Korg's BSD 3-Clause logue SDK license,
+  inherited from the fork. No separate license is stated for the added units.
+homepage: https://github.com/fedemone/logue-sdk/releases
+distribution: download
+install_notes: >-
+  Download the .drmlgunit files from a GitHub release, power the drumlogue
+  on while holding the record button so it appears as a drive, and copy the
+  files into Units/ReverbFXs (LuceAlNeon, NeonLabirinto), Units/DelayFXs
+  (Tribale), Units/MasterFXs (OmniPress, PortaCassette) or Units/Synths
+  (EffeMD, EffeESP32, Brachetti, ScrutaAstri), then restart.
+tags: [synth, drum-synth, fm, physical-modelling, delfx, revfx, masterfx, reverb, compressor, drumlogue, open-source]
+video:
+  url: https://www.youtube.com/watch?v=KKISr5N7nGA
+  title: Drumlogue new synths effect
+  credit: Federico Gennari
+  first_party: true
+versions:
+  - version: "3.2"
+    date: 2026-10-13
+    url: https://github.com/fedemone/logue-sdk/releases/tag/3.2
+  - version: "3.0"
+    date: 2026-09-15
+    url: https://github.com/fedemone/logue-sdk/releases/tag/3.0
+  - version: "2.5"
+    date: 2026-08-28
+    url: https://github.com/fedemone/logue-sdk/releases/tag/2.5
+  - version: "2.0"
+    date: 2026-07-30
+    url: https://github.com/fedemone/logue-sdk/releases/tag/2.0
+  - version: 1.1.0
+    date: 2026-06-27
+    url: https://github.com/fedemone/logue-sdk/releases/tag/1.1.0

@@ -1,0 +1,40 @@
+device: korg-prologue
+name: PlaitsXplorer and ElementsXplorer
+summary: Plaits and Elements based user oscillators for the prologue that map extra modulation sources and knobs onto the front panel, with a modulation matrix, extra LFOs and key tracking.
+description: >-
+  PlaitsXplorer offers Plaits models such as virtual analog, hard sync, wavefolders,
+  FM, granular, additive, swarm, particle, noise and drum simulations, and
+  ElementsXplorer is a modal synthesis voice based on Elements. Both reuse the
+  front panel controls and tSoniq's front panel code to give seventeen digital
+  engine controls, with access to the envelope, a second LFO and note velocity,
+  and support for expression pedal, mod wheel, aftertouch and MIDI CC control.
+  The author stresses that they run as ordinary user oscillators and do not
+  modify the instrument's firmware. They are for the prologue only. Audio demos
+  are on the author's SoundCloud.
+status: active
+authors:
+  - name: John Walton
+    url: https://github.com/john-k-walton
+source: https://github.com/john-k-walton/Prologue-Oscillators
+source_status: binary-only
+license: unspecified
+license_notes: >-
+  The repository holds release archives, manuals and images, and no license file;
+  the units build on Mutable Instruments Plaits and Elements code by Emilie Gillet.
+homepage: https://github.com/john-k-walton/Prologue-Oscillators
+distribution: download
+install_notes: Download the zip from the releases page, read the PDF manual in the repository, and load the units with Korg's prologue Librarian. The README advises stepping each Param 1 to 6 up and down once after selecting a new model, because bipolar values default to minus 100.
+tags: [oscillator, mutable-instruments-port, plaits, elements, modulation, prologue]
+image:
+  url: https://raw.githubusercontent.com/john-k-walton/Prologue-Oscillators/main/ModMatrixRC5.png
+  alt: Diagram of the PlaitsXplorer modulation matrix, with rows for Timbre, Morph and Harmonics and columns for crossfade, MultiRateLFO, QuadPhaseLFO and key tracking modes
+  credit: John Walton
+  source_url: https://github.com/john-k-walton/Prologue-Oscillators
+  first_party: true
+versions:
+  - version: ElementsXplorer Final
+    date: 2025-11-10
+    url: https://github.com/john-k-walton/Prologue-Oscillators/releases/tag/ElementsXplorer
+  - version: PlaitsXplorer RC4
+    date: 2025-08-07
+    url: https://github.com/john-k-walton/Prologue-Oscillators/releases/tag/PlaitsXplorer

@@ -1,0 +1,32 @@
+device: korg-prologue
+name: Roll-log Sounds units
+summary: Custom oscillators and effects by Roll-log Sounds for prologue, minilogue xd and NTS-1, sold or given away as pay-what-you-want packs on Gumroad, plus wavetable and sample import utilities.
+description: >-
+  Oscillators include Scan (wavetable scanning), Fume (two-operator wavetable
+  FM), Syng (formant synthesis), 2DTB, FBFM, FRFM, PTSW, SW12 and the free
+  PolySquares, and effects include Sheprd, cvRing, LogReverse, LogLooper,
+  Smoke, the 8-bit mod delay Del-8 and the MVF-22 morphing filters. The
+  wavDesk and wavShelf utilities load wavetables and samples into oscillator
+  units. The Roll-log Free Pack, the NTS-1 Pack, Del-8 and MVF-22 are listed
+  on Gumroad at a $0 minimum price; Fume and Syng are paid. The Gumroad free
+  pack page carries an update note from November 2019.
+status: dormant
+authors:
+  - name: Roll-log Sounds
+    url: https://rolllogsounds.com/
+homepage: https://rolllogsounds.com/
+source_status: binary-only
+license: proprietary
+license_notes: No source or license text is published; the packs are distributed as downloads.
+distribution: download
+install_notes: >-
+  Packs are pay-what-you-want downloads on Gumroad (Fume and Syng are priced
+  separately). Load the unit files with Korg's Librarian app; the site has a
+  manual covering the oscillators' parameters and modulation modes.
+tags: [oscillator, modfx, delfx, wavetable, fm, looper, donationware, prologue, minilogue-xd, nts-1]
+video:
+  url: https://www.youtube.com/watch?v=afsFBoPMkIA
+  title: Shepard Tone oscillator for Minilogue XD/Prologue
+  credit: Roll-log Sounds
+  first_party: true
+  found_via: https://rolllogsounds.com/
