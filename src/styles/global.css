@@ -289,6 +289,34 @@
     margin-top: 0.7em;
   }
 
+  /* Collapsible notes: drop the native marker, draw a chevron that turns when open. */
+  .notes-details > summary {
+    list-style: none;
+  }
+  .notes-details > summary::-webkit-details-marker {
+    display: none;
+  }
+  .notes-chevron {
+    flex: none;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0 0.25rem 0.15rem 0.125rem;
+    border-right: 2px solid var(--muted);
+    border-bottom: 2px solid var(--muted);
+    transform: rotate(-45deg);
+    transition: transform 0.15s ease;
+  }
+  .notes-details[open] > summary .notes-chevron {
+    transform: rotate(45deg);
+    margin-bottom: 0.25rem;
+  }
+  .notes-details > summary:hover .notes-chevron {
+    border-color: var(--fg);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .notes-chevron { transition: none; }
+  }
+
   /* Badges */
   .badge {
     display: inline-flex;

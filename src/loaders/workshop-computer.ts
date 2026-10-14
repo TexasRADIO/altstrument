@@ -19,6 +19,10 @@
  *     the data store has them; otherwise the device simply lists no cards.
  *   - A network failure with no cache fails the build, so a broken upstream is
  *     never silently published as an empty device page.
+ *   - A card's `demo-link`, when it is a YouTube URL, is checked against
+ *     YouTube's oEmbed endpoint: a removed or non-embeddable video is dropped,
+ *     a live one supplies the title and channel. A network failure keeps the
+ *     link without them.
  *
  * Slug rule (mirrors tools/sitegen in the upstream repo, `slugify(folderName)`):
  *   lowercase, every run of characters outside [a-z0-9] becomes "-", then
@@ -28,6 +32,7 @@ import type { Loader, LoaderContext } from 'astro/loaders';
 import type { DataEntry } from 'astro:content';
 import { parse } from 'yaml';
 import { LICENSES, type License } from '../content/schema';
+import { youtubeId, youtubeOembedUrl } from '../lib/media';
 
 export const DEVICE = 'music-thing-workshop-computer';
 const ID_PREFIX = `${DEVICE}/`;
@@ -44,7 +49,12 @@ const programUrl = (slug: string) => `https://computer.musicthing.co.uk/programs
 const CONCURRENCY = 8;
 const DAY_MS = 24 * 60 * 60 * 1000;
 const DRAFT_PREFIX = 'Draft listing upstream (info.yaml draft: true). ';
-const META_ETAG = 'workshop-computer:listing-etag';
+/**
+ * Bump when buildEntry's mapping changes, so a cached listing ETag from the old
+ * mapping no longer matches and the cards are rebuilt.
+ */
+const MAPPING_VERSION = 3;
+const META_ETAG = `workshop-computer:listing-etag:v${MAPPING_VERSION}`;
 
 // ---- helpers ---------------------------------------------------------------
 
@@ -239,12 +249,33 @@ function normalizeTags(raw: unknown): string[] {
 
 // ---- entry construction -----------------------------------------------------
 
+/** What oEmbed said about a card's demo-link. */
+type Demo =
+  | { ok: true; url: string; title?: string; credit?: string }
+  | { ok: false; url: string; why: string };
+
 interface Card {
   dir: string;
   slug: string;
   url: string;
   info: Record<string, unknown> | null; // null: info.yaml missing
   parseError?: string;
+  demo?: Demo;
+}
+
+/** Checks a YouTube demo link with oEmbed. Non-YouTube links are reported, not embedded. */
+async function checkDemo(raw: unknown): Promise<Demo | undefined> {
+  const url = httpUrl(raw);
+  if (!url) return undefined;
+  if (!youtubeId(url)) return { ok: false, url, why: 'not a YouTube link' };
+  try {
+    const res = await fetchRaw(youtubeOembedUrl(url));
+    if (res.status !== 200) return { ok: false, url, why: `oEmbed HTTP ${res.status}` };
+    const o = JSON.parse(res.body) as { title?: unknown; author_name?: unknown };
+    return { ok: true, url, title: text(o.title) || undefined, credit: text(o.author_name) || undefined };
+  } catch {
+    return { ok: true, url }; // unverified: keep the link, skip the metadata
+  }
 }
 
 interface Built {
@@ -334,6 +365,9 @@ function buildEntry(card: Card, now: number): Built | { skip: string } {
       : undefined,
     tags,
     versions: versions.length ? versions : undefined,
+    video: card.demo?.ok
+      ? { url: card.demo.url, title: card.demo.title, credit: card.demo.credit, first_party: true, found_via: treeUrl(card.dir) }
+      : undefined,
     generated_from: card.url,
   };
   for (const k of Object.keys(entry)) if (entry[k] === undefined) delete entry[k];
@@ -426,7 +460,8 @@ export async function loadWorkshopComputerCards(ctx: LoaderContext, cached: Data
       if (!doc || typeof doc !== 'object' || Array.isArray(doc)) {
         return { ...base, info: null, parseError: 'info.yaml is not a mapping' };
       }
-      return { ...base, info: normalizeKeys(doc) };
+      const info = normalizeKeys(doc);
+      return { ...base, info, demo: await checkDemo(info.demolink) };
     } catch (e) {
       return { ...base, info: null, parseError: `YAML parse error: ${(e as Error).message.split('\n')[0]}` };
     }
@@ -449,6 +484,9 @@ export async function loadWorkshopComputerCards(ctx: LoaderContext, cached: Data
       const list = unmapped.get(built.unmappedLicense) ?? [];
       list.push(card.dir);
       unmapped.set(built.unmappedLicense, list);
+    }
+    if (card.demo && !card.demo.ok) {
+      logger.warn(`Workshop Computer cards: ${card.dir}: demo-link dropped (${card.demo.why}): ${card.demo.url}`);
     }
     const id = ID_PREFIX + card.slug;
     try {

@@ -5,6 +5,8 @@ interface Props { device: DeviceItem; showManufacturer?: boolean }
 const { device, showManufacturer = true } = Astro.props;
 const { data } = device;
 const n = device.firmwares.length;
+const nTools = device.firmwares.filter((f) => f.data.kind === 'tool').length;
+const counts = [n - nTools && plural(n - nTools, 'firmware'), nTools && plural(nTools, 'tool')].filter(Boolean).join(' · ');
 const image = data.image;
 const logo = image ? undefined : device.logo;
 ---
@@ -31,7 +33,7 @@ const logo = image ? undefined : device.logo;
     {showManufacturer && <p class="text-sm text-muted">{data.manufacturer}</p>}
     {data.tagline && <p class="text-sm">{data.tagline}</p>}
     <p class="mt-auto flex flex-wrap items-baseline justify-between gap-x-3 pt-1 text-xs text-muted">
-      <span class={n === 0 ? '' : 'font-medium text-fg'}>{n === 0 ? 'none listed yet' : plural(n, 'firmware')}</span>
+      <span class={n === 0 ? '' : 'font-medium text-fg'}>{n === 0 ? 'none listed yet' : counts}</span>
       {data.platform && <span class="mono">{data.platform}</span>}
     </p>
   </div>

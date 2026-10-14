@@ -41,6 +41,11 @@ category: synth
 # OPTIONAL. Up to 140 characters, plain text.
 tagline: pocket FM synth
 
+# OPTIONAL. 2 to 4 factual sentences about what the device is. Plain prose,
+# blank line between paragraphs. Firmware caveats go in notes, not here.
+description: >-
+  Example description. Say what the device is and does, in plain factual terms.
+
 # OPTIONAL. MCU, SoC or DSP family.
 platform: ARM Cortex-M4
 
@@ -134,6 +139,29 @@ brick_risk: false
 # OPTIONAL. Defaults to []. Lowercase letters, digits and hyphens only.
 tags: [oscillator, midi-clock]
 
+# OPTIONAL. A demo video. YouTube only (watch, youtu.be, shorts or live links;
+# a t= offset is honoured). Prefer a video linked from the firmware's own
+# README or homepage: set first_party: true and found_via to the page that
+# links it. Otherwise use a third-party demo of this firmware, with
+# first_party: false. Take title and credit (the channel) from YouTube oEmbed.
+video:
+  url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  title: ExampleFW demo
+  credit: Example Channel
+  first_party: true
+  found_via: https://github.com/janedoe/examplefw#readme
+
+# OPTIONAL. Use only when there is no video. A hotlinked screenshot or photo:
+# a direct https image URL (raw.githubusercontent.com or the project's own
+# site), never a github.com/.../blob/ page. Not copied into the repo.
+image:
+  url: https://example.com/examplefw/screenshot.png
+  alt: ExampleFW main screen showing the oscillator page
+  credit: Jane Doe
+  # Page the image appears on.
+  source_url: https://example.com/examplefw
+  first_party: true
+
 # OPTIONAL. Defaults to []. Newest first. Each version string must be unique
 # within the entry.
 versions:
@@ -147,6 +175,8 @@ versions:
   - version: 1.2.0
     url: https://github.com/janedoe/examplefw/releases/tag/v1.2.0
 ```
+
+`pnpm validate` checks every `video` against YouTube's oEmbed endpoint and every `image` URL for an image content type. A removed or missing target (404) is an error; network trouble is only a warning. Set `FIRMWARE_WORLD_SKIP_REMOTE=1` to skip these checks. Workshop Computer cards are fetched at build time (see above) and take their video from the upstream `info.yaml` `demo-link`, so there is no `video` to write for them.
 
 ## Field values
 

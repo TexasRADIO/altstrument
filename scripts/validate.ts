@@ -10,6 +10,7 @@
  *   - `related` device slugs must exist
  *   - every device should have at least one firmware or an explanatory `notes`
  *   - file names must be kebab-case slugs
+ *   - every hotlinked `video` / `image` still resolves (network; see below)
  *
  * Exit code 1 on any error. Warnings are printed but do not fail the run.
  */
@@ -18,6 +19,7 @@ import { join, basename, relative } from 'node:path';
 import { parse } from 'yaml';
 import { deviceSchema, firmwareBaseSchema, manufacturerSchema, refineFirmware } from '../src/content/schema';
 import { slugify } from '../src/lib/slug';
+import { youtubeOembedUrl } from '../src/lib/media';
 import { z } from 'astro/zod';
 
 const ROOT = new URL('..', import.meta.url).pathname;
@@ -130,6 +132,8 @@ for (const [slug, related] of deviceRelated) {
 // ---- firmwares -------------------------------------------------------------
 
 const firmwareCountByDevice = new Map<string, number>();
+/** Hotlinked media to check over the network once the local checks are done. */
+const remoteChecks: { file: string; kind: 'video' | 'image'; url: string }[] = [];
 let firmwareTotal = 0;
 
 let deviceDirs: string[] = [];
@@ -173,6 +177,8 @@ for (const dir of deviceDirs) {
     if (fw.license === 'unspecified' && fw.source_status === 'open') {
       warn(file, 'open source but license unspecified; double-check the repo for a LICENSE file');
     }
+    if (fw.video) remoteChecks.push({ file, kind: 'video', url: fw.video.url });
+    if (fw.image) remoteChecks.push({ file, kind: 'image', url: fw.image.url });
     firmwareTotal++;
     firmwareCountByDevice.set(fw.device, (firmwareCountByDevice.get(fw.device) ?? 0) + 1);
   }
@@ -185,6 +191,82 @@ for (const slug of deviceSlugs) {
       'device has no firmware entries and no notes explaining why',
     );
   }
+}
+
+// ---- hotlinked media ------------------------------------------------------
+//
+// Videos are checked with YouTube's oEmbed endpoint (200 only for a public,
+// embeddable video); images must answer 2xx with an image/* content type.
+// A definitive answer (404, 401, 403, 410, wrong type) is an error; timeouts,
+// 5xx and DNS trouble are warnings so a flaky network doesn't block a build.
+// FIRMWARE_WORLD_SKIP_REMOTE=1 skips the pass (offline development).
+
+const DEFINITIVE = new Set([401, 403, 404, 410]);
+const REMOTE_CONCURRENCY = 8;
+
+async function request(url: string, method: 'GET' | 'HEAD'): Promise<Response> {
+  let lastErr: unknown;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    if (attempt > 0) await new Promise((r) => setTimeout(r, 500 * 2 ** attempt));
+    try {
+      const res = await fetch(url, {
+        method,
+        redirect: 'follow',
+        headers: { 'User-Agent': 'firmware-world-validate' },
+        signal: AbortSignal.timeout(15_000),
+      });
+      if (res.status >= 500 || res.status === 429) {
+        lastErr = new Error(`HTTP ${res.status}`);
+        continue;
+      }
+      return res;
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+  throw lastErr;
+}
+
+/** undefined when fine, otherwise [definitive?, message]. */
+async function checkRemote(kind: 'video' | 'image', url: string): Promise<[boolean, string] | undefined> {
+  try {
+    if (kind === 'video') {
+      const res = await request(youtubeOembedUrl(url), 'GET');
+      await res.body?.cancel();
+      if (res.ok) return undefined;
+      return [DEFINITIVE.has(res.status), `video ${url} is unavailable or not embeddable (oEmbed HTTP ${res.status})`];
+    }
+    let res = await request(url, 'HEAD');
+    // Some hosts refuse HEAD; ask again with GET before calling it broken.
+    if (!res.ok) res = await request(url, 'GET');
+    const type = res.headers.get('content-type') ?? '';
+    await res.body?.cancel();
+    if (!res.ok) return [DEFINITIVE.has(res.status), `image ${url} returned HTTP ${res.status}`];
+    if (!type.startsWith('image/')) return [true, `image ${url} is served as "${type || 'no content-type'}", not an image`];
+    return undefined;
+  } catch (e) {
+    return [false, `${kind} ${url} could not be checked: ${(e as Error).message}`];
+  }
+}
+
+let remoteNote = '';
+if (process.env.FIRMWARE_WORLD_SKIP_REMOTE) {
+  remoteNote = `, ${remoteChecks.length} hotlinked media not checked (FIRMWARE_WORLD_SKIP_REMOTE)`;
+} else if (remoteChecks.length) {
+  let next = 0;
+  let broken = 0;
+  await Promise.all(
+    Array.from({ length: Math.min(REMOTE_CONCURRENCY, remoteChecks.length) }, async () => {
+      while (next < remoteChecks.length) {
+        const c = remoteChecks[next++];
+        const problem = await checkRemote(c.kind, c.url);
+        if (!problem) continue;
+        broken++;
+        (problem[0] ? fail : warn)(c.file, problem[1]);
+      }
+    }),
+  );
+  remoteNote = `, ${remoteChecks.length - broken}/${remoteChecks.length} hotlinked media OK`;
 }
 
 // ---- report ----------------------------------------------------------------
@@ -200,5 +282,5 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(
-  `\nCatalog OK: ${deviceSlugs.size} device(s), ${firmwareTotal} firmware entr${firmwareTotal === 1 ? 'y' : 'ies'}, ${manufacturerTotal} manufacturer file(s).`,
+  `\nCatalog OK: ${deviceSlugs.size} device(s), ${firmwareTotal} firmware entr${firmwareTotal === 1 ? 'y' : 'ies'}, ${manufacturerTotal} manufacturer file(s)${remoteNote}.`,
 );

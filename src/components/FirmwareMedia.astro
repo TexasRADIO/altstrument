@@ -1,0 +1,72 @@
+---
+import type { FirmwareImage, FirmwareVideo } from '@/content/schema';
+import { hostOf } from '@/lib/catalog';
+import { youtubeEmbedUrl, youtubeId, youtubeStart, youtubeThumb, youtubeWatchUrl } from '@/lib/media';
+interface Props { video?: FirmwareVideo; image?: FirmwareImage; name: string }
+const { video, image, name } = Astro.props;
+// A video wins; the image is only the fallback when there is none.
+const id = video ? youtubeId(video.url) : undefined;
+const start = video ? youtubeStart(video.url) : undefined;
+const watchUrl = id ? youtubeWatchUrl(id, start) : undefined;
+const label = video?.title ?? name;
+---
+{id && video && watchUrl ? (
+  <figure class="max-w-[30rem]">
+    <div class="relative aspect-video overflow-hidden rounded border border-line bg-surface-2">
+      <a href={watchUrl} rel="noopener" data-embed={youtubeEmbedUrl(id, start)} data-title={label} class="yt-facade group absolute inset-0 block">
+        <img src={youtubeThumb(id)} alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="block h-full w-full object-cover" />
+        <span class="absolute inset-0 flex items-center justify-center">
+          <span class="flex h-12 w-[4.25rem] items-center justify-center rounded-xl bg-black/75 text-white group-hover:bg-red-600 group-focus-visible:bg-red-600">
+            <svg viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+          </span>
+        </span>
+        <span class="sr-only">Play video: {label}</span>
+      </a>
+    </div>
+    <figcaption class="mt-1.5 text-xs text-muted">
+      {video.title && <>{video.title} · </>}
+      {video.credit && <>{video.credit} · </>}
+      via <a href={watchUrl} rel="noopener">youtube.com</a>
+      {video.first_party && (
+        video.found_via
+          ? <> · linked from <a href={video.found_via} rel="noopener">{hostOf(video.found_via)}</a></>
+          : <> · from the authors</>
+      )}
+    </figcaption>
+  </figure>
+) : image ? (
+  <figure class="max-w-[30rem]">
+    <div class="overflow-hidden rounded border border-line bg-surface-2">
+      <img
+        src={image.url}
+        alt={image.alt}
+        loading="lazy"
+        decoding="async"
+        referrerpolicy="no-referrer"
+        class="block h-auto max-h-[24rem] w-full object-contain"
+      />
+    </div>
+    <figcaption class="mt-1.5 text-xs text-muted">
+      {image.credit}, via <a href={image.source_url} rel="noopener">{hostOf(image.source_url)}</a>
+    </figcaption>
+  </figure>
+) : null}
+
+<script>
+  // Swap each facade for the real player on click. Without JS the link opens the video on YouTube.
+  document.querySelectorAll<HTMLAnchorElement>('a.yt-facade').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      const src = a.dataset.embed;
+      if (!src) return;
+      e.preventDefault();
+      const frame = document.createElement('iframe');
+      frame.src = src;
+      frame.title = a.dataset.title ?? 'Video';
+      frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      frame.allowFullscreen = true;
+      frame.className = 'absolute inset-0 h-full w-full border-0';
+      a.replaceWith(frame);
+      frame.focus();
+    });
+  });
+</script>

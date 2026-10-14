@@ -5,6 +5,7 @@
  * standalone validator (scripts/validate.ts), so the rules live in one place.
  */
 import { z } from 'astro/zod';
+import { youtubeId } from '../lib/media';
 
 export const CATEGORIES = [
   'synth',
@@ -172,6 +173,8 @@ export const deviceSchema = z.object({
   category: z.enum(CATEGORIES),
   /** Short free-text, e.g. "pocket FM synth" or "8-track sampler". */
   tagline: z.string().max(140).optional(),
+  /** What the device is: plain factual prose, blank lines between paragraphs. Shown first on the device page. */
+  description: z.string().optional(),
   /** MCU / SoC / DSP family. Useful for cross-linking similar hardware. */
   platform: z.string().optional(),
   /** The stock OS version most mods currently target. */
@@ -202,6 +205,38 @@ export const versionSchema = z.object({
   notes: z.string().optional(),
 });
 
+/**
+ * A demo video for a firmware. YouTube only; the page embeds it with a
+ * click-to-load youtube-nocookie player. validate.ts checks each one against
+ * YouTube's oEmbed endpoint, so removed or non-embeddable videos fail the build.
+ */
+export const videoSchema = z.object({
+  /** Watch, youtu.be, shorts or live URL. A t= offset is honoured. */
+  url,
+  /** Video title, from oEmbed. */
+  title: z.string().min(1).optional(),
+  /** Channel name, from oEmbed. */
+  credit: z.string().min(1).optional(),
+  /** Linked from the firmware's own README / homepage / release notes, or uploaded by its authors. */
+  first_party: z.boolean().default(false),
+  /** The page that linked the video, when first_party. */
+  found_via: url.optional(),
+});
+
+/**
+ * A hotlinked screenshot or photo, used only when no video exists. Not copied
+ * into the repo; validate.ts checks that the URL still serves an image.
+ */
+export const firmwareImageSchema = z.object({
+  /** Direct https image URL (raw.githubusercontent.com, project site), never a github.com/.../blob/ page. */
+  url,
+  alt: z.string().min(1).max(200),
+  credit: z.string().min(1),
+  /** Page the image appears on. */
+  source_url: url,
+  first_party: z.boolean().default(false),
+});
+
 export const firmwareBaseSchema = z.object({
   name: z.string().min(1),
   kind: z.enum(KINDS).default('firmware'),
@@ -225,6 +260,9 @@ export const firmwareBaseSchema = z.object({
   brick_risk: z.boolean().default(false),
   tags: z.array(z.string().regex(/^[a-z0-9-]+$/)).default([]),
   versions: z.array(versionSchema).default([]),
+  video: videoSchema.optional(),
+  /** Fallback visual when there is no video. */
+  image: firmwareImageSchema.optional(),
   /**
    * Set on entries a build-time loader creates from an upstream data file
    * (e.g. a repo's info.yaml). Points at that file. Such entries have no file
@@ -259,6 +297,16 @@ export function refineFirmware<T extends z.ZodType<FirmwareData>>(schema: T) {
         message: 'every entry needs at least one of source or homepage',
       });
     }
+    if (fw.video && !youtubeId(fw.video.url)) {
+      ctx.addIssue({
+        code: 'custom',
+        path: ['video', 'url'],
+        message: 'video url must be a YouTube watch, youtu.be, shorts or live link',
+      });
+    }
+    if (fw.image && !fw.image.url.startsWith('https://')) {
+      ctx.addIssue({ code: 'custom', path: ['image', 'url'], message: 'image url must be https' });
+    }
     const seen = new Set<string>();
     fw.versions.forEach((v, i) => {
       if (seen.has(v.version)) {
@@ -285,3 +333,5 @@ export type ManufacturerData = z.infer<typeof manufacturerSchema>;
 export type ManufacturerLogo = z.infer<typeof logoSchema>;
 export type FirmwareData = z.infer<typeof firmwareBaseSchema>;
 export type Version = z.infer<typeof versionSchema>;
+export type FirmwareVideo = z.infer<typeof videoSchema>;
+export type FirmwareImage = z.infer<typeof firmwareImageSchema>;
