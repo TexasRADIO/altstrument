@@ -1,0 +1,170 @@
+name: New device/firmware submission
+description: Suggest a firmware, tool or device the catalog is missing.
+title: "[New]: "
+labels: [new entry]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion. Fill in what you know; a maintainer will research the rest and write the entry. If you'd rather write the YAML yourself, open a pull request instead using the templates in [CONTRIBUTING.md](https://github.com/philmillman/altstrument/blob/main/CONTRIBUTING.md).
+
+        We link to where firmware lives and never host it. We don't accept links to redistributed manufacturer firmware, affiliate links, or entries without a working source or homepage.
+
+  - type: dropdown
+    id: submission-type
+    attributes:
+      label: What are you submitting?
+      options:
+        - A firmware or tool for a device already listed
+        - A new device, with firmware or tools
+        - A new device, with no custom firmware yet
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      description: Manufacturer and model. Link the device's altstrument page if it's already listed, or the manufacturer's product page if not.
+      placeholder: Elektron Digitakt, https://altstrument.org/devices/elektron-digitakt
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Firmware or tool name
+      description: Leave blank if you're only submitting a device.
+      placeholder: ExampleFW
+    validations:
+      required: false
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - Firmware (replaces or modifies what runs on the device)
+        - Tool (editor, flasher, emulator, SDK that runs on a computer)
+        - Not applicable (device only)
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source repository or release page
+      placeholder: https://github.com/janedoe/examplefw
+    validations:
+      required: false
+
+  - type: input
+    id: homepage
+    attributes:
+      label: Homepage, forum thread or installer page
+      description: Required if there is no source repository.
+      placeholder: https://example.com/examplefw
+    validations:
+      required: false
+
+  - type: textarea
+    id: authors
+    attributes:
+      label: Authors
+      description: One per line, with a profile link if there is one.
+      placeholder: Jane Doe, https://github.com/janedoe
+    validations:
+      required: false
+
+  - type: dropdown
+    id: source-status
+    attributes:
+      label: Source availability
+      options:
+        - Open (full source published)
+        - Patcher only (patch tooling is public, the firmware changes are not)
+        - Binary only (only compiled images are distributed)
+        - Closed (nothing public)
+        - Not sure
+    validations:
+      required: false
+
+  - type: input
+    id: license
+    attributes:
+      label: License
+      description: The SPDX id from the repository's LICENSE file, e.g. MIT or GPL-3.0-or-later. "Not sure" is fine.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: distribution
+    attributes:
+      label: How do people get it?
+      options:
+        - Prebuilt image you flash yourself
+        - Browser installer (WebMIDI / WebUSB)
+        - Patches a stock firmware file you supply
+        - Paid / commercial
+        - Build it yourself from source
+        - Not sure
+    validations:
+      required: false
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What it does
+      description: One or two plain, factual sentences in your own words. Please don't paste text from the project's README or other sites.
+    validations:
+      required: true
+
+  - type: input
+    id: latest-version
+    attributes:
+      label: Latest version
+      description: Version number and a link to its release page or commit.
+      placeholder: 1.3.0, https://github.com/janedoe/examplefw/releases/tag/v1.3.0
+    validations:
+      required: false
+
+  - type: dropdown
+    id: brick-risk
+    attributes:
+      label: Brick risk
+      description: Is there a known, documented risk of bricking the device when flashing?
+      options:
+        - No known risk
+        - Yes, documented risk
+        - Not sure
+    validations:
+      required: false
+
+  - type: input
+    id: video
+    attributes:
+      label: Demo video
+      description: A YouTube link, ideally one the project itself links to.
+      placeholder: https://www.youtube.com/watch?v=...
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Install caveats, required stock OS version, related devices.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I opened every link above and it works.
+          required: true
+        - label: None of the links point to redistributed manufacturer firmware or carry affiliate/referral codes.
+          required: true
+        - label: I'm one of the authors of this firmware or tool.
+          required: false

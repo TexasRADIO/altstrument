@@ -1,4 +1,27 @@
-# altstrument
+<p align="center">
+  <a href="https://altstrument.org">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset=".github/assets/logo-dark.svg">
+      <img src=".github/assets/logo-light.svg" alt="altstrument logo: a chip with ALT on it" width="130" height="110">
+    </picture>
+  </a>
+</p>
+
+<h1 align="center">altstrument</h1>
+
+<p align="center">Alternative firmware and tools for music hardware. <a href="https://altstrument.org"><strong>altstrument.org</strong></a></p>
+
+<p align="center">
+  <a href="https://github.com/philmillman/altstrument/actions/workflows/ci.yml"><img src="https://github.com/philmillman/altstrument/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI"></a>
+  <a href="https://altstrument.org"><img src="https://img.shields.io/website?url=https%3A%2F%2Faltstrument.org&label=altstrument.org" alt="Site status"></a>
+  <a href="https://github.com/philmillman/altstrument/commits/main"><img src="https://img.shields.io/github/last-commit/philmillman/altstrument" alt="Last commit"></a>
+  <a href="https://github.com/philmillman/altstrument/issues"><img src="https://img.shields.io/github/issues/philmillman/altstrument" alt="Open issues"></a>
+  <br>
+  <a href="https://altstrument.org"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faltstrument.org%2Fapi%2Fstats.json&query=%24.devices&label=devices&color=0a6262" alt="Devices in the catalog"></a>
+  <a href="https://altstrument.org/recent"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faltstrument.org%2Fapi%2Fstats.json&query=%24.firmwares&label=firmwares&color=0a6262" alt="Firmwares in the catalog"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/code-MIT-blue" alt="Code license: MIT"></a>
+  <a href="LICENSE-DATA"><img src="https://img.shields.io/badge/data-CC--BY--4.0-blue" alt="Data license: CC-BY-4.0"></a>
+</p>
 
 altstrument is a read-only directory of custom and third-party firmware and tools for music hardware, including grooveboxes, synths, samplers, controllers, pedals, Eurorack modules and vintage gear. Each device has a page listing the firmware built for it, and each firmware entry records its authors, a source or homepage link, its license, version history and status. The site links to where firmware lives. It does not host firmware files.
 
@@ -36,9 +59,15 @@ src/
         <firmware-slug>.yaml  one YAML file per firmware
     schema.ts                 Zod schemas and allowed values (the field reference)
   content.config.ts           Astro content collections
-  pages/                      Astro pages
+  loaders/                    content loaders for entries fetched at build time
+  pages/                      Astro pages (including /api/catalog.json and /api/stats.json)
+public/                       favicons and device images
 scripts/
   validate.ts                 catalog validator (runs before build and in CI)
+  build-icons.ts              rasterizes the favicon (`pnpm icons`)
+.github/
+  ISSUE_TEMPLATE/             issue forms: bug report, new entry, entry update
+  workflows/ci.yml            validate, type check and build on every push and PR
 .claude/skills/discover/      /discover skill: gather script, config and prompt
 ```
 
@@ -59,9 +88,15 @@ Building fetches the Music Thing Workshop Computer card entries from the upstrea
 
 Builds need `SITE_URL` set to the public base URL the site is deployed to (for example `SITE_URL=https://altstrument.org pnpm build`). It makes canonical, social-image and RSS feed links absolute; the RSS feed refuses to build without it. `pnpm dev` doesn't need it and uses the local server's address.
 
+## Deployment
+
+The site is a static build served by Cloudflare Workers at [altstrument.org](https://altstrument.org). Workers Builds runs `pnpm run build` on every push to `main`, then `wrangler deploy` uploads `dist/` as static assets (see `wrangler.jsonc`). `SITE_URL` is set in the Workers Builds environment.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add a device or firmware, the field reference, and the pull request checklist.
+
+Not writing YAML? [Open an issue](https://github.com/philmillman/altstrument/issues/new/choose) to suggest a new device or firmware, request an update to an existing entry, or report a bug on the site.
 
 To look for firmware and devices not yet in the catalog, run the `/discover` skill in Claude Code (see CONTRIBUTING.md, "Finding new entries").
 
@@ -78,5 +113,3 @@ Each firmware's own code is governed by the license recorded in its entry, not b
 - [aroum/fm1-custom-fw](https://github.com/aroum/fm1-custom-fw)
 - [Maxhodges/noise-engineering-firmware-index](https://github.com/Maxhodges/noise-engineering-firmware-index)
 - [Mutable Instruments third-party firmware](https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/)
-
-Hosting is set up separately.

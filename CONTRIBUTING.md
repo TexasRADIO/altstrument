@@ -2,6 +2,8 @@
 
 Thanks for adding to the catalog. Every entry is a YAML file checked against the schema in `src/content/schema.ts` by `scripts/validate.ts`. The templates below use placeholder values that pass the schema; replace them with real ones.
 
+Not writing YAML? [Open an issue](https://github.com/philmillman/altstrument/issues/new/choose) instead: there are forms for suggesting a new device or firmware, requesting an update to an existing entry, and reporting a bug on the site.
+
 ## Adding a device
 
 1. Create `src/content/devices/<slug>.yaml`.

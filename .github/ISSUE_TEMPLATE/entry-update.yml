@@ -1,0 +1,67 @@
+name: Device/firmware update request
+description: An existing entry is out of date or wrong (new version, moved repo, changed status or license).
+title: "[Update]: "
+labels: [entry update]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Music Thing Workshop Computer program cards are synced from each card's `info.yaml` in the
+        upstream Workshop_Computer repository. To correct one of those, fix it upstream; the next
+        build picks it up.
+
+  - type: input
+    id: url
+    attributes:
+      label: Entry URL
+      description: The altstrument page for the device or firmware.
+      placeholder: https://altstrument.org/firmware/elektron-digitakt/examplefw
+    validations:
+      required: true
+
+  - type: dropdown
+    id: change
+    attributes:
+      label: What needs to change?
+      multiple: true
+      options:
+        - New version or release
+        - Status (e.g. now archived, active again)
+        - Source or homepage link moved or broken
+        - License
+        - Authors
+        - Summary or description is wrong
+        - Install notes or brick risk
+        - Demo video or image
+        - Remove the entry
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: What's there now, and what it should be
+      placeholder: |
+        Latest version listed is 1.2.0; 1.3.0 was released on 2026-01-31.
+    validations:
+      required: true
+
+  - type: input
+    id: evidence
+    attributes:
+      label: Evidence
+      description: A release page, changelog, commit, README or announcement that confirms the change. Dates are only recorded when a source confirms them.
+      placeholder: https://github.com/janedoe/examplefw/releases/tag/v1.3.0
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: The evidence link opens and supports the change.
+          required: true
+        - label: I'm one of the authors of this firmware or tool.
+          required: false

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3 5 26 22" width="130" height="110">
+  <!-- README copy of src/components/Logo.astro, with a fixed color for GitHub's light theme. -->
+  <defs>
+    <mask id="alt">
+      <rect width="32" height="32" fill="#fff"/>
+      <path d="M7 21V13L9 11H11L13 13V21H11V18H9V21ZM9 13V16H11V13Z" fill="#000" fill-rule="evenodd"/>
+      <path d="M15 11H17V19H19V21H15Z" fill="#000"/>
+      <path d="M19 11H25V13H23V21H21V13H19Z" fill="#000"/>
+    </mask>
+  </defs>
+  <path d="M8.5 5V8M13.5 5V8M18.5 5V8M23.5 5V8M8.5 24V27M13.5 24V27M18.5 24V27M23.5 24V27" fill="none" stroke="#0a6262" stroke-width="1"/>
+  <rect x="3" y="8" width="26" height="16" rx="3" fill="#0a6262" mask="url(#alt)"/>
+</svg>

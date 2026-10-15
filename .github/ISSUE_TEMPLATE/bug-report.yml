@@ -1,0 +1,65 @@
+name: Bug report
+description: Something on the site is broken or displays wrong.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Use this for problems with the site itself: layout, search, filters, the feed, broken pages.
+        If an entry's information is wrong or out of date (a new version, a moved repo, a changed
+        license), use the **Device/firmware update request** form instead.
+
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      description: The page where the problem shows up.
+      placeholder: https://altstrument.org/devices/elektron-digitakt
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Layout or display
+        - Search, filters or sorting
+        - Images or video embeds
+        - RSS feed
+        - A link on the site itself (not an entry's source or homepage)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Steps to reproduce, if it takes more than opening the page.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      placeholder: Safari 19 on iPhone, Firefox 140 on Linux
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag images into this box.
+    validations:
+      required: false
