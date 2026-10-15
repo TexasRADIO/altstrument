@@ -148,3 +148,15 @@ ignore:
   - url: https://github.com/kay-lpzw/TRAM8
     reason: manufacturer's own TRAM8 firmwares and stock .syx files; linked from the device page instead
     date: 2026-10-15
+  - url: https://natlifesounds.com/product/ambient-dreams-for-m-vave-fm-1-fm-synthesizers/
+    reason: commercial SysEx sound bank, not firmware or a tool
+    date: 2026-10-15
+  - url: https://github.com/stanleygurvich/UplinkFeluccaEditor-WebApp
+    reason: fork of the Felucca web installer and editor, not an original project
+    date: 2026-10-15
+  - url: https://github.com/Jickssa/watatribz-es2
+    reason: unbuilt C stubs with no hardware support or loader, untouched since 2025-08-07
+    date: 2026-10-15
+  - url: https://github.com/stanleygurvich/fm1-firmware-database
+    reason: feed bot for a non-public editor; maintainer removed it from the catalog
+    date: 2026-10-15
