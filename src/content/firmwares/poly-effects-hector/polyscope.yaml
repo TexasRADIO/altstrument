@@ -1,0 +1,56 @@
+device: poly-effects-hector
+name: Polyscope
+summary: Four-channel oscilloscope module for Hector with its own full-screen UI, an LV2 capture plugin and a checksum-checked USB installer.
+description: >-
+  Polyscope adds a scope module that shows the four inputs as stacked traces,
+  an overlay or an X/Y plot, with timebase and voltage scale controls, AC or
+  DC coupling per channel, several trigger modes including a free-running
+  roll mode, holdoff, persistence, cursors and per-channel readouts. The
+  capture runs in a new LV2 plugin, and the frequency readout is measured
+  there from the full-rate signal. The release replaces a handful of Poly
+  Effects firmware 407 UI files (module list, widget and Ingen wrapper
+  Python, headless startup and one QML screen) with patched copies and adds
+  the scope screen. The repository README describes only Hector, though the
+  Beebo pedal runs the same firmware. It is a community project not
+  affiliated with Poly Effects.
+status: active
+authors:
+  - name: nutellatomato
+    url: https://github.com/nutellatomato
+source: https://github.com/nutellatomato/polyscope
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The repository LICENSE is the GPL version 3 text and the README says the patch
+  set as a whole is distributed under it. The README states the scope LV2
+  plugins are original work under GPL-2.0-or-later. The bundled UI files are
+  patched copies of the Poly Effects digit_ui repository, whose README says its
+  code is GPL without naming a version, and the PolyLV2 and Ingen sources
+  under source/ keep their own licenses.
+distribution: download
+requires_stock: "407"
+install_notes: >-
+  Unzip the installer from the release, copy the contents of its
+  hector-scope-usb-v2 folder to the root of a FAT32 USB stick and insert it in
+  a running Hector on firmware 407. The installer runs by itself, replaces
+  files only if their checksums match the 407 baseline, backs up the
+  originals on the unit and on the stick, and reboots. Remove the stick when
+  the screen goes black or the unit repeats the install on every boot. The
+  recovery USB set is built from the repository and restores the original 407
+  files. Those backup files (headless.py, ingen_wrapper.py, module_info.py,
+  show_widget.py and qml/PatchBayEffect.qml) are byte-identical to the files
+  at the v407 tag of the Poly Effects digit_ui repository, which is
+  open source (see that firmware entry for its license wording). The
+  repository also ships a build script, with the stated limit that baseline
+  checksums cannot be regenerated from it.
+brick_risk: false
+tags: [oscilloscope, utility, ui, lv2, installer]
+versions:
+  - version: v2.0.0
+    date: 2026-07-17
+    url: https://github.com/nutellatomato/polyscope/releases/tag/v2.0.0
+    notes: 12-bit trace resolution, a fixed memory growth problem and lighter rendering; removes the earlier scope module.
+  - version: v1.2.0
+    date: 2026-07-15
+    url: https://github.com/nutellatomato/polyscope/releases/tag/v1.2.0
+    notes: First public release, published under the name HectorScope.

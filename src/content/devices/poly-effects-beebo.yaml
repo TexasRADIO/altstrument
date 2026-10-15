@@ -1,0 +1,42 @@
+name: Beebo
+manufacturer: Poly Effects
+category: pedal
+tagline: Touchscreen pedal that hosts a patchable collection of LV2 effect and synth modules
+description: >-
+  Beebo is a touchscreen pedal from Poly Effects, an Australian maker run by
+  Loki Davison. Its Linux-based firmware lets the player load effect, looper,
+  synth, convolution and modulation modules onto a patching screen and connect
+  them to each other. Digit, an earlier Poly Effects pedal that shared this
+  hardware, was merged into the same firmware, so older Digit units can be
+  updated to it. Presets can be exchanged with the Hector Eurorack module.
+platform: Debian-based Linux on a removable CPU module (Ingen plugin host, LV2 plugins, Qt/QML UI)
+stock_firmware: "407"
+links:
+  manufacturer: https://www.polyeffects.com/polyeffects/p/beebo
+  community:
+    - label: Poly Effects firmware page
+      url: https://www.polyeffects.com/firmware
+    - label: Poly Effects GitHub organisation
+      url: https://github.com/polyeffects
+    - label: Beebo and Hector manual (source)
+      url: https://github.com/polyeffects/manual
+notes: >-
+  Poly Effects publishes the Beebo and Hector UI source in the digit_ui
+  repository and installs updates from a USB stick. The 2026 version 407
+  installer replaces the storage file system and is documented as a long
+  procedure with a manual reflash fallback that needs the case opened. Beebo
+  was listed as sold out on the Poly Effects shop. Poly Effects also sells
+  Verbs, Ample, Trails, Kanso and Flat V pedals; none of them is documented as
+  running this firmware and the firmware page warns against updating Verbs
+  units.
+related: [poly-effects-hector]
+image:
+  src: /images/devices/poly-effects-beebo.jpg
+  style: photo
+  alt: Top view of the blue Poly Effects Beebo pedal, its touchscreen showing the Macro Osc model picker above three footswitches
+  width: 1200
+  height: 972
+  credit: Poly Effects
+  license: manufacturer product image
+  source_url: https://www.polyeffects.com/polyeffects/p/beebo
+  original_url: https://images.squarespace-cdn.com/content/v1/60122936c5de08104ff37507/1613366137014-0MXH2OIY1H59J2PE7Z1J/Beebo-front2.jpg

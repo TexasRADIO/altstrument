@@ -1,0 +1,40 @@
+device: poly-effects-beebo
+name: BiPoSeq
+summary: Adds a 16-step bipolar CV sequencer module, with internal-clock and external-trigger versions, to the Beebo and Hector module browser.
+description: >-
+  BiPoSeq has sixteen steps that each hold a voltage from minus five to plus
+  five volts, edited by dragging bars or typing a value on the keypad. The
+  internal version runs from a BPM setting with play and back inputs, and the
+  external version steps on trigger inputs; both appear under the CV
+  generators in the module browser. The plugin is derived from the Poly Effects
+  step sequencer plugins, and the repository is a fork of digit_ui with the
+  BiPoSeq UI changes already applied. On Hector one unit of module output
+  corresponds to five volts at the jack. The README says the module is not
+  yet tested on a physical Beebo or Hector.
+status: active
+authors:
+  - name: Gary Kane
+    url: https://github.com/PedalEffected
+source: https://github.com/PedalEffected/Beebo/tree/master/biposeq
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  Per the README and the source header of the plugin. The surrounding fork of
+  Poly Effects digit_ui has no LICENSE file; its README says code without its
+  own notice is GPL.
+distribution: source-only
+requires_stock: "407 (the UI patcher was tested against the current digit_ui)"
+install_notes: >-
+  Needs SSH access to the unit as the debian user. Copy the biposeq folder to
+  the unit, run the install script with --check for a dry run, then without
+  it, and reboot. The script remounts the read-only system layer, copies the
+  prebuilt ARM64 plugin into the LV2 directory, patches the UI and backs up
+  each changed UI file. An uninstall script restores them. Run the installer
+  again after each Poly Effects firmware update. The plugin source builds with
+  make.
+tags: [sequencer, cv, ui, lv2]
+versions:
+  - version: master @ cd9f38f
+    date: 2026-10-13
+    url: https://github.com/PedalEffected/Beebo/commit/cd9f38f
+    notes: No tagged releases; this is the latest commit.

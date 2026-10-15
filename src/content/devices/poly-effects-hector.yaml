@@ -1,0 +1,38 @@
+name: Hector
+manufacturer: Poly Effects
+category: eurorack
+tagline: 30 HP Eurorack module running the Beebo module-patching firmware
+description: >-
+  Hector is a 30 HP Eurorack module from Poly Effects with six audio and CV
+  inputs, eight outputs and MIDI in and out. It runs the same touchscreen
+  firmware as the Beebo pedal, which hosts a library of more than a hundred
+  LV2 modules that are patched together on screen, including sequencers,
+  convolution reverb, a looper, filters, LFOs and oscillator voices. Presets
+  can be swapped with Beebo.
+platform: Debian-based Linux on a removable CPU module (Ingen plugin host, LV2 plugins, Qt/QML UI)
+stock_firmware: "407"
+links:
+  manufacturer: https://www.polyeffects.com/polyeffects/p/hector
+  community:
+    - label: Poly Effects firmware page
+      url: https://www.polyeffects.com/firmware
+    - label: Poly Effects GitHub organisation
+      url: https://github.com/polyeffects
+    - label: Mod Wiggler thread
+      url: https://www.modwiggler.com/forum/viewtopic.php?t=243346
+notes: >-
+  Hector shares its firmware with the Beebo pedal, so the official UI source
+  and the community Polyscope oscilloscope patch apply to the same code base.
+  Updates are installed from a USB stick; read the install notes on each
+  firmware entry before starting.
+related: [poly-effects-beebo]
+image:
+  src: /images/devices/poly-effects-hector.jpg
+  style: photo
+  alt: Poly Effects Hector Eurorack module at an angle, its touchscreen showing a four-track Euclidean page above rows of input and output jacks
+  width: 1200
+  height: 960
+  credit: Poly Effects
+  license: manufacturer product image
+  source_url: https://www.polyeffects.com/polyeffects/p/hector
+  original_url: https://images.squarespace-cdn.com/content/v1/60122936c5de08104ff37507/1628654331105-G5F9IKFZ2523TNI42AIS/Hector_1-2082021.jpg
