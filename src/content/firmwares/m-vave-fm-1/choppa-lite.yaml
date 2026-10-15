@@ -1,0 +1,28 @@
+device: m-vave-fm-1
+name: Choppa Lite
+kind: tool
+summary: >-
+  Installable browser sampler that records up to twelve seconds, chops it onto sixteen pads and sends the bank
+  to the FM-1 over USB-MIDI.
+description: >-
+  A web app on the WaveLoop site, with a computer-keyboard pad layout. It targets the Felucca and SLOOP
+  firmware families, and links to the Felucca fork behind the WaveLoop FM-1 entry as the FM-1 protocol source.
+  The app's own source is not published, and the same site also lists an iOS Choppa app on the App Store.
+status: active
+authors:
+- name: WaveLoop
+  url: https://waveloop.app/
+source_status: closed
+license: unspecified
+license_notes: No licence statement on the page; the FM-1 protocol it speaks is from the linked Felucca fork.
+homepage: https://waveloop.app/toys/choppa/
+distribution: browser-installer
+install_notes: >-
+  Open the page in a browser with Web MIDI and connect the FM-1 over USB; the page can be installed as an app.
+  It transfers samples only and does not flash firmware.
+brick_risk: false
+tags: [sampler, midi]
+versions:
+- version: 1.1.7
+  url: https://waveloop.app/toys/choppa/
+  notes: Version shown on the page.

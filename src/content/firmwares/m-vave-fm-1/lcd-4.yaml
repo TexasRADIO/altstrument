@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: LCD-4
+summary: >-
+  Four-track groovebox with one drum track and three synth tracks, 16-step patterns with chaining, chords,
+  parameter locks and 16 punch-in effects; each sound has a small animated LCD-style scene on screen.
+description: >-
+  Drums come in four kits of eleven parts (808, 909, arcade and rhythm box), played from the black keys with
+  the white keys as steps. Sixteen circuit-modelled synth sounds cover basses, keys and leads, and any synth
+  track can load any of them. It has 16 patterns chained up to 64 steps, live and step recording, slides,
+  ratchets and swing, four demo songs, MIDI in and out and MIDI clock. It is built on IND-1 and AMB-1, which
+  take their platform layer from Felucca, and shares its settings area with those firmwares, so the first save
+  can replace data they stored.
+status: active
+authors:
+- name: Roberto Vega (devrvega)
+  url: https://github.com/devrvega
+source: https://github.com/devrvega/LCD-4
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Code is GPL-3.0-only (LICENSING.md); fonts are SIL OFL 1.1.
+homepage: https://devrvega.github.io/LCD-4/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py from the release package. The installer
+  has a Back to the stock firmware option, which asks you to download M-VAVE's own V15 file from M-VAVE and
+  select it; M-UPGRADE also restores stock. An FM-1 that fails to start twice boots into a safe mode the
+  installer can reach. Browser emulator on the project site.
+brick_risk: true
+tags: [sequencer, synth-engine, drums, fx, performance, midi]
+image:
+  url: https://raw.githubusercontent.com/devrvega/LCD-4/main/docs/img/screen-acid.png
+  alt: "LCD-4 screen showing a small pixel-art lab scene above the Acid sound's cutoff, resonance, envelope and decay knobs"
+  credit: devrvega
+  source_url: https://github.com/devrvega/LCD-4
+  first_party: true
+versions:
+- version: 0.1.0
+  date: 2026-10-15
+  url: https://github.com/devrvega/LCD-4/releases/tag/v0.1.0
+  notes: First release.

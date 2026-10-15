@@ -1,0 +1,34 @@
+device: m-vave-fm-1
+name: FM-1 Screen Reader
+kind: tool
+summary: >-
+  Web page and shared firmware code that make a connected FM-1 speak what its screen shows, using a built-in
+  voice or the computer's screen reader.
+description: >-
+  A supporting firmware sends its screen text over USB MIDI SysEx together with a link to a words file
+  published on its own site. The page in Chrome or Edge turns that into speech with eSpeak NG compiled to
+  WebAssembly, or passes the text to VoiceOver, NVDA, JAWS or TalkBack. The repository holds the shared C
+  code that firmware authors copy in, the protocol description, an audit script for the wording, a terminal
+  reader, and a Claude Code skill for adding support to a firmware. Supported firmwares listed in the README
+  are X0X, FoMni-1, AMB-1, Polly, MONK-1, Mocky and CTL-1.
+status: active
+authors:
+- name: Charles Vestal
+  url: https://github.com/charlesvestal
+source: https://github.com/charlesvestal/fm1-reader
+source_status: open
+license: MIT
+license_notes: >-
+  The eSpeak NG voice in web/espeak/ and the worker that runs it (web/tts_worker.js) are
+  GPL-3.0-or-later; a page that uses the voice carries both licenses.
+homepage: https://charlesvestal.github.io/fm1-reader/
+install_notes: >-
+  Nothing is installed on the FM-1 by the page itself. Connect the FM-1 over USB, open the page in Chrome or
+  Edge and click Connect. It only reads firmwares that include the shared announce code.
+brick_risk: false
+tags: [accessibility, sdk, midi]
+versions:
+- version: main @ 2f49d91
+  date: 2026-10-15
+  url: https://github.com/charlesvestal/fm1-reader/commit/2f49d91c142b1304fc5654496b35d40607d8511e
+  notes: No tagged releases; this is the latest commit.

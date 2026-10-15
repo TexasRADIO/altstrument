@@ -7,7 +7,7 @@ description: >-
   Modelled on late-1970s and early-1980s American 8-voice polysynths. Each voice has two oscillators with hard
   sync and cross-modulation, per-voice drift, and four voice modes. There are 32 programs, 8 patterns in flash,
   USB MIDI in and out, and a browser simulator that compiles the firmware's own C sources. It is built on
-  Dinghy and uses sloopDX-style panel layers. A port for the M-VAVE SMK-37 is documented in the repository.
+  Dinghy and uses sloopDX-style panel layers. The same repository carries SMK-37 beta builds (see OberVave SMK-37).
 status: active
 authors:
 - name: Sven Trogus (zvenson)
@@ -33,6 +33,14 @@ image:
   source_url: https://github.com/zvenson/obervave
   first_party: true
 versions:
+- version: 1.3.1
+  date: 2026-10-15
+  url: https://github.com/zvenson/obervave/tree/v1.3.1
+  notes: Git tag; no GitHub release page. Sequencer coloured by track.
+- version: '1.3'
+  date: 2026-10-15
+  url: https://github.com/zvenson/obervave/tree/v1.3
+  notes: Git tag; no GitHub release page. Full-screen step sequencer and eight saved patterns.
 - version: 1.2.1
   date: 2026-10-13
   url: https://github.com/zvenson/obervave/tree/v1.2.1

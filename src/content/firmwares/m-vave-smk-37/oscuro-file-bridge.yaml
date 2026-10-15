@@ -1,0 +1,32 @@
+device: m-vave-smk-37
+name: Oscuro File Bridge
+kind: tool
+summary: >-
+  Prototype phone-to-keyboard USB file service: a RAM payload on the SMK-37, an Android USB-host app and a
+  Python mock, exchanging placeholder file lists over a vendor bulk protocol.
+description: >-
+  The keyboard payload is loaded into RAM through the chip's ROM bootloader, shows a scrollable list on the
+  240x240 display and enumerates as a vendor USB device, so nothing is written to flash and it is gone after
+  a power cycle. The phone acts as USB host. The author reports it verified on hardware on 2026-10-13, but only
+  fake file lists move in either direction. Directory listing, transfer and a remote-UI model are written
+  up as proposals, not implemented. The firmware half builds only inside a checkout of the Oscuro SMK-37
+  project, which the repository does not link.
+status: active
+authors:
+- name: kartun83
+  url: https://github.com/kartun83
+source: https://github.com/kartun83/oscuro-companion-protocol
+source_status: open
+license: Apache-2.0
+distribution: source-only
+install_notes: >-
+  Build the payload inside an Oscuro checkout and run it with the repository's UBOOT runner script; the
+  Android app opens in Android Studio and needs a phone with USB host support. The README notes the USB
+  ID is from a shared test range.
+brick_risk: false
+tags: [research, usb, protocol]
+versions:
+- version: main @ 9e22ce3
+  date: 2026-10-14
+  url: https://github.com/kartun83/oscuro-companion-protocol/commit/9e22ce391d48d17cc002ff3eb4b20119bedece4b
+  notes: No tagged releases; this is the latest commit.
