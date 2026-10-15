@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: SLOOP DX7 Banks
+summary: >-
+  Test builds of SLOOP with a DX7 voice engine holding twelve voice banks in flash, loaded from a web editor or
+  sent from Dexed, plus a key-velocity setting and latching punch-in effects.
+description: >-
+  The fork is a branch of SLOOP, not a release of it, and its builds are marked as test builds and
+  pre-releases. No DX7 voice data ships in the firmware; banks are loaded as .syx files. The author's notes say
+  the DX7 voices play dry, as the stock firmware plays its own, and that moving between this build and plain
+  upstream SLOOP can erase the first eight banks, so a backup from the editor comes first. The work was also
+  offered to the SLOOP repository as pull requests, which are now closed (SLOOP itself later gained a 6-op FM
+  engine with DX7 import).
+status: active
+authors:
+- name: Majid Nik (majnikool)
+  url: https://github.com/majnikool
+source: https://github.com/majnikool/sloop-fm1/tree/majid
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from SLOOP and Felucca. The DX7 engine follows Dexed's msfa core (Apache-2.0).
+homepage: https://majnikool.github.io/sloop-fm1/webapp/installer/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or sloop-2.5-b28.fwsc from the release with tools/fm1_install.py.
+  The release notes say nothing is erased across builds 19 to 27, and advise backing up from the editor
+  before switching to plain upstream SLOOP.
+brick_risk: true
+tags: [synth-engine, fm, editor, performance]
+versions:
+- version: v2.5-b28-test
+  date: 2026-10-09
+  url: https://github.com/majnikool/sloop-fm1/releases/tag/v2.5-b28-test
+  notes: Pre-release. DX7 voices play as the patch is, with no level trim.
+- version: v2.5-b27-test
+  date: 2026-10-09
+  url: https://github.com/majnikool/sloop-fm1/releases/tag/v2.5-b27-test
+  notes: Pre-release. Adds a KEY VELOCITY setting and plays picked DX7 voices dry.
+- version: v2.5-b26-test
+  date: 2026-10-09
+  url: https://github.com/majnikool/sloop-fm1/releases/tag/v2.5-b26-test
+  notes: Pre-release.

@@ -1,0 +1,47 @@
+device: m-vave-fm-1
+name: OberVave
+summary: >-
+  Single-engine 8-voice analog-style polysynth with two oscillators per voice, a morphing 12/24 dB filter,
+  chorus, delay, plate reverb, an arpeggiator and a two-track step sequencer.
+description: >-
+  Modelled on late-1970s and early-1980s American 8-voice polysynths. Each voice has two oscillators with hard
+  sync and cross-modulation, per-voice drift, and four voice modes. There are 32 programs, 8 patterns in flash,
+  USB MIDI in and out, and a browser simulator that compiles the firmware's own C sources. It is built on
+  Dinghy and uses sloopDX-style panel layers. A port for the M-VAVE SMK-37 is documented in the repository.
+status: active
+authors:
+- name: Sven Trogus (zvenson)
+  url: https://github.com/zvenson
+source: https://github.com/zvenson/obervave
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Platform code carries Leo Kuroshita's Felucca copyright and SLOOP's changes; LICENSING.md lists who wrote
+  each part, including the SMK-37 board layer by M. Geisler.
+homepage: https://github.com/zvenson/obervave
+distribution: download
+install_notes: >-
+  The README gives the FM-1 Firmware Hub (thefirmwarehub.com) as one install route, or run
+  tools/fm1_install.py on a built or provided .fwsc over USB. The README warns not to install 1.1, whose
+  USB-MIDI out is broken and which no installer can replace once it is running; 1.2 fixed this.
+brick_risk: true
+tags: [synth-engine, sequencer, fx, reverb, delay, midi, usb-midi, emulator]
+image:
+  url: https://raw.githubusercontent.com/zvenson/obervave/main/docs/screen.png
+  alt: "OberVave screen showing program 01 DARK ARP, the arpeggiator page with four knobs, a scope trace and eight voice LEDs"
+  credit: "zvenson"
+  source_url: https://github.com/zvenson/obervave
+  first_party: true
+versions:
+- version: 1.2.1
+  date: 2026-10-13
+  url: https://github.com/zvenson/obervave/tree/v1.2.1
+  notes: Git tag; no GitHub release page.
+- version: '1.2'
+  date: 2026-10-13
+  url: https://github.com/zvenson/obervave/tree/v1.2
+  notes: Git tag; no GitHub release page.
+- version: '1.1'
+  date: 2026-10-13
+  url: https://github.com/zvenson/obervave/tree/v1.1
+  notes: Git tag; no GitHub release page. The README says its USB-MIDI out is broken.

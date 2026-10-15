@@ -1,0 +1,44 @@
+device: m-vave-fm-1
+name: CoralFlower
+summary: >-
+  Chord instrument for the FM-1, a fork of ChoralRoot FM-1 with its own chord keys, bass part, arpeggiator,
+  looper, six effects, about 60 sounds and a pixel plant that grows from the chords you play.
+description: >-
+  Upper keys turn each scale note into a chord (major, minor, sus, 6, 7, add9 and combinations), in a Top or a
+  Side key layout that each have a Lock mode, over 27 scales. A bass part with an octaver, a nine-pattern arpeggiator
+  that follows the metronome or MIDI clock, a loop recorder for chord progressions and an ordered chain of
+  filter, drive, chorus, phaser, delay and reverb sit on top of virtual-analogue and FM engines. The home screen
+  draws a flower or a coral whose parts follow the notes played. The author says it is inspired by the
+  Telepathic Instruments Orchid. It keeps ChoralRoot's and Felucca's hardware layer and update loader, and
+  the web page also runs the firmware in a browser emulator.
+status: active
+authors:
+- name: Danil Tokarev (FicusFicusov)
+  url: https://github.com/FicusFicusov
+source: https://github.com/FicusFicusov/CoralFlower
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Built on ChoralRoot FM-1 and Felucca; inherited and bundled parts (Melodee, MSFA and Dexed, SLOOP, the
+  Departure Mono font) keep their own licences (LICENSING.md, docs/LICENSING-choralroot.md). The release
+  packages carry three unmodified JieLi AC79 SDK files under Apache-2.0.
+homepage: https://ficusficusov.github.io/CoralFlower/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer in Chrome or Edge over a direct USB connection, with a browser emulator at /play/.
+  If the FM-1 already runs CoralFlower, ChoralRoot or Felucca, the installer saves its sounds to a file first;
+  the stock firmware's sounds cannot be backed up. The README says to get FM-1 V15 from M-VAVE and install it
+  from the same page to go back to stock.
+brick_risk: true
+tags: [chords, synth-engine, performance, looper, fx, fm, midi]
+image:
+  url: https://raw.githubusercontent.com/FicusFicusov/CoralFlower/main/docs/images/home.png
+  alt: "CoralFlower home screen showing the chord name Dmaj9 above a pink flower and a row of chord keys"
+  credit: "Danil Tokarev"
+  source_url: https://github.com/FicusFicusov/CoralFlower
+  first_party: true
+versions:
+- version: '0.1'
+  date: 2026-10-15
+  url: https://github.com/FicusFicusov/CoralFlower/releases/tag/v0.1
+  notes: First release.

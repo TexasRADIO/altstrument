@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: TRIBE
+summary: >-
+  X0X fork with ten tracks where any engine plays on any track: two kicks, 909 and 808 drum voices and a 303,
+  sixteen clips per track, scatter effects and two master effects.
+description: >-
+  Replaces X0X's five fixed parts with ten tracks, each assigned one of 25 engines. Every track holds sixteen
+  clips with their own length (16, 32 or 64 steps), rate, direction and swing, launched at the end of the
+  pattern or at once. Scatter effects on the keys act on a track or the whole mix, and two master effects
+  take per-track sends. Four master knobs can be assigned to volume, a DJ filter, effect amounts or tempo.
+  The site has a browser emulator, a manual and release notes. If it crashes twice at start it enters a
+  safe mode that the web installer can reach, and a rescue script exists for a unit in the chip's boot mode.
+status: active
+authors:
+- name: apiel
+  url: https://github.com/apiel
+source: https://github.com/apiel/fm1-tribe
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Ported 303 parts are MIT (Open303); a break generator is used with its author's permission. See LICENSING.md.
+homepage: https://apiel.github.io/fm1-tribe/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with the package from the site. The
+  installer can put M-VAVE's firmware back, and saved clips survive updates. The project calls this a beta.
+brick_risk: true
+tags: [drums, synth-engine, sequencer, fx, emulator, performance]
+image:
+  url: https://raw.githubusercontent.com/apiel/fm1-tribe/main/docs/img/screen-seq.png
+  alt: "TRIBE sequencer page for track 1 with the KICK W engine, a row of sixteen steps with four lit, and note, velocity and probability knobs"
+  credit: "apiel"
+  source_url: https://github.com/apiel/fm1-tribe
+  first_party: true
+versions:
+- version: 0.1 beta
+  url: https://apiel.github.io/fm1-tribe/new/
+  notes: First public version. The release notes carry no date; no GitHub release or tag.

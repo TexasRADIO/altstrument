@@ -1,0 +1,25 @@
+device: m-vave-fm-1
+name: SLICE64-FM
+summary: >-
+  Four-track tracker firmware with SID, FM, sampler and 303-style engines, edited from a browser page over USB.
+  The firmware is not published; only the web editor is.
+description: >-
+  The editor page covers 32 patterns, a song order and 4-track mixer, 32 instruments with 104 factory presets,
+  eight 8-bit sample slots, and playback of C64 .sid tunes on the SID voices. It mirrors the FM-1's screen and
+  requires firmware s1.3 or later; the editor repository's latest commit is made for firmware s6.3. No
+  firmware download, installer or source was found, so only the editor can be opened.
+status: announced
+authors:
+- name: jeymadcat-ops
+  url: https://github.com/jeymadcat-ops
+source_status: closed
+license: unspecified
+license_notes: >-
+  No licence statement on the editor page or in its repository (jeymadcat-ops/SLICE64-FM-web), which holds
+  only the editor.
+homepage: https://jeymadcat-ops.github.io/SLICE64-FM-web/
+install_notes: >-
+  No firmware installer or package is linked from the editor page or its repository. The editor needs Chrome
+  or Edge with Web MIDI SysEx and a USB cable.
+brick_risk: false
+tags: [tracker, sid, fm, sampler, editor]

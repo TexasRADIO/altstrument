@@ -1,0 +1,37 @@
+device: m-vave-fm-1
+name: SIDOU
+summary: >-
+  Commodore 64 SID instrument for the FM-1 with its own SID emulation, a live-play mode and MIDI input, and a
+  step sequencer and .sid playback planned. Tested in an emulator only.
+description: >-
+  Plays the SID's three voices with a 6581 or 8580 model, four presets, filter and pulse-width knobs and MIDI
+  over TRS and USB, and adds three stereo effect slots after the chip. The SID core is the author's own C code
+  and the repository carries reference tests against libresidfp. A tracker, a step sequencer, .sid playback and
+  GoatTracker and SID-Wizard importers are described in the design document but are not in the current code.
+  It is built on Felucca's hardware layer, USB stack and update loader and is checked in the fm1-emu emulator.
+  The README says no FM-1 has run it yet and that it is not ready to be installed on hardware. It is a separate
+  project from FM-1 SID.
+status: active
+authors:
+- name: Denis Sablic (dsablic)
+  url: https://github.com/dsablic
+source: https://github.com/dsablic/sidou
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  The project's own files are GPL-3.0-or-later. The firmware image links Felucca's GPL-3.0-only hardware layer
+  and USB stack, so the image as a whole is GPL-3.0-only. It also carries data derived from reSID 0.16 and
+  libresidfp (GPL-2.0-or-later), an MIT port of the Rings reverb, and three unmodified JieLi AC79 SDK files
+  (Apache-2.0) in each package (LICENSING.md).
+distribution: source-only
+install_notes: >-
+  The author says to build it yourself (BUILDING.md) and not to flash it yet: it has not run on a real unit.
+  The planned route is Felucca's installer with a sidou.fwsc package, after the hardware checklist in
+  docs/hardware-test.md and with recovery tools and the official FM-1 firmware at hand.
+brick_risk: true
+tags: [synth-engine, fx, midi, emulator, research]
+versions:
+- version: main @ 394a872
+  date: 2026-10-15
+  url: https://github.com/dsablic/sidou/commit/394a87225994469e503a36dc14f0ceb87840179a
+  notes: No tagged releases; this is the latest commit.

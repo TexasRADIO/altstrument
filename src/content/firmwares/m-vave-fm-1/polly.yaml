@@ -32,6 +32,10 @@ image:
   source_url: https://charlesvestal.github.io/fm1-polly/
   first_party: true
 versions:
+- version: 0.4.2
+  date: 2026-10-14
+  url: https://github.com/charlesvestal/fm1-polly/releases/tag/v0.4.2
+  notes: Adds a setting to keep USB audio at full level regardless of the MASTER knob.
 - version: 0.4.1
   date: 2026-10-13
   url: https://github.com/charlesvestal/fm1-polly/releases/tag/v0.4.1

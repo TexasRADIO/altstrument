@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: FM-1 Studio
+kind: tool
+summary: >-
+  Android app that runs community FM-1 firmware engines (SLOOP, FM1 MOVE, Felucca, sloopDX, Ghoulbox, zp12) on a
+  phone or tablet with a touch panel, piano roll and sound editors.
+description: >-
+  Builds each firmware's own C source into an Android app, showing the native 240 x 240 display with touch
+  controls for keys, buttons and encoders. It adds a piano roll, drum and chord editors, a
+  mixer, performance pads, external USB and Bluetooth LE MIDI input, and per-engine projects. The firmwares are
+  pinned submodules and keep their upstream licences and credits. An ESP32-P4 port in the tree is described as
+  internal and unfinished.
+status: active
+authors:
+- name: thingsapart
+  url: https://github.com/thingsapart
+source: https://github.com/thingsapart/fm1-studio
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The app code is GPL-3.0-only; the bundled firmware, fonts and samples keep their own terms, listed in
+  LICENSING.md. Some inherited icon atlases are marked all rights reserved by Hügelton Instruments and are not
+  under the GPL.
+homepage: https://github.com/thingsapart/fm1-studio
+distribution: download
+install_notes: >-
+  Preview APKs are attached to the GitHub releases, or build with python3 android/build.py. It runs the
+  firmwares on the phone and does not flash the FM-1.
+brick_risk: false
+tags: [emulator, editor, sequencer, midi]
+image:
+  url: https://raw.githubusercontent.com/thingsapart/fm1-studio/main/docs/screenshots/09-landscape.png
+  alt: "FM-1 Studio in landscape: SLOOP's native display on the left, a four-track mixer with mute buttons and a one-octave keyboard on the right"
+  credit: thingsapart
+  source_url: https://github.com/thingsapart/fm1-studio
+  first_party: true
+versions:
+- version: v0.4
+  date: 2026-10-14
+  url: https://github.com/thingsapart/fm1-studio/releases/tag/v0.4
+  notes: Pre-release. Adds an FM-1-style view and JP-1 MIDI pad support.
+- version: v0.3
+  date: 2026-10-13
+  url: https://github.com/thingsapart/fm1-studio/releases/tag/v0.3
+  notes: Pre-release.

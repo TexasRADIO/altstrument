@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: PIGEON
+summary: >-
+  Felucca 1.5.1 derivative that turns the FM-1 into an audio-only performance sampler: two chopped song samples
+  and a 16-pad drum kit, a 64-step sequencer, patterns and arrangement, with a browser emulator and sample tool.
+description: >-
+  PIGEON removes the synth engines and builds the instrument around samples. Two song samples (indexed mono
+  MP3 or IMA ADPCM) and a 16-pad drum kit share 408 KiB of flash. Each song takes up to 32 chops with transient
+  detection, per-chop pitch, envelope, one-shot, hold, loop and latch settings. A paged step grid of up to 64
+  steps per track records live or by step, with microtiming, conditions, probability and repeats, and feeds
+  patterns A to D and a 16-section arrangement. A three-track mixer, filter, delay, chorus, reverb, distortion
+  and compression sit on top. Samples are prepared in a browser sample tool and sent over USB; a separate
+  browser emulator runs the firmware without a device. The installer reads the running firmware and refuses
+  Sloop, old Felucca betas and unknown builds, and the package adds a recovery boot stub adapted from
+  ChoralRoot. Hardware verification of the beta build is listed as pending in the repository.
+status: active
+authors:
+- name: The Shrimp Blimp
+  url: https://github.com/TheShrimpBlimp
+source: https://github.com/TheShrimpBlimp/pigeon
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca (LICENSING.md); bundled libmad (GPL-2.0-or-later), ported DSP, fonts and the lamejs
+  encoder in the browser tool keep their own licences listed there.
+homepage: https://theshrimpblimp.com/pigeon/
+distribution: browser-installer
+requires_stock: V15
+install_notes: >-
+  Web installer on the project site (desktop Chrome or Edge, USB), or tools/fm1_install.py from the
+  repository. Return to official M-VAVE V15 with your current firmware's stock-return procedure first; the
+  installer refuses Sloop, Felucca 0.x betas and unrecognised firmware. Back up before installing or replacing
+  sample banks. Recovery notes are in docs/PIGEON_RECOVERY.md.
+brick_risk: true
+tags: [sampler, sequencer, performance, drums, fx, emulator, editor]
+versions:
+- version: main @ abb62aa
+  date: 2026-10-15
+  url: https://github.com/TheShrimpBlimp/pigeon/commit/abb62aaeb951d449c0e9bcc76d43c84d3750d8c3
+  notes: >-
+    No tagged releases; this is the latest commit. The project site offers a 0.1 beta candidate package, and
+    the repository lists hardware checks for it as pending.
