@@ -1,0 +1,38 @@
+device: hermetic-modular-alchemy-lab
+name: Break
+summary: Drum-break firmware for the Alchemy Lab V2 that plays sliced breaks from an SD card in the ectocore.rocks layout and mangles them with a seeded per-slice glitch engine.
+description: >-
+  Break reads sample banks laid out the way the ectocore.rocks card exporter
+  writes them, with slice points, kick and snare marks and effect settings, and
+  plays them through the glitch engine from Smack. Controls cover how many
+  slices get an effect, amen-style looping of random slice runs, sample and bank
+  choice, a DJ filter, clock ratio and tap tempo. A script in the repository can
+  build a compatible card from your own break recordings. The author states it is
+  a clean-room implementation from a format description, contains none of the
+  GPL-3.0 code of the project it takes its card format from, and is MIT. The
+  only release is an early build that has not been run on a module. Hermetic
+  Modular did not write or endorse it.
+status: active
+authors:
+  - name: Tim Cox (timncox)
+    url: https://github.com/timncox
+source: https://github.com/timncox/break-alchemy
+source_status: open
+license: MIT
+homepage: https://timncox.github.io/alchemy-lab/break/
+distribution: download
+requires_stock: Alchemy Lab V2 board
+install_notes: >-
+  Copy break_alchemy.bin into the /alchemy folder of the module's microSD card
+  and switch to it from the SD picker of a family firmware that is already
+  running (hold B2 and B3 for two seconds, then B1). It needs a FAT32 card with
+  breaks in the ectocore.rocks layout, either exported from that site or built
+  with the repository's make_card.py script. The release is an untested early
+  build.
+brick_risk: false
+tags: [sampler, fx, glitch, performance, platform]
+versions:
+  - version: firmware-2026-10-06
+    date: 2026-10-06
+    url: https://github.com/timncox/alchemy-lab/releases/tag/firmware-2026-10-06
+    notes: Pre-release with Seq, Break and Stencil builds; not yet played on a module.

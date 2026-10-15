@@ -1,0 +1,38 @@
+device: hermetic-modular-alchemy-lab
+name: Mark
+summary: Five-track live looper for the Alchemy Lab V2, with 55 seconds per track, clock sync, per-track one-shot, reverse, insert effect and pan, and USB audio and controller modes.
+description: >-
+  Mark records, plays and overdubs five loop tracks held in the module's SDRAM,
+  one per LED ring, and selects tracks and pages with the six pots and three
+  buttons. With nothing on the clock jack the first recorded loop sets the bar;
+  with a clock everything snaps to it. Version 0.2.0 adds a USB audio interface
+  mode (two in, two out) and support for a Launchpad Mini MK3, a Launch Control
+  XL and a GP2040-CE pad such as the Haute42 on the USB-C port. It shares its
+  engine with the author's Schwung looper for the Ableton Move and carries the
+  same SD-card firmware picker as the author's other Alchemy Lab firmwares.
+  Hermetic Modular did not write or endorse it.
+status: active
+authors:
+  - name: Tim Cox (timncox)
+    url: https://github.com/timncox
+source: https://github.com/timncox/mark-alchemy
+source_status: open
+license: MIT
+license_notes: One file derived from STMicroelectronics' USB device library keeps ST's license (src/LICENSE-ST-USB.md).
+homepage: https://timncox.github.io/mark-alchemy/
+distribution: download
+requires_stock: Alchemy Lab V2 board
+install_notes: >-
+  Hold B3 at power-on to enter update mode, then flash mark_alchemy.bin from
+  Hermetic's web programmer or with dfu-util. Alternatively put the .bin in the
+  /alchemy folder of the microSD card and switch to it from another family
+  firmware's Settings page. Mark keeps its working state in preset slot 13, so
+  anything another firmware saved there is overwritten. The release notes say it
+  has been played on one module and USB audio tested on macOS only.
+brick_risk: false
+tags: [looper, performance, usb-audio, platform]
+versions:
+  - version: v0.2.0
+    date: 2026-09-26
+    url: https://github.com/timncox/mark-alchemy/releases/tag/v0.2.0
+    notes: Beta. Adds USB audio mode, Launchpad and GP2040-CE pad support, and held punch effects.

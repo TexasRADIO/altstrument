@@ -1,0 +1,36 @@
+device: noise-engineering-versio
+name: Capicola Versio
+summary: Port of Heavylight Industries' Capicola keyframe time stretcher and transient-driven auto-slicer to the Versio, with the original DSP unchanged.
+description: >-
+  Stereo input is stretched while a transient detector watches the same signal; when a transient passes the threshold, the
+  read head jumps to the present with a short crossfade and continues stretching. Seven knobs set stretch, pitch, threshold,
+  grain, quality, feedback and mix, and holding the button opens a second page of seven parameters. Because the Versio has
+  no CV outputs, the envelope and trigger signals that Capicola puts on jacks drive the four RGB LEDs instead. The port
+  layer is shared with the author's Ableton Move version. The DSP is compiled from upstream (a git submodule); the port
+  is tested against it sample for sample on a computer. The README says it builds and passes its tests but has not yet been
+  run on a Versio, and that the panel mapping is a proposal. The repository has one commit, and the upstream Capicola for the
+  Alchemy Lab is catalogued separately.
+status: active
+authors:
+  - name: Tim Cox (timncox)
+    url: https://github.com/timncox
+  - name: Heavylight Industries
+    url: https://github.com/heavylight-industries
+source: https://github.com/timncox/capicola-versio
+source_status: open
+license: AGPL-3.0-only
+license_notes: >-
+  LICENSE is the GNU AGPL v3, inherited from upstream Capicola; no "or later" grant was found in the README or the source headers
+  checked.
+distribution: source-only
+install_notes: >-
+  No releases are published. Build the internal-flash image with make -C firmware APP_TYPE=BOOT_NONE after initialising the
+  upstream submodule (not recursively), then upload the .bin on Noise Engineering's firmware page. A BOOT_SRAM build for the Daisy
+  tooling is also described. Flashing an official Noise Engineering firmware restores the module to stock.
+brick_risk: false
+tags: [time-stretch, pitch-shift, granular, fx, experimental]
+versions:
+  - version: main @ acafccc
+    date: 2026-08-24
+    url: https://github.com/timncox/capicola-versio/commit/acafccc5c22b539b6d9843496c92151d613d1537
+    notes: No tagged releases; this is the latest commit.

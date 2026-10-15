@@ -1,0 +1,36 @@
+device: hermetic-modular-alchemy-lab
+name: Seq
+summary: Sequencer for the Alchemy Lab V2 that generates a 303-style bass part and a lead part following a chord progression, plus four drum triggers.
+description: >-
+  Seq writes two voices, a bass and a lead, that follow a chord progression, and
+  adds four drum trigger parts. The repository has a chord-to-MIDI core, a
+  Launchpad driver and MIDI output code, and its README is two lines long; the
+  details are in the manual on the Alchemy Lab project page. The only release is
+  an early build that the author says has not been run on a module and was
+  tested on a computer and in an emulator. It carries the same SD-card firmware
+  picker as the author's other Alchemy Lab firmwares. Hermetic Modular did not
+  write or endorse it.
+status: active
+authors:
+  - name: Tim Cox (timncox)
+    url: https://github.com/timncox
+source: https://github.com/timncox/seq-alchemy
+source_status: open
+license: MIT
+license_notes: One file derived from STMicroelectronics' USB device library keeps ST's license (alchemy/src/LICENSE-ST-USB.md).
+homepage: https://timncox.github.io/alchemy-lab/seq/
+distribution: download
+requires_stock: Alchemy Lab V2 board
+install_notes: >-
+  Copy seq_alchemy.bin into the /alchemy folder of the module's microSD card and
+  switch to it from the SD picker of a family firmware that is already running
+  (hold B2 and B3 for two seconds, then B1). The first time, flash one family
+  firmware from Hermetic's web programmer. The release is an untested early
+  build, so expect rough edges.
+brick_risk: false
+tags: [sequencer, performance, platform]
+versions:
+  - version: firmware-2026-10-06
+    date: 2026-10-06
+    url: https://github.com/timncox/alchemy-lab/releases/tag/firmware-2026-10-06
+    notes: Pre-release with Seq, Break and Stencil builds; not yet played on a module.

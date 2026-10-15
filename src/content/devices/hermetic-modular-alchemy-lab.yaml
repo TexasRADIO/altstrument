@@ -27,6 +27,8 @@ links:
       url: https://github.com/hermetic-modular
     - label: Hermetic Modular Discord
       url: https://discord.gg/FEEEQFdd2G
+    - label: Tim Cox's Alchemy Lab firmware homepage
+      url: https://timncox.github.io/alchemy-lab/
 notes: >-
   Any Alchemy Lab firmware runs on any Alchemy Lab; the panel is swapped to
   match. Official firmwares are flashed from the web programmer over the

@@ -1,0 +1,38 @@
+device: hermetic-modular-alchemy-lab
+name: Smack
+summary: Live loop capture for the Alchemy Lab V2 that records into a ring, cuts the grabbed loop into slices and runs a seeded pattern of glitch effects across them.
+description: >-
+  Smack records everything played into a ring buffer, grabs the last chosen
+  number of steps on demand and divides the loop into slices. A seeded pattern
+  of effects is then applied across the slices, so a given seed always produces
+  the same result. It is the same engine as the author's Smack for the Noise
+  Engineering Versio, rebuilt for six pots on two pages, three buttons and the
+  Lab's LED rings. Version 0.2.0 adds a USB audio interface mode and controller
+  support through the USB-C port. It carries the same SD-card firmware picker as
+  the author's other Alchemy Lab firmwares. Hermetic Modular did not write or
+  endorse it.
+status: active
+authors:
+  - name: Tim Cox (timncox)
+    url: https://github.com/timncox
+source: https://github.com/timncox/smack-alchemy
+source_status: open
+license: MIT
+license_notes: One file derived from STMicroelectronics' USB device library keeps ST's license (src/LICENSE-ST-USB.md).
+homepage: https://timncox.github.io/smack-alchemy/
+distribution: download
+requires_stock: Alchemy Lab V2 board
+install_notes: >-
+  Hold B3 at power-on to enter update mode, then flash smack_alchemy.bin from
+  Hermetic's web programmer or with dfu-util. Alternatively put the .bin in the
+  /alchemy folder of the microSD card and switch to it from another family
+  firmware's Settings page. Smack keeps its working state in preset slot 12, so
+  anything another firmware saved there is overwritten. The release notes say it
+  has been played on one module.
+brick_risk: false
+tags: [looper, fx, glitch, usb-audio, platform]
+versions:
+  - version: v0.2.0
+    date: 2026-09-26
+    url: https://github.com/timncox/smack-alchemy/releases/tag/v0.2.0
+    notes: Beta. Adds USB audio mode, Launchpad and GP2040-CE pad support, and held punch effects.

@@ -20,6 +20,7 @@ license_notes: >-
   Vendored Mutable Instruments code is MIT (Émilie Gillet); Warps comes from
   Parasites by Matthias Puech. The LICENSE file lists the other vendored
   components.
+homepage: https://timncox.github.io/alchemy-lab/
 distribution: download
 requires_stock: Alchemy Lab V2 board
 install_notes: >-

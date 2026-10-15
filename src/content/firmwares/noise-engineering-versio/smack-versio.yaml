@@ -1,0 +1,52 @@
+device: noise-engineering-versio
+name: Smack Versio
+summary: Third-party Versio firmware that records live audio into a rolling buffer, cuts the last loop into slices, re-orders them from a seed and applies per-slice glitch effects.
+description: >-
+  Audio is recorded continuously, and holding the button captures the last stretch of steps as a loop that is cut into a grid of
+  slices. A SEED knob determines which slices are re-ordered and which get an effect, and BLEND crossfades between the clean
+  loop and the glitched one, all quantised to the rack clock. v0.4.0 adds a momentary punch effect on the button, a triple-tap
+  config layer for three extra settings and a DJ filter. It is a port of the author's Smack module for the Ableton Move, cut down
+  to the Versio's seven knobs and no screen, and the author's Alchemy Lab version appears separately in this catalog. The
+  README and the GitHub description still say it has never run on hardware, but the release notes and manual record it
+  played on a module from 2026-08-19 and flashed from Noise Engineering's firmware page on 2026-08-20. The boot CPU readout
+  was reported at 50-75% in the worst hard runs. The author notes that Noise Engineering does not support it.
+status: active
+authors:
+  - name: Tim Cox (timncox)
+    url: https://github.com/timncox
+source: https://github.com/timncox/smack-versio
+source_status: open
+license: MIT
+license_notes: >-
+  LICENSE is MIT and also lists vendored MIT components (the Smack engine, schwung's plugin header). The faceplate geometry is
+  derived from a print template in the FRGMNTS Versio manual, which restricts using its data to manufacture panels for sale.
+homepage: https://timncox.github.io/smack-versio/
+distribution: download
+install_notes: >-
+  Put the Versio in DFU mode (hold BOOT, tap RESET, release BOOT) and upload smack_versio-0.4.1.bin on Noise Engineering's
+  firmware page; no bootloader or toolchain is needed. The release zip also holds a BOOT_SRAM build for the Daisy web
+  programmer or dfu-util, which needs the Daisy bootloader installed once. Flashing an official Noise Engineering firmware
+  puts the module back to stock. Do not flash v0.1.0, which hard-faults on boot.
+brick_risk: false
+tags: [looper, glitch, slicer, fx, performance]
+versions:
+  - version: v0.4.1
+    date: 2026-08-20
+    url: https://github.com/timncox/smack-versio/releases/tag/v0.4.1
+    notes: Firmware identical to v0.4.0; the lower switch is relabelled MODE in the faceplate and documentation.
+  - version: v0.4.0
+    date: 2026-08-20
+    url: https://github.com/timncox/smack-versio/releases/tag/v0.4.0
+    notes: Adds a punch button, a config layer and a DJ filter.
+  - version: v0.3.0
+    date: 2026-08-20
+    url: https://github.com/timncox/smack-versio/releases/tag/v0.3.0
+    notes: Internal-flash build that installs from Noise Engineering's firmware page.
+  - version: v0.2.0
+    date: 2026-08-20
+    url: https://github.com/timncox/smack-versio/releases/tag/v0.2.0
+    notes: First build played on hardware; fixes the boot fault, the loop recorder stall and LIVE mode.
+  - version: v0.1.0
+    date: 2026-08-09
+    url: https://github.com/timncox/smack-versio/releases/tag/v0.1.0
+    notes: Pre-release that hard-faults on boot; do not use.

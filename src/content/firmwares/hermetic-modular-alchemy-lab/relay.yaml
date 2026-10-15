@@ -1,0 +1,34 @@
+device: hermetic-modular-alchemy-lab
+name: Relay
+summary: MIDI-to-CV firmware for the Alchemy Lab V2 and the Daisy Patch, turning USB MIDI into one to four voices on the Lab's eight CV outputs.
+description: >-
+  Relay is one MIDI-to-CV engine built for two modules. On the Alchemy Lab it
+  takes USB MIDI on the front USB-C port and drives the eight CV-out jacks with
+  one to four voices, velocity, two assignable modulation outputs, triggers,
+  clock and run/reset, depending on the voice count. The engine covers note
+  priority, legato, retrigger, glide, pitch bend, voice allocation and stealing,
+  and a 24 ppqn clock divider. The author states it is built and unit-tested but
+  has never been run on hardware, and the name is a placeholder. There is no
+  release; the repository holds only source. Hermetic Modular did not write or
+  endorse it.
+status: active
+authors:
+  - name: Tim Cox (timncox)
+    url: https://github.com/timncox
+source: https://github.com/timncox/relay
+source_status: open
+license: MIT
+distribution: source-only
+requires_stock: Alchemy Lab V2 board
+install_notes: >-
+  Build from source with the Alchemy SDK and flash like the author's other Alchemy
+  Lab firmware, or copy the .bin into /alchemy on the microSD card and pick it
+  from a family firmware's SD picker. The README says neither firmware has been
+  flashed, so nothing is proven on a jack.
+brick_risk: false
+tags: [midi, usb-midi, platform]
+versions:
+  - version: release @ 95835b8
+    date: 2026-10-14
+    url: https://github.com/timncox/relay/commit/95835b8
+    notes: No tagged releases; this is the latest commit.
