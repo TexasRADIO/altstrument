@@ -69,6 +69,10 @@ const nav = [
     <meta name="twitter:card" content={imageUrl ? 'summary_large_image' : 'summary'} />
     {imageUrl && <meta name="twitter:image" content={imageUrl} />}
     <meta name="generator" content={Astro.generator} />
+    {/* Counterscale analytics (self-hosted). Production builds only, so dev never reports pageviews. */}
+    {import.meta.env.PROD && (
+      <script is:inline id="counterscale-script" data-site-id="altstrument" src="https://analytics.altstrument.org/tracker.js" defer></script>
+    )}
   </head>
   <body class="flex min-h-screen flex-col">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-10 focus:rounded focus:bg-surface focus:px-3 focus:py-2">Skip to content</a>
