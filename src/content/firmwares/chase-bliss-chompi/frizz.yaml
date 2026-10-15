@@ -29,6 +29,14 @@ install_notes: >-
   returns to stock the same way.
 tags: [looper, fx, midi, sdk, performance]
 versions:
+  - version: v1.5.0-beta.2
+    date: 2026-10-15
+    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v1.5.0-beta.2
+    notes: Pre-release. Replaces the master compressor with a multiband finalizer and adds a frequency shifter as the phaser's second mode.
+  - version: v1.5.0-beta.1
+    date: 2026-10-14
+    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v1.5.0-beta.1
+    notes: Pre-release. Adds loops loaded from the SD card, USB audio and a web companion for loading loops.
   - version: v1.0.1
     date: 2026-10-13
     url: https://github.com/ZUHcYa/FrizZ/releases/tag/v1.0.1

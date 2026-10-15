@@ -32,6 +32,54 @@ video:
   credit: Sam Banks
   first_party: true
 versions:
+  - version: "MIDI SCENES engine latch (PR #754)"
+    date: 2026-10-15
+    url: https://github.com/sambanks/octabam/pull/754
+    notes: MIDI SCENES now follows the engine's bank and Part latch each playback step, so a direct pattern jump re-mixes the scenes in the same step.
+  - version: "REC THRESHOLD armed indicator (PR #728)"
+    date: 2026-10-15
+    url: https://github.com/sambanks/octabam/pull/728
+    notes: An armed track's status icon blinks, and the IN level meter falls back faster after the input goes quiet.
+  - version: "EUCLID FILL (PR #735)"
+    date: 2026-10-15
+    url: https://github.com/sambanks/octabam/pull/735
+    notes: Adds a TRACK+PAGE page that writes a Euclidean rhythm (STEPS, PULSE, ROT) as sample trigs on the held tracks.
+  - version: "RND NAME (PR #729)"
+    date: 2026-10-15
+    url: https://github.com/sambanks/octabam/pull/729
+    notes: FUNC+CUE in the name editor fills in a random two-word name for new projects, saved samples, directories and sets, and Kits.
+  - version: "STEM REC window (PR #724)"
+    date: 2026-10-15
+    url: https://github.com/sambanks/octabam/pull/724
+    notes: STEM REC opens in its own UP+REC window so it can be used alongside BRAIN.
+  - version: "Remix selection persists (PR #745)"
+    date: 2026-10-15
+    url: https://github.com/sambanks/octabam/pull/745
+    notes: The chosen remix is saved on the card and restored at boot; refused saved-data files now get keep, skip, replace or back-up choices.
+  - version: "LOFI2 insert (PR #734)"
+    date: 2026-10-15
+    url: https://github.com/sambanks/octabam/pull/734
+    notes: Adds LOFI2, a ring modulator or stereo frequency shifter followed by sample-rate and bit reduction, to the octabam-inserts remix (FX2 only).
+  - version: "BRAIN beta screens (PR #714)"
+    date: 2026-10-14
+    url: https://github.com/sambanks/octabam/pull/714
+    notes: BRAIN gains Part-based templates and PERFORMANCE, LOG and ABOUT screens, with defaults applied on project creation (beta, port-tested).
+  - version: "GATE VERB (PR #718)"
+    date: 2026-10-14
+    url: https://github.com/sambanks/octabam/pull/718
+    notes: Adds a gated plate reverb insert with a GATE control that closes the wet signal after the input falls quiet.
+  - version: "STEM REC STATS.TXT (PR #644)"
+    date: 2026-10-13
+    url: https://github.com/sambanks/octabam/pull/644
+    notes: STEM REC writes a STATS.TXT with each take, uses less interrupt time, and T8 stops being a source while MASTER TRACK is on.
+  - version: "Stations on FX1+FX2 (PR #713)"
+    date: 2026-10-13
+    url: https://github.com/sambanks/octabam/pull/713
+    notes: SPECTRUM, CHARACTER and MODULATION can be built onto both FX menus; CHARACTER works without SEND and CLOUDS VERB is added.
+  - version: "octabam-core, inserts and bus remixes (PR #709)"
+    date: 2026-10-13
+    url: https://github.com/sambanks/octabam/pull/709
+    notes: Adds the octabam-core, octabam-inserts and octabam-bus official remixes.
   - version: "REC THRESHOLD (PR #687)"
     date: 2026-10-13
     url: https://github.com/sambanks/octabam/pull/687

@@ -24,7 +24,8 @@ requires_stock: "3.10"
 install_notes: >-
   Download Zoom's official MS-50G 3.10 updater, drag it onto MIDISTOMP-builder.exe
   from the releases page and run the updater it writes. Zoom's own updater takes
-  the pedal back to stock. The author warns that flashing modified firmware can
+  the pedal back to stock. Since v1.1 the builder also accepts Zoom's Mac updater
+  (tested on an MS-50G). The author warns that flashing modified firmware can
   brick a pedal and points to docs/safety.md in the repository.
 brick_risk: true
 tags: [midi, performance, fx, ui, patch]
@@ -35,6 +36,10 @@ video:
   first_party: true
   found_via: https://github.com/matujuice/zoom-ms-midistomp#demo
 versions:
+  - version: v1.1
+    date: 2026-10-15
+    url: https://github.com/matujuice/zoom-ms-midistomp/releases/tag/v1.1
+    notes: Faster left/right scrolling between effects, patch up and down by MIDI CC 80 and 81, and a builder for the Mac updater.
   - version: v1.0
     date: 2026-10-09
     url: https://github.com/matujuice/zoom-ms-midistomp/releases/tag/v1.0
