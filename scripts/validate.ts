@@ -199,7 +199,7 @@ for (const slug of deviceSlugs) {
 // embeddable video); images must answer 2xx with an image/* content type.
 // A definitive answer (404, 401, 403, 410, wrong type) is an error; timeouts,
 // 5xx and DNS trouble are warnings so a flaky network doesn't block a build.
-// FIRMWARE_WORLD_SKIP_REMOTE=1 skips the pass (offline development).
+// ALTSTRUMENT_SKIP_REMOTE=1 skips the pass (offline development).
 
 const DEFINITIVE = new Set([401, 403, 404, 410]);
 const REMOTE_CONCURRENCY = 8;
@@ -212,7 +212,7 @@ async function request(url: string, method: 'GET' | 'HEAD'): Promise<Response> {
       const res = await fetch(url, {
         method,
         redirect: 'follow',
-        headers: { 'User-Agent': 'firmware-world-validate' },
+        headers: { 'User-Agent': 'altstrument-validate' },
         signal: AbortSignal.timeout(15_000),
       });
       if (res.status >= 500 || res.status === 429) {
@@ -250,8 +250,8 @@ async function checkRemote(kind: 'video' | 'image', url: string): Promise<[boole
 }
 
 let remoteNote = '';
-if (process.env.FIRMWARE_WORLD_SKIP_REMOTE) {
-  remoteNote = `, ${remoteChecks.length} hotlinked media not checked (FIRMWARE_WORLD_SKIP_REMOTE)`;
+if (process.env.ALTSTRUMENT_SKIP_REMOTE) {
+  remoteNote = `, ${remoteChecks.length} hotlinked media not checked (ALTSTRUMENT_SKIP_REMOTE)`;
 } else if (remoteChecks.length) {
   let next = 0;
   let broken = 0;

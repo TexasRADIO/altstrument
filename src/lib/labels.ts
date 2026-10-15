@@ -73,12 +73,12 @@ export function creditName(credit: string): string {
 /**
  * Caption lead-in for a device image, shown before the license and source link.
  *   photo:    "Photo: Jane Doe"
- *   line-art: "Line art by Firmware World, after the Elektron product image"
+ *   line-art: "Line art by altstrument, after the Elektron product image"
  */
 export function imageCreditLabel(image: Pick<DeviceImage, 'style' | 'credit'>): string {
   if (image.style === 'line-art') {
     const after = image.credit.replace(/^\s*(?:line art\b.*?,\s*)?after\s+/i, '').trim() || image.credit.trim();
-    return `Line art by Firmware World, after ${after}`;
+    return `Line art by altstrument, after ${after}`;
   }
   return `Photo: ${creditName(image.credit)}`;
 }

@@ -12,8 +12,8 @@ export async function GET(context: APIContext) {
   const site = new URL(import.meta.env.BASE_URL, context.url);
   const rows = recentVersions(await getDevicesWithFirmwares(), 50);
   return rss({
-    title: 'Firmware World: recent versions',
-    description: 'The most recent dated versions of custom and third-party firmware for music hardware.',
+    title: 'altstrument: recent versions',
+    description: 'The most recent dated versions of custom and third-party firmware and tools for music hardware.',
     site,
     trailingSlash: false,
     items: rows.map((r) => ({

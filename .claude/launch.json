@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "firmware-world",
+      "name": "altstrument",
       "runtimeExecutable": "pnpm",
       "runtimeArgs": [
         "dev",
@@ -12,7 +12,7 @@
       "port": 4321
     },
     {
-      "name": "firmware-world-preview",
+      "name": "altstrument-preview",
       "runtimeExecutable": "pnpm",
       "runtimeArgs": [
         "preview",

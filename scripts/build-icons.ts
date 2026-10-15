@@ -37,21 +37,21 @@ function ico(frames: { size: number; png: Buffer }[]): Buffer {
   return Buffer.concat([header, ...frames.map((f) => f.png)]);
 }
 
-// At 16px the hairline pins and FW strokes fall between pixels and smear, so that frame is
+// At 16px the ALT strokes fall between pixels and smear, so that frame is
 // hand-pixeled instead: # package, + rounded corner, . clear.
 const PIXEL16 = [
   '.+############+.',
   '+##############+',
   '################',
   '################',
-  '###....#.#.#.###',
-  '###.####.#.#.###',
-  '###.####.#.#.###',
-  '###...##.#.#.###',
-  '###.####.#.#.###',
-  '###.####.#.#.###',
-  '###.####.#.#.###',
-  '###.#####.#.####',
+  '###..##.###...##',
+  '##.##.#.####.###',
+  '##.##.#.####.###',
+  '##.##.#.####.###',
+  '##....#.####.###',
+  '##.##.#.####.###',
+  '##.##.#.####.###',
+  '##.##.#...##.###',
   '################',
   '################',
   '+##############+',

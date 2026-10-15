@@ -4,12 +4,12 @@
     @media (prefers-color-scheme: dark) { .body { fill: #66d3c6; } }
   </style>
   <defs>
-    <clipPath id="cap"><rect x="0" y="8" width="32" height="16"/></clipPath>
-    <mask id="fw">
+    <mask id="alt">
       <rect width="32" height="32" fill="#fff"/>
-      <path d="M4 8H13V11H7V14H11V17H7V24H4Z" fill="#000"/>
-      <path d="M15.85 6L18.6 26L21.4 6L24.2 26L26.95 6" fill="none" stroke="#000" stroke-width="2.9" stroke-linejoin="bevel" clip-path="url(#cap)"/>
+      <path d="M4 23V12L7 9H9L12 12V23H9V18H7V23ZM7 12V15H9V12Z" fill="#000" fill-rule="evenodd"/>
+      <path d="M15 9H18V20H21V23H15Z" fill="#000"/>
+      <path d="M21 9H28V12H26V23H23V12H21Z" fill="#000"/>
     </mask>
   </defs>
-  <rect class="body" x="1" y="1" width="30" height="30" rx="5" mask="url(#fw)"/>
+  <rect class="body" x="1" y="1" width="30" height="30" rx="5" mask="url(#alt)"/>
 </svg>

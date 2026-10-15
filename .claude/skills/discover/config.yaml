@@ -6,7 +6,7 @@
 since_days: 14
 
 # Sent on every feed request. lines (llllllll.co) refuses non-browser agents.
-user_agent: "Mozilla/5.0 (compatible; firmware-world-discover/0.1; +https://firmware.world)"
+user_agent: "Mozilla/5.0 (compatible; altstrument-discover/0.1; +https://altstrument.org)"
 
 # Case-insensitive substrings. A feed item is kept when its title or summary
 # contains one of these, or names a device in the catalog. Deliberately narrow:

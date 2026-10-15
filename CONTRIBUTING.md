@@ -21,7 +21,7 @@ Some entries are not files in this repository. They are fetched from an upstream
 - Such entries carry a `generated_from` field with the URL of the upstream file they were built from, and their pages show a "Synced from" row.
 - To correct one, fix the upstream `info.yaml`; the next build picks it up. There is nothing to edit here.
 - To change how fields are mapped (status, license, tags), edit the loader in `src/loaders/workshop-computer.ts`.
-- Builds need network access for these entries. The loader caches on the directory listing's ETag, so an unchanged upstream costs one request. Set `GITHUB_TOKEN` to raise the GitHub API rate limit, or `FIRMWARE_WORLD_SKIP_REMOTE=1` to build offline from the cached data store.
+- Builds need network access for these entries. The loader caches on the directory listing's ETag, so an unchanged upstream costs one request. Set `GITHUB_TOKEN` to raise the GitHub API rate limit, or `ALTSTRUMENT_SKIP_REMOTE=1` to build offline from the cached data store.
 
 ## Finding new entries
 
@@ -187,7 +187,7 @@ versions:
     url: https://github.com/janedoe/examplefw/releases/tag/v1.2.0
 ```
 
-`pnpm validate` checks every `video` against YouTube's oEmbed endpoint and every `image` URL for an image content type. A removed or missing target (404) is an error; network trouble is only a warning. Set `FIRMWARE_WORLD_SKIP_REMOTE=1` to skip these checks. Workshop Computer cards are fetched at build time (see above) and take their video from the upstream `info.yaml` `demo-link`, so there is no `video` to write for them.
+`pnpm validate` checks every `video` against YouTube's oEmbed endpoint and every `image` URL for an image content type. A removed or missing target (404) is an error; network trouble is only a warning. Set `ALTSTRUMENT_SKIP_REMOTE=1` to skip these checks. Workshop Computer cards are fetched at build time (see above) and take their video from the upstream `info.yaml` `demo-link`, so there is no `video` to write for them.
 
 ## Field values
 

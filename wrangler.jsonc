@@ -2,9 +2,10 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   // Static site: Workers Builds runs `pnpm run build`, then `wrangler deploy`
   // uploads dist/ as assets. No Worker script, no adapter, no bindings.
-  "name": "firmware-world",
+  "name": "altstrument",
   "compatibility_date": "2026-10-14",
   "assets": {
     "directory": "./dist"
-  }
+  },
+  "routes": [{ "pattern": "altstrument.org", "custom_domain": true }]
 }

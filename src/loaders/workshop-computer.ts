@@ -14,7 +14,7 @@
  *     count against the unauthenticated rate limit) and the cached entries are
  *     reused without fetching 133 info.yaml files again.
  *   - Set GITHUB_TOKEN to raise the API rate limit (CI does this).
- *   - Set FIRMWARE_WORLD_SKIP_REMOTE=1 to skip the remote fetch entirely
+ *   - Set ALTSTRUMENT_SKIP_REMOTE=1 to skip the remote fetch entirely
  *     (offline development). Cached entries from a previous run are reused if
  *     the data store has them; otherwise the device simply lists no cards.
  *   - A network failure with no cache fails the build, so a broken upstream is
@@ -75,7 +75,7 @@ async function fetchRaw(url: string, headers: Record<string, string> = {}): Prom
     if (attempt > 0) await new Promise((r) => setTimeout(r, 500 * 2 ** attempt));
     try {
       const res = await fetch(url, {
-        headers: { 'User-Agent': 'firmware-world-loader', ...headers },
+        headers: { 'User-Agent': 'altstrument-loader', ...headers },
         signal: AbortSignal.timeout(30_000),
       });
       if (res.status >= 500 || res.status === 429) {
@@ -427,8 +427,8 @@ export async function loadWorkshopComputerCards(ctx: LoaderContext, cached: Data
     logger.info(`Workshop Computer cards: ${why}; reused ${cached.length} cached entries`);
   };
 
-  if (process.env.FIRMWARE_WORLD_SKIP_REMOTE) {
-    restore('FIRMWARE_WORLD_SKIP_REMOTE set');
+  if (process.env.ALTSTRUMENT_SKIP_REMOTE) {
+    restore('ALTSTRUMENT_SKIP_REMOTE set');
     return;
   }
 

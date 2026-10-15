@@ -1,6 +1,6 @@
 ---
 name: discover
-description: Find custom firmware projects and devices missing from the Firmware World catalog, research them, and draft device and firmware YAML for the maintainer to review. Use when asked to look for new firmware, new devices, or what the catalog is missing.
+description: Find custom firmware projects and devices missing from the altstrument catalog, research them, and draft device and firmware YAML for the maintainer to review. Use when asked to look for new firmware, new devices, or what the catalog is missing.
 argument-hint: "[device slug, project URL, or topic to focus on]"
 ---
 
@@ -67,10 +67,10 @@ Dedupe once more by hand: grep `src/content` for the repository owner, the proje
 - Run the validator after each file, fix every error and look at every warning:
 
 ```sh
-FIRMWARE_WORLD_SKIP_REMOTE=1 pnpm validate
+ALTSTRUMENT_SKIP_REMOTE=1 pnpm validate
 ```
 
-Once every file is written, run it once more without `FIRMWARE_WORLD_SKIP_REMOTE` if you added a `video` or `image`, so the remote media checks run.
+Once every file is written, run it once more without `ALTSTRUMENT_SKIP_REMOTE` if you added a `video` or `image`, so the remote media checks run.
 
 ## 5. Record rejections
 

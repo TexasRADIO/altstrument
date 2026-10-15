@@ -1,6 +1,6 @@
-# Firmware World
+# altstrument
 
-Firmware World is a read-only directory of custom and third-party firmware for music hardware, including grooveboxes, synths, samplers, controllers, pedals, Eurorack modules and vintage gear. Each device has a page listing the firmware built for it, and each firmware entry records its authors, a source or homepage link, its license, version history and status. The site links to where firmware lives. It does not host firmware files.
+altstrument is a read-only directory of custom and third-party firmware and tools for music hardware, including grooveboxes, synths, samplers, controllers, pedals, Eurorack modules and vintage gear. Each device has a page listing the firmware built for it, and each firmware entry records its authors, a source or homepage link, its license, version history and status. The site links to where firmware lives. It does not host firmware files.
 
 ## What is recorded
 
@@ -55,9 +55,9 @@ pnpm build      # validates, then builds the static site
 pnpm preview    # serve the built site
 ```
 
-Building fetches the Music Thing Workshop Computer card entries from the upstream repository (see CONTRIBUTING.md, "Entries fetched at build time"). Set `FIRMWARE_WORLD_SKIP_REMOTE=1` to build offline from the cached data store.
+Building fetches the Music Thing Workshop Computer card entries from the upstream repository (see CONTRIBUTING.md, "Entries fetched at build time"). Set `ALTSTRUMENT_SKIP_REMOTE=1` to build offline from the cached data store.
 
-Builds need `SITE_URL` set to the public base URL the site is deployed to (for example `SITE_URL=https://example.com pnpm build`). It makes canonical, social-image and RSS feed links absolute; the RSS feed refuses to build without it. `pnpm dev` doesn't need it and uses the local server's address.
+Builds need `SITE_URL` set to the public base URL the site is deployed to (for example `SITE_URL=https://altstrument.org pnpm build`). It makes canonical, social-image and RSS feed links absolute; the RSS feed refuses to build without it. `pnpm dev` doesn't need it and uses the local server's address.
 
 ## Contributing
 
