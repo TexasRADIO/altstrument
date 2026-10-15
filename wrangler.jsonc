@@ -5,7 +5,10 @@
   "name": "altstrument",
   "compatibility_date": "2026-10-14",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    // Serve /path from dist/path/index.html without redirecting to /path/, matching
+    // Astro's trailingSlash: 'never' and the canonical URLs it emits.
+    "html_handling": "drop-trailing-slash"
   },
   "routes": [{ "pattern": "altstrument.org", "custom_domain": true }]
 }
