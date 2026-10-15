@@ -139,3 +139,12 @@ ignore:
   - url: https://github.com/Denys/embedded-audio-mine
     reason: link collection, not a firmware project
     date: 2026-10-14
+  - url: https://github.com/ChanceTheMaker/gamedude-fm1-smk
+    reason: commits and serves the official M-VAVE FM-1 V15 .fwsc for its restore button
+    date: 2026-10-15
+  - url: https://github.com/m-vave/fm1_open
+    reason: official M-VAVE firmware, and the repository has been deleted
+    date: 2026-10-15
+  - url: https://github.com/kay-lpzw/TRAM8
+    reason: manufacturer's own TRAM8 firmwares and stock .syx files; linked from the device page instead
+    date: 2026-10-15
