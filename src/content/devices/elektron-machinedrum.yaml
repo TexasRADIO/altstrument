@@ -18,9 +18,12 @@ links:
     - label: Modwerk
       url: https://modwerk.app/
 notes: >-
-  Both entries build an OS update from an official file you supply and are sent
+  The OS entries build an update from an official file you supply and send it
   to the unit as a SysEx update, so sending the original OS file again restores
-  the unit; neither project distributes Elektron firmware. Elektron does not
+  the unit; none of the projects here distributes Elektron firmware. User
+  machines are separate: they are small SysEx files stored in Machine Manager
+  slots and need a third-party OS that supports them (MDX X.20 B for the entry
+  listed here). Elektron does not
   permit sharing mod files or links on Elektronauts (policy of 2026-09-16, as
   noted on the other Elektron devices); community discussion moved to
   elektronmods.com and modwerk.app.

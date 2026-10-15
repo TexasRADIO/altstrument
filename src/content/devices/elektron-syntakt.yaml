@@ -18,10 +18,11 @@ links:
     - label: Modwerk
       url: https://modwerk.app/
 notes: >-
-  The only public project targets OS 1.41 (Modded Cycles also reads a
-  Syntakt OS file to borrow engines for the Model:Cycles; its flasher accepts
-  1.42). Browser tools patch your own stock .syx locally and leave the
-  bootloader untouched. Elektron does not permit sharing mod files or links on
+  The public projects target OS 1.41 (workbench) and 1.40A (SY FM4); Modded
+  Cycles also reads a Syntakt OS file to borrow engines for the Model:Cycles,
+  and its flasher accepts 1.42. The workbench patches your own stock .syx in the
+  browser and SY FM4 is built locally from your own file; neither touches the
+  bootloader. Elektron does not permit sharing mod files or links on
   Elektronauts (policy of 2026-09-16); community discussion moved to
   elektronmods.com and modwerk.app.
 related: [elektron-model-cycles, elektron-model-samples]

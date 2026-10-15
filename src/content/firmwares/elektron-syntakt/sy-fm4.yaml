@@ -1,0 +1,37 @@
+device: elektron-syntakt
+name: SY FM4
+summary: Four-operator FM machine for the Syntakt that replaces SY TONE in place with a superset, adding eleven operator algorithms and a second parameter page. Targets OS 1.40A only.
+description: >-
+  Algorithm 0 is the stock SY TONE, so existing projects keep their sound, and
+  algorithms 1 to 11 are four-operator layouts (eight classic four-operator
+  arrangements plus tree, diamond and ring). The second SYN page adds ratio,
+  level and decay for operators 3 and 4, plus a detune control, and its values
+  are saved with the sound and can be parameter-locked. The repository holds the
+  engine source and two Python patchers that read your own official 1.40A file and
+  check the checksum of every byte range they overwrite; it ships no Elektron
+  firmware, and the author asks that built files not be shared. The author reports
+  hardware tests of the update, all parameters and parameter locks on one unit;
+  save and reload and CPU cost were checked in an emulator only. Ports to 1.41 and
+  1.42 are not done.
+status: active
+authors:
+  - name: Aleksey Grechkin (Rxuting)
+    url: https://github.com/Rxuting
+source: https://github.com/Rxuting/sy-fm4
+source_status: open
+license: MIT
+distribution: source-only
+requires_stock: 1.40A
+install_notes: >-
+  Build with the elektron-firmware-tool, a ColdFire cross compiler, Python and
+  make, giving your own official Syntakt OS 1.40A .syx as input. Flash the result
+  through Elektron Transfer like an official OS, and flash the stock file the same
+  way to go back. If the unit fails to boot, the README describes holding FUNC at
+  power-on to enter OS upgrade mode, which needs the stock OS sent over MIDI DIN, not USB.
+brick_risk: true
+tags: [machines, synth-engine, fm]
+versions:
+  - version: main @ a596b63
+    date: 2026-10-15
+    url: https://github.com/Rxuting/sy-fm4/commit/a596b63
+    notes: No tagged releases; this is the latest commit.

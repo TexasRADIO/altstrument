@@ -1,0 +1,36 @@
+device: elektron-machinedrum
+name: murdenihcam USR machines
+summary: Four user-machine families for the Machinedrum running the MDX X.20 B firmware, covering a slicer, a time stretcher, a granulator and a multi-mode modulation effect.
+description: >-
+  Each machine is a small DSP program sent to the unit as SysEx and stored in a
+  Machine Manager slot, so the OS itself is not replaced. SMP-SL slices samples
+  at detected transients, SMP-ST stretches samples with adjustable grain size and
+  jitter, SMP-GR is a granulator, and NFX-MO is a modulation effect with flanger,
+  chorus, doubler, pitch-shifting and frequency-shifting modes. The sample machines
+  come in versions for the UW ROM plus the internal E12 samples, ROM only, or E12
+  only, and only the E12-only versions suit non-UW units. Source files and build
+  scripts are in the repository next to the prebuilt .syx files. The author states
+  that the code was written with LLM assistance and that the machines are
+  unaffiliated with the MDX developers.
+status: active
+authors:
+  - name: murdenihcam
+    url: https://github.com/murdenihcam
+source: https://github.com/murdenihcam/murdenihcam-usr-machines
+source_status: open
+license: unspecified
+license_notes: No license file or statement in the repository.
+distribution: download
+requires_stock: MDX X.20 B
+install_notes: >-
+  Needs a Machinedrum already running the third-party MDX X.20 B firmware. Back up
+  first. Open Machine Manager on the unit (FUNC+GLOBAL, FILE), pick an empty slot
+  and receive, then play the .syx file from a SysEx librarian app. Reloading the
+  kit or power cycling clears glitchy sound that can appear on tracks already using
+  user machines right after an install.
+tags: [machines, synth-engine, sampler, granular, fx]
+versions:
+  - version: main @ ab92ccf
+    date: 2026-10-15
+    url: https://github.com/murdenihcam/murdenihcam-usr-machines/commit/ab92ccf
+    notes: No tagged releases; this is the latest commit.

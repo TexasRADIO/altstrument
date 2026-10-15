@@ -1,0 +1,35 @@
+device: teenage-engineering-op-1
+name: op1-sdk
+kind: tool
+summary: SDK for adding synth engines, effects and sequencer features to the original OP-1 firmware R246, written in C or assembly, with simulator tests and a composer that patches your own official image.
+description: >-
+  Features are self-contained folders with a manifest, sources and tests, hooked
+  into the stock firmware at declared addresses. The build tools check the SHA-256
+  of your R246 file and the original instructions at every hook, and refuse to
+  build otherwise. A bundled library of eleven features is composed by the
+  op1plus recipe into one image: the LOFI, WHEEL, WARP and TRIO synth engines,
+  RESO, SHIMMER and FX MIX effects, a drum step sequencer, a take requantizer,
+  a chord keyboard and extra parameters for the stock engines. Features can be
+  packed as zip files and shared. The README reports that the features were played
+  on a real OP-1. The bootloader is not modified, and no TE firmware is included.
+status: active
+authors:
+  - name: BertBrandstifter
+    url: https://github.com/BertBrandstifter
+source: https://github.com/BertBrandstifter/op1-sdk
+source_status: open
+license: MIT
+distribution: patch-your-own
+requires_stock: R246
+install_notes: >-
+  Build the bfin-elf toolchain described in the docs, compose an image from
+  your own official op1_246.op1, then flash it with the included script through
+  the Firmware Upload option (hold COM at power-on). Built images contain TE
+  firmware and should not be shared. Flashing the original file restores stock.
+brick_risk: false
+tags: [sdk, synth-engine, fx, sequencer, patch]
+versions:
+  - version: v0.1.0
+    date: 2026-10-15
+    url: https://github.com/BertBrandstifter/op1-sdk/releases/tag/v0.1.0
+    notes: First public release; no firmware binaries.

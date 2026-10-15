@@ -1,0 +1,68 @@
+device: elektron-machinedrum
+name: MDMM (Machinedrum and Monomachine Editors)
+kind: tool
+summary: Desktop editors for the Machinedrum and the Monomachine that run the unit's own OS in an emulator, as a standalone app or a VST3/AU plug-in, with an optional hardware MIDI mode.
+description: >-
+  Two separate apps, one per instrument, each showing a step grid, parameter-lock
+  lanes, kit, pattern and song libraries, a mixer and a sampler view on one
+  screen. Edits can be undone, projects save inside a DAW session, and SysEx can
+  be imported and exported. A beta mode drives a real unit over MIDI instead of
+  the emulation. The project's own installers target macOS; Windows and Linux
+  builds are published but marked untested. It builds on the Gearmulator DSP56300
+  emulator and an earlier Machinedrum/Monomachine emulation by the GitHub user joelanders. No
+  Elektron OS is included or linked: you supply your own file for each machine,
+  which the app copies into its ROM folder, and the unit itself is never flashed.
+status: active
+authors:
+  - name: radekdymacz
+    url: https://github.com/radekdymacz
+source: https://github.com/radekdymacz/mdmm
+source_status: open
+license: GPL-3.0-only
+license_notes: Bundled third-party code (Monocypher, JUCE, the Gearmulator-derived emulators) keeps its own notices.
+homepage: https://mdmm.dev
+distribution: download
+requires_stock: Machinedrum OS 1.63 and Monomachine OS 1.32B (supplied by you)
+install_notes: >-
+  Download the installer from the GitHub releases page; the macOS packages are
+  not signed or notarised, so they need Open Anyway in Privacy and Security.
+  On first start, point the editor at your own official OS file for the machine.
+tags: [editor, emulator, midi, sequencer]
+video:
+  url: https://www.youtube.com/watch?v=23Z71xrKetg
+  title: Machinedrum Editor Alpha 0.3.3
+  credit: Ticco Ross
+  first_party: true
+  found_via: https://mdmm.dev
+versions:
+  - version: mdmm-v0.6.0
+    date: 2026-10-14
+    url: https://github.com/radekdymacz/mdmm/releases/tag/mdmm-v0.6.0
+    notes: Adds a user guide, song slots, transport controls, SysEx import and export, and many editing features.
+  - version: mdmm-v0.5.1
+    date: 2026-10-11
+    url: https://github.com/radekdymacz/mdmm/releases/tag/mdmm-v0.5.1
+  - version: mdmm-v0.5.0
+    date: 2026-10-10
+    url: https://github.com/radekdymacz/mdmm/releases/tag/mdmm-v0.5.0
+  - version: mdmm-v0.4.0
+    date: 2026-10-10
+    url: https://github.com/radekdymacz/mdmm/releases/tag/mdmm-v0.4.0
+  - version: mdmm-v0.3.5
+    date: 2026-10-09
+    url: https://github.com/radekdymacz/mdmm/releases/tag/mdmm-v0.3.5
+  - version: mdmm-v0.3.4
+    date: 2026-10-08
+    url: https://github.com/radekdymacz/mdmm/releases/tag/mdmm-v0.3.4
+  - version: mdmm-v0.3.3
+    date: 2026-10-08
+    url: https://github.com/radekdymacz/mdmm/releases/tag/mdmm-v0.3.3
+  - version: mdmm-v0.3.2
+    date: 2026-10-07
+    url: https://github.com/radekdymacz/mdmm/releases/tag/mdmm-v0.3.2
+  - version: mdmm-v0.3.1
+    date: 2026-10-07
+    url: https://github.com/radekdymacz/mdmm/releases/tag/mdmm-v0.3.1
+  - version: mdmm-v0.1.0-alpha
+    date: 2026-09-28
+    url: https://github.com/radekdymacz/mdmm/releases/tag/mdmm-v0.1.0-alpha
