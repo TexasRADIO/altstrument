@@ -18,3 +18,13 @@ notes: >-
   The patcher here edits an official 2.3.4 image you supply yourself and leaves
   the module's separate bootloader alone, so putting 1010music's own firmware
   back on the card restores a stock unit.
+image:
+  src: /images/devices/1010music-bitbox-micro.jpg
+  style: photo
+  alt: Front panel of the 1010music Bitbox Micro in silver, with a waveform on its touchscreen
+  width: 900
+  height: 900
+  credit: 1010music
+  license: manufacturer product image
+  source_url: https://1010music.com/product/bitbox-micro
+  original_url: https://1010music.com/wp-content/uploads/2020/07/1010music_bitboxmicro_01-square.jpg

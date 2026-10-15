@@ -11,7 +11,17 @@ description: >-
   USB-C audio and MIDI.
 stock_firmware: 1.5.1
 links:
-  manufacturer: https://dealer.1010music.com/product/bluebox-for-eurorack-compact-digital-mixer-recorder
+  manufacturer: https://1010music.com/product/bluebox-eurorack
 notes: >-
   The desktop bluebox runs different firmware, and the mod here targets the
   Eurorack edition only.
+image:
+  src: /images/devices/1010music-bluebox.jpg
+  style: photo
+  alt: Front panel of the 1010music bluebox Eurorack edition, cropped from a product photo of the module and its box
+  width: 1136
+  height: 970
+  credit: 1010music
+  license: manufacturer product image
+  source_url: https://1010music.com/product/bluebox-eurorack
+  original_url: https://1010music.com/wp-content/uploads/2023/09/1010Music_bluebox-Eurorack-edition_Cables_Update.sm_-scaled.jpg
