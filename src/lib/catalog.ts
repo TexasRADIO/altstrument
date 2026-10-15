@@ -266,7 +266,9 @@ export function recentVersions(
 export function siteStats(devices: DeviceItem[]) {
   return {
     devices: devices.length,
-    firmwares: devices.reduce((n, d) => n + d.firmwares.length, 0),
+    // Counted by kind: host-side tools (editors, flashers, SDKs) are not firmwares.
+    firmwares: devices.reduce((n, d) => n + d.firmwares.filter((f) => f.data.kind === 'firmware').length, 0),
+    tools: devices.reduce((n, d) => n + d.firmwares.filter((f) => f.data.kind === 'tool').length, 0),
     manufacturers: new Set(devices.map((d) => d.manufacturerSlug)).size,
   };
 }

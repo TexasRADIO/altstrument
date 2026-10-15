@@ -19,6 +19,7 @@
   <br>
   <a href="https://altstrument.org"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faltstrument.org%2Fapi%2Fstats.json&query=%24.devices&label=devices&color=0a6262" alt="Devices in the catalog"></a>
   <a href="https://altstrument.org/recent"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faltstrument.org%2Fapi%2Fstats.json&query=%24.firmwares&label=firmwares&color=0a6262" alt="Firmwares in the catalog"></a>
+  <a href="https://altstrument.org"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Faltstrument.org%2Fapi%2Fstats.json&query=%24.tools&label=tools&color=0a6262" alt="Tools in the catalog"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/code-MIT-blue" alt="Code license: MIT"></a>
   <a href="LICENSE-DATA"><img src="https://img.shields.io/badge/data-CC--BY--4.0-blue" alt="Data license: CC-BY-4.0"></a>
 </p>

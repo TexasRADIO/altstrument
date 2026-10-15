@@ -42,9 +42,10 @@ const index: IndexEntry[] = devices.map((d) => ({
   <h1 class="text-2xl">altstrument</h1>
   <p class="mt-1 max-w-[68ch] text-muted">A directory of custom and third-party firmware and tools for music hardware.</p>
 
-  <dl class="mt-4 flex flex-wrap gap-x-8 gap-y-2" aria-label="Catalog size">
+  <dl class="mt-4 grid grid-cols-2 gap-x-8 gap-y-2 sm:flex sm:flex-wrap" aria-label="Catalog size">
     <div><dt class="text-xs uppercase tracking-wide text-muted">Devices</dt><dd class="mono text-xl font-semibold">{stats.devices}</dd></div>
     <div><dt class="text-xs uppercase tracking-wide text-muted">Firmwares</dt><dd class="mono text-xl font-semibold">{stats.firmwares}</dd></div>
+    <div><dt class="text-xs uppercase tracking-wide text-muted">Tools</dt><dd class="mono text-xl font-semibold">{stats.tools}</dd></div>
     <div><dt class="text-xs uppercase tracking-wide text-muted">Manufacturers</dt><dd class="mono text-xl font-semibold">{stats.manufacturers}</dd></div>
   </dl>
 
