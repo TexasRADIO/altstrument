@@ -1,0 +1,44 @@
+device: roland-jd-990
+name: FotonJD990
+kind: tool
+summary: Open-source macOS editor and librarian for the JD-990. Edits all patch parameters live over MIDI SysEx, with draggable envelopes, a performance mode view and a searchable patch library.
+description: >-
+  FotonJD990 is a JUCE application with a Rust core, with the parameter map
+  kept in TOML files. The panel is modelled on the JD-800's. It covers patch editing, effect chain ordering,
+  seven-part performance mode with voice allocation, a SQLite patch library
+  with tags, search, compare, morph and variation, SysEx and MIDI file import
+  and export, and conversion of JD-800 patches. A command line tool does
+  backups and file conversion. The interface and design documents are in
+  German. The author describes it as work in progress, built and tested on
+  macOS with real hardware; Linux is untested and Windows has not been tried.
+status: active
+authors:
+  - name: André Motz
+    url: https://github.com/andremotz
+source: https://github.com/andremotz/foton-jd990
+source_status: open
+license: AGPL-3.0-or-later
+license_notes: >-
+  The LICENSE file holds the AGPL-3.0 text and the README states version 3 or
+  later. It also uses JUCE under the AGPLv3 and JDTools code and data
+  structures under BSD-3-Clause.
+distribution: source-only
+install_notes: >-
+  No prebuilt download; build from source with Xcode Command Line Tools,
+  CMake, Rust and JUCE 9.0.2 as described in the README. The editor writes
+  only to the module's temporary edit buffers and never to internal memory,
+  using an address whitelist; the README still advises backing up the module
+  first with the bundled command line tool.
+brick_risk: false
+tags: [editor, librarian]
+image:
+  url: https://raw.githubusercontent.com/andremotz/foton-jd990/main/docs/images/screenshot.png
+  alt: FotonJD990 patch panel on macOS with a green LCD display and coloured sections for oscillator, filter and amplifier with draggable envelope graphs
+  credit: André Motz
+  source_url: https://github.com/andremotz/foton-jd990#readme
+  first_party: true
+versions:
+  - version: main @ 08f0ce2
+    date: 2026-10-10
+    url: https://github.com/andremotz/foton-jd990/commit/08f0ce2c3b4b7e82e951755614451f2d8ddfeee9
+    notes: No tagged releases; this is the latest commit.

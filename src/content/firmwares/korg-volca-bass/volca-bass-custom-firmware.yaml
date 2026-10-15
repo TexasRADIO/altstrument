@@ -1,0 +1,35 @@
+device: korg-volca-bass
+name: Volca Bass Custom Firmware
+summary: Modified volca bass firmware 2.01, built on Korg's 1.02. Sends the correct velocity on MIDI out notes and handles slides correctly on MIDI out.
+description: >-
+  Korg's 1.02 firmware sends every MIDI out note at velocity 127 and only plays
+  a legato when the previous note has the same pitch. This build sends real
+  velocities and plays legato for every note with the step slide set. Velocity
+  can be recorded into the step sequencer only from external MIDI input. It is
+  numbered 2.01 to tell it apart from Korg's releases, and the author says
+  Korg's official file can be installed over it to go back. The author no
+  longer owns a volca bass and calls the repository unmaintained.
+status: archived
+authors:
+  - name: Marco Passerini
+    url: https://github.com/mpasserini
+source: https://github.com/mpasserini/volca-bass-custom-firmware
+source_status: binary-only
+license: unspecified
+license_notes: >-
+  No license file. The README only states the author claims no copyright over
+  Korg's original firmware and gives no terms for the modification. Distributed
+  as a compiled WAV file; no source for the modification is published.
+homepage: https://github.com/mpasserini/volca-bass-custom-firmware#readme
+distribution: download
+requires_stock: Korg 1.02
+install_notes: >-
+  Installed with Korg's standard audio update procedure from the official
+  volca bass manual. The author provides the file as use-at-your-own-risk.
+brick_risk: false
+tags: [midi, velocity, bugfixes]
+versions:
+  - version: "2.01"
+    date: 2019-12-19
+    url: https://github.com/mpasserini/volca-bass-custom-firmware/commit/db4a3197c5856578f1884339973d0a0232ad5a27
+    notes: Commit that added the firmware file and the first README; no release page.

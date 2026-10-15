@@ -1,0 +1,40 @@
+device: lpzw-modules-tram8
+name: tram8+
+summary: Custom TRAM8 firmware with velocity, CC and SysEx operating modes, per-gate MIDI channel and note filters, MIDI learn, and a macOS VST3 bridge that drives the module from a DAW over SysEx.
+description: >-
+  In velocity mode each gate follows the mapped note and its DAC output follows
+  that note's velocity. In CC mode the DACs track CC 69 to 76 instead. SysEx
+  mode lets a host set all eight gates and the 12-bit DAC values directly with
+  packed messages. A companion VST3 plugin for macOS, built on CoreMIDI,
+  sends those messages and offers per-gate channel, note and DAC mode
+  settings (velocity, pitch, CC or off). The firmware is AVR C built with
+  avr-gcc.
+status: active
+authors:
+  - name: thorinf
+    url: https://github.com/thorinf
+source: https://github.com/thorinf/tram8-plus
+source_status: open
+license: unspecified
+license_notes: No LICENSE file in the repository and the README states no license.
+homepage: https://github.com/thorinf/tram8-plus#readme
+distribution: download
+requires_stock: Stock TRAM8 firmware with SysEx update mode
+install_notes: >-
+  Download tram8-firmware.syx from the release, put the module in SysEx mode
+  and send the file with a MIDI SysEx tool. The VST3 bridge is a separate zip
+  for macOS and needs the quarantine flag removed. The repository documents no
+  recovery or revert procedure.
+brick_risk: false
+tags: [midi, cv-converter, sysex, vst]
+image:
+  url: https://raw.githubusercontent.com/thorinf/tram8-plus/main/assets/vst-ui.png
+  alt: tram8+ VST3 bridge window listing gates 1 to 8 with columns for MIDI channel, note, DAC mode and DAC channel and value
+  credit: thorinf
+  source_url: https://github.com/thorinf/tram8-plus#readme
+  first_party: true
+versions:
+  - version: v1.0.0
+    date: 2026-05-17
+    url: https://github.com/thorinf/tram8-plus/releases/tag/v1.0.0
+    notes: Initial public release with the firmware and the macOS VST3 bridge.

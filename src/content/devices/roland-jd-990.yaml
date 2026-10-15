@@ -1,0 +1,12 @@
+name: JD-990
+manufacturer: Roland
+category: synth
+tagline: 1993 synthesizer module from Roland's JD-800 line
+description: >-
+  The JD-990 is a synthesizer module released by Roland in 1993, related to
+  the JD-800. It plays up to 24 voices, each patch layering up to four tones. In performance mode it runs seven parts on
+  separate MIDI channels with shared effects. Patch memory is battery-backed
+  RAM, and the module is editable over MIDI System Exclusive.
+notes: >-
+  No custom firmware is known; the entries here are host-side editors that
+  work over MIDI SysEx and leave the module's own software untouched.

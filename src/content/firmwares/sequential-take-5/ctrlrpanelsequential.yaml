@@ -1,0 +1,32 @@
+device: sequential-take-5
+name: CtrlrPanelSequential (Take 5 panel)
+kind: tool
+summary: Ctrlr panel that works as a program editor and librarian for the Take 5 over MIDI SysEx. The same repository has panels for other Sequential and Dave Smith Instruments synths.
+description: >-
+  The Take 5 panel is a file for the Ctrlr panel host, with a user guide as a
+  PDF in the same folder. It is one of several panels in the repository, which
+  also covers the Mopho family, OB-6, Pro 3, Prophet-6, TEO-5 and Toraiz AS-1.
+  Only the Take 5 panel is described here; the other devices have no pages in
+  this catalog yet.
+status: active
+authors:
+  - name: synthmutt
+    url: https://github.com/synthmutt
+source: https://github.com/synthmutt/CtrlrPanelSequential
+source_status: open
+license: GPL-3.0-only
+license_notes: The LICENSE file holds the GPL-3.0 text; no "or later" wording was found.
+homepage: https://github.com/synthmutt/CtrlrPanelSequential/tree/main/Take5
+distribution: download
+install_notes: >-
+  Needs the Ctrlr application (or CtrlrX) to open the panel file; the
+  repository wiki has installation instructions. The panel only sends and
+  receives patch data over MIDI and does not change the synth's operating
+  system.
+brick_risk: false
+tags: [editor, librarian]
+versions:
+  - version: Take 5 panel 1.3.2
+    date: 2025-05-14
+    url: https://github.com/synthmutt/CtrlrPanelSequential/commit/da5b2bd68d643745270c51972b9391d2136b01d0
+    notes: Commit that updated the Take 5 panel and its user guide; no GitHub release page.

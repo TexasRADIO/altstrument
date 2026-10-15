@@ -1,0 +1,46 @@
+device: mutable-instruments-beads
+name: Drizzlet
+summary: Alpha community build of the released Beads source. Fixes a frozen-delay crash and half-written frozen-buffer saves, and adds an options page with an output limiter setting, a self-play mode and an optional monophonic grain mode.
+description: >-
+  Drizzlet starts from the Beads source published by Mutable Instruments and
+  keeps the stock settings layout, so the stock firmware and Drizzlet can read
+  each other's saved frozen buffers. Changes so far are bug fixes (an
+  out-of-range read in frozen delay with negative FM, a few undefined reads, a
+  division by zero on very fast clocks) and checked, interruption-safe buffer
+  saves. New behaviour comes through an options page opened by holding ASSIGN:
+  output limiter (stock, fast release or off) and automatic or on-request
+  self-play. Holding MEDIA and then pressing SEED toggles the original
+  monophonic grain code. The author says it has been tested only by its
+  developers on a single module.
+status: active
+authors:
+  - name: Insolent Construct
+    url: https://github.com/insolentconstruct
+source: https://github.com/insolentconstruct/eurorack
+source_status: open
+license: MIT
+license_notes: >-
+  Beads source files carry the Mutable Instruments MIT notice (Émilie Gillet,
+  with credits to Frédéric Meslin and Oliver Rockstedt); the build kit in
+  beads/build is MIT. The README says the manual excerpt and hardware designs
+  are CC-BY-SA 3.0. The fork has no top-level LICENSE file.
+homepage: https://github.com/insolentconstruct/eurorack/blob/drizzlet/beads/build/README.md
+distribution: download
+requires_stock: Official Beads firmware (the 2021 release was the tested baseline)
+install_notes: >-
+  Installed with the normal Beads audio update using the wav file from the
+  release. The README gives OpenOCD commands to back up and restore the
+  settings and calibration sector and to do an ST-Link recovery flash, and
+  warns that holding SEED at power-on resets settings. Turn monophonic grains
+  off before going back to stock firmware.
+brick_risk: true
+tags: [granular, fx, bugfixes]
+versions:
+  - version: drizzlet-2026.10.14
+    date: 2026-10-15
+    url: https://github.com/insolentconstruct/eurorack/releases/tag/drizzlet-2026.10.14
+    notes: Alpha. Adds the output limiter option and fixes the frozen-delay crash and half-written frozen-buffer saves.
+  - version: beads-2026.10.11
+    date: 2026-10-12
+    url: https://github.com/insolentconstruct/eurorack/releases/tag/beads-2026.10.11
+    notes: First build, made from the released Beads source without changes.

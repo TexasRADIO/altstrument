@@ -1,0 +1,17 @@
+name: Take 5
+manufacturer: Sequential Circuits
+category: synth
+tagline: Five-voice compact analog polysynth
+description: >-
+  The Take 5 is a compact five-voice analog polyphonic synthesizer from
+  Sequential, announced in 2021. Each voice has two oscillators with a sub
+  oscillator, a four-pole resonant low-pass filter based on the Prophet-5
+  Rev4 design, two envelopes and two LFOs. The keyboard has 44 keys with
+  velocity and aftertouch, and the synth includes a 64-step polyphonic
+  sequencer, an arpeggiator and onboard effects. A keyless desktop module
+  followed in 2025.
+links:
+  manufacturer: https://sequential.com/hybrid-analog/take-5-compact-polysynth/
+notes: >-
+  No custom operating system is known for the Take 5. The entries here are
+  host-side editors that talk to the synth over MIDI SysEx.

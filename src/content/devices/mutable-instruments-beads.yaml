@@ -1,0 +1,33 @@
+name: Beads
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Texture synthesizer / granular processor (discontinued)
+description: >-
+  Beads is a 14HP Eurorack granular texture processor designed by Émilie Gillet
+  and sold by Mutable Instruments from 2021 to 2022, as the successor to
+  Clouds. It records incoming stereo audio into a buffer and plays back grains
+  from it, with a delay mode, a reverb and a built-in wavetable synth for
+  self-play. The module uses an STM32H743 at 480 MHz and a PCM3060 codec.
+platform: STM32H7
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/beads/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
+  is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name. The
+  official audio update is flashed through the module's own bootloader, and
+  recalibration data lives in a settings sector that a recovery flash can
+  overwrite.
+related: [mutable-instruments-clouds]
+image:
+  src: /images/devices/mutable-instruments-beads.jpg
+  style: photo
+  alt: Front panel of the Mutable Instruments Beads Eurorack module
+  width: 593
+  height: 1080
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/beads/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/beads/images/front.jpg

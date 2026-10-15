@@ -1,0 +1,31 @@
+device: korg-volca-bass
+name: Volca.CC
+kind: tool
+summary: Browser-based patch editor for the volca bass that uses Web MIDI to send the few parameters Korg exposes over MIDI. Includes an on-screen panel and keyboard and a local patch list.
+description: >-
+  Only a subset of the controls can be sent to the volca bass, because Korg's
+  MIDI implementation for the volca series is sparse; the editor marks those
+  controls with a "Show Sendable" option and keeps the rest as reference. It
+  can route another MIDI controller through to the synth. The author
+  recommends desktop Chrome because other browsers lack Web MIDI support.
+status: dormant
+authors:
+  - name: Joshua Avrick
+    url: https://github.com/JHAvrick
+source: https://github.com/JHAvrick/volcacc
+source_status: open
+license: unspecified
+license_notes: No license file in the repository and the README states none.
+homepage: https://jhavrick.github.io/volcacc/
+tags: [editor, web-midi]
+image:
+  url: https://raw.githubusercontent.com/JHAvrick/volcacc/master/preview.png
+  alt: Volca.CC web editor showing a drawn volca bass panel with knobs, a 16-key sequencer row and a devices and patch sidebar
+  credit: Joshua Avrick
+  source_url: https://github.com/JHAvrick/volcacc#readme
+  first_party: true
+versions:
+  - version: master @ 9a729f1
+    date: 2024-01-21
+    url: https://github.com/JHAvrick/volcacc/commit/9a729f1838fc08862ecf4273e4095b34af841f8e
+    notes: No tagged releases; this is the latest commit.

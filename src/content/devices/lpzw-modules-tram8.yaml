@@ -1,0 +1,25 @@
+name: TRAM8
+manufacturer: LPZW.modules
+category: eurorack
+tagline: MIDI to eight gates and velocity CV converter
+description: >-
+  TRAM8 is a Eurorack module from LPZW.modules that turns incoming MIDI into
+  eight gate outputs and eight matching CV outputs. It takes MIDI on a 3.5 mm
+  TRS jack, passes it through to a second TRAM8 for daisy chaining, and drives
+  the CV outputs from a 12-bit DAC. Firmware is replaced by sending SysEx
+  files over MIDI. It was sold in a 1U Intellijel-format version and a 3U 5HP
+  version.
+platform: ATmega8A
+stock_firmware: "1.3"
+links:
+  manufacturer: https://github.com/kay-lpzw/TRAM8
+  community:
+    - label: ModularGrid page
+      url: https://modulargrid.net/e/lpzw-modules-tram8
+    - label: MATRIXSYNTH launch post (2019)
+      url: https://www.matrixsynth.com/2019/11/lpzwmodules-tram8-1u-3u-eurorack-modules.html
+notes: >-
+  LPZW.modules publishes its own alternative firmwares (Clocks & Random,
+  16-gate, MultiPitch) in the manufacturer repository; they are not catalogued
+  here as separate entries. Custom firmware loads through the module's SysEx
+  update mode.

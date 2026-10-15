@@ -1,0 +1,19 @@
+name: volca bass
+manufacturer: Korg
+category: synth
+tagline: Compact analog bass machine with a step sequencer
+description: >-
+  The volca bass is a compact analog bass synthesizer made by Korg as part of
+  its volca series. It has three oscillators, a single analog filter and a
+  step sequencer with slide and an Active Step function. It has a sync jack
+  and a MIDI input.
+links:
+  manufacturer: https://www.korg.com/us/products/dj/volca_bass/
+notes: >-
+  Updates are audio files played into the sync jack, the same way as Korg's
+  own updates. The one known custom firmware is binary-only and its author no
+  longer maintains it.
+related:
+  - korg-volca-drum
+  - korg-volca-fm
+  - korg-volca-sample
