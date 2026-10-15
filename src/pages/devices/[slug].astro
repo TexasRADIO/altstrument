@@ -39,6 +39,7 @@ const filterText = (f: FirmwareItem) =>
   title={`${data.name} (${data.manufacturer})`}
   description={description}
   image={image && isSocialImage(image) ? { src: image.src, alt: image.alt } : undefined}
+  editPath={`src/content/devices/${device.id}.yaml`}
 >
   <Breadcrumb items={[{ label: 'Devices', href: '/' }, { label: CATEGORY_LABELS[data.category], href: `/#cat-${data.category}` }]} />
 

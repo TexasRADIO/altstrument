@@ -9,9 +9,22 @@ interface Props {
   home?: boolean;
   /** Social preview image: site-relative path (made absolute with Astro.site). */
   image?: { src: string; alt?: string };
+  /** Repo-relative file this page is built from; the footer links to GitHub's editor for it. */
+  editPath?: string;
+  /** Absolute edit link, for pages whose data lives elsewhere. Takes precedence over editPath. */
+  editUrl?: string;
+  /** Footer link text when editUrl is set. */
+  editLabel?: string;
 }
-const { title, description, home = false, image } = Astro.props;
+const { title, description, home = false, image, editPath, editUrl, editLabel } = Astro.props;
 const SITE = 'altstrument';
+const REPO = 'https://github.com/philmillman/altstrument';
+// Pages generated from the whole catalog (home, recent) have no single file; they link to the repo.
+const edit = editUrl
+  ? { href: editUrl, label: editLabel ?? 'Edit this on GitHub' }
+  : editPath
+    ? { href: `${REPO}/edit/main/${editPath}`, label: 'Edit this on GitHub' }
+    : { href: REPO, label: 'View source on GitHub' };
 const fullTitle = home ? title : `${title} · ${SITE}`;
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const canonical = Astro.site ? new URL(path, Astro.site).href : undefined;
@@ -88,7 +101,7 @@ const nav = [
     <footer class="border-t border-line bg-surface text-sm text-muted">
       <div class="mx-auto flex w-full max-w-[72rem] flex-col gap-1 px-4 py-4 sm:flex-row sm:flex-wrap sm:justify-between">
         <p>Catalog data <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC-BY-4.0</a>. Site code <a href="https://spdx.org/licenses/MIT.html" rel="noopener">MIT</a>.</p>
-        <p><a href="https://github.com/philmillman/altstrument" rel="noopener">Edit this on GitHub</a></p>
+        <p><a href={edit.href} rel="noopener">{edit.label}</a></p>
       </div>
     </footer>
     <script is:inline>

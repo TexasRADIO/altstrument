@@ -7,15 +7,23 @@ import { getDevicesWithFirmwares, getManufacturerEntries, groupByManufacturer, h
 export async function getStaticPaths() {
   const [devices, entries] = await Promise.all([getDevicesWithFirmwares(), getManufacturerEntries()]);
   const manufacturers = groupByManufacturer(devices, entries);
-  return manufacturers.map((manufacturer) => ({ params: { slug: manufacturer.slug }, props: { manufacturer } }));
+  return manufacturers.map((manufacturer) => ({
+    params: { slug: manufacturer.slug },
+    props: { manufacturer, hasFile: entries.has(manufacturer.slug) },
+  }));
 }
 
-interface Props { manufacturer: Manufacturer }
-const { manufacturer: m } = Astro.props;
+interface Props { manufacturer: Manufacturer; hasFile: boolean }
+const { manufacturer: m, hasFile } = Astro.props;
+// Manufacturers without a file take their name from device files; link to the folder to add one.
+const edit = hasFile
+  ? { editPath: `src/content/manufacturers/${m.slug}.yaml` }
+  : { editUrl: 'https://github.com/philmillman/altstrument/tree/main/src/content/manufacturers', editLabel: 'Add details on GitHub' };
 ---
 <Base
   title={m.name}
   description={`${plural(m.devices.length, 'device')} by ${m.name} with ${plural(m.firmwareCount, 'listed custom firmware or tool', 'listed custom firmwares and tools')}.`}
+  {...edit}
 >
   <Breadcrumb items={[{ label: 'Devices', href: '/' }, { label: m.name }]} />
   <div class="flex flex-wrap items-center gap-x-4 gap-y-2">

@@ -11,7 +11,7 @@ import Breadcrumb from '@/components/Breadcrumb.astro';
 import Prose from '@/components/Prose.astro';
 import FirmwareMedia from '@/components/FirmwareMedia.astro';
 import { KIND_LABELS, DISTRIBUTION_LABELS } from '@/lib/labels';
-import { getDevicesWithFirmwares, hostOf, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
+import { getDevicesWithFirmwares, githubEditUrl, hostOf, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
 
 export async function getStaticPaths() {
   const devices = await getDevicesWithFirmwares();
@@ -31,8 +31,12 @@ const links = [
   d.homepage && { label: 'Homepage', url: d.homepage },
 ].filter(Boolean) as { label: string; url: string }[];
 const hasMedia = Boolean(d.video || d.image);
+// Synced entries are corrected upstream (see CONTRIBUTING.md, "Entries fetched at build time").
+const edit = d.generated_from
+  ? { editUrl: githubEditUrl(d.generated_from), editLabel: 'Edit upstream on GitHub' }
+  : { editPath: `src/content/firmwares/${fw.id}.yaml` };
 ---
-<Base title={`${d.name} for ${device.data.name}`} description={`${d.name}: ${d.summary}`}>
+<Base title={`${d.name} for ${device.data.name}`} description={`${d.name}: ${d.summary}`} {...edit}>
   <Breadcrumb items={[{ label: 'Devices', href: '/' }, { label: device.data.name, href: device.url }, { label: d.name }]} />
 
   <div class:list={[hasMedia && 'lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:items-start lg:gap-8']}>

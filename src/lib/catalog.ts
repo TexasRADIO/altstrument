@@ -280,6 +280,15 @@ export function versionAnchor(version: string): string {
   return `v-${slugify(version) || 'x'}`;
 }
 
+/**
+ * GitHub's editor for a raw.githubusercontent.com file URL (how synced entries record
+ * generated_from). Other URLs are returned unchanged.
+ */
+export function githubEditUrl(url: string): string {
+  const m = url.match(/^https:\/\/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)\/(.+)$/);
+  return m ? `https://github.com/${m[1]}/${m[2]}/edit/${m[3]}/${m[4]}` : url;
+}
+
 export function hostOf(url: string): string {
   try {
     return new URL(url).host.replace(/^www\./, '');
