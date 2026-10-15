@@ -1,0 +1,40 @@
+device: rossum-electro-music-sp-1200
+name: mod_pr4x1s
+summary: Browser patcher that builds a modified version of Rossum SP-1200 firmware 1.04 from your own copy, adding a two-line segment screen, count-in, pad output readout and undo.
+description: >-
+  The patched firmware uses both display lines for a segment screen that shows
+  segment, swing, tempo, auto-correct and bar.beat position with the recording
+  state. It also adds a one-bar count-in, a brief readout of which bank, pad and
+  output a struck pad plays on, and undo and redo of the last recorded take. The
+  mod starts through the SP-1200's boot path for EEPROM updates but loads only
+  into memory, so the stored firmware is never rewritten and a normal power-on
+  runs Rossum's firmware as before. The page checks that the file you drop is an
+  unmodified 1.04, and the repository holds only the patch bytes, not any Rossum
+  firmware. The project says it brings a subset of the features of SPf1200, a
+  separate mod for the original E-mu SP-1200, and is not affiliated with Rossum.
+status: active
+authors:
+  - name: pr4x1s
+    url: https://sp1200.pr4x1s.fm/
+source: https://github.com/SP-1200/mod_pr4x1s
+source_status: patcher-only
+license: unspecified
+license_notes: No license file or statement; the repository holds the patcher page and its patch data.
+homepage: https://sp1200.pr4x1s.fm/
+distribution: patch-your-own
+requires_stock: Rossum SP-1200 Main FW 1.04
+install_notes: >-
+  Download Rossum's 1.04 zip from Rossum, drop it on the project page to build
+  sp1200eefw.bin, and copy only that file to the top level of the SD card. Hold
+  Sync while powering on, answer Yes at the update prompt (nothing is written to
+  EEPROM) and press Enter at the card prompt. Do not share the built file, since
+  it contains Rossum's firmware. If the ReprogramEEPROM question ever appears,
+  press No, and do not use Special 28 while the mod runs. The mod is gone at
+  power-off.
+brick_risk: false
+tags: [sequencer, ui, patcher]
+versions:
+  - version: Main FW 1.04+pxs
+    date: 2026-10-09
+    url: https://github.com/SP-1200/mod_pr4x1s/commit/1dc40b0
+    notes: Version string shown on the unit; the date is the latest and only deployed commit of the patcher site.

@@ -1,0 +1,53 @@
+device: elektron-machinedrum
+name: MDX
+summary: Extended Machinedrum OS with a larger sequencer, new machines and MIDI additions, released as ready-made SysEx updates.
+description: >-
+  MDX is a third-party operating system for the Machinedrum (SPS-1 and the UW
+  versions) that has been released since 2020. The X.20 preview, also called MDX
+  2.0, adds independent track lengths and speeds, microtiming, trig conditions,
+  fill mode, retrigs, per-pattern tempo, up to 64 steps per track and a new
+  storage format for patterns, kits, songs and snapshots. It also lets you load
+  user machines over MIDI into Machine Manager slots, which is the basis for the
+  other user-machine projects on this page. X.14 is the stable release. The
+  authors state that MDX is developed independently with permission from Elektron
+  and is not affiliated with the company. The repository holds the release
+  packages, checksums and MIDI/SysEx documentation but no source code.
+status: active
+authors:
+  - name: Justin Mammarella
+    url: https://github.com/jmamma
+  - name: Yatao Li
+homepage: https://github.com/jmamma/MDX
+source_status: binary-only
+license: unspecified
+license_notes: No license file or statement in the repository, which holds release packages and documentation only.
+distribution: download
+install_notes: >-
+  Back up snapshots and internal memory over SysEx before upgrading. X.20 saves
+  patterns, kits and songs in a new format that older firmware cannot load, and
+  on units without the +Drive option it cuts song capacity from 32 to 16 and
+  deletes songs 17 to 32. To go back to X.14 or older, install that OS and then
+  run Factory Reset from the boot menu (hold FUNC while powering on). The
+  repository also links to a support Discord and an issue tracker.
+tags: [sequencer, machines, ui, performance]
+versions:
+  - version: X.20 B
+    date: 2026-10-09
+    url: https://github.com/jmamma/MDX/tree/main/firmware/mdx/X.20
+    notes: MDX 2.0 public preview; X.14 stays the stable release.
+  - version: X.14
+    date: 2026-09-28
+    url: https://github.com/jmamma/MDX/tree/main/firmware/mdx/X.14
+    notes: Stable release.
+  - version: X.13
+    date: 2026-07-12
+    url: https://github.com/jmamma/MDX/tree/main/firmware/mdx/X.13
+  - version: X.12
+    date: 2025-10-01
+    url: https://github.com/jmamma/MDX/tree/main/firmware/mdx/X.12
+  - version: X.11
+    date: 2024-11-11
+    url: https://github.com/jmamma/MDX/tree/main/firmware/mdx/X.11
+  - version: X.10
+    date: 2023-12-19
+    url: https://github.com/jmamma/MDX/tree/main/firmware/mdx/X.10

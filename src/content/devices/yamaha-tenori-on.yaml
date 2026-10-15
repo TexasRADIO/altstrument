@@ -1,0 +1,32 @@
+name: Tenori-on
+manufacturer: Yamaha
+category: controller
+tagline: 16 x 16 LED button grid instrument for looping note patterns
+description: >-
+  The Tenori-on (TNR-O) is a handheld instrument from Yamaha designed by the
+  artist Toshio Iwai and Yu Nishibori of Yamaha's Center for Advanced Sound
+  Technology. Its face is a 16 by 16 grid of LED buttons on which you draw
+  loops of notes that play back in layers, with a built-in sound source and MIDI
+  support. Firmware updates are loaded from an SD card, using a numbered
+  stock release such as 2.10.
+stock_firmware: "2.10"
+links:
+  community:
+    - label: Wikipedia article
+      url: https://en.wikipedia.org/wiki/Tenori-on
+notes: >-
+  The one catalogued firmware replaces the whole OS with a cumulative build that
+  is installed like Yamaha's own updates, and a failed first start can need a
+  test-mode factory reset described in its install notes. Yamaha's own product
+  page for the unit no longer resolves, so there is no manufacturer link here.
+related: []
+image:
+  src: /images/devices/yamaha-tenori-on.jpg
+  style: photo
+  alt: Silver Yamaha Tenori-on with its 16 by 16 button grid, side buttons and small display, cropped from a photo beside a mixing desk
+  width: 900
+  height: 900
+  credit: "Photo: Rich Lem, via Wikimedia Commons"
+  license: CC-BY-SA-3.0
+  source_url: https://commons.wikimedia.org/wiki/File:Tenori-on-london-2nd-january-2008.JPG
+  original_url: https://upload.wikimedia.org/wikipedia/commons/a/a8/Tenori-on-london-2nd-january-2008.JPG

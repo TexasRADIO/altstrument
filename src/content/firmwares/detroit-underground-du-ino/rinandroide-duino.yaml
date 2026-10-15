@@ -1,0 +1,36 @@
+device: detroit-underground-du-ino
+name: DU-INO r-EUCLID and Celestial Modulator
+summary: Two Arduino sketches for the DU-INO, a dual Euclidean rhythm and random stepped-CV generator and a four-body gravity simulation that outputs four LFOs and orbit triggers.
+description: >-
+  r-EUCLID produces two Euclidean trigger patterns with an external clock and
+  reset input, and a random stepped CV from 0 to 5 V on each channel. Celestial
+  Modulator simulates four bodies orbiting under gravity; each body drives an
+  LFO output and the first two also fire a trigger every orbit. Its speed,
+  gravity and entropy are set on the display, and gate inputs or the panel
+  buttons reset the simulation or inject chaos. Each sketch lists the rear switch
+  settings it needs.
+status: active
+authors:
+  - name: Rino Petrozziello
+    url: https://github.com/Rinandroide
+source: https://github.com/Rinandroide/duino
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Install the DU-INO library in the Arduino IDE, open the sketch, choose the
+  Arduino Uno board and upload over USB with the module's programming switch
+  set to program. Then set the rear DIP switches to the layout given in the
+  README and the sketch header and put the programming switch back to run.
+tags: [sequencer, euclidean, lfo, random, chaos]
+image:
+  url: https://raw.githubusercontent.com/Rinandroide/duino/main/euclid.jpeg
+  alt: DU-INO front panel with its OLED display showing the Euclid function, two rows of step and hit settings with small circular pattern graphics
+  credit: Rino Petrozziello
+  source_url: https://github.com/Rinandroide/duino
+  first_party: true
+versions:
+  - version: main @ 50b4efd
+    date: 2026-10-15
+    url: https://github.com/Rinandroide/duino/commit/50b4efd
+    notes: No tagged releases; this is the latest commit.

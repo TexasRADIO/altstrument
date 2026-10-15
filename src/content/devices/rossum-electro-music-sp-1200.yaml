@@ -1,0 +1,35 @@
+name: SP-1200
+manufacturer: Rossum Electro-Music
+category: drum-machine
+tagline: 12-bit sampling drum machine, reissue of the E-mu SP-1200
+description: >-
+  The Rossum SP-1200 is a reissue of E-mu's classic 12-bit sampling percussion
+  system, made by Rossum Electro-Music and sold from 2021 to 2025. Dave Rossum,
+  who designed the original, kept the analog and digital sound path as close to
+  the 1987 unit as possible, with its pads, sequencer and eight individual
+  outputs. It adds a memory card in place of the floppy drive, which can also
+  import vintage disk images, and the maximum sampling memory the original sound
+  engine allows.
+stock_firmware: "1.04"
+links:
+  manufacturer: https://www.rossum-electro.com/products/sp-1200
+  community:
+    - label: Rossum downloads (firmware and manuals)
+      url: https://www.rossum-electro.com/pages/downloads
+notes: >-
+  The unit keeps its firmware in internal EEPROM and updates from a file on the
+  memory card. The one catalogued mod loads into memory only, so it is gone at
+  power-off, and it is built in the browser from Rossum's own 1.04 download. The
+  original E-mu SP-1200 boots from floppy and has its own separate community
+  mod, SPf1200, which is not catalogued here.
+related: []
+image:
+  src: /images/devices/rossum-electro-music-sp-1200.webp
+  style: photo
+  alt: Rossum SP-1200 seen from above, with its eight faders, eight pads, keypad and red segment display on a black and grey panel
+  width: 1200
+  height: 1091
+  credit: Rossum Electro-Music
+  license: manufacturer product image
+  source_url: https://www.rossum-electro.com/products/sp-1200
+  original_url: https://www.rossum-electro.com/cdn/shop/products/crop3500a-16.png?v=1756762494

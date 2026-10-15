@@ -1,0 +1,37 @@
+name: DU-INO
+manufacturer: Detroit Underground
+category: eurorack
+tagline: 14HP Eurorack shield that hosts an Arduino Uno running your own sketches
+description: >-
+  The DU-INO is a programmable Eurorack module from Detroit Underground, designed
+  by Logick Workshop. It is a front panel and interface board for an Arduino Uno
+  mounted on its back, with an OLED display, a click encoder, four gate jacks that
+  can be inputs or outputs, four CV inputs and four CV outputs. Which function it
+  performs depends on the sketch uploaded over USB, and a rear bank of eight
+  switches sets the jack directions each sketch expects.
+platform: Arduino Uno (ATmega328P)
+links:
+  manufacturer: https://github.com/logickworkshop/du-ino
+  community:
+    - label: ModularGrid page
+      url: https://modulargrid.net/e/detroit-underground-du-ino
+    - label: Logick Workshop, uploading a program (video)
+      url: https://www.youtube.com/watch?v=DT4nvzAziTM
+notes: >-
+  There is no fixed stock firmware: every function is an Arduino sketch built on
+  the BSD-3-Clause DU-INO library from Logick Workshop, which also ships example
+  functions (ADSR, pulser, quantizer, sequencer and others). Uploading needs the
+  small switch on the circuit board set to its programming position, and back
+  to run position afterwards. The manufacturer link above is the library
+  repository because the original Logick Workshop product page no longer loads.
+related: [hagiwo-mod1]
+image:
+  src: /images/devices/detroit-underground-du-ino.png
+  style: photo
+  alt: Drawing of the DU-INO front panel with the display window, gate jacks GT1 to GT4, four CV inputs with offset knobs and four CV outputs
+  width: 280
+  height: 507
+  credit: Logick Workshop
+  license: project image, published in the official du-ino library repository (BSD-3-Clause)
+  source_url: https://github.com/logickworkshop/du-ino/tree/master/doc/examples
+  original_url: https://raw.githubusercontent.com/logickworkshop/du-ino/master/doc/examples/images/du-ino-panel.png

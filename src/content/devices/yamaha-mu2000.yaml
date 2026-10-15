@@ -18,5 +18,6 @@ links:
       url: https://tarboh.github.io/S-MU2000/
 notes: >-
   A free Yamaha firmware update added Roland GS support and effects and made
-  the unit an MU2000EX. The only catalogued entry runs the original firmware in
-  an emulator and requires ROMs extracted from your own unit.
+  the unit an MU2000EX. The catalogued entries are an emulator that runs the
+  original firmware and a ROM dumper; both work with ROMs extracted from your own
+  unit, which is not shared.

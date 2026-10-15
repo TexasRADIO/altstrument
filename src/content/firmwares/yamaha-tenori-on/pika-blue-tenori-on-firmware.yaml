@@ -1,0 +1,44 @@
+device: yamaha-tenori-on
+name: pika.blue Tenori-on firmware
+summary: Cumulative third-party firmware for the Tenori-on with per-layer effects, layer splits, pitch bend, MIDI latency control, direction changes, a grid layer mode for norns and dozens of other additions.
+description: >-
+  Each release is a complete firmware image packed as a .tup file for installing
+  from the SD card the same way as Yamaha's updates, and every release includes
+  the features of the earlier ones. The list covers extra layer types, per-layer
+  reverb, chorus and echo effects, splits that change octave, velocity, length
+  or pan across a layer, extra meta controllers and loop speeds, MIDI transport
+  and pitch bend handling, an option to delay sound against MIDI notes, an
+  encoder debounce and a menu emulation that help when the rotary dial is failing,
+  and a grid mode for controlling external devices such as the monome norns. The
+  author's site documents each feature and open bugs, and one contributor
+  provides a screen-mirroring app. Files saved by earlier versions, including
+  Yamaha's own, load correctly from release A040 on. The images are built by the
+  author, not Yamaha's own download, and no source code is published.
+status: active
+authors:
+  - name: Pika Blue
+    url: https://www.pika.blue/
+source_status: binary-only
+license: unspecified
+license_notes: No license statement; the site carries a liability waiver for flashing the images.
+homepage: https://www.pika.blue/categories/tenori-on/
+distribution: download
+requires_stock: "2.10"
+install_notes: >-
+  Unzip the release, copy the .tup to the TENORI-ON folder on the SD card, power
+  on holding OK and CANCEL, pick the file with the jog dial and confirm the
+  update, which takes about 90 seconds. If the unit hangs at the title screen
+  afterwards, run the test-mode factory reset (power on holding L1 and CLEAR,
+  choose 047 Factory Set); this removes loaded samples. The author's liability
+  waiver says the images work on the author's own unit and disclaims
+  responsibility for damage to yours.
+brick_risk: false
+tags: [sequencer, performance, ui, midi, fx]
+versions:
+  - version: A044
+    date: 2026-10-05
+    url: https://www.pika.blue/posts/tenori-on/releases/
+    notes: Adds many new split types, an echo effect, per-layer effects, MIDI latency control and pitch bend, and fixes bugs in 036 to 038.
+  - version: A043
+    url: https://www.pika.blue/posts/tenori-on/releases/
+    notes: Adds direction changes for Score, Random and Draw layers.

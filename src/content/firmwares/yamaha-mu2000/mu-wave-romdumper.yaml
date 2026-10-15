@@ -1,0 +1,39 @@
+device: yamaha-mu2000
+name: mu-wave-romdumper
+kind: tool
+summary: Browser page and command line tool that read the wave ROM of a Yamaha MU2000 or MU1000 out through MIDI SysEx or the SmartMedia card, without changing the firmware.
+description: >-
+  The MU2000 and MU1000 share a 32 MiB wave ROM that the CPU cannot read
+  directly. The web page uses SysEx messages the unit's firmware already
+  accepts, which are not in the manual, and writes four 8 MiB ROM image files.
+  The MU2000 page reads through the sampler messages and takes about four hours;
+  the MU1000 page reads through register messages, takes about twenty hours and
+  can resume after a stop. For the MU2000 there is also a route without a MIDI
+  interface: two small MIDI files make the synth save the ROM to its SmartMedia
+  card as WAV samples, and a Node script rebuilds the ROM files from them. The
+  README says testing on real hardware is still in progress for the MU2000 and
+  has not started for the MU1000, and that the MU128 is not supported. The
+  extracted images are the ones the S-MU2000 emulator needs.
+status: active
+authors:
+  - name: shingo45endo
+    url: https://github.com/shingo45endo
+source: https://github.com/shingo45endo/mu-wave-romdumper
+source_status: open
+license: MIT
+homepage: https://shingo45endo.github.io/mu-wave-romdumper/
+distribution: browser-installer
+install_notes: >-
+  Needs a MIDI interface with both In and Out connected and a browser with Web
+  MIDI (Chrome, Edge, or Firefox with the site permission add-on). Keep the tab
+  open and send nothing else to the synth while it runs. The card route plays a
+  SysEx-only MIDI file that fills sample slots 509 to 512 (or 512 alone) in the
+  unit, so free those slots first. The tool reads Yamaha's ROM contents into
+  files on your computer; do not share the resulting images.
+brick_risk: false
+tags: [research, rom-dump, sysex, web-midi]
+versions:
+  - version: main @ 1821006
+    date: 2026-10-10
+    url: https://github.com/shingo45endo/mu-wave-romdumper/commit/1821006
+    notes: No tagged releases; this is the latest commit.
