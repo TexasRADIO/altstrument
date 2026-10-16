@@ -46,7 +46,7 @@ Firmware that replaces or modifies what runs on a device, and host-side tools th
 ## Policy
 
 - Entries link to sources. Binaries are never hosted in this repository or on this site.
-- Links to redistributed manufacturer firmware are not accepted.
+- Links to redistributed manufacturer firmware are not accepted, unless the manufacturer licenses that exact file for redistribution (for example, M-VAVE's FM-1 V15 image, which `m-vave/fm1_open` publishes under Apache-2.0).
 - Flashing firmware is at your own risk and may void your warranty. Entries flagged `brick_risk` carry a documented risk of bricking the device; read their install notes before flashing.
 
 ## Repository layout

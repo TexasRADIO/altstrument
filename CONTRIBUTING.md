@@ -253,7 +253,7 @@ Accepted values: `MIT`, `BSD-2-Clause`, `BSD-3-Clause`, `Apache-2.0`, `GPL-2.0-o
 
 ## What we do not accept
 
-- Links to redistributed manufacturer firmware, including third-party mirrors of official OS images.
+- Links to redistributed manufacturer firmware, including third-party mirrors of official OS images. The exception is a file the manufacturer itself licenses for redistribution, such as M-VAVE's FM-1 V15 image (`FM-1_015.fwsc`, Apache-2.0 in `m-vave/fm1_open`). The copy must match the licensed file exactly; check its hash.
 - Binary files of any kind in the repository (`.bin`, `.syx`, `.hex`, firmware archives).
 - Affiliate or referral links.
 - Entries without a working `source` or `homepage`.
