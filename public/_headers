@@ -1,0 +1,12 @@
+# Cloudflare Workers static assets headers (copied to dist/ by Astro).
+
+# RFC 8288 Link headers on the home page point agents at machine-readable resources.
+/
+  Link: </.well-known/api-catalog>; rel="api-catalog"
+  Link: </about#api>; rel="service-doc"
+  Link: </sitemap-index.xml>; rel="sitemap"; type="application/xml"
+  Link: </feed.xml>; rel="alternate"; type="application/rss+xml"
+
+# No file extension, so the asset server can't infer the type.
+/.well-known/api-catalog
+  Content-Type: application/linkset+json

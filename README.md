@@ -61,8 +61,8 @@ src/
     schema.ts                 Zod schemas and allowed values (the field reference)
   content.config.ts           Astro content collections
   loaders/                    content loaders for entries fetched at build time
-  pages/                      Astro pages (including /api/catalog.json and /api/stats.json)
-public/                       favicons and device images
+  pages/                      Astro pages and endpoints (/api/*.json, /feed.xml, /robots.txt, /.well-known/api-catalog)
+public/                       favicons, device images, and Cloudflare _headers (Link headers) and _redirects
 scripts/
   validate.ts                 catalog validator (runs before build and in CI)
   build-icons.ts              rasterizes the favicon (`pnpm icons`)

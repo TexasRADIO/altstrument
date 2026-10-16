@@ -1,0 +1,3 @@
+# Cloudflare Workers static assets redirects (copied to dist/ by Astro).
+# @astrojs/sitemap writes sitemap-index.xml; crawlers and agents look for /sitemap.xml first.
+/sitemap.xml /sitemap-index.xml 301

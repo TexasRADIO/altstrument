@@ -90,6 +90,18 @@ import { STATUS_INFO, SOURCE_INFO, LICENSE_SENTINELS } from '@/lib/labels';
       </p>
     </section>
 
+    <section aria-labelledby="api">
+      <h2 id="api">Data and API</h2>
+      <p>The whole catalog is available as static files, rebuilt on every change:</p>
+      <ul class="mt-2 list-disc pl-5">
+        <li><a href="/api/catalog.json">/api/catalog.json</a>: every manufacturer, device, firmware and version as JSON</li>
+        <li><a href="/api/stats.json">/api/stats.json</a>: device, firmware and tool counts</li>
+        <li><a href="/feed.xml">/feed.xml</a>: RSS feed of the most recent dated versions</li>
+        <li><a href="/sitemap-index.xml">/sitemap-index.xml</a>: every page on the site</li>
+        <li><a href="/.well-known/api-catalog">/.well-known/api-catalog</a>: the JSON endpoints above as an RFC 9727 API catalog</li>
+      </ul>
+    </section>
+
     <section aria-labelledby="thanks">
       <h2 id="thanks">Prior art and thanks</h2>
       <p>This site builds on lists others have kept for years:</p>
@@ -106,7 +118,7 @@ import { STATUS_INFO, SOURCE_INFO, LICENSE_SENTINELS } from '@/lib/labels';
       <p>
         The site code is released under the MIT license. The catalog data is released under
         <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC-BY-4.0</a>; reuse it with attribution.
-        A full JSON export is available at <a href="/api/catalog.json">/api/catalog.json</a>.
+        A full JSON export is listed under <a href="#api">Data and API</a>.
       </p>
       <p>
         Device images are the manufacturers' own product and press photos, shown with attribution and a link to
