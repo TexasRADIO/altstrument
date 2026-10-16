@@ -5,7 +5,7 @@ import FirmwareFilter from '@/components/FirmwareFilter.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import Prose from '@/components/Prose.astro';
 import { CATEGORY_LABELS } from '@/content/schema';
-import { getDevicesWithFirmwares, hostOf, plural, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
+import { compareFirmwaresByUpdated, firmwareUpdated, getDevicesWithFirmwares, hostOf, isoDate, plural, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
 import { imageCreditLabel, isSocialImage, logoCreditLabel, looksLikeSpdx, spdxUrl } from '@/lib/labels';
 
 export async function getStaticPaths() {
@@ -19,8 +19,12 @@ export async function getStaticPaths() {
 interface Props { device: DeviceItem; related: DeviceItem[] }
 const { device, related } = Astro.props;
 const { data } = device;
-const firmwares = device.firmwares.filter((f) => f.data.kind === 'firmware');
-const tools = device.firmwares.filter((f) => f.data.kind === 'tool');
+// Rendered in "Recently updated" order (the default sort); FirmwareFilter re-sorts on the client.
+const byUpdated = [...device.firmwares].sort(compareFirmwaresByUpdated);
+const firmwares = byUpdated.filter((f) => f.data.kind === 'firmware');
+const tools = byUpdated.filter((f) => f.data.kind === 'tool');
+// device.firmwares is in Status order (compareFirmwares); kept as data-order for that sort.
+const statusOrder = new Map(device.firmwares.map((f, i) => [f.id, i]));
 const none = device.firmwares.length === 0;
 const image = data.image;
 const logo = image ? undefined : device.logo;
@@ -34,6 +38,17 @@ const description = `${data.name} by ${data.manufacturer}: ${
 // Lowercased search text for the firmware filter; matches the haystack FirmwareFilter splits into terms.
 const filterText = (f: FirmwareItem) =>
   [f.data.name, f.data.summary, ...f.data.authors.map((a) => a.name), ...f.data.tags].join(' ').toLowerCase();
+// Filter and sort keys read by FirmwareFilter.
+const itemAttrs = (f: FirmwareItem) => ({
+  'data-fw': f.slug,
+  'data-status': f.data.status,
+  'data-source': f.data.source_status,
+  'data-license': f.data.license,
+  'data-q': filterText(f),
+  'data-name': f.data.name,
+  'data-updated': isoDate(firmwareUpdated(f)) ?? '',
+  'data-order': statusOrder.get(f.id),
+});
 ---
 <Base
   title={`${data.name} (${data.manufacturer})`}
@@ -146,15 +161,15 @@ const filterText = (f: FirmwareItem) =>
     </section>
   )}
 
-  {device.firmwares.length >= 8 && (
-    <div class="mt-8"><FirmwareFilter firmwares={device.firmwares} /></div>
+  {device.firmwares.length >= 3 && (
+    <div class="mt-8"><FirmwareFilter firmwares={device.firmwares} search={device.firmwares.length >= 8} /></div>
   )}
 
   {firmwares.length > 0 && (
     <section class="mt-8" aria-labelledby="fw-h" data-fw-section>
       <h2 id="fw-h" class="mb-3 border-b border-line pb-1 text-lg">Firmware <span class="mono text-sm font-normal text-muted" data-fw-count>{firmwares.length}</span></h2>
       <ul class="flex flex-col gap-3">
-        {firmwares.map((f) => <li data-fw={f.slug} data-status={f.data.status} data-source={f.data.source_status} data-license={f.data.license} data-q={filterText(f)}><FirmwareCard firmware={f} /></li>)}
+        {firmwares.map((f) => <li {...itemAttrs(f)}><FirmwareCard firmware={f} /></li>)}
       </ul>
     </section>
   )}
@@ -163,7 +178,7 @@ const filterText = (f: FirmwareItem) =>
     <section class="mt-8" aria-labelledby="tools-h" data-fw-section>
       <h2 id="tools-h" class="mb-3 border-b border-line pb-1 text-lg">Tools <span class="mono text-sm font-normal text-muted" data-fw-count>{tools.length}</span></h2>
       <ul class="flex flex-col gap-3">
-        {tools.map((f) => <li data-fw={f.slug} data-status={f.data.status} data-source={f.data.source_status} data-license={f.data.license} data-q={filterText(f)}><FirmwareCard firmware={f} /></li>)}
+        {tools.map((f) => <li {...itemAttrs(f)}><FirmwareCard firmware={f} /></li>)}
       </ul>
     </section>
   )}

@@ -90,6 +90,14 @@ export function compareFirmwares(a: FirmwareItem, b: FirmwareItem): number {
   return compareText(a.data.name, b.data.name);
 }
 
+/** Newest dated version first, undated last, then name. Matches "Recently updated" in FirmwareFilter. */
+export function compareFirmwaresByUpdated(a: FirmwareItem, b: FirmwareItem): number {
+  const au = isoDate(firmwareUpdated(a)) ?? '';
+  const bu = isoDate(firmwareUpdated(b)) ?? '';
+  if (au !== bu) return !au ? 1 : !bu ? -1 : au < bu ? 1 : -1;
+  return compareText(a.data.name, b.data.name);
+}
+
 export function compareDevices(a: DeviceItem, b: DeviceItem): number {
   return compareText(a.data.manufacturer, b.data.manufacturer) || compareText(a.data.name, b.data.name);
 }
@@ -203,11 +211,16 @@ export function groupByManufacturer(
     .sort((a, b) => compareText(a.name, b.name));
 }
 
+/** A firmware's newest dated version, if any. */
+export function firmwareUpdated(fw: FirmwareItem): Date | undefined {
+  return fw.versions.find((v) => v.date)?.date;
+}
+
 /** Newest dated version across a device's firmwares, if any. */
 export function latestUpdate(device: DeviceItem): Date | undefined {
   let best: Date | undefined;
   for (const fw of device.firmwares) {
-    const d = fw.versions.find((v) => v.date)?.date;
+    const d = firmwareUpdated(fw);
     if (d && (!best || d.getTime() > best.getTime())) best = d;
   }
   return best;

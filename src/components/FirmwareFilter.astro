@@ -2,8 +2,12 @@
 import { SOURCE_STATUSES, STATUSES } from '@/content/schema';
 import type { FirmwareItem } from '@/lib/catalog';
 import { SOURCE_INFO, STATUS_INFO } from '@/lib/labels';
-interface Props { firmwares: FirmwareItem[] }
-const { firmwares } = Astro.props;
+interface Props {
+  firmwares: FirmwareItem[];
+  /** Search box and status/source/license filters. Off leaves only Sort by. */
+  search?: boolean;
+}
+const { firmwares, search = true } = Astro.props;
 
 function tally(values: string[]): Map<string, number> {
   const m = new Map<string, number>();
@@ -18,8 +22,8 @@ const sourceCounts = tally(firmwares.map((f) => f.data.source_status));
 const licenseCounts = tally(firmwares.map((f) => f.data.license));
 
 interface Opt { value: string; label: string }
-interface Select { id: string; label: string; all: string; options: Opt[] }
-const selects: Select[] = [
+interface Select { id: string; label: string; all?: string; options: Opt[] }
+const filters: Select[] = [
   {
     id: 'fwf-st',
     label: 'Status',
@@ -48,31 +52,42 @@ const selects: Select[] = [
   },
   // A select with a single value filters nothing, so leave it out.
 ].filter((s) => s.options.length >= 2);
+// Server order is Recently updated (compareFirmwaresByUpdated); the script re-sorts within each section.
+const sortSelect: Select = {
+  id: 'fwf-sort',
+  label: 'Sort by',
+  options: [
+    { value: 'updated', label: 'Recently updated' },
+    { value: 'status', label: 'Status' },
+    { value: 'name', label: 'Name' },
+  ],
+};
+const selects = [...(search ? filters : []), sortSelect];
 ---
-<form id="fw-filter" role="search" class="flex flex-col gap-2 sm:flex-row sm:items-end" hidden>
-  <div class="flex-1">
-    <label for="fwf-q" class="block text-sm font-medium">Search firmware</label>
-    <input
-      id="fwf-q"
-      type="search"
-      autocomplete="off"
-      placeholder="Name, author, tag, summary"
-      class="mt-1 w-full rounded border border-line-strong bg-surface px-3 py-2 text-base text-fg placeholder:text-muted"
-    />
-  </div>
-  {selects.length > 0 && (
-    <div class="grid grid-cols-2 gap-2 sm:flex">
-      {selects.map((s, i) => (
-        <div class:list={['min-w-0', selects.length % 2 === 1 && i === selects.length - 1 && 'col-span-2 sm:col-span-1']}>
-          <label for={s.id} class="block text-sm font-medium">{s.label}</label>
-          <select id={s.id} class="mt-1 w-full rounded border border-line-strong bg-surface px-2 py-2 text-base text-fg sm:w-auto sm:px-3">
-            <option value="">{s.all}</option>
-            {s.options.map((o) => <option value={o.value}>{o.label}</option>)}
-          </select>
-        </div>
-      ))}
+<form id="fw-filter" role={search ? 'search' : undefined} class="flex flex-col gap-2 sm:flex-row sm:items-end" hidden>
+  {search && (
+    <div class="flex-1">
+      <label for="fwf-q" class="block text-sm font-medium">Search firmware</label>
+      <input
+        id="fwf-q"
+        type="search"
+        autocomplete="off"
+        placeholder="Name, author, tag, summary"
+        class="mt-1 w-full rounded border border-line-strong bg-surface px-3 py-2 text-base text-fg placeholder:text-muted"
+      />
     </div>
   )}
+  <div class="grid grid-cols-2 gap-2 sm:flex">
+    {selects.map((s, i) => (
+      <div class:list={['min-w-0', selects.length % 2 === 1 && i === selects.length - 1 && 'col-span-2 sm:col-span-1']}>
+        <label for={s.id} class="block text-sm font-medium">{s.label}</label>
+        <select id={s.id} class="mt-1 w-full rounded border border-line-strong bg-surface px-2 py-2 text-base text-fg sm:w-auto sm:px-3">
+          {s.all && <option value="">{s.all}</option>}
+          {s.options.map((o) => <option value={o.value}>{o.label}</option>)}
+        </select>
+      </div>
+    ))}
+  </div>
 </form>
 <p id="fwf-status" class="mt-2 min-h-[1.5em] text-sm text-muted" role="status" aria-live="polite" hidden></p>
 <p id="fwf-none" class="mt-4 text-muted" hidden>No entries match. Try fewer words or clear a filter.</p>
@@ -80,8 +95,10 @@ const selects: Select[] = [
   (function () {
     function init() {
       var form = document.getElementById('fw-filter');
+      // The search box and filter selects are absent on short lists; Sort by is always there.
       var q = document.getElementById('fwf-q');
-      if (!form || !q) return;
+      var sort = document.getElementById('fwf-sort');
+      if (!form || !sort) return;
       var status = document.getElementById('fwf-status');
       var none = document.getElementById('fwf-none');
       // Each select is optional: the component omits any with fewer than two values.
@@ -93,9 +110,32 @@ const selects: Select[] = [
       var items = Array.prototype.slice.call(document.querySelectorAll('[data-fw]'));
       var sections = Array.prototype.slice.call(document.querySelectorAll('[data-fw-section]'));
       var total = items.length;
+      var coll = new Intl.Collator('en', { sensitivity: 'base', numeric: true });
+
+      // Reorders cards within each section using data-name / data-updated / data-order.
+      function sortItems() {
+        var mode = sort.value;
+        function attr(el, n) { return el.getAttribute(n) || ''; }
+        function cmp(a, b) {
+          if (mode === 'status') return Number(attr(a, 'data-order')) - Number(attr(b, 'data-order'));
+          var byName = coll.compare(attr(a, 'data-name'), attr(b, 'data-name'));
+          if (mode === 'updated') {
+            var au = attr(a, 'data-updated'), bu = attr(b, 'data-updated');
+            if (au !== bu) return !au ? 1 : !bu ? -1 : au < bu ? 1 : -1;
+          }
+          return byName;
+        }
+        sections.forEach(function (s) {
+          var list = s.querySelector('ul');
+          if (!list) return;
+          Array.prototype.filter.call(list.children, function (c) { return c.matches('[data-fw]'); })
+            .sort(cmp)
+            .forEach(function (c) { list.appendChild(c); });
+        });
+      }
 
       function apply() {
-        var terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+        var terms = q ? q.value.toLowerCase().split(/\s+/).filter(Boolean) : [];
         var shown = 0;
         items.forEach(function (li) {
           var hay = li.getAttribute('data-q') || '';
@@ -128,8 +168,9 @@ const selects: Select[] = [
         try {
           var u = new URL(location.href);
           function put(k, v) { if (v) u.searchParams.set(k, v); else u.searchParams.delete(k); }
-          put('q', q.value.trim());
+          put('q', q ? q.value.trim() : '');
           sels.forEach(function (s) { put(s.param, s.el ? s.el.value : ''); });
+          put('sort', sort.value === 'updated' ? '' : sort.value);
           history.replaceState(history.state, '', u.pathname + u.search + u.hash);
         } catch (e) {}
       }
@@ -137,8 +178,8 @@ const selects: Select[] = [
       function restore() {
         var p;
         try { p = new URLSearchParams(location.search); } catch (e) { return; }
-        q.value = p.get('q') || '';
-        sels.forEach(function (s) {
+        if (q) q.value = p.get('q') || '';
+        sels.concat({ param: 'sort', el: sort }).forEach(function (s) {
           var v = p.get(s.param);
           if (!s.el || !v) return;
           var ok = Array.prototype.some.call(s.el.options, function (o) { return o.value === v; });
@@ -149,8 +190,10 @@ const selects: Select[] = [
       restore();
       form.hidden = false;
       form.addEventListener('submit', function (e) { e.preventDefault(); });
-      q.addEventListener('input', apply);
+      if (q) q.addEventListener('input', apply);
       sels.forEach(function (s) { if (s.el) s.el.addEventListener('change', apply); });
+      sort.addEventListener('change', function () { sortItems(); sync(); });
+      sortItems();
       apply();
     }
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
