@@ -1,0 +1,52 @@
+device: shore-pine-sound-systems-tulip-cc
+name: Tulip CC firmware
+summary: >-
+  Official open-source Tulip firmware: MicroPython with the AMY synthesizer, sequencer, graphics, sprites,
+  LVGL widgets, a code editor and the Tulip World file-sharing board, with web and desktop builds of the same code.
+description: >-
+  The firmware boots straight into a Python prompt. The AMY engine runs up to 120 voices of additive,
+  subtractive, FM, sample and Karplus-Strong synthesis with filters and a sequencer, and the system ships with
+  a drum machine, a voice and patch app and a Juno-6 editor. Graphics come from a scrolling background frame
+  buffer, up to 32 sprites and a 128 by 50 text layer, with LVGL for touch interfaces. Programs can use MIDI,
+  Wi-Fi, USB keyboards and mice, and I2C devices. The same code also builds as Tulip Web in the browser and as
+  Tulip Desktop for macOS, Linux and Windows, and there is a port for the LilyGO T-Deck.
+status: active
+authors:
+  - name: Brian Whitman
+    url: https://github.com/bwhitman
+  - name: Shore Pine Sound Systems
+    url: https://github.com/shorepine
+source: https://github.com/shorepine/tulipcc
+source_status: open
+license: MIT
+license_notes: Bundled components such as MicroPython, LVGL and TinyCC keep their own licenses.
+homepage: https://tulip.computer/
+distribution: download
+install_notes: >-
+  Run tulip.upgrade() on a Tulip connected to Wi-Fi and accept both the system folder and firmware upgrades;
+  the unit reboots when done. Without Wi-Fi, or to run unreleased code, flash the release .bin files from a
+  computer with esptool as described in docs/tulip_flashing.md. Releases are now built on every change; the
+  June 2026 monthly release was the last prebuilt one for the N16R8, N32R8 and T-Deck boards.
+brick_risk: false
+tags: [official, os, synth-engine, sequencer, python, scripting, platform]
+video:
+  url: https://www.youtube.com/watch?v=1lYFjQp7Xrw
+  title: Tulip, a musical computer based on Micropython
+  credit: Floyd Steinberg
+  first_party: true
+  found_via: https://github.com/shorepine/tulipcc#readme
+versions:
+  - version: Rolling release (tulip)
+    date: 2026-10-14
+    url: https://github.com/shorepine/tulipcc/releases/tag/tulip
+    notes: Rebuilt on every change; assets last updated on this date.
+  - version: v-jun-2026
+    date: 2026-06-04
+    url: https://github.com/shorepine/tulipcc/releases/tag/v-jun-2026
+    notes: Last monthly release; AMY 1.2.6.
+  - version: v-may-2026
+    date: 2026-05-11
+    url: https://github.com/shorepine/tulipcc/releases/tag/v-may-2026
+  - version: v-apr-2026
+    date: 2026-04-15
+    url: https://github.com/shorepine/tulipcc/releases/tag/v-apr-2026

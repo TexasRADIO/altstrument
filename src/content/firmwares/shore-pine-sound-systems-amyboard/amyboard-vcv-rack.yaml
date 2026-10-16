@@ -1,0 +1,31 @@
+device: shore-pine-sound-systems-amyboard
+name: AMYboard for VCV Rack
+kind: tool
+summary: >-
+  VCV Rack plugin whose AMY module runs the real AMYboard firmware, MicroPython sketches and AMY engine inside
+  Rack, with the OLED, encoder, audio inputs and CV and MIDI as module ports.
+description: >-
+  The module embeds the same frozen Python files and AMY package as the hardware, and the firmware detects that
+  it is running in Rack. A sketch is kept in a folder in the user's documents, edited in any text editor and
+  restarted from the module's menu, and its loop runs on AMY's sequencer as on the board. The panel draws the
+  128 by 128 OLED and an encoder with a push button, and host audio can be routed into AMY as the external
+  input. It lets AMYboard sketches be developed and played without the hardware.
+status: active
+authors:
+  - name: Shore Pine Sound Systems
+    url: https://github.com/shorepine
+source: https://github.com/shorepine/tulipcc/tree/main/tulip/vcvrack
+source_status: open
+license: MIT
+homepage: https://github.com/shorepine/tulipcc/blob/main/tulip/vcvrack/README.md
+distribution: download
+install_notes: >-
+  Download the .vcvplugin for Linux x64, macOS arm64 or Windows x64 from the AMYboard rolling release and
+  install it into VCV Rack 2. Nothing is flashed to a board.
+brick_risk: false
+tags: [emulator, python, synth-engine]
+versions:
+  - version: 2.0.0
+    date: 2026-10-14
+    url: https://github.com/shorepine/tulipcc/releases/tag/amyboard
+    notes: Plugin assets in the AMYboard rolling release, updated on this date.

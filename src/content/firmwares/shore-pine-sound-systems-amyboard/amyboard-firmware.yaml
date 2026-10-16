@@ -1,0 +1,42 @@
+device: shore-pine-sound-systems-amyboard
+name: AMYboard firmware
+summary: >-
+  Official open-source AMYboard firmware: MicroPython with the AMY synthesizer, Juno-6 and DX7 patch banks,
+  CV and MIDI handling and a per-board Python sketch, edited from a browser editor that also upgrades the board.
+description: >-
+  The firmware loads the patches stored for each MIDI channel and then runs the user's sketch, a Python file
+  whose loop is scheduled by AMY's sequencer and which can change patches, read the CV inputs and react to
+  MIDI. The knob settings of the default synth are saved with the sketch. The AMYboard Online editor at
+  amyboard.com edits patches and sketches, shares them through AMYboard World and runs a browser simulation of
+  the board. It is built from the same tulipcc repository as the Tulip firmware.
+status: active
+authors:
+  - name: Brian Whitman
+    url: https://github.com/bwhitman
+  - name: Shore Pine Sound Systems
+    url: https://github.com/shorepine
+source: https://github.com/shorepine/tulipcc
+source_status: open
+license: MIT
+license_notes: Bundled components such as MicroPython and the AMY engine keep their own licenses.
+homepage: https://www.amyboard.com/
+distribution: browser-installer
+install_notes: >-
+  Hold both side buttons, release RST and then BOOT to enter the bootloader, and use the upgrader in the
+  AMYboard Online editor in Chrome over WebSerial. It can upgrade and keep your files or fully erase and
+  re-flash. A running board can also upgrade over Wi-Fi from the serial console. Shore Pine documents
+  replacing the firmware with an Arduino build and returning to it with the same upgrader.
+brick_risk: false
+tags: [official, os, synth-engine, python, scripting, midi, cv]
+versions:
+  - version: Rolling release (amyboard)
+    date: 2026-10-14
+    url: https://github.com/shorepine/tulipcc/releases/tag/amyboard
+    notes: Rebuilt on every change; assets last updated on this date.
+  - version: v-jun-2026
+    date: 2026-06-04
+    url: https://github.com/shorepine/tulipcc/releases/tag/v-jun-2026
+    notes: Last monthly release; CV input and MIDI CC editor fixes.
+  - version: v-may-2026
+    date: 2026-05-11
+    url: https://github.com/shorepine/tulipcc/releases/tag/v-may-2026

@@ -1,0 +1,32 @@
+name: AMYboard
+manufacturer: Shore Pine Sound Systems
+category: eurorack
+tagline: 10HP synthesizer board running the AMY engine under MicroPython, with CV, MIDI and S/PDIF
+description: >-
+  AMYboard is a headless relative of the Tulip CC built around the AMY synthesizer engine, with 128 Juno-6
+  and 128 DX7 patches, stereo line in and out switchable to modular levels, S/PDIF in and out, TRS and USB
+  MIDI, two CV inputs and two CV outputs at plus or minus ten volts, an SD card slot and an I2C port. It ships
+  with a 10HP Eurorack front panel. A Python sketch stored on the board sets up its patches and behaviour at
+  start-up, and sketches are edited in a browser editor at amyboard.com.
+platform: ESP32-S3
+links:
+  manufacturer: https://www.amyboard.com/
+  community:
+    - label: Shore Pine Sound Systems Discord
+      url: https://discord.gg/TzBFkUb8pG
+    - label: AMYboard getting started guide
+      url: https://github.com/shorepine/tulipcc/blob/main/docs/amyboard/README.md
+notes: >-
+  The stock firmware is open source and shares its code base with Tulip. Shore Pine also documents removing it
+  to run AMYboard as an Arduino board, and putting it back from the browser upgrader.
+related: [shore-pine-sound-systems-tulip-cc]
+image:
+  src: /images/devices/shore-pine-sound-systems-amyboard.webp
+  style: photo
+  alt: Red AMYboard circuit board with its column of ten jacks, lying on moss beside a white labelled front panel and a red panel
+  width: 1200
+  height: 630
+  credit: Shore Pine Sound Systems
+  license: project photo, published by the manufacturer and shown in the official tulipcc repository
+  source_url: https://www.amyboard.com/
+  original_url: https://amyboard.com/img/amyboard_preview.png

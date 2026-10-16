@@ -1,0 +1,33 @@
+name: Tulip CC
+manufacturer: Shore Pine Sound Systems
+category: diy-platform
+tagline: Portable touchscreen computer that boots into a Python prompt with a built-in synthesizer
+description: >-
+  The Tulip Creative Computer is a small open-hardware computer with a 1024 by 600 touchscreen, sound output,
+  MIDI in and out, USB host for keyboards, mice and MIDI devices, Wi-Fi and an I2C/Grove port. It boots into
+  MicroPython with the AMY synthesizer engine, graphics and a code editor built in, and is programmed by its
+  user to make music, games or other projects. Shore Pine Sound Systems designs it and Makerfabs sells the
+  assembled board, and the hardware can also be built from the published design.
+platform: ESP32-S3
+links:
+  manufacturer: https://tulip.computer/
+  community:
+    - label: Shore Pine Sound Systems Discord
+      url: https://discord.gg/TzBFkUb8pG
+    - label: Tulip on the web
+      url: https://tulip.computer/run/
+notes: >-
+  The whole system is open source and user programs run on top of the stock firmware, so most custom work on
+  Tulip is Python code rather than replacement firmware. The firmware can be replaced with your own ESP-IDF or
+  Arduino build and put back over USB.
+related: [shore-pine-sound-systems-amyboard]
+image:
+  src: /images/devices/shore-pine-sound-systems-tulip-cc.jpg
+  style: photo
+  alt: Tulip CC with a Python program on its touchscreen, connected to a USB keyboard and patched into a Eurorack case
+  width: 1200
+  height: 599
+  credit: Shore Pine Sound Systems
+  license: project photo, published in the official tulipcc repository
+  source_url: https://github.com/shorepine/tulipcc
+  original_url: https://raw.githubusercontent.com/shorepine/tulipcc/main/docs/pics/tulip_hero.jpg
