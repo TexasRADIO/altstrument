@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: FM1 Open (official open firmware and SDK)
+summary: >-
+  M-VAVE's own open-source FM-1 firmware: GPL application source, a binary-only sound engine library, build
+  tools and a browser workbench with a simulator, editor and USB flasher.
+description: >-
+  FM1 Open V12 is an eight-track firmware with eight sample slots and sixteen effect demos, published by M-VAVE
+  as a starting point for its own and third-party firmware. The repository holds the application source,
+  including the board drivers in app/board/, USB and Bluetooth audio mixing and USB recording, plus the web
+  build of the synth and the SDK. The sound engine itself is not open: it ships as the binary library
+  sdk/lib/libfm1_engine.a, which the audio interrupt calls. Firmware builds need Windows, PowerShell and
+  JieLi's PI32v2 clang toolchain, and produce FM1_OFFICIAL_OPEN.fwsc; the same sources also build a browser
+  preview and a self-contained workbench page. The SDK includes M-VAVE's stock V15 image as recovery firmware
+  (sdk/firmware/FM-1_015.fwsc), which M-VAVE distributes under Apache-2.0. An earlier release at the same
+  repository address was withdrawn, and the current history starts with the V12 release. The catalogued
+  community firmwares are built on Felucca and SLOOP and do not derive from this code.
+status: active
+authors:
+  - name: M-VAVE
+    url: https://github.com/m-vave
+source: https://github.com/m-vave/fm1_open
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The application source is GPL-3.0-only with an additional section 7 permission to link with the binary SDK.
+  The engine library sdk/lib/libfm1_engine.a is proprietary with no source; THIRD_PARTY.md permits using,
+  linking and redistributing it in binary form for M-VAVE FM1 devices only. The boot files and the stock
+  FM-1_015.fwsc recovery image are Apache-2.0. Third-party parts keep their own licenses (Open303, DaisySP,
+  emu2149 and SEA are MIT; MSFA/Dexed is Apache-2.0; JieLi SDK material keeps its upstream terms).
+homepage: https://open.m-vave.com/fm1-workbench
+distribution: browser-installer
+install_notes: >-
+  The workbench page simulates the firmware in the browser, edits it, and flashes it over USB, and offers the
+  matching source and SDK download. The release also has an offline copy of the workbench as a single HTML
+  file. Back up projects and samples before flashing; the license warns that firmware defects can cause data
+  loss or device malfunction. The bundled V15 recovery image returns the unit to stock.
+brick_risk: true
+tags: [official, sdk, sequencer, sampler, fx, open-source]
+versions:
+  - version: V12
+    date: 2026-10-14
+    url: https://github.com/m-vave/fm1_open/releases/tag/V12
+    notes: First release of the current repository; development kit, offline workbench and checksums.
