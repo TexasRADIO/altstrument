@@ -1,0 +1,34 @@
+device: m-vave-fm-1
+name: sloop-lab
+summary: >-
+  SLOOP fork used as a test bench for engine experiments: running the audio render on the FM-1's second core, a
+  smaller RAM footprint, and a synth series with a modulation matrix, LFO 2, a ladder filter and new reverbs.
+description: >-
+  The dualcore branch brings up the second processor core at boot and splits SLOOP's render across both cores with
+  bit-identical output on the host tests; its notes record CPU use falling from 31% to 23% on one pattern on a
+  device with the SLOOP 2.5 based build, and that the SLOOP 2.6 based build had not yet run on an FM-1. The ram
+  branch cuts SLOOP's RAM use, and the synth branch adds MIDI expression, a four-slot mod matrix, a second LFO, an
+  LP24 filter, ROOM, SPRING and HALL reverbs, a TERRAIN engine and per-section effects. The README says the fork
+  was written with Claude. The patch series is meant to be re-applied on each SLOOP release and offered upstream.
+status: active
+authors:
+- name: Andre Rezemini (andrerezemini)
+  url: https://github.com/andrerezemini
+source: https://github.com/andrerezemini/sloop-lab
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from SLOOP and Felucca (LICENSING.md); the second-core HAL files are from X0X, also GPL-3.0-only.
+distribution: source-only
+install_notes: >-
+  Build the branch you want with SLOOP's toolchain (see DUALCORE.md), then install the package with
+  tools/fm1_install.py or a locally served copy of SLOOP's web installer. The package keeps SLOOP's development
+  identity, so it installs over official SLOOP and back. Hold OCT- at power-on for USB rescue. The default branch
+  is dualcore; the README below the fork notice is SLOOP's own.
+brick_risk: true
+tags: [sequencer, synth-engine, fx, performance, drums, sampler]
+versions:
+- version: dualcore @ 3b83f31
+  date: 2026-10-11
+  url: https://github.com/andrerezemini/sloop-lab/commit/3b83f31020f5579f226e12aec58aacd70486e536
+  notes: No tagged releases of its own; this is the latest commit on the default branch.

@@ -1,0 +1,33 @@
+device: m-vave-fm-1
+name: Dabbl8
+summary: >-
+  Felucca fork in development that aims for eight sequencer tracks, more engines and expressive live play; an
+  eight-track prototype exists but no release has been qualified on an FM-1.
+description: >-
+  The repository holds the firmware source, a long planning and evidence set under docs/dabbl8, host and target
+  build checks and many small pull requests. Its plan document says an eight-track development prototype exists,
+  that no Dabbl8 installation on a device or release qualification is claimed, and that the README on the main
+  branch is still Felucca's. It plans eight logical tracks on the same eight shared voices, its own project
+  format, a first install that clears the previous firmware's projects and settings, and a Dabbl-branded boot
+  screen and colour themes. Nothing is published to install; a build needs the JieLi toolchain.
+status: active
+authors:
+- name: Grant Vine (grant-vine)
+  url: https://github.com/grant-vine
+source: https://github.com/grant-vine/dabbl8
+source_status: open
+license: GPL-3.0-only
+license_notes: Inherited from Felucca (LICENSING.md); the Felucca icon atlas, panel image and drum sample pack are excluded from the GPL.
+homepage: https://github.com/grant-vine/dabbl8/blob/main/DABBL8.md
+distribution: source-only
+install_notes: >-
+  No release or installer is published. Build from source (BUILDING.md). The project's install policy says a first
+  Dabbl8 install resets the previous firmware's projects, autosave, settings, presets and samples, so back
+  up first; Felucca's loader and recovery paths are unchanged.
+brick_risk: true
+tags: [sequencer, synth-engine, performance, ui]
+versions:
+- version: main @ a152256
+  date: 2026-10-12
+  url: https://github.com/grant-vine/dabbl8/commit/a152256f24b1a7d9727b921ddb34b03f2b390755
+  notes: No tagged releases; this is the latest commit.

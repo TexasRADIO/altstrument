@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: SHIFL
+summary: >-
+  Six-track live groovebox on the SLOOP lineage: five synth tracks and a drum track, generative pattern
+  tools, step probability, drum fills, a Karplus-Strong engine, 70 scales and a web editor.
+description: >-
+  A GitHub fork of SLOOP whose README credits Felucca and fmsloop's sound engine. It adds two synth tracks to
+  SLOOP's four, generate, mutate and evolve functions for melodic and drum tracks, per-step chance, a sequenced
+  fill row on the drum grid, a live mode with chained scenes, TR-808 and TR-909 circuit drum kits, a
+  Karplus-Strong plucked-string engine and drum kit, microtonal scales, a second filter envelope and LFO routing
+  to engine knobs. The README calls 3.0 a beta. The version shown here is the latest commit, since the repository
+  has no releases.
+status: active
+authors:
+- name: Ian Schwartz (schwartzworld)
+  url: https://github.com/schwartzworld
+source: https://github.com/schwartzworld/shifl
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md, inherited from Felucca, states GPL-3.0-only for code; the Felucca icon atlas, panel image and
+  drum-sample assets are excluded from that licence (the README says SHIFL does not build the sample pack).
+homepage: https://shifl.netlify.app/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with a .fwsc package. The installer page
+  has a Return to the official firmware option, which asks you to download M-VAVE's V15 file yourself. Hold OCT-
+  alone at power-on for USB rescue. Back up with the web editor first.
+brick_risk: true
+tags: [sequencer, generative, synth-engine, drums, fx, performance, usb-audio, midi, editor]
+image:
+  url: https://raw.githubusercontent.com/schwartzworld/shifl/HEAD/assets/logo/shifl-logo.png
+  alt: "The word SHIFL in dripping rainbow-coloured letters, red, orange, green, blue and purple, on a black background"
+  credit: schwartzworld
+  source_url: https://github.com/schwartzworld/shifl
+  first_party: true
+versions:
+- version: main @ 79fe37d
+  date: 2026-10-15
+  url: https://github.com/schwartzworld/shifl/commit/79fe37dff4701a4c920ef14db4effc962e94abc7
+  notes: No tagged releases; this is the latest commit. The README status line says 3.0.

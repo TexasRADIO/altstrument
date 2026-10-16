@@ -1,0 +1,54 @@
+device: m-vave-fm-1
+name: fm1buddy
+kind: tool
+summary: >-
+  Firmware for a small USB-host box built from an Adafruit Feather RP2040, optionally with an OLED or an ESP32
+  touch screen, that connects USB MIDI controllers to the FM-1 and installs firmware packages from an SD card
+  or the Feather's drive.
+description: >-
+  The Feather acts as a USB host with a hub, so the FM-1 and controllers exchange MIDI without a computer. The
+  OLED or touch-screen versions list .fwsc packages, check them for the FM-1 and run the update protocol,
+  resuming a cut-off install. A rules file maps MIDI messages between devices, for example a CC from a
+  controller to another CC or note, and can be edited on the box or on a computer. A Raspberry Pi script gives a
+  host without the switcher. The repository also holds OpenSCAD cases and a browser installer page. No FM-1
+  firmware is bundled; you copy packages onto the box yourself. Four releases appeared on 2026-10-16.
+status: active
+authors:
+- name: David Konsumer (konsumer)
+  url: https://github.com/konsumer
+source: https://github.com/konsumer/fm1buddy
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md names GPL-3.0-only; the FM-1 update code is a port of Leo Kuroshita's, and Pico-PIO-USB (MIT) is
+  included.
+homepage: https://konsumer.js.org/fm1buddy/
+distribution: download
+install_notes: >-
+  Download the UF2 for the Feather or the .bin for the touch screen from the releases page, or use the
+  installer page. The README warns that installing firmware onto the FM-1 is at your own risk, and that
+  holding OCT- while switching on starts its USB rescue mode.
+brick_risk: true
+tags: [flasher, usb-midi, midi, utility]
+image:
+  url: https://raw.githubusercontent.com/konsumer/fm1buddy/main/site/case/cyd.png
+  alt: >-
+    Render of a green 3D-printed case with an orange lid floating above it, over a flat black screen module,
+    with POWER and SD labels on the front
+  credit: konsumer
+  source_url: https://konsumer.js.org/fm1buddy/
+  first_party: true
+versions:
+- version: 0.0.3
+  date: 2026-10-16
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.0.3
+  notes: Labels on the case.
+- version: 0.0.2
+  date: 2026-10-16
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.0.2
+- version: 0.0.1
+  date: 2026-10-16
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.0.1
+- version: 0.0.0
+  date: 2026-10-16
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.0.0

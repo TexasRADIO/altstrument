@@ -1,0 +1,33 @@
+device: m-vave-fm-1
+name: fm-dub
+summary: >-
+  Work in progress on a SLOOP fork that turns the FM-1 into a dub-style preamp and sound-system console, with a
+  crossover, Tubby-style filter, limiter and dub effects pads, and a browser console that can flash it.
+description: >-
+  The repository's main branch is an unchanged copy of SLOOP 2.5. The dub changes are on the
+  feature/dub-preamp-audio-core branch, in a dub_preamp directory: a crossover, a Tubby-style filter, a limiter, 16
+  dub effect pads, a rack-style dashboard screen and extra USB audio code, with host tests. A GitHub Pages site
+  runs the firmware in the browser and has a flash button that installs a pinned package when the project's build
+  produced one. The branch commits carry AI co-author trailers. It is early work with no release and no README of
+  its own, and the author's notes do not say it has run on an FM-1.
+status: active
+authors:
+- name: imijes
+  url: https://github.com/imijes
+source: https://github.com/imijes/fm-dub/tree/feature/dub-preamp-audio-core
+source_status: open
+license: GPL-3.0-only
+license_notes: Inherited from SLOOP and Felucca (LICENSING.md). The Felucca icon atlas and panel image are excluded from the GPL.
+homepage: https://imijes.github.io/fm-dub/
+distribution: source-only
+install_notes: >-
+  Build with ENABLE_DUB_PREAMP=1 ./build.sh, then install with SLOOP's installer or from the project site's flash
+  button. The site says that a failed install can need a hardware programmer to recover. The docs/firmware file on
+  main is SLOOP 2.5, not the dub build.
+brick_risk: true
+tags: [fx, performance, usb-audio, midi, emulator, sequencer]
+versions:
+- version: feature/dub-preamp-audio-core @ 06cf6ff
+  date: 2026-10-12
+  url: https://github.com/imijes/fm-dub/commit/06cf6ff61fa0f10171c4a56493b76895f0c34d63
+  notes: No tagged releases; this is the latest commit on the feature branch.

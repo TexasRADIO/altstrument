@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: Felucca-OPX
+summary: >-
+  Felucca 1.5.1 fork that adds OPX, a six-operator altered-FM engine after the Korg opsix with its 40 algorithms, a user modulation matrix, 23 waveforms and seven factory patches.
+description: >-
+  OPX plays up to six voices, each with six operators that have their own waveform, ratio or fixed pitch, level
+  and envelope. The algorithms are the DX7's 32 plus the opsix's eight, and a USER 6 by 6 matrix sets how much
+  each operator modulates each other one. Macros on the edit pages are reachable from automation, step locks and
+  MIDI CC. The opsix's other operator modes, extra envelopes, LFOs, filter and effects are not implemented yet,
+  and an OPX track's own patch is not saved in user presets or the editor's backup. The rest of Felucca is
+  unchanged. User sample slot 3 is halved to 40 KB, and a project with an OPX track opens only on this firmware. The
+  project has a web installer and a browser emulator.
+status: active
+authors:
+- name: thomasgregorymarsden-code
+  url: https://github.com/thomasgregorymarsden-code
+source: https://github.com/thomasgregorymarsden-code/Felucca-opx
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README, as for Felucca; the release attaches LICENSING.md and a LICENSES archive for bundled and
+  ported parts.
+homepage: https://thomasgregorymarsden-code.github.io/Felucca-opx/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or the .fwsc from the release. Projects, user presets, samples, settings
+  and MIDI learn assignments are kept. The installer's Return to official V15 goes back to M-VAVE's firmware, and
+  the README says installing is at your own risk. The default branch is opx-engine.
+brick_risk: true
+tags: [synth-engine, fm, oscillator, sequencer, platform, emulator]
+image:
+  url: https://raw.githubusercontent.com/thomasgregorymarsden-code/Felucca-opx/HEAD/docs/opx-screens.png
+  alt: "Three Felucca-OPX screens: an algorithm 34 chart beside a sine scope, the USER 6 by 6 modulation matrix, and the OPERATORS list with VEL, FB and TO OP rows"
+  credit: thomasgregorymarsden-code
+  source_url: https://github.com/thomasgregorymarsden-code/Felucca-opx
+  first_party: true
+versions:
+- version: 0.0.1
+  date: 2026-10-16
+  url: https://github.com/thomasgregorymarsden-code/Felucca-opx/releases/tag/v0.0.1
+  notes: First release, Felucca 1.5.1 with the OPX engine in FM mode.

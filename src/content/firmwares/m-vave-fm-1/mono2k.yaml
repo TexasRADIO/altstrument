@@ -1,0 +1,34 @@
+device: m-vave-fm-1
+name: MONO2K
+summary: >-
+  Prototype Monomachine-style firmware core: six tracks each with one mono machine, a 64-step sequencer with
+  parameter locks and a lofi effects bus, on a 1-bit screen; no FM-1 build yet, runs in the browser.
+description: >-
+  Each track has one of nine machines (sine and noise, 8-bit SID-style, two FM, two wave, a digital wave machine and
+  a vocal machine) written without floating point, with amplitude, filter, effects, distortion and
+  three LFOs per track. The sequencer has 64 steps per track with accents, slides, parameter locks, trig
+  conditions, ratchets, swing and live recording. The bus adds a reverb, beat repeat, tape wobble and ADPCM
+  crunch, and MIDI uses Monomachine-style channels and CC numbers. The README says the core runs in a browser
+  emulator and in a desktop test harness, that the FM-1 build around Felucca's platform layer is the next step,
+  and that nothing has been flashed yet.
+status: active
+authors:
+- name: InigoHernandez
+  url: https://github.com/InigoHernandez
+source: https://github.com/InigoHernandez/mono2k
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSE file and README state GPL-3.0-only; the Inter Tight font is SIL OFL 1.1.
+homepage: https://inigohernandez.github.io/mono2k/
+distribution: source-only
+install_notes: >-
+  Nothing to install on an FM-1 yet: the repository holds the sound and sequencer core, a browser emulator
+  (build it with web/build.sh) and a host harness, but no package for the FM-1.
+brick_risk: false
+tags: [sequencer, synth-engine, fx, lfo, emulator, midi]
+versions:
+- version: main @ 8db4f7c
+  date: 2026-10-16
+  url: https://github.com/InigoHernandez/mono2k/commit/8db4f7c913f715b4604436731df8c3a07e6c9640
+  notes: No tagged releases; this is the latest commit, titled MONO2K 0.1.

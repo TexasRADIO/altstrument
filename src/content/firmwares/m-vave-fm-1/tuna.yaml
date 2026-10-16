@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: Tuna
+summary: >-
+  Generative music firmware built on Felucca's engines that plays in the manner of 89 composers and styles and 86 genres, with Marbles-style randomness shaped by music theory.
+description: >-
+  Tuna composes melody, bass, accompaniment and percussion as it plays; the same seed always plays the same music.
+  The library is organised by era and decade, each entry with its own harmony, rhythm and instruments (93 on
+  Felucca's engines), and eight character presets work without a composer. It adds odd meters, historical
+  tunings, a sympathetic-string resonator, a sequencer that freezes what you hear into an editable pattern with
+  conditions and parameter locks, 16 save slots, and per-part MIDI out with clock. The Marbles random section is
+  a port (MIT). The project site has a browser emulator and a web installer, and the repository keeps Felucca's own
+  README as docs/FELUCCA.md.
+status: active
+authors:
+- name: delirioux
+  url: https://github.com/delirioux
+source: https://github.com/delirioux/tuna
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and LICENSING.md, as for Felucca. The Marbles port is MIT, and other bundled parts keep
+  their own licences (LICENSES/).
+homepage: https://delirioux.github.io/tuna/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB. It replaces Felucca's sound and pattern memory with Tuna's own, so
+  back up first. The installer's return to the official firmware asks you to download M-VAVE's V15 file
+  yourself and select it; Felucca's installer also restores stock. The README calls it built for fun with no
+  warranty.
+brick_risk: true
+tags: [generative, sequencer, synth-engine, chords, scales, midi, emulator]
+image:
+  url: https://raw.githubusercontent.com/delirioux/tuna/HEAD/docs/tuna-logo.png
+  alt: "Tuna logo: a blue and cream tuna leaping over sound-wave bars and music notes, with a small keyboard device and the word TUNA below"
+  credit: delirioux
+  source_url: https://github.com/delirioux/tuna
+  first_party: true
+versions:
+- version: main @ b77b159
+  date: 2026-10-16
+  url: https://github.com/delirioux/tuna/commit/b77b15917f3d5075de4ded494fa7a1189e34bf33
+  notes: No tagged releases; this is the latest commit, titled Tuna 1.0, which the project site installs.

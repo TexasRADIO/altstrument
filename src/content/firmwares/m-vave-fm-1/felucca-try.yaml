@@ -1,0 +1,30 @@
+device: m-vave-fm-1
+name: Felucca Try (MIDI knobs)
+kind: tool
+summary: >-
+  Copy of the browser Felucca emulator page with an opt-in setting that lets a MIDI controller's knobs turn the
+  panel's knobs.
+description: >-
+  Runs the unchanged Felucca 1.5.1 build in the browser, the same as the project's own emulator page. The one
+  addition is an option, off by default, that maps CC 20 to 27 on any channel to the panel's select, algorithm,
+  presets, four knobs and master volume. A selector chooses how the controller sends them (absolute, or three
+  relative encodings), and both settings are kept in the browser. With the option off every CC goes to the
+  firmware as before. Needs Chrome or Edge for Web MIDI. The page changes are published on a branch of the
+  author's Felucca fork.
+status: active
+authors:
+- name: Steve Pinkham (spinkham)
+  url: https://github.com/spinkham
+source: https://github.com/spinkham/felucca-try
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Page and worklet carry GPL-3.0-only headers from Felucca's authors; the DotGothic16 font is SIL OFL 1.1.
+homepage: https://spinkham.github.io/felucca-try/
+brick_risk: false
+tags: [emulator, midi]
+versions:
+- version: main @ ac3ba1b
+  date: 2026-10-10
+  url: https://github.com/spinkham/felucca-try/commit/ac3ba1b58c5b7e8b53ebc15ae9e8420de59c7f79
+  notes: No tagged releases; this is the latest commit.

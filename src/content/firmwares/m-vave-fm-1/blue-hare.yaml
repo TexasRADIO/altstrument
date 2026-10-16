@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: Blue Hare
+summary: >-
+  Synthesizer firmware forked from Felucca: seven engines on four tracks with an effects chain, a generative
+  ambient mode on the ARP button, and a browser studio for designing sounds; the sequencer is a placeholder.
+description: >-
+  Blue Hare was started as a tracker (the repository is still named fel-tracker) and was renamed on 2026-10-16.
+  It keeps Felucca's platform layer and removes its groovebox features, including the step sequencer, slicer
+  and sample engines, to become a synthesizer with its own engines (SID, SH101, WAVE, BLISS, WEST, MODAL and
+  ECHOES in the current build; about forty more are archived in the tree). Pressing ARP starts a generative
+  ensemble over the four tracks. The tree also holds a browser sound design studio, a browser emulator, a
+  desktop build and an archived plugin. The repository's default branch is an unchanged copy of Felucca 1.4.1;
+  the work is on the tracker branch. The README names AI coding agents as part of the development. It does not
+  state that the firmware has been run on an FM-1, and it publishes no release or installable package.
+status: active
+authors:
+- name: Tristano Suriani
+  url: https://github.com/TristanoSuriani
+source: https://github.com/TristanoSuriani/fel-tracker/tree/tracker
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Same licence as Felucca (LICENSING.md on the tracker branch). The Felucca-derived files keep Leo Kuroshita's
+  copyright; Fukiai and DotGothic16 fonts and a ported DaisySP file keep their own licences.
+distribution: source-only
+install_notes: >-
+  No release or package is published; build build/bluehare.fwsc following BUILDING.md (JieLi toolchain and SDK)
+  and install it with tools/fm1_install.py. The web installer links in the README install official Felucca,
+  not Blue Hare. The README says M-VAVE's updater or an installer's return to the official V15 firmware
+  recovers the unit.
+brick_risk: true
+tags: [synth-engine, fx, emulator, editor, midi]
+versions:
+- version: tracker @ efd5b30
+  date: 2026-10-16
+  url: https://github.com/TristanoSuriani/fel-tracker/commit/efd5b307f4af43f64d82f02be94a1b26d4aceda6
+  notes: >-
+    No tagged releases; this is the latest commit on the tracker branch. The README gives the version as 0.10.0.

@@ -1,0 +1,44 @@
+device: m-vave-smk-37
+name: SMK37 Firmware Installer
+kind: tool
+summary: >-
+  Browser installer site for the SMK-37 and the open firmware ports built for it, with model selection and a
+  return path to M-VAVE's own firmware.
+description: >-
+  Serves .fwsc packages of the author's own SMK-37 firmwares and of ports of other FM-1 firmwares (Snoop37,
+  Makkuro37, Vector37, X0X, FoMni, MAKU, Rainbow mode, GHOULBOX, ChoralRoot, ORBIT, AMB-1, Polly, winampFM and
+  OberVave), each built for the Pro, the Elite and the MKE-P37 model names, and writes them over Web MIDI in
+  Chrome or Edge. The site also hosts two browser simulators, links the porting kit, and has an early-access
+  page. Its restore option asks you to download M-VAVE's own V016 package from M-VAVE and drop it
+  on the page; the site does not host M-VAVE's firmware, and the packages it serves are the author's own
+  builds, none the size of M-VAVE's. The repository is the built site, so the firmware sources live in the
+  separate per-project repositories.
+status: active
+authors:
+- name: genkigenki
+  url: https://github.com/genkigenki
+source: https://github.com/genkigenki/smk37
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README says the installer comes from Felucca and SLOOP under GPL-3.0 and that the firmware packages are
+  each under their own license. There is no LICENSE file in this repository, and the GitHub licence detector
+  reports none.
+homepage: https://genkigenki.github.io/smk37/
+distribution: browser-installer
+install_notes: >-
+  Open the page in Chrome or Edge and connect the keyboard over USB. Unofficial; install at your own risk.
+  The firmwares keep the keyboard's model name, so M-VAVE's M-UPGRADE accepts the keyboard again afterwards.
+brick_risk: true
+tags: [installer, flasher, emulator]
+video:
+  url: https://www.youtube.com/watch?v=HqUAT-hULgU
+  title: "SMK37 Makkuro37 Firmware, Snoop37 Firmware"
+  credit: "genkiginko"
+  first_party: true
+  found_via: https://genkigenki.github.io/smk37/
+versions:
+- version: main @ 6c90142
+  date: 2026-10-16
+  url: https://github.com/genkigenki/smk37/commit/6c90142ee97053bd9bfb98f85d4655249f29d82b
+  notes: No tagged releases; this is the latest commit, which adds Snoop37 2.7.0.

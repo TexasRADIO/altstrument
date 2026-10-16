@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: FM-1 Emulator (QEMU)
+kind: tool
+summary: >-
+  QEMU-based emulator that runs raw FM-1 firmware images or update packages on macOS and Linux, with an
+  on-screen panel, mouse and keyboard input, audio and the firmware's USB console.
+description: >-
+  Adds a CPU model for the FM-1's JieLi chip and a board model to QEMU, so the unmodified application firmware
+  runs against emulated display, LEDs, keys, encoders, flash and audio. No firmware is included: you pass it a
+  raw .bin or an uncompressed .fwsc or .ufw package. The README lists stock V15 and Felucca 1.5 as confirmed
+  working and says compatibility with other firmware is limited. Prebuilt archives are for macOS on Apple
+  silicon and Linux on x86-64; Windows is not supported yet. An experimental browser build is an interpreter
+  that runs at a small fraction of real time and has no buttons, LEDs or sound. Builds are numbered releases.
+status: active
+authors:
+- name: Simon Johansson (simonjohansson)
+  url: https://github.com/simonjohansson
+source: https://github.com/simonjohansson/fm1-emulator
+source_status: open
+license: GPL-2.0-or-later
+license_notes: >-
+  The maintained C sources and scripts carry GPL-2.0-or-later headers (LICENSES.md). The executable embeds
+  QEMU, which is GPL-2.0 overall, and statically links GLib (LGPL), PCRE2, zlib and SDL2.
+distribution: download
+install_notes: >-
+  Download the archive from the releases page and run ./emulator path/to/firmware.bin. The macOS binary is not
+  notarized, so a browser download needs its quarantine attribute cleared. To try M-VAVE's stock firmware,
+  download FM-1.fwsc from M-VAVE yourself; the project does not bundle it.
+brick_risk: false
+tags: [emulator, research]
+versions:
+- version: build-67
+  date: 2026-10-13
+  url: https://github.com/simonjohansson/fm1-emulator/releases/tag/build-67
+- version: build-64
+  date: 2026-10-11
+  url: https://github.com/simonjohansson/fm1-emulator/releases/tag/build-64
+- version: build-63
+  date: 2026-10-10
+  url: https://github.com/simonjohansson/fm1-emulator/releases/tag/build-63

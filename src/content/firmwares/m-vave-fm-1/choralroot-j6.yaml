@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: ChoralRoot J-6
+summary: >-
+  ChoralRoot fork that adds a chord-set mode with 100 sets laid out after the chord set list in Roland's J-6
+  manual, with set, genre, transpose, hold and phrase controls on the left keys.
+description: >-
+  Keeps ChoralRoot's engines and features. With a chord set on, the left nine keys act as a set controller and
+  the right keys play the set's twelve chords, with extensions and slash chords, and one list scrolls all 144
+  sounds. A browser emulator and a simple chord player are on the project site. The README (mostly in Russian,
+  with an English notice) says the modification was written by Claude at the repository owner's request, that
+  it was checked only by tests and the emulator, and that it has not run on a real FM-1. It says no Roland code or
+  sounds are included, only a chord table used as a reference, and that the data sits in one file.
+status: active
+authors:
+- name: EremanSim
+  url: https://github.com/EremanSim
+source: https://github.com/EremanSim/ChoralRootj-6
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  README states GPL-3.0-only for the project; fonts, icons and SDK files keep their own licences (LICENSING.md).
+  Upstream ChoralRoot is catalogued under the same licence.
+homepage: https://eremansim.github.io/ChoralRootj-6/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB (it offers a backup first), or tools/fm1_install.py with the .fwsc from
+  a release. The installer has Return to official V15, for which you download M-VAVE's file yourself. Hold OCT-
+  at power-on for update mode.
+brick_risk: true
+tags: [chords, synth-engine, performance, emulator]
+versions:
+- version: 0.23-j6
+  date: 2026-10-13
+  url: https://github.com/EremanSim/ChoralRootj-6/releases/tag/v0.23-j6
+  notes: Pre-release; OPT plus a chord-block key turns chord sets on and off.
+- version: 0.22-j6
+  date: 2026-10-13
+  url: https://github.com/EremanSim/ChoralRootj-6/releases/tag/v0.22-j6
+  notes: Pre-release.
+- version: 0.21-j6
+  date: 2026-10-11
+  url: https://github.com/EremanSim/ChoralRootj-6/releases/tag/v0.21-j6
+  notes: Pre-release.

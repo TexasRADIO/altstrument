@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: SLOOP Editor (SysEx scripts)
+kind: tool
+summary: >-
+  Python scripts and an agent skill file for Windows that drive SLOOP 2.4.1 over SysEx: write four-track
+  arrangements and drum kits, switch presets and read or set parameters from the command line.
+description: >-
+  Sibling of the author's Felucca SysEx scripts. Talks to winmm.dll through ctypes, so it needs no third-party
+  packages. Covers SLOOP 2.4.1's ten engines including FM6, the drum track with its kits, 64 steps per track
+  and the project slots, and includes a SysEx map of the parameters and a one-command arrangement generator.
+  Written as a skill for the DeepSeek Harness coding agent, so a natural-language request is turned into the
+  commands. The README is in Chinese. Windows only; close any browser MIDI session first. Playback is started
+  on the device's PLAY key.
+status: active
+authors:
+- name: Hunter Xiong (hunterxiong2026)
+  url: https://github.com/hunterxiong2026
+source: https://github.com/hunterxiong2026/fm1-sloop-editor-2026
+source_status: open
+license: MIT
+distribution: source-only
+requires_stock: SLOOP 2.4.1
+install_notes: >-
+  Targets SLOOP 2.4.1 specifically. Put the folder where the agent loads skills, create a separate Python
+  virtual environment and run scripts/sloop_cli.py info to check the connection. The release notes list known
+  limits, such as the 2.4 DIV values not being mapped and some drum kit names uncalibrated.
+brick_risk: false
+tags: [editor, midi, scripting, sequencer]
+versions:
+- version: 1.1.0
+  date: 2026-10-09
+  url: https://github.com/hunterxiong2026/fm1-sloop-editor-2026/releases/tag/v1.1.0
+  notes: SLOOP 2.4.1 support.
+- version: 1.0.0
+  date: 2026-10-07
+  url: https://github.com/hunterxiong2026/fm1-sloop-editor-2026/releases/tag/v1.0.0

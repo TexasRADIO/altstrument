@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: CS-1
+summary: >-
+  Yamaha CS-80-style polysynth sound module for dawless rigs: eight two-channel voices, the manual's preset tones, ring mod, delay, phaser and plate reverb, played over TRS or USB MIDI.
+description: >-
+  Each voice has two channels with a VCO, series high-pass and low-pass filters, a sine after the filters, filter
+  and amplitude envelopes, and velocity and key pressure read from the FM-1's own keys. Performance controls
+  include a sub oscillator, ring modulator, portamento, an initial pitch bend and the SELECT encoder as the
+  ribbon, with an auto aftertouch curve, MIDI learn, a CC map for the Novation Circuit Tracks and clock sync for
+  sequencer use. It has 52 sounds (22 tones read from the CS-80 manual's charts, classic recipes and eighteen
+  converted from presets of the CS-80 V plugin with the authors' own names) and 32 user slots. The second core runs
+  as an audio worker, taken from FM-106. The project site has a manual, a browser emulator and a web installer.
+status: active
+authors:
+- name: twochannels
+  url: https://github.com/twochannels
+source: https://github.com/twochannels/CS-1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSING.md. The platform code is Felucca's (via Dinghy), the dual-core audio worker comes from
+  FM-106 and the key sensing from Velo; the font is SIL OFL 1.1.
+homepage: https://twochannels.github.io/CS-1/
+distribution: browser-installer
+install_notes: >-
+  Web installer on the project site in Chrome or Edge, or tools/fm1_install.py with the .fwsc. Holding OCT- at
+  power-on starts a USB update mode. M-VAVE's updater or the FM-1 Firmware Hub's return-to-official option
+  restores stock. User presets sit in their own flash sector and survive a reinstall.
+brick_risk: true
+tags: [synth-engine, oscillator, filter, fx, reverb, delay, midi, velocity, emulator]
+image:
+  url: https://twochannels.github.io/CS-1/img/home.png
+  alt: "CS-1 HOME screen: two rows of coloured tone selector cells, the tones BRASS 1 and BRASS 2 for the sound BLADE BRASS, and brilliance, resonance, mix and volume sliders"
+  credit: twochannels
+  source_url: https://twochannels.github.io/CS-1/
+  first_party: true
+versions:
+- version: main @ 1d1225c
+  date: 2026-10-15
+  url: https://github.com/twochannels/CS-1/commit/1d1225c9f04c71d86a02a881ee522059b7d5ba38
+  notes: No tagged releases; this is the latest commit.

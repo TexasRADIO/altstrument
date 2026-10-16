@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: NOIZ DEMONS
+summary: >-
+  Felucca mod where randomising a sound is a summoning: one of 30 Ars Goetia demons answers each roll, its rank sets how far the patch is thrown, and its sigil replaces the graphs.
+description: >-
+  Ritual mode is set per track and is on at every power-up. Holding EDIT and pressing the SUM key, or turning a
+  knob on an ENV, LFO, FX or FM6 operator page, rerolls part of the track's sound. The 30 demons fall into seven
+  ranks, from one Knight that nudges values by about 15 percent to the Kings, of which Belial can land any value
+  anywhere in its range. Each demon has its own animated sigil that follows the sound's level. Holding SAVE
+  undoes a summoning, FM6 patches are kept from coming out silent, and the rest of Felucca is unchanged. The
+  README describes the demon names and lore as drawn from the Lesser Key of Solomon.
+status: active
+authors:
+- name: SPIKE the Percussionist
+  url: https://github.com/SPIKE-the-Percussionist
+source: https://github.com/SPIKE-the-Percussionist/noiz_demons
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README states GPL-3.0-only, as for Felucca; LICENSING.md is Felucca's, with its bundled and ported parts
+  keeping their own licences.
+distribution: download
+install_notes: >-
+  Download noiz_demons.fwsc from the release and flash it with the FM-1 web installer or tools/fm1_install.py,
+  the same way as Felucca. A Felucca web installer or M-VAVE's own updater takes the unit back.
+brick_risk: true
+tags: [generative, random, synth-engine, fm, ui, platform]
+image:
+  url: https://raw.githubusercontent.com/SPIKE-the-Percussionist/noiz_demons/HEAD/docs/img/splash.gif
+  alt: "NOIZ DEMONS boot splash: the name in large green pixel letters above two red winged pixel-art demons"
+  credit: SPIKE the Percussionist
+  source_url: https://github.com/SPIKE-the-Percussionist/noiz_demons
+  first_party: true
+versions:
+- version: '666'
+  date: 2026-10-15
+  url: https://github.com/SPIKE-the-Percussionist/noiz_demons/releases/tag/v666
+  notes: First release; tag v666.

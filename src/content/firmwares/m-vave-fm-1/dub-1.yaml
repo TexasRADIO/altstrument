@@ -1,0 +1,39 @@
+device: m-vave-fm-1
+name: DUB-1
+summary: >-
+  Generative dub techno machine that plays itself from power-on: chord stabs into a tape echo, FM pings, a sub
+  bass, a ducking kick, shaker and hat, with performance pads and a browser emulator.
+description: >-
+  A fork of AMB-1 that keeps its platform and much of its engine. It has eight pieces and scales, chord stabs
+  through a resonant low-pass into an echo that feeds back past 100%, a granular cloud, a plate reverb, five bass
+  grooves, a drum pattern page, a chord-slot page, 16 effects on the white keys and a PERFORM mixer. The screen
+  draws each stab as a ring with its echoes, and it reports its screen to the FM-1 Screen Reader page over USB.
+  The project site has a browser emulator and a manual.
+status: active
+authors:
+- name: Santiago Beguería (sbegueria)
+  url: https://github.com/sbegueria
+source: https://github.com/sbegueria/fm1-dub
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md: DUB-1 keeps the GPL-3.0-only terms of AMB-1 and Felucca; fonts are SIL OFL.
+homepage: https://sbegueria.github.io/fm1-dub/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with dub-1.0.0.fwsc from the release. The
+  installer has a Back to the stock firmware option and M-VAVE's M-UPGRADE also restores stock. An FM-1 that fails
+  to start twice comes up in a safe mode the installer can reach.
+brick_risk: true
+tags: [generative, synth-engine, drums, fx, performance, emulator]
+image:
+  url: https://raw.githubusercontent.com/sbegueria/fm1-dub/HEAD/docs/img/screen-main.png
+  alt: "DUB-1 main screen showing the piece Basic in F Dorian at 122 BPM, rings around the chord Fm7, level bars at the left and a grid of lanes below"
+  credit: Santiago Beguería
+  source_url: https://github.com/sbegueria/fm1-dub
+  first_party: true
+versions:
+- version: 1.0.0
+  date: 2026-10-16
+  url: https://github.com/sbegueria/fm1-dub/releases/tag/v1.0.0
+  notes: First release.

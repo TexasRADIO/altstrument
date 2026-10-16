@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: OPN-1
+summary: >-
+  Mega Drive / Genesis sound-chip instrument: ports of the YM2612 FM chip and the SN76489 PSG, playable from the keys or MIDI, with a web page that pulls instruments out of VGM files and streams songs to the FM-1.
+description: >-
+  The YM2612 core is a C port of ymfm and the PSG a port of MAME's, and the README says both match their
+  references in tests. Six-voice poly, single chip channels, the drum kit and noise can be played from the keys,
+  with pages for operators, envelopes, LFO, vibrato, detune, an arpeggiator and saved sounds. The companion web
+  page (Chrome or Edge) reads VGM or VGZ files you supply, extracts the FM instruments, drums and noise sounds,
+  and sends them to the FM-1, which keeps the last set in flash. It can also stream a VGM song to the device and
+  show every channel's note, level and instrument on the screen. MIDI over USB or TRS follows GenMDM's layout.
+  No game music is included. The README says every feature has been tested on a real FM-1 and that much of the
+  code was written with Claude. It builds on Dinghy and the Felucca platform layer.
+status: active
+authors:
+- name: James (putchdev)
+  url: https://github.com/putchdev
+source: https://github.com/putchdev/opn-1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The YM2612 and PSG ports are BSD-3-Clause; the Terminus font is SIL OFL 1.1. Test-only references (ymfm, Nuked-OPN2)
+  are not part of the firmware. See LICENSING.md.
+homepage: https://opn-1.putch.co.uk/
+distribution: download
+install_notes: >-
+  Download the .fwsc from the release and install it with tools/fm1_install.py over USB (Python with mido and
+  python-rtmidi); the installer asks before writing, and an interrupted install can be rerun. Holding OCT- at
+  power-on starts the USB updater only. To go back to M-VAVE's firmware the README points to the FM-1 Firmware
+  Hub. The README says installing is at your own risk.
+brick_risk: true
+tags: [synth-engine, fm, midi, sequencer, emulator, usb-midi, chip-sound]
+image:
+  url: https://raw.githubusercontent.com/putchdev/opn-1/HEAD/docs/screen-panel.png
+  alt: "OPN-1 FM-1 screen showing 16-BIT FM SOUND, the patch FM 1 marked GRABBED, and four values for brightness, attack, release and feedback"
+  credit: James (putchdev)
+  source_url: https://github.com/putchdev/opn-1
+  first_party: true
+versions:
+- version: 1.0.0
+  date: 2026-10-16
+  url: https://github.com/putchdev/opn-1/releases/tag/v1.0.0
+  notes: First release.

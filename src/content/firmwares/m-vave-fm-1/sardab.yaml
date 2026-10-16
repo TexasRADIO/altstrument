@@ -1,0 +1,44 @@
+device: m-vave-fm-1
+name: SARDAB
+summary: >-
+  Dungeon-synth firmware turned toward the desert: maqam tunings, Arabic rhythm patterns, oud, ney, qanun and
+  tar recordings and stone-room reverbs, built on GHOULBOX with code from SLOOP, JIANT and Melodee.
+description: >-
+  Keeps Felucca's engines, four tracks, sequencer and song mode and adds 49 scales plus a custom one, eighteen
+  of them maqam or dastgah, with cent trims, temperaments and Scala import. Other additions are five iqa'at
+  rhythm patterns, a darbuka break, desert instrument models and recordings (the repository's samples are CC0 or
+  CC BY), arpeggio trill and drone, and a canon playhead. The 2.1 preview is flagged by its own release notes
+  as a development build whose physical-device validation is pending; the README says one FM-1 has run it.
+status: active
+authors:
+- name: Jordan Tanner (jrdntnnr)
+  url: https://github.com/jrdntnnr
+source: https://github.com/jrdntnnr/sardab
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0-only for the code, inherited from Felucca and GHOULBOX. Ported DSP files keep MIT
+  or Apache-2.0 licences, and fonts are SIL OFL; texts are in LICENSES/.
+homepage: https://jrdntnnr.github.io/sardab/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or the .fwsc from the release. The installer button does not save a
+  backup: take one first from the editor on Felucca or GHOULBOX firmware. Hold OCT- alone at power-on for USB
+  rescue. Go back to Felucca with its installer or to M-VAVE's V15 with Return to official V15.
+brick_risk: true
+tags: [synth-engine, microtonal, sequencer, fx, sampler, performance]
+image:
+  url: https://raw.githubusercontent.com/jrdntnnr/sardab/HEAD/docs/sardab-2.1.png
+  alt: "Four SARDAB screens: a SARDAB title card, a DESERT OUD sound page with a waveform between two torches, the preset list with DESERT entries, and the display menu"
+  credit: jrdntnnr
+  source_url: https://github.com/jrdntnnr/sardab
+  first_party: true
+versions:
+- version: 2.1 preview
+  date: 2026-10-13
+  url: https://github.com/jrdntnnr/sardab/releases/tag/sardab-v2.1-preview
+  notes: Pre-release; the release notes say physical-device validation is pending.
+- version: microtonal-v1.4-preview2
+  date: 2026-10-11
+  url: https://github.com/jrdntnnr/sardab/releases/tag/microtonal-v1.4-preview2
+  notes: Pre-release, published as GHOULBOX microtonal preview 2.

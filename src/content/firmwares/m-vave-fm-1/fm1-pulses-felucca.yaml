@@ -1,0 +1,34 @@
+device: m-vave-fm-1
+name: FM-1 Pulses (Felucca)
+kind: tool
+summary: >-
+  Browser generator that makes sixteen 64-step sequences from LFO, distribution and quantizer settings and
+  writes them into Felucca's four projects of four tracks over its editor protocol.
+description: >-
+  A fork of the author's FM-1 Pulses, which targets the Baud Girl firmware, rewritten for Felucca. The signal
+  chain runs clock, gate probability, sample and hold, LFO, distribution and quantizer into a loop buffer. A
+  4x4 matrix with piano rolls selects a sequence; Write 16 loads each project, writes the changed steps and
+  saves it to flash, and a single sequence can be frozen into a chosen track. Note lengths are written as ties.
+  Auditioning plays through a small FM synth in the browser as well as the unit. The protocol codec was checked
+  against an FM-1 running Felucca 1.5.1. Felucca refuses pattern writes while its sequencer is playing, so the
+  app asks you to stop it first.
+status: active
+authors:
+- name: mene311
+  url: https://github.com/mene311
+source: https://github.com/mene311/fm1-pulses-felucca
+source_status: open
+license: unspecified
+license_notes: No LICENSE file or license statement in the repository.
+homepage: https://mene311.github.io/fm1-pulses-felucca/
+requires_stock: Felucca 1.5
+install_notes: >-
+  Use the hosted page, or serve the folder locally (python3 -m http.server) and open it in a Web MIDI browser.
+  Set MENU > MIDI > ROUT to CH1-4 on the FM-1 for live play. Write 16 overwrites the unit's saved projects.
+brick_risk: false
+tags: [generative, sequencer, editor, midi]
+versions:
+- version: main @ 1c09071
+  date: 2026-10-13
+  url: https://github.com/mene311/fm1-pulses-felucca/commit/1c09071e2019f24234c2a78810bb6f1ad8d42aa1
+  notes: No tagged releases; this is the latest commit.

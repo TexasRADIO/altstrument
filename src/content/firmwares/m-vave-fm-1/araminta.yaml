@@ -1,0 +1,52 @@
+device: m-vave-fm-1
+name: Araminta
+summary: >-
+  Opinionated Felucca 1.5.1 fork that adds a morphable eight-lane DRUM-X kit with Grids pattern generation, JIANT punch-ins, a chain-or-send effects list, free-take recording and mixer solo.
+description: >-
+  Replaces Felucca's sampled and virtual-analogue kit with DRUM-X, and adds drum pattern generation from Mutable
+  Instruments Grids, JIANT-style punch-ins, SHIMR and CLOUD reverb modes, an effects list whose stages can be
+  chained, ordered or sent, free-take recording when a project is empty, SOLO on the mixer, scale mapping and
+  a flat Felucca 0.9 look. Felucca 1.5 projects open, but a project saved on Araminta uses a new format that
+  Felucca 1.5 shows as empty, so the change is one-way for anything you re-save. The project has a web installer,
+  a web editor and a browser emulator.
+status: active
+authors:
+- name: Wulgaren
+  url: https://github.com/Wulgaren
+source: https://github.com/Wulgaren/Araminta
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and in Felucca's LICENSING.md, which the repository keeps; bundled and ported parts keep
+  their own licences.
+homepage: https://wulgaren.github.io/Araminta/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py. Installing over Felucca 1.5 keeps projects,
+  presets, samples and settings. The installer's Return to official V15 asks for M-VAVE's own file, which you
+  download yourself; M-VAVE's updater also restores stock. The README says installing is at your own risk.
+brick_risk: true
+tags: [synth-engine, sequencer, drums, fx, reverb, platform, editor, emulator]
+image:
+  url: https://raw.githubusercontent.com/Wulgaren/Araminta/HEAD/docs/araminta.png
+  alt: "Araminta splash screen: a white stippled four-petal flower in a dotted circle on black, with the name ARAMINTA below"
+  credit: Wulgaren
+  source_url: https://github.com/Wulgaren/Araminta
+  first_party: true
+versions:
+- version: '2.3'
+  date: 2026-10-15
+  url: https://github.com/Wulgaren/Araminta/releases/tag/v2.3
+  notes: Drum pattern generation on DRUM-X; the slicer records cleaner when tracks share a send.
+- version: '2.2'
+  date: 2026-10-14
+  url: https://github.com/Wulgaren/Araminta/releases/tag/v2.2
+  notes: Leaner FM6 and USB audio timing and revised navigation.
+- version: '2.1'
+  date: 2026-10-13
+  url: https://github.com/Wulgaren/Araminta/releases/tag/v2.1
+  notes: Smooth oscilloscope, scale lock for every track and a drone mode in the arpeggiator.
+- version: '2'
+  date: 2026-10-12
+  url: https://github.com/Wulgaren/Araminta/tree/v2
+  notes: Git tag; no GitHub release page.

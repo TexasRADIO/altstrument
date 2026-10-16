@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: Double Rainbow
+summary: >-
+  Game-like learning instrument on Melodee for players from about ten up: character sounds each built on one
+  synthesis engine, chord and key display, an ear trainer and songs to learn.
+description: >-
+  The project site lists seven characters, each tied to an engine: Prophet-5 style, FM, noise, formant voice,
+  TR-808 drums, chiptune and phase distortion. Four knobs have plain labels, and holding EDIT shows the real
+  parameter names. A codex of three pages per character gives a story, the engine's history and something to try.
+  Play modes cover a solo voice, a strum, chords under a melody, an ear trainer and fourteen public-domain tunes
+  with lit keys. Holding HOME and SAVE opens the full Melodee firmware. It is the older sibling of Rainbow mode, the
+  repository's commits are credited to Claude, and a browser version runs without an FM-1.
+status: active
+authors:
+- name: joshbartlettband-web
+  url: https://github.com/joshbartlettband-web
+source: https://github.com/joshbartlettband-web/Double-Rainbow
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Melodee and Felucca (LICENSING.md); Melodee's CZ-1 and Prophet-5 factory sound data keep their own
+  terms.
+homepage: https://joshbartlettband-web.github.io/Double-Rainbow/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer on the project site, which serves a package named melodee-0.13.1-dr. The README is
+  still Melodee's, and its plan file says it is a plan. Use Melodee's route back to M-VAVE V15 if needed. No
+  numbered releases.
+brick_risk: true
+tags: [synth-engine, performance, emulator, ear-training]
+image:
+  url: https://joshbartlettband-web.github.io/Double-Rainbow/screen-char-0.png
+  alt: "Double Rainbow character screen for Vesper, a moth in a plum cloak on a hill under a faint rainbow, labelled PROPHET, with four knobs GLOW, BITE, BLOOM and DRIFT"
+  credit: joshbartlettband-web
+  source_url: https://joshbartlettband-web.github.io/Double-Rainbow/
+  first_party: true
+versions:
+- version: main @ 1f40e81
+  date: 2026-10-16
+  url: https://github.com/joshbartlettband-web/Double-Rainbow/commit/1f40e816478e2c208c7ba05f9935fdbf52ecd090
+  notes: No tagged releases; this is the latest commit.

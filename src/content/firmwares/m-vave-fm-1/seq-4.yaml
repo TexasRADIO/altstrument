@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: SEQ-4
+summary: >-
+  Four MIDI sequencers in one firmware, each on its own channel and USB port, in six modes from melody and
+  chords to eight-track drums and two generative modes; the FM-1 makes no sound of its own.
+description: >-
+  The screen is a 16-step grid of lit pads, with the white keys as steps and the black keys as rows. Each
+  sequencer runs up to 128 steps in eight pages and 16 patterns, with per-step velocity, gate, glide, timing
+  offset, repeats and conditions. The firmware also has LFOs, mod lanes, Euclidean and drum generators, a
+  harmonizer, live and step recording, MIDI capture, snapshots and songs, with MIDI clock and four USB MIDI
+  ports plus the TRS input. The only sound is a metronome click, so it needs synths to play. It is built on
+  CRT-4, LCD-4, IND-1 and AMB-1 and the Felucca platform layer, and its first save replaces data that those
+  firmwares keep in the same flash area. The README reports measurements of its timing on an FM-1.
+status: active
+authors:
+- name: Roberto Vega (devrvega)
+  url: https://github.com/devrvega
+source: https://github.com/devrvega/SEQ-4
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md. The drum generator reads Grids' drum map (GPL-3.0-or-later), used here under GPL-3.0-only;
+  fonts are SIL OFL 1.1.
+homepage: https://devrvega.github.io/SEQ-4/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc from the releases page. The
+  installer has a Back to the stock firmware option, which asks you to download M-VAVE's own V15 file from
+  M-VAVE and select it; M-UPGRADE also restores stock. An FM-1 that fails to start twice boots into a safe mode
+  the installer can reach. Browser emulator and manual on the project site.
+brick_risk: true
+tags: [sequencer, midi, usb-midi, lfo, emulator]
+image:
+  url: https://raw.githubusercontent.com/devrvega/SEQ-4/HEAD/docs/img/seq4.gif
+  alt: "SEQ-4 screen showing a Mono sequence in A Minor as a 16-step grid of lit pads over rows A1 to A2, with velocity, base note, gate and mod knob values below"
+  credit: devrvega
+  source_url: https://github.com/devrvega/SEQ-4
+  first_party: true
+versions:
+- version: 0.1.0
+  date: 2026-10-16
+  url: https://github.com/devrvega/SEQ-4/releases/tag/v0.1.0
+  notes: First release.

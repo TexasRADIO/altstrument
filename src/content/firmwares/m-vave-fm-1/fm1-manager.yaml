@@ -1,0 +1,34 @@
+device: m-vave-fm-1
+name: FM-1 Manager
+kind: tool
+summary: >-
+  Browser app for the stock FM-1 that backs up and edits its 128 presets over Web MIDI, with a DX7-style voice
+  editor and a restore path for a stock firmware package you supply.
+description: >-
+  Imports and exports DX7 32-voice banks, steps the synth through all 128 presets with program changes to
+  read them back (firmware V14 or later), and reads the current voice from the edit buffer. The editor covers
+  the 32 algorithms, operator envelopes, scaling, pitch envelope and LFO, with an in-browser FM engine modelled
+  on Dexed for auditioning. The firmware tab writes a .fwsc package that you choose from your own disk; the
+  app accepts only packages whose SHA-256 is on a built-in list, fetches nothing, and the repository contains no
+  firmware. Early and small: two commits on the day it was created, run locally with Node and Chrome, Edge or
+  Opera.
+status: active
+authors:
+- name: Tim Gourley (bratta)
+  url: https://github.com/bratta
+source: https://github.com/bratta/fm1-manager
+source_status: open
+license: unspecified
+license_notes: No LICENSE file or license statement in the repository.
+distribution: source-only
+install_notes: >-
+  Needs Node 20 or newer: npm install, then npm run dev and open localhost:5173. Close other programs that hold
+  the FM-1's MIDI port. The README warns that the FM-1 keeps a single firmware copy and that an interrupted
+  write should be repeated with the synth left plugged in.
+brick_risk: true
+tags: [editor, backup, midi, flasher]
+versions:
+- version: main @ 64cad09
+  date: 2026-10-16
+  url: https://github.com/bratta/fm1-manager/commit/64cad0932ae2c1b97320d3dab4eb1e40893eb647
+  notes: No tagged releases; this is the latest commit.

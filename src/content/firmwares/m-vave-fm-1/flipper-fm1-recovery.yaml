@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: Flipper FM-1 Recovery
+kind: tool
+summary: >-
+  Flipper Zero app that puts a stuck FM-1 into its ROM recovery mode, plus Windows scripts that back up the
+  flash and rewrite the application region from a firmware package you supply.
+description: >-
+  The Flipper app sends a boot-key pattern to the FM-1 at power-on so the chip comes up as a WL82 UBOOT device, then
+  the cable moves to a Windows PC. There pc_backup.py reads the flash twice and requires identical files, and
+  pc_restore.py compares a fresh read with the backups, rewrites only differing sectors in 0x4000 to 0x93000 and
+  verifies each sector and the final image. The restore script plans only until you pass --write and the process
+  id of the still-running backup. It accepts any compatible .fwsc, stock or custom, after integrity and chip checks. The Flipper does not flash
+  from its SD card yet. The author reports one recovery of a real unit on 2026-10-09. It uses the jl-uboot-tool
+  loader, which you clone separately.
+status: active
+authors:
+- name: Shaun McFall (merthsoft)
+  url: https://github.com/merthsoft
+source: https://github.com/merthsoft/flipper-fm1-recovery
+source_status: open
+license: Unlicense
+license_notes: >-
+  Covers the project's own code and assets; THIRD-PARTY.md lists the terms of the Flipper SDK, jl-uboot-tool and
+  the loader.
+distribution: source-only
+install_notes: >-
+  Build the Flipper app with ufbt against an SDK matching your Flipper firmware, then copy it with qFlipper. The
+  Windows tools need an administrator PowerShell, Python and a jl-uboot-tool checkout. Keep the backup directory
+  outside Git. Do not disconnect during the restore.
+brick_risk: true
+tags: [flasher, loader, utility]
+versions:
+- version: main @ df88b86
+  date: 2026-10-09
+  url: https://github.com/merthsoft/flipper-fm1-recovery/commit/df88b862a4794855f792fed529629a255cba0a0e
+  notes: No tagged releases; this is the latest commit.

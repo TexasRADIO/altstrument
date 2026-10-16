@@ -1,0 +1,39 @@
+device: m-vave-fm-1
+name: HYP-1
+summary: >-
+  Generative techno and acid machine that plays on power-up: breathing pad, drone, 303-style line and noise over a 16-step drum sequencer, with ten saved pieces, breakdown and drop controls and a USB remote for the browser emulator.
+description: >-
+  A fork of Charles Vestal's AMB-1. The pad, drone and acid voices each have sixteen sounds, with eight drum kits,
+  a chord page, links that patch drum hits into the voices, momentary and lockable performance effects, and a
+  stored piece per slot. A voice can be taken off the generator and played by hand from the keys. SEL plus GLO lets the
+  FM-1's panel play the browser emulator over USB MIDI. The repository also holds two experimental firmwares by the
+  same author, LOF-1 (a lofi groovebox) and ECO-1 (a plant-driven generator), which the README says have been tested
+  only in the simulator and emulator. The project site has an installer, a browser emulator and a manual.
+status: active
+authors:
+- name: RedtailWorks
+  url: https://github.com/RustyPawz
+source: https://github.com/RustyPawz/fm1-HYP1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSING.md. The platform layer is Felucca's by way of X0X and FoMni, and the sound code is AMB-1's;
+  the fonts are SIL OFL 1.1.
+homepage: https://rustypawz.github.io/fm1-HYP1/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc from the site. The installer
+  can write M-VAVE's own V15 back from a file you download yourself, and an FM-1 that fails to start twice comes
+  up in a safe mode the installer can reach. The README says installing is at your own risk.
+brick_risk: true
+tags: [generative, sequencer, drums, synth-engine, fx, performance, emulator, midi]
+video:
+  url: https://www.youtube.com/watch?v=0UvGnZE2_VI
+  title: "M-Vave FM-1 Generative Techno Firmware Tour"
+  credit: "RedtailWorks"
+  first_party: true
+  found_via: https://github.com/RustyPawz/fm1-HYP1
+versions:
+- version: 1.5.8
+  url: https://rustypawz.github.io/fm1-HYP1/install/
+  notes: Latest build offered by the project site's installer when checked. Builds are numbered per push; there is no GitHub release, so no date is given.

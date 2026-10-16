@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: FM-1 Unbricker
+kind: tool
+summary: >-
+  Python scripts that restore a soft-bricked FM-1 from the chip's ROM boot mode over a plain USB cable, and
+  through an FM-1 Transporter board when the unit shows no USB device at all.
+description: >-
+  fm1_unbrick.py automates a community procedure for a unit with a black screen that appears as a WL82 UBOOT
+  disk. It reads the whole 1 MiB flash twice and compares the reads, writes only the firmware region from
+  0x4000 and verifies it byte for byte. It refuses to write below 0x4000 and has no chip-erase. It takes a
+  package you supply, either the official V15 file, checked against its known hash, or a Felucca-family
+  package. fm1_transporter_recover.py does the same through the FM-1 Transporter and includes a guided wizard
+  for flashing the XIAO RP2040 and wiring it. The repository has a guide for each route, mock-device tests and
+  a prebuilt Transporter placeholder firmware, and does not contain M-VAVE's firmware. Windows and Linux are
+  supported for the USB route; macOS is not.
+status: active
+authors:
+- name: Quixotic7
+  url: https://github.com/Quixotic7
+source: https://github.com/Quixotic7/MvaveFM1Unbricker
+source_status: open
+license: MIT
+license_notes: >-
+  jl-uboot-tool (MIT, by kagaimiq) is downloaded by the setup command at a pinned commit and is not part of the
+  repository.
+distribution: source-only
+install_notes: >-
+  Python 3.9 or newer. Windows needs an administrator PowerShell; Linux needs root and the sg driver. Run setup,
+  then restore with your package. A --dry-run option rehearses against a mock unit, a backup is mandatory
+  and the tool asks you to type WRITE. If verification fails, do not power the unit off and run restore again. Damage to the boot area
+  (0x0000 to 0x3FFF) is not covered.
+brick_risk: true
+tags: [flasher, loader, utility]
+versions:
+- version: main @ 8b4992f
+  date: 2026-10-14
+  url: https://github.com/Quixotic7/MvaveFM1Unbricker/commit/8b4992ff684158ed1b27299792eedcfd0f9617ea
+  notes: No tagged releases; this is the latest commit.

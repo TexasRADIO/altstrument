@@ -1,0 +1,32 @@
+device: m-vave-fm-1
+name: FM2K
+summary: >-
+  Early prototype song maker after Music 2000 on the PlayStation: short riffs placed on a timeline of up to 128 bars across three synth tracks and a drum track. Runs in the browser simulator only; not yet tried on an FM-1.
+description: >-
+  The arrangement comes first, as in a DAW: each track has a pool of up to 32 riffs of 1 to 64 steps, edited in a
+  small piano roll or recorded from the keys, and the arrangement screen shows the whole song with its notes. Working
+  now are playback with a loop and metronome, riff repeats, eight project slots and an autosave, and a basic synth
+  with seven presets plus three drum kits. Planned items include real sound engines from the Felucca family and
+  mixer and sound screens. The README says it has no release, has not been built or tried on an FM-1, and should
+  not be installed on one yet. It starts from Dinghy and the Felucca platform layer, and the repository is still named
+  FM2000.
+status: active
+authors:
+- name: jukejutsu
+  url: https://github.com/jukejutsu
+source: https://github.com/jukejutsu/FM2000
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README, as for Dinghy and Felucca; the UI font is SIL OFL 1.1 (LICENSING.md).
+distribution: source-only
+install_notes: >-
+  No release and no FM-1 build has been tried. The README says not to install it on an FM-1 for now. The simulator
+  runs in a browser from web/serve.sh, and tools/build.py and tools/fm1_install.py are present from Dinghy.
+brick_risk: true
+tags: [sequencer, synth-engine, drums, emulator]
+versions:
+- version: main @ 10787e1
+  date: 2026-10-15
+  url: https://github.com/jukejutsu/FM2000/commit/10787e18359aef9cfa9dae1fcbc3e95c93a7e579
+  notes: No tagged releases; this is the latest commit.

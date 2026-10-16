@@ -1,0 +1,56 @@
+device: m-vave-fm-1
+name: GATOR
+summary: >-
+  Monophonic macro-oscillator synth with 24 synthesis models, a low-pass gate, two LFOs and an 8-slot
+  modulation matrix; its sound engine is Mutable Instruments' open-source Plaits code.
+description: >-
+  The 24 models sit in three banks and include virtual analog, waveshaping, FM, formant, harmonic, wavetable,
+  chord, speech, granular, noise, physical-model and drum voices, with the module's CV inputs replaced by a
+  modulation matrix fed by the LFOs, an ADSR, velocity, note, mod wheel, aftertouch, random and gate. It has
+  TRIG and DRONE modes, hold, glide and legato, 16 presets in flash, USB and TRS MIDI input, and packages for
+  44.1 kHz and 48 kHz output. The DSP is Emilie Gillet's Plaits and stmlib (MIT), used with the changes listed
+  in the repository. The platform layer comes from Felucca by way of SLOOP and ORBIT. It is independent of
+  Mutable Instruments.
+status: active
+authors:
+- name: npi3pak
+  url: https://github.com/npi3pak
+source: https://github.com/npi3pak/fm1-gator
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md. Plaits and stmlib DSP is MIT (Emilie Gillet), the Terminus font SIL OFL 1.1, and three JieLi AC79
+  SDK files in each package Apache-2.0.
+homepage: https://npi3pak.github.io/fm1-gator/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with a .fwsc from the releases page; pick
+  the 44.1 kHz package (recommended) or the 48 kHz one. The installer has a Back to the official firmware
+  option, which asks you to download M-VAVE's own V15 file from M-VAVE and select it. The README says an
+  interrupted write resumes, an FM-1 that fails to start twice opens USB rescue, and one that does not start
+  at all can be recovered with MvaveFM1Unbricker.
+brick_risk: true
+tags: [synth-engine, oscillator, wavetable, lfo, midi, usb-midi]
+image:
+  url: https://raw.githubusercontent.com/npi3pak/fm1-gator/HEAD/docs/img/gator-pages.png
+  alt: "Eight GATOR screens on black: Wavetable, Attenuverters, LPG / Out, Mod Env, LFO, Mod Matrix, Global and Save, each with coloured parameter bars and a waveform strip"
+  credit: npi3pak
+  source_url: https://github.com/npi3pak/fm1-gator
+  first_party: true
+versions:
+- version: '0.4'
+  date: 2026-10-16
+  url: https://github.com/npi3pak/fm1-gator/releases/tag/v0.4
+  notes: Licence notices and wording changes; no change to the sound.
+- version: '0.3'
+  date: 2026-10-16
+  url: https://github.com/npi3pak/fm1-gator/releases/tag/v0.3
+  notes: Shortens the splash logo to one second.
+- version: '0.2'
+  date: 2026-10-16
+  url: https://github.com/npi3pak/fm1-gator/releases/tag/v0.2
+  notes: Holds the splash logo for 2.5 seconds.
+- version: '0.1'
+  date: 2026-10-16
+  url: https://github.com/npi3pak/fm1-gator/releases/tag/v0.1
+  notes: First release.

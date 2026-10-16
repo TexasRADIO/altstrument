@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: X0X-RMX
+summary: >-
+  Independent fork of Charles Vestal's X0X groovebox that adds Orb-inspired pattern remixing, Grids drum generation, an extended TB-3PO bass-line generator, a morphable 303 waveform and six LCD colour schemes.
+description: >-
+  Keeps X0X's 909, 808, two 303s and breakbeat player, and adds independent bank and pattern selection per part
+  (Remix) that reorders playback without changing stored steps, kick, snare and hat generation from Grids MAP
+  or Euclidean rhythms, 22 TB-3PO scales, and a 303 Morph waveform that only one 303 can use at a time; the README
+  calls Morph experimental. It ships no recorded breaks, and a browser uploader loads your own. The release notes say
+  it was tested on a real FM-1, covering a regular update, kept patterns and breaks, a twelve-minute run and USB audio,
+  and that separate tests of two USB audio level settings were not reported. LICENSING.md lists provenance records
+  still to confirm for the remix pattern table and the break generator, used with its author's permission. The
+  project site has a manual, a browser emulator and a web installer.
+status: active
+authors:
+- name: Mr-Roboto
+  url: https://github.com/Mr-Roboto
+source: https://github.com/Mr-Roboto/fm1-x0x-rmx
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSING.md, which lists component licences: Open303 is MIT, the 909 hi-hat and cymbal samples come from
+  ER-99 (GPL-3.0), Grids data is GPL-3.0-or-later, and the break generator is used by its author's permission. The
+  file also lists provenance records still to confirm. Recorded breaks you load are not covered.
+homepage: https://mr-roboto.github.io/fm1-x0x-rmx/
+distribution: browser-installer
+install_notes: >-
+  Web installer on the project site in Chrome or Edge, or the .fwsc from the release. The README says to use the
+  checksum-verified release package rather than a local build. A browser page uploads your own break loops to the
+  FM-1's sample slots. The default branch is orb-remix.
+brick_risk: true
+tags: [drums, synth-engine, sequencer, generative, fx, emulator, performance]
+image:
+  url: https://raw.githubusercontent.com/Mr-Roboto/fm1-x0x-rmx/HEAD/docs/img/p82/01-overview-cream.png
+  alt: "X0X-RMX browser emulator in the cream and lilac finish: the FM-1 panel with its screen showing a 909 step sequence, with knobs, buttons and keys in lilac"
+  credit: Mr-Roboto
+  source_url: https://github.com/Mr-Roboto/fm1-x0x-rmx
+  first_party: true
+versions:
+- version: 1.0.0
+  date: 2026-10-16
+  url: https://github.com/Mr-Roboto/fm1-x0x-rmx/releases/tag/v1.0.0
+  notes: First stable release, after the author's FM-1 hardware tests.

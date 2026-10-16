@@ -1,0 +1,32 @@
+device: m-vave-fm-1
+name: TamaMPE
+summary: >-
+  Melodee fork adding MPE input: per-note pitch bend and channel pressure for FM6 sounds, with smart-macro MPE
+  output and a browser emulator in progress on development branches.
+description: >-
+  The default branch is currently an unchanged copy of an earlier Melodee state. The work is on the tamampe-dev
+  and feature branches: note ownership for an MPE zone set by RPN 6, independent per-note pitch bend and pressure
+  modulation for the FM6 engine in POLY mode, sustain and panic handling, and tests. Other branches add smart
+  macros with MPE output, a boot-safety fix and a TamaMPE virtual FM-1 emulator. There is no release or README of
+  its own yet, and no statement that it has run on an FM-1.
+status: active
+authors:
+- name: tamabotmusic
+  url: https://github.com/tamabotmusic
+source: https://github.com/tamabotmusic/TamaMPE/tree/tamampe-dev
+source_status: open
+license: GPL-3.0-only
+license_notes: Inherited from Melodee and Felucca; Melodee's CZ-1 and Prophet-5 factory sound data keep their own terms (see Melodee).
+homepage: https://github.com/tamabotmusic/TamaMPE/blob/tamampe-dev/docs/MPE_NOTES.md
+distribution: source-only
+install_notes: >-
+  No release is published. Build from source as Melodee (BUILDING.md) and install with tools/fm1_install.py or
+  Melodee's installer. MPE is off at boot and is enabled by sending RPN 6 on channel 1 with an FM6 track in POLY,
+  ARP off and QNT off.
+brick_risk: true
+tags: [mpe, midi, synth-engine, fm, performance]
+versions:
+- version: tamampe-dev @ 7eef8bc
+  date: 2026-10-14
+  url: https://github.com/tamabotmusic/TamaMPE/commit/7eef8bc0ba9ed3e5ce3957b9deda40e32c0127d1
+  notes: No tagged releases; this is the latest commit on the tamampe-dev branch.

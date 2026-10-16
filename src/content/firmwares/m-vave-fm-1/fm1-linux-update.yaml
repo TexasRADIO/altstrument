@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: FM-1 Linux Update
+kind: tool
+summary: >-
+  Shell script and checks for updating an FM-1 from stock V14 to V15 on Linux over USB-MIDI SysEx, plus a script
+  that measures the reverb tail through the unit's USB audio.
+description: >-
+  M-VAVE only ships Windows and macOS updaters, and both Felucca and Baud Girl's FM-1+VA need V15 first. The
+  script sets up a Python environment, downloads Felucca's fm1_install.py at a pinned commit and M-VAVE's
+  FM-1.fwsc from M-VAVE's own file store, checks both by SHA-256 and runs a separate check of the package, then
+  flashes it. The repository does not contain the firmware. The author reports one successful V14 to V15 update
+  on Ubuntu 22.04. reverb_sweep.py sets the reverb by CC, records the unit with ffmpeg and reports how long the
+  tail takes to fall.
+status: active
+authors:
+- name: Saiful Bahri (fuleo)
+  url: https://github.com/fuleo
+source: https://github.com/fuleo/fm1-linux-update
+source_status: open
+license: MIT
+license_notes: >-
+  Covers this repository's own scripts only; the downloaded installer is GPL-3.0 and the firmware is M-VAVE's.
+homepage: https://fuleo.github.io/fm1-guide/linux-update.html
+distribution: source-only
+requires_stock: V14 (updates to V15)
+install_notes: >-
+  Run ./fm1-update.sh setup, then info, then flash, which asks before writing and runs detached; follow the log
+  file. Use a data cable and keep the unit powered. The README says the FM-1 has no hardware recovery path if an
+  update goes wrong, and that an interrupted write can be finished by running flash again.
+brick_risk: true
+tags: [flasher, usb-midi, utility]
+versions:
+- version: main @ fa85094
+  date: 2026-10-03
+  url: https://github.com/fuleo/fm1-linux-update/commit/fa850941dbd69f9172ed78dea5a1d01178a5fa2d
+  notes: No tagged releases; this is the latest commit.

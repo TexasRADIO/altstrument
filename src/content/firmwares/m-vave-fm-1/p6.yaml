@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: P6
+summary: >-
+  Six-voice analog-style polysynth modelled on the Korg Polysix, with a 4-pole filter, chorus, phase and
+  ensemble effects, unison, chord memory, an arpeggiator and 32 programs; a fork of FoMni-1.
+description: >-
+  Each voice has one oscillator with a sub oscillator, a resonant ladder filter, an ADSR, a shared modulation
+  generator and a plate reverb, with poly, unison and chord-memory key assignment, hold and an arpeggiator that
+  follows MIDI clock. The 32 programs are saved in flash, and USB and TRS MIDI are supported. It replaces the
+  instrument and panel of FoMni-1 and keeps the platform layer, installer and safe mode that FoMni-1 takes from
+  Felucca. A browser emulator runs the same code. The project says it has been run only in the desktop
+  simulator and the browser emulator and has not yet been tried on a real FM-1. The repository holds the
+  source as a zip file, and a GitHub workflow builds the firmware and the site from it.
+status: active
+authors:
+- name: Jonbenderr
+  url: https://github.com/Jonbenderr
+source: https://github.com/Jonbenderr/fm1-p6
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSING.md inside fm1-p6-source.zip, which carries the GPL-3.0 text; the repository root has no
+  LICENSE file. Fonts are SIL OFL 1.1.
+homepage: https://jonbenderr.github.io/fm1-p6/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or the .fwsc from the site with tools/fm1_install.py. The installer
+  has a Back to the stock firmware option, which asks you to download M-VAVE's own V15 file from M-VAVE and
+  select it. An FM-1 that fails to start twice comes up in a safe mode, and after four failed starts the chip's
+  own update mode, where tools/fm1_rescue.py restores stock. Browser emulator on the site.
+brick_risk: true
+tags: [synth-engine, fx, chords, performance, midi, emulator]
+image:
+  url: https://jonbenderr.github.io/fm1-p6/img/screen-vcf.png
+  alt: "P6 VCF page showing program A-1 Poly Brass, a low-pass filter curve, three held notes C4, E4 and G4, and cutoff, resonance, EG int and Kbd track values"
+  credit: Jonbenderr
+  source_url: https://jonbenderr.github.io/fm1-p6/
+  first_party: true
+versions:
+- version: main @ 8e7108b
+  date: 2026-10-16
+  url: https://github.com/Jonbenderr/fm1-p6/commit/8e7108bce690107f99b218f8cfa829e1417c0bf4
+  notes: No tagged releases; this is the latest commit. The site serves omni-0.1.fwsc.

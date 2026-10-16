@@ -1,0 +1,37 @@
+device: m-vave-fm-1
+name: FM-1 Workbench
+kind: tool
+summary: >-
+  Browser app, Android app, MCP server and VST3/CLAP plugin for the stock FM-1: voice editor and library,
+  drum and MIDI-file sequencing, a speech tab, and a built-in software FM-1 that works without hardware.
+description: >-
+  The web app edits voices, randomizes and morphs them, loads a DX7 library you build from banks you supply
+  (none are included), plays drum kits and MIDI files, and speaks typed text as formant voices. The software
+  FM-1 is a DX7-compatible engine calibrated against the unit and is used automatically when no FM-1 is
+  connected. The Android app is a Kotlin port with the same features, and the plugin exposes the voice
+  parameters and effects to a DAW. The MCP server lets an AI client play and program the unit. A
+  firmware menu in the Android app selects between M-VAVE stock and FM-1+VA behaviour. The author reports
+  testing the plugin on the unit and in FL Studio; the Windows plugin build is untried on Windows hardware.
+status: active
+authors:
+- name: thegiantsnail
+  url: https://github.com/thegiantsnail
+source: https://github.com/thegiantsnail/fm1-workbench-public
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README says version 3 of the GPL with no later-version clause. NOTICE.md covers the speech data and the
+  plugin's libraries. The public repository is a series of scrubbed snapshots, one commit per release.
+homepage: https://fm1-workbench.web.app
+distribution: download
+install_notes: >-
+  Use the web app in Chrome or Edge, or download the plugin zip from the releases page. The macOS build is not
+  notarised and needs its quarantine flag cleared; on Windows only one program can open the FM-1's MIDI port,
+  so turn it off in the DAW's MIDI settings.
+brick_risk: false
+tags: [editor, emulator, midi, sequencer, vst, scripting]
+versions:
+- version: 0.1.0
+  date: 2026-10-01
+  url: https://github.com/thegiantsnail/fm1-workbench-public/releases/tag/v0.1.0
+  notes: First tagged release of the FM-1 Controller plugin, with macOS and Windows builds.

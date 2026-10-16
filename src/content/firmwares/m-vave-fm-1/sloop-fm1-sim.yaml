@@ -1,0 +1,30 @@
+device: m-vave-fm-1
+name: Sloop FM-1 Simulator
+kind: tool
+summary: >-
+  Self-contained browser simulator of an FM-1 running SLOOP 2.4.1, with the device keys or an expanded
+  keyboard, USB-MIDI input and session import and export.
+description: >-
+  A static page that plays SLOOP's engine, compiled to WebAssembly, through Web Audio. It has a Device layout and
+  an Expanded layout, selectable FM-1 colour finishes, a guided tutorial and an extra panel for audio settings,
+  USB-MIDI input and session files. The author says playback may differ from the hardware. The repository holds
+  the built site, a source archive and release metadata that names the source commit in the author's
+  development repository. The engine is SLOOP 2.4.1, older than the current SLOOP release.
+status: active
+authors:
+- name: Chance Roth (ChanceTheMaker)
+  url: https://github.com/ChanceTheMaker
+source: https://github.com/ChanceTheMaker/sloop-fm1-sim
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README says GPL-3.0 and the LICENSE file is version 3; the SLOOP and Felucca code it builds on is
+  GPL-3.0-only. The Fukiai icon font is MIT.
+homepage: https://chancethemaker.github.io/sloop-fm1-sim/
+brick_risk: false
+tags: [emulator, sequencer, synth-engine]
+versions:
+- version: main @ 3dbf570
+  date: 2026-10-08
+  url: https://github.com/ChanceTheMaker/sloop-fm1-sim/commit/3dbf5707741048f099120794660aa41b1b65e810
+  notes: No tagged releases; this is the latest commit. Carries SLOOP engine 2.4.1.

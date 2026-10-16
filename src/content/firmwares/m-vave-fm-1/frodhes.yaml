@@ -1,0 +1,52 @@
+device: m-vave-fm-1
+name: Frodhes
+summary: >-
+  Physically modelled Fender Rhodes electric piano: hammer, tine, tonebar and pickup computed live, with four instrument types, a compressor-to-reverb effects chain, arpeggiator, chord mode and a pattern recorder.
+description: >-
+  Four instrument types (Stage 77, Suitcase, Early Felt, Bell Dyno) are adjustable in tone, bark, bell, hammer,
+  decay and noise. The effects are compressor, drive, tremolo or wah, phaser, chorus, delay and reverb, with a
+  PERFORM page that puts effect amounts on the four knobs. Also included are tap tempo with MIDI clock sync,
+  scales, chord mode, an arpeggiator, a 1 to 16 bar pattern recorder with quantise and overdub, a sustain pedal,
+  12 factory and 16 user presets, and MIDI over USB and TRS. The README describes it as built on Dinghy and the Felucca
+  platform layer, and the project site has a browser emulator and a manual. Hardware test scripts are
+  in the repository.
+status: active
+authors:
+- name: Leonardo Mirabal
+  url: https://github.com/leonardoMirabal
+source: https://github.com/leonardoMirabal/frodhes
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSING.md; the platform code is Felucca's, with changes by SLOOP and Dinghy, and the font is SIL OFL 1.1.
+homepage: https://leonardomirabal.github.io/frodhes/
+distribution: download
+install_notes: >-
+  Download the .fwsc from a release and install it with tools/fm1_install.py over USB (Python with mido and
+  python-rtmidi). Holding OCT- at power-on gives the USB rescue. The README points to the Official firmware section of
+  The Firmware Hub, with M-VAVE's V15 from m-vave.com, to go back to stock.
+brick_risk: true
+tags: [synth-engine, physical-modeling, fx, sequencer, chords, scales, midi, emulator]
+image:
+  url: https://raw.githubusercontent.com/leonardoMirabal/frodhes/HEAD/docs/manual/img/overview.png
+  alt: "Four Frodhes screens in orange on black: PERFORM with trem/wah, phaser, chorus and delay knobs, the main FRODHES page, PHASER and COMPRESSOR"
+  credit: Leonardo Mirabal
+  source_url: https://github.com/leonardoMirabal/frodhes
+  first_party: true
+versions:
+- version: 0.9.2
+  date: 2026-10-16
+  url: https://github.com/leonardoMirabal/frodhes/releases/tag/v0.9.2
+  notes: ENV and SEL open the phaser and delay pages; the compressor threshold doubles as its switch; the emulator is redesigned.
+- version: 0.9.1
+  date: 2026-10-16
+  url: https://github.com/leonardoMirabal/frodhes/releases/tag/v0.9.1
+  notes: TRS MIDI in, a MIDI page, the pattern recorder and chord mode.
+- version: 0.9.0
+  date: 2026-10-15
+  url: https://github.com/leonardoMirabal/frodhes/releases/tag/v0.9.0
+  notes: PERFORM page, arpeggiator and a USB volume setting.
+- version: 0.8.1
+  date: 2026-10-15
+  url: https://github.com/leonardoMirabal/frodhes/releases/tag/v0.8.1
+  notes: Compressor gain-reduction meter.

@@ -1,0 +1,52 @@
+device: m-vave-fm-1
+name: CRT-4
+summary: >-
+  Four-track groovebox that plays the sound chips of nine game consoles and home computers, each with two drum
+  kits, sixteen sounds, its own effects and a screen dressed as that console.
+description: >-
+  The consoles are the Atari 2600, Commodore 64, NES, PC Engine, Genesis, Game Boy, SNES, PlayStation and N64.
+  Track one is drums and the other three take any of the console's sounds, which a program in the source
+  generates by modelling the instrument and stores in the console's own sample format. Each console keeps its
+  own song of sixteen patterns chained to 64, with chords, swing, locks, slides, ratchets and 16 punch-in
+  effects, plus a demo song, MIDI in and out and MIDI clock. On the four chip-based consoles a track plays one
+  note at a time and chords are arpeggios. It is built on LCD-4, IND-1 and AMB-1 and the Felucca platform layer,
+  and shares its settings and song storage with other firmwares of that family. The README reports CPU and
+  frame-rate measurements on an FM-1.
+status: active
+authors:
+- name: Roberto Vega (devrvega)
+  url: https://github.com/devrvega
+source: https://github.com/devrvega/CRT-4
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md; fonts are SIL OFL 1.1.
+homepage: https://devrvega.github.io/CRT-4/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc from the releases page. The
+  installer has a Back to the stock firmware option, which asks you to download M-VAVE's own V15 file from
+  M-VAVE and select it; M-UPGRADE also restores stock. An FM-1 that fails to start twice boots into a safe mode
+  the installer can reach. A console's first save replaces data another firmware stored in the same place.
+  Browser emulator and manual on the project site.
+brick_risk: true
+tags: [sequencer, synth-engine, drums, fx, performance, midi, emulator]
+image:
+  url: https://raw.githubusercontent.com/devrvega/CRT-4/HEAD/docs/img/crt4.gif
+  alt: "CRT-4 screen on the NES console: a side-scrolling scene of a small character among brick blocks above four track strips, with cutoff, thump, vibrato and octave knob values"
+  credit: devrvega
+  source_url: https://github.com/devrvega/CRT-4
+  first_party: true
+versions:
+- version: 0.1.2
+  date: 2026-10-16
+  url: https://github.com/devrvega/CRT-4/releases/tag/v0.1.2
+  notes: Safe mode reachable over USB again after a crash.
+- version: 0.1.1
+  date: 2026-10-16
+  url: https://github.com/devrvega/CRT-4/releases/tag/v0.1.1
+  notes: Publishes the site; the firmware is 0.1.0's apart from its version.
+- version: 0.1.0
+  date: 2026-10-16
+  url: https://github.com/devrvega/CRT-4/releases/tag/v0.1.0
+  notes: First release.
