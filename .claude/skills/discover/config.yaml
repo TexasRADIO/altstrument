@@ -91,9 +91,6 @@ ignore:
   - url: https://github.com/yuki-kwkm/NE_Legio
     reason: empty repository
     date: 2026-10-14
-  - url: https://github.com/ChanceTheMaker/doom-fm1-smk
-    reason: bundles the official M-VAVE FM-1 V15 .fwsc in the repo and installer site
-    date: 2026-10-14
   - url: https://github.com/romanjeff/syntaktful
     reason: research notes and a design draft only, nothing flashable
     date: 2026-10-14
@@ -139,12 +136,6 @@ ignore:
   - url: https://github.com/Denys/embedded-audio-mine
     reason: link collection, not a firmware project
     date: 2026-10-14
-  - url: https://github.com/ChanceTheMaker/gamedude-fm1-smk
-    reason: commits and serves the official M-VAVE FM-1 V15 .fwsc for its restore button
-    date: 2026-10-15
-  - url: https://github.com/m-vave/fm1_open
-    reason: official M-VAVE firmware, and the repository has been deleted
-    date: 2026-10-15
   - url: https://github.com/kay-lpzw/TRAM8
     reason: manufacturer's own TRAM8 firmwares and stock .syx files; linked from the device page instead
     date: 2026-10-15
@@ -165,4 +156,28 @@ ignore:
     date: 2026-10-16
   - url: https://github.com/echoe/Felucca_8_patterns
     reason: old name of echoe/Felucca_seq_per_track, already catalogued as m-vave-fm-1/felucca-sequences
+    date: 2026-10-16
+  - url: https://github.com/ChanceTheMaker/smklab
+    reason: link hub for the author's SMK-37 projects with no firmware or tool of its own
+    date: 2026-10-16
+  - url: https://github.com/fuleo/fm1-guide
+    reason: written guide site with no tool or firmware
+    date: 2026-10-16
+  - url: https://github.com/itoyohane/fm1-learning-web
+    reason: searchable documentation site; a written guide that does not talk to the device
+    date: 2026-10-16
+  - url: https://github.com/aquanodemusic/aquanode-soundscapes
+    reason: preset pack for desktop synths, not firmware or a tool
+    date: 2026-10-16
+  - url: https://github.com/ChanceTheMaker/felucca-smk
+    reason: installer and restore page download M-VAVE's SMK-37 Pro/Elite stock packages from a third-party mirror; only FM-1 V15 is licensed for redistribution
+    date: 2026-10-16
+  - url: https://github.com/ChanceTheMaker/sloop-smk
+    reason: installer and restore page download M-VAVE's SMK-37 Pro/Elite stock packages from a third-party mirror; only FM-1 V15 is licensed for redistribution
+    date: 2026-10-16
+  - url: https://github.com/ChanceTheMaker/melodee-smk
+    reason: installer falls back to downloading M-VAVE's SMK-37 Pro/Elite stock packages from a third-party mirror; only FM-1 V15 is licensed for redistribution
+    date: 2026-10-16
+  - url: https://github.com/ChanceTheMaker/sloop_salt
+    reason: plain fork of isod89/sloop-fm1 with no commits of its own; upstream is catalogued as sloop
     date: 2026-10-16
