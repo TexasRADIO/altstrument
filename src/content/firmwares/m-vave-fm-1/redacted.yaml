@@ -28,12 +28,6 @@ install_notes: >-
   and updater at hand. Its backup editor works for Felucca only; stock firmware needs its own backup method.
 brick_risk: true
 tags: [synth-engine, drums, glitch, noise, granular, performance]
-image:
-  url: https://fm1-redacted-installer.xrhetor.chatgpt.site/REDACTED-0.2.1-startup.png
-  alt: "REDACTED startup screen: a white record with a cracked outer groove, the word REDACTED, BROKEN SIGNAL / FM-1 and v0.2.1 on black"
-  credit: DJ Redacted
-  source_url: https://fm1-redacted-installer.xrhetor.chatgpt.site/
-  first_party: true
 versions:
 - version: 0.2.1
   url: https://fm1-redacted-installer.xrhetor.chatgpt.site/
