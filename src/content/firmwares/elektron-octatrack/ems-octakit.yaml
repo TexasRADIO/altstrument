@@ -5,7 +5,7 @@ status: active
 authors:
   - name: June Kiff (emuyia)
     url: https://github.com/emuyia
-source: https://github.com/emuyia/ems-octakit
+source: https://github.com/LyingDalai/ems-octakit
 source_status: open
 license: MIT
 distribution: patch-your-own
