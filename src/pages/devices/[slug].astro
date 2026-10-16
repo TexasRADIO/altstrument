@@ -4,9 +4,10 @@ import FirmwareCard from '@/components/FirmwareCard.astro';
 import FirmwareFilter from '@/components/FirmwareFilter.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import Prose from '@/components/Prose.astro';
+import DevicePhoto from '@/components/DevicePhoto.astro';
 import { CATEGORY_LABELS } from '@/content/schema';
 import { compareFirmwaresByUpdated, firmwareUpdated, getDevicesWithFirmwares, hostOf, isoDate, plural, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
-import { imageCreditLabel, isSocialImage, logoCreditLabel, looksLikeSpdx, spdxUrl } from '@/lib/labels';
+import { isSocialImage, logoCreditLabel, looksLikeSpdx, spdxUrl } from '@/lib/labels';
 
 export async function getStaticPaths() {
   const devices = await getDevicesWithFirmwares();
@@ -58,7 +59,8 @@ const itemAttrs = (f: FirmwareItem) => ({
 >
   <Breadcrumb items={[{ label: 'Devices', href: '/' }, { label: CATEGORY_LABELS[data.category], href: `/#cat-${data.category}` }]} />
 
-  <div class:list={[(image || logo) && 'lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:items-start lg:gap-8']}>
+  {/* The photo sits above the title on narrow screens and in a right-hand column from lg up. */}
+  <div class:list={[(image || logo) && 'flex flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:items-start lg:gap-8']}>
   <header>
     <h1 class="text-2xl">{data.name}</h1>
     <p class="mt-1 text-muted">
@@ -97,28 +99,7 @@ const itemAttrs = (f: FirmwareItem) => ({
     </dl>
   </header>
 
-  {image && (
-    <figure class="mt-5 max-w-[30rem] lg:mt-0">
-      <div class:list={['overflow-hidden rounded border border-line', image.style === 'line-art' ? 'bg-surface' : 'bg-surface-2']}>
-        <img
-          src={image.src}
-          alt={image.alt}
-          width={image.width}
-          height={image.height}
-          decoding="async"
-          data-style={image.style}
-          class="block h-auto max-h-[24rem] w-full object-contain"
-        />
-      </div>
-      <figcaption class="mt-1.5 text-xs text-muted">
-        {imageCreditLabel(image)},{' '}
-        {looksLikeSpdx(image.license)
-          ? <a href={spdxUrl(image.license)} rel="noopener">{image.license}</a>
-          : image.license},{' '}
-        via <a href={image.source_url} rel="noopener">{hostOf(image.source_url)}</a>
-      </figcaption>
-    </figure>
-  )}
+  {image && <DevicePhoto image={image} class="order-first mb-5 lg:order-none lg:mb-0" />}
   {logo && (
     <figure class="mt-5 max-w-[30rem] lg:mt-0">
       <div class="max-w-[200px] overflow-hidden rounded border border-line bg-surface p-3">

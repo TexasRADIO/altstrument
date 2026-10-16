@@ -1,0 +1,27 @@
+---
+import type { DeviceItem } from '@/lib/catalog';
+import { hostOf } from '@/lib/catalog';
+import { imageCreditLabel, looksLikeSpdx, spdxUrl } from '@/lib/labels';
+interface Props { image: NonNullable<DeviceItem['data']['image']>; class?: string }
+const { image, class: className } = Astro.props;
+---
+<figure class:list={['max-w-[30rem]', className]}>
+  <div class:list={['overflow-hidden rounded border border-line', image.style === 'line-art' ? 'bg-surface' : 'bg-surface-2']}>
+    <img
+      src={image.src}
+      alt={image.alt}
+      width={image.width}
+      height={image.height}
+      decoding="async"
+      data-style={image.style}
+      class="block h-auto max-h-[24rem] w-full object-contain"
+    />
+  </div>
+  <figcaption class="mt-1.5 text-xs text-muted">
+    {imageCreditLabel(image)},{' '}
+    {looksLikeSpdx(image.license)
+      ? <a href={spdxUrl(image.license)} rel="noopener">{image.license}</a>
+      : image.license},{' '}
+    via <a href={image.source_url} rel="noopener">{hostOf(image.source_url)}</a>
+  </figcaption>
+</figure>
