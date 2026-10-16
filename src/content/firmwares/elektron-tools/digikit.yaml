@@ -1,15 +1,24 @@
 device: elektron-tools
 name: digikit
 kind: tool
-summary: ColdFire control-CPU emulator that boots the real Digitakt II and Digitone II OS (1.16 and 1.11) and shows its screen, plus static analysis tools for the SHARC+ DSP code. Groundwork for new machines and sounds.
+summary: Emulator that runs the real Digitakt II and Digitone II OS (ColdFire control CPU and SHARC+ DSP) with front panel and display, plus analysis tools and a patch toolchain that adds machines and effects to your own .syx. Aimed at new machines and sounds.
 status: active
 authors:
   - name: m-dwyer
     url: https://github.com/m-dwyer
-source: https://github.com/m-dwyer/digikit
+source: https://github.com/ElekLabs/digikit
 source_status: open
-license: GPL-2.0-or-later
-license_notes: The LICENSE file is the GPL v2 text; verify "or later" terms in file headers before relying on it.
+license: AGPL-3.0-or-later
+license_notes: The LICENSE file is the AGPL v3 text and the README states "or later". NOTICE adds section 7 terms on attribution, origin and use of the digikit name.
 distribution: source-only
+requires_stock: Digitakt II 1.17 and Digitone II 1.12 for patching; the emulator also runs 1.16 and 1.11
+install_notes: >-
+  Build with mise and uv, and supply your own Elektron .syx files; none are in
+  the repository. The README says no patched image has been installed on a
+  device yet and that device recovery has not been tested on hardware.
 tags: [emulator, research]
-versions: []
+versions:
+  - version: main @ 68dc485
+    date: 2026-10-16
+    url: https://github.com/ElekLabs/digikit/commit/68dc485b12c37247802f8aa80d752b9d3e4ba08a
+    notes: No tagged releases; this is the latest commit.

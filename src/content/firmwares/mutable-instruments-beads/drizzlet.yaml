@@ -36,6 +36,10 @@ install_notes: >-
 brick_risk: true
 tags: [granular, fx, bugfixes]
 versions:
+  - version: drizzlet-2026.10.16
+    date: 2026-10-16
+    url: https://github.com/insolentconstruct/eurorack/releases/tag/drizzlet-2026.10.16
+    notes: Alpha 2. Adds the on-request self-play option and the monophonic grain toggle, and reduces flash wear when FREEZE is modulated.
   - version: drizzlet-2026.10.14
     date: 2026-10-15
     url: https://github.com/insolentconstruct/eurorack/releases/tag/drizzlet-2026.10.14

@@ -1,0 +1,41 @@
+device: elektron-model-cycles
+name: Supermodel Edition
+summary: Fork of Modded Cycles for Model:Cycles OS 1.13 with a separate Supermodel 909 flasher that replaces the six stock machines with a 909-style kit, plus the ACID machine, Sequence Genie, a second LFO and MIDI Bank.
+description: >-
+  Built on Modded Cycles by A.V. and published as a fork of it. The Supermodel
+  909 flasher page asks for the official OS file and four of your own WAV files
+  (closed hat, open hat, crash, ride), converts them in the browser and builds
+  the firmware locally. Nothing is uploaded and no samples are hosted. The 909
+  voices come from Model909 by DMDaudio. The fork's main flasher also carries
+  extra machines such as RETROSYN, Sample Wizard integration, ChordKeys and
+  other options in its own selection. MIDI Bank data is held in RAM only and is
+  lost at power-off. The author reports hardware tests of the 909 edition on
+  2026-10-14.
+status: active
+authors:
+  - name: A.V.
+    url: https://github.com/AveyCole
+  - name: 18nelli18
+    url: https://github.com/18nelli18
+source: https://github.com/AveyCole/Modded-Cycles
+source_status: open
+license: unspecified
+license_notes: >-
+  The fork has no LICENSE file at its root (the upstream Modded Cycles repository
+  has an MIT one). Bundled components carry their own MIT notices, such as
+  LICENSE-Model909.txt.
+homepage: https://aveycole.github.io/Modded-Cycles/flasher-supermodel-909/
+distribution: browser-installer
+requires_stock: "1.13"
+install_notes: >-
+  Open the Supermodel 909 flasher in a Web MIDI browser, add your four WAV files
+  and your official Model:Cycles OS 1.13 file, then flash over USB. Back up
+  projects and samples with Elektron Transfer first and start from an empty
+  project when moving off the stock machines. The "Official firmware" tab
+  returns to stock.
+tags: [machines, drums, sampler, sequencer, lfo, midi, fx]
+versions:
+  - version: main @ 8f1739c
+    date: 2026-10-16
+    url: https://github.com/AveyCole/Modded-Cycles/commit/8f1739c
+    notes: No tagged releases; this is the latest commit.
