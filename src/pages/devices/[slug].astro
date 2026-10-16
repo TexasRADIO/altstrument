@@ -7,7 +7,7 @@ import Prose from '@/components/Prose.astro';
 import DevicePhoto from '@/components/DevicePhoto.astro';
 import { CATEGORY_LABELS } from '@/content/schema';
 import { compareFirmwaresByUpdated, firmwareUpdated, getDevicesWithFirmwares, hostOf, isoDate, plural, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
-import { isSocialImage, logoCreditLabel, looksLikeSpdx, spdxUrl } from '@/lib/labels';
+import { logoCreditLabel, looksLikeSpdx, spdxUrl } from '@/lib/labels';
 
 export async function getStaticPaths() {
   const devices = await getDevicesWithFirmwares();
@@ -54,7 +54,6 @@ const itemAttrs = (f: FirmwareItem) => ({
 <Base
   title={`${data.name} (${data.manufacturer})`}
   description={description}
-  image={image && isSocialImage(image) ? { src: image.src, alt: image.alt } : undefined}
   editPath={`src/content/devices/${device.id}.yaml`}
 >
   <Breadcrumb items={[{ label: 'Devices', href: '/' }, { label: CATEGORY_LABELS[data.category], href: `/#cat-${data.category}` }]} />

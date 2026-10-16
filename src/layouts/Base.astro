@@ -7,8 +7,11 @@ interface Props {
   description: string;
   /** Home page uses the bare site name as its title. */
   home?: boolean;
-  /** Social preview image: site-relative path (made absolute with Astro.site). */
-  image?: { src: string; alt?: string };
+  /**
+   * Social preview image: site-relative path (made absolute with Astro.site). Defaults to the
+   * page's generated card (src/pages/og/[...path].png.ts); false for none.
+   */
+  image?: { src: string; alt?: string } | false;
   /** Repo-relative file this page is built from; the footer links to GitHub's editor for it. */
   editPath?: string;
   /** Absolute edit link, for pages whose data lives elsewhere. Takes precedence over editPath. */
@@ -29,7 +32,8 @@ const fullTitle = home ? title : `${title} · ${SITE}`;
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const canonical = Astro.site ? new URL(path, Astro.site).href : undefined;
 
-const imageUrl = image ? (Astro.site ? new URL(image.src, Astro.site).href : image.src) : undefined;
+const social = image ?? { src: `/og${path === '/' ? '/index' : path}.png`, alt: fullTitle };
+const imageUrl = social ? (Astro.site ? new URL(social.src, Astro.site).href : social.src) : undefined;
 
 const nav = [
   { href: '/', label: 'devices', match: (p: string) => p === '/' || p.startsWith('/devices') || p.startsWith('/firmware') || p.startsWith('/manufacturers') },
@@ -65,7 +69,10 @@ const nav = [
     <meta property="og:type" content="website" />
     {canonical && <meta property="og:url" content={canonical} />}
     {imageUrl && <meta property="og:image" content={imageUrl} />}
-    {imageUrl && image?.alt && <meta property="og:image:alt" content={image.alt} />}
+    {imageUrl && image === undefined && <meta property="og:image:type" content="image/png" />}
+    {imageUrl && image === undefined && <meta property="og:image:width" content="1200" />}
+    {imageUrl && image === undefined && <meta property="og:image:height" content="630" />}
+    {social && social.alt && <meta property="og:image:alt" content={social.alt} />}
     <meta name="twitter:card" content={imageUrl ? 'summary_large_image' : 'summary'} />
     {imageUrl && <meta name="twitter:image" content={imageUrl} />}
     <meta name="generator" content={Astro.generator} />

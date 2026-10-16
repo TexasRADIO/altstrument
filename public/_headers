@@ -10,3 +10,7 @@
 # No file extension, so the asset server can't infer the type.
 /.well-known/api-catalog
   Content-Type: application/linkset+json
+
+# Social cards (src/pages/og). Names are not content-hashed, so cache for a day only.
+/og/*
+  Cache-Control: public, max-age=86400

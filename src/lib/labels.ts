@@ -91,8 +91,3 @@ export function logoCreditLabel(logo: Pick<ManufacturerLogo, 'credit'>): string 
   const name = logo.credit.replace(/^\s*logo\s*(?:by\b\s*:?|:)\s*/i, '').trim() || logo.credit.trim();
   return `Logo: ${name}`;
 }
-
-/** Whether the image is suitable as a social preview (og:image). SVG line art is not. */
-export function isSocialImage(image: Pick<DeviceImage, 'style' | 'src'>): boolean {
-  return image.style !== 'line-art' && !/\.svg$/i.test(image.src);
-}
