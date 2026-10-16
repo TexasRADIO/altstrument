@@ -1,0 +1,33 @@
+device: m-vave-fm-1
+name: FM-1 Ctrl
+summary: >-
+  Thin controller firmware that sends the FM-1's keys, knobs and buttons out as raw USB MIDI and takes MIDI
+  back to light its LEDs, so the hardware can drive a firmware's browser emulator.
+description: >-
+  Contains no sound engine, sequencer or storage. Mapping lives on the browser side as a JSON control map, with
+  a convention document and a first map for the Melodee emulator. The panel is reported as 7 encoders and 14
+  buttons on CC 40 to 53, and a later commit adds LED feedback on CC 54 to 67. The repository has a host
+  simulator, a browser panel emulator that shows the MIDI bytes, and a WebAssembly build of the firmware's own
+  code. It builds on the x0x build and the Felucca platform layer. The author's notes mark the on-device flash and
+  LED check as pending, and USB MIDI both ways as verified on a unit.
+status: active
+authors:
+- name: johnskiller
+  url: https://github.com/johnskiller
+source: https://github.com/johnskiller/fm1-ctrl
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file is MIT. The README says GPL-3.0-or-later and the firmware sources carry GPL-3.0-only
+  headers (the Felucca platform code is GPL-3.0-only).
+distribution: source-only
+install_notes: >-
+  No release yet. tools/build.py needs the JieLi pi32v2 toolchain (JIELI_TOOLCHAIN) and produces
+  build/ctrl.fwsc, which tools/fm1_install.py installs over USB. Back up first and have M-VAVE's updater ready.
+brick_risk: true
+tags: [controller-mode, midi, usb-midi, emulator, platform]
+versions:
+- version: main @ 471cec8
+  date: 2026-10-15
+  url: https://github.com/johnskiller/fm1-ctrl/commit/471cec8
+  notes: No tagged releases; this is the latest commit.

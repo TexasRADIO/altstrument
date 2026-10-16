@@ -1,0 +1,63 @@
+device: m-vave-fm-1
+name: BEETLE
+summary: >-
+  Six-lane tracker for the FM-1: five synth lanes and a fourteen-piece digital drum lane, with song mode, a live
+  mixer, punch-in effects and master EQ, compressor and reverb.
+description: >-
+  Patterns of up to 16 steps are entered in a note, instrument, chord and effect grid, and 48 patterns can be
+  chained in song mode. The synth lanes share eight voices and offer twelve instrument types, including
+  SID-style and NES-style oscillators written from scratch. The drum lane plays a sample-ROM kit with editable
+  pitch and envelope per voice. The firmware also has copy and paste, undo and redo, mute and solo, mute groups,
+  performance snapshots and twelve project slots. A browser simulator and a browser project manager are published
+  on the project site. The code builds on SikkenWorks' ETCH and on Felucca, and the README says the
+  storage-enabled build can overwrite user data and that its flash handling is still experimental.
+status: active
+authors:
+- name: SikkenWorks
+  url: https://github.com/SikkenWorks
+source: https://github.com/SikkenWorks/BEETLE
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca (CREDITS-AND-LICENSES.md). The README says the reSID and Nes_Snd_Emu libraries are
+  credited but not copied, compiled or linked.
+homepage: https://sikkenworks.github.io/BEETLE/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over Web MIDI, or flash the .fwsc from a release. The README says the
+  installer makes no full backup and that a verified transfer does not guarantee the new firmware boots or that
+  USB recovery stays available. The installer accepts an official M-VAVE V15 file you supply, checked by hash
+  only.
+brick_risk: true
+tags: [tracker, sequencer, drums, synth-engine, mixer, fx, emulator]
+image:
+  url: https://raw.githubusercontent.com/SikkenWorks/BEETLE/HEAD/BEETLE.png
+  alt: "BEETLE tracker screen in pink on black showing a pattern grid with step, note, instrument, chord and effect columns, 120 BPM and pattern 01 of 48"
+  credit: SikkenWorks
+  source_url: https://github.com/SikkenWorks/BEETLE
+  first_party: true
+versions:
+- version: 1.01d RC
+  date: 2026-10-16
+  url: https://github.com/SikkenWorks/BEETLE/releases/tag/V1.01d_RC
+  notes: Release candidate.
+- version: 1.01c RC
+  date: 2026-10-16
+  url: https://github.com/SikkenWorks/BEETLE/releases/tag/V1.01c_RC
+  notes: Release candidate; compatible with the Project Manager.
+- version: 1.01 RC
+  date: 2026-10-15
+  url: https://github.com/SikkenWorks/BEETLE/releases/tag/V1.01_RC
+  notes: Release candidate; adds the song-mode live mixer and punch-in changes.
+- version: '0.63'
+  date: 2026-10-14
+  url: https://github.com/SikkenWorks/BEETLE/releases/tag/V0.63
+  notes: Beta.
+- version: '0.56'
+  date: 2026-10-14
+  url: https://github.com/SikkenWorks/BEETLE/releases/tag/V0.56
+  notes: Beta.
+- version: '0.54'
+  date: 2026-10-14
+  url: https://github.com/SikkenWorks/BEETLE/releases/tag/V0.54
+  notes: Beta.

@@ -1,0 +1,35 @@
+device: m-vave-fm-1
+name: Unholy Union
+summary: >-
+  Generative ambient and drone firmware built on Felucca and Jangada: one key press rolls a pad, a sequence, a
+  chord arpeggio and a live-playing voice in a shared key, with a church-themed look and a browser installer.
+description: >-
+  The Immaculate Permutation mode generates an arrangement in a chosen scale (minor, dorian or one of two
+  pentatonic scales), and OCT+ reveals a new one. It can evolve on its own every 2 to 32 bars, ENV + OCT+ changes
+  the harmony and LFO + OCT+ adds slow modulation across the four tracks. Holding SAVE checkpoints the current
+  arrangement as a project while it plays. The drone algorithm is adapted from Jangada and the platform, engines,
+  editor and storage come from Felucca. Saves from this firmware cannot be read by older Felucca or Jangada
+  firmware. The author describes it as experimental and reports testing sermon saving on one FM-1.
+status: active
+authors:
+- name: Sparky (actuallysparky)
+  url: https://github.com/actuallysparky
+source: https://github.com/actuallysparky/FM-1-Unholy-Union-generative-drone-firmware
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca (LICENSING.md); ported DSP code, fonts and CC0 sample sets keep their own licences,
+  listed there.
+homepage: https://actuallysparky.github.io/FM-1-Unholy-Union-generative-drone-firmware/
+distribution: browser-installer
+install_notes: >-
+  Web installer page in desktop Chrome or Edge over Web MIDI (SysEx), with one FM-1 connected, or flash the
+  .fwsc from the release page. The installer can back up saved music first and keeps saved projects, presets
+  and samples. Keep USB and power connected until it finishes. It inherits Felucca's recovery paths.
+brick_risk: true
+tags: [generative, ambient, synth-engine, sequencer, chords, ui]
+versions:
+- version: 0.2.3
+  date: 2026-10-13
+  url: https://github.com/actuallysparky/FM-1-Unholy-Union-generative-drone-firmware/releases/tag/v0.2.3
+  notes: Pre-release; corrects the save timeout.

@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: FOMAJAM
+summary: >-
+  Nine-track groovebox where each track plays its own drum machine, Felucca synth engine or MIDI out, with
+  eight 16-step patterns, accents, slides, ratchets, shared effects and MIDI clock.
+description: >-
+  The drum machines are modeled circuits (808, 909, SDS-V, CR-78) or recordings of other machines' sample
+  ROMs, and you can add your own samples at build time. Synths are Felucca's engines plus a plucked-string and a
+  supersaw engine written for this firmware. Tracks send to delay, reverb and chorus, with kick ducking, a master
+  filter and eleven distortion types. MIDI notes and all parameters are reachable over USB MIDI by CC, and a
+  scope and a MIDI log page are included. It is made with the author's foma framework and builds on Felucca, SLOOP
+  and Dinghy.
+status: active
+authors:
+- name: David Konsumer (konsumer)
+  url: https://github.com/konsumer
+source: https://github.com/konsumer/fomajam
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Felucca-Engines code is MIT and the Terminus font is SIL OFL 1.1 (LICENSING.md). The drum-ROM recordings
+  that the build downloads from tidal-drum-machines have no stated license, and the author warns that they end
+  up in the released package.
+homepage: https://konsumer.js.org/fomajam/
+distribution: browser-installer
+install_notes: >-
+  Browser installer and emulator on the project page (Chrome or Edge, USB), or the .fwsc from the releases
+  page. The page's Back to the official firmware option asks you to download M-VAVE's V15 file from M-VAVE and
+  select it. Holding OCT- at power-on starts a USB rescue mode.
+brick_risk: true
+tags: [drums, synth-engine, sequencer, fx, midi, usb-midi, sampler, emulator]
+versions:
+- version: 0.1.2
+  date: 2026-10-15
+  url: https://github.com/konsumer/fomajam/releases/tag/v0.1.2
+  notes: MIDI CC in, oscilloscope and MIDI log.
+- version: 0.1.1
+  date: 2026-10-15
+  url: https://github.com/konsumer/fomajam/releases/tag/v0.1.1
+  notes: More effect options.
+- version: 0.1.0
+  date: 2026-10-15
+  url: https://github.com/konsumer/fomajam/releases/tag/v0.1.0

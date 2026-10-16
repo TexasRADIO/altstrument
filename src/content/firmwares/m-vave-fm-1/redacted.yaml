@@ -1,0 +1,46 @@
+device: m-vave-fm-1
+name: REDACTED
+summary: >-
+  Experimental dark, glitchy four-track groovebox on Felucca: pulse drums, Buchla-style FM, noise and granular
+  drone tracks, with fracture, static, chance and mutate macros on the knobs.
+description: >-
+  The tracks are PULSE (glitch drums), VOLTAGE (FM), STATIC (noise) and GHOST (granular and drones), selected
+  with ALGORITHM. On the home screen the four top knobs act on the selected track as FRACTURE (fold, sample
+  hold, bit reduction), STATIC, CHANCE and MUTATE, and PLAY starts four startup patterns. There are 56 factory
+  presets and no conventional sound bank, and saved user presets are kept. Projects saved by 0.2 cannot be
+  opened by 0.1. The author says it passed software checks and that tests on a real FM-1 were still pending.
+  The project page offers the build, the earlier 0.1 and an unchanged Felucca build, with the source in a
+  zip file.
+status: active
+authors:
+- name: DJ Redacted
+source: https://fm1-redacted-installer.xrhetor.chatgpt.site/FM1-REDACTED-0.2.1-project.zip
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The zip holds Felucca's source tree with its LICENSING.md, which states GPL-3.0-only and lists the ported
+  DaisySP and Rings (MIT) and msfa (Apache-2.0) code.
+homepage: https://fm1-redacted-installer.xrhetor.chatgpt.site/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer on the project page (Chrome or Edge, USB), which checks each package against a
+  known hash and the FM-1's identity. It asks you to back up first and to keep M-VAVE's restoration firmware
+  and updater at hand. Its backup editor works for Felucca only; stock firmware needs its own backup method.
+brick_risk: true
+tags: [synth-engine, drums, glitch, noise, granular, performance]
+image:
+  url: https://fm1-redacted-installer.xrhetor.chatgpt.site/REDACTED-0.2.1-startup.png
+  alt: "REDACTED startup screen: a white record with a cracked outer groove, the word REDACTED, BROKEN SIGNAL / FM-1 and v0.2.1 on black"
+  credit: DJ Redacted
+  source_url: https://fm1-redacted-installer.xrhetor.chatgpt.site/
+  first_party: true
+versions:
+- version: 0.2.1
+  url: https://fm1-redacted-installer.xrhetor.chatgpt.site/
+  notes: New startup artwork; sound and controls as 0.2. No dated release page.
+- version: '0.2'
+  url: https://fm1-redacted-installer.xrhetor.chatgpt.site/
+  notes: Four tracks and 56 presets. No dated release page.
+- version: '0.1'
+  url: https://fm1-redacted-installer.xrhetor.chatgpt.site/
+  notes: Adds the startup screen and then opens normal Felucca. No dated release page.

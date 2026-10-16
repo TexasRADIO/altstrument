@@ -1,39 +1,46 @@
 device: m-vave-fm-1
 name: FANTASMA
 summary: >-
-  Felucca fork with a self-playing ambient machine (pad, bells and endless noise on a shared scale), an
-  Omnichord-style chord mode and a neon ghost theme. Lives on branches of the Pelucco repository.
+  Felucca fork for slow, drifting ambient music: a self-playing ambient machine (pad, bells and endless noise
+  on a shared scale), an Omnichord-style chord mode, tape-style sounds and a neon ghost theme.
 description: >-
-  FANTASMA is the themed build of Pelucco, a personal Felucca fork. Pelucco adds an AMBIENT page that, on one
-  key press, picks a root and scale and sets up a pad that plays its own chord progression, a bell part that
-  scatters notes and a noise part that never stops, all running on their own clock even with the transport
-  stopped. It also adds a long-tail AMBI reverb, a bell engine, an OMNI chord mode on the pad and lead, and
-  parts named for their role. FANTASMA changes the look: a neon palette, an animated ghost splash and a
-  ghost on the ambient page. A rescue mode, entered by holding OCT- at power-on or after two failed boots,
-  starts a minimal updater that the web installer can reach. The default branch of the repository is plain
-  Felucca; the work is on the fantasma, fantasma-1.0 and claude/pelucco-all branches.
+  FANTASMA is the released form of the FANTASMA branches of Pelucco, Gadlele's earlier personal Felucca fork,
+  and now has its own repository. An AMBIENT page picks a root and scale on one key press and sets up a pad that
+  plays its own chord progression, a bell part that scatters notes and a noise part that never stops, all
+  running on their own clock even with the transport stopped. It adds an AMBI noise engine (sea, rain, vinyl,
+  drone and others), a bell engine, a long-tail AMBI reverb, an OMNI chord mode on the keys and parts named
+  for their role. Version 1.1 adds slow pitch wobble and tape-style sounds. The look is a neon palette with an
+  animated ghost at power-on. A rescue mode, entered by holding OCT- at power-on or after two failed boots,
+  starts a minimal updater that the web installer can reach.
 status: active
 authors:
 - name: Gadlele
   url: https://github.com/Gadlele
-source: https://github.com/Gadlele/Pelucco/tree/fantasma-1.0
+source: https://github.com/Gadlele/Fantasma
 source_status: open
 license: GPL-3.0-only
 license_notes: >-
   Inherited from Felucca (LICENSING.md); ported DSP and fonts keep their own licences listed there.
-homepage: https://gadlele.github.io/Pelucco/
-distribution: download
+homepage: https://gadlele.github.io/Fantasma/
+distribution: browser-installer
 install_notes: >-
-  The README points to Felucca's web installer (Chrome or Edge, USB) or the FM-1 Firmware Hub for installing a
-  package. The repository's CI publishes the package on fwsc-fw-fantasma branches, and the homepage is a browser
-  emulator, not an installer. Hold OCT- alone at power-on to reach USB rescue. The README links FM-1 Transporter
-  for a unit stuck in the chip's boot mode.
+  Web installer on the project site (Chrome or Edge over USB, with a backup step) or tools/fm1_install.py with
+  the .fwsc from a release. Hold OCT- alone at power-on to reach USB rescue. The installer can put M-VAVE's
+  official firmware back. The site also has a browser emulator.
 brick_risk: true
 tags: [synth-engine, generative, ambient, ui, fx, chords]
+image:
+  url: https://raw.githubusercontent.com/Gadlele/Fantasma/gh-pages/img/device.png
+  alt: "Drawing of the FM-1 running FANTASMA, its screen showing the HOME page with a field of cyan dots and the FM6 Slow Strings pad"
+  credit: Gadlele
+  source_url: https://github.com/Gadlele/Fantasma
+  first_party: true
 versions:
+- version: '1.1'
+  date: 2026-10-16
+  url: https://github.com/Gadlele/Fantasma/releases/tag/fantasma-v1.1
+  notes: Adds the WOW pitch wobble in presets and six tape-style sounds.
 - version: '1.0'
-  date: 2026-10-14
-  url: https://github.com/Gadlele/Pelucco/commit/03b33d24a6e61b8231508f8bc12843eac1e332ef
-  notes: >-
-    Commit titled FANTASMA 1.0 on the fantasma-1.0 branch; no tags or releases. The branch has later commits,
-    including an animated splash.
+  date: 2026-10-16
+  url: https://github.com/Gadlele/Fantasma/releases/tag/fantasma-v1.0
+  notes: First release in this repository, on Felucca 1.5.1; an earlier FANTASMA 1.0 commit of 2026-10-14 is on Pelucco.

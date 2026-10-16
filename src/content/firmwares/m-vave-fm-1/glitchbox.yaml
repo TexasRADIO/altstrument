@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: Glitchbox
+summary: >-
+  Felucca 1.5.1 fork for harsh, distorted performance: a self-chopping glitch synth engine, a crushed drum kit
+  and extra live effects such as roll, gate and crush sweep, all synthesised with no samples.
+description: >-
+  The GLCH engine runs an oscillator through hard clipping and a wavefolder, a resonant filter, a bit crusher
+  and a micro-stutter that loops, reverses and pitch-jumps slices of its own output. It ships with twelve
+  presets and takes the slot of Felucca's WHEEL engine. The DESTROY drum kit has eight synthesised lanes with a
+  drive control that clips and crushes each hit. Four tracks start with these sounds and empty patterns, and
+  the other Felucca engines, sequencer, song mode and MIDI are kept. The README says it has only run in the
+  host tests and the browser emulator so far, not on a real FM-1, and that CPU headroom is unmeasured. A browser
+  emulator of the same firmware is hosted on GitHub Pages.
+status: active
+authors:
+- name: Erik de Vos
+  url: https://github.com/erikdevos
+source: https://github.com/erikdevos/glitchbox
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca (LICENSING.md); ported DSP code, fonts and CC0 sample sets keep their own licences,
+  listed there.
+homepage: https://erikdevos.github.io/glitchbox/
+distribution: source-only
+install_notes: >-
+  No release is published, so build build/glitchbox.fwsc with build.sh (JieLi toolchain, which needs Docker on a
+  Mac) and install it from a terminal with tools/fm1_install.py. The README says to back up the flash first and
+  names the installer's Return to official V15 and M-VAVE's own updater as the ways back.
+brick_risk: true
+tags: [synth-engine, drums, fx, distortion, performance, emulator]
+versions:
+- version: main @ 73c5a7a
+  date: 2026-10-13
+  url: https://github.com/erikdevos/glitchbox/commit/73c5a7a9934b51093b442a5a8680c75c10eab5ea
+  notes: No tagged releases; this is the latest commit, a work in progress on a bass engine.

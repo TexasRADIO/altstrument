@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: Patricktronics
+summary: >-
+  Felucca fork that keeps a locked palette of up to five notes and one FM sound and lets a bounded random
+  generator rearrange the sequence over time, for a self-evolving ambient loop in the manner of Frippertronics.
+description: >-
+  Held keys set the note palette, and a new PTRX page reached from FX sets the enable switch, mutation rate and
+  density and a reseed. The generator is seeded from hardware entropy at each launch, so the same setup plays
+  differently every time. Sixteen rule sets can be stored and recalled, and the seed is never stored. Felucca's
+  delay and reverb are used for the ambient wash. The firmware keeps its Felucca data layout, so existing
+  projects, samples and presets are left alone. The only commit above Felucca 1.5.1 adds the generative layer, and
+  its message says it has not yet been tried on a physical FM-1. The author is a guitarist who wants a backing
+  texture to play over.
+status: active
+authors:
+- name: gaumondp
+  url: https://github.com/gaumondp
+source: https://github.com/gaumondp/patricktronics
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca (LICENSING.md); ported DSP code, fonts and CC0 sample sets keep their own licences,
+  listed there.
+distribution: source-only
+install_notes: >-
+  No release is published, so build build/patricktronics.fwsc with build.sh and install it with
+  tools/fm1_install.py. The README also points to the FM-1 Firmware Hub for installing it, and to hold OCT- at
+  power-on for USB rescue and to FM-1 Transporter for a unit that will not start. It inherits Felucca's flashing
+  risk.
+brick_risk: true
+tags: [generative, ambient, synth-engine, sequencer, reverb, delay]
+versions:
+- version: init @ a6e5e28
+  date: 2026-10-11
+  url: https://github.com/gaumondp/patricktronics/commit/a6e5e28472fd770d4cced99e32978ce9f8e6e276
+  notes: No tagged releases; this is the latest commit, on the init branch.

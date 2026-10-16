@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: Trumpagotchi
+summary: >-
+  Virtual-pet game for the FM-1 featuring a pixel-art Donald Trump: four keys feed, praise, clean and rest the pet,
+  the white keys play a pentatonic instrument, and a happy pet adds bongos.
+description: >-
+  The screen shows a pet with food, mood and energy bars. The first four black keys feed it, praise it, clean up
+  after it and put it to bed or wake it. The white keys play a pentatonic scale without reverb or delay, and a
+  happy pet joins in on bongos. A day lasts five minutes, news items lower its mood and raise its appetite, and
+  when all three bars reach zero a game-over screen appears. Twelve voice clips edited from US government
+  recordings play as reactions. Progress is saved manually and about once a minute, and time while powered off
+  does not count. The author calls it an unofficial parody. It is built on FoMni by way of Fart Machine One.
+status: active
+authors:
+- name: adamcharleswilsonmusic-code
+  url: https://github.com/adamcharleswilsonmusic-code
+source: https://github.com/adamcharleswilsonmusic-code/Trumpagotchi
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Covers the code and original artwork. Rights in the voice recordings are separate; docs/VOICE-SOURCES.md lists
+  the source recordings, which it describes as US government works in the public domain.
+distribution: download
+install_notes: >-
+  Download trumpagotchi.fwsc and the source zip from the release, then run tools/fm1_install.py (Python 3 with
+  the packages in requirements-install.txt). Installation replaces the current firmware, and a successful install
+  reports FM-1_710. If an update is interrupted, run the same command again. The author tested the package on
+  one FM-1.
+brick_risk: true
+tags: [game, sampler, voice, ui]
+image:
+  url: https://raw.githubusercontent.com/adamcharleswilsonmusic-code/Trumpagotchi/HEAD/docs/trumpagotchi-quick-start.png
+  alt: "Trumpagotchi quick-start sheet: a drawing of the FM-1 with the pet on its screen and the care keys numbered 1 to 4, above descriptions of the buttons"
+  credit: adamcharleswilsonmusic-code
+  source_url: https://github.com/adamcharleswilsonmusic-code/Trumpagotchi
+  first_party: true
+versions:
+- version: 1.0.0
+  date: 2026-10-13
+  url: https://github.com/adamcharleswilsonmusic-code/Trumpagotchi/releases/tag/v1.0.0
+  notes: First release.

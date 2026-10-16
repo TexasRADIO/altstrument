@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: Pocket GammaWave
+summary: >-
+  Felucca-based firmware with eight synth engines, a live spectrogram filter, a four-track tape deck, a
+  49-style song generator and pattern mutation, plus a browser Web Studio.
+description: >-
+  Pocket GammaWave (GW-1) redraws the screens around a glowing solar-core home page, a 24-band FFT display for
+  the filter and a six-zone voice ribbon, and adds a hidden 3D visualizer. Hold OCT- and press another button
+  for shortcuts: song generator, mutation, dice per track and undo. It uses the FM-1's user sample flash to hold
+  eight songs and 32 DX7-style voices, so user samples are lost. The Web Studio runs the same code in the
+  browser, records four tape tracks and exports WAV. Parts come from Felucca, JIANT, SLOOP, Melodee and X0X. The
+  same author sells a separate desktop plugin, GammaWave, which this does not require.
+status: active
+authors:
+- name: fvalente
+  url: https://github.com/fvalente
+source: https://github.com/fvalente/GammaWave-FM1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md (inherited from Felucca) lists the ported msfa FM core as Apache-2.0 and bundled fonts as SIL
+  OFL 1.1.
+homepage: https://fvalente.github.io/GammaWave-FM1/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or the .fwsc from the release page. From another custom firmware,
+  the README says to use the installer's return-to-V15 option first, which backs up flash and asks you to
+  download M-VAVE's own FM-1.fwsc from M-VAVE and select it. Back up any user samples before flashing.
+brick_risk: true
+tags: [synth-engine, sequencer, fx, filter, generative, editor, performance]
+image:
+  url: https://raw.githubusercontent.com/fvalente/GammaWave-FM1/main/docs/gw1-screens.png
+  alt: "Six Pocket GammaWave screens: home with a glowing sun and tape deck, oscillator scopes with a voice ribbon, a spectrogram filter with vowel buttons, tape reels, master effects and a drum pad grid"
+  credit: fvalente
+  source_url: https://github.com/fvalente/GammaWave-FM1
+  first_party: true
+versions:
+- version: v1.0-GW
+  date: 2026-10-15
+  url: https://github.com/fvalente/GammaWave-FM1/releases/tag/v1.0-GW
+  notes: First release.

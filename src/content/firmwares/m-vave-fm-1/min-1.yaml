@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: MIN-1
+summary: >-
+  Self-playing minimalist ensemble in the manner of 1960s to 1980s process music, with four models and twenty
+  pieces that you can take over by playing chords, rolling new ideas and recording songs.
+description: >-
+  The four models are arpeggio (chord figures with additive process), phase (one figure on two parts that drift
+  apart and realign), patterns (a chain of slightly changed patterns played at different paces) and bells (a
+  stepwise melody answered by bells). In the default EASY key mode each white key is a chord that fits the current
+  key, and a chord cycle can be learned from the chords you play. Parts can be brought in and out by hand, and
+  eight songs can be recorded and played back exactly. It starts from the AMB-1 app layer and simulator, whose
+  platform comes from Felucca by way of X0X and FoMni. A browser emulator and a browser installer are published
+  on the project site.
+status: active
+authors:
+- name: Reytian
+  url: https://github.com/Reytian
+source: https://github.com/Reytian/fm1-min1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca (LICENSING.md); fonts are SIL OFL 1.1.
+homepage: https://reytian.github.io/fm1-min1/
+distribution: browser-installer
+install_notes: >-
+  Installer page in Chrome or Edge with the FM-1 connected, or tools/fm1_install.py with the .fwsc from the
+  releases page. An FM-1 that fails to start twice comes up in a safe mode with USB on. The installer page
+  offers a return to M-VAVE's own firmware, which you download from M-VAVE yourself.
+brick_risk: true
+tags: [generative, ambient, sequencer, chords, synth-engine, emulator]
+image:
+  url: https://raw.githubusercontent.com/Reytian/fm1-min1/HEAD/docs/images/min1.png
+  alt: "MIN-1 in the browser emulator: the FM-1 panel with its screen showing the Evening piece, four chords and upper, lower, bass, lead and chords parts, beside an enlarged copy of the screen"
+  credit: Reytian
+  source_url: https://github.com/Reytian/fm1-min1
+  first_party: true
+versions:
+- version: 0.2.1
+  date: 2026-10-16
+  url: https://github.com/Reytian/fm1-min1/releases/tag/v0.2.1
+  notes: A learned chord cycle keeps the key's major or minor mode.
+- version: '0.2'
+  date: 2026-10-16
+  url: https://github.com/Reytian/fm1-min1/releases/tag/v0.2
+  notes: First public release.

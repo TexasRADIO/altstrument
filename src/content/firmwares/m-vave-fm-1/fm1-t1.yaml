@@ -1,0 +1,31 @@
+device: m-vave-fm-1
+name: FM-1 T1
+summary: >-
+  Felucca 1.6 fork that adds a generative sequencer modelled on the Torso T-1, with six tracks of six cycles
+  and MIDI out for five of the tracks. Work in progress.
+description: >-
+  The added code is a state machine, pipeline and four-page UI (rhythm, ratchet, harmony, mod and CC) with a
+  192 PPQN clock and 36 stored patterns. Track 1 plays Felucca's FM6 engine and tracks 2 to 6 go out over TRS
+  and USB MIDI. The bundled guide maps the T-1's SHIFT, GLOBAL, TEMP and P-LOCK functions onto the FM-1's
+  buttons and keys, and the repository adds host tests for five build phases. The README is a single line
+  that says it is a work in progress to flash at your own risk. The rest of the tree is Felucca.
+status: active
+authors:
+- name: Tensor-Programming
+  url: https://github.com/tensor-programming
+source: https://github.com/tensor-programming/fm1-t1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca; LICENSING.md covers the bundled assets and ported DSP.
+distribution: source-only
+install_notes: >-
+  No release. Build with build.sh and the JieLi toolchain (BUILDING.md) and install the package with
+  tools/fm1_install.py. The README tells you to flash at your own risk.
+brick_risk: true
+tags: [sequencer, generative, midi, usb-midi, performance]
+versions:
+- version: main @ bea0fd3
+  date: 2026-10-14
+  url: https://github.com/tensor-programming/fm1-t1/commit/bea0fd3
+  notes: No tagged releases; this is the latest commit.

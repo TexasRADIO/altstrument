@@ -1,0 +1,31 @@
+device: m-vave-fm-1
+name: Trawler
+summary: >-
+  Tracker-style firmware for the FM-1 in the line of LSDJ, with Song, Chain, Phrase, Instrument, Table and
+  Groove views. Stopped after its phrase editor; it only runs in a browser emulator.
+description: >-
+  Reached two of its planned phases: a data model, a sample-exact sequencer, a wave engine with filter and
+  envelope, and a phrase view with note and hex entry. It runs as the same C code natively for tests and as
+  WebAssembly in a virtual FM-1 page played from the computer keyboard. The author archived it on 2026-10-10,
+  judging the FM-1's encoders and small screen unsuited to a tracker, and moved the platform and DSP into
+  FM80S. There is no build for the device, and the documentation is in French.
+status: archived
+authors:
+- name: Floydus (y6zkcqnf5r-hue)
+  url: https://github.com/y6zkcqnf5r-hue
+source: https://github.com/y6zkcqnf5r-hue/fm1-trawler
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md lists the bundled Terminus font (SIL OFL 1.1) and the code taken from other FM-1 projects.
+homepage: https://y6zkcqnf5r-hue.github.io/fm1-trawler/
+distribution: source-only
+install_notes: >-
+  The README has no flashing steps; the virtual FM-1 on the project page needs no hardware.
+brick_risk: false
+tags: [tracker, sequencer, emulator]
+versions:
+- version: main @ 153f4f4
+  date: 2026-10-10
+  url: https://github.com/y6zkcqnf5r-hue/fm1-trawler/commit/153f4f4
+  notes: No tagged releases; this is the latest commit, which archives the project.

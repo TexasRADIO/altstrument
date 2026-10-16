@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: MNM-1
+summary: >-
+  Six-track monophonic groovebox in the style of the Elektron Monomachine: a drum kit track and five synth tracks
+  with their own machines, a 64-step sequencer with parameter locks, three LFOs per track and per-track delay.
+description: >-
+  Track 1 is an eleven-voice drum kit played from the black keys, and tracks 2 to 6 each load one of twelve synth
+  machines (acid bass, supersaw, pulse, ensemble, SID, FM, wavetable, noise, plucked string, sine and others).
+  The sequencer has trigless locks, slides, accents, swing, probability, an arpeggiator per track, scale snapping
+  and step recording. Sixteen slots each hold a pattern and its kit, MIDI clock and USB and TRS MIDI are
+  supported, and a browser emulator runs the firmware compiled to WebAssembly. The platform layer comes from
+  Felucca by way of X0X, FoMni and FiMba-1. The README is in Italian and says it has not yet been tried on a
+  real FM-1, only in the host simulator.
+status: active
+authors:
+- name: sirpearson
+  url: https://github.com/sirpearson
+source: https://github.com/sirpearson/fm-1-monomachine
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca (LICENSING.md); fonts are SIL OFL 1.1.
+distribution: source-only
+install_notes: >-
+  No release is published, so build build/mnm.fwsc with build.sh (JieLi toolchain and three SDK files fetched by
+  the included scripts) and install it with tools/fm1_install.py. The README advises downloading M-VAVE's own
+  V15 firmware from M-VAVE first, for the included rescue script, and links FM-1 Transporter for a stuck unit.
+  Pattern slots use the flash area that Felucca keeps its presets and samples in, so saved data can be lost
+  when switching between the two.
+brick_risk: true
+tags: [sequencer, synth-engine, drums, groovebox, lfo, midi, emulator]
+image:
+  url: https://raw.githubusercontent.com/sirpearson/fm-1-monomachine/HEAD/docs/img/kit.png
+  alt: "MNM-1 KIT page: six coloured track tabs above a clap voice with type, tune, decay and tone values, a row of step cells and a GRID mode label"
+  credit: sirpearson
+  source_url: https://github.com/sirpearson/fm-1-monomachine
+  first_party: true
+versions:
+- version: 0.3.0
+  date: 2026-10-13
+  url: https://github.com/sirpearson/fm-1-monomachine/commit/527da33beb3dde611836cff376aee1b9a324949b
+  notes: No tagged releases; this is the latest commit, titled 0.3.0 (the KIT).
