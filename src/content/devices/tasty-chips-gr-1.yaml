@@ -1,0 +1,21 @@
+name: GR-1
+manufacturer: Tasty Chips Electronics
+category: synth
+tagline: Standalone granular synthesizer from Tasty Chips Electronics
+description: >-
+  The GR-1 is a standalone granular synthesizer made by Tasty Chips Electronics in the Netherlands. It plays
+  samples and patches organised into performances, and its user interface runs as a program on a Raspberry Pi
+  based Linux system, with a separate microcontroller handling the panel. The manufacturer publishes official
+  firmware releases and manuals on its support page.
+platform: Raspberry Pi 3 Model B Plus (Linux), separate panel MCU
+stock_firmware: 3.4.4
+links:
+  manufacturer: https://www.tastychips.nl/gr-1-support/
+  community:
+  - label: Tasty Chips community page
+    url: https://www.tastychips.nl/community/
+notes: >-
+  The manufacturer's support page says it condones and encourages custom firmware on the GR-1. It publishes the
+  MCU source code for the panel and suggests replacing the GUI. The rest of the firmware is not open, flashing
+  custom firmware voids the warranty, and the company offers paid repair if a unit is bricked. The GR-2 and
+  GR-MEGA are not covered here.

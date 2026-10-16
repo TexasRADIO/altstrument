@@ -1,0 +1,46 @@
+device: tasty-chips-gr-1
+name: GR-1 UI
+summary: >-
+  Redesigned interface for the GR-1 with separate Sample, Patch and Performance pages, a light and dark
+  appearance, and a browser tool that builds a USB update from your own copy of the official firmware.
+description: >-
+  A Rust user interface that replaces the stock screen program and keeps the original Tasty Chips sound engine
+  and panel controls. The website takes the official 3.4.4 firmware file you supply, adds the new interface in
+  the browser and produces a .tgz for the normal USB firmware updater. The project does not host the
+  manufacturer's firmware or sound engine, and a startup file from the site switches back to the original
+  interface. It was tested on one Raspberry Pi 3 Model B Plus unit on 3.4.4; the recovery-file startup, a full
+  power-off boot and exhaustive recording, backup and save workflows are listed as unverified. The author's
+  Reddit post describes the code as vibe coded and says the interface returns to the original one if it
+  crashes.
+status: active
+authors:
+- name: Zsolt Fekete
+  url: https://github.com/zsoltf
+source: https://github.com/zsoltf/gr1-ui
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the authored source only. The repository states that it grants no rights to the vendor firmware, sound
+  engine, factory content or system image, which come from your own official download. Bundled DejaVu fonts and
+  Rust crate dependencies keep their own licences.
+homepage: https://zsoltf.github.io/gr1-ui/
+distribution: patch-your-own
+requires_stock: 3.4.4
+install_notes: >-
+  Back up your sounds, download official firmware 3.4.4 from Tasty Chips, choose it on the project website and
+  prepare the USB update. Copy the resulting .tgz to the root of a USB stick, restart the GR-1 and press Select
+  at the update prompt. Keep the prepared file for your own use, since it contains Tasty Chips firmware. For GR-1
+  units with a Raspberry Pi 3 Model B Plus only.
+brick_risk: false
+tags: [ui, sampler, granular]
+image:
+  url: https://raw.githubusercontent.com/zsoltf/gr1-ui/main/web/images/main.jpg
+  alt: GR-1 main view on the new UI with four sample waveforms stacked on the left and amplitude, grain window and two LFO graphs on the right
+  credit: Zsolt Fekete
+  source_url: https://github.com/zsoltf/gr1-ui#readme
+  first_party: true
+versions:
+- version: main @ d98f234
+  date: 2026-10-16
+  url: https://github.com/zsoltf/gr1-ui/commit/d98f234b94431b8aa87394a63959c4befb4d9157
+  notes: No tagged releases; this is the latest commit. RELEASE-NOTES.md calls it 0.1.0.
