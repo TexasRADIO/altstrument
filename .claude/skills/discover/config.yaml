@@ -160,3 +160,9 @@ ignore:
   - url: https://github.com/stanleygurvich/fm1-firmware-database
     reason: feed bot for a non-public editor; maintainer removed it from the catalog
     date: 2026-10-15
+  - url: https://github.com/friendsmakenoise-prog/fm1-pocket-sampler
+    reason: repository deleted (404); no other source or homepage
+    date: 2026-10-16
+  - url: https://github.com/echoe/Felucca_8_patterns
+    reason: old name of echoe/Felucca_seq_per_track, already catalogued as m-vave-fm-1/felucca-sequences
+    date: 2026-10-16
