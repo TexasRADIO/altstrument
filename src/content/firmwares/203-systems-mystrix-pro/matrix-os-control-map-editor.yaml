@@ -1,0 +1,30 @@
+device: 203-systems-mystrix-pro
+name: Matrix OS Control Map Editor
+kind: tool
+summary: Browser editor for the Matrix OS custom control map, which sets what each pad sends as MIDI, keyboard, gamepad or layer actions and exports it to the controller.
+description: >-
+  The editor is a Svelte web app hosted at edit.203.io. It shows a Mystrix keypad and lets you assign actions
+  to each pad across several layers, including key presses, gamepad inputs, colour effects and layer changes,
+  then exports the map as MIDI SysEx for the Custom Control Map app in Matrix OS to load. The repository
+  contains no LICENSE file. A separate entry lists the same editor on Mystrix.
+status: active
+authors:
+  - name: 203 Systems
+    url: https://github.com/203-Systems
+source: https://github.com/203-Systems/MatrixOS-Control-Map-Editor
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file and its README is the unmodified SvelteKit template text.
+homepage: https://edit.203.io/
+distribution: browser-installer
+requires_stock: Matrix OS 2.6 or later
+install_notes: >-
+  Open edit.203.io in a browser, design the map and send or export it to the controller as the wiki describes
+  for the Custom Control Map app. The tool only prepares a map for the stock OS and does not flash firmware.
+brick_risk: false
+tags: [official, editor, controller-mode, grid, sysex]
+versions:
+  - version: main @ 8aaffb7
+    date: 2026-04-07
+    url: https://github.com/203-Systems/MatrixOS-Control-Map-Editor/commit/8aaffb7
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,36 @@
+name: Mystrix Pro
+manufacturer: 203 Systems
+category: controller
+tagline: Force-sensitive 8 by 8 RGB pad controller with underglow that runs the open-source Matrix OS
+description: >-
+  Mystrix Pro is the force-sensitive version of 203 Systems' Mystrix grid controller. It has an 8 by 8 matrix of
+  RGB pads that sense pressure, 32 underglow LEDs, a hidden function key and two touch strips, and it connects
+  over USB-C or Bluetooth MIDI. It is sold with a pack of TRS MIDI Type A and Type B adapters and a spare cable.
+  Like the standard Mystrix it is built around an ESP32-S3 and runs Matrix OS, and its settings menu adds a keypad
+  calibration page for the force sensors.
+platform: ESP32-S3
+stock_firmware: Matrix OS 3.2
+links:
+  manufacturer: https://203.io/products/mystrix-pro
+  community:
+    - label: Project Matrix Wiki
+      url: https://matrix.203.io/
+    - label: 203 Systems Discord
+      url: https://discord.gg/rRVCBHHPfw
+    - label: Matrix OS GitHub discussions
+      url: https://github.com/203-Systems/MatrixOS/discussions
+notes: >-
+  Matrix OS is the stock operating system and is open source, so custom work is mostly apps and control maps
+  running on top of it rather than replacement firmware. The wiki warns that incorrect keypad calibration can
+  force a reflash that wipes user data.
+related: [203-systems-mystrix]
+image:
+  src: /images/devices/203-systems-mystrix-pro.jpg
+  style: photo
+  alt: Render of the Mystrix Pro controller seen at an angle, its 8 by 8 pad grid lit in magenta, cyan and white on a pink square under the title Mystrix Pro Smart Controller
+  width: 1200
+  height: 1200
+  credit: 203 Systems
+  license: manufacturer product image
+  source_url: https://203.io/products/mystrix-pro
+  original_url: https://cdn.shopify.com/s/files/1/0478/2830/4025/files/Matrix_Pro_Her_1-1_2_4x_ddf6bcde-af3d-4266-9771-7c0308e300ad.png

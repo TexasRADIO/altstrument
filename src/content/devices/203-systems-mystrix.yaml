@@ -1,0 +1,38 @@
+name: Mystrix
+manufacturer: 203 Systems
+category: controller
+tagline: Thin 8 by 8 RGB pad controller that runs the open-source Matrix OS
+description: >-
+  Mystrix is a USB grid controller from 203 Systems, a small company run by Nengzhuo Cai (Null). It has an
+  8 by 8 matrix of RGB pads, a hidden function key in the centre and two touch strips, and it connects over
+  USB-C or Bluetooth MIDI, with optional TRS MIDI adapters. It is built around an ESP32-S3 and runs Matrix OS,
+  an open-source operating system whose built-in apps include a note and scale player, a performance mode, a
+  step sequencer, a strum app and a configurable control map, and which also loads apps written in Python or
+  C++. The standard model uses simple on-off pad switches, while the Pro model has a force-sensitive keypad.
+platform: ESP32-S3
+stock_firmware: Matrix OS 3.2
+links:
+  manufacturer: https://203.io/products/mystrix
+  community:
+    - label: Project Matrix Wiki
+      url: https://matrix.203.io/
+    - label: 203 Systems Discord
+      url: https://discord.gg/rRVCBHHPfw
+    - label: Matrix OS GitHub discussions
+      url: https://github.com/203-Systems/MatrixOS/discussions
+notes: >-
+  Matrix OS is the stock operating system and is open source, so custom work is mostly apps and control maps
+  running on top of it rather than replacement firmware. Matrix OS builds also exist for a Mystrix 2 hardware
+  family that is not yet on the 203 Systems shop. The Matrix OS README lists an earlier STM32F1-based Mystrix
+  Founder Edition as no longer supported since Matrix OS 3.0.
+related: [203-systems-mystrix-pro]
+image:
+  src: /images/devices/203-systems-mystrix.jpg
+  style: photo
+  alt: Render of the Mystrix controller seen at an angle, its 8 by 8 pad grid lit in yellow, cyan and white on a blue square under the title Mystrix Smart Controller
+  width: 1200
+  height: 1200
+  credit: 203 Systems
+  license: manufacturer product image
+  source_url: https://203.io/products/mystrix
+  original_url: https://cdn.shopify.com/s/files/1/0478/2830/4025/files/Matrix_Hero_1-1_2_4x_adaf1ecf-e8a3-401c-8bca-0e3c4a4d1d8b.png

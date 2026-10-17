@@ -1,0 +1,54 @@
+device: 203-systems-mystrix-pro
+name: Matrix OS
+summary: Official open-source operating system for 203 Systems' Mystrix grid controllers, with built-in note, sequencer, strum and control-map apps and support for Python and C++ apps.
+description: >-
+  Matrix OS is the operating system 203 Systems ships on Mystrix and Mystrix Pro. It is written in C++ on
+  FreeRTOS and TinyUSB for the ESP32-S3 and exposes the pads, LEDs, touch strips, USB and Bluetooth MIDI to
+  apps. Built-in apps include a note player with scales, chords and an arpeggiator, a performance mode, an
+  8-track step sequencer that records to a microSD card, a strum app, a custom control map that sends MIDI,
+  SysEx and keyboard events, and a Bitfocus Companion integration. Since version 3.0 it also runs apps written in
+  MicroPython from the SD card, and C++ apps can be added to a build by listing their Git repository. The
+  repository also contains a Mystrix simulator target and builds for a Mystrix 2 hardware family, which
+  appear in the nightly builds. A separate entry lists the same OS on Mystrix.
+status: active
+authors:
+  - name: 203 Systems
+    url: https://github.com/203-Systems
+  - name: Nengzhuo Cai (Null)
+    url: https://github.com/203Null
+source: https://github.com/203-Systems/MatrixOS
+source_status: open
+license: MIT
+license_notes: Bundled components such as FreeRTOS, TinyUSB and MicroPython keep their own licenses.
+homepage: https://matrix.203.io/
+distribution: download
+install_notes: >-
+  Download the .uf2 file for Mystrix from the GitHub releases page. Put the device into OS update mode, either
+  with the red button in the settings menu or by holding the function key while plugging it in, and wait for the
+  green arrow. The device appears as a USB drive; copy the .uf2 file onto it and it reboots into the new OS. The
+  wiki advises against downgrading because older versions may wipe user data or may not be compatible with the device.
+  The 3.0 release notes say to install the separate bootloader update first if the OS will not
+  update or boot. Version 3.2 uses a microSD card for the sequencer. Nightly builds are published as pre-releases
+  on the same page.
+brick_risk: false
+tags: [official, os, controller-mode, grid, sequencer, scripting, python, midi, platform]
+versions:
+  - version: 4.0 nightly 2026-09-25 (e1a4c080)
+    date: 2026-09-25
+    url: https://github.com/203-Systems/MatrixOS/releases/tag/nightly-20260925-e1a4c080
+    notes: Pre-release nightly with Mystrix 1 and Mystrix 2 builds.
+  - version: V3.2.0
+    date: 2026-01-29
+    url: https://github.com/203-Systems/MatrixOS/releases/tag/V3.2.0
+    notes: Adds the sequencer app.
+  - version: V3.1.0
+    date: 2025-11-26
+    url: https://github.com/203-Systems/MatrixOS/releases/tag/V3.1.0
+  - version: V3.0.0
+    date: 2025-11-08
+    url: https://github.com/203-Systems/MatrixOS/releases/tag/V3.0.0
+    notes: Adds Python apps, a file system and microSD support; ships a bootloader update.
+  - version: V2.6.0
+    date: 2025-04-26
+    url: https://github.com/203-Systems/MatrixOS/releases/tag/V2.6.0
+    notes: Last release before the 3.0 rewrite; adds the custom control map app.
