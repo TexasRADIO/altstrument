@@ -181,3 +181,39 @@ ignore:
   - url: https://github.com/ChanceTheMaker/sloop_salt
     reason: plain fork of isod89/sloop-fm1 with no commits of its own; upstream is catalogued as sloop
     date: 2026-10-16
+  - url: https://github.com/Gadlele/Pelucco
+    reason: earlier repository of FANTASMA, which moved to Gadlele/Fantasma and is catalogued as fantasma
+    date: 2026-10-17
+  - url: https://github.com/asb2m10/dexed
+    reason: desktop DX7 plugin, not firmware or a tool for a hardware device
+    date: 2026-10-17
+  - url: https://github.com/kagaimiq/ghidra-jieli
+    reason: general JieLi chip reverse-engineering tooling, not specific to music hardware
+    date: 2026-10-17
+  - url: https://github.com/kagaimiq/jl-uboot-tool
+    reason: general JieLi chip flashing tool, not specific to music hardware
+    date: 2026-10-17
+  - url: https://github.com/kagaimiq/jl-misctools
+    reason: general JieLi chip utilities, not specific to music hardware
+    date: 2026-10-17
+  - url: https://github.com/kagaimiq/jielie
+    reason: general JieLi chip documentation, not specific to music hardware
+    date: 2026-10-17
+  - url: https://github.com/KingParamount/fm1-factory-presets
+    reason: M-VAVE's factory preset set and a tutorial PDF; sound data, not firmware or a tool
+    date: 2026-10-17
+  - url: https://github.com/entitymar/MVAVE-M-UPGRADE-decompiled
+    reason: decompiled copy of M-VAVE's own updater with its assets and no license; M-VAVE's V15 license does not cover it
+    date: 2026-10-17
+  - url: https://github.com/pingywon/fm1-easy-guide
+    reason: written beginner guide with a teaching demo; no device tool or firmware
+    date: 2026-10-17
+  - url: https://github.com/pfkellogg/fm1-sustain-footswitch
+    reason: archived Arduino sketch for the author's own sustain-pedal MIDI converter, not FM-1 firmware or a host tool
+    date: 2026-10-17
+  - url: https://github.com/pfkellogg/fm1-midi-voice-tuner
+    reason: Arduino sketch for the author's own MIDI splitter and tuner hardware, not FM-1 firmware or a host tool
+    date: 2026-10-17
+  - url: https://github.com/ip2k/mvave-fm1-open-firmware
+    reason: old name of ip2k/lunar-modulator, already catalogued as lunar-modulator
+    date: 2026-10-17
