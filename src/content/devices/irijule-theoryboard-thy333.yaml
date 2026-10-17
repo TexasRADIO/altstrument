@@ -1,0 +1,16 @@
+name: TheoryBoard THY333
+manufacturer: Irijule
+category: controller
+tagline: Music theory MIDI controller with 96 pressure-sensitive RGB pads for chords and melodies
+description: >-
+  The TheoryBoard THY333 is a USB MIDI controller whose two halves hold 96 RGB pads, read for velocity and
+  pressure. Pads on the left play chords built from the chosen key and scale, and pads on the right play the
+  notes of that scale. It has touch buttons, a small OLED display, a TRS MIDI
+  output and a TRS sustain pedal input. It was funded on Kickstarter in 2020 by Irijule.
+platform: STM32F407
+links:
+  manufacturer: https://www.kickstarter.com/projects/irijule/theoryboard-thy333-music-theory-made-easy
+notes: >-
+  The TBOSS documentation says the manufacturer no longer exists, and irijule.com now serves unrelated
+  content. TBOSS installs through the board's own update mode, which sits in a resident loader that it
+  does not replace.

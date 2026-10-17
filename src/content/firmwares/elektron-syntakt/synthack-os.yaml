@@ -1,0 +1,71 @@
+device: elektron-syntakt
+name: SyntHack OS
+summary: Set of patches for Syntakt OS 1.41, built from your own official file, that add a master compressor, beat repeat, a third send effect, dual-mono external input levels and parameter values in real units.
+description: >-
+  Each mod is a separate patch with a recorded hash of the original bytes it
+  replaces, and a build script combines the chosen mods with your own stock
+  1.41 file into a .syx. The master compressor works on the analog master
+  through its VCAs and has threshold, attack, release, ratio and make-up
+  controls plus a gain-reduction meter on the FX track. Beat repeat stutters
+  all tracks from the FX track's retrig keys. A third send, SND3, feeds a
+  chorus, flanger, phaser or crusher. Other mods give the external inputs
+  independent left and right levels, show filter, envelope, level and effect
+  values in Hz, dB, ms and percent, and add a boot splash. A ColdFire emulator
+  tests every mod against the original code before it goes on hardware. The
+  author reports seven mods running on a real unit. Versions up to 0.8.0 could
+  crash at boot with projects that use samples; 0.8.1 fixes this. The
+  repository holds no Elektron firmware and a pre-commit hook rejects it, and
+  the author asks that built files not be shared.
+status: active
+authors:
+  - name: Angelo Tedesco (Angelo-politek)
+    url: https://github.com/Angelo-politek
+source: https://github.com/Angelo-politek/Synthack-OS
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the code and documentation in the repository only; no rights over
+  Elektron's firmware are granted.
+distribution: patch-your-own
+requires_stock: "1.41"
+install_notes: >-
+  Download Syntakt OS 1.41 from Elektron yourself and check it against the
+  SHA-256 in the repository, then build with the repository's Python tools on
+  Linux or WSL (the setup script builds elektron-firmware-tool). Back up
+  projects with Elektron Transfer, flash the result through its Drop page, and
+  flash the stock file the same way to go back. The bootstrap is never
+  modified; if the OS does not start, RECOVERY.md describes holding FUNC at
+  power-on and sending the stock OS over MIDI DIN, which USB cannot do and
+  which takes tens of minutes. Try that procedure once with the stock file
+  before flashing.
+brick_risk: true
+tags: [fx, compressor, sequencer, ui, emulator, patch]
+versions:
+  - version: v0.8.1
+    date: 2026-10-16
+    url: https://github.com/Angelo-politek/Synthack-OS/tree/v0.8.1
+    notes: Git tag; no GitHub release page. Fixes boot crashes with sample projects by moving mod code into the OS heap.
+  - version: v0.8.0
+    date: 2026-10-10
+    url: https://github.com/Angelo-politek/Synthack-OS/tree/v0.8.0
+    notes: Git tag; no GitHub release page. Adds the third send effect.
+  - version: v0.7.0
+    date: 2026-10-10
+    url: https://github.com/Angelo-politek/Synthack-OS/tree/v0.7.0
+    notes: Git tag; no GitHub release page.
+  - version: v0.6.0
+    date: 2026-10-09
+    url: https://github.com/Angelo-politek/Synthack-OS/tree/v0.6.0
+    notes: Git tag; no GitHub release page.
+  - version: v0.5.1
+    date: 2026-10-09
+    url: https://github.com/Angelo-politek/Synthack-OS/tree/v0.5.1
+    notes: Git tag; no GitHub release page.
+  - version: v0.5.0
+    date: 2026-10-09
+    url: https://github.com/Angelo-politek/Synthack-OS/tree/v0.5.0
+    notes: Git tag; no GitHub release page.
+  - version: v0.4.3
+    date: 2026-10-08
+    url: https://github.com/Angelo-politek/Synthack-OS/tree/v0.4.3
+    notes: Git tag; no GitHub release page.

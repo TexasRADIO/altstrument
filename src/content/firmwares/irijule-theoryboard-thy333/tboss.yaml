@@ -1,0 +1,45 @@
+device: irijule-theoryboard-thy333
+name: TBOSS
+summary: Open-source replacement firmware for the TheoryBoard THY333 with chords by scale degree, strum, hold, an arpeggiator, chord names on the display, presets, custom scales and MIDI control, installed from the browser.
+description: >-
+  TheoryBoard Open Source Software plays chords from the left pads and a melody from the right, in any key and
+  scale, with per-pad chord edits such as added sevenths or suspended chords, up to three custom scales drawn on
+  a piano keyboard in a web editor, and separate MIDI channels for chords and melody. Pad pressure can be sent as
+  aftertouch or as a controller such as mod wheel or filter. The editor also backs up settings and makes a
+  verified copy of the board's 16 MB memory chip. Version 0.4.0 adds TRS MIDI out and a sustain pedal input, which
+  the author has not yet confirmed on a board. The firmware is labelled alpha and has been tested on one board.
+  The original firmware's sequencer, drum mode and more than three user scales are not implemented yet. The
+  author is not affiliated with the board's makers.
+status: active
+authors:
+  - name: armandhammer
+    url: https://github.com/armandhammer
+source: https://github.com/armandhammer/TBOSS
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  TinyUSB (MIT) and the CMSIS headers are downloaded at build time and are not part of the repository.
+homepage: https://armandhammer.github.io/TBOSS/
+distribution: browser-installer
+install_notes: >-
+  Use Chrome or Edge with the installer page. Unplug the board, hold the top-left and bottom-left pads of the
+  left half while plugging it back in until the TheoryBoard logo shows, then connect and install; it takes about
+  a minute. Save settings in the web editor first when updating from an earlier TBOSS. The installer uses the
+  board's own update mode and never touches the resident loader, so installing again always works. Going back to
+  the original firmware means running the manufacturer's old update utility with its update file, which the
+  maker no longer supplies; the project's flashing guide describes the steps. Linux needs a one-time permission
+  rule.
+brick_risk: false
+tags: [controller-mode, chords, scales, arpeggiator, midi, editor]
+versions:
+  - version: 0.4.0
+    date: 2026-10-17
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v0.4.0
+    notes: Adds TRS MIDI out and a sustain pedal input, both not yet confirmed on a board.
+  - version: 0.3.0
+    date: 2026-10-16
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v0.3.0
+    notes: Alpha release.
+  - version: 0.2.0
+    date: 2026-10-16
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v0.2.0

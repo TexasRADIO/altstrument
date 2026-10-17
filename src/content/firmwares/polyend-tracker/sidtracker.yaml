@@ -1,0 +1,49 @@
+device: polyend-tracker
+name: SIDTracker
+summary: Replacement firmware that turns the original Polyend Tracker into a two-chip Commodore 64 SID tracker with six voices, GoatTracker import and export, .sid file export, a drum column and effects.
+description: >-
+  Emulates two MOS 6581 or 8580 sound chips in software, three voices each, and
+  drives them from a pattern editor with an order list, sixteen commands and
+  GoatTracker-style wave, pulse and filter tables. Instruments can be edited as
+  tables, shaped on a designer page or loaded from a library of 49 presets.
+  Songs are stored on the SD card and can be exported to GoatTracker files or to
+  .sid files with the project's own player routine for two chips. An extended
+  engine outside those exports adds a PCM drum kit, delay, chorus, reverb, LFOs
+  and voice panning. The hardware layer is taken from OpenTracker, the same
+  author's clean-room Tracker firmware (see the polyend-tracker-re repository).
+  The README says boot, SD card, playback, effects, themes and firmware update
+  are confirmed on a unit and points to a hardware test plan for the rest. It
+  contains no Polyend code, and the release zip holds the firmware and example
+  songs, not the stock image.
+status: active
+authors:
+  - name: Marcin Spoczynski (sandlbn)
+    url: https://github.com/sandlbn
+source: https://github.com/sandlbn/SidTracker
+source_status: open
+license: MIT
+license_notes: >-
+  Third-party code keeps its own licence, recorded in src/platform/PROVENANCE.md.
+distribution: download
+requires_stock: "1.9.2"
+install_notes: >-
+  Back up the SD card, unzip the release onto its root and leave Polyend's stock
+  PolyendTracker_1.9.2.ptf (which you download from Polyend) in /Firmware. On the
+  stock firmware choose Config, Firmware update and the SIDTracker .ptf. To go
+  back, choose the stock file from SIDTracker's Config, F7 FIRMWARE page, or put
+  /Firmware/ot_restore.txt containing the stock file's name on the card and
+  power on. Image names must be exactly 24 characters and start with PolyendTrac.
+  The README disclaims responsibility for damage to the unit.
+brick_risk: true
+tags: [chiptune, synth-engine, sequencer, drums, fx, emulator, sid]
+image:
+  url: https://raw.githubusercontent.com/sandlbn/SidTracker/main/docs/screenshots/pattern.png
+  alt: "SIDTracker pattern screen from the desktop simulator: six channel columns under SID1 8580 and SID2 8580 headings, rows of notes and instrument numbers, and eight function key labels along the bottom"
+  credit: Marcin Spoczynski
+  source_url: https://github.com/sandlbn/SidTracker
+  first_party: true
+versions:
+  - version: "v0.1 (SIDTracker 0.6.4)"
+    date: 2026-10-17
+    url: https://github.com/sandlbn/SidTracker/releases/tag/v0.1
+    notes: First release; the zip is named SIDTracker-0.6.4.zip.
