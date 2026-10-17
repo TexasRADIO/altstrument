@@ -1,0 +1,53 @@
+device: xiphonics-picotracker-advance
+name: picoTracker Advance firmware
+summary: Official firmware for the picoTracker Advance, a tracker with eight stereo tracks, a voice architecture with filters and LFOs, SID, FM and macro-oscillator synths, sample slicing and USB host control surfaces.
+description: >-
+  The firmware shares the song, chain and phrase workflow of the RP2040 picoTracker and adds features that depend
+  on the Advance hardware, such as audio recording, a master reverb and delay, and mixdown or stem rendering of
+  selected song rows. Version 3 introduced a new voice architecture with per-voice filters, envelopes and LFOs and
+  a sampler instrument with waveform editing, and added SID, six-operator FM (with DX7 SysEx import), a macro
+  oscillator and a multi-saw synth. USB host mode accepts some pad controllers, and the device can also be mirrored
+  to the remote UI.
+
+
+  The Advance adapter source was part of the public picoTracker repository through tag v2.3.0, and the image
+  attached to that release is pTAdvance-v2.3.0.bin. The adapter was removed in April 2026 when the projects were
+  split, and the v3 images are provided by xiphonics only as binaries from its website.
+status: active
+authors:
+  - name: xiphonics
+    url: https://github.com/xiphonics
+  - name: Maksim Lin
+    url: https://github.com/maks
+source_status: binary-only
+license: unspecified
+license_notes: The shared tracker code in the xiphonics/picoTracker repository is BSD-3-Clause, with copyright to Discodirt and xiphonics, inc. The Advance manual's credits page names third-party code but gives no license for the Advance firmware itself.
+homepage: https://xiphonics.com/pages/picotracker
+distribution: download
+install_notes: >-
+  Copy the .bin file to the top level of the SD card, insert it, then pick Update firmware on the Device screen and
+  confirm. The Advance reboots into its bootloader, where you select the .bin file and press ENTER, then choose
+  Reboot. Updates are blocked while the sequencer is playing. If the unit will not start, holding the boot button
+  below the SD card slot while keeping the power button down for about eight seconds enters the bootloader.
+brick_risk: false
+tags: [official, tracker, sequencer, sampler, synth-engine, fm, sid, midi, usb-midi, recording]
+versions:
+  - version: 3.2.0
+    url: https://xiphonics.com/pages/picotracker
+    notes: Adds a master reverb and delay with automation commands, loop playback of a song selection and a tempo readout.
+  - version: 3.1.1
+    url: https://xiphonics.com/pages/picotracker
+    notes: Fixes for sample position limits, cut on a selection and monitoring after sample audition.
+  - version: 3.1.0
+    url: https://xiphonics.com/pages/picotracker
+    notes: Adds SID, FM6, StarLoom and PicoSwarm synth instruments, polyphonic MIDI input and autosave on power off.
+  - version: 3.0.0
+    url: https://xiphonics.com/pages/picotracker
+    notes: Adds the new voice architecture, the sampler instrument, USB host mode and the resampler.
+  - version: v2.3.0
+    date: 2026-03-19
+    url: https://github.com/xiphonics/picoTracker/releases/tag/v2.3.0
+    notes: Last release whose tag includes the Advance adapter source; the pTAdvance image is attached.
+  - version: v2.2.0
+    date: 2026-01-15
+    url: https://github.com/xiphonics/picoTracker/releases/tag/v2.2.0

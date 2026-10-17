@@ -1,0 +1,27 @@
+device: xiphonics-picotracker
+name: picoTracker Theme Studio
+kind: tool
+summary: Browser-based editor for designing and exporting picoTracker colour theme files, available as a hosted page or as a static app to run locally.
+description: >-
+  Theme Studio lets you pick colours and fonts for a picoTracker theme and export the result as a theme file to
+  import on the device. The xiphonics getting-started page links to the hosted version as the online theme editor.
+  The repository is a static web app that can be served with any local web server. Its README is written in Dutch,
+  and the recent commit history is mostly automation and documentation work.
+status: active
+authors:
+  - name: Bauke Molenaar
+    url: https://github.com/itsdarklikehell
+source: https://github.com/itsdarklikehell/picoTracker-Theme-Studio
+source_status: open
+license: MIT
+homepage: https://itsdarklikehell.github.io/picoTracker-Theme-Studio/
+distribution: browser-installer
+install_notes: >-
+  Open the hosted page, edit a theme and export the file, then import it into the picoTracker. To run it locally, serve the static-app folder with a web server such as python3 -m http.server.
+brick_risk: false
+tags: [editor, web-ui, tracker, theme, open-source]
+versions:
+  - version: main @ 86ecc3a
+    date: 2026-10-02
+    url: https://github.com/itsdarklikehell/picoTracker-Theme-Studio/commit/86ecc3affba393a945b71e18a6c6325f91039021
+    notes: No tagged releases; this is the latest commit.

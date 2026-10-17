@@ -1,0 +1,31 @@
+device: xiphonics-picotracker
+name: pT_dx7
+summary: Standalone DX7-style FM synthesizer firmware for the picoTracker v2, played over MIDI, with patch banks loaded from SysEx files on the SD card and a master reverb.
+description: >-
+  pT_dx7 replaces the tracker with a single-purpose synth. It loads DX7 SysEx bank files from a dx7patches folder on
+  the SD card, selects patches by MIDI program change or bank select, accepts notes on all channels over TRS and
+  USB MIDI, and has a master reverb with feedback, damping and input gain controls that can be switched off to free
+  CPU for more polyphony. The screen shows the current patch, levels and USB MIDI and battery status, and an output level setting switches
+  between headphone and line levels. It is one of two firmwares in the picoTracker-playground repository of
+  community contributions, which says they are not supported by xiphonics and are used at the owner's risk.
+status: maintained
+authors:
+  - name: Maksim Lin
+    url: https://github.com/maks
+source: https://github.com/xiphonics/picoTracker-playground/tree/main/pT_dx7
+source_status: open
+license: unspecified
+license_notes: The repository has no top-level LICENSE file, and none was found in the pT_dx7 folder.
+homepage: https://github.com/xiphonics/picoTracker-playground
+distribution: download
+requires_stock: picoTracker v2 PCB
+install_notes: >-
+  Hold BOOTSEL while connecting the picoTracker over USB and copy pT_dx7.uf2 onto the mounted drive. Flashing the
+  normal picoTracker UF2 the same way returns the device to the stock firmware. The beta release ships the UF2,
+  and the README also gives a CMake build.
+brick_risk: false
+tags: [fm, synth-engine, midi, reverb, sysex, open-source]
+versions:
+  - version: pt_dx7-beta1
+    date: 2026-04-28
+    url: https://github.com/xiphonics/picoTracker-playground/releases/tag/pt_dx7-beta1

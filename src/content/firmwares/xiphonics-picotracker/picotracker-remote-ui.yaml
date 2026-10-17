@@ -1,0 +1,32 @@
+device: xiphonics-picotracker
+name: picoTracker Remote UI
+kind: tool
+summary: Flutter web app by xiphonics that shows the picoTracker screen in a Chromium-based browser over USB and passes key presses back to the device.
+description: >-
+  The client connects to the picoTracker over its USB serial link and draws the device display, including the
+  colours the firmware reports for the current theme. It is deployed as a web app at ui.xiphonics.com, and the
+  repository can also be run locally in Flutter, with a Linux build marked as intended for development only. The
+  firmware enables the remote interface by default, and the Advance manual documents the same feature in its device
+  settings.
+status: maintained
+authors:
+  - name: xiphonics
+    url: https://github.com/xiphonics
+  - name: Maksim Lin
+    url: https://github.com/maks
+source: https://github.com/xiphonics/picotracker_client
+source_status: open
+license: BSD-3-Clause
+homepage: https://ui.xiphonics.com/
+distribution: browser-installer
+install_notes: >-
+  Open the web app in a Chromium-based browser with the picoTracker connected over USB and an SD card inserted.
+  Nothing is installed on the device. The picoTracker FAQ suggests it as a way to check that a newly built main
+  board is running.
+brick_risk: false
+tags: [official, remote-ui, web-ui, tracker, utility]
+versions:
+  - version: main @ 9daa7c7
+    date: 2026-06-14
+    url: https://github.com/xiphonics/picotracker_client/commit/9daa7c73c9da315b82acdb2316f5c58f6f1f659a
+    notes: No tagged releases; this is the latest commit.

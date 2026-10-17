@@ -1,0 +1,33 @@
+device: xiphonics-picotracker
+name: picoTracker Doom
+summary: Port of RP2040 Doom, itself derived from Chocolate Doom, that runs the game on the picoTracker v2 using its display, keys and audio output.
+description: >-
+  This is a picoTracker target added to a copy of the RP2040 Doom source, which is a port of Chocolate Doom for
+  RP2040 and RP2350 boards that fits the shareware DOOM1.WAD into a Pico's 2 MB of flash. On the picoTracker it
+  drives the LCD, the nine keys and the I2S audio path, with the d-pad for movement, ENTER to fire, EDIT to run,
+  ALT to use and NAV for the automap. It expects a compressed WAD image generated from the user's own IWAD with a
+  host tool in the repository and written to a fixed flash address. It is a game rather than a music tool and is
+  listed because it replaces the picoTracker firmware.
+status: maintained
+authors:
+  - name: Maksim Lin
+    url: https://github.com/maks
+  - name: Graham Sanderson
+    url: https://github.com/kilograham
+source: https://github.com/xiphonics/picoTracker-playground/tree/main/rp2040-doom
+source_status: open
+license: GPL-2.0-or-later
+license_notes: Chocolate Doom's license, GPL version 2 or any later version as stated in the source file headers. The repository has no top-level license file.
+homepage: https://github.com/xiphonics/picoTracker-playground
+distribution: download
+requires_stock: picoTracker v2 PCB
+install_notes: >-
+  The release provides doom_tiny_picotracker.uf2. The README describes generating a WAD image from your own IWAD
+  with the whd_gen tool and writing it to flash at 0x10048000 over SWD with a Pico probe and OpenOCD, in addition to
+  loading the firmware.
+brick_risk: false
+tags: [game, open-source, platform]
+versions:
+  - version: pT_Doom
+    date: 2026-04-28
+    url: https://github.com/xiphonics/picoTracker-playground/releases/tag/pT_Doom

@@ -1,0 +1,31 @@
+device: xiphonics-picotracker
+name: iaalm picoTracker fork
+summary: Personal picoTracker fork with a KX1 synth instrument, flash wear reduction, a SID retrigger fix and an SDL and WebAssembly build that runs the firmware on a computer or in a browser.
+description: >-
+  The fork's changes to the firmware include a new KX1 synth instrument with presets, instrument parameters stored
+  as packed 32-bit values, reduced flash wear, a fix for SID notes not retriggering, and a context-sensitive key
+  help overlay. It also adds a host-side port that compiles the tracker sources against SDL, and a WebAssembly
+  build of the same port that is published as a web page where the tracker runs in the browser with a bundled SD
+  card and an on-screen keypad. The emulator is not an RP2040 emulator, so it does not reproduce memory limits,
+  timing or MIDI. The repository has no description or releases of its own.
+status: active
+authors:
+  - name: Kaisheng Xu
+    url: https://github.com/iaalm
+source: https://github.com/iaalm/picoTracker
+source_status: open
+license: BSD-3-Clause
+license_notes: Inherits the picoTracker license file, which also lists third-party components under their own licenses.
+homepage: https://www.iaalm.net/picoTracker/
+distribution: source-only
+install_notes: >-
+  The firmware builds like upstream picoTracker. The browser emulator needs no installation and is served from the
+  homepage link. A desktop build needs SDL3 and a C++23 compiler, as described in emulator/README.md in the
+  repository.
+brick_risk: false
+tags: [tracker, fork, emulator, web-ui, synth-engine, sid, open-source]
+versions:
+  - version: master @ 0031279
+    date: 2026-10-14
+    url: https://github.com/iaalm/picoTracker/commit/003127932e97e509f39d23a364560fc5b860275e
+    notes: No tagged releases; this is the latest commit.

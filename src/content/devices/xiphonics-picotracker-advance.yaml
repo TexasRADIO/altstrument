@@ -1,0 +1,40 @@
+name: picoTracker Advance
+manufacturer: xiphonics
+category: groovebox
+tagline: Assembled metal-cased handheld tracker with a 4 inch 720 by 720 display
+description: >-
+  The picoTracker Advance is an assembled handheld tracker from xiphonics, launched in November 2025 as a
+  successor to the RP2040-based picoTracker. It has an all-metal body, a 4 inch 720 by 720 display, nine keys, a
+  speaker, a built-in microphone, line input and output, TRS and USB MIDI with a USB host mode for pad controllers,
+  a microSD card slot and a battery rated for up to six hours. It plays eight stereo tracks with sample, MIDI and
+  synth instruments, including SID, six-operator FM and macro-oscillator engines in the v3 firmware.
+
+  It keeps the picoTracker screen layout and key combinations, and projects can be converted between it and the
+  RP2040 model.
+platform: STM32H743
+stock_firmware: 3.2.0
+links:
+  manufacturer: https://xiphonics.com/products/picotracker
+  community:
+    - label: Advance user manual
+      url: https://manual.xiphonics.com/advance/introduction.html
+    - label: Advance firmware downloads and release notes
+      url: https://xiphonics.com/pages/picotracker
+    - label: xiphonics Discord
+      url: https://discord.gg/F9nhkd7qj2
+notes: >-
+  Firmware is installed from the device's own bootloader screen using a .bin file copied to the SD card, and a
+  hardware boot button gives a way back into the bootloader if the unit will not start. The microcontroller model
+  comes from the Advance adapter in the picoTracker repository at tag v2.3.0. That adapter was removed from the
+  public repository in April 2026, and the current v3 firmware is published as binaries only.
+related: [xiphonics-picotracker, 203-systems-nullperator]
+image:
+  src: /images/devices/xiphonics-picotracker-advance.jpg
+  style: photo
+  alt: Front of the picoTracker Advance, a silver aluminium handheld with a screen showing a grid of hexadecimal song data above a speaker grille and nine grey keys
+  width: 900
+  height: 1200
+  credit: xiphonics
+  license: manufacturer product image
+  source_url: https://xiphonics.com/products/picotracker
+  original_url: https://cdn.shopify.com/s/files/1/0650/8049/2077/files/adv-front.jpg?v=1761884287

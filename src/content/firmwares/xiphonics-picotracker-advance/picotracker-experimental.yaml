@@ -1,0 +1,33 @@
+device: xiphonics-picotracker-advance
+name: picoTracker-experimental
+summary: Fork of the picoTracker firmware with its Advance adapter for experimental features such as 16 channels, phrases longer than 16 steps, MIDI controller commands without notes and a timestretch command.
+description: >-
+  The repository holds an experimental branch for the picoTracker Advance and says that it is behind the official
+  master and has diverged a lot. Features marked as done in its README are sending MCC and MPC commands without
+  triggering a note, phrase lengths beyond 16 steps (which involved moving data to SDRAM), eight extra channels for
+  16 in total with horizontal song scrolling and a mixer page flip, double the ticks per row, a timestretch command
+  and adjustable table lengths. The author says support for the RP2040 picoTracker has largely been dropped and
+  the work is tested on the Advance only, and that anyone who builds it does so at their own risk. It is built
+  from the Advance adapter source that was public in the picoTracker repository through v2.3.0.
+status: active
+authors:
+  - name: llozd
+    url: https://github.com/llozd
+source: https://github.com/llozd/picoTracker-experimental/tree/experimental
+source_status: open
+license: BSD-3-Clause
+license_notes: Carries the picoTracker license file, which also lists third-party components under their own licenses.
+homepage: https://github.com/llozd/picoTracker-experimental
+distribution: source-only
+requires_stock: picoTracker Advance
+install_notes: >-
+  Build from the experimental branch and install the resulting .bin file through the Advance's Update firmware
+  screen and bootloader, as for any Advance firmware. The README gives no installation steps of its own and
+  warns that it is for people prepared to compile and flash it themselves.
+brick_risk: false
+tags: [tracker, fork, sequencer, midi, open-source]
+versions:
+  - version: experimental @ 114fddf
+    date: 2026-07-16
+    url: https://github.com/llozd/picoTracker-experimental/commit/114fddf961df3fffb84c87a84336457c7e9b42ad
+    notes: No tagged releases; this is the latest commit on the experimental branch.

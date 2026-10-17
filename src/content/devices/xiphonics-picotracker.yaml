@@ -1,0 +1,46 @@
+name: picoTracker
+manufacturer: xiphonics
+category: groovebox
+tagline: DIY handheld tracker on the RP2040, sold as a PCB kit with open firmware
+description: >-
+  The picoTracker is a handheld music tracker built around a Raspberry Pi RP2040 microcontroller. It has a 2.8
+  inch 320 by 240 display, nine keys, a microSD card slot for projects and samples, headphone or line output,
+  TRS MIDI in and out, and a USB-C port used for MIDI, charging and firmware updates. It began as a do-it-yourself
+  build by the developer known as democloid, using a Raspberry Pi Pico and off-the-shelf modules, and xiphonics
+  now develops its firmware and sells a v2 kit of circuit boards with the display already mounted. The buyer adds
+  a 3D-printed case, battery, key switches, keycaps and an SD card.
+
+  The firmware is a descendant of the LittleGPTracker handheld tracker and keeps its song, chain and phrase
+  workflow. The xiphonics-sold successor with different hardware is the picoTracker Advance, which has its own
+  entry.
+platform: RP2040
+stock_firmware: v2.4.0
+links:
+  manufacturer: https://xiphonics.com/products/picotracker-pcb-kit
+  community:
+    - label: picoTracker user manual
+      url: https://manual.xiphonics.com/pico/introduction.html
+    - label: xiphonics Discord
+      url: https://discord.gg/F9nhkd7qj2
+    - label: picoTracker PCB design files
+      url: https://github.com/xiphonics/picoTracker-pcb
+    - label: picoTracker case models
+      url: https://github.com/xiphonics/picoTracker-case
+notes: >-
+  Flashing is a drag-and-drop UF2 copy in the Pico's USB boot mode, so a bad image can be replaced the same way
+  and the boot ROM cannot be overwritten. The firmware is open source, and xiphonics hosts a repository of
+  community-contributed alternative firmwares for the v2 board. The circuit board and case files are released as
+  CC0, but the picoTracker-pcb README says the picoTracker name and branding are not licensed for hardware that
+  other people build from them. The picoTracker repository ships separate firmware images for the v2 board and for
+  older boards with a different display controller.
+related: [xiphonics-picotracker-advance, 203-systems-nullperator]
+image:
+  src: /images/devices/xiphonics-picotracker.png
+  style: photo
+  alt: CAD render of the picoTracker v2 case, a dark body with a rectangular screen on top and a cluster of white and black keycaps with one purple key below it
+  width: 798
+  height: 735
+  credit: xiphonics
+  license: CC0-1.0
+  source_url: https://github.com/xiphonics/picoTracker-case
+  original_url: https://raw.githubusercontent.com/xiphonics/picoTracker-case/master/img/picoTrackerv2.png

@@ -1,0 +1,54 @@
+device: xiphonics-picotracker
+name: midiTracker
+summary: Alternate firmware that turns the picoTracker v2 into a player for MIDI, SysEx, WAV and tracker module files, a MIDI and SysEx recorder and a four-track MIDI looper with a small built-in synth.
+description: >-
+  midiTracker replaces the tracker with a file-oriented MIDI tool. It streams .mid and .syx files from the SD card
+  with pause, scrubbing and tempo control, plays .wav files and experimentally plays .mod, .s3m and .xm modules,
+  and records incoming MIDI or SysEx to files. The looper has four tracks with their own input and output channels
+  and can run synced to MIDI clock or transport. The built-in multitimbral synth, called pariSynth, can be played
+  over MIDI or used to audition files, and the interface colours are editable through a theme screen. It is a
+  separate PlatformIO project for the RP2040 and not a picoTracker fork. The README states that the code was written
+  with the help of an AI model and that testing is still in progress, and all releases are marked as pre-releases.
+status: active
+authors:
+  - name: Dan (roge-rm)
+    url: https://github.com/roge-rm
+source: https://github.com/roge-rm/midiTracker
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file and the README states no license.
+homepage: https://github.com/roge-rm/midiTracker
+distribution: download
+requires_stock: picoTracker v2 PCB
+install_notes: >-
+  Put the picoTracker into its firmware update mode, either from the Settings menu inside midiTracker, from the
+  picoTracker firmware's menu, or by holding the boot pin on the bottom of the unit while connecting USB. Then copy
+  the .uf2 file from the latest release onto the drive that appears.
+brick_risk: false
+tags: [midi, sysex, looper, recorder, synth-engine, tracker, open-source]
+versions:
+  - version: v0.5.1
+    date: 2026-08-27
+    url: https://github.com/roge-rm/midiTracker/releases/tag/v0.5.1
+    notes: Corrects stereo panning and an audible dropout in the synth at moderate polyphony.
+  - version: v0.5.0
+    date: 2026-08-25
+    url: https://github.com/roge-rm/midiTracker/releases/tag/v0.5.0
+    notes: Adds the pariSynth live multitimbral synth mode.
+  - version: v0.4.0
+    date: 2026-08-23
+    url: https://github.com/roge-rm/midiTracker/releases/tag/v0.4.0
+    notes: Adds colour theming, individual loop saves and larger folder browsing.
+  - version: v0.3.1
+    date: 2026-08-23
+    url: https://github.com/roge-rm/midiTracker/releases/tag/v0.3.1
+  - version: v0.3.0
+    date: 2026-08-23
+    url: https://github.com/roge-rm/midiTracker/releases/tag/v0.3.0
+  - version: v0.2.0
+    date: 2026-08-21
+    url: https://github.com/roge-rm/midiTracker/releases/tag/v0.2.0
+    notes: Adds tracker file playback.
+  - version: v0.1.0
+    date: 2026-08-19
+    url: https://github.com/roge-rm/midiTracker/releases/tag/v0.1.0
