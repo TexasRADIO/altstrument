@@ -1,0 +1,37 @@
+device: 203-systems-nullperator
+name: NullPerator
+summary: 203 Systems' open-source tracker built on a heavily modified picoTracker codebase, with ESP32-S3 hardware firmware plus iOS, Android and browser builds of the same engine.
+description: >-
+  The repository is a fork of xiphonics' picoTracker that keeps the tracker model of chains, phrases and tables
+  and extends it to eight tracks with 255 chains, 255 phrases, 32 tables and 64 instrument slots. Instrument types
+  include sample, MIDI, SID, OPAL, drum, stack, chiptune and three Game Boy-style voices. The tracker engine, project
+  format and a 240 by 240 interface are shared across the ESP32-S3 hardware firmware, an iOS app, an experimental
+  Android app and a WebAssembly workbench for the browser, with platform adapters for audio, MIDI, input and
+  storage. The hardware firmware builds with ESP-IDF, and the shop page for the device says project files can be
+  exchanged with the non-Advance picoTracker.
+status: active
+authors:
+  - name: 203 Systems
+    url: https://github.com/203-Systems
+  - name: Nengzhuo Cai (Null)
+    url: https://github.com/203Null
+  - name: xiphonics
+    url: https://github.com/xiphonics
+source: https://github.com/203-Systems/NullPerator
+source_status: open
+license: BSD-3-Clause
+license_notes: GitHub reports the license as Other because the LICENSE file is the BSD 3-Clause text carried over from picoTracker (copyright Discodirt and xiphonics, inc.) followed by a list of bundled third-party components, each under its own license. The README states that the project is distributed under the BSD 3-Clause License.
+homepage: https://203.io/products/operator-deposit
+distribution: source-only
+install_notes: >-
+  The hardware build is done with ESP-IDF using the Node selector for the ESP32-S3, as described in docs/HARDWARE.md
+  in the repository: idf.py build, then flash and monitor from the sources directory with the build directory set
+  to build/node. The repository has no release downloads, and the shop page says factory firmware, an SDK and
+  hardware documentation are to be published around the release date.
+brick_risk: false
+tags: [tracker, sequencer, sampler, midi, sid, chiptune, emulator, web-ui, open-source]
+versions:
+  - version: main @ 45f0206
+    date: 2026-09-19
+    url: https://github.com/203-Systems/NullPerator/commit/45f0206d54927018ecc57c4830ca154f4af52765
+    notes: No tagged releases; this is the latest commit. The source reports product version 0.2.

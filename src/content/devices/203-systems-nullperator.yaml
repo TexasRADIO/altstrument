@@ -1,0 +1,36 @@
+name: NullPerator
+manufacturer: 203 Systems
+category: groovebox
+tagline: Pocket-sized ESP32-S3 handheld tracker running a modified picoTracker engine
+description: >-
+  NullPerator is a small handheld tracker from 203 Systems, a company run by Nengzhuo Cai (Null). It is built
+  around an ESP32-S3 and has a 1.54 inch 240 by 240 display, tactile buttons, a speaker and microphone,
+  stereo audio in and out, TRS MIDI in and out, Bluetooth and Wi-Fi, a motion sensor, a microSD card slot and a
+  720 mAh battery. Its firmware is a heavily modified fork of the picoTracker firmware with eight tracks and more
+  instrument types, and the shop page says its project files can be moved to and from the RP2040 picoTracker.
+
+  The same codebase is also built as an iOS app, an experimental Android app and a browser workbench.
+platform: ESP32-S3
+stock_firmware: NullPerator 0.2
+links:
+  manufacturer: https://203.io/products/operator-deposit
+  community:
+    - label: 203 Systems Discord
+      url: https://discord.gg/rRVCBHHPfw
+    - label: NullPerator GitHub repository
+      url: https://github.com/203-Systems/NullPerator
+notes: >-
+  The 203 Systems shop page sells it as a pre-order with a stated release price of 299 US dollars, offers a ceramic
+  edition, and says a second batch is due in November. It also says a development SDK, schematics and CAD files will
+  be published around the release date. The firmware repository is public and has no releases or tags yet.
+related: [xiphonics-picotracker, xiphonics-picotracker-advance, 203-systems-mystrix]
+image:
+  src: /images/devices/203-systems-nullperator.jpg
+  style: photo
+  alt: Hand holding a NullPerator, a small silver handheld with a square screen showing a cyan song grid on black above a black panel with eight small tactile buttons
+  width: 900
+  height: 1200
+  credit: 203 Systems
+  license: manufacturer product image
+  source_url: https://203.io/products/operator-deposit
+  original_url: https://cdn.shopify.com/s/files/1/0650/8049/2077/files/Image_20260719061247_4_412.jpg?v=1784412813
