@@ -1,0 +1,34 @@
+device: ableton-move
+name: Moveforge
+kind: tool
+summary: >-
+  Local development harness for building Schwung modules in C or Faust that compile to an aarch64 library
+  for the Move and to WebAssembly for browser audition.
+description: >-
+  Each module lives in its own folder with a definition file, a user interface script and its DSP source,
+  and builds to a dsp.so for the device and a wasm file for the browser, from the same source, with the same
+  integer audio conversion as the Move so local playback matches the unit. The repository includes example
+  modules such as percussion voices, a West Coast voice, a slice-buffer effect and an arpeggiator, templates
+  for each Schwung component type, and commands that act on every module or on one set with MODULE_ID. The
+  README treats deployment to a unit as experimental.
+status: active
+authors:
+  - name: m-dwyer
+    url: https://github.com/m-dwyer
+source: https://github.com/m-dwyer/moveforge
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no LICENSE file and the README states no license.
+distribution: source-only
+install_notes: >-
+  Clone the repository and follow its build commands, which cross-compile for aarch64 and for the browser.
+  Deploying a built module to a Move needs Schwung and SSH access, and the README advises keeping backups of
+  sets and samples.
+brick_risk: false
+tags: [sdk, emulator, synth-engine, fx]
+versions:
+  - version: "main @ 3edfa17"
+    date: 2026-09-08
+    url: https://github.com/m-dwyer/moveforge/commit/3edfa17
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,33 @@
+device: ableton-move
+name: DJ Deck
+summary: >-
+  Schwung tool module that turns the Move into a two-deck CDJ-style player with timestretch, pitch shift,
+  cue points, loops and stem muting.
+description: >-
+  Each Move runs two independent decks with their own position, pitch, speed, cue points, loops, stutter,
+  slip mode and BPM sync, intended to be used with a physical DJ mixer. It plays WAV, MP3, M4A, AAC and FLAC
+  files and splits tracker modules (MOD, XM, IT, S3M) into per-channel stems with libxmp. The display can be
+  rotated, and a warning border flashes when a deck is near the end of a track. The repository was renamed
+  from move-anything-dj and the module is built on the Schwung framework.
+status: maintained
+authors:
+  - name: DJ Hard Rich
+    url: https://github.com/djhardrich
+source: https://github.com/djhardrich/schwung-dj
+source_status: open
+license: CC-BY-NC-SA-4.0
+license_notes: >-
+  Third-party dependencies carry their own licenses, listed in THIRD_PARTY_LICENSES in the repository.
+distribution: download
+install_notes: >-
+  Needs Schwung. Install DJ Deck from the Tools list of Schwung's module store, or build it with the
+  repository's Docker script and deploy it over SSH.
+brick_risk: false
+tags: [performance, sampler, utility]
+versions:
+  - version: v0.2.1
+    date: 2026-03-09
+    url: https://github.com/djhardrich/schwung-dj/releases/tag/v0.2.1
+  - version: v0.2.0
+    date: 2026-03-09
+    url: https://github.com/djhardrich/schwung-dj/releases/tag/v0.2.0

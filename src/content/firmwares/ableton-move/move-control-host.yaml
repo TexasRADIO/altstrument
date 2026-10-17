@@ -1,0 +1,37 @@
+device: ableton-move
+name: MoveControlHost
+kind: tool
+summary: >-
+  Windows and macOS app that acts as the host for the Move's Control Live mode, so the Move works as a
+  mappable MIDI control surface in any DAW, DJ or VJ software.
+description: >-
+  The app connects to the Move over USB and writes a still image to its display so the unit does not sleep.
+  Without it the pad LEDs go dark about a second after the last MIDI message. The Move then works as a MIDI
+  control surface for software other than Live. The repository also serves as a minimal example of writing
+  to the Move's display. The README describes the app's function as only making that connection and writing
+  the image.
+status: maintained
+authors:
+  - name: awwbees
+    url: https://github.com/awwbees
+source: https://github.com/awwbees/MoveControlHost
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file is the GPL version 3 text with no or-later grant.
+distribution: download
+install_notes: >-
+  Download the .exe for Windows or the .dmg for macOS from the releases page and run it with the Move
+  connected over USB and set to Control Live mode. The README describes no changes to the unit's software.
+brick_risk: false
+tags: [controller-mode, midi, utility, usb-midi]
+video:
+  url: https://youtu.be/3MFJ3M2qzuE
+  title: "use your Ableton Move as a MIDI controller"
+  credit: Ryan Challinor
+  first_party: true
+  found_via: https://github.com/awwbees/MoveControlHost#readme
+versions:
+  - version: v1.0.0
+    date: 2025-11-27
+    url: https://github.com/awwbees/MoveControlHost/releases/tag/v1.0.0

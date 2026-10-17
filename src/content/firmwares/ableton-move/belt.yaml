@@ -1,0 +1,39 @@
+device: ableton-move
+name: Belt
+summary: >-
+  Schwung live vocal processor with autotune, up to four scale-aware harmonies, a doubler and formant
+  control, for the Move microphone, line input or USB-C input.
+description: >-
+  Belt offers a retune amount from hard tuning to transparent correction, four harmony voices with scale-
+  aware intervals, a stereo doubler, a formant knob, a momentary or latched hard-tune pad and a tuner strip
+  on the step buttons. Held pad or clip chords can drive the harmony voices, and a target mode makes the
+  held note the correction target. It is published as Belt, an effect for signal-chain slots and the master
+  slot, and Belt In, a sound generator on the hardware input, from one repository.
+status: active
+authors:
+  - name: Tim Cox (timncox)
+    url: https://github.com/timncox
+source: https://github.com/timncox/schwung-belt
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file adds a note that two Schwung header files are vendored from the MIT-licensed Schwung
+  repository.
+homepage: https://timncox.github.io/schwung-belt/
+distribution: download
+install_notes: >-
+  Needs Schwung. Install Belt from Schwung's module store or Schwung Manager, or give Schwung Manager the
+  repository URL or the tarball from the latest release.
+brick_risk: false
+tags: [fx, performance, voice, scales]
+versions:
+  - version: v0.2.1
+    date: 2026-07-30
+    url: https://github.com/timncox/schwung-belt/releases/tag/v0.2.1
+  - version: v0.2.0
+    date: 2026-07-24
+    url: https://github.com/timncox/schwung-belt/releases/tag/v0.2.0
+    notes: Adds MIDI CC control.
+  - version: v0.1.2
+    date: 2026-07-15
+    url: https://github.com/timncox/schwung-belt/releases/tag/v0.1.2

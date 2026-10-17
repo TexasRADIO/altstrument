@@ -1,0 +1,36 @@
+device: ableton-move
+name: Mono
+summary: >-
+  Clean-room Monomachine-inspired instrument for Schwung: a six-track machine synth with a 64-step sequencer
+  and parameter locks, plus a single-voice Mono Voice module.
+description: >-
+  Mono is a full-surface six-track instrument with an internal 64-step sequencer, per-step parameter locks,
+  independent track timing, probability, retrigs, conditions and slide, with a seven-page editor and a
+  browser editor. Mono Voice is one machine voice that plays inside a normal Move track using Move's pads
+  and sequencer. The machines so far are SuperWave Saw and SuperWave Pulse. Both modules are built from one
+  source tree and released together, and Mono Voice is also mirrored in its own repository for direct
+  installs.
+status: active
+authors:
+  - name: Tim Cox (timncox)
+    url: https://github.com/timncox
+source: https://github.com/timncox/schwung-mono
+source_status: open
+license: MIT
+homepage: https://timncox.github.io/schwung-mono/
+distribution: download
+install_notes: >-
+  Needs Schwung. Install from Schwung's module store, or in Schwung Manager use Custom Install from a GitHub
+  URL with the schwung-mono repository for Mono or the schwung-mono-voice repository for Mono Voice.
+brick_risk: false
+tags: [synth-engine, sequencer, performance, machines]
+versions:
+  - version: v0.4.3
+    date: 2026-09-01
+    url: https://github.com/timncox/schwung-mono/releases/tag/v0.4.3
+  - version: v0.4.2
+    date: 2026-07-30
+    url: https://github.com/timncox/schwung-mono/releases/tag/v0.4.2
+  - version: v0.4.1
+    date: 2026-07-27
+    url: https://github.com/timncox/schwung-mono/releases/tag/v0.4.1

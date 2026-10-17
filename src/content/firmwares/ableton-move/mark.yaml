@@ -1,0 +1,40 @@
+device: ableton-move
+name: Mark
+summary: >-
+  Schwung overtake module that turns the pads into a five-track live looper in the style of the Boss RC-505,
+  with record, play and overdub per track.
+description: >-
+  Mark has five stereo loop tracks that each cycle through record, play and overdub, with their own stop and
+  clear, level, pan, reverse and one-shot controls. Loop lengths snap to whole measures, the first loop or
+  Move's MIDI clock sets the grid, and a single level of undo and redo covers the last recording or overdub.
+  Move keeps playing underneath, so its own tracks can serve as the rhythm section. It is named after Marc
+  Rebillet.
+status: active
+authors:
+  - name: Tim Cox (timncox)
+    url: https://github.com/timncox
+source: https://github.com/timncox/schwung-mark
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file adds a note that two Schwung header files are vendored from the MIT-licensed Schwung
+  repository.
+homepage: https://timncox.github.io/schwung-mark/
+distribution: download
+install_notes: >-
+  Needs Schwung. Install Mark from Schwung's module store in Schwung Manager, or use Install Custom Module
+  with the repository URL or the mark-module tarball from the latest release, and launch it from the
+  overtake menu.
+brick_risk: false
+tags: [looper, performance, sampler, fx]
+versions:
+  - version: v0.5.1
+    date: 2026-07-30
+    url: https://github.com/timncox/schwung-mark/releases/tag/v0.5.1
+  - version: v0.5.0
+    date: 2026-07-24
+    url: https://github.com/timncox/schwung-mark/releases/tag/v0.5.0
+    notes: Adds MIDI CC control.
+  - version: v0.4.0
+    date: 2026-07-18
+    url: https://github.com/timncox/schwung-mark/releases/tag/v0.4.0

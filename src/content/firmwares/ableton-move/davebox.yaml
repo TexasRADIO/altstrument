@@ -1,0 +1,44 @@
+device: ableton-move
+name: dAVEBOx
+summary: >-
+  Eight-track MIDI sequencer for Schwung with per-clip effect chains, polyrhythmic drum lanes and a
+  performance mode, routable to Move instruments, Schwung slots or external MIDI.
+description: >-
+  dAVEBOx is a sequencing environment that can replace the native Move sequencer's functions while following
+  Move's workflow. It has eight melodic or drum tracks with 16 clips each, up to 256 steps per clip, a step
+  arpeggiator, pitch randomisation, harmoniser and MIDI delay for each clip, 32 drum lanes with their own
+  loop lengths and note repeat, eight automation lanes per track, conductor tracks for live transposition
+  and snapshot slots for mute and solo states. Each track can send to Move's instruments, a Schwung slot or
+  external MIDI, and sessions can be exported to Live. The README describes it as built with AI coding tools
+  under a human designer and gives no warranty.
+status: active
+authors:
+  - name: legsmechanical
+    url: https://github.com/legsmechanical
+source: https://github.com/legsmechanical/schwung-davebox
+source_status: open
+license: MIT
+homepage: https://github.com/legsmechanical/schwung-davebox#readme
+distribution: download
+requires_stock: Schwung 0.9.16 or later
+install_notes: >-
+  Needs Schwung. Install dAVEBOx from Schwung's module store or Schwung Manager. It is at 1.0 beta and under
+  active development.
+brick_risk: false
+tags: [sequencer, midi, performance]
+video:
+  url: https://www.youtube.com/watch?v=bKRPJhNgEO8
+  title: "dAVEBOx Overview (Schwung / Ableton Move)"
+  credit: dAVEBOx
+  first_party: true
+  found_via: https://github.com/legsmechanical/schwung-davebox#readme
+versions:
+  - version: v1.0-beta.8
+    date: 2026-07-21
+    url: https://github.com/legsmechanical/schwung-davebox/releases/tag/v1.0-beta.8
+  - version: v1.0-beta.7
+    date: 2026-07-21
+    url: https://github.com/legsmechanical/schwung-davebox/releases/tag/v1.0-beta.7
+  - version: v1.0-beta.6
+    date: 2026-06-25
+    url: https://github.com/legsmechanical/schwung-davebox/releases/tag/v1.0-beta.6

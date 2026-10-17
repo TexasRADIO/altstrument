@@ -1,0 +1,37 @@
+name: Move
+manufacturer: Ableton
+category: groovebox
+tagline: Portable battery-powered instrument with 32 pads, eight encoders and a built-in sound engine
+description: >-
+  Move is a standalone portable instrument from Ableton. It has a 4 by 8 grid of pads, eight encoders and a main
+  encoder, a small monochrome display, a built-in speaker, microphone, line input and output, a battery, and USB-C
+  and USB-A ports. It runs its own sequencer, sampler and synth instruments without a computer, connects over
+  Wi-Fi to a browser page on the unit, and exchanges sets with Ableton Live. The stock software runs on Linux and
+  Ableton offers an SSH developer access page on the device.
+platform: Linux-based Move OS
+links:
+  manufacturer: https://www.ableton.com/en/move/
+  community:
+    - label: Schwung Discord
+      url: https://discord.gg/GHWaZCC9bQ
+    - label: Schwung manual
+      url: https://schwung.dev/manual.html
+    - label: Schwung module catalog
+      url: https://schwung.dev/catalog.html
+notes: >-
+  Ableton does not support custom code on Move. Third-party projects use the SSH key page that the unit serves
+  at move.local/development/ssh, and they warn that this is unsupported. They state that Ableton's documented DFU
+  restore procedure returns a unit to stock, and that a Move firmware update disables the add-ons until their
+  installer is run again. Most work for Move is Schwung and modules that run on top of it rather than replacement
+  firmware.
+related: []
+image:
+  src: /images/devices/ableton-move.jpg
+  style: photo
+  alt: Top view of the black Ableton Move with a four by eight grid of white and orange lit pads, a row of knobs above them and two hands playing the pads
+  width: 1200
+  height: 630
+  credit: Ableton
+  license: manufacturer product image
+  source_url: https://www.ableton.com/en/move/
+  original_url: https://beta-ableton.imgix.net/media/cz0ca4sz/abletonmove-ogimage_1200x630.jpeg

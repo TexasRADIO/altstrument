@@ -1,0 +1,37 @@
+device: ableton-move
+name: Ableton Move Lab
+kind: tool
+summary: >-
+  Runs the Move's stock software from a recovery image you download yourself in a Docker container or on a
+  Raspberry Pi 4, with a browser GUI for the display, pads and audio.
+description: >-
+  An LD_PRELOAD shim answers the SPI handshake that the Move software expects, captures what would go to the
+  display and LEDs, and feeds browser input back as hardware events, while a Node.js server exposes display,
+  controls, LED state and audio streaming at a web page on port 9090. The repository includes notes from
+  reverse-engineering the MIDI mapping and control logic, and the README lists native ALSA output and full
+  hardware parity as unfinished. It ships no Ableton files: the recovery image, taken from Ableton's own
+  download page, is placed in a local folder that Git ignores.
+status: active
+authors:
+  - name: simoianni
+    url: https://github.com/simoianni
+source: https://github.com/simoianni/ableton-move-lab
+source_status: open
+license: AGPL-3.0-only
+license_notes: >-
+  The README says the license covers only this repository's own work and grants no rights to Ableton's
+  firmware, binaries, recovery images or trademarks. The LICENSE file is the AGPL version 3 text with no or-
+  later grant.
+distribution: source-only
+requires_stock: Move recovery image 2.0.5
+install_notes: >-
+  Download the Move recovery image yourself from Ableton's official page, place it in the local images
+  folder, then run the container build and run scripts, or the Raspberry Pi image script for a Pi 4. The
+  build downloads Node.js and a base image. Nothing is written to a physical Move.
+brick_risk: false
+tags: [emulator, research, ui]
+versions:
+  - version: "main @ 16532e9"
+    date: 2026-07-28
+    url: https://github.com/simoianni/ableton-move-lab/commit/16532e9
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,41 @@
+device: ableton-move
+name: Movy
+summary: >-
+  Schwung tool module that lays any module out as pages of knob parameters and adds a 16-track step
+  sequencer modelled on the Move sequencer; an early prototype.
+description: >-
+  Movy shows the parameters of whichever Schwung module is loaded on the eight knobs as readable pages, with
+  arc knobs, enum lists, envelope graphics and filter curves, and steps through the signal chain with the
+  jog wheel. Under that it runs a 16-track sequencer, written as a Rust engine, with clips, a session view,
+  live and step recording and automation, where each track hosts its own module chain and the tracks are
+  arranged in four groups of four. The README calls it an early, experimental prototype that works on real
+  hardware but has rough edges, and says it only drives Schwung modules, not Move's native instruments. It
+  credits dAVEBOx for the sequencer approach.
+status: active
+authors:
+  - name: megadake
+    url: https://github.com/DimaDake
+source: https://github.com/DimaDake/schwung-movy
+source_status: open
+license: MIT
+homepage: https://github.com/DimaDake/schwung-movy#readme
+distribution: download
+requires_stock: Schwung 1.6.0 or later
+install_notes: >-
+  Needs Schwung. Install the Movy module from Schwung's module store or Schwung Manager, or build it with
+  the Rust toolchain and an aarch64 cross compiler and run the deploy script against a Move at move.local,
+  as the README describes. Open Movy from the Tools menu. Release 0.33.0 added set backups.
+brick_risk: false
+tags: [sequencer, ui, performance, midi]
+versions:
+  - version: v0.35.0
+    date: 2026-10-09
+    url: https://github.com/DimaDake/schwung-movy/releases/tag/v0.35.0
+    notes: "Schwung pages, drum racks and safer Sets."
+  - version: v0.34.0
+    date: 2026-09-09
+    url: https://github.com/DimaDake/schwung-movy/releases/tag/v0.34.0
+  - version: v0.33.0
+    date: 2026-09-09
+    url: https://github.com/DimaDake/schwung-movy/releases/tag/v0.33.0
+    notes: Adds set backups.

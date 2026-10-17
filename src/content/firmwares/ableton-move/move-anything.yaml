@@ -1,0 +1,45 @@
+device: ableton-move
+name: Move Anything
+summary: >-
+  Earlier framework for custom JavaScript scripts on the Move, with a Launchpad Pro emulation for the
+  Dirtywave M8; its techniques underlie Schwung.
+description: >-
+  Move Anything, previously called Move Control Surface, launches custom code from the stock Move software
+  with a key combination and returns to it afterwards. Scripts are written in modern JavaScript on a C core
+  that exposes the pads with polyphonic aftertouch, the nine encoders, touch sensing, buttons, LED colours,
+  the 128 by 64 display, line and microphone input, audio output and USB-A MIDI. The original feature is a
+  Launchpad Pro emulation for using the Move as a controller for the Dirtywave M8, with the encoders sent as
+  MIDI CCs. An optional pages-of-sets add-on adds unlimited set pages and, in the build the README
+  describes, rearranges and recolours existing sets. Schwung's README credits this project for the base
+  techniques it builds on.
+status: maintained
+authors:
+  - name: bobbydigitales
+    url: https://github.com/bobbydigitales
+source: https://github.com/bobbydigitales/move-anything
+source_status: open
+license: CC-BY-NC-SA-4.0
+license_notes: >-
+  The README applies CC BY-NC-SA 4.0 to everything in the repository and adds terms: no AI model may be
+  trained on the code without the author's permission, no AI-generated adaptations of it, and no AI-written
+  contributions or reviews. These extra terms go beyond the Creative Commons grant.
+distribution: download
+install_notes: >-
+  The unit has to be reachable over Wi-Fi and have an SSH key added on its move.local/development/ssh page.
+  The README installs it with a bash script from its installer folder, run in a terminal on macOS or Linux
+  or in Git Bash on Windows; it downloads the latest build and installs it over SSH. The README asks you to
+  back up your sets first, warns that the optional pages-of-sets feature can rearrange them, and says to run
+  the script again after a Move firmware update.
+brick_risk: false
+tags: [platform, midi, scripting, controller-mode, ui]
+video:
+  url: https://www.youtube.com/watch?v=YHt6c-Pq5Bc
+  title: "Move Anything: Launchpad Pro MK3 emulation + M8 demo"
+  credit: Robert Anderberg
+  first_party: true
+  found_via: https://github.com/bobbydigitales/move-anything#readme
+versions:
+  - version: "main @ 15b212e"
+    date: 2026-03-14
+    url: https://github.com/bobbydigitales/move-anything/commit/15b212e
+    notes: No tagged releases; this is the latest commit.

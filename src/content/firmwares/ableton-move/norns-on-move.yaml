@@ -1,0 +1,41 @@
+device: ableton-move
+name: Norns on Ableton Move
+summary: >-
+  Runs monome's open-source norns scripting environment as a Schwung module on the Move, inside a Debian
+  chroot beside the stock software.
+description: >-
+  The module starts norns, including SuperCollider and its Lua scripts and the Maiden web editor, in a
+  Debian chroot, and bridges audio, MIDI, the screen and the controls to the Move through the JACK2 server
+  that RNBO Takeover for Move provides. The README says Move's operating system does not let the Schwung
+  store create the privileged helper and chroot, so a one-time bootstrap script run over SSH is needed after
+  installing the module. Version 0.4.3 is reported as tested on Move firmware 2.1.0b2 with Schwung 0.11.6.
+status: active
+authors:
+  - name: djhardrich
+    url: https://github.com/djhardrich
+source: https://github.com/djhardrich/schwung-norns
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README states GPL-3.0, the same as norns, and the LICENSE file is the GPL version 3 text with no or-
+  later grant.
+distribution: download
+install_notes: >-
+  Needs Schwung and RNBO Takeover for Move. Run the quick install script from a computer on the same network
+  to install the Debian chroot, install the Norns module from Schwung Manager and run the one-time bootstrap
+  script over SSH, or build the module with Docker as the README describes. The setup adds a Debian chroot
+  and a privileged helper to the unit.
+brick_risk: false
+tags: [platform, scripting, synth-engine, sequencer]
+versions:
+  - version: v0.4.3
+    date: 2026-07-21
+    url: https://github.com/djhardrich/schwung-norns/releases/tag/v0.4.3
+  - version: v0.4.2
+    date: 2026-04-07
+    url: https://github.com/djhardrich/schwung-norns/releases/tag/v0.4.2
+    notes: JACK update.
+  - version: v0.4.1
+    date: 2026-04-06
+    url: https://github.com/djhardrich/schwung-norns/releases/tag/v0.4.1
+    notes: Standalone Schwung module support.

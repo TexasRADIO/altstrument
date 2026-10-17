@@ -1,0 +1,40 @@
+device: ableton-move
+name: Smack
+summary: >-
+  Schwung effect that captures a quantized loop of live audio, slices it and assigns seeded glitch effects
+  and a new slice order, with Smack In and Oversmack variants.
+description: >-
+  Smack grabs the last steps or bars you played, or records after arming, then slices the loop on a grid and
+  rolls effects per slice at a set density. Patterns are seeded and repeat until re-rolled. There are 26
+  effects, including retrigger, reverse, tape stop, scratch, bitcrush, filter sweeps, granular freeze and
+  ring modulation, an A/B punch between clean and glitched loop, step editing and a dual mono mode. The same
+  release ships Smack In, a standalone sound generator, and Oversmack, a full-surface module. It follows Tim
+  Cox's other Schwung modules and is described as inspired by the Looperator plug-in and the Octatrack.
+status: active
+authors:
+  - name: Tim Cox (timncox)
+    url: https://github.com/timncox
+source: https://github.com/timncox/schwung-smack
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file adds a note that two Schwung header files are vendored from the MIT-licensed Schwung
+  repository.
+homepage: https://timncox.github.io/schwung-smack/
+distribution: download
+install_notes: >-
+  Needs Schwung. Install Smack from Schwung's module store or Schwung Manager, or give Schwung Manager the
+  repository URL or the tarball from the latest release.
+brick_risk: false
+tags: [fx, performance, sampler, looper]
+versions:
+  - version: v0.15.2
+    date: 2026-07-30
+    url: https://github.com/timncox/schwung-smack/releases/tag/v0.15.2
+  - version: v0.15.1
+    date: 2026-07-28
+    url: https://github.com/timncox/schwung-smack/releases/tag/v0.15.1
+  - version: v0.15.0
+    date: 2026-07-24
+    url: https://github.com/timncox/schwung-smack/releases/tag/v0.15.0
+    notes: Adds MIDI CC control.

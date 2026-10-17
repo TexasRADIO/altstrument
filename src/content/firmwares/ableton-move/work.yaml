@@ -1,0 +1,44 @@
+device: ableton-move
+name: Work
+summary: >-
+  Schwung module of 26 clean-room DSP machines, an effects chain of two inserts plus a source stage with
+  LFOs and an envelope, with Work In, Overwork and Overwork Mix variants.
+description: >-
+  Work holds one source and two insert effects in series, chosen from 21 effects and six sources, and adds
+  three effect LFOs and a modulation envelope that can modulate any parameter. The effects include a
+  compressor, several delays and reverbs, comb and multimode filters, a frequency shifter and a granulator.
+  The README states that every machine is an original implementation written from published descriptions,
+  with no third-party code or factory content. Work In is a sound generator form, Overwork is a full-surface
+  module with eight tracks and live input sampling, and Overwork Mix feeds it from what Move is playing; the
+  extra modules ship from the same releases.
+status: active
+authors:
+  - name: Tim Cox (timncox)
+    url: https://github.com/timncox
+source: https://github.com/timncox/schwung-work
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file adds a note that two Schwung header files are vendored from the MIT-licensed Schwung
+  repository.
+homepage: https://timncox.github.io/schwung-work/
+distribution: download
+install_notes: >-
+  Needs Schwung. Install Work from Schwung's module store or Schwung Manager, or use the module tarballs
+  attached to the releases. The work-in, overwork and overwork-mix repositories are distribution mirrors of
+  the same releases.
+brick_risk: false
+tags: [fx, sampler, synth-engine, performance]
+versions:
+  - version: v0.12.0
+    date: 2026-09-07
+    url: https://github.com/timncox/schwung-work/releases/tag/v0.12.0
+    notes: Shift and volume act as a master for Overwork Mix.
+  - version: v0.11.0
+    date: 2026-09-07
+    url: https://github.com/timncox/schwung-work/releases/tag/v0.11.0
+    notes: Adds Overwork Mix.
+  - version: v0.10.0
+    date: 2026-09-07
+    url: https://github.com/timncox/schwung-work/releases/tag/v0.10.0
+    notes: Live input sampling and WAV loading.
