@@ -21,8 +21,8 @@ install_notes: >-
 brick_risk: true
 tags: [platform, sdk, synth-engine, sequencer, editor]
 image:
-  url: https://raw.githubusercontent.com/w0ts/optimist/main/assets/screens/editor-drums.png
-  alt: "Optimist web editor showing the drum track step sequencer grid"
+  url: https://raw.githubusercontent.com/w0ts/optimist/main/assets/screens/editor-mixer.webp
+  alt: "Optimist web editor mixer with channel strips for the analog, digital and lofi tracks and the drum lanes, each with pan and send knobs, a fader and a sequence strip"
   credit: "w0ts"
   source_url: https://github.com/w0ts/optimist
   first_party: true
