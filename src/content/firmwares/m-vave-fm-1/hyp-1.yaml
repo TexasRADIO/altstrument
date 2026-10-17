@@ -6,9 +6,9 @@ description: >-
   A fork of Charles Vestal's AMB-1. The pad, drone and acid voices each have sixteen sounds, with eight drum kits,
   a chord page, links that patch drum hits into the voices, momentary and lockable performance effects, and a
   stored piece per slot. A voice can be taken off the generator and played by hand from the keys. SEL plus GLO lets the
-  FM-1's panel play the browser emulator over USB MIDI. The repository also holds two experimental firmwares by the
-  same author, LOF-1 (a lofi groovebox) and ECO-1 (a plant-driven generator), which the README says have been tested
-  only in the simulator and emulator. The project site has an installer, a browser emulator and a manual.
+  FM-1's panel play the browser emulator over USB MIDI. The repository also holds three experimental firmwares by the
+  same author, LOF-1 (a lofi groovebox), ECO-1 (a plant-driven generator) and GRAV-1 (a star-and-planets ambient
+  generator), which the README says have been tested only in the simulator and emulator. The project site has an installer, a browser emulator and a manual.
 status: active
 authors:
 - name: RedtailWorks
@@ -34,6 +34,6 @@ video:
   first_party: true
   found_via: https://github.com/RustyPawz/fm1-HYP1
 versions:
-- version: 1.5.8
+- version: 1.5.28
   url: https://rustypawz.github.io/fm1-HYP1/install/
   notes: Latest build offered by the project site's installer when checked. Builds are numbered per push; there is no GitHub release, so no date is given.

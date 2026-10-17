@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: MC-1 web emulator
+kind: tool
+summary: >-
+  Browser emulator of the FM-1's faceplate that runs only MC-1's C sound engine, sequencer, display and project
+  storage in an AudioWorklet, with Web MIDI in and out.
+description: >-
+  Runs the same C core as the MC-1 firmware, pinned by source hashes in CORE.json, so patterns, presets, effects
+  and saved projects behave as on the device, though browser timing is not evidence of device CPU load. Projects
+  are stored in the browser's own IndexedDB database. It selects MIDI ports through an explicit permission
+  request and can sync to incoming clock. The faceplate and worklet code are adapted from the author's ORBIT
+  emulator, which derives from the SLOOP web emulator. Only MC-1 is included: no SLOOP, Felucca or ORBIT
+  firmware, and no installer, which lives on the MC-1 project site.
+status: active
+authors:
+- name: dspaudio
+  url: https://github.com/dspaudio
+source: https://github.com/dspaudio/mc-1-web
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in NOTICE.md. The 16 recorded instrument sources behind 64 presets are VSCO 2 Community Edition, CC0-1.0.
+homepage: https://dspaudio.github.io/mc-1-web/
+distribution: browser-installer
+install_notes: >-
+  Open the project site in a browser with Web MIDI support, over https; nothing is installed and no firmware is
+  written to a device. To install MC-1 itself, use the firmware project's installer.
+brick_risk: false
+tags: [emulator, sequencer, drums, synth-engine, midi]
+versions:
+- version: 1.0.1
+  date: 2026-10-16
+  url: https://github.com/dspaudio/mc-1-web/releases/tag/v1.0.1
+  notes: Matches MC-1 1.0.1, with stronger reverb and a LEVEL and PAN mixer page.
+- version: 1.0.0
+  date: 2026-10-16
+  url: https://github.com/dspaudio/mc-1-web/releases/tag/v1.0.0
+  notes: Matches MC-1 1.0.0; installer files and firmware downloads were removed from the repository.

@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: SLOOP 8-Track Web Workstation
+kind: tool
+summary: >-
+  Browser workstation that adds four Tone.js synth tracks beside the FM-1's four SLOOP tracks for eight in total,
+  synced to the FM-1's transport and clock over Web MIDI and USB audio, with a combined eight-track mixer.
+description: >-
+  Built from SLOOP's web editor, with tracks 1 to 4 controlling the FM-1's engines, presets, parameter locks and
+  drum kits over Web MIDI and SysEx. Tracks 5 to 8 run in the browser as a polyphonic saw pad, an acid-style
+  bass, a two-operator FM bell and a pluck and arp synth. It follows the FM-1's PLAY and REC buttons and MIDI
+  clock, or runs on its own transport, and can stream the FM-1's USB audio through the browser to hear all eight
+  tracks together. The author's reason is that eight tracks on the FM-1 itself cause voice dropouts. The
+  README links SLOOP's own installer rather than installing firmware itself.
+status: active
+authors:
+- name: Shawn Hulme (smhulme)
+  url: https://github.com/smhulme
+source: https://github.com/smhulme/sloop-web-8trk
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README names GPL v3 and says it keeps the upstream Felucca and SLOOP licensing, with no later-version
+  clause.
+homepage: https://sloop.smhulme.click
+distribution: browser-installer
+requires_stock: SLOOP
+install_notes: >-
+  Open the site in Chrome or Edge with the FM-1 connected over USB, press CONNECT and allow Web MIDI. The FM-1
+  must already run SLOOP, which the page links to SLOOP's official installer for. It flashes nothing itself.
+brick_risk: false
+tags: [editor, sequencer, synth-engine, midi, usb-audio]
+versions:
+- version: main @ 9974f8f
+  date: 2026-10-08
+  url: https://github.com/smhulme/sloop-web-8trk/commit/9974f8f
+  notes: No tagged releases; this is the latest commit.

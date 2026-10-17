@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: Bunker Evolved
+summary: >-
+  Generative ambient firmware built from Felucca: four editable layers, 64 sound recipes, 24 worlds, 32 scales,
+  a GROW key that proposes new phrases with one-step undo and seven slow mutation processes.
+description: >-
+  Six home views edit the live synthesizer and sequencer, and Felucca's full engine editors stay reachable.
+  The project site has a web installer with music backup and restore, a Chrome editor over USB, a browser
+  simulator that runs the firmware's C code, a manual and a recovery guide. The release notes say the
+  owner updated one FM-1 from original firmware to Bunker and back, with working audio and controls, and that
+  power-loss recovery and other board revisions were not tested. The repository itself holds only a README.
+  The complete source is a zip attached to the release, because GitHub's own archives omit part of the tree.
+  The site and parts of the release material were made with AI tools.
+status: active
+authors:
+- name: Kid Bunka (kidbee85-beep)
+  url: https://github.com/kidbee85-beep
+source: https://github.com/kidbee85-beep/bunker-evolved/releases/tag/v1.0.0
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the release notes and the LICENSE file in the source zip. The custom engines are MIT, the msfa
+  portions Apache-2.0, instrument samples CC0 and fonts keep their own licenses.
+homepage: https://bunker-evolved.sugarypixie10.chatgpt.site
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, which verifies size, SHA-256 and identity before writing. It installs
+  from original V15 or from another firmware with a compatible update loader; back up music first, since
+  firmware rollback does not restore overwritten music. The installer offers a return to M-VAVE V15 from a
+  file you download from M-VAVE yourself. UBOOT chip mode is not reachable by the installer and may need
+  M-VAVE's tools.
+brick_risk: true
+tags: [generative, ambient, sequencer, synth-engine, editor, emulator]
+video:
+  url: https://www.youtube.com/watch?v=NJ5UFi62s_0
+  title: "Bunker Evolved — Turn Your FM-1 into a Generative Ambient Instrument"
+  credit: "Kid Bunka"
+  first_party: true
+  found_via: https://github.com/kidbee85-beep/bunker-evolved/releases/tag/v1.0.0
+versions:
+- version: 1.0.0
+  date: 2026-10-17
+  url: https://github.com/kidbee85-beep/bunker-evolved/releases/tag/v1.0.0
+  notes: First stable release; the firmware is unchanged from RC2 after the owner's device test.
+- version: 1.0.0-rc2
+  date: 2026-10-17
+  url: https://github.com/kidbee85-beep/bunker-evolved/releases/tag/v1.0.0-rc2
+  notes: Pre-release.

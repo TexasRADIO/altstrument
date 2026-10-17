@@ -1,0 +1,32 @@
+device: m-vave-fm-1
+name: FM-1 Read Voice
+kind: tool
+summary: >-
+  Python script that asks a connected FM-1 for its current voice over USB MIDI and prints the DX7 parameters
+  in readable form.
+description: >-
+  Sends M-VAVE's own SysEx read command for the voice held in RAM and decodes the 155-byte reply with a
+  separate DX7 voice decoder. It needs the mido package and a USB MIDI connection, and the README says it was
+  tested with firmware V14 and V15. Other SysEx tools can send banks to the FM-1 but not read from it, which
+  is what this covers. It prints to the console and does not write to the device.
+status: active
+authors:
+- name: Christian Zietz (czietz)
+  url: https://github.com/czietz
+source: https://github.com/czietz/fm1-read-voice
+source_status: open
+license: MIT
+license_notes: >-
+  No LICENSE file; the MIT permission notice is in README.txt and in the header of each script.
+distribution: source-only
+requires_stock: V14 or V15
+install_notes: >-
+  Install mido with a MIDI backend such as python-rtmidi, connect the FM-1 over USB and run
+  fm1_read_voice.py. The README says to use it at your own risk.
+brick_risk: false
+tags: [librarian, midi, research]
+versions:
+- version: master @ b7c539f
+  date: 2026-09-25
+  url: https://github.com/czietz/fm1-read-voice/commit/b7c539f2ca4a492d5ee8afdfb39ad9b3ca89a30e
+  notes: No tagged releases; this is the latest commit.

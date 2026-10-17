@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: GRAV-1
+summary: >-
+  Experimental ambient firmware in which a star and up to six planets play slow, dark music, each planet a voice
+  phrasing round its orbit; tested only in a simulator.
+description: >-
+  The star is a bed of coloured noise and the planets are voices from sixteen instruments, warm and dry near the
+  star and cold and wet far out. A drum sequencer sets the planets' years and so their orbits, larger planets swell
+  smaller ones as they pass, and dust, asteroids and comets drift through. It has ten systems, seven screen
+  themes, MIDI clock in and MIDI out. It lives in the grav1/ folder of the HYP-1 repository and is a fork of
+  AMB-1 by way of HYP-1. The README says it has
+  been built and tested in the simulator and browser emulator only and is numbered 0.x until it runs on a real FM-1.
+status: active
+authors:
+- name: RedtailWorks
+  url: https://github.com/RustyPawz
+source: https://github.com/RustyPawz/fm1-HYP1/tree/main/grav1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in grav1/LICENSING.md. The platform layer is Felucca's by way of X0X and FoMni and the sound code is
+  AMB-1's. Fonts are SIL OFL 1.1.
+homepage: https://rustypawz.github.io/fm1-HYP1/grav/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or build from the folder (BUILDING.md). The README says it is
+  untested on hardware and that HYP-1 or M-VAVE's firmware goes back on the same way. The installer can write
+  M-VAVE's V15 back from a file you download yourself.
+brick_risk: true
+tags: [generative, ambient, synth-engine, sequencer, drums, emulator, midi]
+image:
+  url: https://raw.githubusercontent.com/RustyPawz/fm1-HYP1/main/grav1/docs/img/grav-hero.png
+  alt: "Render of an FM-1 running GRAV-1: a yellow star with orbiting planets on the screen, with the System page's planets, tempo, wander and phrase values below it"
+  credit: RedtailWorks
+  source_url: https://github.com/RustyPawz/fm1-HYP1/tree/main/grav1
+  first_party: true
+versions:
+- version: 0.0.61
+  url: https://rustypawz.github.io/fm1-HYP1/grav/install/
+  notes: Latest build offered by the project site's installer when checked. Builds are numbered per push; there is no GitHub release, so no date is given.

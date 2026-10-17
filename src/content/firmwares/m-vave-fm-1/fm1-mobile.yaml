@@ -1,0 +1,44 @@
+device: m-vave-fm-1
+name: FM-1 Mobile
+kind: tool
+summary: >-
+  Touch-panel web app that runs eleven community FM-1 firmwares, compiled from their own sources to
+  WebAssembly, on a phone. It installs to the home screen and works offline.
+description: >-
+  The menu lists X0X, Felucca, SLOOP, FiMba, Melodee, AMB-1 and HYP-1, with GHOULBOX, ChoralRoot, MAKU and an
+  experimental Jazz Box under More. Each is built from a pinned commit of its author's repository against a
+  simulated FM-1, so this is not a CPU emulator and cannot open .fwsc packages. Pre-release builds and the
+  pinned versions are recorded in the repository. The panel follows the instrument's layout in portrait and
+  landscape, with multi-finger keys, drag-to-turn knobs and a hold button for button combinations. Saved
+  patterns and settings are kept per firmware in the browser. The firmware source archives it was built from
+  are linked from the menu. It does not use M-VAVE's stock firmware.
+status: active
+authors:
+- name: Danila Ulyanov (hb3p8)
+  url: https://github.com/hb3p8
+source: https://github.com/hb3p8/fm1-mobile-emu
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README gives GPL-3.0-only for the app and for the firmwares it includes. The firmware builds are of
+  other authors' projects; their licensing files travel in the source archives.
+homepage: https://hb3p8.github.io/fm1-mobile-emu/
+distribution: browser-installer
+install_notes: >-
+  Open the hosted page in Safari or Chrome and use Share, Add to Home Screen (iOS) or Install app (Android) to
+  run it offline. Sound starts after the first touch.
+brick_risk: false
+tags: [emulator, mobile]
+image:
+  url: https://raw.githubusercontent.com/hb3p8/fm1-mobile-emu/main/docs/landscape-x0x.jpg
+  alt: >-
+    FM-1 Mobile in landscape running X0X, with encoders on the left, a drum step grid on the screen, four knobs
+    and function buttons on the right and a piano-style key row below
+  credit: hb3p8
+  source_url: https://github.com/hb3p8/fm1-mobile-emu
+  first_party: true
+versions:
+- version: main @ 6d8e98a
+  date: 2026-10-17
+  url: https://github.com/hb3p8/fm1-mobile-emu/commit/6d8e98ae09f7a7457546895a1a90fb388fba2589
+  notes: No tagged releases; this is the latest commit.

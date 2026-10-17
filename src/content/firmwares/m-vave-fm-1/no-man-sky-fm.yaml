@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: No Man Sky FM
+summary: >-
+  SLOOP 2.7.1 fork that turns the FM-1's home screen into a space game: knobs steer a ship, planets can be
+  landed on and mined, robots chase you, and a warp map links star systems while SLOOP keeps playing.
+description: >-
+  A fan-made demake of No Man's Sky. On HOME the knobs turn and speed the ship or walk on a planet, and holding
+  or double-tapping OCT-, OCT+ and HOME boosts, lands, fires the mining laser, opens the warp map and
+  the radar; a quick press keeps each key's normal SLOOP function. It also adds key-light effects, a drum sound
+  page and a QUANT off option on the record screen. Everything from SLOOP 2.6 to 2.7.1 is merged in. The project
+  site has an installer and a 3D simulator that runs the firmware compiled to WebAssembly. The author asks
+  that features reused elsewhere be credited. Not affiliated with Hello Games or M-VAVE.
+status: active
+authors:
+- name: hericdk
+  url: https://github.com/hericdk
+source: https://github.com/hericdk/nomanskyFM
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and the LICENSE file, as for SLOOP and Felucca. Firmware/LICENSING.md, inherited from
+  Felucca, keeps the icon atlas and panel image under separate terms; sampled sounds are CC0 and the font
+  is SIL OFL.
+homepage: https://hericdk.github.io/nomanskyFM/
+distribution: browser-installer
+install_notes: >-
+  Open the project site in Chrome or Edge, connect the FM-1 over USB and press install. The package is also in
+  the repository's release folder. The installer can write M-VAVE's V15 back from the file you download
+  from M-VAVE. To reach USB rescue mode, hold OCT- alone while switching the FM-1 on.
+brick_risk: true
+tags: [game, ui, sequencer, synth-engine, emulator]
+video:
+  url: https://www.youtube.com/watch?v=MJc7dSHSaEI
+  title: "No Man Sky FM · a space adventure you play while making music (M-VAVE FM-1)"
+  credit: "Heric Reis"
+  first_party: true
+  found_via: https://hericdk.github.io/nomanskyFM/
+versions:
+- version: main @ 4304597
+  date: 2026-10-16
+  url: https://github.com/hericdk/nomanskyFM/commit/4304597
+  notes: No tagged releases; this is the latest commit. The README and the package name it v0.4.

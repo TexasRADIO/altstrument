@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: FM-1 Designer
+kind: tool
+summary: >-
+  Browser editor for designing FM-1 panel states: key and button LEDs, knob labels and a mock-up of the 240x240
+  screen, saved as JSON that people and LLMs can edit.
+description: >-
+  Models the 27 keys, 14 buttons, seven encoders, the master pot and the colour screen as the open firmwares
+  see them. Designs have up to 24 states, with LED levels painted per control, per-state labels, notes, and
+  screen layouts built from templates in Felucca's palettes. It exports PNG sheets and a documented
+  fm1-panel-design JSON format, and a small Python server can render exports from a script. It was written to
+  plan the ChoralRoot firmware and does not talk to the hardware. A single index.html with no build step.
+status: active
+authors:
+- name: Quixotic7
+  url: https://github.com/Quixotic7
+source: https://github.com/Quixotic7/MvaveFM1-Designer
+source_status: open
+license: MIT
+homepage: https://quixotic7.github.io/MvaveFM1-Designer/
+distribution: browser-installer
+install_notes: >-
+  Open the hosted page, or open index.html locally. tools/serve.py serves the folder for scripted exports.
+brick_risk: false
+tags: [editor, ui]
+image:
+  url: https://media.githubusercontent.com/media/Quixotic7/MvaveFM1-Designer/main/docs/choralroot-fm1-screens.png
+  alt: >-
+    Sheet of twenty-four mock-up FM-1 screens for ChoralRoot, with chord names, a key picker, loop rings, a
+    panic screen and a sound editor page
+  credit: Quixotic7
+  source_url: https://github.com/Quixotic7/MvaveFM1-Designer
+  first_party: true
+versions:
+- version: main @ 0ecd189
+  date: 2026-10-09
+  url: https://github.com/Quixotic7/MvaveFM1-Designer/commit/0ecd189b7b3a2ef8d147cda6cbf13f2ac73f3fa6
+  notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,34 @@
+device: m-vave-fm-1
+name: FM-1 Patch Bank Utility
+kind: tool
+summary: >-
+  Single-file Web MIDI page that sends a DX7-style .syx patch bank to the FM-1 from Chrome or Edge. It is
+  transmit-only and checks only the SysEx framing.
+description: >-
+  Initialises Web MIDI with SysEx access, selects the FM-1's output port when the operating system exposes its
+  name, validates that the file starts with F0 and ends with F7, then streams it to the unit. Storing the
+  bank is done on the FM-1 itself by choosing the destination slot. The page runs entirely in the browser and
+  has a built-in manual tab. It cannot read banks back, and a malformed file could leave the device in an
+  odd state. The repository name says LOADER, but it handles sound banks only and does not flash firmware.
+status: active
+authors:
+- name: Soundspirate (klonecom)
+  url: https://github.com/klonecom
+source: https://github.com/klonecom/M-VAVE-FM1-LOADER---
+source_status: open
+license: unspecified
+license_notes: >-
+  The README's license section reads only "cc by nc", with no version and no LICENSE file.
+homepage: https://klonecom.github.io/M-VAVE-FM1-LOADER---/
+distribution: browser-installer
+install_notes: >-
+  Needs Chrome or Edge on https or localhost. Open the page, click Initialize Web MIDI and accept the SysEx
+  prompt, choose the FM-1 port and a .syx file, then send. Back up your current banks first; a send overwrites
+  the destination bank.
+brick_risk: false
+tags: [librarian, midi, web]
+versions:
+- version: main @ 7e46097
+  date: 2026-08-29
+  url: https://github.com/klonecom/M-VAVE-FM1-LOADER---/commit/7e4609784952629d3e77f6679f3c37c1d28e400c
+  notes: No tagged releases; this is the latest commit.

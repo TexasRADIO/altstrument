@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: FM-1 Browser Emulator
+kind: tool
+summary: >-
+  Rust and WebAssembly emulator of the FM-1's two-core JieLi chip that runs unmodified .fwsc packages in a
+  browser, with a clickable panel, 240x240 screen, audio and flash. Its README is in Russian.
+description: >-
+  A pi32v2 interpreter with a JIT that translates hot code into WebAssembly, plus models of the FM-1's display,
+  keys, buttons, knobs and flash. It is based on the Rust core of the earlier simonjohansson/fm1-emulator
+  (before that project moved to QEMU). The page offers current builds of the open firmwares (Felucca, SLOOP,
+  X0X, Melodee, FoMni, Jangada, ChoralRoot, FiMba, fm1-nes and SLOOP ALG), fetched from their authors'
+  repositories by the site build and checked in the emulator, and a Your file button for any other .fwsc. The
+  README reports stock V13 to V15, Felucca, SLOOP, X0X and Melodee as loading with screen and sound, and
+  lists several others as not tried. It runs at roughly half of real speed on a slow test CPU, and USB MIDI,
+  Bluetooth and over-the-air updates are not emulated. The repository holds only small test firmwares built by
+  the upstream project.
+status: active
+authors:
+- name: shcherbakov7
+  url: https://github.com/shcherbakov7
+source: https://github.com/shcherbakov7/m-wave-fm1-browser-emulator
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSES.md states GPL-3.0-only for the project and for the emulator core taken from simonjohansson/fm1-emulator;
+  the Apache-2.0 JieLi SDK text is kept in LICENSES/. The firmwares the page loads keep their own licences.
+homepage: https://shcherbakov7.github.io/m-wave-fm1-browser-emulator/
+distribution: browser-installer
+install_notes: >-
+  Open the hosted page and choose a firmware. For M-VAVE's official firmware the page requests FM-1.fwsc from
+  M-VAVE's own file server in your browser instead of hosting it; the file there is currently 699,956 bytes, the
+  size of the V15 package, and if the server refuses the request the page links to the file so you can load it yourself.
+  Building locally needs Rust with the wasm32-unknown-unknown target and tools/build-web.sh.
+brick_risk: false
+tags: [emulator, research]
+image:
+  url: https://raw.githubusercontent.com/shcherbakov7/m-wave-fm1-browser-emulator/main/docs/panel.png
+  alt: >-
+    Emulated FM-1 panel with eight knobs, a 240x240 screen showing four parameter cards and a flat waveform, a
+    grid of function buttons and two rows of rounded keys
+  credit: shcherbakov7
+  source_url: https://github.com/shcherbakov7/m-wave-fm1-browser-emulator
+  first_party: true
+versions:
+- version: main @ 056621b
+  date: 2026-10-09
+  url: https://github.com/shcherbakov7/m-wave-fm1-browser-emulator/commit/056621b0c3187e6712326ef854d0a78ed9605600
+  notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,56 @@
+device: m-vave-fm-1
+name: take taker
+kind: tool
+summary: >-
+  Android multitrack recorder that reads a USB audio interface directly, so all four of an FM-1's outputs
+  arrive as separate tracks instead of the stereo downmix Android normally gives apps.
+description: >-
+  Saves each track as FLAC with an optional normalized MP3 mixdown and, if wanted, a video made from the phone
+  camera or a rendered waveform view. The raw capture mode claims the USB audio streaming interface and reads
+  the isochronous stream itself, with no root. It is aimed at the FM-1 running Melodee, which sends its tracks
+  as separate USB audio streams, and also works with other class-compliant interfaces in principle. The README
+  says it is alpha, was tested only with the FM-1 and Melodee on one phone, and that its USB Audio Class 2
+  support is experimental and untested on hardware. The README states that it was written with Claude Code.
+status: active
+authors:
+- name: groundstation1
+  url: https://github.com/groundstation1
+source: https://github.com/groundstation1/take-taker
+source_status: open
+license: MIT
+license_notes: >-
+  Bundled fonts are SIL OFL 1.1 and the jump3r MP3 encoder it uses is LGPL.
+distribution: download
+install_notes: >-
+  Download the APK from the releases page and open it on the phone; it upgrades over 0.5.x and 0.6.x. Connect
+  the FM-1 with a USB-OTG cable and allow the one-time USB permission. If raw mode fails for a device, switch
+  that device to the system capture path on the source screen.
+brick_risk: false
+tags: [recorder, usb-audio]
+image:
+  url: https://raw.githubusercontent.com/groundstation1/take-taker/main/docs/live.webp
+  alt: >-
+    take taker on a phone while recording, with a camera thumbnail of an FM-1 at the top right, a running
+    timecode and four coloured waveform lanes named base, bleep, bloop and drums
+  credit: groundstation1
+  source_url: https://github.com/groundstation1/take-taker
+  first_party: true
+versions:
+- version: 0.6.2
+  date: 2026-10-14
+  url: https://github.com/groundstation1/take-taker/releases/tag/v0.6.2
+  notes: Adds a full-screen camera view and experimental USB Audio Class 2 raw capture.
+- version: 0.6.1
+  date: 2026-10-14
+  url: https://github.com/groundstation1/take-taker/releases/tag/v0.6.1
+  notes: Pre-release; USB Audio Class 2 devices default to their deepest format.
+- version: 0.6.0
+  date: 2026-10-14
+  url: https://github.com/groundstation1/take-taker/releases/tag/v0.6.0
+  notes: Pre-release; experimental full-screen camera and USB Audio Class 2 raw capture.
+- version: 0.5.1
+  date: 2026-10-13
+  url: https://github.com/groundstation1/take-taker/releases/tag/v0.5.1
+- version: 0.5.0
+  date: 2026-10-13
+  url: https://github.com/groundstation1/take-taker/releases/tag/v0.5.0

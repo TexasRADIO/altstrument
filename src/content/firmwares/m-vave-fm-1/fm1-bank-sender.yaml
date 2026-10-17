@@ -1,0 +1,31 @@
+device: m-vave-fm-1
+name: FM1 Bank Sender
+kind: tool
+summary: >-
+  Small Android app that sends DX7 .syx patches and banks to an FM-1 over a USB-OTG cable. The author says it
+  has not been tried on real hardware.
+description: >-
+  Lists the connected USB MIDI device, lets you add several .syx files and sends the chosen one, after checking
+  that it begins with F0 and ends with F7. Data goes out in 512-byte blocks with short pauses, with a note on
+  lowering the block size if large banks fail on a simple adapter. The FM-1 then shows its own slot picker for
+  where to store the voices. The README, in Portuguese, says it was written against the public documentation
+  without an FM-1 to test on. Built from source in Android Studio; a GitHub workflow produces a debug APK.
+status: active
+authors:
+- name: Leo Maimoni (leomaimoni)
+  url: https://github.com/leomaimoni
+source: https://github.com/leomaimoni/fm1-bank-sender
+source_status: open
+license: unspecified
+license_notes: No LICENSE file or license statement in the repository.
+distribution: source-only
+install_notes: >-
+  Open the project in Android Studio, enable USB debugging on the phone and run it, or take the debug APK
+  from the build workflow's artifacts. Connect the FM-1 with a USB-OTG adapter.
+brick_risk: false
+tags: [librarian, midi, android]
+versions:
+- version: main @ 16b1b75
+  date: 2026-09-12
+  url: https://github.com/leomaimoni/fm1-bank-sender/commit/16b1b75fa2516e4ae952607e0615f3ae5154af3b
+  notes: No tagged releases; this is the latest commit.
