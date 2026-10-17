@@ -217,3 +217,21 @@ ignore:
   - url: https://github.com/ip2k/mvave-fm1-open-firmware
     reason: old name of ip2k/lunar-modulator, already catalogued as lunar-modulator
     date: 2026-10-17
+  - url: https://github.com/n1LS/picoTracker_Theme_Editor
+    reason: unlicensed single-page theme editor with a title-only README; picoTracker Theme Studio is catalogued instead
+    date: 2026-10-17
+  - url: https://github.com/xiphonics/factory-content
+    reason: SD card sample content, not firmware or a tool
+    date: 2026-10-17
+  - url: https://github.com/ijnekenamay/picotracker_alt-pcb
+    reason: alternative PCB hardware design, not firmware or a host tool
+    date: 2026-10-17
+  - url: https://github.com/alexbonhomme/picoTracker-th-pcb
+    reason: PCB hardware design, not firmware or a host tool
+    date: 2026-10-17
+  - url: https://github.com/xiphonics/picoTracker-pcb
+    reason: PCB design files, hardware only; linked from the device entry
+    date: 2026-10-17
+  - url: https://github.com/xiphonics/picoTracker-case
+    reason: 3D-print case models, hardware only; linked from the device entry
+    date: 2026-10-17
