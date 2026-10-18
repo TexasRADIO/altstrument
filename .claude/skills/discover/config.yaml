@@ -235,3 +235,51 @@ ignore:
   - url: https://github.com/xiphonics/picoTracker-case
     reason: 3D-print case models, hardware only; linked from the device entry
     date: 2026-10-17
+  - url: https://github.com/Yorev89/Poly-Synth
+    reason: firmware and hardware for the author's own homebrew synth, not a commercial device
+    date: 2026-10-18
+  - url: https://github.com/yukij3/m8emu-macos
+    reason: unlicensed macOS fork of m8emu, discontinued by its author after contacting Dirtywave; m8emu itself is catalogued
+    date: 2026-10-18
+  - url: https://github.com/PierreArnaudGUYOT/Free-Wavelet-Synthesizer-VST
+    reason: web app and desktop plugin, not firmware or a device tool (its engine is ported in the catalogued Oktowave)
+    date: 2026-10-18
+  - url: https://github.com/karimkfoure/m8emu
+    reason: maintainer removed it; an unofficial M8 Headless emulator that conflicts with Dirtywave's EULA ban on derivative works
+    date: 2026-10-18
+  - url: https://github.com/Mdashdotdashn/LittleGPTracker
+    reason: original LittleGPTracker; targets game consoles and desktop systems, not music hardware; lineage noted on the picoTracker entries
+    date: 2026-10-17
+  - url: https://github.com/djdiskmachine/LittleGPTracker
+    reason: Little Piggy Tracker, the maintained LittleGPTracker fork; game consoles, single-board computers and desktop only; linked from the picoTracker device entry
+    date: 2026-10-17
+  - url: https://github.com/djdiskmachine/littlepiggytracker-android
+    reason: Android port of Little Piggy Tracker, not music hardware
+    date: 2026-10-17
+  - url: https://github.com/djdiskmachine/pspdev
+    reason: PSP build kit for LittleGPTracker, not music hardware
+    date: 2026-10-17
+  - url: https://github.com/ohol-vitaliy/PortMaster-LittleGPTracker
+    reason: PortMaster build of LittleGPTracker for retro game handhelds, not music hardware
+    date: 2026-10-17
+  - url: https://github.com/HobbyChop/PSPATTERN
+    reason: LittleGPTracker fork for the Sony PSP, a game console, not music hardware
+    date: 2026-10-17
+  - url: https://github.com/Inkmortal/LittleGPTracker-RG-Nano
+    reason: LittleGPTracker fork for the Anbernic RG Nano game handheld, not music hardware
+    date: 2026-10-17
+  - url: https://github.com/domgalati/LittleGPTracker
+    reason: Little Piggy Tracker fork adding a Braids synth instrument; same game console and desktop targets, not music hardware
+    date: 2026-10-17
+  - url: https://github.com/emartinez-dev/LittleGPTracker-switch
+    reason: LittleGPTracker port to the Nintendo Switch, not music hardware
+    date: 2026-10-17
+  - url: https://github.com/YYUUGGOO/LittleGPTrackerPSP
+    reason: LittleGPTracker fork for the Sony PSP, not music hardware
+    date: 2026-10-17
+  - url: https://github.com/koi-ikeno/LGPTWIN32-SDL2
+    reason: Windows SDL2 build of LittleGPTracker, desktop software
+    date: 2026-10-17
+  - url: https://github.com/scannerlicker/lpgtracker-themer
+    reason: theme configurator for LittleGPTracker, which is not on music hardware
+    date: 2026-10-17
