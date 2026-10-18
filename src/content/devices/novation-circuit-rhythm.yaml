@@ -16,7 +16,7 @@ notes: >-
   Rhythm's update mode, which a custom image does not replace. Novation Components can reinstall the official
   firmware.
 image:
-  src: /images/devices/novation-circuit-rhythm.png
+  src: /images/devices/novation-circuit-rhythm.webp
   style: photo
   alt: Top-down view of the Circuit Rhythm, a grey unit with two rows of black knobs above rows of black buttons and a grid of lit pale blue, cream and white pads
   width: 1200
