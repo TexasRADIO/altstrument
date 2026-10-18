@@ -1,0 +1,35 @@
+device: m-vave-fm-1
+name: more chords!
+summary: >-
+  ChoralRoot remix with extra engines (Prophet, Swarm, Cluster, Cloud, Drift, Wave Terrain, Morph, Bass), a paged
+  step sequencer, a chord-progression generator, velocity-sensitive keys and USB audio recording.
+description: >-
+  Builds on ChoralRoot's chord-playing system and, through it, Felucca, Melodee and ORBIT code. Adds engines
+  adapted from ORBIT, two engines of its own (Drift and Wave Terrain) and Morph, which crossfades two presets.
+  Other changes include 350+ factory presets with 64 shared user slots, 30 loop and step-sequence slots of up to
+  eight bars, a preset randomizer, clock-synced gate and sidechain, external MIDI control of chord modifiers
+  and Cloud wavetable banks. The project site says a browser install on a physical FM-1 has not been verified yet.
+status: active
+authors:
+- name: rosen (rosen-wav)
+  url: https://github.com/rosen-wav
+source: https://github.com/rosen-wav/more-chords-M-VAVE-FM-1-Custom-Firmware
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The repository has no top-level LICENSE; the GPL-3.0 text and LICENSING.md (inherited from ChoralRoot and
+  Felucca) sit under site/firmware/. That file lists Casio CZ-1 factory tone data included with no licence
+  granted, and ported DSP and fonts that keep their own licences.
+homepage: https://rosen-wav.github.io/more-chords-M-VAVE-FM-1-Custom-Firmware/site/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over Web MIDI; the page keeps a backup before writing. It installs over stock,
+  Felucca, Melodee or ChoralRoot firmware. A return-to-stock option takes an unmodified M-VAVE V15 file that you
+  supply; no M-VAVE file is bundled. Browser emulator on the project site.
+brick_risk: true
+tags: [chords, synth-engine, sequencer, performance, velocity, midi]
+versions:
+- version: main @ fbcf823
+  date: 2026-10-18
+  url: https://github.com/rosen-wav/more-chords-M-VAVE-FM-1-Custom-Firmware/commit/fbcf823b962cfcc4daa0d2c526f3735320f39723
+  notes: No tagged releases; this is the latest commit.

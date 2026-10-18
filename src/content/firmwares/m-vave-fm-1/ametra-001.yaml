@@ -1,0 +1,35 @@
+device: m-vave-fm-1
+name: AMÉTRA-001
+kind: tool
+summary: >-
+  Free browser polymetric sequencer and sound engine with four looping lanes of different lengths, internal
+  sounds and a MIDI out that can drive an FM-1 or any USB synth. It can also send a .syx bank to the FM-1.
+description: >-
+  Four sections, A to D, each spread a number of hits over its own step count with Euclidean rhythms, so the loops
+  drift apart and realign. Hits can repeat, be conditional or be randomised, a scale lock and chords handle pitch,
+  and each section can send on its own MIDI channel. Sound comes from sixteen internal timbres, including an FM
+  voice named for the FM-1, or from loaded samples, with a mixer, effects rack and master section. It records WAV
+  loops, exports MIDI files, learns MIDI controls and sends or follows MIDI clock. The interface is in French
+  and English. The FM-1 does not need to be present for it to make sound. The page notes that the original FM-1
+  plays one sound at a time, so two units are needed to use all four sections. MIDI is not available in Safari on
+  iPad and iPhone.
+status: active
+authors:
+- name: SOPOZ CRÉATIONS
+source_status: closed
+license: unspecified
+license_notes: >-
+  The page shows a copyright notice for SOPOZ CRÉATIONS and no licence statement. The author's GitHub account
+  has no public repositories, so no source was found.
+homepage: https://ametra-liard.vercel.app/
+distribution: browser-installer
+install_notes: >-
+  Open the page in Chrome or Edge on a computer, connect the FM-1 over USB, allow MIDI and choose the device
+  under Menu, MIDI. Sending a bank needs the browser's SysEx permission. It transfers MIDI and sound banks only and
+  does not flash firmware. It needs no account, and sounds you load are kept in the browser only.
+brick_risk: false
+tags: [sequencer, generative, midi, sampler, fx, editor]
+versions:
+- version: '1.14'
+  url: https://ametra-liard.vercel.app/
+  notes: Version shown on the page.

@@ -1,0 +1,45 @@
+device: m-vave-smk-37
+name: Erik37
+summary: >-
+  Sampled concert grand piano for the SMK-37 Pro, Elite and MKE-P37, with three velocity layers, dampers,
+  half-pedal sustain, sostenuto, una corda, sympathetic resonance and four rooms. An FM-1 build is untested.
+description: >-
+  Plays 18 sampled notes of the Salamander Grand Piano V3 in three velocity layers, stored as block ADPCM in
+  about 380 KB, with a decay measured per key, damper noise and no dampers on the top keys. Four voices (concert,
+  studio, vintage, jazz) are on pads 1 to 4 and twelve user presets on pads 5 to 16. The pedal jack, the SEQ REC
+  button and the mod wheel all act as sustain, the CHORD and SCALE buttons are sostenuto and una corda, and the
+  pitch wheel bends by two semitones. An eight-line reverb gives chamber, hall and church rooms. USB MIDI sends
+  keys, pedals and bend and plays the piano from incoming notes. The README says it was played on an SMK-37 Pro
+  and that the FM-1 package, for the FM-1's 27 keys, has not been tried on a unit. It is its own firmware on
+  fm1-base and felucca-bsp rather than a Felucca derivative.
+status: active
+authors:
+- name: genkigenki
+  url: https://github.com/genkigenki
+source: https://github.com/genkigenki/erik37
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  Every source file carries an MPL-2.0 header (LICENSING.md). The piano samples in the bank inside every package
+  are derived from the Salamander Grand Piano V3 by Alexander Holm under CC BY 3.0, and the firmware names that on
+  its ABOUT page; the fonts are SIL OFL 1.1.
+homepage: https://genkigenki.github.io/smk37/
+distribution: browser-installer
+install_notes: >-
+  Installs from the browser at genkigenki.github.io/smk37 in Chrome or Edge with the keyboard on USB, one package
+  per model (Pro and Starrykey 37 Play, Elite, MKE-P37, FM-1). Holding OCTAVE- and OCTAVE+ for five seconds
+  starts update mode. M-VAVE's updater puts the stock firmware back at any time. Unofficial; install at your own
+  risk.
+brick_risk: true
+tags: [synth-engine, sampler, reverb, velocity, midi, usb-midi, performance]
+video:
+  url: https://www.youtube.com/watch?v=5yUCB1-OJNE
+  title: "Erik37 · a grand piano firmware for the M-Vave SMK-37 and FM1"
+  credit: genkiginko
+  first_party: true
+  found_via: https://github.com/genkigenki/erik37#readme
+versions:
+- version: main @ f442519
+  date: 2026-10-18
+  url: https://github.com/genkigenki/erik37/commit/f442519c82c6c605d30d09ad4216f4221dee7c41
+  notes: No tagged releases; this is the latest commit, which the README calls 1.1.

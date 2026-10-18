@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: Finton
+summary: >-
+  Six-track trance machine with kick, 909 drums, bass and three supersaw tracks, a generated chord progression
+  library, a build and drop knob and an orbiting-rings screen, with a Web MIDI flasher.
+description: >-
+  Tracks are KICK, 909 (hats, clap, snare, ride), BASS, ROLL, LEAD and PAD. Chords come from a library of 66
+  progressions in five moods, over eight bars that can split at the half. BASS, ROLL and LEAD are written from the
+  chords, key, mode and roller settings and are regenerated when those change unless the track was edited by hand.
+  Every knob can be locked per step or recorded as motion, and one LIFT knob runs the build and the drop. The
+  sound is fixed-point DSP on the FM-1's chip: supersaws, a 909-style kick and kit, a ping-pong delay, a hall and a
+  riser, using about 30 percent of the audio budget by the author's measurement in an emulator. The harmony and
+  roller are ported from the author's Rollwerk and the engine from APEX. The platform layer comes from Dinghy,
+  Felucca and SLOOP. Song slots sit in the flash area Felucca uses for projects, so going back to Felucca may show
+  damaged projects there. The repository has a host mode that renders audio and screenshots on a computer.
+status: active
+authors:
+- name: Justyn Roberts (justynroberts)
+  url: https://github.com/justynroberts
+source: https://github.com/justynroberts/fm1-finton
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0-only for Finton. The logo (assets/logo.png) is all rights reserved and not under the
+  GPL; the fonts are SIL OFL 1.1; the JieLi SDK files a package needs are Apache-2.0 and are read from your own
+  SDK checkout at build time.
+homepage: https://justynroberts.github.io/fm1-finton/
+distribution: browser-installer
+install_notes: >-
+  Web flasher in Chrome or Edge over Web MIDI, which installs the bundled build or any .fwsc you drop on it and
+  finishes an interrupted update, or tools/fm1_install.py. To go back, use M-VAVE's updater or another
+  installer's return to official option. If it fails to start, hold OCT- while powering on for the USB rescue
+  mode. The repository's bundled package is Finton's own 610,110-byte build, not M-VAVE's firmware.
+brick_risk: true
+tags: [sequencer, synth-engine, drums, generative, chords, supersaw, fx, performance]
+versions:
+- version: '1.0'
+  date: 2026-10-18
+  url: https://github.com/justynroberts/fm1-finton/tree/v1.0
+  notes: Git tag; no GitHub release page.

@@ -1,0 +1,39 @@
+device: m-vave-fm-1
+name: Cat Piano
+summary: >-
+  Novelty sample instrument: each of the 27 keys plays a real cat meow tuned to its note, with four banks, a
+  four-track sequencer, an arpeggiator, reverb and delay.
+description: >-
+  A fork of Fart Machine One, which is built on FoMni, X0X and Felucca. Held keys keep meowing, a knob bends
+  pitch, and MIDI channel 1 plays the keys. Patterns are kept in RAM only and are lost at power-off, and some
+  sequencer settings have no panel controls yet. The README says it runs on an FM-1 and passes its host tests,
+  while INSTALL.md says it has not been installed on one yet.
+status: active
+authors:
+- name: thefriendlyhedgehog
+  url: https://github.com/thefriendlyhedgehog
+source: https://github.com/thefriendlyhedgehog/FM-Cat1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Covers the code and artwork. The meow recordings come from OpenGameArt and Wikimedia Commons: CC0 1.0 or
+  public domain, except one recording under CC BY 4.0 whose attribution must travel with the firmware
+  (LICENSING.md, samples/banks.json). Fart Machine One's recordings are not included.
+distribution: source-only
+install_notes: >-
+  No release package is published yet; build cat-piano.fwsc with ./build.sh (JieLi toolchain in a linux/amd64
+  container) and install it with tools/fm1_install.py. The README points to M-VAVE's updater or the FM-1
+  Firmware Hub to go back, and holding OCT- at power-on starts a USB rescue.
+brick_risk: true
+tags: [sampler, sequencer, fx, reverb, delay]
+image:
+  url: https://raw.githubusercontent.com/thefriendlyhedgehog/FM-Cat1/main/docs/images/screen-playing.png
+  alt: "Cat Piano screen showing an orange cat singing between two music notes, the note D5 HUNGRY, and reverb, delay, time and repeats values"
+  credit: thefriendlyhedgehog
+  source_url: https://github.com/thefriendlyhedgehog/FM-Cat1
+  first_party: true
+versions:
+- version: main @ 820251d
+  date: 2026-10-18
+  url: https://github.com/thefriendlyhedgehog/FM-Cat1/commit/820251d823eb4d6af1172487d72c0f4862de6215
+  notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,39 @@
+device: m-vave-fm-1
+name: FMini-1
+summary: >-
+  Three-oscillator monosynth for the FM-1 in the manner of the classic Moog synthesizers: 24 dB/octave ladder
+  filter, two contours, 100 factory patches, an arpeggiator, a sequencer and MIDI.
+description: >-
+  Replaces the FM-1's engines with a single monophonic voice organised in pages for oscillators, mixer, filter,
+  filter and amplifier envelopes and effects, with preset, arpeggiator and sequencer pop-ups. It is a fork of
+  Felucca and keeps Felucca's platform layer, USB, update loader and storage. The author says it was developed
+  with the assistance of Claude.
+status: active
+authors:
+- name: Guilherme Ruppert (ruppert)
+  url: https://github.com/ruppert
+source: https://github.com/ruppert/fmini-1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and LICENSING.md, inherited from Felucca. The ANALOG, LOFI, TRIO, WHEEL and NOISE engines
+  in the firmware/engines submodule are MIT; ported DSP, fonts and CC0 samples keep their own licences
+  (LICENSES/).
+homepage: https://ruppert.github.io/fmini-1/
+distribution: browser-installer
+install_notes: >-
+  Web installer on the project site in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc from the
+  releases page. The installer can return the FM-1 to stock if you supply M-VAVE's unmodified V15 file, which you
+  download from M-VAVE yourself.
+brick_risk: true
+tags: [synth-engine, sequencer, midi, performance]
+image:
+  url: https://raw.githubusercontent.com/ruppert/fmini-1/main/assets/readme/screen-osc.png
+  alt: "FMini-1 oscillator page showing three oscillator range knobs, two detune knobs, three sawtooth waveform boxes and the patch name 00 SAW LEAD"
+  credit: Guilherme Ruppert
+  source_url: https://github.com/ruppert/fmini-1
+  first_party: true
+versions:
+- version: 1.4.2
+  date: 2026-10-18
+  url: https://github.com/ruppert/fmini-1/releases/tag/v1.4.2

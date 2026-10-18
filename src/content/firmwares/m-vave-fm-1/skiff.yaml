@@ -6,8 +6,9 @@ summary: >-
 description: >-
   Fork of Felucca 1.1.5 that keeps its engines, sounds and file formats, so Felucca sounds and projects load.
   Each page draws what its knobs do, and holding HOME shows every control's job. Version 1.1 adds editing of
-  every FM6 operator value on the FM-1 and a graph of the operator envelopes. It has a web editor, a browser
-  emulator and a stereo USB audio input for recording the master on a computer.
+  every FM6 operator value on the FM-1 and a graph of the operator envelopes. Version 1.3 adds an optional
+  second processor core for 12 voices and MIDI learn. It has a web editor, a browser emulator and a stereo USB
+  audio input for recording the master on a computer.
 status: active
 authors:
 - name: illuminus5
@@ -33,6 +34,26 @@ image:
   source_url: https://github.com/illuminus5/skiff
   first_party: true
 versions:
+- version: 1.3.2
+  date: 2026-10-18
+  url: https://github.com/illuminus5/skiff/releases/tag/v1.3.2
+  notes: Stereo HALL reverb, a browser emulator, a clearer update mode screen and finer vibrato depth.
+- version: 1.3.1
+  date: 2026-10-17
+  url: https://github.com/illuminus5/skiff/releases/tag/v1.3.1
+  notes: Selectable 320 MHz CPU clock and fixes to the web editor and filter icons.
+- version: '1.3'
+  date: 2026-10-17
+  url: https://github.com/illuminus5/skiff/releases/tag/v1.3
+  notes: Optional second-core mode with 12 voices, MIDI learn, a MIDI channel per track and an insert effect.
+- version: 1.2.1
+  date: 2026-10-17
+  url: https://github.com/illuminus5/skiff/releases/tag/v1.2.1
+  notes: Rests in songs, new and delete project, and fixes from user reports.
+- version: '1.2'
+  date: 2026-10-16
+  url: https://github.com/illuminus5/skiff/releases/tag/v1.2
+  notes: 143 factory sounds, a sound list by type, more drive types and hold effects.
 - version: '1.1'
   date: 2026-10-13
   url: https://github.com/illuminus5/skiff/releases/tag/v1.1

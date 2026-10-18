@@ -1,26 +1,28 @@
 device: m-vave-fm-1
-name: Drift
+name: Haave
 summary: >-
   Ambient instrument fork of Felucca with no menus or drums: PLAY starts a chord progression, white keys switch
-  layers, black keys jump to chords and four knobs set space, echo, brightness and motion.
+  layers, black keys jump to chords and four knobs set space, echo, glow and motion. Formerly called Drift.
 description: >-
   Replaces Felucca's keyboard, interface and screen with a small set of controls and keeps Felucca's engines,
   effects, USB, update loader and storage. Seven layers (pad, bass, arp, sparkle, melody, voice, shimmer) play
-  notes that stay inside the chosen key, and nine presets, five behaviours and six progressions change the
-  character. The README says it is a work in progress that runs in the browser emulator and has not been
-  flashed to an FM-1, and that the install page is not live yet. The author says it is developed with AI coding
-  agents. Building with FELUCCA_DRIFT=0 gives plain Felucca.
+  notes that stay inside the chosen key, and fourteen presets called worlds, five behaviours and a tide setting
+  for how much it changes by itself shape the character. Held punch-in effects and one-press moments
+  (gong, breath, cascade, swell) are timed to the beat. The README says it is a work in progress that runs in
+  the browser emulator and has not been flashed to an FM-1, and the install page says it is coming soon. The
+  project was renamed from Drift to Haave on 2026-10-18 and the repository is now fm1-haave. The author says it is developed with AI
+  coding agents. Building with FELUCCA_HAAVE=0 gives plain Felucca.
 status: active
 authors:
 - name: Dominik Siemon (thebrodi)
   url: https://github.com/thebrodi
-source: https://github.com/thebrodi/fm1-drift
+source: https://github.com/thebrodi/fm1-haave
 source_status: open
 license: GPL-3.0-only
 license_notes: >-
   Stated in the README and LICENSING.md, inherited from Felucca. The engines in firmware/engines are MIT, the
-  sample set is CC0, ported DSP and the fonts keep their own licenses (LICENSES/).
-homepage: https://thebrodi.github.io/fm1-drift/
+  Hügelton sample pack is CC0 1.0, and ported DSP and the fonts keep their own licenses (LICENSES/).
+homepage: https://thebrodi.github.io/fm1-haave/
 distribution: source-only
 install_notes: >-
   Build as Felucca does (BUILDING.md: Docker, JieLi toolchain and AC79 SDK). No release package is published and
@@ -29,7 +31,11 @@ install_notes: >-
 brick_risk: true
 tags: [ambient, generative, performance, synth-engine, emulator]
 versions:
+- version: drift @ bf3a4f7
+  date: 2026-10-18
+  url: https://github.com/thebrodi/fm1-haave/commit/bf3a4f73d4366dc3d039f5ecaff1fe726a07f06e
+  notes: No tagged releases; this is the latest commit on the default branch.
 - version: drift @ fc1c499
   date: 2026-10-17
-  url: https://github.com/thebrodi/fm1-drift/commit/fc1c499519caff500dad468502f4cbe2ded253c7
-  notes: No tagged releases; this is the latest commit on the default branch.
+  url: https://github.com/thebrodi/fm1-haave/commit/fc1c499519caff500dad468502f4cbe2ded253c7
+  notes: Latest commit while the project was still called Drift.

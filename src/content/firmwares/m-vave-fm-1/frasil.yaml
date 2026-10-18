@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: FRASIL
+summary: >-
+  Ambient drone and texture instrument: tapped keys latch layered drones that swell with pressure, into a
+  freezable reverb with tails up to a minute, with an arpeggiated bell voice on top.
+description: >-
+  Up to eight drone voices have three layers each: detuned saws, drifting additive partials and tuned noise. They
+  feed an eight-line reverb with shimmer and a freeze control. A second voice, GLINT, plays two-operator FM bells
+  by hand or through an arpeggiator that follows MIDI clock. There are twelve scales, chords built in the scale,
+  sixteen scene slots with eight factory scenes, and MIDI over USB and TRS that sends incoming notes through the
+  harmony. The README says it has no sequencer and composes nothing, and calls the status beta, saying the way
+  scenes are saved may change. It is built on fm1-base and felucca-bsp. There is no release yet and the
+  project's Pages site returned 404 when checked, so it has to be built from source.
+status: active
+authors:
+- name: Styves Goupil
+  url: https://github.com/styvesgoupil
+source: https://github.com/styvesgoupil/frasil
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  Every source file carries an MPL-2.0 header (LICENSING.md). The FRASIL name and logo are copyright of the
+  author and may be redistributed unchanged with the source and packages; the screen fonts are SIL OFL 1.1.
+distribution: source-only
+install_notes: >-
+  No package is published yet. Build it with ./build.sh in a recursive clone (Docker and the JieLi toolchain
+  and AC79 SDK are needed) and install the package with base/tools/fm1_install.py. The README plans a listing on
+  the FM-1 Firmware Hub for web installs. To go back, install M-VAVE's V15; if the unit does not start, hold
+  OCT- while switching it on for update mode.
+brick_risk: true
+tags: [ambient, synth-engine, fx, reverb, chords, scales, midi, performance]
+image:
+  url: https://raw.githubusercontent.com/styvesgoupil/frasil/main/docs/img/screen-play.png
+  alt: "FRASIL play page: three drone voices as thin streams of blue specks, with CHOIR, PARTIALS and BREATH level bars and TIMBRE, SPACE and MOTION values below"
+  credit: Styves Goupil
+  source_url: https://github.com/styvesgoupil/frasil
+  first_party: true
+versions:
+- version: main @ 5b613be
+  date: 2026-10-18
+  url: https://github.com/styvesgoupil/frasil/commit/5b613be
+  notes: No tagged releases; this is the latest commit. The changelog lists 0.1 as not yet released.

@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: Golana DZ Edition
+summary: >-
+  Fork of Golana that extends its step sequencer to 64 steps, adds a song mode that plays consecutive programs
+  and sends the sequence as USB MIDI notes.
+description: >-
+  Keeps Golana's two-oscillator synth and interface and adds 64 steps per program across 32 programs, a song mode
+  that plays a chosen range of programs once or in a loop, and USB MIDI out. The extra steps and song settings are
+  stored in a separate flash record, so the first 16 steps stay in Golana's format; the README warns that other
+  firmwares do not read the extension and advises a backup before switching. Each program holds one note per step,
+  and sound and pattern are saved together. The author reports testing on a real FM-1 for v0.1.0-beta. The
+  feature-branch pre-release v0.2.2-beta1 adds pattern banks, a song arranger, SysEx MIDI upload and flash
+  autosave changes, and its release notes say hardware tests were still running. dzwerg/miniBRUTE is currently a
+  copy of that feature branch, with the same commits, and has no changes of its own yet.
+status: active
+authors:
+- name: dzwerg
+  url: https://github.com/dzwerg
+source: https://github.com/dzwerg/Golana-DZ
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and inherited from Felucca (LICENSING.md); ported DSP and fonts keep their own licences
+  (LICENSES/). The README credits Gadlele's Golana as the base.
+distribution: download
+install_notes: >-
+  Download the .fwsc from the releases page and install it with tools/fm1_install.py (Python 3 with mido and
+  python-rtmidi). The README warns against Golana's own web installer, which installs the original Golana, and
+  recommends a backup first. v0.2.2-beta1 is on the feature/dz-seq-song-banks branch, and its package is still
+  named felucca-0.2.2-beta1.fwsc.
+brick_risk: true
+tags: [sequencer, synth-engine, midi, usb-midi]
+versions:
+- version: 0.2.2-beta1
+  date: 2026-10-18
+  url: https://github.com/dzwerg/Golana-DZ/releases/tag/v0.2.2-beta1
+  notes: Pre-release from the feature/dz-seq-song-banks branch.
+- version: 0.1.0-beta
+  date: 2026-10-17
+  url: https://github.com/dzwerg/Golana-DZ/releases/tag/v0.1.0-beta
+  notes: Pre-release from the main branch; first public beta.

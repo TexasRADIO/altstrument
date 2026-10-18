@@ -1,0 +1,51 @@
+device: m-vave-fm-1
+name: TransitFM1
+summary: >-
+  Silent bridge firmware to stop at between two custom firmwares. It reports itself to installers as the official
+  V15 and writes the next firmware with its own loader, first sector last, so an interrupted write can be resumed.
+description: >-
+  Makes no sound and stores nothing; its screen says it is ready for the next firmware. It answers the update
+  handshake as FM-1_015 and appears over USB as FM-1, so installers that refuse other custom firmwares treat it as
+  stock. It carries ChoralRoot's boot stub, which checks the firmware before starting it and drops into update mode
+  after a cut-off write, and its own update loader stages the next package whatever loader that package contains. The
+  README gives host-measured numbers for power cuts at every flash step on several hops, and lists the remaining
+  unprotected points. It refuses packages larger than the area it can write, such as Baud Girl's, and its
+  installer will not run from Bubba Machine. Release 0.1.2 was withdrawn after it let Baud Girl's installer write over
+  it and left a unit dark. The README reports 0.1.3 on a real unit through a chain of seven firmware hops.
+status: active
+authors:
+- name: Quixotic7
+  url: https://github.com/Quixotic7
+source: https://github.com/Quixotic7/TransitFM1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0-only. A package also holds three unmodified JieLi AC79 SDK files (Apache-2.0) and
+  the Terminus font (SIL OFL 1.1), and the releases ship their licence texts.
+homepage: https://quixotic7.github.io/TransitFM1/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with a transit-X.Y.fwsc. The installer checks
+  the package's SHA-256 and the running firmware first. Going from the official V15 into it is the riskiest step and
+  its own safety notes say a failed first boot can end in the chip's USB boot, which MvaveFM1Unbricker or the FM-1
+  Transporter recover from. For stock, you install M-VAVE's FM-1.fwsc yourself; the package is TransitFM1's own build
+  and is not M-VAVE's.
+brick_risk: true
+tags: [platform, flasher, loader, usb-midi, research]
+versions:
+- version: 0.1.3
+  date: 2026-10-18
+  url: https://github.com/Quixotic7/TransitFM1/releases/tag/v0.1.3
+  notes: Replaces 0.1.2; refuses firmware larger than the app area it can write.
+- version: 0.1.2
+  date: 2026-10-18
+  url: https://github.com/Quixotic7/TransitFM1/releases/tag/v0.1.2
+  notes: Withdrawn; it let Baud Girl's installer write over it and left a unit dark.
+- version: 0.1.1
+  date: 2026-10-18
+  url: https://github.com/Quixotic7/TransitFM1/releases/tag/v0.1.1
+  notes: Fixes a crash on first start after the official V15 and installs stalling while a DAW sent MIDI.
+- version: '0.1'
+  date: 2026-10-18
+  url: https://github.com/Quixotic7/TransitFM1/releases/tag/v0.1
+  notes: First release; replaced by 0.1.1.

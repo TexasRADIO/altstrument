@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: OKTOWAVE
+summary: >-
+  Felucca 1.6.1 with one added engine, WAVELET, a fixed-point port of the subtractive engine of the author's own
+  Wavelet Synthesizer plug-in, with 69 of its presets. The author says 0.1 has not been run on an FM-1.
+description: >-
+  WAVELET splits one cycle of a source wave with a discrete wavelet transform (Haar, Daubechies 2 to 20, a
+  symlet and a coiflet) into nine bands of atoms. The smallest atoms can be dropped with a sparsity setting, and
+  the bands play through a scale filter (low-pass, high-pass or band-pass with slope and resonance) and a
+  window that lets the dry cycle through. It is the fourteenth engine alongside Felucca's, and the rest of
+  Felucca (four tracks, sequencer, arpeggiator, effects, USB audio and MIDI) is unchanged apart from small edits
+  for the engine table, a per-block build scheduler, package names and the site. The same author's Wavelet
+  Synthesizer is a separate web app and VST3/VST2 plug-in under GPL-3.0, which is not firmware and is not
+  catalogued. The README says the build was tested only on computers: Felucca's host suite, the engine's own
+  test against a floating-point reference, and the browser build. The project site has an installer, a Try
+  page and a manual.
+status: active
+authors:
+- name: Pierre Arnaud GUYOT (PierreArnaudGUYOT)
+  url: https://github.com/PierreArnaudGUYOT
+source: https://github.com/PierreArnaudGUYOT/FM1-Oktowave-Firmware
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Felucca's licence (LICENSING.md); the WAVELET engine files are by the author under GPL-3.0-only. Felucca's
+  ANALOG, LOFI, TRIO, WHEEL and NOISE engines are MIT, ported DSP is MIT or Apache-2.0, the sample sets are CC0
+  1.0 and the fonts SIL OFL 1.1; the firmware as a whole is GPL-3.0-only.
+homepage: https://pierrearnaudguyot.github.io/FM1-Oktowave-Firmware/
+distribution: browser-installer
+install_notes: >-
+  Web installer on the project site (Chrome or Edge, USB), which serves the project's own build and, for the
+  return to official firmware, asks you to select M-VAVE's FM-1.fwsc that you downloaded from M-VAVE; the site
+  does not host it. The README advises a backup first and says 0.1 is untested on hardware.
+brick_risk: true
+tags: [synth-engine, wavetable, oscillator, filter, sequencer, emulator]
+versions:
+- version: main @ 85d45e6
+  date: 2026-10-18
+  url: https://github.com/PierreArnaudGUYOT/FM1-Oktowave-Firmware/commit/85d45e680d9b138c9971f518f6409515e12b5d3e
+  notes: No tagged releases; this is the latest commit. The README calls the version 0.1.
