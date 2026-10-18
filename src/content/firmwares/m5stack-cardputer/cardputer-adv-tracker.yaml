@@ -1,0 +1,29 @@
+device: m5stack-cardputer
+name: Cardputer Tracker
+summary: >-
+  Pattern-based tracker for the Cardputer ADV with wavetable synthesis and state-variable filters, aimed at acid
+  house.
+description: >-
+  A real-time tracker, synthesizer and drum machine that the README describes as a portable acid-house production
+  tool, with wavetable synthesis, state-variable filters and pattern-based sequencing. It is written in Arduino
+  C++ and was tested only on the Cardputer ADV; the README says compatibility with other M5Stack devices is
+  unknown. The repository's only tagged release is from February 2026, while commits continue into October.
+status: active
+authors:
+  - name: Raphaël Côté
+    url: https://github.com/qwertyuu
+source: https://github.com/qwertyuu/Cardputer-Adv-Tracker
+source_status: open
+license: MIT
+license_notes: The LICENSE file names "Cardputer-Adv-Tracker Contributors" as the copyright holder.
+distribution: download
+install_notes: >-
+  Download the .bin from the latest release and flash it to the Cardputer ADV with a flashing tool of your choice, or
+  build the CardputerTracker sketch with the Arduino IDE or CLI, which needs the M5Stack board package and the
+  M5Cardputer library.
+brick_risk: false
+tags: [tracker, synth-engine, sequencer, wavetable, filter, open-source]
+versions:
+  - version: v0.0.6
+    date: 2026-02-07
+    url: https://github.com/qwertyuu/Cardputer-Adv-Tracker/releases/tag/v0.0.6

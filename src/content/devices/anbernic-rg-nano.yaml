@@ -1,0 +1,19 @@
+name: Anbernic RG Nano
+manufacturer: Anbernic
+category: handheld
+tagline: Keychain-sized Linux handheld running FunKey-OS, with an experimental tracker fork
+description: >-
+  The RG Nano is a very small Anbernic handheld with a 1.54 inch 240 by 240 screen, a D-pad and face and
+  shoulder buttons. It is built on an Allwinner V3s and runs a FunKey-OS based Linux, and is sold for retro
+  emulation.
+platform: Allwinner V3s (Cortex-A7)
+links:
+  manufacturer: https://anbernic.com/
+  community:
+    - label: FunKey project
+      url: https://www.funkey-project.com/
+notes: >-
+  Apps are SDL1 builds packaged as OPK files and run from the stock menu. The only music software found is one
+  experimental fork of Little Piggy Tracker; its audio input feature needs a modified FunKey-OS with USB audio
+  support. No free photo of the device was found on Wikimedia Commons, so there is no image.
+related: [anbernic-rg35xx, portmaster-compatible-handhelds]

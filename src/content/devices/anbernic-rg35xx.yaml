@@ -1,0 +1,40 @@
+name: Anbernic RG35XX series
+manufacturer: Anbernic
+category: handheld
+tagline: Linux retro handhelds with 640 by 480 screens that run trackers as SD card apps
+description: >-
+  The RG35XX series is Anbernic's line of pocket Linux game handhelds with a D-pad, face and shoulder buttons and
+  a 640 by 480 screen. The original RG35XX uses an Actions ATM7039S, and the later RG35XX Plus, H, SP and 2024
+  models, together with the RG28XX and RG40XX, use an Allwinner H700. They are sold as emulation machines, and
+  their SD card based apps menus and community firmwares also host homebrew music software.
+
+  This entry groups the family because the music projects name it as one target: Little Piggy Tracker ships
+  separate builds for the original unit and for the Plus models, and ChipNomad ships a GarlicOS build for the
+  pre-2024 unit and a PortMaster build for the rest.
+platform: Actions ATM7039S (original); Allwinner H700 (Plus, H, SP, 2024)
+stock_firmware: RG35XXPLUS-EN-240712
+links:
+  manufacturer: https://anbernic.com/products/rg35xx
+  community:
+    - label: Knulli
+      url: https://knulli.org/
+    - label: muOS
+      url: https://muos.dev/
+notes: >-
+  Music software runs as an app on top of the stock OS or a community firmware (GarlicOS on the original
+  RG35XX, muOS or Knulli on the H700 models); you copy files to the SD card, and nothing flashes the handheld
+  itself. Projects that cover many handhelds through PortMaster are listed under PortMaster-compatible handhelds
+  instead. The stock firmware version is the 64-bit build that Little Piggy Tracker's Plus build asks for. The
+  photo shows an RG40XX H, a sibling model of the same H700 generation, because no free photo of an RG35XX is
+  available.
+related: [miyoo-miyoo-mini, portmaster-compatible-handhelds, anbernic-rg-nano]
+image:
+  src: /images/devices/anbernic-rg35xx.jpg
+  style: photo
+  alt: Black Anbernic RG40XX H handheld lying on a wooden table, with a D-pad and two analogue sticks beside its screen (sibling of the RG35XX series)
+  width: 1200
+  height: 900
+  credit: "Photo: TomasVial, via Wikimedia Commons"
+  license: CC0-1.0
+  source_url: https://commons.wikimedia.org/wiki/File:Anbernic_RG40XX.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/6/6b/Anbernic_RG40XX.jpg

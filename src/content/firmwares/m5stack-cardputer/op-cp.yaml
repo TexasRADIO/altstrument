@@ -1,0 +1,36 @@
+device: m5stack-cardputer
+name: OP-CP
+summary: >-
+  Pocket step sequencer for the Cardputer ADV with four tracks of sixteen steps, a PCM synth and a piano on the
+  keyboard, in UIFlow2 MicroPython.
+description: >-
+  A four-track, sixteen-step sequencer with a PCM synth and a piano played on the middle two keyboard rows, with
+  roll, ring and bars views. It is MicroPython for M5Stack's UIFlow2 firmware, so it needs UIFlow2 on the
+  Cardputer rather than replacing it. The README presents it as the worked example for the author's vibe-uiflow
+  method for building small devices with an AI coding agent; its Makefile compiles the modules, uploads them and
+  runs a self-test on the board.
+status: active
+authors:
+  - name: ToyWorks
+    url: https://github.com/ToyWorks
+source: https://github.com/ToyWorks/op-cp
+source_status: open
+license: MIT
+distribution: source-only
+requires_stock: UIFlow2
+install_notes: >-
+  Install UIFlow2 on the Cardputer ADV with M5Burner, then run make venv, make check and make deploy from a
+  computer; deploy installs it as main.py so that it starts on power-up.
+brick_risk: false
+tags: [sequencer, synth-engine, python, open-source]
+image:
+  url: https://raw.githubusercontent.com/ToyWorks/op-cp/main/docs/photo/op-cp-on-the-cardputer.jpg
+  alt: White Cardputer ADV showing the OP-CP sequencer at 128 BPM with a small face on its screen
+  credit: ToyWorks
+  source_url: https://github.com/ToyWorks/op-cp
+  first_party: true
+versions:
+  - version: main @ 28a188d
+    date: 2026-08-29
+    url: https://github.com/ToyWorks/op-cp/commit/28a188dbb72b5a5d340abb47af166316415bdfc6
+    notes: No tagged releases; this is the latest commit.

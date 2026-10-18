@@ -1,0 +1,45 @@
+device: miyoo-miyoo-mini
+name: ChipNomad
+summary: >-
+  AY-chip tracker with an LSDj-style interface, with a Miyoo Ports build for the Miyoo Mini.
+description: >-
+  ChipNomad is a chiptune tracker with an LSDj- and M8-style interface that emulates AY sound chips with the Ayumi
+  emulator, adds an AY Plus synth-like instrument and an AY sample instrument, a modulation system and VGM export.
+  Its README says the primary targets are Linux-based handheld game consoles. The author states that AI coding
+  tools helped between April 26, 2025 and September 15, 2026 and that they will not use them again. The Miyoo Mini
+  build arrived in v1.0.0 as the MiyooPorts zip.
+status: active
+authors:
+  - name: Roman Petrov
+    url: https://github.com/Megus
+source: https://github.com/Megus/chipnomad-tracker
+source_status: open
+license: MIT
+homepage: https://chipnomad.org/
+distribution: download
+install_notes: >-
+  Download the MiyooPorts zip from the GitHub release. The manual's installation page has no Miyoo steps and does
+  not cover MiyooCFW or OnionOS, so follow the usual routine for apps on your Miyoo firmware.
+brick_risk: false
+tags: [tracker, chiptune, sequencer, open-source]
+video:
+  url: https://youtu.be/hzf-BgJmqYU
+  title: ChipNomad — a true chiptune tracker for handheld consoles
+  credit: ChipNomad
+  first_party: true
+  found_via: https://github.com/Megus/chipnomad-tracker#readme
+versions:
+  - version: v1.0.5
+    date: 2026-08-29
+    url: https://github.com/Megus/chipnomad-tracker/releases/tag/v1.0.5
+  - version: v1.0.4
+    date: 2026-07-13
+    url: https://github.com/Megus/chipnomad-tracker/releases/tag/v1.0.4
+    notes: Adds a modulation system with ADSR, AHD and LFO sources, the AY Plus and AY Sample instruments and VGM export.
+  - version: v1.0.0
+    date: 2026-04-25
+    url: https://github.com/Megus/chipnomad-tracker/releases/tag/v1.0.0
+    notes: Adds the Android and Miyoo Mini (Miyoo Ports) builds.
+  - version: v0.1.0b
+    date: 2026-02-02
+    url: https://github.com/Megus/chipnomad-tracker/releases/tag/v0.1.0b

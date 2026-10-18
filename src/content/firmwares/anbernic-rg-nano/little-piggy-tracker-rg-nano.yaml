@@ -1,0 +1,41 @@
+device: anbernic-rg-nano
+name: Little Piggy Tracker RG Nano
+summary: >-
+  Experimental RG Nano fork of Little Piggy Tracker that adds audio input sampling over USB-C and M8-style synth
+  instruments.
+description: >-
+  A fork of djdiskmachine's Little Piggy Tracker, itself the maintained successor of Marc Nostromo's
+  LittleGPTracker, built for the RG Nano's FunKey-OS and its 240 by 240 screen. It adds a record dialog that
+  captures up to 60 seconds of 44.1 kHz stereo audio from a USB-C audio adapter into an instrument, interface
+  changes for the small screen such as a split-row song view and channel meters, and synth instrument types
+  (FM4, Hypersynth and Wavsynth engines whose behaviour follows the Dirtywave M8 manual). The repository has no README.md; its
+  documentation is a set of loose Markdown files. Audio input needs a modified FunKey-OS with USB audio support,
+  and the build has no hardware MIDI.
+status: active
+authors:
+  - name: Inkmortal
+    url: https://github.com/Inkmortal
+source: https://github.com/Inkmortal/LittleGPTracker-RG-Nano
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file applies GPLv3 ("version 3", no "or later" grant) to the fork's new work and keeps the original
+  BSD-3-Clause terms of LittleGPTracker. NOTICE.md also lists FM synthesis code adapted from Google's Music
+  Synthesizer for Android (Apache-2.0).
+distribution: download
+install_notes: >-
+  Download the .opk (or the .zip) from the latest release and install it on the RG Nano the way you install other
+  OPK apps. Recording from the USB-C port needs a UAC-compliant USB audio adapter and the modified FunKey-OS build
+  that the repository's documentation links; Apple dongles do not work.
+brick_risk: false
+tags: [tracker, sampler, sequencer, synth-engine, open-source]
+versions:
+  - version: rgnano-52608ab
+    date: 2026-09-25
+    url: https://github.com/Inkmortal/LittleGPTracker-RG-Nano/releases/tag/rgnano-52608ab
+  - version: rgnano-bfbc49b
+    date: 2026-09-25
+    url: https://github.com/Inkmortal/LittleGPTracker-RG-Nano/releases/tag/rgnano-bfbc49b
+  - version: rgnano-83d0579
+    date: 2026-09-24
+    url: https://github.com/Inkmortal/LittleGPTracker-RG-Nano/releases/tag/rgnano-83d0579

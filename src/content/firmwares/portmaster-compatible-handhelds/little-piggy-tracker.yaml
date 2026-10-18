@@ -1,0 +1,47 @@
+device: portmaster-compatible-handhelds
+name: Little Piggy Tracker
+summary: >-
+  PortMaster port of Little Piggy Tracker, the sample tracker with an LSDj-style interface, for aarch64 Linux
+  handhelds.
+description: >-
+  Little Piggy Tracker (formerly LittleGPTracker) is a sample-based tracker with eight channels, 8 and 16 bit WAV
+  samples and a song, chain and phrase workflow. It is the maintained successor of Marc Nostromo's original
+  LittleGPTracker (BSD-3-Clause, no commits since 2020), whose user interface follows Little Sound DJ. The port is
+  packaged by Vitalii Ohol for aarch64 handhelds running PortMaster and lags the main project: it tracks 1.5.0,
+  while 1.6.0 prereleases exist. The project's feature table says PortMaster builds may have MIDI depending on the
+  system, lists no SoundFont support for them, and says the PortMaster build is no longer maintained in the main
+  repository.
+status: active
+authors:
+  - name: Vitalii Ohol
+    url: https://github.com/ohol-vitaliy
+  - name: djdiskmachine
+    url: https://github.com/djdiskmachine
+  - name: Marc Nostromo
+    url: https://github.com/Mdashdotdashn
+source: https://github.com/PortsMaster/PortMaster-New/tree/main/ports/littlegptracker
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The program is Little Piggy Tracker, whose LICENSE applies GPLv3 ("version 3", no "or later") over the original
+  BSD-3-Clause terms. The port folder sits in the MIT-licensed PortMaster-New repository and holds a prebuilt
+  binary, a launcher script and the port metadata; it has no license file of its own. A build Dockerfile is kept
+  in ohol-vitaliy/PortMaster-LittleGPTracker, which has no license.
+homepage: https://portmaster.games/detail.html?name=littlegptracker
+distribution: download
+install_notes: >-
+  Install it from PortMaster's port list on the handheld; the app files are included in the port. Put samples and
+  projects where the port's README says. The README lists the controls: the shoulder button plus the D-pad moves
+  between screens. To rebuild the binary, the repository's Dockerfile builds a chosen Little Piggy Tracker tag for
+  aarch64.
+brick_risk: false
+tags: [tracker, sampler, sequencer, open-source]
+versions:
+  - version: 1.5.0 (PortMaster port)
+    date: 2025-12-20
+    url: https://github.com/PortsMaster/PortMaster-New/commit/12c0d48272db87fefe95b35cdce5dabb1444425b
+    notes: Port update to Little Piggy Tracker 1.5.0.
+  - version: 1.5.0-bacon1 (PortMaster port)
+    date: 2025-10-07
+    url: https://github.com/PortsMaster/PortMaster-New/commit/dc330553e387705e760a9dc0d8c1d4e86fd89398
+    notes: Binary updated to 1.5.0-bacon1.

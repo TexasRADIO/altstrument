@@ -1,0 +1,39 @@
+device: m5stack-cardputer
+name: MiniAcid
+summary: >-
+  Acid groovebox for the Cardputer with two TB-303-style voices, a TR-808-style drum section and a pattern and song
+  sequencer.
+description: >-
+  MiniAcid runs two 303-style bass voices with filter and envelope controls and an optional tempo-synced delay,
+  plus eight drum lanes with 808, 909 and 606 style kits and a drum bus with distortion, compression, sustain and
+  reverb. Both parts have 16-step sequencers with randomize actions and live mutes, and patterns can be arranged
+  into songs, with per-pattern automation of the drum kit and effects. The README targets the Cardputer ADV, and
+  a web version is hosted on the author's site. GroovePuter is a fork that extends it.
+status: active
+authors:
+  - name: Hector Urtubia
+    url: https://github.com/urtubia
+source: https://github.com/urtubia/miniacid
+source_status: open
+license: MIT
+homepage: https://miniacid.mrbook.org
+distribution: download
+install_notes: >-
+  Each release has a flashable esp32fw .bin image. The README's route is to flash the miniacid.ino sketch to a
+  Cardputer ADV from the Arduino IDE; the keyboard shortcuts are in the repository's MANUAL.md.
+brick_risk: false
+tags: [groovebox, sequencer, synth-engine, drums, open-source]
+versions:
+  - version: v0.0.8
+    date: 2026-02-10
+    url: https://github.com/urtubia/miniacid/releases/tag/v0.0.8
+    notes: Adds 909 and 606 drum kits, drum bus effects and per-pattern drum automation.
+  - version: v0.0.7
+    date: 2026-01-28
+    url: https://github.com/urtubia/miniacid/releases/tag/v0.0.7
+  - version: v0.0.5
+    date: 2026-01-04
+    url: https://github.com/urtubia/miniacid/releases/tag/v0.0.5
+  - version: v0.0.4
+    date: 2025-12-22
+    url: https://github.com/urtubia/miniacid/releases/tag/v0.0.4

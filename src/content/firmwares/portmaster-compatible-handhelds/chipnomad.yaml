@@ -1,0 +1,49 @@
+device: portmaster-compatible-handhelds
+name: ChipNomad
+summary: >-
+  AY-chip tracker with an LSDj-style interface, packaged as a PortMaster zip for Linux handhelds.
+description: >-
+  ChipNomad is a chiptune tracker with an LSDj- and M8-style interface that emulates AY sound chips with the Ayumi
+  emulator, adds an AY Plus synth-like instrument and an AY sample instrument, a modulation system and VGM export.
+  Its README says the primary targets are Linux-based handheld game consoles. The author states that AI coding
+  tools helped between April 26, 2025 and September 15, 2026 and that they will not use them again. The PortMaster
+  zip is not in the PortMaster-New repository, so it is installed by hand through PortMaster's autoinstall folder.
+  The README names the TrimUI Brick and Anbernic RG35xx explicitly and points to PortMaster's device list for the
+  rest, and the changelog's v1.0.5 section lists a fix for the PortMaster build on a TrimUI Brick running NextUI.
+status: active
+authors:
+  - name: Roman Petrov
+    url: https://github.com/Megus
+source: https://github.com/Megus/chipnomad-tracker
+source_status: open
+license: MIT
+homepage: https://chipnomad.org/
+distribution: download
+install_notes: >-
+  Copy the PortMaster zip from the GitHub release into PortMaster's autoinstall folder and run PortMaster:
+  /roms/ports/PortMaster/autoinstall on AmberELEC, ROCKNIX, uOS and JELOS; /mmc/MUOS/PortMaster/autoinstall on
+  muOS; /roms/tools/PortMaster/autoinstall on ArkOS; /userdata/system/.local/share/PortMaster/autoinstall on
+  Knulli. If autoinstall fails, the manual says to extract into the ports folder, which may break the port.
+brick_risk: false
+tags: [tracker, chiptune, sequencer, open-source]
+video:
+  url: https://youtu.be/hzf-BgJmqYU
+  title: ChipNomad — a true chiptune tracker for handheld consoles
+  credit: ChipNomad
+  first_party: true
+  found_via: https://github.com/Megus/chipnomad-tracker#readme
+versions:
+  - version: v1.0.5
+    date: 2026-08-29
+    url: https://github.com/Megus/chipnomad-tracker/releases/tag/v1.0.5
+  - version: v1.0.4
+    date: 2026-07-13
+    url: https://github.com/Megus/chipnomad-tracker/releases/tag/v1.0.4
+    notes: Adds a modulation system with ADSR, AHD and LFO sources, the AY Plus and AY Sample instruments and VGM export.
+  - version: v1.0.0
+    date: 2026-04-25
+    url: https://github.com/Megus/chipnomad-tracker/releases/tag/v1.0.0
+    notes: Adds the Android and Miyoo Mini (Miyoo Ports) builds.
+  - version: v0.1.0b
+    date: 2026-02-02
+    url: https://github.com/Megus/chipnomad-tracker/releases/tag/v0.1.0b

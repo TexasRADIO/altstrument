@@ -1,0 +1,35 @@
+name: M5Stack Cardputer
+manufacturer: M5Stack
+category: handheld
+tagline: Credit-card-sized ESP32-S3 pocket computer with a 56-key keyboard, running synth and tracker firmware
+description: >-
+  The Cardputer is a small M5Stack computer built on the StampS3 ESP32-S3 module, with a 1.14 inch 240 by 135
+  screen, a 56-key keyboard, a microSD slot, a microphone and a speaker. The Cardputer-ADV, released in 2025, adds
+  a 3.5 mm headphone output with its own audio codec and an IMU. People write music firmware for it
+  in Arduino C++, MicroPython and PlatformIO, and it is the target of a growing set of grooveboxes, synths,
+  drum machines and trackers.
+platform: ESP32-S3 (StampS3, StampS3A on the ADV)
+links:
+  manufacturer: https://docs.m5stack.com/en/core/Cardputer-Adv
+  community:
+    - label: M5Stack shop page (Cardputer-ADV)
+      url: https://shop.m5stack.com/products/m5stack-cardputer-adv-version-esp32-s3
+    - label: Launcher (ESP32 firmware loader)
+      url: https://github.com/bmorcelli/Launcher
+notes: >-
+  Firmware is a flash image that you load with M5Burner, esptool or the community Launcher, which installs a .bin
+  from the SD card; the original M5Stack firmware is replaced by the app. Most projects target the ADV, because
+  the original Cardputer has only a small speaker and no headphone output, so check each entry before flashing. The
+  photo is M5Stack's own product image of the Cardputer-ADV, used as the only available picture; no free photo
+  exists on Wikimedia Commons.
+related: []
+image:
+  src: /images/devices/m5stack-cardputer.jpg
+  style: photo
+  alt: M5Stack Cardputer-ADV, a grey keyboard computer with a small colour screen and a StampS3A module, shown at an angle
+  width: 1200
+  height: 1200
+  credit: M5Stack
+  license: manufacturer product image
+  source_url: https://shop.m5stack.com/products/m5stack-cardputer-adv-version-esp32-s3
+  original_url: https://shop.m5stack.com/cdn/shop/files/1_9b624809-c4b1-4031-b149-54709e72bd53_1200x1200.webp?v=1756977500

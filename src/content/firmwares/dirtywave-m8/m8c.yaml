@@ -1,0 +1,42 @@
+device: dirtywave-m8
+name: m8c
+kind: tool
+summary: >-
+  Cross-platform client that mirrors the M8's screen, takes keyboard or gamepad input and routes its audio to a
+  computer, for the M8 and M8 Headless.
+description: >-
+  A C and SDL program that talks to the M8 over USB, or to a Teensy 4.1 running the M8 Headless firmware, and shows
+  its display, sends key presses from a keyboard or gamepad and passes the USB audio to the host. Release builds
+  exist for Windows, macOS and Linux (as an AppImage). It is the client that Dirtywave's M8 Headless setup guide
+  points users to. The community also builds it for retro Linux handhelds: Anbernic RG35XX and RG40XX units and a
+  TrimUI Brick on Knulli, RG351 units on ArkOS and an Android port exist as separate projects, so a handheld can
+  serve as the screen and keys of a headless M8. Those builds are not catalogued here.
+status: active
+authors:
+  - name: Jonne Kokkonen
+    url: https://github.com/laamaa
+source: https://github.com/laamaa/m8c
+source_status: open
+license: MIT
+license_notes: Also bundles a SLIP command routine by Marcin Borowicz (slip.c), under its own MIT notice in the same LICENSE file.
+homepage: https://github.com/laamaa/m8c
+distribution: download
+install_notes: >-
+  Download the build for your system from the GitHub releases page, connect the M8 or the Teensy with the headless
+  firmware by USB and run it; it detects the device. On Linux, make the AppImage executable first. Packages also
+  exist for NixOS. Windows may show an unrecognized-app warning on first run.
+brick_risk: false
+tags: [ui, usb-audio, open-source]
+versions:
+  - version: v2.2.3
+    date: 2026-01-14
+    url: https://github.com/laamaa/m8c/releases/tag/v2.2.3
+  - version: v2.2.2
+    date: 2025-12-26
+    url: https://github.com/laamaa/m8c/releases/tag/v2.2.2
+  - version: v2.2.1
+    date: 2025-12-20
+    url: https://github.com/laamaa/m8c/releases/tag/v2.2.1
+  - version: v2.2.0
+    date: 2025-09-25
+    url: https://github.com/laamaa/m8c/releases/tag/v2.2.0

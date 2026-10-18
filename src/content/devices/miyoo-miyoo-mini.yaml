@@ -1,0 +1,22 @@
+name: Miyoo Mini
+manufacturer: Miyoo
+category: handheld
+tagline: Pocket-sized Linux handheld with a community firmware scene and tracker ports
+description: >-
+  The Miyoo Mini is a small horizontal Linux handheld with a 2.8 inch 640 by 480 screen, a D-pad, four face
+  buttons and shoulder buttons, built around a SigmaStar SSD202D system on chip. The Mini Plus is the same
+  platform with a larger battery and Wi-Fi. It is sold for emulation, and its community firmwares have a store
+  of homebrew apps, among them music trackers.
+platform: SigmaStar SSD202D
+links:
+  community:
+    - label: OnionOS
+      url: https://onionui.github.io/
+    - label: Retro Game Corps Miyoo Mini guide
+      url: https://retrogamecorps.com/2022/05/15/miyoo-mini-v2-guide/
+notes: >-
+  Apps are copied to the SD card and launched from the stock menu or a community firmware such as OnionOS; tracker
+  builds here are dedicated ARM builds for this model (Little Piggy Tracker's MIYOO build, ChipNomad's
+  MiyooPorts build). Little Piggy Tracker's feature table lists no MIDI on this device. No free photo of the
+  device was found on Wikimedia Commons, so there is no image.
+related: [anbernic-rg35xx, portmaster-compatible-handhelds]

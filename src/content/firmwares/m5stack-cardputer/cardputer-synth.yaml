@@ -1,0 +1,29 @@
+device: m5stack-cardputer
+name: cardputer-synth
+summary: >-
+  Six-voice subtractive synth for the Cardputer ADV with a resonant filter, modulation matrix, mic sampler, tilt
+  expression and USB and BLE MIDI.
+description: >-
+  A PlatformIO firmware with six voices, sine, saw, square and triangle waves, per-voice state-variable filters, two
+  envelopes and two LFOs routed through a modulation matrix, a one-second microphone sampler with tape and grain
+  playback, an arpeggiator and MIDI out over USB and BLE with the IMU's tilt mapped to velocity, vibrato and pitch
+  bend. The README calls it a work-in-progress hobby project built in phases. There are no releases, so it is
+  built from source.
+status: active
+authors:
+  - name: Chong Jia Zhen
+    url: https://github.com/chongjiazhen
+source: https://github.com/chongjiazhen/cardputer-synth
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Build and upload with PlatformIO from the repository; the README's Build section has the steps. The sampler
+  needs the microphone and the tilt features need the IMU.
+brick_risk: false
+tags: [synth, synth-engine, midi, usb-midi, filter, lfo, open-source]
+versions:
+  - version: main @ a999a65
+    date: 2026-07-20
+    url: https://github.com/chongjiazhen/cardputer-synth/commit/a999a6514c595d81c41e923e68886a5884dd206b
+    notes: No tagged releases; this is the latest commit.

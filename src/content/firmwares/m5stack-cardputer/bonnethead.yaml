@@ -1,0 +1,35 @@
+device: m5stack-cardputer
+name: Bonnethead
+summary: >-
+  Lo-fi drum machine for the Cardputer with eight tracks of 16 steps, 36 patterns, swing, SD-card kits and a
+  key-drumming mode.
+description: >-
+  The repository is named cardputer_drums and its README calls the program Bonnethead. It plays 16 kHz samples on
+  eight tracks of 16 steps, with 36 patterns, a pattern sequencer with fills, swing, per-step velocity and
+  sub-tick timing, per-channel filters, retrigger and reverse effects, a live key-drumming mode, sample kits from
+  the SD card and rendering to the SD card. It is written for the Cardputer, linking the original kit, and the README says it is available
+  on M5Burner. The last commit is from February 2025.
+status: maintained
+authors:
+  - name: johnhw
+    url: https://github.com/johnhw
+source: https://github.com/johnhw/cardputer_drums
+source_status: open
+license: MIT
+distribution: download
+install_notes: >-
+  The README says Bonnethead is available on M5Burner. To build it yourself, open cardputer_drums.ino in the
+  Arduino IDE; a build_m5burner.bat script is included. Drum kits live in the kits folder and on the SD card.
+brick_risk: false
+tags: [drum-machine, sequencer, drums, sampler, open-source]
+video:
+  url: https://www.youtube.com/watch?v=r_0vd7Hbe3E
+  title: M5Cardputer drum machine
+  credit: John Williamson
+  first_party: true
+  found_via: https://github.com/johnhw/cardputer_drums#readme
+versions:
+  - version: main @ ebd9a73
+    date: 2025-02-25
+    url: https://github.com/johnhw/cardputer_drums/commit/ebd9a736112841ae3b3ab1f17dddb7ee41d0eef9
+    notes: No tagged releases; this is the latest commit.

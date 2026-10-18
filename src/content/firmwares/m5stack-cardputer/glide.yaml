@@ -1,0 +1,53 @@
+device: m5stack-cardputer
+name: GLIDE
+summary: >-
+  Playable Cardputer synth with fretless-style glide between notes, chord mode, a loop pedal and generated sounds,
+  under a noncommercial licence.
+description: >-
+  GLIDE tunes the key rows like strings and glides between pitches. A generative engine rolls sounds that commit to
+  a character first, such as a pluck, bell, pad or acid squelch, and seeds some of the ten sound slots from a value
+  only the individual unit has. Version 3.7 adds a Basic and an Advanced mode, a chord mode in which each key plays
+  a diatonic triad and a loop pedal that counts in and locks to the beat. A tilt morph uses the gyro as a
+  performance control. On the ADV a listen function uses the microphone to detect the key and tempo of music in
+  the room and retunes the instrument. It supports the original Cardputer and the ADV.
+status: active
+authors:
+  - name: CHARL3X
+    url: https://github.com/CHARL3X
+source: https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV
+source_status: open
+license: proprietary
+license_notes: >-
+  Dual-licensed. The LICENSE file applies PolyForm Noncommercial License 1.0.0 ("Everything in this repository,
+  unless a file says otherwise, is released under the PolyForm Noncommercial License 1.0.0"), which allows
+  noncommercial use and sharing; a separate commercial licence is available on request from the author for selling
+  devices with it loaded, shipping it in a product or offering it as a paid service. PolyForm Noncommercial is not
+  in the catalog's accepted list, so this is recorded as proprietary. The source is public.
+distribution: download
+install_notes: >-
+  Flash bmorcelli's Launcher to the Cardputer once, copy GLIDE.bin from the latest release to the /apps/ folder of
+  the microSD card, then choose SD, apps, GLIDE and Install in the Launcher menu. A newer file on the card does
+  nothing until it is installed again; saved sounds and settings survive an update. Charging only works with the
+  Cardputer switched on.
+brick_risk: false
+tags: [synth, synth-engine, generative, looper, chords, open-source]
+video:
+  url: https://www.youtube.com/shorts/P5bjekoP5wY
+  title: AutoKey tunes my DIY synth to any song by ear #cardputer #m5stack #esp32 #synthesizer
+  credit: Charles
+  first_party: true
+  found_via: https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV#readme
+versions:
+  - version: v3.7
+    date: 2026-10-07
+    url: https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV/releases/tag/v3.7
+    notes: Adds chord mode, a beat-locked loop pedal and a Basic mode.
+  - version: v3.6
+    date: 2026-09-29
+    url: https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV/releases/tag/v3.6
+  - version: v3.5
+    date: 2026-09-26
+    url: https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV/releases/tag/v3.5
+  - version: v3.4
+    date: 2026-09-22
+    url: https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV/releases/tag/v3.4

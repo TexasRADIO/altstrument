@@ -1,0 +1,54 @@
+device: anbernic-rg35xx
+name: Little Piggy Tracker
+summary: >-
+  Sample tracker with an LSDj-style interface, with dedicated builds for the Anbernic RG35XX and RG35XX Plus
+  family.
+description: >-
+  Little Piggy Tracker (formerly LittleGPTracker) is a sample-based tracker with eight channels, 8 and 16 bit WAV
+  samples, SoundFont import and a song, chain and phrase workflow. It is the maintained successor of Marc
+  Nostromo's original LittleGPTracker (BSD-3-Clause, no commits since 2020), whose user interface follows Little
+  Sound DJ. For this family the release carries a GARLIC build for the original RG35XX (last shipped in 1.5.0) and
+  GARLICPLUS and RG35XXPLUS builds for the H700 models, packaged for Garlic OS, muOS and the stock Plus OS. The
+  project's feature table lists MIDI as possible on the Plus builds but depending on kernel support, and not on
+  the original unit.
+status: active
+authors:
+  - name: djdiskmachine
+    url: https://github.com/djdiskmachine
+  - name: Marc Nostromo
+    url: https://github.com/Mdashdotdashn
+  - name: Simotek
+    url: http://simotek.net
+source: https://github.com/djdiskmachine/LittleGPTracker
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file applies GPLv3 to the fork's new work and keeps the original BSD-3-Clause terms (Copyright 2018
+  Discodirt) for the code it derives from. It says "version 3" without an "or later" grant. GitHub shows no
+  license for the repository because the file holds both texts.
+homepage: https://littlepiggytracker.github.io/
+distribution: download
+requires_stock: RG35XXPLUS-EN-240712 or later (stock Plus build, 64-bit)
+install_notes: >-
+  Download the zip for your unit from the GitHub release: RG35XXPLUS for the stock Plus OS (copy the .elf,
+  config.xml, mapping.xml and samplelib to Roms/APPS/lgpt and the launcher script to Roms/APPS), or GARLICPLUS for
+  Garlic OS or muOS (the zip's README gives the folders and launcher scripts). The original RG35XX uses the GARLIC
+  build, which only 1.5.0 and earlier carry. Samples go in a samplelib folder on the SD card.
+brick_risk: false
+tags: [tracker, sampler, sequencer, midi, open-source]
+versions:
+  - version: 1.6.0-bacon20
+    date: 2026-09-12
+    url: https://github.com/djdiskmachine/LittleGPTracker/releases/tag/1.6.0-bacon20
+    notes: Prerelease. Fixes MIDI muting and adds a MIDI chord command.
+  - version: 1.6.0-bacon14
+    date: 2026-04-28
+    url: https://github.com/djdiskmachine/LittleGPTracker/releases/tag/1.6.0-bacon14
+    notes: Prerelease.
+  - version: 1.5.0
+    date: 2025-12-15
+    url: https://github.com/djdiskmachine/LittleGPTracker/releases/tag/1.5.0
+    notes: Latest release not marked as a prerelease.
+  - version: 1.4.2
+    date: 2024-09-12
+    url: https://github.com/djdiskmachine/LittleGPTracker/releases/tag/1.4.2

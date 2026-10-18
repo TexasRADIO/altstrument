@@ -1,0 +1,35 @@
+device: m5stack-cardputer
+name: MothDeck
+summary: >-
+  Ambient-house groovebox for the Cardputer ADV with drums, per-track effects, a four-track mixer, SD kits and loops
+  and BLE MIDI.
+description: >-
+  MothDeck has a four-track mixer with a per-track effect insert, drum voices, SD-card kits and loops, a piano roll
+  and a 16-step strip, and it follows an external MIDI clock over Bluetooth LE. The README calls it a sibling of
+  the author's MothOS, with the same song file and BLE MIDI map redrawn for the ADV's screen and 56-key keyboard.
+  Sound comes out of the headphone jack only, not the internal speaker. The versions do not line up: the GitHub
+  releases stop at v1.2.4 (2026-10-11) and say the image has not been tried on a Cardputer, while the README
+  advertises an untagged 1.2.12 image committed in the releases folder and says the same. The repository also
+  carries releases tagged ttgo-t8, which appear to be for another board and not for the Cardputer.
+status: active
+authors:
+  - name: shard76-dark
+    url: https://github.com/shard76-dark
+source: https://github.com/shard76-dark/MothDeck-ambient-house-groovebox-firmware-for-M5Stack-Cardputer-ADV-
+source_status: open
+license: MIT
+distribution: download
+install_notes: >-
+  Copy the mothdeck-cardputer-adv .bin to a FAT32 card and install it from Launcher; the repository's
+  releases/INSTALL.md has the steps. An optional zip of SD kits and loops is published alongside. Use earphones or
+  headphones, since the internal speaker is not driven.
+brick_risk: false
+tags: [groovebox, sequencer, drums, midi, open-source]
+versions:
+  - version: v1.2.4
+    date: 2026-10-11
+    url: https://github.com/shard76-dark/MothDeck-ambient-house-groovebox-firmware-for-M5Stack-Cardputer-ADV-/releases/tag/v1.2.4
+    notes: Latest GitHub release; says it has not been tried on a Cardputer. The README advertises a newer untagged 1.2.12 image.
+  - version: v1.2.3
+    date: 2026-10-11
+    url: https://github.com/shard76-dark/MothDeck-ambient-house-groovebox-firmware-for-M5Stack-Cardputer-ADV-/releases/tag/v1.2.3

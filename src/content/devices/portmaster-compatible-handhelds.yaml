@@ -1,0 +1,26 @@
+name: PortMaster-compatible handhelds
+manufacturer: PortMaster
+category: handheld
+tagline: Class-wide entry for Linux handhelds that run PortMaster, such as Anbernic, Powkiddy and TrimUI
+description: >-
+  PortMaster is a community launcher that installs ports of games and apps onto Linux-based retro handhelds. This
+  entry stands for the whole class rather than one product, and holds music software that is built and packaged
+  once for PortMaster and not per model. The projects name these families: Anbernic RG35XX and RG40XX units on
+  muOS or Knulli, Anbernic RG351 and RG353 units on ArkOS, ROCKNIX, AmberELEC or JELOS, and the TrimUI Brick on
+  Knulli or NextUI.
+platform: Allwinner, Rockchip and other ARM SoCs running a PortMaster-supported Linux firmware
+links:
+  manufacturer: https://portmaster.games/
+  community:
+    - label: PortMaster supported devices
+      url: https://portmaster.games/supported-devices.html
+    - label: PortMaster-New (port repository)
+      url: https://github.com/PortsMaster/PortMaster-New
+notes: >-
+  Models are not listed here one by one: the supported set changes with every PortMaster and firmware release,
+  and the projects verify only a few of them. Check the project's own notes before installing. A port is a zip
+  that PortMaster unpacks to the ports folder of the SD card, and it stays inside the community firmware without
+  flashing anything. Families that have dedicated builds are catalogued on their own pages (Anbernic RG35XX series,
+  Miyoo Mini). Music players in PortMaster, such as Gmu, MPD and Rockbox, only play files and are out of scope; so
+  are bare Raspberry Pi and desktop builds.
+related: [anbernic-rg35xx, miyoo-miyoo-mini, anbernic-rg-nano]

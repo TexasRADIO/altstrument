@@ -1,0 +1,50 @@
+device: anbernic-rg35xx
+name: ChipNomad
+summary: >-
+  AY-chip tracker with an LSDj-style interface, with a GarlicOS build for the pre-2024 RG35xx and a PortMaster
+  build for the others.
+description: >-
+  ChipNomad is a chiptune tracker with an LSDj- and M8-style interface that emulates AY sound chips with the Ayumi
+  emulator, adds an AY Plus synth-like instrument and an AY sample instrument, a modulation system and VGM export.
+  Its README says the primary targets are Linux-based handheld game consoles. The author states that AI coding
+  tools helped between April 26, 2025 and September 15, 2026 and that they will not use them again. For this
+  family there is an RG35xx zip that works only on pre-2024 units running GarlicOS 1.4, and a PortMaster zip for
+  the H700 models on muOS or Knulli.
+status: active
+authors:
+  - name: Roman Petrov
+    url: https://github.com/Megus
+source: https://github.com/Megus/chipnomad-tracker
+source_status: open
+license: MIT
+homepage: https://chipnomad.org/
+distribution: download
+requires_stock: GarlicOS 1.4 for the pre-2024 RG35xx
+install_notes: >-
+  Original RG35xx on GarlicOS 1.4: download the RG35xx zip, create a ChipNomad folder in Roms/APPS on the SD card
+  and unzip the package into it. H700 models: copy the PortMaster zip into PortMaster's autoinstall folder
+  (/mmc/MUOS/PortMaster/autoinstall on muOS, /userdata/system/.local/share/PortMaster/autoinstall on Knulli) and
+  run PortMaster.
+brick_risk: false
+tags: [tracker, chiptune, sequencer, open-source]
+video:
+  url: https://youtu.be/hzf-BgJmqYU
+  title: ChipNomad — a true chiptune tracker for handheld consoles
+  credit: ChipNomad
+  first_party: true
+  found_via: https://github.com/Megus/chipnomad-tracker#readme
+versions:
+  - version: v1.0.5
+    date: 2026-08-29
+    url: https://github.com/Megus/chipnomad-tracker/releases/tag/v1.0.5
+  - version: v1.0.4
+    date: 2026-07-13
+    url: https://github.com/Megus/chipnomad-tracker/releases/tag/v1.0.4
+    notes: Adds a modulation system with ADSR, AHD and LFO sources, the AY Plus and AY Sample instruments and VGM export.
+  - version: v1.0.0
+    date: 2026-04-25
+    url: https://github.com/Megus/chipnomad-tracker/releases/tag/v1.0.0
+    notes: Adds the Android and Miyoo Mini (Miyoo Ports) builds.
+  - version: v0.1.0b
+    date: 2026-02-02
+    url: https://github.com/Megus/chipnomad-tracker/releases/tag/v0.1.0b
