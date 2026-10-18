@@ -1,0 +1,33 @@
+name: Nintendo Switch
+manufacturer: Nintendo
+category: handheld
+tagline: Hybrid console (Switch, Lite, OLED) with a homebrew build of Little Piggy Tracker
+description: >-
+  The Nintendo Switch is a hybrid console released in 2017 that works as a handheld or docked to a television. It is
+  based on an NVIDIA Tegra X1 system on a chip, and the Lite and OLED models are variants of the same family.
+
+  Music software for it is scarce. The only open project found is a Switch build of Little Piggy Tracker, a tracker
+  in the line of LSDj, which is a homebrew app launched from the Homebrew Menu.
+platform: NVIDIA Tegra X1 family (ARM Cortex-A57 and A53)
+links:
+  manufacturer: https://www.nintendo.com/us/switch/
+  community:
+    - label: Nintendo Switch on Wikipedia
+      url: https://en.wikipedia.org/wiki/Nintendo_Switch
+    - label: Switch homebrew guide
+      url: https://switch.hacks.guide/
+notes: >-
+  Homebrew runs only on consoles with custom firmware, which this catalog does not cover or link. Korg sells Gadget
+  as a commercial Switch eShop app; it has no entry here. Nintendo's own Drum Pad and Music Box are retail games and
+  are not listed either.
+related: [nintendo-3ds]
+image:
+  src: /images/devices/nintendo-switch.jpg
+  style: photo
+  alt: Nintendo Switch in handheld mode with a blue left Joy-Con and a red right Joy-Con attached to a dark screen
+  width: 1200
+  height: 696
+  credit: Photo by Evan-Amos, via Wikimedia Commons
+  license: public domain
+  source_url: https://commons.wikimedia.org/wiki/File:Nintendo-Switch-wJoyCons-BlRd-Standing-FL.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/8/88/Nintendo-Switch-wJoyCons-BlRd-Standing-FL.jpg

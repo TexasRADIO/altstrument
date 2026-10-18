@@ -1,0 +1,29 @@
+device: nintendo-game-boy-advance
+name: Stepper
+summary: Toy 16-step sequencer ROM for the Game Boy Advance that plays the four Game Boy sound channels with per-trigger parameter locks.
+description: >-
+  Stepper is a 16-step sequencer by Bad Diode that drives the GBA's four Game Boy compatible channels: two pulse, one
+  wave and one noise. Each step can carry parameter locks, and CDM's coverage suggests the Arduinoboy for MIDI and sync. A repository branch is named
+  lsdjsync. It builds with libgba from a Makefile and runs
+  from a flash cart or an emulator. The repository's last commit is from February 2024.
+
+  The author's project page is no longer online; the source repository is the only home found. CDM covered it in
+  May 2023.
+status: dormant
+authors:
+  - name: Bad Diode
+    url: https://badd10de.dev/
+source: https://git.badd10de.dev/stepper
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  The repository tags only provide source snapshots, so build the ROM yourself with the Makefile and the libgba
+  toolchain, then run it on a flash cart or in an emulator.
+brick_risk: false
+tags: [sequencer, chiptune, parameter-locks]
+versions:
+  - version: v1.6
+    date: 2023-08-04
+    url: https://git.badd10de.dev/stepper/commit/?id=e66f745912
+    notes: Release commit for the latest tag; tags v1.5 to v1.2 are older.

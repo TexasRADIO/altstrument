@@ -1,0 +1,33 @@
+device: nintendo-nes
+name: PR8
+summary: Drum machine and groovebox for the NES by Neil Baldwin, released as assembly source with ready-made NTSC and PAL ROMs.
+description: >-
+  The full source of the PR8 NES drum machine, about 25,000 lines for ca65 and cc65, with an HTML manual and sample
+  data. The README says it runs in an emulator, on a PowerPak development cartridge or on a donor cartridge, and that
+  the author no longer actively maintains it and expects readers to already be experienced NES programmers. An April
+  2021 update restored builds with newer cc65 and fixed pitch, note-range and phrase-number bugs.
+status: dormant
+authors:
+  - name: Neil Baldwin
+    url: https://codeberg.org/neilbaldwin
+source: https://codeberg.org/neilbaldwin/NES-PR8
+source_status: open
+license: unspecified
+license_notes: >-
+  The files disagree. LICENSE is the MIT License, "Copyright (c) 2012 Neil Baldwin". license.txt is a two-condition BSD
+  text headed "'PR8 - NES Drum Synth'", "Copyright 2010 Neil Baldwin". The README says "Public domain, for education,
+  research and the curious" and asks users to credit the author as originator. Treated as unspecified until the author
+  clarifies which applies.
+homepage: https://codeberg.org/neilbaldwin/NES-PR8
+distribution: source-only
+requires_stock: NES with a PowerPak or similar cartridge, or an emulator
+install_notes: >-
+  Build with ca65 and cc65 using the BUILD or BUILDRELEASE script. The repository also contains ready-made NTSC and PAL
+  ROMs; this catalog links to it and does not host them.
+brick_risk: false
+tags: [drum-machine, groovebox, chiptune]
+versions:
+  - version: master @ 045cbd2
+    date: 2021-04-07
+    url: https://codeberg.org/neilbaldwin/NES-PR8/commit/045cbd282a
+    notes: No tagged releases; this is the latest commit, "Bug fixes".

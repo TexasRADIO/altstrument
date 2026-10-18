@@ -1,0 +1,65 @@
+device: nintendo-game-boy
+name: LSDj (Little Sound Dj)
+summary: Tracker for the Game Boy's four sound channels, run as a ROM from a flash cartridge or emulator. Freeware and closed source, with sample kits, MIDI sync and link-cable sync.
+description: >-
+  LSDj is a Game Boy music tracker written by Johan Kotlinski (copyright 2000). Songs are built from chains of phrases
+  across the pulse, wave and noise channels, with tables, grooves, instruments and sampled drum kits that are stored
+  in the cartridge's save RAM. It syncs between Game Boys over the link cable and, with an Arduinoboy-type interface,
+  to MIDI. Its song, chain and phrase layout was reused by later trackers, including LittleGPTracker and
+  picoTracker.
+
+  The author's site distributes the ROM in stable and develop builds, plus variants labelled arduinoboy (for
+  a MIDI adapter) and goomba (for certain GBA and DS cartridges). The ROM runs on real hardware only from a writable
+  flash cartridge; emulators such as BGB and SameBoy are also recommended on the site. It is freeware, not open
+  source.
+status: maintained
+authors:
+  - name: Johan Kotlinski
+    url: https://github.com/jkotlinski
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  Freeware licence in LICENSE.txt beside the ROM images (copyright 2000 Johan Kotlinski): free for non-commercial
+  use in binary form; copying, publishing, distributing, sublicensing or selling copies is not permitted, and
+  commercial use needs permission. Downloading a ROM means accepting it.
+homepage: https://www.littlesounddj.com/
+distribution: download
+install_notes: >-
+  Download the ROM from the author's site only; do not use mirrors, since redistribution is not allowed. Write it to
+  a flash cartridge for a real Game Boy, or open it in an emulator. The site's ROM folder also has a variant for use with an Arduinoboy MIDI adapter. Patching tools such as lsdpatch edit the ROM after you have downloaded it.
+brick_risk: false
+tags: [tracker, chiptune, sequencer, midi, freeware]
+versions:
+  - version: 9.4.2
+    date: 2025-06-04
+    url: https://www.littlesounddj.com/lsd/latest/CHANGELOG.rss
+    notes: Fixes noise table transpose not resetting on a new note, chain starts in MIDI and ANA.IN sync, and an audio glitch when changing font.
+  - version: 9.4.1
+    date: 2024-09-04
+    url: https://www.littlesounddj.com/lsd/latest/CHANGELOG.rss
+    notes: Fixes the R command restarting the wrong speech word and the K command not stopping speech.
+  - version: 9.4.0
+    date: 2024-01-04
+    url: https://www.littlesounddj.com/lsd/latest/CHANGELOG.rss
+    notes: The R command also resets pitch for DRUM instruments; kit vibrato depths are halved.
+  - version: 9.3.9
+    date: 2023-03-17
+    url: https://www.littlesounddj.com/lsd/latest/CHANGELOG.rss
+  - version: 9.3.8
+    date: 2022-12-29
+    url: https://www.littlesounddj.com/lsd/latest/CHANGELOG.rss
+  - version: 9.3.7
+    date: 2022-11-27
+    url: https://www.littlesounddj.com/lsd/latest/CHANGELOG.rss
+  - version: 9.3.6
+    date: 2022-11-19
+    url: https://www.littlesounddj.com/lsd/latest/CHANGELOG.rss
+  - version: 9.3.5
+    date: 2022-10-24
+    url: https://www.littlesounddj.com/lsd/latest/CHANGELOG.rss
+  - version: 9.3.4
+    date: 2022-10-07
+    url: https://www.littlesounddj.com/lsd/latest/CHANGELOG.rss
+  - version: 9.3.3
+    date: 2022-09-25
+    url: https://www.littlesounddj.com/lsd/latest/CHANGELOG.rss

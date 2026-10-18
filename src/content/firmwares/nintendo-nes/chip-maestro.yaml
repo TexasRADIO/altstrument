@@ -1,0 +1,28 @@
+device: nintendo-nes
+name: Chip Maestro
+kind: tool
+summary: Open design files and code for a NES cartridge with a MIDI input jack that plays the console's sound chip from a MIDI keyboard.
+description: >-
+  The repository holds the board layout, schematic, label artwork, a CPLD design and Arduino-style MIDI code
+  (chip-maestro.ino with a channel class and a MIDI library) for a cartridge that gives the NES a MIDI input. The
+  author built it after seeing the band Anamanaguchi play live with a NES MIDI tracker. They say the CPLD part
+  is out of date and that a modern microcontroller with configurable logic would be a better base.
+status: dormant
+authors:
+  - name: Jarek Lupinski
+    url: https://github.com/jareklupinski
+source: https://github.com/jareklupinski/chip-maestro
+source_status: open
+license: Unlicense
+homepage: https://github.com/jareklupinski/chip-maestro
+distribution: source-only
+requires_stock: NES with a Chip Maestro cartridge
+install_notes: >-
+  This is design material for building the cartridge hardware. The author notes they have not worked on it for a while.
+brick_risk: false
+tags: [midi, cartridge, hardware]
+versions:
+  - version: master @ ef99ec3
+    date: 2018-07-05
+    url: https://github.com/jareklupinski/chip-maestro/commit/ef99ec3
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,30 @@
+device: nintendo-ds
+name: HobbyChop SID-DS
+summary: >-
+  Paid DS ROM: a three-voice SID-style synthesizer and groovebox for the DS, with an owner's manual on GitHub.
+description: >-
+  SID-DS is a Commodore 64 SID-style synthesizer and groovebox for the Nintendo DS. The shop page lists a three-voice
+  synth and a three-part MIDI input, with General MIDI drums on channel 10 when the mDS cartridge is attached. It
+  runs from a flash card; the page lists the DS, DS Lite and the 3DS, and says it is best on real hardware. It
+  states that it is an original work not affiliated with Commodore or Nintendo.
+status: active
+authors:
+  - name: HobbyChop
+    url: https://www.hobbychop.com/
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  No licence is stated on the shop page, which calls it homebrew provided as is. The page names the third-party
+  components calico (Zope Public License 2.1), libfat (BSD-3-Clause) and libnds (zlib). The GitHub repository
+  https://github.com/HobbyChop/SID-DS holds the manual, with no source or ROM.
+homepage: https://www.hobbychop.com/product/sid-ds
+distribution: commercial
+install_notes: >-
+  Sold as a downloadable .nds ROM for $12 at the product page, run from a DS flash card with an SD card for saving.
+  MIDI needs the separately sold mDS slot-2 cartridge on an original DS or DS Lite.
+brick_risk: false
+tags: [synth, groovebox, sid, midi, commercial]
+versions:
+  - version: "V1.4.0B"
+    url: https://www.hobbychop.com/product/sid-ds
+    notes: Version shown on the product page, which gives no release date.

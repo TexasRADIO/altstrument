@@ -1,0 +1,36 @@
+device: nintendo-switch
+name: Little Piggy Tracker (Switch port)
+summary: Homebrew build of Little Piggy Tracker, the LSDj-style tracker for portable consoles, as a Nintendo Switch .nro app. Built from source with devkitPro.
+description: >-
+  This repository is a fork of djdiskmachine's Little Piggy Tracker, itself a fork of Marc Nostromo's LittleGPTracker,
+  with Switch support added. The changelog describes a homebrew .nro built with devkitPro and libnx, launched from the
+  Homebrew Menu and installed in /switch/lgpt on the SD card, and notes a fix for songs playing too fast on the Switch
+  caused by a missing semaphore function. The project has a Makefile.SWITCH among its platform makefiles.
+
+  The tracker follows the song, chain and phrase layout of LSDj. The upstream Little Piggy Tracker repository has no
+  Switch build. The fork's only GitHub release is an RG35XX-plus build, so a Switch app has to be built from source.
+status: active
+authors:
+  - name: emartinez-dev
+    url: https://github.com/emartinez-dev
+  - name: djdiskmachine
+    url: https://github.com/djdiskmachine
+  - name: Marc Nostromo
+    url: https://github.com/Mdashdotdashn
+source: https://github.com/emartinez-dev/LittleGPTracker-switch
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file states that the new terms are the GPL version 3 and keeps the original BSD-3-Clause terms of
+  Marc Nostromo's LittleGPTracker (copyright Discodirt, 2018).
+distribution: source-only
+install_notes: >-
+  Build with devkitPro and libnx using projects/Makefile.SWITCH, copy the resulting .nro to the SD card and start it
+  from the Homebrew Menu. This needs a console with custom firmware, which this catalog does not cover.
+brick_risk: false
+tags: [tracker, chiptune, homebrew, nro, lgpt]
+versions:
+  - version: main @ 7f7bd82
+    date: 2026-08-17
+    url: https://github.com/emartinez-dev/LittleGPTracker-switch/commit/7f7bd82
+    notes: Latest commit; no tagged release contains a Switch build.

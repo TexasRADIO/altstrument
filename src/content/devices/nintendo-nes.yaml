@@ -1,0 +1,34 @@
+name: NES / Famicom
+manufacturer: Nintendo
+category: handheld
+tagline: Nintendo's 8-bit console, played as an instrument through homebrew ROMs and MIDI cartridges
+description: >-
+  The Nintendo Entertainment System, sold as the Famicom in Japan, is an 8-bit home console released in 1983 in
+  Japan and 1985 in North America. Its Ricoh 2A03 processor combines a 6502 core with an audio unit of two pulse
+  waves, a triangle, noise and a low-rate sample channel.
+
+  Music software that runs on the console itself is homebrew. Pulsar and PR8 are trackers that run on a real
+  NES through a flash cartridge or in an emulator, and SynthNes and the Chip Maestro cartridge turn the console
+  into a MIDI-controlled synthesizer.
+platform: Ricoh 2A03 (6502 core with audio unit)
+links:
+  manufacturer: https://en.wikipedia.org/wiki/Nintendo_Entertainment_System
+  community:
+    - label: NESdev wiki
+      url: https://www.nesdev.org/wiki/Nesdev_Wiki
+notes: >-
+  Homebrew ROMs run from a flash cartridge such as an Everdrive N8 Pro or a PowerPak, or in an emulator. The
+  Famicom and the NES use the same audio hardware, so ROMs are shared. Desktop trackers that only export music for
+  the NES, such as FamiTracker and FamiStudio, are not catalogued. An NES emulator for the M-VAVE FM-1 is listed
+  under that device. Commercial game ROMs and Nintendo firmware are not catalogued here.
+related: [m-vave-fm-1]
+image:
+  src: /images/devices/nintendo-nes.jpg
+  style: photo
+  alt: Grey Nintendo Entertainment System console with its rectangular body and a wired rectangular controller beside it, shown against a white background
+  width: 1200
+  height: 651
+  credit: Photo by Evan-Amos, via Wikimedia Commons
+  license: public domain
+  source_url: https://commons.wikimedia.org/wiki/File:NES-Console-Set.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/8/82/NES-Console-Set.jpg

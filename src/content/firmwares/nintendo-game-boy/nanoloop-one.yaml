@@ -1,0 +1,30 @@
+device: nintendo-game-boy
+name: nanoloop one
+summary: Commercial Game Boy cartridge that turns the console into a grid-based sequencer and synthesizer across its four sound channels; sold as a physical product.
+description: >-
+  nanoloop one is the Game Boy version of Oliver Wittchow's nanoloop, a sequencer that began as a study project at
+  the University of Fine Arts of Hamburg in 1998 and went on sale as cartridges in late 1999. The cartridge holds
+  the program and flash memory, so songs are saved to slots on the cartridge itself and no flash cart is needed. The
+  maker's page lists it as working on the Game Boy, Pocket, Color, Advance and Advance SP, and on the Analogue
+  Pocket, but not on the FPGBC or Chromatic.
+
+  It is a closed commercial product with a downloadable manual, listed here for completeness. The GBA version is
+  nanoloop two, listed under the Game Boy Advance.
+status: maintained
+authors:
+  - name: Oliver Wittchow
+    url: https://nanoloop.com/
+source_status: closed
+license: proprietary
+license_notes: No software licence is published; the site carries only a copyright notice by Oliver Wittchow.
+homepage: https://nanoloop.com/one/index.html
+distribution: commercial
+install_notes: >-
+  Sold as a cartridge from the maker's shop. Updates for the cartridge are described on the maker's update page; the
+  site does not give a price or a release date for any version.
+brick_risk: false
+tags: [sequencer, synth, chiptune, cartridge, commercial]
+versions:
+  - version: 1.8.2.0
+    url: https://nanoloop.com/one/18/nanoloop18.html
+    notes: Version named in the online manual; no release date is given.

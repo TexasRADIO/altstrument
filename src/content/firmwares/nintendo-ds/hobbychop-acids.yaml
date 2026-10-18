@@ -1,0 +1,30 @@
+device: nintendo-ds
+name: HobbyChop AciDS
+summary: >-
+  Paid DS ROM: an acid groovebox with two 303-style basslines, an eight-lane drum machine and a 32-step pattern sequencer with song mode.
+description: >-
+  AciDS is an acid groovebox for the Nintendo DS. The manual describes two 303-style basslines with saw or square
+  oscillators into a resonant ladder filter with accent and slide, an eight-lane synthesized drum machine, and a
+  32-step pattern sequencer with song mode. Sounds are synthesized on the DS and there are no samples in the ROM. MIDI
+  goes through the mDS slot-2 cartridge, and saves are written to the SD card.
+status: active
+authors:
+  - name: HobbyChop
+    url: https://www.hobbychop.com/
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  No licence is stated on the shop page, which calls it homebrew provided as is. The page names the third-party
+  components calico (Zope Public License 2.1), libfat (BSD-3-Clause) and libnds (zlib). The GitHub repository
+  https://github.com/HobbyChop/ACIDS holds the manual, with no source or ROM.
+homepage: https://www.hobbychop.com/product/acids
+distribution: commercial
+install_notes: >-
+  Sold as a downloadable .nds ROM for $12 at the product page, run from a DS flash card with an SD card for saving.
+  MIDI needs the separately sold mDS slot-2 cartridge on an original DS or DS Lite.
+brick_risk: false
+tags: [synth, groovebox, acid, tb-303-style, midi, commercial]
+versions:
+  - version: "V1.3.2B"
+    url: https://www.hobbychop.com/product/acids
+    notes: Version shown on the product page, which gives no release date.

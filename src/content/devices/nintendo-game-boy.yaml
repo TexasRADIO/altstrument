@@ -1,0 +1,38 @@
+name: Game Boy
+manufacturer: Nintendo
+category: handheld
+tagline: Original handheld family (DMG, Pocket, Color) that runs LSDj, Nanoloop and other music cartridges
+description: >-
+  The Game Boy is Nintendo's 8-bit cartridge handheld, released in 1989, with the Pocket (1996) and Color (1998)
+  following in the same software family. It has a 160 by 144 screen, a link-cable port, and a four-channel sound
+  chip with two pulse waves, a 4-bit programmable wave channel and noise. Music software for it runs as a cartridge
+  ROM that drives those four channels directly, which is the basis of the Game Boy chiptune scene.
+
+  The best-known programs are the tracker LSDj and the sequencer Nanoloop, plus MIDI and drone tools. The link port
+  is also used to sync to other gear through small interfaces such as the Arduinoboy.
+platform: Sharp LR35902 (SM83) 8-bit CPU with a four-channel sound unit
+links:
+  community:
+    - label: Game Boy on Wikipedia
+      url: https://en.wikipedia.org/wiki/Game_Boy
+    - label: Game Boy development community (gbdev)
+      url: https://gbdev.io/
+notes: >-
+  Music programs here are Game Boy ROMs. On real hardware they need a writable flash cartridge or a commercial
+  cartridge; the catalog does not list flash cartridges or cartridge readers because they are not music-specific.
+  The same ROMs run in emulators, and Game Boy Advance and DS family consoles also play them (see the Game Boy
+  Advance entry). The Analogue Pocket, a separate FPGA handheld that plays Game Boy cartridges, has Nanoloop built
+  in; it has no entry here. The M-VAVE FM-1 runs a Game Boy emulator firmware called GameDude, which is listed under
+  m-vave-fm-1. Commercial cartridges and the freeware LSDj ROM are listed with a link to their author's own site;
+  ROM files are never hosted here.
+related: [nintendo-game-boy-advance, m-vave-fm-1]
+image:
+  src: /images/devices/nintendo-game-boy.jpg
+  style: photo
+  alt: Original grey Nintendo Game Boy seen at an angle, with the olive-green screen above a dark d-pad, two magenta A and B buttons and the speaker slots
+  width: 989
+  height: 1200
+  credit: Photo by Evan-Amos, via Wikimedia Commons
+  license: public domain
+  source_url: https://commons.wikimedia.org/wiki/File:Game-Boy-FL.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/f/f4/Game-Boy-FL.jpg

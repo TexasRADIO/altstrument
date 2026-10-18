@@ -1,0 +1,48 @@
+device: nintendo-game-boy
+name: Arduinoboy
+kind: tool
+summary: Firmware for an Arduino-type board that connects a Game Boy link port to MIDI, for syncing LSDj and nanoloop and for playing mGB.
+description: >-
+  Arduinoboy is a sketch by trash80 that runs on an Arduino-compatible board wired to the Game Boy link port with a
+  MIDI interface. It has seven modes: LSDj as MIDI slave or master sync, an LSDj keyboard mode, MIDI to nanoloop sync, full MIDI
+  with mGB, which turns the Game Boy into a MIDI sound module, and the LSDj MIDIMAP and MIDIOUT modes. A push button selects the mode, and settings
+  are stored in EEPROM and edited with a Max-based program. The board can be powered from the Game Boy.
+
+  The firmware runs on the Arduino, not on the Game Boy, so it is listed as a tool. Later versions added support for
+  Teensy, Leonardo, Due and Mega 2560 boards. Several community derivatives exist for Teensy, Pico and small
+  custom boards; they are not listed here. The LSDj site hosts a ROM variant built to work with it.
+status: dormant
+authors:
+  - name: trash80
+    url: https://github.com/trash80
+source: https://github.com/trash80/Arduinoboy
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE is the GPL version 2 text with no "or later" wording.
+distribution: source-only
+install_notes: >-
+  Build and upload the Arduinoboy sketch from the Arduino IDE or PlatformIO, then wire the board to the Game Boy
+  link cable and a MIDI interface following the schematic in the repository.
+brick_risk: false
+tags: [midi, sync, interface, arduino]
+versions:
+  - version: 1.3.4
+    date: 2020-05-19
+    url: https://github.com/trash80/Arduinoboy/blob/master/Changelog.md
+    notes: Adds Arduino Mega 2560 and Arduino UNO WiFi support.
+  - version: 1.3.3
+    date: 2020-05-17
+    url: https://github.com/trash80/Arduinoboy/blob/master/Changelog.md
+    notes: Adds Arduino Due support.
+  - version: 1.3.2
+    date: 2020-05-03
+    url: https://github.com/trash80/Arduinoboy/blob/master/Changelog.md
+    notes: Adds Arduino Leonardo, Yun and Micro support.
+  - version: 1.3.1
+    date: 2020-04-19
+    url: https://github.com/trash80/Arduinoboy/blob/master/Changelog.md
+    notes: Fixes nanoloop sync over USB.
+  - version: 1.3.0
+    date: 2016-07-15
+    url: https://github.com/trash80/Arduinoboy/releases/tag/1.3.0
+    notes: Adds Teensy 3.x and LC support and USB MIDI on Teensy.

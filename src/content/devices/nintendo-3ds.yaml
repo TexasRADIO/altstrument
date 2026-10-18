@@ -1,0 +1,36 @@
+name: Nintendo 3DS
+manufacturer: Nintendo
+category: handheld
+tagline: Autostereoscopic dual-screen handheld (3DS, New 3DS, 2DS) with homebrew trackers
+description: >-
+  The Nintendo 3DS, released in 2011, is a dual-screen handheld with a touch screen, a circle pad and a microphone.
+  The New 3DS (2014) adds a faster ARM11 processor, and the 2DS models are cartridge-compatible variants without the
+  3D display. It runs its own homebrew format (.3dsx) and also plays DS software.
+
+  Native music software is homebrew trackers. The one that needs the extra processing power of the New 3DS family is
+  descry; NitrousTracker has a 3DS port in its 0.7.0 beta releases.
+platform: ARM11 MPCore with an ARM9 coprocessor
+links:
+  community:
+    - label: Nintendo 3DS on Wikipedia
+      url: https://en.wikipedia.org/wiki/Nintendo_3DS
+    - label: Universal-DB, a catalog of 3DS homebrew
+      url: https://db.universal-team.net/
+    - label: 3DS homebrew guide
+      url: https://3ds.hacks.guide/
+notes: >-
+  Native homebrew needs a console with custom firmware and the Homebrew Launcher, which this catalog does not
+  cover. 3DS programs that also build for the DS are listed under both devices. descry requires a New 3DS family
+  console (New 3DS, New 3DS XL or New 2DS XL) and does not run on the original 3DS. Korg sold the DSN-12 synthesizer as an eShop download; it is a retail
+  product with no entry here. Noise Commander 3DS ships only as a demo repository without source, so it is left out.
+related: [nintendo-ds]
+image:
+  src: /images/devices/nintendo-3ds.jpg
+  style: photo
+  alt: Aqua blue Nintendo 3DS opened flat, with a grey upper screen, a circle pad and d-pad at the left of the lower screen and face buttons at the right
+  width: 1200
+  height: 1085
+  credit: Photo by Evan-Amos, via Wikimedia Commons
+  license: public domain
+  source_url: https://commons.wikimedia.org/wiki/File:Nintendo-3DS-AquaOpen.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/f/f0/Nintendo-3DS-AquaOpen.jpg

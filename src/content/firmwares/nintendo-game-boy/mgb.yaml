@@ -1,0 +1,42 @@
+device: nintendo-game-boy
+name: mGB
+summary: Game Boy ROM that makes the console a four-channel MIDI-controlled sound module, driven through an Arduinoboy or another MIDI interface on the link port.
+description: >-
+  mGB is a program by trash80 that turns a Game Boy into a sound module. Incoming MIDI notes, pitch bend and
+  control changes are assigned to the pulse, wave and noise channels, and an optional poly mode spreads chords
+  across voices. It reads MIDI from the link port, so it needs a flash cartridge plus an interface such as the
+  Arduinoboy; it works on the original DMG and on the Game Boy Color and Advance.
+
+  The repository contains the source and older pre-GitHub versions, with their ROMs.
+  The last version was released in 2012.
+status: dormant
+authors:
+  - name: trash80
+    url: https://github.com/trash80
+source: https://github.com/trash80/mGB
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE.md is the GPL version 2 text with no "or later" wording.
+distribution: download
+install_notes: >-
+  The repository's Releases folder holds ready-to-flash .gb files, including mGB_1_3_3.gb. Write the ROM to a flash
+  cartridge and connect the Game Boy to MIDI through an Arduinoboy set to its mGB mode.
+brick_risk: false
+tags: [midi, synth, chiptune, sound-module]
+versions:
+  - version: 1.3.3
+    date: 2012-12-21
+    url: https://github.com/trash80/mGB#change-log
+    notes: Fixes a bug introduced by the higher pitch-bend resolution and optimises the pitch-bend routine.
+  - version: 1.3.2
+    date: 2012-12-20
+    url: https://github.com/trash80/mGB#change-log
+    notes: Increases pitch-bend resolution.
+  - version: 1.3.1
+    date: 2012-12-19
+    url: https://github.com/trash80/mGB#change-log
+    notes: Fixes a PU1 envelope retrigger bug.
+  - version: 1.3.0
+    date: 2009-02-02
+    url: https://github.com/trash80/mGB#change-log
+    notes: Core rewritten largely in assembly for speed on the DMG, with changed note behaviour and a screen-off mode.

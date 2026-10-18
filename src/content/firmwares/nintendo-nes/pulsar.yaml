@@ -1,0 +1,39 @@
+device: nintendo-nes
+name: Pulsar
+summary: LSDJ-style tracker that runs on a real NES from a PowerPak cartridge or in an emulator, with a synth engine that runs independently of the sequencer.
+description: >-
+  A tracker by Neil Baldwin, the successor to Baldwin's earlier NTRQ, whose interface and commands follow LSDJ. Its manual
+  says the synthesis engine runs separately from the sequencer at 180 Hz, three times the rate of a typical NES audio
+  engine. The repository holds the assembly source for ca65, ready-made NTSC and PAL ROM builds, an HTML manual
+  and PowerPak mapper files. The readme says it runs on an NTSC NES with a PowerPak cartridge, or in the Nestopia and
+  Nintendulator emulators, and that it needs a 32 KB save file.
+status: dormant
+authors:
+  - name: Neil Baldwin
+    url: https://codeberg.org/neilbaldwin
+source: https://codeberg.org/neilbaldwin/NES-Pulsar
+source_status: open
+license: BSD-2-Clause
+license_notes: >-
+  license.txt is the two-condition BSD text, copyright 2010 Neil Baldwin, with the usual disclaimer.
+homepage: https://neilbaldwin.codeberg.page/nes-audio/manuals/pulsar/Pulsar.html
+distribution: download
+requires_stock: NTSC NES with a PowerPak cartridge, or an emulator with 32 KB save support
+install_notes: >-
+  For a PowerPak, copy MAP01.MAP from the PowerPak folder to the POWERPAK folder on the compact flash card and put a
+  blank 32 KB pulsar.sav in the SAV folder. Pulsar formats an unrecognised save file on boot, and the PowerPak needs a
+  reset held for a few seconds to save. The repository contains prebuilt ROMs; this catalog links to it and does not
+  host them.
+brick_risk: false
+tags: [tracker, chiptune, lsdj-style]
+versions:
+  - version: V1.04
+    url: https://codeberg.org/neilbaldwin/NES-Pulsar/src/branch/main/readme.txt
+    notes: Latest in the readme's release history, which fixes a crash when starting playback from the Pattern Editor with no pattern or chain set. No date is given.
+  - version: V1.03
+    url: https://codeberg.org/neilbaldwin/NES-Pulsar/src/branch/main/readme.txt
+    notes: Tightened reset code for real hardware.
+  - version: V1.00
+    date: 2010-12-23
+    url: https://codeberg.org/neilbaldwin/NES-Pulsar/src/branch/main/readme.txt
+    notes: Initial release.

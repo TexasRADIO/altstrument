@@ -1,0 +1,72 @@
+device: nintendo-ds
+name: NitrousTracker
+summary: FastTracker II-style tracker for the DS, stylus-driven with microphone sampling and XM file support. A maintained fork of 0xtob's NitroTracker.
+description: >-
+  NitrousTracker is a tracker built around the XM module format that PC trackers share. It is operated with the DS
+  stylus on the touch screen, with an on-screen keyboard, pattern selection with copy and paste, and sampling through
+  the DS microphone. Releases ship a .nds file, and the project's install script also lists a build with MIDI support.
+
+  It is a fork of NitroTracker, written by Tobias Weyand (0xtob) in the late 2000s, whose repository has had no commits
+  since July 2020. The 0.6 line is the stable DS release; the 0.7.0 betas switch to a port of the FastTracker 2 play
+  routine and add a native 3DS build, which is also listed under the Nintendo 3DS. The project is hosted on Codeberg,
+  with a GitHub mirror.
+status: active
+authors:
+  - name: NitrousTracker contributors
+    url: https://codeberg.org/NitrousTracker/nitroustracker
+  - name: Tobias Weyand (0xtob)
+    url: https://github.com/0xtob
+source: https://codeberg.org/NitrousTracker/nitroustracker
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  COPYING is the GPL version 3 text and the README names GPL v3 for NitrousTracker; the inherited source headers say
+  "version 3 ... or any later version". The README lists bundled components under their own licences: libdsmi
+  (LGPL-2.1), dserial (BSD-3-Clause), tinyusb (MIT), ft2play (BSD-3-Clause), tobkit (Apache-2.0), and the BlocksDS
+  libraries (libnds zlib, dswifi MIT, and others).
+homepage: https://docs.asie.pl/nitroustracker/
+distribution: download
+install_notes: >-
+  Download the nds zip from the Codeberg releases page and copy the .nds file to your flash card or DSi
+  loader. Songs are standard .xm files on the SD card.
+brick_risk: false
+tags: [tracker, xm, sampler, touch, stylus]
+versions:
+  - version: 0.7.0b4
+    date: 2026-08-30
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.7.0b4
+    notes: Beta with the FastTracker 2 play routine, instrument import and export, and the native 3DS port.
+  - version: 0.7.0b3
+    date: 2026-08-08
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.7.0b3
+    notes: Beta.
+  - version: 0.6.6
+    date: 2026-08-08
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.6.6
+    notes: Fixes a rare .xm corruption when memory is very low and a crash on very short recordings.
+  - version: 0.7.0b2
+    date: 2026-07-23
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.7.0b2
+    notes: Beta.
+  - version: 0.7.0b1
+    date: 2026-07-19
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.7.0b1
+    notes: First beta of the 0.7.0 line.
+  - version: 0.6.5
+    date: 2026-07-15
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.6.5
+  - version: 0.6.4
+    date: 2026-06-21
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.6.4
+  - version: 0.6.3
+    date: 2026-05-07
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.6.3
+  - version: 0.6.2
+    date: 2026-04-16
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.6.2
+  - version: 0.6.1
+    date: 2026-03-21
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.6.1
+  - version: 0.6.0
+    date: 2026-03-02
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.6.0

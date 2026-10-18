@@ -1,0 +1,49 @@
+device: nintendo-3ds
+name: NitrousTracker
+summary: FastTracker II-style tracker whose 0.7.0 betas add a native 3DS port with larger screens, 32 channels and more sample memory than the DS build.
+description: >-
+  NitrousTracker is a stylus-driven XM tracker with microphone sampling, forked from Tobias Weyand's (0xtob)
+  NitroTracker for the DS. The 0.7.0 betas ship a native 3DS build next to the DS one, as a .3dsx file, and move the
+  playback engine to a port of the FastTracker 2 play routine. According to the release notes, the 3DS port allows
+  32 channels instead of 16 and more sample RAM, with slightly higher audio latency. The stable 0.6 line is DS only,
+  and its entry is listed under the Nintendo DS.
+
+  Every 3DS build so far is a beta. The project is hosted on Codeberg, with a GitHub mirror, and its documentation is
+  at docs.asie.pl.
+status: active
+authors:
+  - name: NitrousTracker contributors
+    url: https://codeberg.org/NitrousTracker/nitroustracker
+  - name: Tobias Weyand (0xtob)
+    url: https://github.com/0xtob
+source: https://codeberg.org/NitrousTracker/nitroustracker
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  COPYING is the GPL version 3 text and the README names GPL v3 for NitrousTracker; the inherited source headers say
+  "version 3 ... or any later version". The README lists bundled components under their own licences, including the
+  3DS toolchain libraries libctru (zlib) and newlib.
+homepage: https://docs.asie.pl/nitroustracker/
+distribution: download
+install_notes: >-
+  Extract nitroustracker.3dsx from the n3ds zip on the Codeberg release page to /3ds/nitroustracker.3dsx on the SD
+  card and start it from the Homebrew Launcher. Needs a 3DS with custom firmware.
+brick_risk: false
+tags: [tracker, xm, sampler, touch, beta]
+versions:
+  - version: 0.7.0b4
+    date: 2026-08-30
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.7.0b4
+    notes: Beta with the FastTracker 2 play routine, instrument import and export, panning envelopes and the 3DS port.
+  - version: 0.7.0b3
+    date: 2026-08-08
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.7.0b3
+    notes: Beta.
+  - version: 0.7.0b2
+    date: 2026-07-23
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.7.0b2
+    notes: Beta.
+  - version: 0.7.0b1
+    date: 2026-07-19
+    url: https://codeberg.org/NitrousTracker/nitroustracker/releases/tag/release/0.7.0b1
+    notes: First beta with a 3DS build.

@@ -1,0 +1,61 @@
+device: nintendo-3ds
+name: descry
+summary: Tracker and synthesizer for the New Nintendo 3DS with a song, chain and phrase sequencer, five synth engines, a Kaoss-style XY pad and microphone sampling.
+description: >-
+  descry is a music tracker that runs natively on New Nintendo 3DS and New 2DS XL consoles, since its synth engines
+  use the faster CPU and extra core; the original 3DS is not supported. It has eight tracks arranged as song, chain
+  and phrase, 23 effect commands, five synth engines running fixed-point at 32 kHz, a touch-screen XY pad, a mixer
+  with touch faders, microphone sampling with slicing, and an in-app manual. Version 1.0.7 added stem export of the
+  mix and each track as WAV files for use in a DAW.
+
+  The project began on 2026-07-06 and has had eight releases since. It installs from a .3dsx file through the Homebrew
+  Launcher or from a .cia.
+status: active
+authors:
+  - name: patausx
+    url: https://github.com/patausx
+source: https://github.com/patausx/descry
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE is the GPL version 3 text and the README says "GPL-3.0".
+distribution: download
+install_notes: >-
+  Download descry.3dsx from the GitHub release, put it in /3ds/descry/ on the SD card and start it from the Homebrew
+  Launcher, or install descry.cia with FBI for a Home Menu entry. Needs a New 3DS or New 2DS XL with custom firmware.
+brick_risk: false
+tags: [tracker, synth, sampler, touch, homebrew]
+versions:
+  - version: v1.0.7
+    date: 2026-08-19
+    url: https://github.com/patausx/descry/releases/tag/v1.0.7
+    notes: Adds precise sample cropping and slicing and stem export of the mix and each track as WAV files.
+  - version: v1.0.6
+    date: 2026-08-15
+    url: https://github.com/patausx/descry/releases/tag/v1.0.6
+  - version: v1.0.5
+    date: 2026-08-03
+    url: https://github.com/patausx/descry/releases/tag/v1.0.5
+  - version: v1.0.4
+    date: 2026-07-15
+    url: https://github.com/patausx/descry/releases/tag/v1.0.4
+    notes: Reworks the record modes and adds scopes.
+  - version: v1.0.3
+    date: 2026-07-11
+    url: https://github.com/patausx/descry/releases/tag/v1.0.3
+    notes: Adds an in-app manual.
+  - version: v1.0.2
+    date: 2026-07-08
+    url: https://github.com/patausx/descry/releases/tag/v1.0.2
+  - version: v1.0.1
+    date: 2026-07-07
+    url: https://github.com/patausx/descry/releases/tag/v1.0.1
+  - version: v1.0.0
+    date: 2026-07-06
+    url: https://github.com/patausx/descry/releases/tag/v1.0.0
+    notes: First public release.
+image:
+  url: https://raw.githubusercontent.com/patausx/descry/main/docs/song.png
+  alt: descry song view, with an eight-track pattern grid on the upper screen and a waveform strip above track buttons T0 to T7 on the lower screen
+  credit: patausx
+  source_url: https://github.com/patausx/descry
+  first_party: true

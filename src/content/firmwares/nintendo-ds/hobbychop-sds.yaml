@@ -1,0 +1,29 @@
+device: nintendo-ds
+name: HobbyChop sDS
+summary: MIDI synthesizer ROM for the DS and DS Lite that plays notes sent through an mDS slot-2 cartridge on pulse, wave, noise, FM and microphone-sampler voices.
+description: >-
+  sDS is an mGB-style synthesizer for the DS: MIDI arrives through the mDS cartridge and the DS sound chip plays it,
+  with up to 16 hardware voices. The top screen shows the cartridge connection, the mode, a map of channel voices and
+  an oscilloscope; the bottom screen edits the sound with the d-pad and draws the envelope. It has three modes
+  selected with the B button.
+
+  It needs the mDS cartridge for MIDI. The repository contains the ROM and the manual, but no source.
+status: active
+authors:
+  - name: HobbyChop
+    url: https://github.com/HobbyChop
+source: https://github.com/HobbyChop/sDS
+source_status: binary-only
+license: CC-BY-NC-SA-4.0
+license_notes: A Creative Commons non-commercial licence. The repository holds only the compiled .nds file and the README.
+distribution: download
+install_notes: >-
+  Copy the .nds file from the repository to a slot-1 flash card, start it, put the mDS cartridge in slot 2 and press
+  A to detect it.
+brick_risk: false
+tags: [synth, midi, chiptune, touch]
+versions:
+  - version: main @ 93fea0c
+    date: 2026-06-15
+    url: https://github.com/HobbyChop/sDS/commit/93fea0c
+    notes: Latest commit; the ROM in the repository is named sds_synth_v16.nds.

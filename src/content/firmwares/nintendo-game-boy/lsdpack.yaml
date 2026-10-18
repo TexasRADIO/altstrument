@@ -1,0 +1,32 @@
+device: nintendo-game-boy
+name: lsdpack
+kind: tool
+summary: Records LSDj songs and builds stand-alone Game Boy ROMs or GBS files that play them, for albums, demos and games.
+description: >-
+  lsdpack runs an LSDj ROM and save file, records each song that ends with the HFF command, and writes assembly that
+  can be built into a stand-alone player ROM or into one GBS file per song. It needs CMake, RGBDS and a C++ compiler
+  to build. The output carries the recorded sound data, not the LSDj program.
+status: dormant
+authors:
+  - name: Johan Kotlinski
+    url: https://github.com/jkotlinski
+source: https://github.com/jkotlinski/lsdpack
+source_status: open
+license: GPL-2.0-only
+license_notes: LICENSE.txt is the GPL version 2 text with no "or later" wording.
+distribution: source-only
+requires_stock: LSDj ROM and save file
+install_notes: Build with CMake and RGBDS. Run lsdpack on an LSDj ROM that sits next to its .sav file.
+brick_risk: false
+tags: [recorder, player, gbs, export]
+versions:
+  - version: v0.0.5
+    date: 2021-09-11
+    url: https://github.com/jkotlinski/lsdpack/releases/tag/v0.0.5
+  - version: v0.0.4
+    date: 2021-02-15
+    url: https://github.com/jkotlinski/lsdpack/releases/tag/v0.0.4
+  - version: v0.0.3
+    date: 2021-02-11
+    url: https://github.com/jkotlinski/lsdpack/releases/tag/v0.0.3
+    notes: Adds Game Boy Sound System (GBS) support and multiple input ROMs.

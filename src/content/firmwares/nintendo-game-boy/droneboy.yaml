@@ -1,0 +1,33 @@
+device: nintendo-game-boy
+name: Droneboy
+summary: Game Boy ROM that holds endless drone tones on the four channels, with chord sequencing and MIDI control through an Arduinoboy.
+description: >-
+  Droneboy creates sustained tones on all four Game Boy channels, with controls for volume, duty cycle and
+  frequency, and a chord sequencer with a BPM page. It listens to MIDI through an Arduinoboy, with settings for
+  channel, panning and NRPN control of frequency. The ROM is written in C with some assembly using GBDK-2020, and was
+  developed in the BGB, SameBoy and Emulicious emulators. A manual PDF is attached to each release.
+status: active
+authors:
+  - name: purefunktion
+    url: https://github.com/purefunktion
+source: https://github.com/purefunktion/Droneboy
+source_status: open
+license: MIT
+distribution: download
+install_notes: >-
+  Download droneboy.gb from the GitHub release and write it to a flash cartridge, or open it in an emulator. Build
+  with make; the ROM is produced in the obj directory.
+brick_risk: false
+tags: [drone, chiptune, sequencer, midi]
+versions:
+  - version: v1.09
+    date: 2026-04-27
+    url: https://github.com/purefunktion/Droneboy/releases/tag/v1.09
+    notes: Adds MIDI channel selection, panning and NRPN MIDI control of frequency.
+  - version: v1.08
+    date: 2025-05-31
+    url: https://github.com/purefunktion/Droneboy/releases/tag/v1.08
+    notes: Adds new navigation, a BPM page, a chord sequencer, MIDI support and lower-sounding wave types.
+  - version: v1.07
+    date: 2025-04-03
+    url: https://github.com/purefunktion/Droneboy/releases/tag/v1.07

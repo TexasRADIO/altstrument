@@ -1,0 +1,31 @@
+device: nintendo-ds
+name: HobbyChop Moody-DS
+summary: >-
+  Paid DS ROM: a touch-screen analog-style poly synth and groovebox with a filter pad, step sequencer and song mode. A free demo is on GitHub.
+description: >-
+  Moody-DS is a virtual analog synthesizer and groovebox for the Nintendo DS, played with the touch screen. The shop
+  page describes a filter pad, a step sequencer and song mode. The free demo on GitHub has the full sound engine,
+  effects, sequencer, song mode and touch keyboard; the paid version adds saving and loading presets, automatic
+  saving of the working setup, and MIDI in, out and clock sync. Saving needs an SD card, and the shop page says it
+  runs on a DS or DS Lite from a flash card.
+status: active
+authors:
+  - name: HobbyChop
+    url: https://www.hobbychop.com/
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  No licence is stated on the shop page, which calls it homebrew provided as is. The page names the third-party
+  components calico (Zope Public License 2.1), libfat (BSD-3-Clause) and libnds (zlib). The GitHub repository
+  https://github.com/HobbyChop/Moody-DS holds the manual, a logo and a demo ROM zip, with no source.
+homepage: https://www.hobbychop.com/product/moody-ds-virtual-analog-poly-synth
+distribution: commercial
+install_notes: >-
+  Sold as a downloadable .nds ROM for $12 at the product page, run from a DS flash card with an SD card for saving.
+  MIDI needs the separately sold mDS slot-2 cartridge on an original DS or DS Lite.
+brick_risk: false
+tags: [synth, groovebox, touch, midi, commercial]
+versions:
+  - version: "v1.8.0B"
+    url: https://www.hobbychop.com/product/moody-ds-virtual-analog-poly-synth
+    notes: Version shown on the product page, which gives no release date.

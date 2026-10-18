@@ -1,0 +1,45 @@
+device: nintendo-game-boy
+name: LSDPatcher (lsdpatch)
+kind: tool
+summary: Java tool for editing fonts, palettes, sample kits and songs in an LSDj ROM and its save file, and for upgrading the ROM.
+description: >-
+  LSDPatcher edits a Little Sound Dj ROM and its save file without writing assembly. Its editors cover fonts,
+  palettes, drum kits with a sample editor and dithering options, and a song manager for the save file, and an upgrade
+  dialog moves songs to a newer LSDj ROM. It needs Java 8 or later. The repository's wiki holds documentation, and
+  the fonts and palettes it loads are shared in separate community repositories.
+
+  It works on an LSDj ROM that the user has already downloaded from the LSDj site.
+status: maintained
+authors:
+  - name: Johan Kotlinski
+    url: https://github.com/jkotlinski
+  - name: Florian Dormont
+source: https://github.com/jkotlinski/lsdpatch
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file also lists Filedrop.java (Robert Harder, "No rights reserved") and StretchIcon.java (Darryl
+  Burke, "No rights reserved") as bundled files.
+distribution: download
+requires_stock: LSDj ROM
+install_notes: >-
+  Download the jar from the GitHub release and run it with Java. Supply your own LSDj ROM, or use the upgrade dialog
+  to fetch one from the LSDj site; the tool does not include LSDj.
+brick_risk: false
+tags: [editor, patcher, kit-editor, palette, font]
+versions:
+  - version: v1.13.3
+    date: 2024-09-20
+    url: https://github.com/jkotlinski/lsdpatch/releases/tag/v1.13.3
+    notes: Fixes a tiny Kit Editor window on Linux.
+  - version: v1.13.1
+    date: 2023-01-27
+    url: https://github.com/jkotlinski/lsdpatch/releases/tag/v1.13.1
+    notes: Updates palette editor colour correction to match SameBoy 0.15.
+  - version: v1.13.0
+    date: 2022-04-11
+    url: https://github.com/jkotlinski/lsdpatch/releases/tag/v1.13.0
+  - version: v1.12.0
+    date: 2021-10-01
+    url: https://github.com/jkotlinski/lsdpatch/releases/tag/v1.12.0
+    notes: Adds an invert-polarity preference for GBA in the Kit Editor.

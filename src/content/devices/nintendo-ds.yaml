@@ -1,0 +1,36 @@
+name: Nintendo DS
+manufacturer: Nintendo
+category: handheld
+tagline: Dual-screen touch handheld (DS, DS Lite, DSi) running homebrew trackers and synths
+description: >-
+  The Nintendo DS is a dual-screen handheld released in 2004, with a touch screen, a microphone and stylus input.
+  The DS Lite (2006) and DSi (2008) are later versions. Its ARM9 and ARM7 processors and 16-channel sound unit run
+  both sampled and synthesized audio, and the touch screen and microphone suit tracker editing and sampling.
+
+  Music software here is homebrew: an FT2-style tracker, hardware MIDI add-ons and a set of paid synth ROMs.
+platform: ARM946E-S (ARM9) and ARM7TDMI
+links:
+  community:
+    - label: Nintendo DS on Wikipedia
+      url: https://en.wikipedia.org/wiki/Nintendo_DS
+    - label: TWiLight Menu++, a DS and DSi homebrew launcher
+      url: https://github.com/DS-Homebrew/TWiLightMenu
+    - label: Universal-DB, a catalog of DS and 3DS homebrew
+      url: https://db.universal-team.net/
+notes: >-
+  Homebrew runs from a DS flash card, or on a DSi through its own homebrew loaders; the 3DS also runs DS ROMs. Only
+  the original DS and DS Lite have the GBA cartridge slot that the mDS MIDI cartridge uses; DSi and 3DS lack it,
+  so MIDI add-ons do not work there. Korg sold the DS-10 synthesizer and the M01D as retail DS cartridges; they have
+  no homepage entry here. The HobbyChop synths are paid ROMs sold as downloads, listed as closed-source commercial
+  entries. Commercial game ROMs and the DS BIOS are not linked.
+related: [nintendo-3ds, nintendo-game-boy-advance]
+image:
+  src: /images/devices/nintendo-ds.jpg
+  style: photo
+  alt: Blue original Nintendo DS opened flat, with two dark screens, a d-pad at the left of the lower screen and four face buttons at the right
+  width: 1200
+  height: 1091
+  credit: Photo by Evan-Amos, via Wikimedia Commons
+  license: public domain
+  source_url: https://commons.wikimedia.org/wiki/File:Nintendo-DS-Fat-Blue.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/4/42/Nintendo-DS-Fat-Blue.jpg

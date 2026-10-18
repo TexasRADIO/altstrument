@@ -1,0 +1,31 @@
+device: nintendo-ds
+name: HobbyChop PadMe-DS
+summary: >-
+  Paid DS ROM: a touch-screen FM chord pad and groove instrument with chord banks, XY morph pads and a bass generator. A limited demo is on GitHub.
+description: >-
+  PadMe-DS is an FM chord pad and groove instrument for the Nintendo DS. The shop page lists eight chord pads across
+  11 banks, three XY morph pads, a built-in bass and splatter generator, 32 preset slots and MIDI and control change
+  output. The seller says it was tested on an R4i SDHC 1.4 with Twilight Menu and sounds best on real hardware. The
+  free demo on GitHub is limited to one chord bank and one bass pattern, with no saving, presets, MIDI or updates;
+  buying includes updates through the same download link.
+status: active
+authors:
+  - name: HobbyChop
+    url: https://www.hobbychop.com/
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  No licence is stated on the shop page, which calls it homebrew provided as is. The page names the third-party
+  components calico (Zope Public License 2.1), libfat (BSD-3-Clause) and libnds (zlib). The GitHub repository
+  https://github.com/HobbyChop/PadMe-DS holds the manual, a logo and a demo ROM zip, with no source.
+homepage: https://www.hobbychop.com/product/padme-ds-fm-chord-pad-atmosphere-generator
+distribution: commercial
+install_notes: >-
+  Sold as a downloadable .nds ROM for $12 at the product page, run from a DS flash card with an SD card for saving.
+  MIDI needs the separately sold mDS slot-2 cartridge on an original DS or DS Lite.
+brick_risk: false
+tags: [synth, chord-pad, fm, midi, commercial]
+versions:
+  - version: "v1.2.4B"
+    url: https://www.hobbychop.com/product/padme-ds-fm-chord-pad-atmosphere-generator
+    notes: Version shown on the product page, which gives no release date.

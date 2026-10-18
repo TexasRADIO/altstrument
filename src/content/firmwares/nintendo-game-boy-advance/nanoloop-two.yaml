@@ -1,0 +1,29 @@
+device: nintendo-game-boy-advance
+name: nanoloop two
+summary: Commercial Game Boy Advance cartridge that turns the console into a sequencer and synthesizer; sold as a physical product and built into the Analogue Pocket.
+description: >-
+  nanoloop two is the Game Boy Advance version of Oliver Wittchow's nanoloop sequencer. The maker's page describes it
+  as a cartridge for the GBA, GBA SP, Game Boy Micro, DS and DS Lite, and says it is also built into the Analogue
+  Pocket, where the standalone cartridge is not recommended. A demo ROM is offered as a download for emulators and
+  flash carts.
+
+  It is a closed commercial product. At the time of checking the cartridge was sold out, with a form to be notified
+  when new production ships. The Game Boy version is nanoloop one, listed under the Game Boy.
+status: maintained
+authors:
+  - name: Oliver Wittchow
+    url: https://nanoloop.com/
+source_status: closed
+license: proprietary
+license_notes: No software licence is published; the site carries only a copyright notice by Oliver Wittchow.
+homepage: https://nanoloop.com/two/index.html
+distribution: commercial
+install_notes: >-
+  Sold as a cartridge from the maker's shop. The demo ROM on the product page is for evaluation in an emulator or on
+  a flash cart.
+brick_risk: false
+tags: [sequencer, synth, chiptune, cartridge, commercial]
+versions:
+  - version: "2.8"
+    url: https://nanoloop.com/two/index.html
+    notes: Current software version named on the product page; no release date is given.

@@ -1,0 +1,37 @@
+device: nintendo-ds
+name: HobbyChop mDS
+kind: tool
+summary: RP2040 firmware for a DS and DS Lite slot-2 cartridge that passes hardware MIDI in and out to DS apps such as sDS and the HobbyChop synth ROMs.
+description: >-
+  mDS is a MIDI interface built on a Raspberry Pi Pico (RP2040) that plugs into the GBA slot of an original DS or DS
+  Lite. The cartridge presents MIDI state to the DS as a small block of memory in the slot's SRAM window, and the DS
+  app reads it; the DS cannot write back, so outgoing MIDI is triggered by reads of special addresses. It has opto-
+  isolated MIDI in, MIDI out, a status LED and a USB boot-mode (UF2) firmware update. The DSi and 3DS have no slot-2,
+  so it does not work on them. The README documents the protocol for writing DS programs.
+
+  The firmware runs on the cartridge's RP2040, not on the DS, so it is listed as a tool. HobbyChop also sells a
+  finished adapter.
+status: active
+authors:
+  - name: HobbyChop
+    url: https://github.com/HobbyChop
+source: https://github.com/HobbyChop/mDS
+source_status: open
+license: CC-BY-NC-SA-4.0
+license_notes: A Creative Commons non-commercial licence, so the firmware source is not open source in the OSI sense.
+homepage: https://www.hobbychop.com/product/nds-and-nds-lite-midi-adapter
+distribution: download
+install_notes: >-
+  The GitHub release carries a UF2 file that is drag-and-dropped onto the RP2040 in USB boot mode. Hardware is sold as
+  a finished adapter at the linked shop page, or built from the repository.
+brick_risk: false
+tags: [midi, interface, cartridge, slot-2, rp2040]
+versions:
+  - version: v12
+    date: 2026-06-17
+    url: https://github.com/HobbyChop/mDS/releases/tag/v12
+    notes: Adds MIDI note out support.
+  - version: v11
+    date: 2026-06-12
+    url: https://github.com/HobbyChop/mDS/releases/tag/v11
+    notes: Initial release.

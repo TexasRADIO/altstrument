@@ -1,0 +1,32 @@
+device: nintendo-nes
+name: SynthNes
+summary: Closed-source ROM and Windows app that turn an NES with an Everdrive N8 Pro into a MIDI-controlled synthesizer.
+description: >-
+  A ROM for the Everdrive N8 Pro plus a Windows companion app that connects over USB. A NESdev forum post by the
+  author lists control of all five NES audio channels from MIDI or a virtual keyboard, polyphony, a unison mode,
+  modulation, automation, presets and animated graphics. The itch.io devlog shows a version 2.0 in April 2022, an
+  arpeggiator and delay preview in 2022, and a compatibility update in February 2026.
+status: active
+authors:
+  - name: avicr
+    url: https://avicr.itch.io/
+source_status: closed
+license: proprietary
+license_notes: >-
+  The itch.io page states no license. The author says the code is "too ugly to share publicly".
+homepage: https://avicr.itch.io/synthnes
+distribution: download
+requires_stock: NES or compatible, Everdrive N8 Pro, Windows PC
+install_notes: >-
+  The page says the Pro version of the Everdrive is required, along with a USB cable and, optionally, a MIDI
+  controller. It is sold name-your-own-price.
+brick_risk: false
+tags: [synth, midi, chiptune]
+versions:
+  - version: Compatibility Update
+    date: 2026-02-13
+    url: https://avicr.itch.io/synthnes/devlog/1377916/synthnes-compatibility-update
+    notes: The page shows no version number for this update.
+  - version: "2.0"
+    date: 2022-04-25
+    url: https://avicr.itch.io/synthnes/devlog/373625/synthnes-version-20

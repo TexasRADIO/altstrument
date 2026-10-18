@@ -1,0 +1,36 @@
+name: Game Boy Advance
+manufacturer: Nintendo
+category: handheld
+tagline: 32-bit handheld (GBA, SP, Micro) with homebrew trackers and the Nanoloop Two cartridge
+description: >-
+  The Game Boy Advance is Nintendo's 2001 successor to the Game Boy Color, with a 16.8 MHz ARM7TDMI processor and a
+  240 by 160 screen. The SP (2003) and Micro (2005) are later versions of the same hardware. Besides the four
+  Game Boy sound channels it has two DMA-fed 8-bit sample channels, so native programs can play samples as well as
+  the chiptune voices.
+
+  Music software for it is native GBA ROMs: the commercial Nanoloop Two cartridge and a few homebrew trackers and
+  sequencers.
+platform: ARM7TDMI with Game Boy compatible sound channels plus two sample channels
+links:
+  community:
+    - label: Game Boy Advance on Wikipedia
+      url: https://en.wikipedia.org/wiki/Game_Boy_Advance
+    - label: GBAdev community site
+      url: https://gbadev.net/
+notes: >-
+  Programs here are native GBA ROMs, run from a flash cartridge on hardware or in an emulator. The GBA also plays
+  Game Boy and Game Boy Color cartridges, so the Game Boy entry's software works on it. The DS and DS Lite play GBA
+  cartridges in their second slot, and Nanoloop Two lists them as supported. The Analogue Pocket, a separate
+  handheld that plays GBA cartridges, has Nanoloop built in and has no entry here. Libraries for writing GBA sound
+  drivers are not listed.
+related: [nintendo-game-boy, nintendo-ds]
+image:
+  src: /images/devices/nintendo-game-boy-advance.jpg
+  style: photo
+  alt: Purple Game Boy Advance in landscape orientation, with the d-pad on the left, a grey screen in the middle and the A and B buttons on the right
+  width: 1200
+  height: 828
+  credit: Photo by Evan-Amos, via Wikimedia Commons
+  license: public domain
+  source_url: https://commons.wikimedia.org/wiki/File:Nintendo-Game-Boy-Advance-Purple-FL.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/7/7d/Nintendo-Game-Boy-Advance-Purple-FL.jpg

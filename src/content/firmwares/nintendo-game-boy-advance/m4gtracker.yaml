@@ -1,0 +1,41 @@
+device: nintendo-game-boy-advance
+name: M4GTracker
+kind: firmware
+summary: Tracker-style music program for the Game Boy Advance sound chip, shipped as a ROM, with pre-release builds and a web back office in one repository.
+description: >-
+  M4GTracker describes itself as a minimal digital audio workstation for the Game Boy Advance. It runs as a GBA ROM
+  from a flash cart or an emulator and composes with the console's own sound chip, with a tracker screen, a pattern
+  screen, an instrument editor and an analog sync output. The repository also holds a Django website and a Docker
+  setup for building the ROM.
+
+  The README says the program was originally created by an indie developer called Smiker in the late 2000s and early
+  2010s, with a new interface made with the pixel artist iLKke. The relationship between this repository and that
+  original is not stated, and the repository has no licence file, so the rights are unclear. Its public history
+  begins with a squashed commit in 2026, and the live demo site named in the README did not answer when checked.
+status: active
+authors:
+  - name: pinakure
+    url: https://github.com/pinakure
+source: https://github.com/pinakure/M4GTracker
+source_status: open
+license: unspecified
+license_notes: No LICENSE file and no licence statement in the README.
+distribution: download
+install_notes: >-
+  The pre-release assets on the GitHub releases page include a .gba ROM; the repository also describes a Docker build
+  script that writes the ROM to the out directory. Run it from a flash cart or an emulator.
+brick_risk: false
+tags: [tracker, chiptune, daw]
+versions:
+  - version: "0.89"
+    date: 2023-03-15
+    url: https://github.com/pinakure/M4GTracker/releases/tag/0.89
+    notes: Pre-release. Adds clipboard menus, envelope views and channel transpose, and cuts the ROM size by about 50 KB.
+  - version: "0.88"
+    date: 2023-03-07
+    url: https://github.com/pinakure/M4GTracker/releases/tag/0.88
+    notes: Pre-release. Analog sync output and two PWM instruments working.
+  - version: "0.85"
+    date: 2023-02-26
+    url: https://github.com/pinakure/M4GTracker/releases/tag/0.85
+    notes: Pre-release. Tracker screen working.

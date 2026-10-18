@@ -1,0 +1,48 @@
+device: nintendo-game-boy
+name: hUGETracker
+kind: tool
+summary: Desktop tracker with an OpenMPT-style interface that exports Game Boy ROMs and GBS files, and makes songs for the hUGEDriver sound engine.
+description: >-
+  hUGETracker is a music tracker for the original Game Boy, aimed at ease of use, compact output and embedding in
+  homebrew games. It is written in Free Pascal with Lazarus and runs on Windows, macOS and Linux, with a
+  manual and sample songs included. It exports .gb ROMs for emulators and real hardware, and .gbs files, and a
+  song can be exported for use with its sound driver hUGEDriver in a game. The homepage positions it between LSDj and
+  GBT Player for CPU use and size.
+
+  It runs on a computer, not on the Game Boy, and is listed here as a tool for the console.
+status: active
+authors:
+  - name: Nick Faro (SuperDisk)
+    url: https://github.com/SuperDisk
+source: https://github.com/SuperDisk/hUGETracker
+source_status: open
+license: unspecified
+license_notes: >-
+  The README states "hUGETracker and hUGEDriver are dedicated to the public domain." There is no LICENSE file and
+  the statement does not name a license such as CC0-1.0 or Unlicense.
+homepage: https://nickfa.ro/index.php/hUGETracker
+distribution: download
+install_notes: >-
+  Download the build for your system from the GitHub releases page. Building from source needs Lazarus, RGBDS and
+  SDL2, and the setup scripts in the repository fetch the rest.
+brick_risk: false
+tags: [tracker, editor, chiptune, desktop, public-domain]
+versions:
+  - version: v1.0.11
+    date: 2024-12-29
+    url: https://github.com/SuperDisk/hUGETracker/releases/tag/v1.0.11
+    notes: Adds a sample song and fixes waveforms activated by the 9xx effect being dropped when unused data is stripped on export.
+  - version: v1.0.10
+    date: 2024-09-29
+    url: https://github.com/SuperDisk/hUGETracker/releases/tag/v1.0.10
+    notes: Fixes saving on Linux without a file extension and other bugs.
+  - version: v1.0.9
+    date: 2024-07-14
+    url: https://github.com/SuperDisk/hUGETracker/releases/tag/v1.0.9
+    notes: Fixes a crash on some Arch-based distributions and ships RGBDS and FFmpeg.
+  - version: v1.0.8
+    date: 2024-05-20
+    url: https://github.com/SuperDisk/hUGETracker/releases/tag/v1.0.8
+  - version: v1.0.7
+    date: 2024-04-03
+    url: https://github.com/SuperDisk/hUGETracker/releases/tag/v1.0.7

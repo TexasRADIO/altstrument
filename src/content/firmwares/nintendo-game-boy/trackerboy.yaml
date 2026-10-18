@@ -1,0 +1,42 @@
+device: nintendo-game-boy
+name: Trackerboy
+kind: tool
+summary: Desktop tracker for composing Game Boy and Game Boy Color music, still pre-1.0, with MIDI input, example modules and its own manual.
+description: >-
+  Trackerboy is a tracker for the Game Boy and Game Boy Color sound hardware, with builds for Windows, macOS
+  and Linux. It has per-channel pattern editing, waveform and instrument editors, a live waveform view, MIDI keyboard
+  input and drag-and-drop module loading. The author describes it as work in progress at major version 0. A companion
+  repository, tbengine, holds the driver for playing its songs on a Game Boy.
+
+  It runs on a computer, not on the Game Boy, and is listed here as a tool for the console.
+status: maintained
+authors:
+  - name: stoneface
+    url: https://github.com/stoneface86
+source: https://github.com/stoneface86/trackerboy
+source_status: open
+license: MIT
+homepage: https://www.trackerboy.org
+distribution: download
+install_notes: Download a build for your system from the GitHub releases page; every release so far is marked a pre-release.
+brick_risk: false
+tags: [tracker, editor, chiptune, desktop]
+versions:
+  - version: v0.6.6
+    date: 2025-09-16
+    url: https://github.com/stoneface86/trackerboy/releases/tag/v0.6.6
+    notes: Fixes the Hxy effect setting the wrong frequency.
+  - version: v0.6.5
+    date: 2025-05-19
+    url: https://github.com/stoneface86/trackerboy/releases/tag/v0.6.5
+    notes: Fixes off-by-one errors in the pattern grow and shrink commands.
+  - version: v0.6.4
+    date: 2025-05-19
+    url: https://github.com/stoneface86/trackerboy/releases/tag/v0.6.4
+    notes: Adds drag-and-drop module loading and row insertion.
+image:
+  url: https://raw.githubusercontent.com/stoneface86/trackerboy/develop/.github/screenshot.png
+  alt: Trackerboy main window showing a four-channel pattern grid in the centre, a waveform preview and song order list on the left, and instrument and waveform lists on the right
+  credit: stoneface
+  source_url: https://github.com/stoneface86/trackerboy
+  first_party: true
