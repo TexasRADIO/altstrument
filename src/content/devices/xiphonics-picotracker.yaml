@@ -34,10 +34,10 @@ notes: >-
   community-contributed alternative firmwares for the v2 board. The circuit board and case files are released as
   CC0, but the picoTracker-pcb README says the picoTracker name and branding are not licensed for hardware that
   other people build from them. The picoTracker repository ships separate firmware images for the v2 board and for
-  older boards with a different display controller. LittleGPTracker, the upstream project, has no entry of its own
-  because its builds target game consoles, single-board computers and desktop systems rather than music hardware.
-  The original by Marc Nostromo (BSD-3-Clause) has had no commits since November 2020, and djdiskmachine maintains
-  a fork renamed Little Piggy Tracker under GPL-3.0.
+  older boards with a different display controller. LittleGPTracker, the upstream project, was written by Marc
+  Nostromo (BSD-3-Clause) and has had no commits since November 2020. djdiskmachine maintains a fork renamed Little
+  Piggy Tracker under GPL-3.0, which is listed on the handheld consoles it runs on, such as the PSP, the Anbernic
+  RG35XX series and the Miyoo Mini.
 related: [xiphonics-picotracker-advance, 203-systems-nullperator]
 image:
   src: /images/devices/xiphonics-picotracker.png
