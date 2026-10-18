@@ -1,0 +1,27 @@
+device: panic-playdate
+name: Playdate MIDI Synth
+summary: Small Playdate app that plays a MIDI keyboard through the console's speaker, receiving note, pedal and bend messages as JSON over the serial interface.
+description: >-
+  Receives MIDI-style messages, including note on, note off and damper pedal, as serialized JSON through the Playdate's
+  serial message interface and plays them with the console's built-in synthesizer. A companion web page,
+  Playdate MIDI Synth Controller, sends the messages from a computer MIDI keyboard. It builds with make or VS Code
+  and runs in the simulator.
+status: dormant
+authors:
+  - name: tedbrakob
+    url: https://github.com/tedbrakob
+source: https://github.com/tedbrakob/pd-midi-synth
+source_status: open
+license: Unlicense
+homepage: https://tedbrakob.github.io/pd-midi-synth-controller/
+distribution: source-only
+install_notes: >-
+  Build with the Playdate SDK using make, then load bin/output.pdx. The controller demo page at the homepage sends MIDI
+  to the Playdate from a Web MIDI browser.
+brick_risk: false
+tags: [synth, midi, serial]
+versions:
+  - version: main @ 6ef9c94
+    date: 2024-04-01
+    url: https://github.com/tedbrakob/pd-midi-synth/commit/6ef9c94
+    notes: No tagged releases; this is the latest commit.

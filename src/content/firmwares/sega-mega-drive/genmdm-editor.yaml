@@ -1,0 +1,36 @@
+device: sega-mega-drive
+name: genMDM Editor
+kind: tool
+summary: Web and desktop editor for the GenMDM and Mega Drive MIDI Interface that edits all FM and PSG parameters and loads presets.
+description: >-
+  A graphical editor for the GenMDM interface by little-scale and for Robert Hargreaves' Mega Drive MIDI Interface,
+  which it calls "your Sega". It runs as a desktop application built with Electron and as a web page in Firefox
+  99 or later and Chromium-based browsers, using Web MIDI. On iOS and iPadOS it works through a Web MIDI browser app.
+status: maintained
+authors:
+  - name: 2xAA
+    url: https://github.com/2xAA
+source: https://github.com/2xAA/genmdm-editor
+source_status: open
+license: MIT
+homepage: https://2xaa.github.io/genmdm-editor/
+distribution: browser-installer
+install_notes: Open the web page in a Web MIDI browser or download the desktop build from the release page.
+brick_risk: false
+tags: [editor, midi, web-midi]
+video:
+  url: https://youtu.be/btzQHaF8cU4
+  title: genMDM Editor Overview
+  credit: 2xAA
+  first_party: true
+  found_via: https://github.com/2xAA/genmdm-editor#readme
+versions:
+  - version: 2.1.2
+    date: 2023-04-16
+    url: https://github.com/2xAA/genmdm-editor/releases/tag/2.1.2
+  - version: 2.1.1
+    date: 2023-04-16
+    url: https://github.com/2xAA/genmdm-editor/releases/tag/2.1.1
+  - version: 2.1.0
+    date: 2023-04-16
+    url: https://github.com/2xAA/genmdm-editor/releases/tag/2.1.0

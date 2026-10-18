@@ -1,0 +1,29 @@
+name: Lynx
+manufacturer: Atari
+category: handheld
+tagline: Atari's 1989 colour handheld, with four identical audio channels that a homebrew tracker exposes
+description: >-
+  The Lynx is a handheld game console released by Atari in 1989, with a backlit colour screen, a WDC 65SC02
+  processor and a custom chip called Mikey that handles video and sound. Mikey provides four audio channels built
+  from identical timer-driven polynomial counters, and the Lynx II added stereo panning.
+
+  ALYNXDJ is a tracker in the style of LSDJ that runs on the console itself. It is the only music software for the
+  Lynx catalogued here.
+platform: WDC 65SC02 with Mikey audio and video chip
+links:
+  manufacturer: https://en.wikipedia.org/wiki/Atari_Lynx
+notes: >-
+  Homebrew ROMs run from a flash cartridge or in an emulator. ALYNXDJ syncs to MIDI clock through the Lynx's ComLynx
+  port using a Raspberry Pi Pico based adapter whose firmware is part of the project. No manufacturer product page
+  for the Lynx is currently maintained, so the Wikipedia article is linked.
+related: [sega-master-system-game-gear, sega-mega-drive, atari-2600]
+image:
+  src: /images/devices/atari-lynx.jpg
+  style: photo
+  alt: Black Atari Lynx II handheld seen from above at an angle, with a small colour screen in the centre, a D-pad on the left and four buttons on the right
+  width: 1200
+  height: 800
+  credit: Photo by Evan-Amos, via Wikimedia Commons
+  license: public domain
+  source_url: https://commons.wikimedia.org/wiki/File:Atari-Lynx-II-Handheld-Angled.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/0/09/Atari-Lynx-II-Handheld-Angled.jpg

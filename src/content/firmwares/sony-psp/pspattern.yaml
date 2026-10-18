@@ -1,0 +1,49 @@
+device: sony-psp
+name: PSPATTERN
+summary: >-
+  LittleGPTracker fork for the PSP with eight channels, a sampler, six synth engines, a built-in drum kit, effects
+  run on the Media Engine core, and MIDI in and out through the PSP-MIDI adapter.
+description: >-
+  A music tracker that builds songs from patterns of notes and generates the sound on the PSP, with no sample files
+  required. Each of the eight channels plays a sampler instrument, a synth instrument or MIDI out. The six synth
+  engines are tone, phase distortion, a detuned-oscillator engine, four-operator FM, a formant engine and a
+  wavetable engine. The sampler reads wav files and soundfont presets. A shared delay and reverb run on the PSP's
+  second Media Engine core, each channel has a phaser, chorus and distortion, and the mix can be rendered to a wav
+  file while the song plays. The README also says it runs on a PS Vita through its PSP emulator.
+
+  It is a fork of LittleGPTracker by Marc Nostromo. The author's shop lists it at $1 with a note that it is free and
+  points to the GitHub releases for the download.
+status: active
+authors:
+  - name: HobbyChop
+    url: https://hobbychop.com/
+source: https://github.com/HobbyChop/PSPATTERN
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file states "The new terms of this project are licensed under the GNU General Public License v3.0
+  (GPLv3)" and carries the original BSD-3-Clause text of LittleGPTracker (Discodirt, 2018) below it, and the NOTICE
+  file says the project is licensed under the GNU GPLv3. GitHub reports it as other. It vendors mcidclan's me-core
+  library under MIT.
+homepage: https://pspattern.hobbychop.com
+distribution: download
+requires_stock: PSP custom firmware (tested on 6.61 PRO-C)
+install_notes: >-
+  Copy the PSPATTERN folder from a release zip to ms0:/PSP/GAME/ on the Memory Stick and start it from the game
+  menu. MIDI needs the PSP-MIDI adapter and its usbmidi.prx; everything else works without it. The author lists the
+  PSP 1000, 2000 and 3000.
+brick_risk: false
+tags: [tracker, sampler, synth, midi, lgpt-fork]
+versions:
+  - version: 0.43.7b
+    date: 2026-09-22
+    url: https://github.com/HobbyChop/PSPATTERN/releases/tag/0.43.7b
+  - version: 0.43.6b
+    date: 2026-09-21
+    url: https://github.com/HobbyChop/PSPATTERN/releases/tag/0.43.6b
+  - version: 0.43.5b
+    date: 2026-09-17
+    url: https://github.com/HobbyChop/PSPATTERN/releases/tag/0.43.5b
+  - version: 0.43.3b
+    date: 2026-09-16
+    url: https://github.com/HobbyChop/PSPATTERN/releases/tag/0.43.3b

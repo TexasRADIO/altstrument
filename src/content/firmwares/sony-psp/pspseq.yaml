@@ -1,0 +1,29 @@
+device: sony-psp
+name: PSPSeq
+summary: Free homebrew step sequencer and synthesizer for the PSP from 2008 with real-time synthesis, samples and effects.
+description: >-
+  A music application for composing on the PSP with a step sequencer that triggers samples and synthesizer voices
+  and arranges loops into songs. Press coverage of version 3.0 describes up to sixteen audio tracks per song, several
+  synth types, per-step parameter changes, probabilistic sequencing, effects modules and recording to wav. The
+  3.01 update added a build for firmware 3.xx. It dates from the era of the PSP's original firmware.
+status: dormant
+authors:
+  - name: Ethan Bordeaux (DSP Music)
+    url: https://dspmusic.org/
+source_status: closed
+license: unspecified
+license_notes: >-
+  The download page calls PSPSeq a "free homebrew application" and states no license, and no source is offered.
+homepage: https://dspmusic.org/psp/
+distribution: download
+requires_stock: Original-era PSP firmware (3.xx build in 3.01); not checked on current custom firmware
+install_notes: >-
+  Extract the zip and copy the PSPSeq folder into the PSP's GAME directory on the Memory Stick. Behaviour on current
+  custom firmware has not been verified here.
+brick_risk: false
+tags: [sequencer, synth, sampler]
+versions:
+  - version: "3.01"
+    date: 2008-09-03
+    url: https://dspmusic.org/psp/
+    notes: Date as shown on the download page.

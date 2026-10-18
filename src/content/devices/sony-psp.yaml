@@ -1,0 +1,39 @@
+name: PSP
+manufacturer: Sony
+category: handheld
+tagline: Sony's 2004 handheld console, a platform for homebrew trackers and MIDI sound modules
+description: >-
+  The PlayStation Portable is a handheld game console released by Sony in 2004. It has a 4.3 inch screen, a
+  MIPS-based main processor with a second Media Engine core, a Memory Stick slot, and a USB port that acts only as
+  a device. The PSP-1000, 2000 and 3000 series, the PSP Go and the PSP-E1000 share one software
+  platform.
+
+  Music software for it is homebrew, installed as an EBOOT folder on the Memory Stick. The tracker projects
+  PSPATTERN, Little Piggy Tracker and MilkyTracker build on it, and a group of newer synthesizer apps turn it into
+  a MIDI sound module when connected to a computer or keyboard through a USB host adapter.
+platform: MIPS Allegrex (R4000-class) CPU with a Media Engine second core
+links:
+  manufacturer: https://en.wikipedia.org/wiki/PlayStation_Portable
+  community:
+    - label: ARK-4 custom firmware
+      url: https://github.com/PSP-Archive/ARK-4
+    - label: PSPDEV, the homebrew toolchain
+      url: https://pspdev.github.io/
+notes: >-
+  Homebrew needs custom firmware such as ARK-4 or PRO; the projects here report testing on firmware 6.61. The PSP's
+  own USB port cannot take MIDI from a computer or keyboard, so apps that need MIDI use an adapter that acts as a
+  USB host (HobbyChop sells one, the PSP-MIDI adapter) or a hardware modification of the headphone port. HobbyChop's
+  synth apps list the PSP-1000, 2000 and 3000 as supported and the PSP Go as not supported. Software that runs on
+  the PSP also runs on the PS Vita through its PSP emulation, with some limits. The USB MIDI kernel modules for the
+  PSP are not catalogued yet. Sony's own PSP firmware is not catalogued here.
+related: [sony-ps-vita]
+image:
+  src: /images/devices/sony-psp.jpg
+  style: photo
+  alt: Black Sony PSP-1000 handheld seen from above at an angle, with a grey screen, a D-pad and analog nub on the left and four face buttons on the right
+  width: 1200
+  height: 681
+  credit: Photo by Evan-Amos, via Wikimedia Commons
+  license: public domain
+  source_url: https://commons.wikimedia.org/wiki/File:Psp-1000.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/4/46/Psp-1000.jpg

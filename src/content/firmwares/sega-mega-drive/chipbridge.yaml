@@ -1,0 +1,32 @@
+device: sega-mega-drive
+name: Chipbridge
+kind: tool
+summary: RP2040-based USB and serial MIDI and sync interface for retro-console trackers, with adapters for the Mega Drive, Master System, Game Gear, Lynx, SNES and Atari 2600.
+description: >-
+  A shared RP2040-Zero board that provides USB MIDI, opto-isolated serial MIDI, status indication and a protected
+  two-wire console interface, with console-specific cables and passive adapters. The compatibility table lists the Sega
+  Master System and Game Gear with SMSGGDJ, the Mega Drive with genmddj, the Atari Lynx with ALYNXDJ and the Super
+  Nintendo with SNDJ, each tested for MIDI clock sync and, except the SNES, for MIDI notes, and the Atari 2600 with the
+  A26F NEO interface for notes only. Firmware for the Lynx and the 2600 stays in those projects, and this repository
+  carries the shared hardware, adapter boards and shared firmware.
+status: active
+authors:
+  - name: little-scale contributors
+    url: https://github.com/little-scale
+source: https://github.com/little-scale/chipbridge
+source_status: open
+license: GPL-2.0-only
+license_notes: >-
+  Per LICENSE.md: firmware, tools, tests and the UF2 binaries are GPL-2.0-only, KiCad hardware designs are
+  CERN-OHL-P-2.0 and documentation is CC BY 4.0. GitHub reports it as other.
+homepage: https://github.com/little-scale/chipbridge
+distribution: download
+install_notes: >-
+  Flash the shared UF2 from the releases folder to an RP2040-Zero over USB boot mode. The hardware directory has the
+  bill of materials and the main and adapter boards. Console cables are specific to each system.
+brick_risk: false
+tags: [midi, sync, hardware, multi-console]
+versions:
+  - version: v1.0.0
+    date: 2026-09-15
+    url: https://github.com/little-scale/chipbridge/releases/tag/v1.0.0

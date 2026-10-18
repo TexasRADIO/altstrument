@@ -1,0 +1,29 @@
+device: sony-psp
+name: PSPECTRA
+summary: Synthwave sound module for the PSP with five instruments, a drum machine and an effects chain, played over MIDI through the PSP-MIDI adapter.
+description: >-
+  A five-instrument synthesizer driven by MIDI: a supersaw lead with glide, an arpeggiated pulse voice that syncs to
+  DAW clock, a paraphonic pad, a bass with a sub octave and a drum machine whose 21 drums are synthesized at first
+  boot, in eight kits. Each bus has delay, chorus, reverb send, drive, crush, EQ and sidechain ducking, and a master
+  section has a ten-band EQ, stereo width and a saturator. Four LFOs route to voices and effects, every parameter has a
+  MIDI CC, and the stated round trip latency is 3 to 5 ms.
+status: active
+authors:
+  - name: HobbyChop
+    url: https://hobbychop.com/
+source_status: closed
+license: proprietary
+license_notes: The product page states no license and no source.
+homepage: https://www.hobbychop.com/product/pspectra
+distribution: commercial
+requires_stock: PSP custom firmware; PSP-MIDI adapter
+install_notes: >-
+  The package contains EBOOT.PBP, usbmidi.prx and a manual. The page lists the PSP 1000, 2000 and 3000 and says the PSP
+  Go is not supported. MIDI comes from a DAW through the adapter's USB-C port or from hardware through its TRS in jack.
+brick_risk: false
+tags: [synth, drum-machine, synthwave, midi]
+versions:
+  - version: 1.6.5
+    date: 2026-09-16
+    url: https://www.hobbychop.com/product/pspectra
+    notes: Version and date as shown on the product page.

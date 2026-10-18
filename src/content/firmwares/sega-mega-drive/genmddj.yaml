@@ -1,0 +1,35 @@
+device: sega-mega-drive
+name: genmddj
+summary: LSDJ-style tracker for the Mega Drive, Genesis and Nomad with six FM voices, three PSG squares, noise and PCM, written in 68000 and Z80 assembly.
+description: >-
+  A tracker with ten voices: six YM2612 FM channels, three SN76489 squares and a noise channel, where the sixth FM
+  channel doubles as the PCM and wavetable host. Notes sit in phrases, phrases in chains and chains in a song, and
+  there are six instrument types (FM, kit, wave, tone, noise and percussion). It supports save and load, hardware sync
+  through the controller port in output, pulse and input modes, and a mode in which a MIDI keyboard or DAW plays the
+  ten voices live. The author reports testing on NTSC and PAL consoles and the Nomad, and calls it work in progress.
+  It is a sibling of SMSGGDJ.
+status: active
+authors:
+  - name: Sebastian Tomczak (little-scale)
+    url: https://github.com/little-scale
+source: https://github.com/little-scale/genmddj
+source_status: open
+license: MIT
+homepage: https://github.com/little-scale/genmddj
+distribution: download
+requires_stock: Flash cartridge, or an emulator
+install_notes: >-
+  Download the .bin from the latest release and copy it to the flash cartridge. The README says the project is under
+  active development with rough edges.
+brick_risk: false
+tags: [tracker, lsdj-style, ym2612, psg, midi]
+versions:
+  - version: v0.24
+    date: 2026-10-09
+    url: https://github.com/little-scale/genmddj/releases/tag/v0.24
+  - version: v0.23
+    date: 2026-10-07
+    url: https://github.com/little-scale/genmddj/releases/tag/v0.23
+  - version: v0.22
+    date: 2026-09-27
+    url: https://github.com/little-scale/genmddj/releases/tag/v0.22

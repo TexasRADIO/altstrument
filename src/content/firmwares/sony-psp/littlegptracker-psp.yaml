@@ -1,0 +1,46 @@
+device: sony-psp
+name: LittleGPTracker PSP
+summary: >-
+  PSP-only fork of Little Piggy Tracker with USB MIDI out, generative melody and probability commands, scale keys,
+  a delay and a mixer screen.
+description: >-
+  Keeps the shared tracker engine and the PSP platform code of Little Piggy Tracker and removes the desktop and other
+  handheld targets. It adds class-compliant USB MIDI output through the psp-usb-midi kernel driver, with notes,
+  controllers, program changes, pitch bend and a 24 PPQN clock, a MELO command for persistent constrained melodies, a
+  PROB command that gates rows, selectable scale keys, a delay with feedback self-oscillation, faster loading of
+  long wav samples and a mixer screen with channel filters and meters. The README lists 32 MB of memory on the
+  PSP-1000 series and 64 MB on the 2000, 3000, Go and E1000 as the limit for decoded samples.
+
+  The code descends from LittleGPTracker by Marc Nostromo through djdiskmachine's Little Piggy Tracker.
+status: active
+authors:
+  - name: YYUUGGOO
+    url: https://github.com/YYUUGGOO
+source: https://github.com/YYUUGGOO/LittleGPTrackerPSP
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file states that the new terms are GPL v3.0 and keeps the original BSD 3-Clause License text of
+  LittleGPTracker (copyright Discodirt, 2018), as in the upstream fork. GitHub reports it as other.
+distribution: download
+requires_stock: PSP custom firmware (ARK-4 or 5 on 6.61 for USB MIDI)
+install_notes: >-
+  Each push to master builds a PSP package and publishes it as a prerelease with a downloadable EBOOT, and stable
+  releases are cut by hand. The USB MIDI driver is described as experimental, and the README says it should work on
+  most models running ARK-4 or 5 on 6.61. USB MIDI can be turned off in the project settings.
+brick_risk: false
+tags: [tracker, sampler, midi, generative, lgpt-fork]
+versions:
+  - version: 1.6.0-bacon19
+    date: 2026-07-29
+    url: https://github.com/YYUUGGOO/LittleGPTrackerPSP/releases/tag/1.6.0-bacon19
+    notes: Prerelease.
+  - version: v1.0.2
+    date: 2026-07-23
+    url: https://github.com/YYUUGGOO/LittleGPTrackerPSP/releases/tag/v1.0.2
+  - version: v1.0.1
+    date: 2026-07-22
+    url: https://github.com/YYUUGGOO/LittleGPTrackerPSP/releases/tag/v1.0.1
+  - version: v1.0.0
+    date: 2026-07-22
+    url: https://github.com/YYUUGGOO/LittleGPTrackerPSP/releases/tag/v1.0.0

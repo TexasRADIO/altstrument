@@ -1,0 +1,37 @@
+name: Master System / Game Gear
+manufacturer: Sega
+category: handheld
+tagline: Sega's 8-bit console and its handheld sibling, which share a Z80 and a four-voice sound chip
+description: >-
+  The Master System is an 8-bit home console released by Sega in 1985 in Japan and in 1986 and 1987 elsewhere, and
+  the Game Gear is its handheld successor from 1990. Both use a Zilog Z80 processor and a Texas Instruments
+  SN76489-compatible sound chip with three square-wave channels and a noise channel. The Game Gear adds stereo
+  panning for each channel, and the Japanese FM Sound Unit adds a Yamaha YM2413 FM chip to the Master System.
+
+  SMSGGDJ is a tracker that builds both a Master System ROM and a Game Gear ROM from one source tree. A bridge
+  firmware for ESP32 boards lets it follow Ableton Link tempo.
+platform: Zilog Z80 with SN76489-compatible PSG (optional YM2413 FM)
+links:
+  manufacturer: https://en.wikipedia.org/wiki/Master_System
+  community:
+    - label: SMS Power!
+      url: https://www.smspower.org/
+    - label: Game Gear on Wikipedia
+      url: https://en.wikipedia.org/wiki/Game_Gear
+notes: >-
+  Homebrew ROMs run from a flash cartridge or in an emulator. SMSGGDJ's YM2413 FM mode needs a Master System with
+  the FM Sound Unit or a Game Gear with the GGFM hardware modification; sync with a computer goes through a
+  controller or EXT port adapter such as Chipbridge. Developer sound libraries for the SN76489, and desktop trackers
+  that only export music for these consoles, are not catalogued. This one device covers both consoles because the
+  same ROM source and sound chip serve both.
+related: [sega-mega-drive, atari-lynx, atari-2600]
+image:
+  src: /images/devices/sega-master-system-game-gear.jpg
+  style: photo
+  alt: Black Sega Master System console with a red cartridge panel, a card slot at the front and a control pad connected by a cable
+  width: 1200
+  height: 660
+  credit: Photo by Evan-Amos, via Wikimedia Commons
+  license: public domain
+  source_url: https://commons.wikimedia.org/wiki/File:Sega-Master-System-Set.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/8/88/Sega-Master-System-Set.jpg

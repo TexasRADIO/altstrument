@@ -1,0 +1,33 @@
+name: Atari 2600
+manufacturer: Atari
+category: handheld
+tagline: Atari's 1977 home console, whose two-voice TIA chip is played from MIDI or keypad synth cartridges
+description: >-
+  The Atari 2600, first sold as the Video Computer System in 1977, is a home console built around a MOS 6507
+  processor and the TIA chip, which produces video and two audio channels. Each channel has a 4-bit volume and a
+  5-bit frequency divider with a choice of tone and noise waveforms.
+
+  The music software here runs from a cartridge. A26F NEO is a MIDI interface that plays the TIA from a computer,
+  and Synthcart is a keypad-controlled synthesizer with an arpeggiator and drum patterns.
+platform: MOS 6507 with TIA video and audio chip
+links:
+  manufacturer: https://en.wikipedia.org/wiki/Atari_2600
+  community:
+    - label: AtariAge
+      url: https://atariage.com/
+notes: >-
+  Homebrew ROMs run from a flash or EEPROM cartridge, such as a Unocart, or in an emulator. A26F NEO also
+  needs a Raspberry Pi Pico wired to controller port 2. Synthcart was sold as a physical cartridge through the
+  AtariAge store. Developer tools such as TIATracker, which exports players for games, are not catalogued. No
+  current manufacturer product page for the 2600 was found, so the Wikipedia article is linked.
+related: [sega-master-system-game-gear, sega-mega-drive, atari-lynx]
+image:
+  src: /images/devices/atari-2600.jpg
+  style: photo
+  alt: Atari 2600 four-switch console with a woodgrain side panel and a black ribbed top, with a single black joystick in front of it
+  width: 1200
+  height: 700
+  credit: Photo by Evan-Amos, via Wikimedia Commons
+  license: public domain
+  source_url: https://commons.wikimedia.org/wiki/File:Atari-2600-Wood-4Sw-Set.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/b/b9/Atari-2600-Wood-4Sw-Set.jpg

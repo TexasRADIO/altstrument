@@ -1,0 +1,39 @@
+device: atari-lynx
+name: ALYNXDJ
+summary: LSDJ-style tracker for the Atari Lynx in cc65 C and assembly that exposes the Lynx's polynomial-counter audio channels, with ComLynx sync.
+description: >-
+  Written in cc65 C and ca65 assembly, with a song, chain and phrase hierarchy and eleven screens including an on-console
+  help reference. Each of Mikey's four identical audio channels can play as an LFSR oscillator with the 12-bit
+  polynomial exposed per instrument as a tap mask and seed, a hardware triangle, or an 8-bit PCM kit. The Lynx II's
+  stereo panning is supported, and ComLynx acts as a multi-drop sync bus. It is the third tracker in a family after
+  SMSGGDJ and genmddj, and the author reports version 0.60 verified on a real Atari Lynx.
+status: active
+authors:
+  - name: Sebastian Tomczak (little-scale)
+    url: https://github.com/little-scale
+source: https://github.com/little-scale/alynxdj
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no LICENSE file. The README's License / credits section only names the author and credits the
+  EEPROM driver to Bastian Schick's 93C46 code from the cc65 Lynx library.
+homepage: https://github.com/little-scale/alynxdj
+distribution: download
+requires_stock: Lynx flash cartridge, or an emulator
+install_notes: >-
+  Download the .lnx ROM from the release page and run it from a flash cartridge. The release also lists UF2 firmware
+  for a Pico-based ComLynx MIDI adapter, with a variant for Chipbridge hardware, plus factory samples and a browser
+  sample patch browser.
+brick_risk: false
+tags: [tracker, lsdj-style, lfsr, midi-sync]
+versions:
+  - version: v0.60
+    date: 2026-10-16
+    url: https://github.com/little-scale/alynxdj/releases/tag/v0.60
+    notes: Four-voice LFSR timing recovery, verified on a real Lynx.
+  - version: v0.59
+    date: 2026-08-27
+    url: https://github.com/little-scale/alynxdj/releases/tag/v0.59
+  - version: v0.57
+    date: 2026-07-30
+    url: https://github.com/little-scale/alynxdj/releases/tag/v0.57

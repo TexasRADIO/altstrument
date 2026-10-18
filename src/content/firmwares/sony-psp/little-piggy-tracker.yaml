@@ -1,0 +1,45 @@
+device: sony-psp
+name: Little Piggy Tracker
+summary: >-
+  Maintained fork of LittleGPTracker, a tracker for portable game consoles; its releases include a PSP build with
+  soundfont support and no MIDI.
+description: >-
+  Little Piggy Tracker, formerly called LittleGPTracker, is an LSDJ-inspired tracker with a song, chain and phrase
+  workflow that runs on Windows, macOS, Linux, the PSP, the Miyoo Mini, the Raspberry Pi and other retro handhelds.
+  The project publishes a PSP package with each release. The README's platform table lists soundfonts as supported
+  and MIDI as not enabled on the PSP.
+
+  The tracker began as LittleGPTracker by Marc Nostromo, whose source tree has targets for the GP32, GP2X, Dingoo
+  and PSP among others, and the original repository (Mdashdotdashn/LittleGPTracker, BSD-3-Clause) has had no commits since 2020.
+  djdiskmachine's fork continues it under GPL-3.0 and the same code is the base of the picoTracker, PSPATTERN and
+  LittleGPTracker PSP entries.
+status: active
+authors:
+  - name: djdiskmachine
+    url: https://github.com/djdiskmachine
+  - name: Marc Nostromo (Mdashdotdashn), original LittleGPTracker
+    url: https://github.com/Mdashdotdashn
+source: https://github.com/djdiskmachine/LittleGPTracker
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file states that the new terms are GPL v3.0 and keeps the original BSD 3-Clause License text of
+  LittleGPTracker (copyright Discodirt, 2018). GitHub reports it as other because the file holds both texts.
+homepage: https://github.com/djdiskmachine/LittleGPTracker
+distribution: download
+requires_stock: PSP custom firmware
+install_notes: >-
+  Unzip the LGPT-PSP package into a folder on the Memory Stick. The bundled notes say that in the PPSSPP emulator
+  the app starts with a black screen until software rendering is enabled or the screen resolution is changed in
+  its settings.
+brick_risk: false
+tags: [tracker, sampler, lgpt-fork, multi-platform]
+versions:
+  - version: 1.6.0-bacon20
+    date: 2026-09-12
+    url: https://github.com/djdiskmachine/LittleGPTracker/releases/tag/1.6.0-bacon20
+    notes: Prerelease; the PSP package is LGPT-PSP-1.6.0-bacon20.zip.
+  - version: 1.5.0
+    date: 2025-12-15
+    url: https://github.com/djdiskmachine/LittleGPTracker/releases/tag/1.5.0
+    notes: Latest non-prerelease; the PSP package is LGPT-PSP-1.5.0.zip.

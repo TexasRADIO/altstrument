@@ -1,0 +1,32 @@
+device: sony-ps-vita
+name: DS-8 Drumstream
+summary: Closed-source drum synth, sampler and groovebox for the PS Vita with a 64-step sequencer, arranger, live effects and USB audio and MIDI.
+description: >-
+  A drum synthesizer with real-time engines for kicks, snares, toms, hats and FM voices, a pattern sequencer of up to
+  64 steps with automation and conditions, and a sampler track that records from the Vita's microphone, imports audio
+  or resamples the running groove, with a waveform and slice editor. An arranger builds songs from patterns, live effects
+  include an XY pad, a tempo-synced delay and a DJ filter, and projects are saved whole. With the companion USB plugin
+  (see psvita-usb-audio-midi) individual drum tracks can be recorded on a computer and external audio can be brought
+  into the sampler.
+status: active
+authors:
+  - name: Intermynd Instruments
+    url: https://intermynd-instruments.com/
+source_status: closed
+license: proprietary
+license_notes: >-
+  The itch.io page states no license for DS-8 and publishes no source; it lists third-party material it ships (the
+  GeneralUser GS bank under its own license, CC0 waveforms and a CC BY 3.0 TR-909 kit).
+homepage: https://intermynd-instruments.itch.io/ds-8
+distribution: download
+requires_stock: PS Vita with HENkaku or similar homebrew; psvita-usb-audio-midi plugin for USB
+install_notes: >-
+  Install the .vpk on a modified Vita. The USB audio and MIDI features need the open-source kernel plugin from the
+  same authors. The itch.io page says it is in development and sold name-your-own-price.
+brick_risk: false
+tags: [drum-machine, sampler, groovebox, usb-audio]
+versions:
+  - version: 0.8.2
+    date: 2026-09-06
+    url: https://intermynd-instruments.itch.io/ds-8
+    notes: Version and date from the v0.8.2 release notes on the itch.io page.

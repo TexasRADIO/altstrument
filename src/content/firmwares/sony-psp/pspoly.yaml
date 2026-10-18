@@ -1,0 +1,32 @@
+device: sony-psp
+name: PSPOLY
+summary: Ten-voice, four-part multitimbral polyphonic synthesizer for the PSP, played over MIDI through the PSP-MIDI adapter.
+description: >-
+  A synth app that makes the PSP a sound module for a DAW or hardware MIDI gear. It has ten voices allocated
+  dynamically across four parts, eleven voice characters such as Juno Pad, PWM Strings, DX Keys, Supersaw and Sub
+  Bass with four macro controls each, a MIDI channel per part with layering, and pitch bend, mod wheel, sustain,
+  glide, cutoff, resonance and envelope controls. Output is 44.1 kHz stereo with a stated round trip latency of 3 to 5
+  ms, and MIDI can pass through to the adapter's TRS out. The package contains the EBOOT, the usbmidi.prx driver and
+  a manual.
+status: active
+authors:
+  - name: HobbyChop
+    url: https://hobbychop.com/
+source_status: closed
+license: proprietary
+license_notes: >-
+  The product page states no license and no source. It is described as the free instrument for the PSP-MIDI
+  adapter but is listed at $1.00.
+homepage: https://www.hobbychop.com/product/pspoly-poly-synth-for-the-psp-midi-adapter-free-downloadable-psp-app
+distribution: commercial
+requires_stock: PSP custom firmware; PSP-MIDI adapter
+install_notes: >-
+  Copy the PSPOLY folder to ms0:/PSP/GAME/. The page lists the PSP 1000, 2000 and 3000 and says the PSP Go is not
+  supported.
+brick_risk: false
+tags: [synth, midi, polyphonic]
+versions:
+  - version: 0.6.1
+    date: 2026-08-24
+    url: https://www.hobbychop.com/product/pspoly-poly-synth-for-the-psp-midi-adapter-free-downloadable-psp-app
+    notes: Version and date as shown on the product page.

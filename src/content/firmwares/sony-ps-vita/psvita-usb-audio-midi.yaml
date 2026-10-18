@@ -1,0 +1,44 @@
+device: sony-ps-vita
+name: psvita-usb-audio-midi
+summary: Experimental taiHEN kernel plugin that makes the PS Vita a class-compliant USB MIDI and USB audio device for a computer.
+description: >-
+  A kernel plugin, a user-mode client bridge and a diagnostic app. The Vita appears to a computer as a device called PS
+  Vita USB with MIDI in and out including clock, start, continue and stop, ten channels of 48 kHz audio from the Vita
+  (master left and right plus eight track channels) and stereo 48 kHz audio into it. The plugin does not replace
+  the Vita's normal USB mode at boot; an application acquires USB when it needs it and the previous state is restored on
+  release. It was written for the DS-8 drum synth, and the author encourages other apps to use it.
+status: active
+authors:
+  - name: Intermynd Instruments
+    url: https://intermynd-instruments.com/
+source: https://github.com/intermynd-instruments/psvita-usb-audio-midi
+source_status: open
+license: MIT
+homepage: https://intermynd-instruments.com/
+distribution: download
+requires_stock: PS Vita with taiHEN homebrew
+install_notes: >-
+  Needs a homebrew-enabled Vita with taiHEN and VitaShell; copy the plugin from the release and register it. The plugin
+  version must match the app: v0.2 is for DS-8 v0.7.x and v0.1.1 for v0.6.x. The README says it does not touch
+  config.txt, flash or partitions, but it warns that kernel plugins carry risk and gives no liability for an unbootable
+  Vita. Do not run it with vita-udcd-uvc, vitastick or other USB plugins.
+brick_risk: false
+tags: [usb-midi, usb-audio, kernel-plugin]
+video:
+  url: https://youtu.be/NL-XpDzZxXg
+  title: Turn your PS Vita Into a USB Music Workstation [ DS-8 0.6 Update ]
+  credit: Intermynd Instruments
+  first_party: true
+  found_via: https://github.com/intermynd-instruments/psvita-usb-audio-midi#readme
+versions:
+  - version: v0.2
+    date: 2026-08-10
+    url: https://github.com/intermynd-instruments/psvita-usb-audio-midi/releases/tag/v0.2
+    notes: Current release, for DS-8 v0.7.x.
+  - version: v0.1.1
+    date: 2026-07-26
+    url: https://github.com/intermynd-instruments/psvita-usb-audio-midi/releases/tag/v0.1.1
+    notes: Recommended for DS-8 v0.6.x.
+  - version: v0.1
+    date: 2026-07-25
+    url: https://github.com/intermynd-instruments/psvita-usb-audio-midi/releases/tag/v0.1

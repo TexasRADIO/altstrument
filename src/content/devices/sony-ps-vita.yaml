@@ -1,0 +1,37 @@
+name: PlayStation Vita
+manufacturer: Sony
+category: handheld
+tagline: Sony's 2011 handheld console, with homebrew drum synths, sound modules and a USB MIDI plugin
+description: >-
+  The PlayStation Vita is a handheld game console released by Sony in 2011. It has a 5 inch touch screen, a rear
+  touch pad, two analog sticks, a quad-core ARM processor and a microphone, and it was sold in PCH-1000 and
+  PCH-2000 models. The PlayStation TV (VTE-1000) is a console without a screen that runs the same software.
+
+  Music software for it is homebrew, installed as a VPK package. It includes the drum synth and sampler DS-8
+  Drumstream, the SoundFont and MT-32 sound module PRISM, a port of the MilkyTracker module tracker, and a kernel
+  plugin that makes the Vita a class-compliant USB MIDI and audio device.
+platform: ARM Cortex-A9 quad-core (Sony CXD5315)
+links:
+  manufacturer: https://en.wikipedia.org/wiki/PlayStation_Vita
+  community:
+    - label: Vita Hacks Guide
+      url: https://vita.hacks.guide/
+    - label: VitaSDK
+      url: https://vitasdk.org/
+notes: >-
+  Homebrew needs a hacked console running HENkaku or h-encore, and kernel plugins load through taiHEN. The apps
+  catalogued here target the Vita and PlayStation TV; PRISM and DS-8 both list the PlayStation TV as usable. Apps
+  that use the USB MIDI plugin need it installed by hand, and its author warns that any kernel plugin carries risk
+  of instability or an unbootable console. PSP software also runs on the Vita through its PSP emulator, so PSPATTERN is
+  listed under the PSP. Sony's own Vita firmware is not catalogued here.
+related: [sony-psp]
+image:
+  src: /images/devices/sony-ps-vita.jpg
+  style: photo
+  alt: Black PlayStation Vita PCH-1000 handheld seen from above at an angle, with a large dark screen between a D-pad and analog stick on the left and four face buttons and a second stick on the right
+  width: 1200
+  height: 732
+  credit: Photo by Evan-Amos, via Wikimedia Commons
+  license: public domain
+  source_url: https://commons.wikimedia.org/wiki/File:PlayStation-Vita-1101-FL.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/b/b4/PlayStation-Vita-1101-FL.jpg

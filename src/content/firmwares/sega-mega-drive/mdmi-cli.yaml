@@ -1,0 +1,28 @@
+device: sega-mega-drive
+name: mdmi-cli
+kind: tool
+summary: Python command-line tool that loads, dumps and clears FM presets on the Mega Drive MIDI Interface and tests its connection and latency.
+description: >-
+  Loads presets into the Mega Drive MIDI Interface from DefleMask presets (versions 8, 9 and 11), WOPN banks as used
+  by libOPNMIDI (versions 1 and 2) and TFI files, dumps presets or live FM channel parameters back to DMP or TFI
+  files, clears user presets, lists WOPN instruments and measures latency with a histogram. It installs from PyPI
+  with pip.
+status: active
+authors:
+  - name: Robert Hargreaves
+    url: https://github.com/rhargreaves
+source: https://github.com/rhargreaves/mdmi-cli
+source_status: open
+license: MIT
+homepage: https://pypi.org/project/mdmi-cli/
+distribution: download
+install_notes: Install with pip install mdmi-cli. It talks to the Mega Drive MIDI Interface ROM over MIDI.
+brick_risk: false
+tags: [preset-loader, sysex, cli]
+versions:
+  - version: v1.0.1
+    date: 2026-04-04
+    url: https://github.com/rhargreaves/mdmi-cli/releases/tag/v1.0.1
+  - version: v1.0.0
+    date: 2026-04-04
+    url: https://github.com/rhargreaves/mdmi-cli/releases/tag/v1.0.0

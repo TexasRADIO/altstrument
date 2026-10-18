@@ -1,0 +1,35 @@
+device: sega-master-system-game-gear
+name: SMSGGDJ Link ESP32 bridge
+kind: tool
+summary: ESP32 firmware that follows Ableton Link or USB MIDI clock and sends a tick counter to the controller port so SMSGGDJ can sync to Ableton Live.
+description: >-
+  A Seeed XIAO ESP32-C3 joins an Ableton Link session over WiFi, derives a 24 PPQN tick clock from the shared beat
+  timeline and presents a rolling 2-bit counter on two open-drain pins into controller port 2. The tracker reads the port
+  once per video frame and advances by the counter change, so the sync is counted instead of edge-timed. On a XIAO
+  ESP32-S3 the same firmware also follows USB MIDI clock from a DAW. A legacy wired Teensy 4.1 version is kept in the
+  repository, and the author points to Chipbridge as a wired alternative. The same bridge serves genmddj on the Mega
+  Drive, which has its own entry.
+status: active
+authors:
+  - name: Sebastian Tomczak (little-scale)
+    url: https://github.com/little-scale
+source: https://github.com/little-scale/smsggdj-link-esp32
+source_status: open
+license: GPL-2.0-or-later
+license_notes: >-
+  The README states GPL-2.0-or-later, and the LICENSE file is the GPL version 2 text. The firmware links Ableton Link,
+  which is GPL-2.0-or-later, and the legacy Teensy subproject is under the same license.
+homepage: https://little-scale.github.io/smsggdj-link-esp32/
+distribution: browser-installer
+install_notes: >-
+  The web flasher page flashes a prebuilt binary to the XIAO from Chrome or Edge over a USB-C data cable, or esptool can
+  write a downloaded binary; the repository has no GitHub releases, and a build with ESP-IDF is also described. A
+  freshly flashed board has no WiFi credentials and hosts its own setup page. The Teensy 4.x version is not 5 V
+  tolerant and needs a level shifter.
+brick_risk: false
+tags: [sync, ableton-link, esp32]
+versions:
+  - version: main @ d217bde
+    date: 2026-08-12
+    url: https://github.com/little-scale/smsggdj-link-esp32/commit/d217bde
+    notes: No tagged releases; this is the latest commit.

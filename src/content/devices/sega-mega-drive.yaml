@@ -1,0 +1,35 @@
+name: Mega Drive / Genesis
+manufacturer: Sega
+category: handheld
+tagline: Sega's 16-bit console, with an FM chip that homebrew trackers and MIDI ROMs drive directly
+description: >-
+  The Mega Drive, sold as the Genesis in North America, is a 16-bit home console released by Sega in 1988. A
+  Motorola 68000 handles the main program and a Zilog Z80 runs the sound side, which has a Yamaha YM2612 six-channel
+  FM synthesizer with a sample channel and a Texas Instruments SN76489 PSG with three square waves and noise.
+
+  The Mega Drive music software here is homebrew that runs on the console. genmddj is a tracker, and the Mega Drive
+  MIDI Interface ROM makes the console a MIDI-controlled synthesizer, with desktop editors and a command line
+  tool for its presets.
+platform: Motorola 68000 and Zilog Z80, with Yamaha YM2612 and TI SN76489 sound chips
+links:
+  manufacturer: https://en.wikipedia.org/wiki/Sega_Genesis
+  community:
+    - label: Sega Retro
+      url: https://segaretro.org/Sega_Mega_Drive
+notes: >-
+  Homebrew ROMs run from a flash cartridge such as a Mega EverDrive, or in an emulator. The Mega Drive MIDI
+  Interface ROM talks to a computer through the EverDrive's USB port or a serial cable on a controller port. The
+  commercial GenMDM interface by little-scale, sold by Catskull Electronics, plugs into controller port 2 and has
+  closed firmware, so it is not catalogued. Desktop trackers that only export ROMs, such as Furnace and DefleMask,
+  are not catalogued either. The Nomad handheld version is covered by genmddj.
+related: [sega-master-system-game-gear, atari-lynx, atari-2600]
+image:
+  src: /images/devices/sega-mega-drive.jpg
+  style: photo
+  alt: Black Sega Mega Drive console with a circular cartridge cover marked 16-BIT and a six-button controller in front of it
+  width: 1200
+  height: 600
+  credit: Photo by Evan-Amos, via Wikimedia Commons
+  license: public domain
+  source_url: https://commons.wikimedia.org/wiki/File:Sega-Mega-Drive-JP-Mk1-Console-Set.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/a/a1/Sega-Mega-Drive-JP-Mk1-Console-Set.jpg

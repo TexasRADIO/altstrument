@@ -1,0 +1,36 @@
+name: Playdate
+manufacturer: Panic
+category: handheld
+tagline: Panic's yellow handheld with a crank, a built-in synth engine and a Lua and C SDK
+description: >-
+  Playdate is a handheld game console from Panic, released in 2022. It has a 400 by 240 pixel one-bit screen, a
+  D-pad, two buttons, a crank on the side, a speaker and a microphone, and it runs games and apps installed as
+  PDX packages.
+
+  Its SDK includes a software synthesizer and sample player, which the music apps here use: Yacht is a piano roll
+  and drum studio, Modular Play is a cable-patched module playground, and Playdate MIDI Synth plays MIDI
+  keyboard notes through the console's speaker.
+platform: ARM Cortex-M7 (STM32F7)
+links:
+  manufacturer: https://play.date/
+  community:
+    - label: Playdate SDK
+      url: https://sdk.play.date/
+    - label: Playdate developer forum
+      url: https://devforum.play.date/
+notes: >-
+  Apps are sideloaded through the Playdate's USB connection or the web sideload page, and no custom firmware is
+  needed. Apps are built with the Playdate SDK in Lua or C, and they can be run in the Playdate Simulator on a
+  computer. Several other music apps exist on itch.io and the Playdate Catalog as closed-source projects and are
+  not catalogued yet. Panic's own system software is not catalogued here.
+related: []
+image:
+  src: /images/devices/panic-playdate.webp
+  style: photo
+  alt: Front view of a yellow Playdate handheld with a black-framed screen, a yellow D-pad, round B and A buttons and a silver crank on the right edge
+  width: 1200
+  height: 1011
+  credit: Photo by Louiemantia, via Wikimedia Commons
+  license: CC-BY-SA-4.0
+  source_url: https://commons.wikimedia.org/wiki/File:Playdate_front-view.png
+  original_url: https://upload.wikimedia.org/wikipedia/commons/1/17/Playdate_front-view.png

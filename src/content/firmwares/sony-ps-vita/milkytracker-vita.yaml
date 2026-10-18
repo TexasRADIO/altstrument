@@ -1,0 +1,30 @@
+device: sony-ps-vita
+name: MilkyTracker Vita
+summary: Port of the FastTracker 2 style MOD and XM tracker MilkyTracker to the PS Vita, built as a VPK.
+description: >-
+  MilkyTracker is a multi-platform tracker for .MOD and .XM modules that recreates the replay and user experience of
+  FastTracker II. This repository adapts the upstream source to build and run on the PS Vita, with a single VPK
+  release. The last commit message calls the changes rough.
+status: dormant
+authors:
+  - name: TheMorc
+    url: https://github.com/TheMorc
+  - name: MilkyTracker contributors
+    url: https://github.com/milkytracker/MilkyTracker
+source: https://github.com/TheMorc/MilkyTrackerVita
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  The source headers carry the GPL "either version 3 of the License, or (at your option) any later version" notice and
+  COPYING is the GPLv3 text. The COPYING note says the Milkyplay player library has been under the new BSD license
+  since upstream 0.90.85. GitHub reports it as other.
+homepage: https://milkytracker.org/
+distribution: download
+requires_stock: PS Vita with HENkaku or similar homebrew
+install_notes: Install MilkyTracker.vpk from the release with VitaShell.
+brick_risk: false
+tags: [tracker, mod, xm, port]
+versions:
+  - version: "1.03"
+    date: 2023-06-18
+    url: https://github.com/TheMorc/MilkyTrackerVita/releases/tag/1.03

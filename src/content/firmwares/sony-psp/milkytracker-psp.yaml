@@ -1,0 +1,30 @@
+device: sony-psp
+name: MilkyTracker PSP
+summary: Port of the FastTracker 2 style MOD and XM tracker MilkyTracker to the PSP, built as an EBOOT.
+description: >-
+  MilkyTracker is a multi-platform tracker for .MOD and .XM modules that recreates the replay and user experience of
+  FastTracker II, with playback modes for Amiga ProTracker 2 and 3. This port adds a PSP platform target and
+  crossbar artwork on top of the upstream source and publishes an EBOOT and a .prx module.
+status: dormant
+authors:
+  - name: TheMorc
+    url: https://github.com/TheMorc
+  - name: MilkyTracker contributors
+    url: https://github.com/milkytracker/MilkyTracker
+source: https://github.com/TheMorc/MilkyTrackerPSP
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  The source headers carry the GPL "version 3 of the License, or (at your option) any later version" notice and COPYING
+  is the GPLv3 text. The COPYING note says the Milkyplay player library has been under the new BSD license since
+  upstream 0.90.85 and the rest remains GPL. GitHub reports it as other.
+homepage: https://milkytracker.org/
+distribution: download
+requires_stock: PSP custom firmware
+install_notes: Copy the EBOOT.PBP and milkytracker.prx from the release to a folder in ms0:/PSP/GAME/ on the Memory Stick.
+brick_risk: false
+tags: [tracker, mod, xm, port]
+versions:
+  - version: "1.04"
+    date: 2024-06-27
+    url: https://github.com/TheMorc/MilkyTrackerPSP/releases/tag/1.04

@@ -1,0 +1,46 @@
+device: sega-mega-drive
+name: Mega Drive MIDI Interface
+summary: ROM that lets a Mega Drive be played as a MIDI synthesizer, driving the YM2612 FM chip and the PSG over USB, serial or MegaWiFi.
+description: >-
+  Controls the console's YM2612 FM chip and PSG from MIDI. It has built-in General MIDI-compatible FM presets, PSG
+  envelopes based on the EEF format, support for MIDI 1.0 controllers and events, user presets loaded over SysEx and
+  saved to SRAM on supported EverDrives, polyphony through dynamic FM channel mapping, portamento and experimental DAC
+  support. It also answers GenMDM-style controller messages. The screen shows per-channel activity and a log. It
+  reaches a computer through the USB port of a Mega EverDrive X7, CORE or PRO, through a custom USB serial cable on a
+  controller or extension port, or through MegaWiFi cartridge hardware or the BlastEm emulator.
+
+  Three ROM variants are released: for genuine Mega EverDrives, for other flash cartridges and for MegaWiFi.
+status: active
+authors:
+  - name: Robert Hargreaves
+    url: https://github.com/rhargreaves
+source: https://github.com/rhargreaves/mega-drive-midi-interface
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file is the GNU GPL version 3 text and the README says nothing about later versions. The README notes
+  a pixel font and colour scheme taken from MDPlayer by kuma4649, itself under GPL-3.0.
+homepage: https://github.com/rhargreaves/mega-drive-midi-interface/wiki/Getting-Started
+distribution: download
+requires_stock: Flash cartridge (Mega EverDrive or generic) or MegaWiFi hardware
+install_notes: >-
+  Copy the ROM variant that matches your cartridge from the release page to the cartridge and start it. The wiki's
+  Getting Started page covers each connection method. The BlastEm and MegaWiFi path is marked experimental.
+brick_risk: false
+tags: [midi, synth, ym2612, psg, sysex]
+image:
+  url: https://raw.githubusercontent.com/rhargreaves/mega-drive-midi-interface/main/docs/blastem_chan.png
+  alt: Mega Drive MIDI Interface v1.30 running in the BlastEm emulator, with six YM2612 and four PSG channel rows and note names on the left and FM operator parameters for channel 1 on the right
+  credit: Robert Hargreaves
+  source_url: https://github.com/rhargreaves/mega-drive-midi-interface
+  first_party: true
+versions:
+  - version: v1.34
+    date: 2026-04-15
+    url: https://github.com/rhargreaves/mega-drive-midi-interface/releases/tag/v1.34
+  - version: v1.33
+    date: 2026-04-04
+    url: https://github.com/rhargreaves/mega-drive-midi-interface/releases/tag/v1.33
+  - version: v1.32
+    date: 2026-03-28
+    url: https://github.com/rhargreaves/mega-drive-midi-interface/releases/tag/v1.32

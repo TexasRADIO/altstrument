@@ -1,0 +1,33 @@
+device: sony-psp
+name: PSPHASE
+summary: DX7-compatible six-operator FM synthesizer for the PSP with sixteen voices, played over MIDI through the PSP-MIDI adapter.
+description: >-
+  A sixteen-voice FM synth with six operators and all 32 DX7 algorithms, four-part multitimbral operation with a
+  MIDI channel per part, and loading of DX7 .syx patch banks including raw 4096-byte and 4104-byte cartridge
+  formats, with an included 32-voice bank. It has an on-device patch editor, a live algorithm view, a ladder filter,
+  a reverb and chorus rack and six panel themes. Output is 44.1 kHz with a stated latency of about 3 to 5 ms.
+
+  The page says the engine is a port of Google's open-source music synthesizer core (Apache-2.0) and that PSPHASE is
+  not a Yamaha product.
+status: active
+authors:
+  - name: HobbyChop
+    url: https://hobbychop.com/
+source_status: closed
+license: proprietary
+license_notes: >-
+  The product page states no license for the app and offers no source. It says the synthesis engine is a port of
+  Google's open-source music synthesizer core (Apache-2.0).
+homepage: https://www.hobbychop.com/product/psphase
+distribution: commercial
+requires_stock: PSP custom firmware; PSP-MIDI adapter
+install_notes: >-
+  Copy the PSPHASE folder to ms0:/PSP/GAME/. The package includes EBOOT.PBP, usbmidi.prx, a manual and the PHASE1.SYX
+  bank. The page lists the PSP 1000, 2000 and 3000 and says the PSP Go is not supported.
+brick_risk: false
+tags: [synth, fm, dx7, midi]
+versions:
+  - version: 0.9.4b
+    date: 2026-08-24
+    url: https://www.hobbychop.com/product/psphase
+    notes: Version and date as shown on the product page.

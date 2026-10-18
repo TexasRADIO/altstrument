@@ -1,0 +1,37 @@
+device: sega-master-system-game-gear
+name: SMSGGDJ
+summary: LSDJ-style tracker in Z80 assembly that builds a Master System ROM and a Game Gear ROM, with PSG, PCM, wavetables, echo and optional YM2413 FM.
+description: >-
+  Drives the SN76489 PSG (three square channels and noise) from the D-pad and two buttons, and adds 4-bit PCM samples
+  and drawn wavetables through the volume-register DAC trick, a tempo-synced echo and Game Gear stereo. On a Master
+  System with the FM Sound Unit, or a Game Gear fitted with the GGFM hardware modification, it can also play YM2413 FM
+  melodic voices with 15 ROM patches and eight custom presets and a rhythm-mode drum kit. One source tree builds
+  smsggdj.sms for the Master System and smsggdj.gg for the Game Gear.
+
+  Sync works through the controller or EXT port, and the author reports hardware-verified setups in which a Game
+  Gear follows Ableton Live through Chipbridge or syncs with a genmddj Nomad. It is a sibling of genmddj.
+status: active
+authors:
+  - name: Sebastian Tomczak (little-scale)
+    url: https://github.com/little-scale
+source: https://github.com/little-scale/smsggdj
+source_status: open
+license: MIT
+homepage: https://github.com/little-scale/smsggdj
+distribution: download
+requires_stock: Flash cartridge, or an emulator
+install_notes: >-
+  Download the version-stamped .sms or .gg ROM from the release page and write it to a flash cartridge. No toolchain is
+  needed for the prebuilt ROMs. The author lists a video tutorial playlist in the README.
+brick_risk: false
+tags: [tracker, lsdj-style, psg, ym2413, midi-sync]
+versions:
+  - version: v0.47
+    date: 2026-09-18
+    url: https://github.com/little-scale/smsggdj/releases/tag/v0.47
+  - version: v0.46
+    date: 2026-08-12
+    url: https://github.com/little-scale/smsggdj/releases/tag/v0.46
+  - version: v0.45
+    date: 2026-07-28
+    url: https://github.com/little-scale/smsggdj/releases/tag/v0.45

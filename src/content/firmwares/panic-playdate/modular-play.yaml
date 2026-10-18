@@ -1,0 +1,37 @@
+device: panic-playdate
+name: Modular Play
+summary: Casual patching playground for the Playdate in which modules are connected with cables to build generative music.
+description: >-
+  A playground game for making small music patches by dragging cables between modules. The author says it is meant to be
+  fun and not for serious use, and that it works as well in the Playdate Simulator on a computer as on the console.
+  The code base is about thirty thousand lines of Lua and was published as open source in February 2025, with a
+  later devlog adding a MIDI note emitter module. The paid itch.io version offers modular_play_1_0_0.pdx.zip.
+status: dormant
+authors:
+  - name: Orllewin
+    url: https://github.com/orllewin
+source: https://github.com/orllewin/modularplay
+source_status: open
+license: GPL-3.0-only
+license_notes: The LICENSE file is the GNU GPL version 3 text.
+homepage: https://orllewin.itch.io/modularplay
+distribution: download
+install_notes: >-
+  Sideload the .pdx from the itch.io page, where the listed price is $10 or more, or build the Source folder with the
+  Playdate SDK.
+brick_risk: false
+tags: [modular, generative, patching, lua]
+video:
+  url: https://www.youtube.com/watch?v=9uMGiDsAKeM
+  title: First proof-of-concept for Modular Play on Playdate, from May 2023
+  credit: Öppenlab Yorkshire
+  first_party: true
+  found_via: https://github.com/orllewin/modularplay#readme
+versions:
+  - version: main @ 350b584
+    date: 2025-02-26
+    url: https://github.com/orllewin/modularplay/commit/350b584
+    notes: No tagged releases; this is the latest commit.
+  - version: 1.0.0
+    url: https://orllewin.itch.io/modularplay
+    notes: Package name on the itch.io page; the page shows no date for this build.

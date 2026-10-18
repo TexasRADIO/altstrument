@@ -1,0 +1,28 @@
+device: atari-2600
+name: Synthcart
+summary: Keypad-controlled synthesizer cartridge for the Atari 2600 by Paul Slocum with an arpeggiator and drum patterns, with ROM and source offered for download.
+description: >-
+  A cartridge that turns the 2600 into a basic synthesizer played with two keypad controllers, such as Atari keyboard
+  controllers or Video Touch Pads. It has two sound types at once, one per controller, 8th, 16th and 32nd note
+  arpeggios, a beat box with preset beats and fills that can be combined, two tremolo settings and four attack and
+  release settings, and an interface that works without a TV. Sound comes from the TIA chip alone, pitch is limited to a
+  12-note table per sound type, and the beats are hard-coded.
+
+  It works on all 2600 models in NTSC and PAL versions, and the author's page offers the ROM, the manual and the source.
+status: dormant
+authors:
+  - name: Paul Slocum
+    url: https://qotile.net/
+source: https://qotile.net/synth.html
+source_status: open
+license: unspecified
+license_notes: >-
+  The page offers the ROM (synthcart.zip) and the source (snthsrc.zip) but states no license or reuse terms.
+homepage: https://qotile.net/synth.html
+distribution: download
+install_notes: >-
+  Run the ROM from a flash cartridge or an emulator, or buy a physical cartridge from the AtariAge store, which the
+  page says sells them. Two keypad controllers are required.
+brick_risk: false
+tags: [synth, arpeggiator, drum-patterns, cartridge]
+versions: []

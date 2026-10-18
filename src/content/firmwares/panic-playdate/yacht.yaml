@@ -1,0 +1,34 @@
+device: panic-playdate
+name: Yacht
+summary: Music studio for the Playdate in Lua with a piano roll, drum pattern editor, three synths with oscillator, wavetable and sampler voices, a mixer and song arrangement.
+description: >-
+  A piano roll with note editing and automation, a drum pattern editor with velocity, accent, chance and per-step mute,
+  and three synthesizer channels with oscillator, wavetable and sampler modes, where the sampler can record from the
+  Playdate microphone. A sample-based drum machine has six drum slots, a mixer sets volume and pan, patterns are arranged
+  into songs, and playing notes are visualised.
+status: active
+authors:
+  - name: hugelton (kurogedelic)
+    url: https://github.com/hugelton
+source: https://github.com/hugelton/Yacht
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README states that the source code is licensed under the GNU General Public License v3.0. UI graphics and
+  assets are licensed CC BY-NC-SA 4.0 and the custom fonts SIL OFL 1.1, as listed in ASSETS_LICENSE and OFL.txt.
+homepage: https://kurogedelic.itch.io/yacht
+distribution: download
+install_notes: >-
+  Download the .pdx.zip from the itch.io page, which is name-your-own-price, or build the Source folder with the
+  Playdate SDK, and sideload it.
+brick_risk: false
+tags: [tracker, sequencer, synth, drum-machine, lua]
+versions:
+  - version: main @ 021c332
+    date: 2026-08-25
+    url: https://github.com/hugelton/Yacht/commit/021c332
+    notes: No tagged releases; the repository's pdxinfo reads version 1.0.3 at this commit.
+  - version: 1.0.8
+    date: 2026-06-29
+    url: https://kurogedelic.itch.io/yacht
+    notes: Latest build listed on the itch.io page (marked beta), dated by its devlog entry.
