@@ -10,9 +10,9 @@ description: >-
   now develops its firmware and sells a v2 kit of circuit boards with the display already mounted. The buyer adds
   a 3D-printed case, battery, key switches, keycaps and an SD card.
 
-  The firmware is a descendant of the LittleGPTracker handheld tracker and keeps its song, chain and phrase
-  workflow. The xiphonics-sold successor with different hardware is the picoTracker Advance, which has its own
-  entry.
+  The firmware is a descendant of LittleGPTracker, a tracker for game consoles and desktop computers written by
+  Marc Nostromo, and keeps its song, chain and phrase workflow. The xiphonics-sold successor with different
+  hardware is the picoTracker Advance, which has its own entry.
 platform: RP2040
 stock_firmware: v2.4.0
 links:
@@ -26,13 +26,18 @@ links:
       url: https://github.com/xiphonics/picoTracker-pcb
     - label: picoTracker case models
       url: https://github.com/xiphonics/picoTracker-case
+    - label: Little Piggy Tracker, the maintained LittleGPTracker fork
+      url: https://github.com/djdiskmachine/LittleGPTracker
 notes: >-
   Flashing is a drag-and-drop UF2 copy in the Pico's USB boot mode, so a bad image can be replaced the same way
   and the boot ROM cannot be overwritten. The firmware is open source, and xiphonics hosts a repository of
   community-contributed alternative firmwares for the v2 board. The circuit board and case files are released as
   CC0, but the picoTracker-pcb README says the picoTracker name and branding are not licensed for hardware that
   other people build from them. The picoTracker repository ships separate firmware images for the v2 board and for
-  older boards with a different display controller.
+  older boards with a different display controller. LittleGPTracker, the upstream project, has no entry of its own
+  because its builds target game consoles, single-board computers and desktop systems rather than music hardware.
+  The original by Marc Nostromo (BSD-3-Clause) has had no commits since November 2020, and djdiskmachine maintains
+  a fork renamed Little Piggy Tracker under GPL-3.0.
 related: [xiphonics-picotracker-advance, 203-systems-nullperator]
 image:
   src: /images/devices/xiphonics-picotracker.png

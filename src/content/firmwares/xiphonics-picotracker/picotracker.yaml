@@ -2,13 +2,14 @@ device: xiphonics-picotracker
 name: picoTracker firmware
 summary: Official open-source tracker firmware for the RP2040 picoTracker, a descendant of LittleGPTracker with eight channels, sample, MIDI, SID and OPAL instruments and a remote UI over USB.
 description: >-
-  The firmware is a C++ tracker written against the Raspberry Pi Pico SDK. It started as a modified LittleGPTracker
-  and has since diverged. Songs are built from chains, phrases and tables over eight channels, with up to 16 sample
-  instruments, 16 MIDI instruments, and experimental SID and OPAL chip-style synth instruments. Samples live on the
-  microSD card and are copied to flash when loaded. MIDI runs over TRS and USB, and a USB remote UI can mirror the
-  screen in a browser. Each release carries two UF2 files, a regular one for the v2 board with the ST7789 display
-  and one marked legacy for the earlier ILI9341-display builds. Its source also contained the picoTracker Advance
-  firmware up to v2.3.0, which has its own entry.
+  The firmware is a C++ tracker written against the Raspberry Pi Pico SDK. It started as a modified
+  LittleGPTracker and has since diverged. It cannot open LittleGPTracker projects directly, but the repository
+  includes a basic conversion script, util/lgptconvert.py. Songs are built from chains, phrases and tables over
+  eight channels, with up to 16 sample instruments, 16 MIDI instruments, and experimental SID and OPAL chip-style
+  synth instruments. Samples live on the microSD card and are copied to flash when loaded. MIDI runs over TRS and
+  USB, and a USB remote UI can mirror the screen in a browser. Each release carries two UF2 files, a regular one
+  for the v2 board with the ST7789 display and one marked legacy for the earlier ILI9341-display builds. Its
+  source also contained the picoTracker Advance firmware up to v2.3.0, which has its own entry.
 status: active
 authors:
   - name: xiphonics

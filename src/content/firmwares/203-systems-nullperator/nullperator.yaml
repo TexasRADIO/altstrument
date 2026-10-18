@@ -2,13 +2,13 @@ device: 203-systems-nullperator
 name: NullPerator
 summary: 203 Systems' open-source tracker built on a heavily modified picoTracker codebase, with ESP32-S3 hardware firmware plus iOS, Android and browser builds of the same engine.
 description: >-
-  The repository is a fork of xiphonics' picoTracker that keeps the tracker model of chains, phrases and tables
-  and extends it to eight tracks with 255 chains, 255 phrases, 32 tables and 64 instrument slots. Instrument types
-  include sample, MIDI, SID, OPAL, drum, stack, chiptune and three Game Boy-style voices. The tracker engine, project
-  format and a 240 by 240 interface are shared across the ESP32-S3 hardware firmware, an iOS app, an experimental
-  Android app and a WebAssembly workbench for the browser, with platform adapters for audio, MIDI, input and
-  storage. The hardware firmware builds with ESP-IDF, and the shop page for the device says project files can be
-  exchanged with the non-Advance picoTracker.
+  The repository is a fork of xiphonics' picoTracker, which itself started as a modified LittleGPTracker. It keeps
+  the tracker model of chains, phrases and tables and extends it to eight tracks with 255 chains, 255 phrases, 32
+  tables and 64 instrument slots. Instrument types include sample, MIDI, SID, OPAL, drum, stack, chiptune and
+  three Game Boy-style voices. The tracker engine, project format and a 240 by 240 interface are shared across the
+  ESP32-S3 hardware firmware, an iOS app, an experimental Android app and a WebAssembly workbench for the browser,
+  with platform adapters for audio, MIDI, input and storage. The hardware firmware builds with ESP-IDF, and the
+  shop page for the device says project files can be exchanged with the non-Advance picoTracker.
 status: active
 authors:
   - name: 203 Systems
