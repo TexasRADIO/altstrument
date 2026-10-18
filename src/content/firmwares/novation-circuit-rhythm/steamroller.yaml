@@ -1,0 +1,43 @@
+device: novation-circuit-rhythm
+name: SteamRoller
+summary: Browser-installed patch of Novation's Circuit Rhythm 5706 firmware that adds a drum sound generator, Elektron-style parameter locks, a pattern generator and per-step, per-track Grid FX.
+description: >-
+  SteamRoller keeps the stock sampler and sequencer and adds two sound engines in the Sample Rec view (poundhard, an
+  FM drum voice, and BAYAREA, a West Coast voice ported from Tonitor) that store generated sounds into pack slots
+  and fill kit pages. Parameter locks last for the whole sound and carry level, pan, delay and reverb, and each step
+  can also lock seven Grid FX on that track only, using an FX bus added to the DSP mixer. Shift plus a track button
+  adds random locks, or writes a new pattern in one of four styles when Record is on. It was called Rhythm FM before
+  0.3.2. The project notes say 0.6.4 has not been tested on hardware, with 0.3.1 and 0.4.0 the last versions
+  reported as working, and that some earlier development builds failed to boot and were recovered with the official
+  firmware. The project's notes describe much of the development as AI-assisted.
+status: active
+authors:
+  - name: Nuno Zimas
+    url: https://github.com/nzimas
+source: https://github.com/nzimas/steamroller
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The firmware extension, tools and installer are GPL-3.0 (firmware/rhythm_fm/LICENSE) and the website and logo are
+  MIT. The repository itself holds no Novation file, but the installer page serves a scrambled, patched copy of
+  Novation's 5706 image that is descrambled in the browser, so the firmware contains Novation's code. Novation
+  firmware is third-party material and is not covered by these licenses.
+homepage: https://nzimas.github.io/steamroller/
+distribution: browser-installer
+requires_stock: "5706"
+install_notes: >-
+  Back up projects and packs with Novation Components first. Switch the Rhythm off, hold Sample Rec, Samples and
+  Note while powering on to enter update mode, close other MIDI software, then use the install page in desktop
+  Chrome or Edge. The update is sent as SysEx over USB MIDI, and an interrupted update leaves the unit in update
+  mode until a firmware is installed again. To go back, use Novation Components from update mode.
+brick_risk: true
+tags: [sampler, drums, sequencer, parameter-locks, fx, generative]
+versions:
+  - version: 0.6.4
+    date: 2026-10-18
+    url: https://github.com/nzimas/steamroller/commit/560efa6
+    notes: Listed in CHANGELOG.md with 0.4.0 to 0.6.3, all in this commit; no tag or release page. Not yet tested on hardware.
+  - version: 0.3.2
+    date: 2026-10-17
+    url: https://github.com/nzimas/steamroller/commit/5bd9a86
+    notes: Renamed from Rhythm FM; no tag or release page.

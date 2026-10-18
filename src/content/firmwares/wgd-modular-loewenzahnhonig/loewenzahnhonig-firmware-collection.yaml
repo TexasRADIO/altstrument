@@ -1,0 +1,60 @@
+device: wgd-modular-loewenzahnhonig
+name: Löwenzahnhonig Firmware Collection
+summary: Open-source collection of fifteen prebuilt effect firmwares for the löwenzahnhonig, flashed one at a time from a browser page, including a Cloud Seed reverb, Clouds and Rings ports, a distortion and a VCA.
+description: >-
+  Each firmware is a small effect or utility program for the module's four knobs and two CV inputs, with its own
+  folder, README and binary in the release. The collection includes Cloud Seed and Splooge reverbs, a basic reverb
+  and a shimmer reverb, delays (a basic one and the 16-second Smoodge delay), a compressor, a ring modulator, a
+  Metal Zone-inspired stereo distortion and a dual VCA. It also has a port of the Mutable Instruments Clouds
+  granular processor (Nimbus, with Lofi, Looping Delay and Stretch variants) and the Rings resonator in seven
+  variants. The Mutable Instruments code is MIT licensed and is included unchanged. Some entries are marked as work
+  in progress. Contributors add folders by pull request, and a manual PDF is built from the READMEs for each release.
+  The collection is kept as one entry because the programs share one repository, one release stream, one flasher
+  and one hardware layer.
+status: active
+authors:
+  - name: wgd modular
+    url: https://github.com/wgd-modular
+  - name: Felix Wiegand
+    url: https://github.com/fxwiegand
+  - name: Benjamin van der Burgh
+    url: https://github.com/benjaminvdb
+source: https://github.com/wgd-modular/loewenzahnhonig-firmware
+source_status: open
+license: MIT
+license_notes: >-
+  The repository's own code is MIT. It builds on libDaisy and DaisySP, the Mutable Instruments eurorack code
+  (MIT) and the cloudseed-daisy library, which are submodules with their own licenses. Some firmwares use the
+  LGPL-licensed DaisySP-LGPL components.
+homepage: https://wgd-modular.github.io/loewenzahnhonig-firmware/
+distribution: browser-installer
+install_notes: >-
+  Open the web flasher in Chrome or Edge, connect the Daisy Seed over USB, hold BOOT and tap RESET to enter the
+  bootloader, pick a firmware and flash it. The page can also flash a local .bin you built, and the same binaries
+  are attached to each GitHub release. Building from source needs the submodules and the pixi toolchain.
+brick_risk: false
+tags: [reverb, delay, granular, distortion, daisy, mutable-instruments, collection]
+image:
+  url: https://raw.githubusercontent.com/wgd-modular/loewenzahnhonig-firmware/main/media/DSC07012.JPG
+  alt: A black löwenzahnhonig panel standing in front of a plant, with four silver knobs labelled Dry, Wet, Feedback and LP Freq, two CV jacks, a leaf logo and stereo input and output jacks
+  credit: wgd modular
+  source_url: https://github.com/wgd-modular/loewenzahnhonig-firmware#readme
+  first_party: true
+versions:
+  - version: v0.2.1
+    date: 2026-09-13
+    url: https://github.com/wgd-modular/loewenzahnhonig-firmware/releases/tag/v0.2.1
+    notes: Fixes the Cloud Seed dry and wet range.
+  - version: v0.2.0
+    date: 2026-09-12
+    url: https://github.com/wgd-modular/loewenzahnhonig-firmware/releases/tag/v0.2.0
+    notes: Adds the web flasher, Nimbus and Cloud Seed.
+  - version: v0.1.2
+    date: 2026-07-15
+    url: https://github.com/wgd-modular/loewenzahnhonig-firmware/releases/tag/v0.1.2
+  - version: v0.1.1
+    date: 2026-07-14
+    url: https://github.com/wgd-modular/loewenzahnhonig-firmware/releases/tag/v0.1.1
+  - version: v0.1.0
+    date: 2026-07-14
+    url: https://github.com/wgd-modular/loewenzahnhonig-firmware/releases/tag/v0.1.0

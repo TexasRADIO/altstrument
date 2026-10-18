@@ -1,0 +1,27 @@
+name: Circuit Rhythm
+manufacturer: Novation
+category: sampler
+tagline: Standalone sampler and drum machine with a 32-pad grid and a rechargeable battery
+description: >-
+  The Circuit Rhythm is a battery-powered sampler and drum machine from Novation. Samples can be recorded on the
+  unit, then sliced, reversed, looped and played chromatically, and are sequenced from a grid of velocity-sensitive
+  RGB pads. It has Grid FX for performance, plus reverb, delay, sidechain and a master compressor. Novation rates
+  the battery at up to four hours.
+stock_firmware: "5706"
+links:
+  manufacturer: https://novationmusic.com/products/circuit-rhythm
+related: [novation-circuit, novation-circuit-tracks]
+notes: >-
+  The custom firmware here is a patched copy of Novation's official 5706 update and is entered through the
+  Rhythm's update mode, which a custom image does not replace. Novation Components can reinstall the official
+  firmware.
+image:
+  src: /images/devices/novation-circuit-rhythm.png
+  style: photo
+  alt: Top-down view of the Circuit Rhythm, a grey unit with two rows of black knobs above rows of black buttons and a grid of lit pale blue, cream and white pads
+  width: 1200
+  height: 1200
+  credit: Novation
+  license: manufacturer product image
+  source_url: https://novationmusic.com/products/circuit-rhythm
+  original_url: https://cdn11.bigcommerce.com/s-itgb7ssiy1/images/stencil/1280x1280/products/235/999/Circuit-Rhythm-Straight-Top-2400-2400__34467.1754647638.png?c=1

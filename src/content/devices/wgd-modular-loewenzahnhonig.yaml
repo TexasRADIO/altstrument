@@ -1,0 +1,29 @@
+name: löwenzahnhonig
+manufacturer: wgd modular
+category: eurorack
+tagline: 8 HP Eurorack module built around a Daisy Seed, with generic labels on the back of the panel
+description: >-
+  The löwenzahnhonig is an 8 HP Eurorack module from the German maker wgd modular, sold as a reverb, built around
+  an Electrosmith Daisy Seed. It has stereo audio inputs and outputs, four knobs and two CV inputs. The panel is
+  reversible: the back has generic labels for the four pots (Daisy pins A0 to A3) and the two CV inputs (A4 and A5),
+  so that the module can run other firmware.
+platform: Electrosmith Daisy Seed (STM32H750, Arm Cortex-M7)
+links:
+  manufacturer: https://wgdmodular.de/module/loewenzahnhonig/
+  community:
+    - label: Firmware collection and web flasher
+      url: https://wgd-modular.github.io/loewenzahnhonig-firmware/
+notes: >-
+  Firmware is written for the Daisy Seed with libDaisy and DaisySP, and the maker's repository lists the controls
+  as read from 0 V to +5 V on the CV inputs. Flashing uses the Seed's USB bootloader.
+related: [electrosmith-daisy-patch]
+image:
+  src: /images/devices/wgd-modular-loewenzahnhonig.png
+  style: photo
+  alt: Black panel artwork for the löwenzahnhonig with Level, Feedback, Mod 1 and Mod 2 knobs, two CV jacks, a leaf logo and stereo input and output jacks
+  width: 378
+  height: 1200
+  credit: wgd modular
+  license: manufacturer product image
+  source_url: https://wgdmodular.de/module/loewenzahnhonig/
+  original_url: https://wgdmodular.de/media/uploads/image/lowenzahhonig.png

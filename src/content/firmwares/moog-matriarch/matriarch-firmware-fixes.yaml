@@ -1,0 +1,43 @@
+device: moog-matriarch
+name: Matriarch Firmware Fixes
+summary: Patcher that applies a fix for the paraphonic mixer gate hold to your own copy of Moog's Matriarch v1.3.0 firmware, as a browser page or a Python script.
+description: >-
+  In 2- and 4-note paraphonic modes, v1.3.0 keeps a released oscillator sounding for 125 ms while other keys are
+  still held, which smears staccato playing. The patch rewrites the constant that sets that hold, and the user
+  chooses a value from 0 to 125 ms (5 ms recommended, 50 ms matches v1.1.0). It changes two 16-bit words of the
+  SysEx file and recomputes the affected record's checksum. The project documents the firmware's SysEx format and
+  includes Ghidra scripts used to analyse it. The other known issues on Moog's v1.3.0 list are not fixed yet.
+status: active
+authors:
+  - name: Benjamin Dehli
+    url: https://github.com/benjamindehli
+source: https://github.com/benjamindehli/matriarch-firmware-fixes
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  Covers the tools and documentation only. The repository contains no Moog firmware, and Moog's file is not covered
+  by this license.
+homepage: https://benjamindehli.github.io/matriarch-firmware-fixes/
+distribution: patch-your-own
+requires_stock: 1.3.0
+install_notes: >-
+  Get Moog's official Matriarch_Firmware_v1_3_0.syx, patch it in the browser page or with tools/patch_mixgate.py
+  (other versions are refused), then send it with a SysEx tool using Moog's usual procedure: the invalidate file,
+  the erase file, then the patched file. Sending Moog's original v1.3.0 file the same way restores stock.
+brick_risk: false
+tags: [bugfixes, patcher, sysex, paraphonic]
+image:
+  url: https://benjamindehli.github.io/matriarch-firmware-fixes/audio-test-1200.webp
+  alt: Logic Pro waveform tracks of one MIDI part recorded with the 125 ms, 50 ms and 5 ms patches, with a highlighted note where the 5 ms recording stops sooner
+  credit: Benjamin Dehli
+  source_url: https://github.com/benjamindehli/matriarch-firmware-fixes#readme
+  first_party: true
+versions:
+  - version: v1.1.0
+    date: 2026-10-18
+    url: https://github.com/benjamindehli/matriarch-firmware-fixes/releases/tag/v1.1.0
+    notes: Adds the browser-based patcher.
+  - version: v1.0.0
+    date: 2026-10-18
+    url: https://github.com/benjamindehli/matriarch-firmware-fixes/releases/tag/v1.0.0
+    notes: First release, with the paraphonic mixer gate fix as a Python script.

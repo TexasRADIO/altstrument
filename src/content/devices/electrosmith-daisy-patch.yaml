@@ -20,7 +20,7 @@ notes: >-
   flashed over the Daisy bootloader. Ports of Mutable Instruments code to
   Patch follow the same terms as the original (MIT, no use of the Mutable
   name).
-related: [noise-engineering-versio, befaco-lich, synthux-touch-2, synthux-simple-fix, synthux-simple-designer, synthux-audrey-ii, synthux-spotykach, noise-engineering-legio, noise-engineering-alia, chase-bliss-chompi, cleveland-hothouse, guitarml-funbox, pedalpcb-terrarium, hermetic-modular-alchemy-lab]
+related: [noise-engineering-versio, befaco-lich, synthux-touch-2, synthux-simple-fix, synthux-simple-designer, synthux-audrey-ii, synthux-spotykach, noise-engineering-legio, noise-engineering-alia, chase-bliss-chompi, cleveland-hothouse, guitarml-funbox, pedalpcb-terrarium, hermetic-modular-alchemy-lab, wgd-modular-loewenzahnhonig]
 image:
   src: /images/devices/electrosmith-daisy-patch.jpg
   style: photo
