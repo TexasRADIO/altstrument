@@ -9,8 +9,10 @@ interface Props {
   /** Give rows id="v-<version>" for deep links (single-firmware pages only). */
   anchors?: boolean;
   caption?: string;
+  /** When set, older versions are a link to this page instead of a <details>. */
+  moreHref?: string;
 }
-const { versions, visible = 5, anchors = false, caption = 'Version history' } = Astro.props;
+const { versions, visible = 5, anchors = false, caption = 'Version history', moreHref } = Astro.props;
 const head = versions.slice(0, visible);
 const rest = versions.slice(visible);
 const hasNotes = versions.some((v) => v.notes);
@@ -34,7 +36,10 @@ const hasNotes = versions.some((v) => v.notes);
         ))}
       </tbody>
     </table>
-    {rest.length > 0 && (
+    {rest.length > 0 && moreHref && (
+      <p class="mt-1 py-1 text-sm"><a href={moreHref} class="text-accent">{plural(rest.length, 'older version')}</a></p>
+    )}
+    {rest.length > 0 && !moreHref && (
       <details class="mt-1">
         <summary class="cursor-pointer py-1 text-sm text-accent">{plural(rest.length, 'older version')}</summary>
         <table class="vtable">
