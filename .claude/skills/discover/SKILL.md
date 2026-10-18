@@ -37,7 +37,7 @@ Reject when any of these hold. Record the reason.
 - Official manufacturer firmware, unless the device's existing entries already catalog official firmware the same way (Noise Engineering Legio and Versio do this; follow the device directory's precedent).
 - Redistributed or mirrored stock firmware, or anything that links to it. Exception: a file the manufacturer licenses for redistribution, matched by hash. Today that is only M-VAVE's FM-1 V15 image (`sdk/firmware/FM-1_015.fwsc` in `m-vave/fm1_open`, Apache-2.0, git blob `ce49cc1595b67347c68a3ac7463017f9fa8c19dd`, 699,956 bytes). Compare a bundled copy's blob SHA from the repo tree API. SMK-37 stock packages and any other M-VAVE file are not covered.
 - No working source repository and no working homepage.
-- Not music hardware: desktop software, plugins, general MCU projects, keyboards in the computer sense, lighting.
+- Not music hardware: desktop software, plugins, single-board computers, general MCU projects, keyboards in the computer sense, lighting. Game consoles and similar handhelds ARE in scope when the project is music software for them (trackers, sequencers, synths, MIDI tools): list them under category `handheld`.
 - Pure news about a stock OS update with no third-party code.
 - A GitHub search hit that is a fork, a template, an archived toy, or clearly unrelated to the device named in the query.
 

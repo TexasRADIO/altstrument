@@ -24,7 +24,7 @@
   <a href="LICENSE-DATA"><img src="https://img.shields.io/badge/data-CC--BY--4.0-blue" alt="Data license: CC-BY-4.0"></a>
 </p>
 
-altstrument is a read-only directory of custom and third-party firmware and tools for music hardware, including grooveboxes, synths, samplers, controllers, pedals, Eurorack modules and vintage gear. Each device has a page listing the firmware built for it, and each firmware entry records its authors, a source or homepage link, its license, version history and status. The site links to where firmware lives. It does not host firmware files.
+altstrument is a read-only directory of custom firmware and tools for music hardware, including grooveboxes, synths, samplers, controllers, pedals, Eurorack modules and vintage gear. Each device has a page listing the firmware built for it, and each firmware entry records its authors, a source or homepage link, its license, version history and status. The site links to where firmware lives. It does not host firmware files.
 
 ## What is recorded
 
@@ -42,6 +42,8 @@ For each firmware:
 ## Scope
 
 Firmware that replaces or modifies what runs on a device, and host-side tools that support it (editors, flashers, emulators, SDKs). Devices are listed even when no custom firmware exists, with a note saying why.
+
+Game consoles and similar handhelds count as music hardware when music software runs on them: trackers, sequencers and synths such as LSDJ on the Game Boy or LittleGPTracker on the PSP and retro Linux handhelds. Desktop computers and single-board computers are not in scope.
 
 ## Policy
 

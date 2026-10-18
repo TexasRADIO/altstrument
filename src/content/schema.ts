@@ -17,6 +17,7 @@ export const CATEGORIES = [
   'pedal',
   'eurorack',
   'diy-platform',
+  'handheld',
   'tools',
   'other',
 ] as const;
@@ -31,6 +32,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   pedal: 'Pedals & multi-FX',
   eurorack: 'Eurorack & modular',
   'diy-platform': 'DIY platforms',
+  handheld: 'Consoles & handhelds',
   tools: 'Cross-device tools',
   other: 'Other',
 };

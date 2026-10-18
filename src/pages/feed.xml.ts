@@ -13,7 +13,7 @@ export async function GET(context: APIContext) {
   const rows = recentVersions(await getDevicesWithFirmwares(), 50);
   return rss({
     title: 'altstrument: recent versions',
-    description: 'The most recent dated versions of custom and third-party firmware and tools for music hardware.',
+    description: 'The most recent dated versions of custom firmware and tools for music hardware.',
     site,
     trailingSlash: false,
     items: rows.map((r) => ({

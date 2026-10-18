@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "A directory of custom and third-party firmware and tools for music hardware.",
+  "description": "A directory of custom firmware and tools for music hardware.",
   "scripts": {
     "dev": "astro dev",
     "build": "pnpm validate && astro build",

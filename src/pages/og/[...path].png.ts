@@ -20,7 +20,7 @@ export async function getStaticPaths() {
     card('index', {
       eyebrow: 'A directory for music hardware',
       title: 'Alternative firmware and tools for music hardware',
-      summary: 'Custom and third-party firmware for synths, grooveboxes, samplers, controllers, pedals and Eurorack, with sources, licenses and version history.',
+      summary: 'Custom firmware for synths, grooveboxes, samplers, controllers, pedals and Eurorack, with sources, licenses and version history.',
       footer: `${plural(stats.devices, 'device')} · ${plural(stats.firmwares, 'firmware')} · ${plural(stats.tools, 'tool')}`,
     }),
     card('about', {

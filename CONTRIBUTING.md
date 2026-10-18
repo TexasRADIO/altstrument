@@ -48,7 +48,8 @@ name: Example Synth
 manufacturer: Example Co
 
 # REQUIRED. One of: synth, groovebox, sampler, drum-machine, controller,
-# foot-controller, pedal, eurorack, diy-platform, tools, other
+# foot-controller, pedal, eurorack, diy-platform, handheld, tools, other
+# (handheld: game consoles and handhelds that run music software)
 category: synth
 
 # OPTIONAL. Up to 140 characters, plain text.
