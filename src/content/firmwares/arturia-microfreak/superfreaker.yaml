@@ -1,16 +1,18 @@
 device: arturia-microfreak
 name: SuperFreaker
-summary: Free open-beta mod packs for the MicroFreak, built by a browser patcher from your own official 5.0.0.2084 file. Adds separate release, legato glide, transpose, a metronome, per-preset volume, +7 dB output, and pre-filter effects including tape echo.
+summary: Free open-beta mod packs for the MicroFreak, built by a browser patcher from your own official 5.0.0.2084 file. Adds separate release, legato glide, transpose, per-preset volume, a randomizer, +7 dB output, and pre-filter effects including tape echo.
 description: >-
   Distributed as three packs applied by a browser-based patcher to an official
   firmware file you supply; the patcher checks that the file is exactly
-  5.0.0.2084 and the file is not uploaded. Essentials adds a separate release
-  stage, legato glide, transpose, metronome, per-preset volume and preset jump,
+  5.0.0.2084 and the file is not uploaded. From 0.1.2 the changelog describes
+  one build in which Loud is the only option. Essentials adds a separate
+  release stage, legato glide, transpose, per-preset volume and preset jump,
   Shift latch, sequencer shortcuts, extra MIDI CCs, and options to ignore
   Program Change and MIDI Start. Loud adds about 7 dB at the headphone and line
   outputs. Sound adds pre-filter drive and lo-fi, noise and tremolo, a tape
-  echo with four modes, a wavefolder and a sub-octave. The patches change only
-  the main program in the firmware file; the authors state the bootloader and
+  echo with four modes (gliding with Echo Time and tempo-syncable from 0.1.2),
+  a wavefolder and a sub-octave. Version 0.1.2 adds a randomizer that rolls a
+  new sound on Shift + Amp Mod. The patches change only the main program in the firmware file; the authors state the bootloader and
   the unit's serial number and calibration data are not touched. The patch data
   itself is not published, so the source status is patcher-only. Built by
   Freakier Firmware Labs LLC, an independent company in Asheville, NC, funded by
@@ -42,6 +44,9 @@ video:
   credit: Freakier Firmware
   first_party: true
 versions:
+  - version: SuperFreaker 0.1.2
+    url: https://freakierfirmware.com/microfreak/changelog/
+    notes: Adds a randomizer on Shift + Amp Mod, a tape echo that glides with Echo Time, echo sync and a single build with Loud as the only option; the metronome is removed for now.
   - version: SuperFreaker 5.0.0.2084 (open beta)
     date: 2026-10-10
     url: https://freakierfirmware.com/microfreak/

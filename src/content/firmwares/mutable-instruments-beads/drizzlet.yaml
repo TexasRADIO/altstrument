@@ -1,6 +1,6 @@
 device: mutable-instruments-beads
 name: Drizzlet
-summary: Alpha community build of the released Beads source. Fixes a frozen-delay crash and half-written frozen-buffer saves, and adds an options page with an output limiter setting, a self-play mode and an optional monophonic grain mode.
+summary: Beta community build of the released Beads source. Fixes a frozen-delay crash and half-written buffer saves, and adds a three-page options page (Clouds-style reverb, pitch scales, stereo width, limiter), buffer trim and an optional monophonic grain mode.
 description: >-
   Drizzlet starts from the Beads source published by Mutable Instruments and
   keeps the stock settings layout, so the stock firmware and Drizzlet can read
@@ -8,10 +8,12 @@ description: >-
   out-of-range read in frozen delay with negative FM, a few undefined reads, a
   division by zero on very fast clocks) and checked, interruption-safe buffer
   saves. New behaviour comes through an options page opened by holding ASSIGN:
-  output limiter (stock, fast release or off) and automatic or on-request
-  self-play. Holding MEDIA and then pressing SEED toggles the original
-  monophonic grain code. The author says it has been tested only by its
-  developers on a single module.
+  output limiter (stock, fast release or off) and automatic or manual
+  control of the wavetable synth. Holding MEDIA and then pressing SEED toggles the original
+  monophonic grain code. Beta 1 grows the options page to three pages with a
+  Clouds-style reverb, pitch scales, stereo width and delay mode settings, and
+  adds buffer trim. The author says it has been tested only on a single module
+  and calls for testers.
 status: active
 authors:
   - name: Insolent Construct
@@ -36,6 +38,10 @@ install_notes: >-
 brick_risk: true
 tags: [granular, fx, bugfixes]
 versions:
+  - version: drizzlet-2026.10.18
+    date: 2026-10-18
+    url: https://github.com/insolentconstruct/eurorack/releases/tag/drizzlet-2026.10.18
+    notes: Beta 1 "Mist". Three-page options page with Clouds-style reverb, pitch scales, stereo width, delay mode and buffer trim, plus a faster grain engine.
   - version: drizzlet-2026.10.16
     date: 2026-10-16
     url: https://github.com/insolentconstruct/eurorack/releases/tag/drizzlet-2026.10.16

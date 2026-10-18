@@ -41,6 +41,22 @@ image:
   source_url: https://github.com/sandlbn/polyend-tracker-re
   first_party: true
 versions:
+  - version: "2.0.3"
+    date: 2026-10-18
+    url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/2.0.3
+    notes: Fixes reversed Up/Down in Master option lists and list order on the delay screens, matching stock.
+  - version: "1.9.6"
+    date: 2026-10-18
+    url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/1.9.6
+    notes: Bug-fix update on the 1.9.x line, with Master page fixes checked against a stock unit.
+  - version: "2.0.1"
+    date: 2026-10-18
+    url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/2.0.1
+    notes: Starts the 2.x line from 1.9.4 with 16 tracks, ACD, VAP and PERC synth engines, stereo samples and USB Storage mode.
+  - version: "1.9.4"
+    date: 2026-10-17
+    url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/1.9.4
+    notes: Adds FM radio recording and follows the stock 1.9.2 screens more closely.
   - version: "1.9.3"
     date: 2026-10-17
     url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/1.9.3

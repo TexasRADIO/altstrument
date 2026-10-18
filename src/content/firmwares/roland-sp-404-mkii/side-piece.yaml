@@ -1,19 +1,41 @@
 device: roland-sp-404-mkii
 name: Side-Piece
-summary: Announced OS layer for the SP-404MKII with a ducker, per-bus filter, lo-fi and EQ, four LFOs and four Euclidean rhythm lanes. Not yet downloadable.
+summary: Free open-beta OS layer for the SP-404MKII, built by a browser patcher from your own Roland 5.52 update file. Adds a four-bus FX stack screen, four LFOs, Euclidean lanes, frequency chop, per-bus EQ, a ducker and a replacement time-stretch.
 description: >-
-  Runs on top of Roland's own system. The site lists a kick-triggered or
-  tempo-synced ducker, a filter and lo-fi on every bus on a new FX screen,
-  four LFOs with twelve shapes, a four-band EQ on every bus, four Euclidean
-  lanes that play a pad while a pattern runs, and a frequency chop that
-  splits one pad across four pads. The site says "releasing soon" for build
-  12b and states that nothing is downloadable yet. A browser simulator with
-  lessons is available.
-status: announced
+  Runs on top of Roland's own system and is built in the browser from the
+  official 5.52 update file you supply. A new FX screen opens with SHIFT and
+  PATTERN EDIT. Each of BUS 1 to 4 and DRY holds four effect slots (filter,
+  lo-fi, EQ, chorus, phaser, delay, transient shaper) that a pad can switch on
+  and off. Four LFOs, including pressure-following and chaotic shapes, can
+  target any stack setting. The rest of the beta covers four Euclidean lanes
+  that play a pad while a pattern runs, a frequency chop that splits one pad
+  across four pads, a ducker and tempo pump, a time-stretch with tempo and pitch
+  overrides, and custom opening pictures from the SD card. The changelog lists
+  known issues, among them that effect settings are not yet saved over a
+  restart and that chop has no undo. A browser simulator with lessons is
+  available.
+status: active
 authors:
   - name: Freakier Firmware Labs LLC
     url: https://freakierfirmware.com
-source_status: closed
+source_status: patcher-only
 license: proprietary
-homepage: https://freakierfirmware.com
+license_notes: >-
+  All rights reserved. Per the site terms, you may build and flash your own
+  units but may not resell, share or redistribute a build or its patch data.
+  Free during the beta.
+homepage: https://freakierfirmware.com/sp-404mk2/
+distribution: patch-your-own
+requires_stock: Roland system 5.52
+install_notes: >-
+  Back up in the unit's BACKUP/RESTORE menu and keep your official update file.
+  Build SP404MKII_APP1.bin in the browser patcher, copy it to the SD card, hold
+  SHIFT while powering on and press VALUE. Never put SP404MKII_APP0.bin on the
+  card. The authors' recovery guide covers returning to the official firmware.
+brick_risk: true
 tags: [fx, lfo, filter, sequencer]
+versions:
+  - version: 0.1.0
+    date: 2026-10-17
+    url: https://freakierfirmware.com/sp-404mk2/changelog/
+    notes: First public open beta (build 14d), built with the browser patcher.
