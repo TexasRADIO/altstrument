@@ -25,8 +25,8 @@ install_notes: >-
 brick_risk: true
 tags: [sequencer, random, euclidean, performance, editor, emulator]
 image:
-  url: https://raw.githubusercontent.com/Rastapopolix/melodee-tess/main/assets/02_Pattern_Turing.jpg
-  alt: "Photo of the FM-1 screen on the Pattern page with the Turing engine: mode, length 16, probability and span dials above a row of step bars"
+  url: https://raw.githubusercontent.com/Rastapopolix/melodee-tess/main/assets/gallery/gen_turing.png
+  alt: "Melodee Tess generator page in Turing mode with length 16, probability locked and a two-octave span above a row of step bars"
   credit: "Rastapopolix"
   source_url: https://github.com/Rastapopolix/melodee-tess
   first_party: true

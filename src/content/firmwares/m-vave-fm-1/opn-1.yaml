@@ -31,8 +31,8 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, fm, midi, sequencer, emulator, usb-midi, chip-sound]
 image:
-  url: https://raw.githubusercontent.com/putchdev/opn-1/HEAD/docs/screen-panel.png
-  alt: "OPN-1 FM-1 screen showing 16-BIT FM SOUND, the patch FM 1 marked GRABBED, and four values for brightness, attack, release and feedback"
+  url: https://raw.githubusercontent.com/putchdev/opn-1/HEAD/docs/screens/fm1-sound.png
+  alt: "OPN-1 sound page for patch B1 04 showing the four-operator chain, algorithm 1 and brightness, attack, release and feedback dials"
   credit: James (putchdev)
   source_url: https://github.com/putchdev/opn-1
   first_party: true
