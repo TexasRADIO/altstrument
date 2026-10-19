@@ -1,0 +1,43 @@
+device: m5stack-cardputer
+name: FRESNELDRONE
+summary: >-
+  Drone synth for the Cardputer ADV that reads WiFi channel state information, or a LoRa link, so that people moving
+  in the room modulate eight engines and an effects chain.
+description: >-
+  The firmware measures a 52-subcarrier WiFi CSI fingerprint and turns changes in it into modulation sources that
+  drive an eight-slot mod matrix. Engines are PWM, supersaw, FM bell, an additive organ, wavetable, formant choir
+  and noise, plus a wavefolder that was added on main after the v0.4 release. Seven effects switch on with Fn and the
+  number keys. It has network modes that auto-hop, join a router or listen
+  on one channel. LoRa mode reads a Heltec WiFi LoRa 32 V3 beacon sender with the Cap LoRa-1262 module, using a
+  second firmware image from the same project, and works without WiFi. It has an autopilot, an empty-room
+  calibration and presets on the SD card, and the waterfall display can be shown in three views. The README says the
+  LoRa settings stay within the EU 5 mW limit for 869.7 to 870 MHz. Commit messages carry Claude Opus co-author
+  trailers.
+status: active
+authors:
+  - name: vdo
+    url: https://github.com/vdo
+source: https://github.com/vdo/fresneldrone
+source_status: open
+license: MIT
+homepage: https://github.com/vdo/fresneldrone/blob/main/manual.md
+distribution: download
+install_notes: >-
+  Flash fresneldrone.bin from the release at offset 0x0 with ESPConnect or build with PlatformIO; hold G0 while
+  plugging in if the Cardputer is not detected. LoRa mode also needs a Cap LoRa-1262 on the Cardputer and
+  fresneldrone-heltec.bin on a Heltec board with its antenna fitted, and with both boards connected the upload port
+  must be named, because the Heltec shares the Cardputer's USB ID in PlatformIO. Updating from an earlier build
+  resets settings and presets move to /fresneldrone/ on the card.
+brick_risk: false
+tags: [synth, synth-engine, generative, fx, wifi, open-source]
+image:
+  url: https://raw.githubusercontent.com/vdo/fresneldrone/main/docs/waterfall.png
+  alt: FRESNELDRONE waterfall page rendered in green, with a heatmap of subcarriers over time on the left and meter bars for MOT, PHS, FLX, RSI, LO, MID, HI and LFO on the right
+  credit: vdo
+  source_url: https://github.com/vdo/fresneldrone
+  first_party: true
+versions:
+  - version: v0.4
+    date: 2026-10-17
+    url: https://github.com/vdo/fresneldrone/releases/tag/v0.4
+    notes: Adds three waterfall views. Includes LoRa mode with its own Heltec image.

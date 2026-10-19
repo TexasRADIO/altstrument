@@ -1,0 +1,38 @@
+device: nintendo-game-boy
+name: GB-Tracker Pro
+summary: >-
+  Four-channel pattern tracker in a 32 KB Game Boy Color ROM with 64 instruments, four battery-saved song slots and
+  a Python tool for moving songs in and out of .sav files.
+description: >-
+  GB-Tracker Pro is written in RGBDS assembly and runs only on the Game Boy Color (the cartridge header is
+  CGB-only, MBC5 with RAM and battery). It drives the two pulse channels, the wave channel and the noise channel from
+  the VBlank interrupt, with 16 pulse profiles, 32 wave presets and 16 noise drum slots, four patterns of 32 rows,
+  an order list and four 2 KB song slots in save RAM. An arrangement of Für Elise is preloaded in slot 4. A companion
+  script, fts_tool.py, extracts and injects songs in the .sav files that flash carts write. The README lists
+  EZ-Flash Junior, Everdrive GB, ElCheapoSD and Bung GB-USB as working carts. The author credits Claude Code for
+  assistance. The repository also carries a built 32 KB ROM in its tree.
+status: maintained
+authors:
+  - name: Luigi Massari
+    url: https://github.com/luigismith
+source: https://github.com/luigismith/gb-tracker-pro
+source_status: open
+license: MIT
+homepage: https://github.com/luigismith/gb-tracker-pro/releases/tag/v1.0
+distribution: download
+install_notes: >-
+  Copy GB_TRACKER_PRO.gbc from the release to a flash cartridge that supports MBC5 with battery saves, or run it on
+  a CGB-accurate emulator. Saves are 32 KB .sav files that the cartridge writes to its microSD card. It does not run
+  on a monochrome Game Boy.
+brick_risk: false
+tags: [tracker, chiptune, sequencer, open-source]
+image:
+  url: https://raw.githubusercontent.com/luigismith/gb-tracker-pro/main/manual/screenshots/02_pattern_main.png
+  alt: GB-Tracker Pro pattern screen with a magenta title bar, columns for the two pulse channels, wave and noise, a red cursor row, an orange playing row and a green status line at the bottom
+  credit: Luigi Massari
+  source_url: https://github.com/luigismith/gb-tracker-pro
+  first_party: true
+versions:
+  - version: v1.0
+    date: 2026-05-18
+    url: https://github.com/luigismith/gb-tracker-pro/releases/tag/v1.0

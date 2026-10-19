@@ -1,0 +1,46 @@
+device: miyoo-miyoo-mini
+name: ChooChooTracker
+summary: >-
+  Multi-engine tracker forked from ChipNomad, with a MiyooPorts ARMHF build for the Miyoo Mini and Mini Plus on
+  Onion OS. Alpha.
+description: >-
+  ChooChooTracker keeps ChipNomad's tracker workflow and adds Braids, Plaits, sample, wavetable, acid and drum
+  engines, native chip and FM instruments, send reverb and delay, insert effects and MIDI mapping. Its Miyoo build
+  arrived in v1.0.15-alpha as a MiyooPorts package, and the user manual's installation page describes it for the
+  Miyoo Mini and Mini Plus under Onion OS. The README names the Anbernic RG353V through PortMaster as the main
+  target. The manual lists the Miyoo builds as without Ableton Link, and the first Miyoo release notes ask users
+  to report problems on the new Miyoo support.
+status: active
+authors:
+  - name: Pierre-Emmanuel Surga (paiheulevrai)
+    url: https://github.com/paiheulevrai
+source: https://github.com/paiheulevrai/Choochootracker
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file names ChipNomad and paiheulevrai as copyright holders. Mutable Instruments, Airwindows, Signalsmith
+  Stretch and other components keep their own licenses, listed in the repository's license folders. The manual says
+  the Miyoo builds do not include Ableton Link.
+homepage: https://choochootracker.vercel.app/
+distribution: download
+install_notes: >-
+  Extract the MiyooPorts archive from the GitHub release at the root of the SD card so that its Roms/PORTS folders
+  merge with Onion's existing ones, refresh the collection and start ChooChooTracker from the Ports menu. Back up the
+  app's projects folder before replacing an existing installation.
+brick_risk: false
+tags: [tracker, synth-engine, sampler, sequencer, wavetable, fx, midi, open-source]
+image:
+  url: https://raw.githubusercontent.com/paiheulevrai/Choochootracker/main/screenshots/song.png
+  alt: ChooChooTracker song screen in a desktop window, with a dark navy grid of eight track columns, chain numbers in yellow and the mode letters M S C P I T at the right edge
+  credit: paiheulevrai
+  source_url: https://github.com/paiheulevrai/Choochootracker
+  first_party: true
+versions:
+  - version: v1.0.16-alpha
+    date: 2026-10-14
+    url: https://github.com/paiheulevrai/Choochootracker/releases/tag/v1.0.16-alpha
+    notes: Adds advanced slicing, master effects, editable chip synths, stereo panning and LSDj and M8 import.
+  - version: v1.0.15-alpha
+    date: 2026-10-07
+    url: https://github.com/paiheulevrai/Choochootracker/releases/tag/v1.0.15-alpha
+    notes: First release with the MiyooPorts package.

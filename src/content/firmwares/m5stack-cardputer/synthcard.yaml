@@ -1,0 +1,33 @@
+device: m5stack-cardputer
+name: SynthCard
+summary: >-
+  Standalone groovebox for the Cardputer ADV with eight-voice synth in six engines, twelve synthesised drum lanes, a
+  64-step sequencer, song mode and effects.
+description: >-
+  SynthCard has seven screens: live play, drums, a piano-roll step editor, sound design, effects, a song arranger
+  and setup. The LEAD and BASS tracks choose from analog, FM, wavetable, Karplus-Strong pluck, organ and chip
+  engines with 48 factory presets, and twelve drum voices are synthesised rather than sampled. The sequencer holds
+  eight patterns of up to 64 steps with probability, slide and chord steps, live recording, scales, an
+  arpeggiator and generators for beats and melodies. Delay, plate reverb, chorus and a compressor are built in, and
+  projects are saved to the microSD card. It runs on the Cardputer ADV only and refuses to start on other boards.
+  Output is mono and there is no MIDI. The repository has a host-side test and WAV render suite for the audio code.
+status: active
+authors:
+  - name: Eren Altuntas (meister5)
+    url: https://github.com/meister5
+source: https://github.com/meister5/synthcard
+source_status: open
+license: MIT
+homepage: https://github.com/meister5/synthcard
+distribution: download
+install_notes: >-
+  The repository keeps a built SynthCard.bin at its root, and tools/package.sh builds that file plus a merged image.
+  Point M5Launcher at the SynthCard.bin file, flash the merged image at offset 0x0 with esptool or M5Burner, or
+  upload with arduino-cli. Projects live in /synthcard on the microSD card; the card is optional for playing.
+brick_risk: false
+tags: [synth, drum-machine, sequencer, groovebox, fx, open-source]
+versions:
+  - version: main @ e2dffc2
+    date: 2026-09-01
+    url: https://github.com/meister5/synthcard/commit/e2dffc2
+    notes: No tagged releases; this is the latest commit.
