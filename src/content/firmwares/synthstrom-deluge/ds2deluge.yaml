@@ -1,0 +1,23 @@
+device: synthstrom-deluge
+name: ds2deluge
+kind: tool
+summary: Python converter from Decent Sampler presets and libraries to Deluge multisample SYNTH XML, with the samples copied alongside. Has a command line and a drag-and-drop GUI.
+description: >-
+  Converts sample mappings only; effects, envelopes, LFOs and round robins are
+  not carried over and loop points are partly preserved. The README's PyPI and
+  download instructions do not work: the package is not on PyPI and the 0.1
+  release has no files attached, so install from a clone. Firmware
+  compatibility is not stated. Development used an AI coding assistant.
+status: active
+authors:
+  - name: takeout
+    url: https://github.com/take0ut
+source: https://github.com/take0ut/ds2deluge
+source_status: open
+license: MIT
+distribution: source-only
+tags: [converter, multisample, python]
+versions:
+  - version: "0.1"
+    date: 2025-11-25
+    url: https://github.com/take0ut/ds2deluge/releases/tag/0.1

@@ -1,0 +1,29 @@
+device: synthstrom-deluge
+name: deluge-sdk
+kind: tool
+summary: Rust SDK and board support package for writing your own async apps for the OLED Deluge on Embassy. Gives access to the display, pads, buttons, encoders, LEDs, audio, CV/gate, MIDI and SD card, with cargo deluge tooling and a desktop simulator.
+description: >-
+  Apps are ELF files loaded into RAM by an on-device app loader. The loader is
+  installed through the normal firmware update path and can be replaced by the
+  official or community firmware again. Apps load from /APPS/ on the card or
+  are pushed over USB in development. The repository also has Wren scripting,
+  USB audio and Overbridge classes, and a controller firmware. 7-segment
+  units are not supported. There are no releases yet. An earlier experiment
+  by another developer, m-m-adams/deluge-rs, stopped at hello-world stage.
+status: active
+authors:
+  - name: Katherine Whitlock
+    url: https://github.com/stellar-aria
+source: https://github.com/FirestormAudio/deluge-sdk
+source_status: open
+license: MIT
+license_notes: >-
+  SDK and core crates are MIT OR Apache-2.0. The OLED UI toolkit, fonts and
+  pad-grid crates are GPL-3.0-or-later.
+distribution: source-only
+tags: [sdk, rust, alternative-os, simulator]
+versions:
+  - version: main @ e95f5ed
+    date: 2026-10-19
+    url: https://github.com/FirestormAudio/deluge-sdk/commit/e95f5ed
+    notes: No tagged releases; this is the latest commit.

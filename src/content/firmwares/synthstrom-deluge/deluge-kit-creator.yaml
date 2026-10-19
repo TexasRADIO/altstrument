@@ -1,0 +1,22 @@
+device: synthstrom-deluge
+name: Deluge Kit Creator
+kind: tool
+summary: 2018 browser tool that builds single or multi-kit Deluge KITs from a folder of WAVs, edits kits through a JSON schema, and assigns MIDI keys to kit rows in a song. Can load and save over a FlashAir card running Downrush.
+description: >-
+  Detects note names in pitched samples. The repository has no README. It was
+  written for the firmware 3.x format, and its schema may drop fields that
+  newer firmware writes, so test on copies. The hosted page still loads.
+status: dormant
+authors:
+  - name: fyyyyy
+    url: https://github.com/fyyyyy
+source: https://github.com/fyyyyy/deluge-kit-generator
+source_status: open
+license: unspecified
+homepage: https://fyyyyy.github.io/deluge-kit-generator/
+tags: [kit-builder, editor, web]
+versions:
+  - version: master @ 0276c16
+    date: 2018-07-05
+    url: https://github.com/fyyyyy/deluge-kit-generator/commit/0276c16
+    notes: No tagged releases; this is the latest commit.

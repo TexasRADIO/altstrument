@@ -1,0 +1,22 @@
+device: synthstrom-deluge
+name: deluge-claude-control
+kind: tool
+summary: Python script that uses the Deluge pad grid as a status display for Claude Code sessions over USB MIDI. Each chat lights a row of pads, and blinking, bright and dim pads show whether a session needs permission, is working or is idle.
+description: >-
+  Claude Code hooks call the script, and a watch process repaints the grid.
+  It needs community firmware with the Midigrid community feature enabled. It
+  does not read Deluge files or control sound.
+status: active
+authors:
+  - name: Alex Eversbusch (abusch419)
+    url: https://github.com/abusch419
+source: https://github.com/abusch419/deluge-claude-control
+source_status: open
+license: unspecified
+distribution: source-only
+tags: [midi, grid, python]
+versions:
+  - version: main @ bc0dd19
+    date: 2026-08-06
+    url: https://github.com/abusch419/deluge-claude-control/commit/bc0dd19
+    notes: No tagged releases; this is the latest commit.

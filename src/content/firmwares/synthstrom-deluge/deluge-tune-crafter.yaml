@@ -1,0 +1,27 @@
+device: synthstrom-deluge
+name: Deluge Tune Crafter
+kind: tool
+summary: Python script that turns audio into MIDI with Spotify's basic-pitch and MIDI into a Deluge SONG XML, using a bundled template song. Each track gets an instrument picked at random from a list of presets.
+description: >-
+  The template is in the community firmware 1.1.1 format. The output is a song
+  skeleton rather than a faithful conversion. It is Windows-oriented and
+  expects ffmpeg executables, which are committed to the repository.
+status: dormant
+authors:
+  - name: Ivan Padilla
+    url: https://github.com/IvanVeridian
+source: https://github.com/IvanVeridian/deluge-tune-crafter
+source_status: open
+license: proprietary
+license_notes: >-
+  Discrepancy: the file is titled "Modified MIT License" but only allows
+  personal and non-commercial use, so it is not MIT; it says
+  commercial use "requires explicit written permission from the copyright
+  holder."
+distribution: source-only
+tags: [converter, midi, songs, python]
+versions:
+  - version: main @ 93642fb
+    date: 2024-12-27
+    url: https://github.com/IvanVeridian/deluge-tune-crafter/commit/93642fb
+    notes: No tagged releases; this is the latest commit.

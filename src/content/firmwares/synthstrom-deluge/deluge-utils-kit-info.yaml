@@ -1,0 +1,21 @@
+device: synthstrom-deluge
+name: deluge-utils (kit listing)
+kind: tool
+summary: Small Python command-line tool that reads a Deluge KIT XML file and prints, or writes as HTML, a table of its drum names and sample paths.
+description: >-
+  Handles the older XML layout where firmware version lines sit outside the
+  root element, as well as the standard layout. A one-day project from 2023.
+status: dormant
+authors:
+  - name: Rafael González (astrorafael)
+    url: https://github.com/astrorafael
+source: https://github.com/astrorafael/deluge-utils
+source_status: open
+license: MIT
+distribution: source-only
+tags: [viewer, cli, python]
+versions:
+  - version: main @ 49f8ce2
+    date: 2023-04-06
+    url: https://github.com/astrorafael/deluge-utils/commit/49f8ce2
+    notes: No tagged releases; this is the latest commit.

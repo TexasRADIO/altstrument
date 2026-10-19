@@ -1,0 +1,31 @@
+device: synthstrom-deluge
+name: DelugeLite
+summary: Early performance-focused fork of community firmware main that aims for more voices and samples by freeing RAM and CPU. So far adds a voice-stealing crash fix, a configurable audio block size and a 7-segment-only build.
+description: >-
+  The 7-segment-only build compiles out the OLED code to gain fast heap, and
+  shows nothing on an OLED unit. The repository also carries notes on the
+  Deluge hardware and firmware architecture. It is based on upstream main from
+  2026-10-08. There are no releases or prebuilt files, and the project's own
+  change ledger lists every change as not yet verified on hardware. The
+  default branch is a Claude Code session branch and commits are authored by
+  the assistant.
+status: active
+authors:
+  - name: Anthony Papavassiliou
+    url: https://github.com/Akenfqs
+source: https://github.com/Akenfqs/DelugeLite
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  LICENSE file is GPL version 3; inherited source headers grant version 3 or
+  any later version.
+distribution: source-only
+install_notes: >-
+  Build with the firmware's dbt tool (./dbt build release). Untested on
+  hardware according to the project.
+tags: [fork, performance, 7-segment]
+versions:
+  - version: claude/practical-rubin-09kjmt @ d8ee335
+    date: 2026-10-10
+    url: https://github.com/Akenfqs/DelugeLite/commit/d8ee335
+    notes: No tagged releases; this is the latest commit.

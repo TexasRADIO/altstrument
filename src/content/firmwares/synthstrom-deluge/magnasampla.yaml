@@ -1,0 +1,25 @@
+device: synthstrom-deluge
+name: MagnaSampla
+kind: tool
+summary: JUCE auto-multisampler that plays a range of MIDI notes into an external instrument, records each one and writes WAV files named and tagged so the Deluge's multisample-from-folder feature maps them to keys.
+description: >-
+  Stores the root note in each WAV's smpl chunk and uses Deluge note naming,
+  where MIDI note 0 is C-2. Notes end after a set time or on silence. It is a
+  general-purpose sampler with Deluge-oriented output, available as a
+  standalone app, VST3 and AU. There are no releases; CI builds artifacts for
+  Windows and macOS. Commits are co-authored with Claude.
+status: active
+authors:
+  - name: jceloi
+    url: https://github.com/jceloi
+source: https://github.com/jceloi/MagnaSampla
+source_status: open
+license: GPL-3.0-only
+license_notes: README says GPLv3 and LICENSE is the version 3 text, with no "or later" statement.
+distribution: source-only
+tags: [multisample, sampler, vst, desktop]
+versions:
+  - version: main @ 3ccc3c9
+    date: 2026-07-27
+    url: https://github.com/jceloi/MagnaSampla/commit/3ccc3c9
+    notes: No tagged releases; this is the latest commit.

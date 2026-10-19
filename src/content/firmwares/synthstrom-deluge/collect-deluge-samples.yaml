@@ -1,0 +1,23 @@
+device: synthstrom-deluge
+name: CollectDelugeSamples
+kind: tool
+summary: Node.js command-line tool that copies every sample a song uses into a per-song folder under SAMPLES/COLLECTED, writes a copy of the song with updated paths, and lists missing files. Originals are not changed.
+description: >-
+  Written in 2018 for firmware 2.0.x and untested on later versions.
+  Executables are committed in the repository's build folder.
+status: dormant
+authors:
+  - name: RTX
+    url: https://github.com/RTX
+source: https://github.com/RTX/CollectDelugeSamples
+source_status: open
+license: unspecified
+license_notes: package.json declares ISC; there is no LICENSE file.
+distribution: source-only
+requires_stock: firmware 2.0.x
+tags: [samples, utility, cli]
+versions:
+  - version: master @ 8c8f7a5
+    date: 2018-11-27
+    url: https://github.com/RTX/CollectDelugeSamples/commit/8c8f7a5
+    notes: No tagged releases; this is the latest commit.

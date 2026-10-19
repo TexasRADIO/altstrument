@@ -1,0 +1,21 @@
+device: synthstrom-deluge
+name: Looper
+kind: tool
+summary: Local Flask web app that turns freely played recordings into grid-aligned loops for hardware samplers, with the Deluge as a named target. Detects beats and sections, time-stretches to a BPM grid and exports sample-exact 44.1 kHz 24-bit WAVs.
+description: >-
+  Not specific to the Deluge. Requires librosa, pyrubberband and the
+  Rubber Band library.
+status: active
+authors:
+  - name: vpesh
+    url: https://github.com/vpesh
+source: https://github.com/vpesh/looper
+source_status: open
+license: unspecified
+distribution: source-only
+tags: [samples, looper, python]
+versions:
+  - version: main @ c8eea37
+    date: 2026-04-02
+    url: https://github.com/vpesh/looper/commit/c8eea37
+    notes: No tagged releases; this is the latest commit.

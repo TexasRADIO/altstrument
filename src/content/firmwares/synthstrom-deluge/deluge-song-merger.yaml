@@ -1,0 +1,23 @@
+device: synthstrom-deluge
+name: Deluge Song Merger
+kind: tool
+summary: Single-page web app that merges several Deluge songs into one, copying their synth, kit, MIDI and CV instruments, and returns the merged XML to paste into a file.
+description: >-
+  Works only with files from firmware 3.0.0 or later. A user reported it
+  working with official 4.0.1 in 2023 but losing a sample-based track. The
+  code has not changed since 2019, and community firmware is untested.
+status: dormant
+authors:
+  - name: Oliver Leics
+    url: https://github.com/oleics
+source: https://github.com/oleics/deluge-song-merger
+source_status: open
+license: MIT
+license_notes: Stated at the end of the README; there is no LICENSE file.
+homepage: https://deluge-song-merger.netlify.app/
+tags: [songs, utility, web]
+versions:
+  - version: master @ 1ec1f8c
+    date: 2019-11-22
+    url: https://github.com/oleics/deluge-song-merger/commit/1ec1f8c
+    notes: No tagged releases; this is the latest commit.

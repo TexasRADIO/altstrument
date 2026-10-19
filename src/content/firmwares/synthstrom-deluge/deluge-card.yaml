@@ -1,0 +1,28 @@
+device: synthstrom-deluge
+name: deluge-card
+kind: tool
+summary: Python library for reading a Deluge SD card. Lists songs, samples and sample usage per song, reads tempo, key and scale from song XML, and moves samples while rewriting the song references. The deluge-cmd tools are built on it.
+description: >-
+  Written against firmware 3.15 song files. The 4.0 nested folder layout was
+  planned but not added, and community firmware is not mentioned.
+status: dormant
+authors:
+  - name: Chris Chamberlain (mupaduw)
+    url: https://github.com/mupaduw
+source: https://github.com/mupaduw/deluge-card
+source_status: open
+license: MIT
+homepage: https://mupaduw.github.io/deluge-card
+distribution: download
+install_notes: pip install deluge-card
+tags: [library, python, librarian]
+versions:
+  - version: v0.7.2
+    date: 2022-07-24
+    url: https://github.com/mupaduw/deluge-card/releases/tag/v0.7.2
+  - version: v0.7.1
+    date: 2022-07-24
+    url: https://github.com/mupaduw/deluge-card/releases/tag/v0.7.1
+  - version: v0.7.0
+    date: 2022-05-24
+    url: https://github.com/mupaduw/deluge-card/releases/tag/v0.7.0

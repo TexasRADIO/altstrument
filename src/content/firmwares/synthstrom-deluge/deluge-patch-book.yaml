@@ -1,0 +1,23 @@
+device: synthstrom-deluge
+name: Deluge Patch Book
+kind: tool
+summary: Static offline web app that reads a SYNTHS folder and writes a step-by-step guide for rebuilding any preset from an init patch, with a mod matrix table, signal path diagram, preset comparison, filters and a printable cheat sheet.
+description: >-
+  Can also browse /SYNTHS on a connected Deluge over SysEx, compare a saved
+  file with the guide, and show live values through MIDI Follow mode. Those
+  live features need community firmware 1.3 or later. Web Audio demos explain
+  the concepts. It runs from the hosted page or by opening index.html.
+status: active
+authors:
+  - name: s.e.s (busa-projects)
+    url: https://github.com/busa-projects
+source: https://github.com/busa-projects/deluge-patch-book
+source_status: open
+license: GPL-3.0-or-later
+homepage: https://busa-projects.github.io/deluge-patch-book/
+tags: [learning, viewer, sysex, web]
+versions:
+  - version: main @ 6a76062
+    date: 2026-09-27
+    url: https://github.com/busa-projects/deluge-patch-book/commit/6a76062
+    notes: No tagged releases; this is the latest commit.

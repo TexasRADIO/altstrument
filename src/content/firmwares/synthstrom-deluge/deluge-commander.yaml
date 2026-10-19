@@ -1,0 +1,40 @@
+device: synthstrom-deluge
+name: Deluge Commander
+kind: tool
+summary: Electron desktop app for organising the samples on a Deluge SD card. Rename, move and delete samples and folders, with the references in SONG, KIT and SYNTH XML rewritten to match. Can export a song, kit or synth with its samples.
+description: >-
+  Shows how many songs and kits use each sample and lets you audition them.
+  It only rewrites file paths in the XML, so it does not depend on a firmware
+  version, though no release has been tested with community firmware. The
+  last release is a 2022 beta for Windows and Intel macOS. Building from
+  source on Apple Silicon is reported to fail, and nine user issues are
+  unanswered.
+status: dormant
+authors:
+  - name: Fabio Barbon
+    url: https://github.com/drbourbon
+source: https://github.com/drbourbon/deluge-commander
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Discrepancy: LICENSE.md and the README say GPL version 3 (no "or later"
+  statement), but package.json declares MIT. Listed as the LICENSE file says.
+homepage: https://neuma.studio/deluge-commander/
+distribution: download
+tags: [librarian, samples, file-manager, desktop]
+image:
+  url: https://neuma.studio/content/images/size/w1200/2023/04/deluge-cmd-screenshot.png
+  alt: Deluge Commander browsing a drum sample folder with per-sample usage counts and song and kit tags
+  credit: Fabio Barbon
+  source_url: https://neuma.studio/deluge-commander/
+  first_party: true
+versions:
+  - version: v1.2.0-beta
+    date: 2022-01-13
+    url: https://github.com/drbourbon/deluge-commander/releases/tag/v1.2.0-beta
+  - version: v1.1.3
+    date: 2021-07-19
+    url: https://github.com/drbourbon/deluge-commander/releases/tag/v1.1.3
+  - version: v1.1.1
+    date: 2021-07-19
+    url: https://github.com/drbourbon/deluge-commander/releases/tag/v1.1.1

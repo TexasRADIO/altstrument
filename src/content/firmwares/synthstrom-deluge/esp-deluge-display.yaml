@@ -1,0 +1,25 @@
+device: synthstrom-deluge
+name: EspDelugeDisplay
+kind: tool
+summary: ESP32-S3 firmware that mirrors the Deluge's display on a Waveshare 1.91-inch AMOLED board over USB MIDI SysEx and streams it to a live web view. Aimed at owners of 7-segment Deluges.
+description: >-
+  The ESP32 acts as USB host and is powered by the Deluge. It uses the
+  community firmware display SysEx, so it needs community firmware 1.0 or
+  later, and works with OLED and 7-segment units. It also has a Wi-Fi debug
+  page and OTA updates. The README credits GitHub Copilot with writing the
+  code.
+status: active
+authors:
+  - name: fledsbo
+    url: https://github.com/fledsbo
+source: https://github.com/fledsbo/EspDelugeDisplay
+source_status: open
+license: unspecified
+distribution: source-only
+requires_stock: community firmware 1.0 or later
+tags: [display-mirror, hardware, esp32, sysex]
+versions:
+  - version: main @ 69428d5
+    date: 2026-04-08
+    url: https://github.com/fledsbo/EspDelugeDisplay/commit/69428d5
+    notes: No tagged releases; this is the latest commit.

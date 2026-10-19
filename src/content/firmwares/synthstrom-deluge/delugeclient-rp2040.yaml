@@ -1,0 +1,28 @@
+device: synthstrom-deluge
+name: delugeclient-rp2040
+kind: tool
+summary: Proof-of-concept RP2040 firmware that shows the Deluge's display on an external OLED through the community firmware's display SysEx over USB host. Based on bfredl's delugeclient.
+description: >-
+  Built for an Adafruit Feather RP2040 Scorpio with an OLED FeatherWing. On a
+  7-segment Deluge a button switches the firmware to sending OLED frames. The
+  author said in 2025 that it was mainly a proof of concept.
+status: dormant
+authors:
+  - name: Litui
+    url: https://github.com/litui
+source: https://github.com/litui/delugeclient-rp2040
+source_status: open
+license: unspecified
+distribution: source-only
+tags: [display-mirror, hardware, rp2040, sysex]
+image:
+  url: https://raw.githubusercontent.com/litui/delugeclient-rp2040/main/rp2040delugeclient.jpg
+  alt: Feather RP2040 with an OLED FeatherWing showing the Deluge display
+  credit: Litui
+  source_url: https://github.com/litui/delugeclient-rp2040
+  first_party: true
+versions:
+  - version: main @ be159ad
+    date: 2024-01-31
+    url: https://github.com/litui/delugeclient-rp2040/commit/be159ad
+    notes: No tagged releases; this is the latest commit.

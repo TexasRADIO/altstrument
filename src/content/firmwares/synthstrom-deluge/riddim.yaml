@@ -1,0 +1,24 @@
+device: synthstrom-deluge
+name: riddim
+kind: tool
+summary: Rule-based generator of dub, dubstep and UK garage songs for the Deluge, with a local steering UI. Writes MIDI and previews, and can send songs, clips, automation and preset changes to the Deluge over a custom SysEx command set.
+description: >-
+  The SysEx features need the author's firmware fork, whose ai-sysex and
+  ai-save-load branches are in edholland/DelugeFirmware. MIDI export and
+  previews work without a Deluge. The GitHub releases hold optional model
+  data, not software builds. The default branch is show.
+status: active
+authors:
+  - name: Ed Holland
+    url: https://github.com/edholland
+source: https://github.com/edholland/riddim
+source_status: open
+license: unspecified
+distribution: source-only
+requires_stock: author's DelugeFirmware fork (ai-sysex branch) for device control
+tags: [generative, sequencer, sysex, python]
+versions:
+  - version: show @ 60a3c71
+    date: 2026-10-14
+    url: https://github.com/edholland/riddim/commit/60a3c71
+    notes: No software releases; this is the latest commit.

@@ -1,0 +1,25 @@
+device: synthstrom-deluge
+name: Waverly
+kind: tool
+summary: Browser WAV editor from the Downrush project, built on an old WaveSurfer. Plays and edits samples, with SD card access over SysEx in the DelugeWeb version.
+description: >-
+  This 2024 Vite port lives in Synthstrom Audible's DelugeWeb repository; the
+  original was part of Downrush. The DelugeWeb README says the Downrush apps
+  mostly work but have not been updated for community firmware features.
+status: dormant
+authors:
+  - name: Jamie Fenton
+    url: https://github.com/jamiefaye
+source: https://github.com/SynthstromAudible/DelugeWeb/tree/main/downrush/waverly
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  DelugeWeb's LICENSE is GPL version 3 with no "or later" statement. The
+  original Downrush code is BSD-2-Clause.
+homepage: https://www.fentonia.com/deluge/waverly/
+tags: [sample-editor, samples, web]
+versions:
+  - version: main @ 722c9b9
+    date: 2024-12-30
+    url: https://github.com/SynthstromAudible/DelugeWeb/commit/722c9b9
+    notes: No tagged releases; this is the latest commit touching downrush/.

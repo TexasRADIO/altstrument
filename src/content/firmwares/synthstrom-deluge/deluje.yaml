@@ -1,0 +1,33 @@
+device: synthstrom-deluge
+name: Deluje
+kind: tool
+summary: Java desktop emulation of the Deluge with a pad-grid interface and a sound engine ported line by line from the community firmware's C++ source. Reads and writes song, kit and synth XML from a virtual SD card folder, with MIDI and SysEx remote control.
+description: >-
+  The project keeps an audit of upstream community firmware changes and was
+  last checked against upstream main on 2026-10-16. It needs an early-access
+  JDK 27, which the bundled run scripts download. Releases attach a jar and a
+  zip. Development is heavily AI-assisted. The repository has no license file,
+  although it is described as a port of the GPL community firmware.
+status: active
+authors:
+  - name: Ludovic Champenois
+    url: https://github.com/ludoch
+source: https://github.com/trudaine/deluje
+source_status: open
+license: unspecified
+license_notes: >-
+  Discrepancy: no LICENSE file or license statement, although the project
+  describes its code as a port of the GPL-3.0-or-later community firmware,
+  whose license would carry over to a derivative.
+distribution: download
+tags: [emulator, java, desktop]
+versions:
+  - version: v1.9.0
+    date: 2026-08-10
+    url: https://github.com/trudaine/deluje/releases/tag/v1.9.0
+  - version: v1.8.0
+    date: 2026-08-10
+    url: https://github.com/trudaine/deluje/releases/tag/v1.8.0
+  - version: v1.7.0
+    date: 2026-07-23
+    url: https://github.com/trudaine/deluje/releases/tag/v1.7.0

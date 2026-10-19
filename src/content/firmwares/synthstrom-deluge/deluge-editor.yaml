@@ -1,0 +1,26 @@
+device: synthstrom-deluge
+name: Deluge Editor
+kind: tool
+summary: Browser preset editor for Deluge synths and kits, with every parameter, patch cables, a sample range editor, a kit builder, a randomiser and a sample library manager that rewrites references. Loads and saves local files or the SD card over Web MIDI SysEx.
+description: >-
+  SysEx card access needs community firmware 1.3.0 or later and Follow mode
+  needs 1.1.0 or later. Its Live Edit mode depends on a SysEx feature that so
+  far exists only in the author's own firmware fork. The editor shows the
+  controls that apply to the selected firmware, official or community. It
+  credits the Deluge Synth Editor and DEx as starting points. The repository
+  includes AI assistant configuration.
+status: active
+authors:
+  - name: Tim L. White
+    url: https://github.com/cyface
+source: https://github.com/cyface/deluge-editor
+source_status: open
+license: MIT
+homepage: https://cyface.github.io/deluge-editor/
+distribution: browser-installer
+tags: [editor, kit-builder, librarian, sysex, web-midi]
+versions:
+  - version: main @ 2f9aee1
+    date: 2026-09-21
+    url: https://github.com/cyface/deluge-editor/commit/2f9aee1
+    notes: No tagged releases; this is the latest commit.

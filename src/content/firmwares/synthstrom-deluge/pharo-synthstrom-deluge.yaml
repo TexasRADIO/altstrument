@@ -1,0 +1,21 @@
+device: synthstrom-deluge
+name: Pharo-SynthstromDeluge
+kind: tool
+summary: Pharo Smalltalk library that models Deluge kits as objects and reads and writes KIT XML. An optional loader converts Akai MPC .PGM programs into Deluge kits and copies the samples.
+description: >-
+  Only kits are fully supported. Classes were generated from 3.x-era files,
+  and the README advises starting from files the Deluge itself created.
+status: dormant
+authors:
+  - name: Pavel (grype)
+    url: https://github.com/grype
+source: https://github.com/grype/Pharo-SynthstromDeluge
+source_status: open
+license: MIT
+distribution: source-only
+tags: [library, converter, kit-builder]
+versions:
+  - version: master @ 141952c
+    date: 2020-09-14
+    url: https://github.com/grype/Pharo-SynthstromDeluge/commit/141952c
+    notes: No tagged releases; this is the latest commit.

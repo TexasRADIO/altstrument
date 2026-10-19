@@ -1,0 +1,22 @@
+device: synthstrom-deluge
+name: soundfont-deluge
+kind: tool
+summary: Rust command-line converter from SoundFont (SF2) files to Deluge SYNTH XML instruments, writing the extracted WAV samples with loop points and mapping zones to oscillators.
+description: >-
+  The author tested it with official firmware 4.0.0 beta. Open issues note that
+  conversions come out too loud and that drum presets are not turned into kits.
+  No prebuilt binaries.
+status: dormant
+authors:
+  - name: Pär Bohrarper
+    url: https://github.com/parbo
+source: https://github.com/parbo/soundfont-deluge
+source_status: open
+license: unspecified
+distribution: source-only
+tags: [converter, multisample, cli, rust]
+versions:
+  - version: main @ 69f4d23
+    date: 2022-09-25
+    url: https://github.com/parbo/soundfont-deluge/commit/69f4d23
+    notes: No tagged releases; this is the latest commit.

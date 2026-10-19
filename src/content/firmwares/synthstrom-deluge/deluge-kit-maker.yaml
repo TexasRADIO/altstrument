@@ -1,0 +1,29 @@
+device: synthstrom-deluge
+name: Deluge Kit Maker
+kind: tool
+summary: Tauri desktop app for building Deluge drum kits. Drop a folder of WAVs to sort them onto 16 pads, set volume, pan, pitch, reverse and trim per pad, audition on a 16-step sequencer, and save KIT XML with its samples to the card layout.
+description: >-
+  Targets the official 4.x kit format and is meant to load on community
+  firmware 1.2 as well. The README says it is a proof of concept that has not
+  been tested on a real Deluge. Windows 11 is the main platform and there is no
+  prebuilt installer. The latest commit has an AI co-author trailer.
+status: active
+authors:
+  - name: Chris Goggins
+    url: https://github.com/gonemadau
+source: https://github.com/gonemadau/delugekitmaker
+source_status: open
+license: MIT
+distribution: source-only
+tags: [kit-builder, samples, desktop]
+image:
+  url: https://raw.githubusercontent.com/gonemadau/delugekitmaker/main/screenshots/round2-final.png
+  alt: Deluge Kit Maker dark interface with a pad grid of kick, snare and hat pads and a list of kits on the SD card
+  credit: Chris Goggins
+  source_url: https://github.com/gonemadau/delugekitmaker
+  first_party: true
+versions:
+  - version: main @ d4cf34b
+    date: 2026-06-20
+    url: https://github.com/gonemadau/delugekitmaker/commit/d4cf34b
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,26 @@
+device: synthstrom-deluge
+name: ViewScore
+kind: tool
+summary: Browser viewer for Deluge SONG, KIT and SYNTH XML from the Downrush project. Shows clips as a piano-roll score and can play them to a MIDI output.
+description: >-
+  Replaces the xmlView module of the original Downrush and lives in Synthstrom
+  Audible's DelugeWeb repository. It views files and does not edit them. The
+  DelugeWeb README says it has not been updated to show community firmware
+  features, so newer song fields may not appear.
+status: dormant
+authors:
+  - name: Jamie Fenton
+    url: https://github.com/jamiefaye
+source: https://github.com/SynthstromAudible/DelugeWeb/tree/main/downrush/viewScore
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  DelugeWeb's LICENSE is GPL version 3 with no "or later" statement. The
+  original Downrush code is BSD-2-Clause.
+homepage: https://www.fentonia.com/deluge/viewScore/
+tags: [viewer, songs, web-midi]
+versions:
+  - version: main @ 722c9b9
+    date: 2024-12-30
+    url: https://github.com/SynthstromAudible/DelugeWeb/commit/722c9b9
+    notes: No tagged releases; this is the latest commit touching downrush/.

@@ -1,0 +1,22 @@
+device: synthstrom-deluge
+name: deluge-kit-generator (Rust)
+kind: tool
+summary: Rust command-line tool that builds a Deluge KIT from WAV files whose cue-point regions mark the individual hits, and copies the samples to the card. One option merges the regions of several files into a single kit.
+description: >-
+  XML writing comes from the author's deluge-rs library, included as a git
+  submodule with an SSH URL, so a plain HTTPS clone may need the submodule URL
+  changed. No prebuilt binaries and no firmware compatibility statement.
+status: dormant
+authors:
+  - name: Iohann Rabeson
+    url: https://github.com/IohannRabeson
+source: https://github.com/IohannRabeson/deluge-kit-generator
+source_status: open
+license: unspecified
+distribution: source-only
+tags: [kit-builder, samples, cli, rust]
+versions:
+  - version: main @ beceb73
+    date: 2023-05-15
+    url: https://github.com/IohannRabeson/deluge-kit-generator/commit/beceb73
+    notes: No tagged releases; this is the latest commit.

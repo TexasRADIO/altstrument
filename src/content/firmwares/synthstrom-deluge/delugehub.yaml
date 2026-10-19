@@ -1,0 +1,37 @@
+device: synthstrom-deluge
+name: DelugeHub
+kind: tool
+summary: PySide6 desktop manager for a Deluge SD card. Browse, rename and export songs with their samples, edit kits and synth parameters, manage samples with automatic XML path updates, find lost samples, batch operations, and ZIP backup and restore.
+description: >-
+  Changes are staged and only written when confirmed, and deleted files go to
+  a trash folder. The README says the parser handles firmware 1.x and 2.x
+  files. Community firmware and the 4.x format are not mentioned, though the
+  changelog describes handling several XML generations. The README points to a
+  Windows installer, but recent releases have no files attached, so run it from
+  source with Python 3.10 or later. The repository includes an AI code review
+  document.
+status: active
+authors:
+  - name: lakort161 (LakortWPS)
+    url: https://github.com/LakortWPS
+source: https://github.com/LakortWPS/DelugeHub
+source_status: open
+license: MIT
+distribution: source-only
+tags: [librarian, editor, samples, desktop, backup]
+image:
+  url: https://raw.githubusercontent.com/LakortWPS/DelugeHub/main/docs/screenshots/screenshot-dashboard-dark.png
+  alt: DelugeHub dashboard in dark theme
+  credit: lakort161
+  source_url: https://github.com/LakortWPS/DelugeHub
+  first_party: true
+versions:
+  - version: v2.2.3
+    date: 2026-09-16
+    url: https://github.com/LakortWPS/DelugeHub/releases/tag/v2.2.3
+  - version: v2.2.2
+    date: 2026-06-30
+    url: https://github.com/LakortWPS/DelugeHub/releases/tag/v2.2.2
+  - version: v2.2.1
+    date: 2026-06-14
+    url: https://github.com/LakortWPS/DelugeHub/releases/tag/v2.2.1

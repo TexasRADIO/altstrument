@@ -1,0 +1,23 @@
+device: synthstrom-deluge
+name: Deluge MIDI Follow editor
+kind: tool
+summary: Small web editor that generates the community firmware's MIDIFollow.XML so a Novation Launch Control XL in its default layout controls Deluge parameters. Replaces the author's earlier tool that injected MIDI mappings into song files.
+description: >-
+  The author marks the original C# song injector (2020) obsolete now that the
+  community firmware has MIDI Follow mode. The web editor dates from May 2026,
+  is labelled a draft, and keeps mappings in browser storage. The repository
+  name and description still refer to the old tool.
+status: active
+authors:
+  - name: cgoehl
+    url: https://github.com/cgoehl
+source: https://github.com/cgoehl/deluge-midi
+source_status: open
+license: unspecified
+homepage: https://cgoehl.github.io/deluge-midi
+tags: [midi, config-tool, controller, web]
+versions:
+  - version: master @ 9ab96a3
+    date: 2026-05-27
+    url: https://github.com/cgoehl/deluge-midi/commit/9ab96a3
+    notes: Latest commit; the editor has no release. v1.0 (2020-02-21) is the obsolete injector.

@@ -1,0 +1,21 @@
+device: synthstrom-deluge
+name: Deluge Shortcut Finder
+kind: tool
+summary: Searchable, filterable table of Deluge shortcuts grouped by view and category, with dark, light and synthwave themes.
+description: >-
+  No firmware version is stated; the data appears to follow the official 4.x
+  manual. Written over three days in November 2025.
+status: active
+authors:
+  - name: enqack (Hellfonic)
+    url: https://github.com/enqack
+source: https://github.com/Hellfonic/deluge-shortcut-finder
+source_status: open
+license: unspecified
+homepage: https://dsf.hellfonic.com
+tags: [reference, shortcuts, web]
+versions:
+  - version: main @ ca373aa
+    date: 2025-11-15
+    url: https://github.com/Hellfonic/deluge-shortcut-finder/commit/ca373aa
+    notes: No tagged releases; this is the latest commit.

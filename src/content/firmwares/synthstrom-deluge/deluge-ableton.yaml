@@ -1,0 +1,25 @@
+device: synthstrom-deluge
+name: Deluge ↔ Ableton
+kind: tool
+summary: Free macOS app that converts Deluge songs to Ableton Live Sets and back. Covers tempo, audio clips, notes from synth, kit and MIDI tracks, session scenes, the arrangement, and track names and colours.
+description: >-
+  Synth patches, effects, automation and swing are not converted. Only
+  releases are published, with no source code. The app is unsigned, so the
+  README gives an xattr command to get past Gatekeeper, and the release notes
+  call 0.6 an initial test release. Same author as the Deluge Synth Editor.
+status: active
+authors:
+  - name: Chris Griggs (solaris76)
+    url: https://github.com/solaris76
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  No license file; free download. The README notes that it uses Ableton's
+  ALSExportKit under that kit's own terms.
+homepage: https://github.com/solaris76/deluge-to-ableton-release/releases
+distribution: download
+tags: [converter, daw, songs, macos]
+versions:
+  - version: 0.6.1
+    date: 2026-01-29
+    url: https://github.com/solaris76/deluge-to-ableton-release/releases/tag/0.6.1

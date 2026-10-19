@@ -1,0 +1,26 @@
+device: synthstrom-deluge
+name: deluge-list-missing-files
+kind: tool
+summary: Node.js command-line tool that scans every KIT, SYNTH and SONG XML on a Deluge SD card and lists the samples they reference that are missing from the card. Read-only.
+description: >-
+  The 2020 release has packaged executables for macOS, Linux and Windows; the
+  README says only the macOS build was tested. Since then the maintainer has
+  merged dependency updates (latest 2026-04-21) but made no functional changes.
+status: active
+authors:
+  - name: Jack Lee
+    url: https://github.com/jackwlee01
+source: https://github.com/jackwlee01/deluge-list-missing-files
+source_status: open
+license: MIT
+license_notes: Declared in package.json; there is no LICENSE file.
+distribution: download
+tags: [samples, utility, cli]
+versions:
+  - version: master @ 4588e26
+    date: 2026-04-21
+    url: https://github.com/jackwlee01/deluge-list-missing-files/commit/4588e26
+    notes: Dependency update merge; no release since 0.1.0.
+  - version: 0.1.0
+    date: 2020-02-02
+    url: https://github.com/jackwlee01/deluge-list-missing-files/releases/tag/0.1.0

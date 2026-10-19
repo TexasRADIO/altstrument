@@ -1,0 +1,21 @@
+device: synthstrom-deluge
+name: DelugeRecordingCleaner
+kind: tool
+summary: Python script that scans all songs, kits and synths and moves recordings in SAMPLES/RECORD that nothing uses into a separate folder. It moves files rather than deleting them.
+description: >-
+  Files from firmware older than 3.0 need a manual fix described in the README.
+  Newer firmware is untested. Same author as deluge.quest.
+status: dormant
+authors:
+  - name: Danny Brown
+    url: https://github.com/dannybrown37
+source: https://github.com/dannybrown37/DelugeRecordingCleaner
+source_status: open
+license: MIT
+distribution: source-only
+tags: [samples, utility, python]
+versions:
+  - version: master @ 4d631d6
+    date: 2020-02-26
+    url: https://github.com/dannybrown37/DelugeRecordingCleaner/commit/4d631d6
+    notes: No tagged releases; this is the latest commit.

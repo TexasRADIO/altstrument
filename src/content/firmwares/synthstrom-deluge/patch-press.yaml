@@ -1,0 +1,27 @@
+device: synthstrom-deluge
+name: patch-press
+kind: tool
+summary: Command-line pipeline that renders VST and CLAP plugin presets, or takes sample libraries and Bitwig multisample archives, and writes ready-to-load Deluge SYNTH and KIT XML with a SAMPLES tree. Also exports Polyend Tracker and 1010music Bento formats.
+description: >-
+  Detects loop points and handles velocity layers and round robins. Deluge
+  output uses the 4.1.x XML format that community firmware also reads, and WAV
+  headers are rewritten into a form the firmware accepts. It needs Python 3.14
+  and a C++/JUCE toolchain for the companion patch-render tool, on Linux or
+  macOS, and is installed from a clone. The repository includes AI assistant
+  configuration.
+status: active
+authors:
+  - name: Aurelien Leblond
+    url: https://github.com/blablack
+source: https://github.com/blablack/patch-press
+source_status: open
+license: AGPL-3.0-only
+license_notes: LICENSE is the AGPL version 3 text with no "or later" statement.
+homepage: https://blablack.github.io/patch-press/
+distribution: source-only
+tags: [converter, multisample, python, cli]
+versions:
+  - version: main @ 0344043
+    date: 2026-10-13
+    url: https://github.com/blablack/patch-press/commit/0344043
+    notes: No tagged releases; this is the latest commit.

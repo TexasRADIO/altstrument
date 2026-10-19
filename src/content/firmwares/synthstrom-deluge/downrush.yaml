@@ -1,0 +1,35 @@
+device: synthstrom-deluge
+name: Downrush
+kind: tool
+summary: File manager and editors that run from a Toshiba FlashAir Wi-Fi SD card inside the Deluge. Transfers files without removing the card and includes kit, synth and song editors, the Waverly WAV editor, an XML viewer and Midian.
+description: >-
+  Downrush dates from 2018 and was last updated for official firmware 4.0.0 in
+  November 2022. It does not cover community firmware features, and the
+  FlashAir cards it depends on are discontinued. Parts of it were ported to the
+  SysEx-based DelugeWeb tools. Issues and dependency pull requests have gone
+  unanswered since early 2023.
+status: dormant
+authors:
+  - name: Jamie Fenton
+    url: https://github.com/jamiefaye
+source: https://github.com/jamiefaye/downrush
+source_status: open
+license: BSD-2-Clause
+license_notes: >-
+  Root LICENSE is BSD 2-Clause (a typo in it stops GitHub from detecting it).
+  The license.htm shipped to users shows a 3-clause BSD text.
+distribution: download
+install_notes: >-
+  Copy the DR and SD_WLAN folders from the release zip to a FlashAir W-03 or
+  W-04 card, as described in the README.
+tags: [file-manager, editor, wifi-sd, flashair]
+versions:
+  - version: b24
+    date: 2022-11-08
+    url: https://github.com/jamiefaye/downrush/releases/tag/b24
+  - version: b23
+    date: 2022-11-07
+    url: https://github.com/jamiefaye/downrush/releases/tag/b23
+  - version: b22
+    date: 2022-11-06
+    url: https://github.com/jamiefaye/downrush/releases/tag/b22

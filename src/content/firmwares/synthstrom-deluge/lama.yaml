@@ -1,0 +1,38 @@
+device: synthstrom-deluge
+name: Lama
+summary: Custom build on top of Owlet 1.3 with a vowel filter, drawable LFO shapes, saturation and wavefold editors, bass mono and an EQ mid band. Removes the DX7 engine, ringmod, kick mode, four Phi oscillators and the Club filter.
+description: >-
+  Lama is the Owlet-based sibling of Deluge Community Custom, by the same
+  author. It is six commits on an Owlet snapshot from 2026-07-07, so it does not
+  include later Owlet releases. It also adds a table shaper tone control and
+  low-memory fixes. The manual describes how older songs that use the removed
+  engines load, for example as sine or subtractive sounds. Commits carry AI
+  co-author trailers. The repository was three days old when this entry was
+  written.
+status: active
+authors:
+  - name: breeze-dawless
+    url: https://github.com/breeze-dawless
+source: https://github.com/breeze-dawless/LAMA
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  LICENSE file is GPL version 3; inherited source headers grant version 3 or
+  any later version.
+distribution: download
+install_notes: >-
+  The build zip and manual are linked from the release description, not
+  attached as release assets. Copy the .bin to the SD card root and hold Shift
+  while powering on. Back up the SD card first; songs that use removed engines
+  will sound different.
+tags: [fork, filter, lfo, fx, distortion, eq]
+video:
+  url: https://www.youtube.com/shorts/mTh3I_LRdWk
+  title: "Formant filter and drawable LFO custom vibe coded firmware:P #synthstromdeluge"
+  credit: Shrek
+  first_party: true
+  found_via: https://github.com/breeze-dawless/LAMA/releases/tag/lama-2026-10-16
+versions:
+  - version: lama-2026-10-16
+    date: 2026-10-16
+    url: https://github.com/breeze-dawless/LAMA/releases/tag/lama-2026-10-16

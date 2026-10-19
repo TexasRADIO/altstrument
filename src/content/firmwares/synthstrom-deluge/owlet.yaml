@@ -1,0 +1,40 @@
+device: synthstrom-deluge
+name: Owlet
+summary: Sound-design fork of the community firmware's 1.3 development line. Adds bounce in place, a lookback sampler, resampling source selection, new oscillators and effects such as Scatter, Featherverb and a multiband OTT, plus macros.
+description: >-
+  Owlet tracks the upstream community firmware main branch and merges it
+  regularly. Its own additions include sound cloning, gate sample mode, loop
+  crossfade and ping-pong, a plockable sample start offset, a unison-index
+  modulation source, MIDI Follow CC presets, the Phi family and other new
+  oscillators, and effects including Disperser, Eroder, a sine shaper and a
+  table shaper. Horizontal menus must be turned on. Songs that use Owlet
+  features are not expected to load the same way on other firmware. The README
+  says new feature work has moved to a separate repository, DelugeFirmware-talon,
+  which was not public when this entry was written; this repository still gets
+  releases and fixes.
+status: active
+authors:
+  - name: owlet
+    url: https://github.com/owlet-labs
+source: https://github.com/owlet-labs/DelugeFirmware
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  LICENSE file is GPL version 3; inherited source headers grant version 3 or
+  any later version.
+distribution: download
+install_notes: >-
+  Copy the .bin from the release zip to the SD card root and hold Shift while
+  powering on, as with the community firmware. The README calls the build
+  highly experimental; back up the SD card first.
+tags: [fork, synth-engine, oscillator, fx, sampler, resampling]
+versions:
+  - version: owlet-v1.3.0-r5
+    date: 2026-09-04
+    url: https://github.com/owlet-labs/DelugeFirmware/releases/tag/owlet-v1.3.0-r5
+  - version: owlet-v1.3.0-r4
+    date: 2026-09-03
+    url: https://github.com/owlet-labs/DelugeFirmware/releases/tag/owlet-v1.3.0-r4
+  - version: owlet-v1.3.0-r2
+    date: 2026-07-27
+    url: https://github.com/owlet-labs/DelugeFirmware/releases/tag/owlet-v1.3.0-r2

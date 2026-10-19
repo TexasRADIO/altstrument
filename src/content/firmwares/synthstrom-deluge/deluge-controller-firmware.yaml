@@ -1,0 +1,33 @@
+device: synthstrom-deluge
+name: Deluge Controller Firmware
+summary: Replacement firmware that turns the Deluge into a USB controller for a computer. Pads, buttons, encoders, LEDs, the OLED, CV/gate and audio are exposed over a CDC serial protocol, USB Audio Class 2 and USB MIDI.
+description: >-
+  The Deluge stops running its sequencer and becomes a composite USB device.
+  The host receives pad, button and encoder events and sends pad colours, LED
+  states, OLED pixels and CV/gate values. Audio runs at 44.1 kHz stereo. The
+  repository includes Python and Rust host demos. The display commands are
+  for the OLED model. Later work by the same author continued in deluge-sdk.
+status: active
+authors:
+  - name: Katherine Whitlock
+    url: https://github.com/stellar-aria
+source: https://github.com/stellar-aria/deluge-controller-firmware
+source_status: open
+license: GPL-3.0-or-later
+license_notes: README states GNU GPL version 3 or later.
+distribution: download
+install_notes: >-
+  Releases attach deluge_controller.bin. The README documents building with
+  dbt and loading over JTAG/SWD only; loading it from the SD card like a normal
+  firmware update is not documented.
+tags: [controller-mode, usb-audio, usb-midi, alternative-os]
+versions:
+  - version: v1.0.3
+    date: 2026-03-27
+    url: https://github.com/stellar-aria/deluge-controller-firmware/releases/tag/v1.0.3
+  - version: v1.0.2
+    date: 2026-03-06
+    url: https://github.com/stellar-aria/deluge-controller-firmware/releases/tag/v1.0.2
+  - version: v1.0.1
+    date: 2026-03-05
+    url: https://github.com/stellar-aria/deluge-controller-firmware/releases/tag/v1.0.1

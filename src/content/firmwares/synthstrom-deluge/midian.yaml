@@ -1,0 +1,26 @@
+device: synthstrom-deluge
+name: Midian
+kind: tool
+summary: Web converter from standard MIDI files to Deluge SONG.XML, with a beta mode that converts SONG.XML back to MIDI.
+description: >-
+  Part of the original Downrush repository rather than DelugeWeb. The source
+  was last updated in November 2022 for official firmware 4.0.0, and community
+  firmware song features are not covered. Open issues report a missing first
+  track and empty MIDI output from the song-to-MIDI direction. The hosted copy
+  is on the author's site under /catnip/, which is unrelated to the catnip app
+  in DelugeWeb.
+status: dormant
+authors:
+  - name: Jamie Fenton
+    url: https://github.com/jamiefaye
+source: https://github.com/jamiefaye/downrush/tree/master/midian
+source_status: open
+license: BSD-2-Clause
+license_notes: Inherited from the Downrush repository's LICENSE; midian/package.json says ISC.
+homepage: https://www.fentonia.com/catnip/midian/index.html
+tags: [converter, midi, songs, web]
+versions:
+  - version: master @ e223328
+    date: 2022-11-08
+    url: https://github.com/jamiefaye/downrush/commit/e223328
+    notes: No separate release; this is the latest commit touching midian/.

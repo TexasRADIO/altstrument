@@ -1,0 +1,22 @@
+device: synthstrom-deluge
+name: RNDSYNTH
+kind: tool
+summary: Python command-line script that writes randomised Deluge synth patches as SYNTH XML, with limits on pitch range, modulation, effects, resonance and bitcrushing, and optional random arpeggiator and mod FX.
+description: >-
+  Written in 2018 for firmware 3.x. Output has no firmwareVersion attribute,
+  and loading on current official or community firmware is untested. Only
+  automated dependency updates have landed since 2018.
+status: dormant
+authors:
+  - name: Casey Tucker
+    url: https://github.com/dctucker
+source: https://github.com/dctucker/rndsynth
+source_status: open
+license: unspecified
+distribution: source-only
+tags: [randomizer, generator, python]
+versions:
+  - version: main @ 520c92b
+    date: 2018-09-02
+    url: https://github.com/dctucker/rndsynth/commit/520c92b
+    notes: No tagged releases; this is the latest commit.

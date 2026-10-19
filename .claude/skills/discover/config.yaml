@@ -361,3 +361,63 @@ ignore:
   - url: https://github.com/DeepNESReverse/xrom-apu
     reason: TypeScript library emulating the NES sound chip, not music software for the console
     date: 2026-10-19
+  - url: https://github.com/Queroland/DelLeague
+    reason: repository deleted and the replacement kleinstar1/DelLeague link is also 404; no source or download left
+    date: 2026-10-19
+  - url: https://github.com/zmbush/Downpour
+    reason: empty repository (README and LICENSE only)
+    date: 2026-10-19
+  - url: https://github.com/Dubprince/Dubprince-Deluge-Firmware
+    reason: personal copy of the community firmware with one undescribed commit, upstream README and no builds
+    date: 2026-10-19
+  - url: https://github.com/alter-alter/DelugeFirmware
+    reason: 2023 feature fork whose features were all merged into the community firmware; inactive since 2023-08
+    date: 2026-10-19
+  - url: https://github.com/m-m-adams/deluge-rs
+    reason: bare-metal Rust hello-world experiment, superseded by FirestormAudio/deluge-sdk
+    date: 2026-10-19
+  - url: https://github.com/cliveyg/deluge-selector
+    reason: archived Go stub that does none of what its README describes
+    date: 2026-10-19
+  - url: https://github.com/Ch0ronomato/deluge-utils
+    reason: personal MIDI routing scripts for a DTX502 and minilogue xd, partly broken; not Deluge tooling
+    date: 2026-10-19
+  - url: https://github.com/weavermedia/deluge-synths
+    reason: preset pack with no software
+    date: 2026-10-19
+  - url: https://github.com/entzmingerc/DelugeSynthPresets
+    reason: preset collection with no software
+    date: 2026-10-19
+  - url: https://github.com/weavermedia/deluge-led-font
+    reason: font asset, not software
+    date: 2026-10-19
+  - url: https://github.com/drbourbon/delugist-template
+    reason: empty folder template
+    date: 2026-10-19
+  - url: https://github.com/raybun/synthstrom-deluge-chart
+    reason: PDF chart, not software
+    date: 2026-10-19
+  - url: https://github.com/versionz/deluge-cheatsheet.md
+    reason: Markdown cheat sheet, not software
+    date: 2026-10-19
+  - url: https://github.com/piflixe/deluge
+    reason: CAD files for a case, not software
+    date: 2026-10-19
+  - url: https://github.com/gramster/sequencers
+    reason: written comparison of sequencers, not software
+    date: 2026-10-19
+  - url: https://github.com/Myxxin/Making-Waves-Retrospective
+    reason: workshop write-up and recordings, not software
+    date: 2026-10-19
+  - url: https://github.com/AuraTown/AuraGrid
+    reason: issues-only tracker for a closed general MIDI grid app; the Deluge is one listed controller
+    date: 2026-10-19
+  - url: https://github.com/thisisbribery/stolperbeats_v1
+    reason: browser emulator of a Eurorack module, not Deluge software
+    date: 2026-10-19
+  - url: https://github.com/Calvnhd/deluge
+    reason: personal SD card backup with the owner's sync scripts; skipped by maintainer decision
+    date: 2026-10-19
+  - url: https://github.com/thisisbribery/stolperbeats_v2
+    reason: browser emulator of a Eurorack module; v2 dropped the Deluge content
+    date: 2026-10-19

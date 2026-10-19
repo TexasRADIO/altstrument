@@ -1,0 +1,18 @@
+device: synthstrom-deluge
+name: Deluge Calculator
+kind: tool
+summary: Single-page calculator that turns BPM, time signature, bars per page and number of pages into song length, bar length and page length. Does not connect to the Deluge or read its files.
+status: active
+authors:
+  - name: Craig Damlo
+    url: https://github.com/CraigDamlo
+source: https://github.com/CraigDamlo/Deluge-Calculator
+source_status: open
+license: MIT
+homepage: https://craigdamlo.github.io/Deluge-Calculator
+tags: [utility, web]
+versions:
+  - version: main @ 79a88ec
+    date: 2026-08-12
+    url: https://github.com/CraigDamlo/Deluge-Calculator/commit/79a88ec
+    notes: No tagged releases; this is the latest commit.

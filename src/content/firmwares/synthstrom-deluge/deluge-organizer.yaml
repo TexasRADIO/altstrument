@@ -1,0 +1,21 @@
+device: synthstrom-deluge
+name: deluge_organizer
+kind: tool
+summary: Python script that renames the numbered clip and resample recordings on a Deluge card after the first song that uses them and rewrites every song reference. Has a simulate mode and per-song instrument statistics.
+description: >-
+  Tested by the author with songs from firmware 3.1 and 4.0 beta. It rewrites
+  song files, so run it on a copy.
+status: dormant
+authors:
+  - name: Fidel Aznar
+    url: https://github.com/fidelaznar
+source: https://github.com/fidelaznar/deluge_organizer
+source_status: open
+license: unspecified
+distribution: source-only
+tags: [samples, librarian, python]
+versions:
+  - version: master @ e47ee9c
+    date: 2022-03-02
+    url: https://github.com/fidelaznar/deluge_organizer/commit/e47ee9c
+    notes: No tagged releases; this is the latest commit.

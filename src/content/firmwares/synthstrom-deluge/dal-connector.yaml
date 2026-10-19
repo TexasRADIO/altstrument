@@ -1,0 +1,31 @@
+device: synthstrom-deluge
+name: DAL Connector
+kind: tool
+summary: Ableton Live 11 control surface script that reads Deluge songs from a FlashAir Wi-Fi SD card and syncs their notes and tempo into Live MIDI tracks named after the song.
+description: >-
+  The original repository, baronrabban/dalconnector, has been deleted; this
+  copy by DimaDake is the only public source found. It depends on discontinued
+  FlashAir cards and on Ableton Live 11, and dates from 2021.
+status: archived
+authors:
+  - name: Rabban
+    url: https://github.com/baronrabban
+source: https://github.com/DimaDake/dalconnector
+source_status: open
+license: BSD-2-Clause
+distribution: source-only
+install_notes: >-
+  Copy the DALConnector folder into Ableton's MIDI Remote Scripts folder, set
+  the card address in config.py and add it as a control surface.
+tags: [daw, ableton, wifi-sd, flashair]
+video:
+  url: https://www.youtube.com/watch?v=ZGC71gpfkwQ
+  title: DAL Connector Demo
+  credit: Rabban
+  first_party: true
+  found_via: https://github.com/DimaDake/dalconnector
+versions:
+  - version: v0.11
+    date: 2021-03-08
+    url: https://github.com/DimaDake/dalconnector/tree/v0.11
+    notes: Git tag; no GitHub release page.

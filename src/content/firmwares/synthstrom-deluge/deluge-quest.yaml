@@ -1,0 +1,39 @@
+device: synthstrom-deluge
+name: deluge.quest
+kind: tool
+summary: Browser toolbox that runs entirely client-side. SD card manager, song analyser and preview, kit builder, patch generator, song to MusicXML, MIDI or LilyPond, and MIDI to song import. The same tools ship as Python command-line programs.
+description: >-
+  The card manager fixes broken sample references, sorts songs, reclaims
+  space and backs up the card through the File System Access API; other
+  browsers get read-only drag and drop. The web app runs a Python wheel in
+  Pyodide. The CLIs include deluge-score, deluge-import, deluge-stats,
+  deluge-clean and deluge-backup, which keeps git-tracked card snapshots. It
+  handles the firmware 4.0 note-row format and uses the community firmware
+  source as its format reference. The repository includes AI assistant
+  configuration.
+status: active
+authors:
+  - name: Danny Brown
+    url: https://github.com/dannybrown37
+source: https://github.com/dannybrown37/deluge-quest
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  Code only, per pyproject.toml and the README. Demo audio, demo songs, logos
+  and other media are all rights reserved.
+homepage: https://deluge.quest
+install_notes: Use the website, or install the CLIs with uv tool install deluge-quest.
+tags: [librarian, converter, kit-builder, generator, web, python]
+versions:
+  - version: v0.3.1
+    date: 2026-09-16
+    url: https://github.com/dannybrown37/deluge-quest/tree/v0.3.1
+    notes: Git tag; no GitHub release page. Also on PyPI.
+  - version: v0.3.0
+    date: 2026-09-16
+    url: https://github.com/dannybrown37/deluge-quest/tree/v0.3.0
+    notes: Git tag; no GitHub release page.
+  - version: v0.1.0
+    date: 2026-09-12
+    url: https://github.com/dannybrown37/deluge-quest/tree/v0.1.0
+    notes: Git tag; no GitHub release page.

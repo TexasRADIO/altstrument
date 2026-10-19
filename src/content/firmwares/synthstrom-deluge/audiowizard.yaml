@@ -1,0 +1,31 @@
+device: synthstrom-deluge
+name: AudioWizard
+kind: tool
+summary: Audio analysis app that shows live tempo, key and chords, sends MIDI clock and separates stems. Its Deluge export builds a song from a recording, with stems as audio clips, melodic parts as synth clips, drums as a kit and detected sections as launchable sections.
+description: >-
+  Most of the app is not Deluge-specific. The exporter writes the community
+  firmware 1.2.1 song format, and its code warns that files should be checked
+  on the device. It runs on Windows, macOS, Linux and a Raspberry Pi kiosk,
+  with a separate web version. The README is in German and credits Claude as
+  a co-author.
+status: active
+authors:
+  - name: codekoch
+    url: https://github.com/codekoch
+source: https://github.com/codekoch/AudioWizard
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE is the GPL version 3 text with no "or later" statement.
+homepage: https://codekoch.github.io/AudioWizard/
+tags: [converter, stems, songs, analysis]
+image:
+  url: https://raw.githubusercontent.com/codekoch/AudioWizard/master/docs/screenshot_display.png
+  alt: AudioWizard main display showing live tempo, key and chord readouts
+  credit: codekoch
+  source_url: https://github.com/codekoch/AudioWizard
+  first_party: true
+versions:
+  - version: master @ feaa62e
+    date: 2026-07-30
+    url: https://github.com/codekoch/AudioWizard/commit/feaa62e
+    notes: No tagged releases; this is the latest commit.

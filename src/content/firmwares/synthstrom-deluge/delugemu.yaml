@@ -1,0 +1,39 @@
+device: synthstrom-deluge
+name: delugemu
+kind: tool
+summary: QEMU-based hardware emulator for the Deluge that boots the unmodified open-source firmware on a desktop. Emulates the RZ/A1L, OLED, pads, buttons, encoders, audio and SD card, with host MIDI and audio.
+description: >-
+  The SD card can be an image or a folder in the normal Deluge layout, written
+  back on exit. USB is not emulated and the 7-segment display is a stub. On
+  first launch it offers to download the community firmware and the factory
+  SD card contents. Graham Wheeler started it in gramster/delugemu, where the
+  prebuilt macOS, Linux and Windows bundles still live. A copy with the same
+  history moved to Synthstrom Audible's GitHub organisation in October 2026,
+  and other firmware developers now commit there.
+status: active
+authors:
+  - name: Graham Wheeler
+    url: https://github.com/gramster
+source: https://github.com/SynthstromAudible/delugemu
+source_status: open
+license: GPL-2.0-or-later
+license_notes: LICENSE is GPL version 2; the README states GPL-2.0-or-later to match QEMU.
+homepage: https://github.com/gramster/delugemu/releases
+distribution: download
+tags: [emulator, qemu, desktop]
+image:
+  url: https://raw.githubusercontent.com/SynthstromAudible/delugemu/main/Screenshot.png
+  alt: delugemu window showing an emulated Deluge front panel
+  credit: Graham Wheeler
+  source_url: https://github.com/SynthstromAudible/delugemu
+  first_party: true
+versions:
+  - version: v0.5.7
+    date: 2026-07-24
+    url: https://github.com/gramster/delugemu/releases/tag/v0.5.7
+  - version: v0.5.6
+    date: 2026-07-23
+    url: https://github.com/gramster/delugemu/releases/tag/v0.5.6
+  - version: v0.5.5
+    date: 2026-07-23
+    url: https://github.com/gramster/delugemu/releases/tag/v0.5.5

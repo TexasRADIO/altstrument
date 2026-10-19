@@ -1,0 +1,22 @@
+device: synthstrom-deluge
+name: bit-vox
+kind: tool
+summary: Web app that turns typed text into 8-bit SAM-style speech, splits it into syllable slices you can edit, and exports one WAV with equal-length slices laid out for the Deluge's slice kit mode.
+description: >-
+  Output is a 44.1 kHz 16-bit mono WAV only; no kit XML is written. Pitch,
+  speed, mouth and throat can be set per slice. The code was written with
+  Claude and Gemini, according to the repository.
+status: active
+authors:
+  - name: Alder-Dice
+    url: https://github.com/Alder-Dice
+source: https://github.com/Alder-Dice/bit-vox
+source_status: open
+license: MIT
+homepage: https://alder-dice.github.io/bit-vox/
+tags: [speech, samples, slicing, web]
+versions:
+  - version: main @ aa9f1d9
+    date: 2026-02-16
+    url: https://github.com/Alder-Dice/bit-vox/commit/aa9f1d9
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,22 @@
+device: synthstrom-deluge
+name: deluge-preset-generation
+kind: tool
+summary: Python script that makes a new Deluge preset by randomly combining the attributes of two existing presets in a folder.
+description: >-
+  The README says it works with presets from firmware 3.0.x and 3.1.x and
+  probably not with any other firmware.
+status: dormant
+authors:
+  - name: Chris Nicholls
+    url: https://github.com/Chris-Nicholls
+source: https://github.com/Chris-Nicholls/deluge-preset-generation
+source_status: open
+license: unspecified
+distribution: source-only
+requires_stock: firmware 3.0.x or 3.1.x
+tags: [generator, randomizer, python]
+versions:
+  - version: master @ 866c23f
+    date: 2020-09-30
+    url: https://github.com/Chris-Nicholls/deluge-preset-generation/commit/866c23f
+    notes: No tagged releases; this is the latest commit.

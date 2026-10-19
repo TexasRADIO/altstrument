@@ -1,0 +1,23 @@
+device: synthstrom-deluge
+name: deluge-synthstrom-utils
+kind: tool
+summary: Set of Deluge SD card helpers. An Electron app finds and repairs missing sample paths, a macOS script builds multisample SYNTH XML from folders of WAVs, a shell script converts or removes samples the Deluge cannot load, and a Ruby script archives unused recordings.
+description: >-
+  The missing-sample fixer writes a report and backs up files it changes. The
+  README warns that the shell script's write modes delete or overwrite files
+  without a backup. Written for 2.x and 3.x firmware; a 2022 issue reports a
+  parse error on a newer file.
+status: dormant
+authors:
+  - name: Roman Hatz (amiga909)
+    url: https://github.com/amiga909
+source: https://github.com/amiga909/deluge-synthstrom-utils
+source_status: open
+license: unspecified
+distribution: source-only
+tags: [samples, multisample, utility]
+versions:
+  - version: master @ 4364f0d
+    date: 2021-10-15
+    url: https://github.com/amiga909/deluge-synthstrom-utils/commit/4364f0d
+    notes: No tagged releases; this is the latest commit.

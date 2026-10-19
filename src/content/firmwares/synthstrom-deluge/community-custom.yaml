@@ -1,0 +1,38 @@
+device: synthstrom-deluge
+name: Deluge Community Custom
+summary: Unofficial build of community firmware main with four additions. Adds a vowel (formant) filter mode, drawable custom LFO shapes with 8-bar sync, and editors for saturation and wavefolding.
+description: >-
+  Based on the upstream main branch as of 2026-10-15, with two commits of its
+  own on top. The custom LFO editor takes up to 64 points and ships 40 preset
+  shapes. Songs from the regular community firmware load, with the old 0-15
+  saturation drive converted. The release notes say songs saved with this
+  build lose its features on stock firmware. The same author publishes Lama,
+  a sibling build of these features on top of Owlet. Commits carry AI
+  co-author trailers. The repository was three days old when this entry was
+  written.
+status: active
+authors:
+  - name: breeze-dawless
+    url: https://github.com/breeze-dawless
+source: https://github.com/breeze-dawless/Deluge-Community-Custom
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  LICENSE file is GPL version 3; inherited source headers grant version 3 or
+  any later version.
+distribution: download
+install_notes: >-
+  The build zip and a PDF manual are linked from the release description, not
+  attached as release assets. Copy the .bin to the SD card root and hold Shift
+  while powering on. Back up the SD card first.
+tags: [fork, filter, lfo, fx, distortion]
+video:
+  url: https://www.youtube.com/shorts/nmCjxE7EXTc
+  title: "Custom LFO shaper for the Synthstrom deluge #synthstromdeluge"
+  credit: Shrek
+  first_party: true
+  found_via: https://github.com/breeze-dawless/Deluge-Community-Custom/releases/tag/community-custom-2026-10-16
+versions:
+  - version: community-custom-2026-10-16
+    date: 2026-10-16
+    url: https://github.com/breeze-dawless/Deluge-Community-Custom/releases/tag/community-custom-2026-10-16

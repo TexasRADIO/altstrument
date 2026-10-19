@@ -1,0 +1,29 @@
+device: synthstrom-deluge
+name: deluge-cmd
+kind: tool
+summary: POSIX-style command-line tools for a Deluge SD card, built on deluge-card. List songs and samples with tempo, key and scale, check the card, filter by path, and move samples while updating song references.
+description: >-
+  The move command is marked experimental, and the README says to back up the
+  card first. Written for firmware 3.15; support for the 4.0 folder layout,
+  kits and synths was planned but not added.
+status: dormant
+authors:
+  - name: Chris Chamberlain (mupaduw)
+    url: https://github.com/mupaduw
+source: https://github.com/mupaduw/deluge-cmd
+source_status: open
+license: MIT
+homepage: https://mupaduw.github.io/deluge-cmd
+distribution: download
+install_notes: pip install deluge-cmd
+tags: [cli, python, librarian, samples]
+versions:
+  - version: v0.4.0
+    date: 2022-05-24
+    url: https://github.com/mupaduw/deluge-cmd/releases/tag/v0.4.0
+  - version: v0.3.2
+    date: 2022-05-12
+    url: https://github.com/mupaduw/deluge-cmd/releases/tag/v0.3.2
+  - version: v0.3.1
+    date: 2022-05-12
+    url: https://github.com/mupaduw/deluge-cmd/releases/tag/v0.3.1

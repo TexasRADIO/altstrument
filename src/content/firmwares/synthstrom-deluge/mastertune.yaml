@@ -1,0 +1,32 @@
+device: synthstrom-deluge
+name: mastertune
+summary: Personal fork of community firmware 1.2.1 with adjustable master tuning, the 1.3 arpeggiator, a CPU monitor, USB audio, a drone, reworked reverb and delay, a DJ filter, and a tuner, tempo meter and key finder on the audio input.
+description: >-
+  The firmware lives in the mastertune-1.2.1 folder of the repository, and
+  builds are committed there as .bin files rather than published as releases.
+  The repository's releases are for two companion host tools, DelugeTuner and
+  DelugeRec. The README says the code was written with Claude and tested in an
+  emulator, and asks for bugs to go to this repository rather than upstream.
+  The default branch is a Claude Code session branch.
+status: active
+authors:
+  - name: Giansn
+    url: https://github.com/Giansn
+source: https://github.com/Giansn/deluge
+source_status: open
+license: unspecified
+license_notes: >-
+  Discrepancy: no LICENSE file and no license statement in the repository,
+  although it is a fork of the GPL-3.0-or-later community firmware, whose
+  license would carry over to a derivative.
+distribution: download
+requires_stock: community firmware 1.2.1 base
+install_notes: >-
+  Copy the latest .bin from mastertune-1.2.1 in the repository to the SD card
+  root and hold Shift while powering on. Back up the SD card first.
+tags: [fork, tuning, arpeggiator, usb-audio, fx, tuner]
+versions:
+  - version: claude/wizardly-brahmagupta-nnrk07 @ 6a357d1
+    date: 2026-10-06
+    url: https://github.com/Giansn/deluge/commit/6a357d1
+    notes: No firmware releases; this is the latest commit. Latest committed build is v19.0.4.

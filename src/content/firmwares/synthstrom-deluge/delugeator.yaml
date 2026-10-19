@@ -1,0 +1,32 @@
+device: synthstrom-deluge
+name: Delugeator
+kind: tool
+summary: Free Windows editor for Deluge kits and synths, with a sample browser, a test drum machine, per-pad settings, and random synth and kit generation. The random synth generator is also offered as a hosted web app.
+description: >-
+  Version 2.0 (March 2023) is a WPF app for Windows 10 and 11, distributed as
+  an installer through a Google Drive link in the author's forum thread. It
+  has supported official firmware 4.0 since version 1.5 and saves kits in the
+  4.0 format; community firmware support is not stated. The web randomiser at
+  randomdelugesynth.azurewebsites.net generates subtractive, FM and ringmod
+  SYNTH XML from per-section sliders and was still online when this entry was
+  written. No source code is published for either.
+status: dormant
+authors:
+  - name: Bolgani
+    url: https://forums.synthstrom.com/profile/Bolgani
+source_status: binary-only
+license: unspecified
+license_notes: Freeware download; no license text found.
+homepage: https://forums.synthstrom.com/discussion/5232/delugeator-2-0-out-now
+distribution: download
+tags: [editor, librarian, randomizer, windows]
+video:
+  url: https://www.youtube.com/watch?v=g7STxom19KE
+  title: Delugeator 2.0 - a preset editor for Synthstrom Deluge (WINDOWS only)
+  credit: Fun And Electronics With B
+  first_party: true
+  found_via: https://forums.synthstrom.com/discussion/5232/delugeator-2-0-out-now
+versions:
+  - version: "2.0"
+    date: 2023-03-26
+    url: https://forums.synthstrom.com/discussion/5232/delugeator-2-0-out-now

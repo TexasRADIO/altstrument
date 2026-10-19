@@ -1,0 +1,40 @@
+device: synthstrom-deluge
+name: AUX Sends and USB Audio builds
+summary: Fork of the community firmware with two experimental features on separate branches. AUX Sends puts an assignable send bus on the CV sockets (7-segment units only). USB Audio makes the Deluge a class-compliant interface with 8 outputs and 4 inputs.
+description: >-
+  AUX Sends gives each clip and the master a send level of 0-50, with a split
+  stereo mode, automation and MIDI learn. It works only on 7-segment units
+  because the CV DAC and OLED share a bus. An upstream draft pull request for
+  it was closed unmerged in October 2026. USB Audio is 16-bit at 44.1 kHz with
+  per-track routing, a choice of returning input to the song or to an audio
+  track, and 0-100 ms delay compensation. It was tested on a 7-segment unit
+  with macOS and Linux, and hosting a USB MIDI controller is unavailable while
+  it is in use. Each release is a separate firmware; AUX Sends also has a
+  build on stable 1.2.1. Routing is saved with the song.
+status: active
+authors:
+  - name: sticknobills
+    url: https://github.com/sticknobills
+source: https://github.com/sticknobills/DelugeFirmware
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  LICENSE file is GPL version 3; inherited source headers grant version 3 or
+  any later version.
+distribution: download
+install_notes: >-
+  Download a .bin from the release for the feature you want, copy it to the SD
+  card root and hold Shift while powering on. Back up the SD card first.
+tags: [fork, usb-audio, cv, routing, 7-segment]
+versions:
+  - version: USB-Audio-1.0
+    date: 2026-10-13
+    url: https://github.com/sticknobills/DelugeFirmware/releases/tag/USB-Audio-1.0
+    notes: USB audio interface build on community main from 2026-10-13.
+  - version: AUX-Sends-1.0-on-1.2.1
+    date: 2026-08-20
+    url: https://github.com/sticknobills/DelugeFirmware/releases/tag/AUX-Sends-1.0-on-1.2.1
+    notes: AUX Sends built on stable 1.2.1.
+  - version: AUX-Sends-1.0.1
+    date: 2026-08-19
+    url: https://github.com/sticknobills/DelugeFirmware/releases/tag/AUX-Sends-1.0.1

@@ -1,0 +1,19 @@
+device: synthstrom-deluge
+name: Deluge Interactive Cheat Sheet
+kind: tool
+summary: Proof-of-concept web page that draws the Deluge front panel; click buttons, including Shift, to see what each combination does.
+status: dormant
+authors:
+  - name: Alexander Lane (abstractrealism)
+    url: https://github.com/abstractrealism
+source: https://github.com/abstractrealism/DelugeInteractiveCheatSheet
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE is the GPL version 3 text with no "or later" statement.
+homepage: https://abstractrealism.github.io/DelugeInteractiveCheatSheet/
+tags: [reference, shortcuts, web]
+versions:
+  - version: main @ 8dc15a5
+    date: 2025-08-06
+    url: https://github.com/abstractrealism/DelugeInteractiveCheatSheet/commit/8dc15a5
+    notes: No tagged releases; this is the latest commit.

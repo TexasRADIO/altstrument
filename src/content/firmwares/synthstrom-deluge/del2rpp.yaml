@@ -1,0 +1,32 @@
+device: synthstrom-deluge
+name: del2rpp
+kind: tool
+summary: Python converter from a Deluge arranger song to a REAPER project, with tracks, clips, audio clip paths and MIDI notes. Kit rows become MIDI pitches for a sampler. Also runs as a Colab notebook.
+description: >-
+  Built on pydel, the same author's song XML parsing library
+  (github.com/dcower/pydel, also on PyPI), included as a submodule. The code
+  only accepts songs from firmware 3.x, and a 2023 issue reports missing note
+  data with firmware 4.0, so current community firmware songs are not
+  expected to convert.
+status: dormant
+authors:
+  - name: Dillon Cower
+    url: https://github.com/dcower
+source: https://github.com/dcower/del2rpp
+source_status: open
+license: MIT
+homepage: https://colab.research.google.com/github/dcower/del2rpp/blob/master/del2rpp.ipynb
+distribution: source-only
+requires_stock: songs saved with firmware 3.x
+tags: [converter, daw, songs, python]
+image:
+  url: https://raw.githubusercontent.com/dcower/del2rpp/master/example/screenshot.png
+  alt: REAPER project generated from a Deluge song, with tracks and clips laid out on the timeline
+  credit: Dillon Cower
+  source_url: https://github.com/dcower/del2rpp
+  first_party: true
+versions:
+  - version: master @ d0afa4e
+    date: 2020-03-09
+    url: https://github.com/dcower/del2rpp/commit/d0afa4e
+    notes: No tagged releases; this is the latest commit.

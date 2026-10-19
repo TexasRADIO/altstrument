@@ -1,0 +1,31 @@
+device: synthstrom-deluge
+name: deluge-toolkit
+kind: tool
+summary: Shell and Python pipeline that turns Ableton Live Packs into Deluge content. Converts the audio to WAV and Drum Rack presets to KIT XML, mapping Simpler pads to kit rows and Operator drum synths to the Deluge's FM or subtractive engine.
+description: >-
+  Warning: the pipeline decrypts Ableton's DRM-protected .aif files using a
+  bundled third-party decoder (thulard/abledecoder, a git submodule). The
+  README says it is for personal use of packs you own. Check the terms of your
+  Ableton licence before using it. Output is a SAMPLES and KITS tree using the
+  subfolders that community firmware 1.2.0 and later support, with audio
+  capped at 48 kHz. It needs ffmpeg and a C++ toolchain with OpenSSL on macOS
+  or Linux. The repository includes AI assistant configuration and has no
+  license file.
+status: active
+authors:
+  - name: Tomas Lehuta
+    url: https://github.com/lharp
+source: https://github.com/lharp/deluge-toolkit
+source_status: open
+license: unspecified
+license_notes: No LICENSE file; the bundled decoder submodule shows no license either.
+distribution: source-only
+install_notes: >-
+  Clone with --recurse-submodules, build the decoder with its build.sh, then run
+  tools/abledeluger. The submodule URL in .gitmodules uses SSH.
+tags: [converter, kit-builder, ableton, cli]
+versions:
+  - version: master @ 315ecb2
+    date: 2026-09-08
+    url: https://github.com/lharp/deluge-toolkit/commit/315ecb2
+    notes: No tagged releases; this is the latest commit.

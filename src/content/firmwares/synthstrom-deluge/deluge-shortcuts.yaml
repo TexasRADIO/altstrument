@@ -1,0 +1,22 @@
+device: synthstrom-deluge
+name: Deluge Shortcuts
+kind: tool
+summary: Searchable web list of Deluge button and knob shortcuts with filters by action, control and view, installable as an offline web app.
+description: >-
+  The content comes from the official 4.1.0 manual and does not cover
+  community firmware additions. Deluge Companion builds on its data.
+status: dormant
+authors:
+  - name: handeyeco
+    url: https://github.com/handeyeco
+source: https://github.com/handeyeco/deluge-shortcuts
+source_status: open
+license: MIT
+license_notes: MIT text without a copyright line, which is why GitHub does not detect it.
+homepage: https://handeyeco.github.io/deluge-shortcuts/
+tags: [reference, shortcuts, web]
+versions:
+  - version: main @ 63a1113
+    date: 2024-01-09
+    url: https://github.com/handeyeco/deluge-shortcuts/commit/63a1113
+    notes: No tagged releases; this is the latest commit.

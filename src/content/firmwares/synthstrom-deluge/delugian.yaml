@@ -1,0 +1,22 @@
+device: synthstrom-deluge
+name: Delugian
+kind: tool
+summary: Early Tauri desktop companion app prototype that connects to the Deluge over USB MIDI. Has an on-screen keyboard and scale helper and a Deluge-style LED font, but no file or editing features yet.
+description: >-
+  The README describes the goal as an Overbridge-style companion, which would
+  need a firmware API that does not exist. It has never been released and
+  builds from source only.
+status: dormant
+authors:
+  - name: Andrew Halliwell
+    url: https://github.com/alifeinbinary
+source: https://github.com/alifeinbinary/delugian
+source_status: open
+license: unspecified
+distribution: source-only
+tags: [midi, desktop]
+versions:
+  - version: master @ 4afeb16
+    date: 2024-09-10
+    url: https://github.com/alifeinbinary/delugian/commit/4afeb16
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,21 @@
+device: synthstrom-deluge
+name: Delugional
+kind: tool
+summary: Bash scripts that load sounds from outside sources onto a Deluge card. One builds kits from Samples From Mars drum collections, one loads a Mellotron sample set, and one compares Deluge XML schemas.
+description: >-
+  Needs bash (WSL on Windows), a mounted SD card and a .env file with the card
+  path.
+status: dormant
+authors:
+  - name: iiimosley
+    url: https://github.com/iiimosley
+source: https://github.com/iiimosley/Delugional
+source_status: open
+license: unspecified
+distribution: source-only
+tags: [kit-builder, samples, cli]
+versions:
+  - version: main @ fe3f7ee
+    date: 2024-05-15
+    url: https://github.com/iiimosley/Delugional/commit/fe3f7ee
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,29 @@
+device: synthstrom-deluge
+name: Deluicer
+kind: tool
+summary: Tauri desktop editor that opens a Deluge SD card or a backup of it and edits kits and synth presets. Covers pads, sample assignment, zones, tuning and waveform trimming for kits, and oscillators, filters, envelopes, LFOs and effects for synths, with audio preview.
+description: >-
+  Imports samples into SAMPLES/Imported and saves XML with atomic file
+  replacement. Kits and synths stored inside songs cannot be edited yet, and a
+  parity audit in the repository lists known gaps. There are no prebuilt
+  releases. The published history was squashed into an initial public commit.
+status: active
+authors:
+  - name: Dario Marasco
+    url: https://github.com/Darthone
+source: https://github.com/Darthone/deluicer
+source_status: open
+license: GPL-3.0-or-later
+distribution: source-only
+tags: [editor, kit-builder, desktop]
+image:
+  url: https://raw.githubusercontent.com/Darthone/deluicer/main/docs/images/kit-editor.png
+  alt: Deluicer kit editor with pad grid, waveform trimming and a sample browser
+  credit: Dario Marasco
+  source_url: https://github.com/Darthone/deluicer
+  first_party: true
+versions:
+  - version: main @ a4cd441
+    date: 2026-09-07
+    url: https://github.com/Darthone/deluicer/commit/a4cd441
+    notes: No tagged releases; this is the latest commit.

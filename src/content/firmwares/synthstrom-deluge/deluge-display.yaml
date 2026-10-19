@@ -1,0 +1,36 @@
+device: synthstrom-deluge
+name: Deluge Display
+kind: tool
+summary: macOS app that mirrors the Deluge's OLED or 7-segment display on the computer screen over MIDI SysEx, with zoom, colour schemes and screenshots. A separate free iOS app with an AUv3 plugin is on the App Store.
+description: >-
+  Needs community firmware with display SysEx. Version 1.4 uses the
+  firmware's push display mode and adds a stress-test panel that depends on
+  an unreleased firmware branch. The mirror can pause while the Deluge reads
+  the SD card. The iOS and AUv3 version came from a contributor fork; its App
+  Store listing was last updated in May 2025, and its seller name differs
+  from the repository owner. The repository has no license file.
+status: active
+authors:
+  - name: Douglas Carmichael
+    url: https://github.com/douglas-carmichael
+source: https://github.com/douglas-carmichael/DelugeDisplay
+source_status: open
+license: unspecified
+license_notes: >-
+  No LICENSE file or license statement, so the public macOS source carries no
+  reuse grant. The iOS build is App Store only, and its code is in an
+  unlicensed contributor fork.
+homepage: https://apps.apple.com/es/app/deluge-display/id6745803020
+distribution: download
+requires_stock: community firmware with display SysEx
+tags: [display-mirror, sysex, macos, ios, auv3]
+versions:
+  - version: v1.4
+    date: 2026-08-14
+    url: https://github.com/douglas-carmichael/DelugeDisplay/releases/tag/v1.4
+  - version: v1.3
+    date: 2025-06-29
+    url: https://github.com/douglas-carmichael/DelugeDisplay/releases/tag/v1.3
+  - version: v1.1.3
+    date: 2025-05-21
+    url: https://github.com/douglas-carmichael/DelugeDisplay/releases/tag/v1.1.3

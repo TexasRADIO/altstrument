@@ -1,0 +1,22 @@
+device: synthstrom-deluge
+name: Deluge Companion
+kind: tool
+summary: Searchable website of Deluge button and knob shortcuts, with a first set of community firmware shortcuts added in December 2025. Reference only; it does not connect to the device.
+description: >-
+  Built with Svelte from Markdown shortcut data that started from
+  deluge-shortcuts by handeyeco. Coverage of community firmware features is
+  partial and the README invites contributions.
+status: active
+authors:
+  - name: Florian Heft
+    url: https://github.com/fheft
+source: https://github.com/fheft/deluge-companion
+source_status: open
+license: MIT
+homepage: https://fheft.github.io/deluge-companion/
+tags: [reference, shortcuts, web]
+versions:
+  - version: main @ 52fc7b7
+    date: 2025-12-29
+    url: https://github.com/fheft/deluge-companion/commit/52fc7b7
+    notes: No tagged releases; this is the latest commit.

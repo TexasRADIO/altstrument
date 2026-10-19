@@ -1,0 +1,28 @@
+device: synthstrom-deluge
+name: Vuefinder for Deluge
+kind: tool
+summary: Web file manager for the Deluge SD card over USB MIDI SysEx. Browse, upload, download, rename and delete files, and preview WAV audio and XML, at roughly 200 KB/s.
+description: >-
+  Jamie Fenton adapted Yusuf Özdemir's Vuefinder component for the Deluge.
+  It lives in the DelugeWeb repository under Synthstrom Audible's GitHub
+  organisation, alongside the Downrush Waverly and ViewScore ports and some
+  experimental tools. It needs a community firmware build with SysEx file
+  transfer (1.3 or a recent nightly). The hosted copy is on the author's
+  personal site, and the community docs say that address may change.
+status: dormant
+authors:
+  - name: Jamie Fenton
+    url: https://github.com/jamiefaye
+source: https://github.com/SynthstromAudible/DelugeWeb/tree/main/vuefinder
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  DelugeWeb's LICENSE is GPL version 3 with no "or later" statement. The
+  vuefinder folder keeps the upstream component's MIT license.
+homepage: https://www.fentonia.com/deluge/vuefinder/
+tags: [file-manager, sysex, web-midi]
+versions:
+  - version: main @ 722c9b9
+    date: 2024-12-30
+    url: https://github.com/SynthstromAudible/DelugeWeb/commit/722c9b9
+    notes: No tagged releases; this is the latest commit touching vuefinder/.
