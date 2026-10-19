@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: LOOM-8
+summary: >-
+  Groovebox in the manner of the OP-XY: eight instrument tracks over synth engines, a sampler, a break slicer and a
+  drum kit, a 64-step sequencer with step tricks, weave, a chord conductor, throws, scenes and a song.
+description: >-
+  The repository is fm1-loom, its GitHub description and design notes call the project XY-1, and the README and
+  licence file call it LOOM-8. It is a separate project from Loom FM-1 by Co-oscillator. Eight tracks each get a colour and an
+  instrument, with eight synth engines, a sample player, a break slicer and a drum kit. The sequencer has
+  parameter locks and step tricks, players (arpeggiator, strum, hold) and weave, which crosses two patterns bar by
+  bar, step by step, or one's rhythm with the other's notes. A conductor track moves the song through a chord
+  progression, throws are momentary effects, and there are two send-effect tracks (one reverb has the PlayStation
+  reverbs among its modes), a mixer with EQ, a master compressor, scenes and a song. Projects and presets can be
+  backed up to a computer, and user samples load from WAV files with a script. It is built on the author's
+  fm1-base platform repository (a git submodule) and has a browser emulator and a long manual.
+status: active
+authors:
+- name: Charles Vestal
+  url: https://github.com/charlesvestal
+source: https://github.com/charlesvestal/fm1-loom
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0 only for LOOM-8's own code. The fm1-base and felucca-bsp submodule files stay
+  MPL-2.0 file by file. The Braids engine ports, the PlayStation reverb port and the supersaw bank are MIT, the
+  fonts are SIL OFL 1.1, and the package uses three Apache-2.0 JieLi AC79 SDK files at build time.
+distribution: source-only
+install_notes: >-
+  The README links a firmware download and a web installer, but the repository has no releases or tags, and on
+  2026-10-19 the project site's pages were behind a password. Clone with git submodules and build with
+  ./build.sh (BUILDING.md; the JieLi toolchain runs in Docker on a Mac). The README says the web installer can put
+  M-VAVE's firmware back and that a firmware which keeps crashing starts in a safe mode.
+brick_risk: true
+tags: [groovebox, sequencer, sampler, synth-engine, drums, chords, fx, arpeggiator, emulator, midi]
+image:
+  url: https://raw.githubusercontent.com/charlesvestal/fm1-loom/main/docs/img/screen-beat-playing.png
+  alt: "LOOM-8 Steps page on the T1 kit, playing: sixteen step cells with kick marks on steps 1, 5, 9 and 13, a pattern, length, scale and groove knob strip below and two hint lines"
+  credit: Charles Vestal
+  source_url: https://github.com/charlesvestal/fm1-loom/blob/main/docs/MANUAL.md
+  first_party: true
+versions:
+- version: main @ bd8852d
+  date: 2026-10-19
+  url: https://github.com/charlesvestal/fm1-loom/commit/bd8852d
+  notes: No tagged releases; this is the latest commit.

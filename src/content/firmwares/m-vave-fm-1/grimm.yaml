@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: GR!MM
+summary: >-
+  Dark ambient, dungeon synth and drone firmware: four tracks on seven sound sources, long tape, grain, delay and
+  reverb effects, a 64-step sequencer per track, one-key chords, song mode and a browser demo and editor.
+description: >-
+  The seven sources are virtual analog with supersaw, six-operator FM, a sample played like a tape loop, a
+  formant choir, a tonewheel organ, bowed and struck physical models and phase distortion, with 40 factory sounds
+  and 64 user slots. The effects are tape wear, a granular cloud with freeze, a tape echo and a reverb that runs
+  up to about 32 seconds or indefinitely. Each track has an envelope, LFO, filter, scale snapping, chords, an
+  arpeggiator and latch for drones, and the sequencer has chance, ratchets, step locks and editing tools. Four
+  song slots can be chained by hand or recorded live. Four factory samples (CC0) can be replaced from the web
+  editor, which also edits sounds live, renames slots and backs up the FM-1. The browser demo runs the firmware
+  itself. It is a modified Dinghy, so it shares Felucca's platform layer.
+status: active
+authors:
+- name: GR!MM
+  url: https://github.com/GRiMMBIENT
+source: https://github.com/GRiMMBIENT/grimm
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0 only. msfa is Apache-2.0, the DaisySP and Rings models are MIT, the four factory
+  samples are CC0 1.0 and the fonts are SIL OFL 1.1.
+homepage: https://grimmbient.github.io/grimm/
+distribution: browser-installer
+install_notes: >-
+  Install from the FM-1 Firmware Hub in Chrome or Edge, or download grimm.fwsc from the release and run
+  tools/fm1_install.py. Sounds, slots, settings and samples stay on the FM-1 across updates. The README points to
+  the hub's Rescue page for a stuck FM-1.
+brick_risk: true
+tags: [synth-engine, sequencer, sampler, fx, reverb, delay, granular, chords, arpeggiator, ambient, editor, emulator, midi, usb-audio]
+image:
+  url: https://raw.githubusercontent.com/GRiMMBIENT/grimm/main/docs/screens/home.png
+  alt: "GR!MM HOME screen in pixel art: a red-and-grey eye above four candles numbered 1 to 4, with four track tiles T1 to T4 showing the VA source and level bars"
+  credit: GR!MM
+  source_url: https://github.com/GRiMMBIENT/grimm
+  first_party: true
+versions:
+- version: '1.0'
+  date: 2026-10-17
+  url: https://github.com/GRiMMBIENT/grimm/releases/tag/v1.0
+  notes: First public release.

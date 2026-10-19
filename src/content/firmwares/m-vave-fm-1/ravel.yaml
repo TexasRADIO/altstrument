@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: Ravel
+summary: >-
+  Eight-track sound-design groovebox with synth, strike and tape tracks that share a capture tape, an influence grid
+  where tracks modulate each other, a step and graph sequencer, and a browser emulator. Not yet run on an FM-1.
+description: >-
+  Tracks 1 to 4 are synths with six engines (virtual analog, phase distortion, FM, physical models, formant and
+  particle), tracks 5 and 6 excite resonant bodies, and tracks 7 and 8 have no oscillator and play back a shared
+  capture tape as looping playheads, grain clouds (a fixed-point port of Mutable Instruments Beads) or slices. Any
+  track can modulate, trigger or clock another through an eight by eight influence grid. Each track runs either a
+  step sequencer or a graph of cords, and there are two LFOs, a modulation matrix, four macros, delay, reverb,
+  feedback, filter-pair and vocoder buses, scenes, an arrangement and eight project slots. The same C sources
+  build the FM-1 firmware, a desktop simulator and a one-file WebAssembly emulator. The README says the firmware
+  builds but has not been run on a real FM-1, and the FM-1 side takes its platform layer from Felucca by way of
+  X0X.
+status: active
+authors:
+- name: De-Pattern
+  url: https://github.com/De-Pattern
+source: https://github.com/De-Pattern/Ravel_FM1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated as GPL-3.0 only in the README and THIRD_PARTY.md. The Beads port in core/beads keeps Mutable Instruments'
+  MIT licence, the screen fonts are SIL OFL 1.1, and the FM-1 platform layer and installer are Felucca's and X0X's
+  (GPL-3.0). A package also carries three JieLi AC79 SDK files (Apache-2.0).
+homepage: https://de-pattern.github.io/Ravel_FM1/
+distribution: source-only
+install_notes: >-
+  Build with tools/build_fm1.py (JieLi toolchain and three AC79 SDK files fetched by scripts in tools/) and install
+  the package with tools/fm1_install.py. The README also describes a web installer and a downloadable
+  Ravel-FM1.fwsc on the project site, but on 2026-10-19 the site served only the README and those paths returned
+  404. Holding OCT- and OCT+ for five seconds enters update mode, a firmware that crashes twice at start comes up
+  in a safe mode the installer can reach, and the installer's return to stock asks you to pick M-VAVE's own V15
+  file, which it checks by SHA-256. The README warns that it is untested on hardware.
+brick_risk: true
+tags: [synth-engine, sequencer, sampler, granular, fx, vocoder, emulator, generative]
+image:
+  url: https://raw.githubusercontent.com/De-Pattern/Ravel_FM1/main/docs/manual/home-tracks.png
+  alt: "Ravel HOME screen showing track 1 (synth, VA engine) with level, pan, kind and engine knobs above eight track columns labelled SYN, STK and TAP with level meters"
+  credit: De-Pattern
+  source_url: https://github.com/De-Pattern/Ravel_FM1
+  first_party: true
+versions:
+- version: main @ 0ac9532
+  date: 2026-10-19
+  url: https://github.com/De-Pattern/Ravel_FM1/commit/0ac9532
+  notes: No tagged releases; this is the latest commit.

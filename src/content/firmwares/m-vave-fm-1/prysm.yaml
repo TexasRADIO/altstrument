@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: Prysm
+summary: >-
+  Four-voice wavetable FM synthesizer: two oscillators per voice built from three wavetable operators, a resonant
+  filter, LFO and looping mod envelope, chorus, delay and plate reverb, an arpeggiator, a 64-step 303-style
+  sequencer and eight patch slots.
+description: >-
+  Each oscillator chains a carrier and two modulators that act by FM, ring or mix, drawn from six banks of eight
+  morphing waves. The rest of the voice is a two-pole filter with drive and its own envelope, an LFO with six
+  shapes and two destinations, and a mod envelope that can loop. The effects are a stereo chorus, a delay with
+  wow and pitch-shifting repeats, and a plate reverb with modulation and shimmer. The arpeggiator and sequencer
+  follow their own clock or MIDI clock, velocity comes from MIDI because the FM-1 keys play at full velocity, and
+  every page draws what it edits, with an oscilloscope on the home page. It reports as a USB audio input and USB
+  MIDI device. Built on Dinghy, with the platform layer Dinghy takes from Felucca and SLOOP.
+status: active
+authors:
+- name: Nicholas Pratt
+  url: https://github.com/NicholasPratt
+source: https://github.com/NicholasPratt/Prysm
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0 only. The splash picture assets/splash.jpg is the author's and not covered by the
+  GPL. The Terminus font is SIL OFL 1.1, and a package holds three Apache-2.0 JieLi AC79 SDK files.
+homepage: https://nicholaspratt.github.io/Prysm/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc from the release. Coming from
+  ETCH, restore the official firmware first because ETCH accepts only its own updates. Hold OCT- while switching on
+  for the rescue updater, and the README points to the FM-1 Firmware Hub for returning to stock or another
+  firmware. Saved patches carry over between versions.
+brick_risk: true
+tags: [synth-engine, oscillator, wavetable, fm, filter, lfo, envelopes, fx, reverb, delay, arpeggiator, sequencer, usb-audio, midi]
+image:
+  url: https://raw.githubusercontent.com/NicholasPratt/Prysm/main/docs/screen.png
+  alt: "Prysm OSC 1 WAVE page: three wave boxes labelled AH, FOLD2 and SINE joined by arrows, above bank, wave, ratio and mode rows for two operators"
+  credit: Nicholas Pratt
+  source_url: https://github.com/NicholasPratt/Prysm
+  first_party: true
+versions:
+- version: '0.3'
+  date: 2026-10-19
+  url: https://github.com/NicholasPratt/Prysm/releases/tag/v0.3
+  notes: Adds an arpeggiator, a 64-step sequencer, MIDI clock sync, MIDI channel setup, glide, velocity and an oscilloscope.
+- version: '0.2'
+  date: 2026-10-19
+  url: https://github.com/NicholasPratt/Prysm/releases/tag/v0.2
+  notes: First release.

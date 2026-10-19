@@ -1,0 +1,41 @@
+device: m-vave-smk-37
+name: Jellybean-37
+summary: >-
+  From-scratch SMK-37 Pro firmware with a Juno-60 style six-voice synth and a DX7 style FM engine, a direct-to-RAM
+  loader for trying it without flashing, and a desktop simulator.
+description: >-
+  Jellybean-37 is a dual-target project: bare-metal firmware for the SMK-37 Pro's JieLi AC791N and an SDL2 host
+  simulator of the keyboard and display. It has two sound engines, the MCUno-32 six-voice virtual analog synth with a
+  parameter editor on the PARA button, and a 16-voice DX7-compatible FM engine with the factory bank, plus separate
+  aftertouch ranges on the pads and 48 kHz audio over the DAC and USB. The code runs FreeRTOS on core 0 for the UI
+  and keybed scan and bare metal on core 1 for audio. The README calls it a rough testbed for the engine and for
+  latency work, of little use to someone who only wants to play the keyboard. It contains no factory firmware or
+  blobs from it. Parts of the JieLi SDK are vendored. The target is the SMK-37 Pro only.
+status: active
+authors:
+  - name: Ed Coffey (edco)
+    url: https://github.com/edco
+source: https://github.com/edco/jellybean-37
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  There is no LICENSE file in the repository; the README states the terms. The author's own code is MPL-2.0 per its
+  file headers, but because GPL-3.0 code from the Dexed engine is linked in, the README says the project as a whole
+  and its binaries are GPL-3.0 or, at your option, any later version. The vendor folder holds proprietary JieLi
+  headers and precompiled libraries.
+homepage: https://github.com/edco/jellybean-37#readme
+distribution: source-only
+requires_stock: SMK-37 Pro; the installer uses the keyboard's own two-stage update protocol
+install_notes: >-
+  Build it yourself: setup_toolchain.sh downloads JieLi's compiler and post-build tools, and ninja builds the RAM and
+  flash images and a .fwsc package. jellybean_loadram.py runs the RAM image from SRAM through the MaskROM and a
+  power cycle returns to the original flash. jellybean_install.py writes the .fwsc to the SPI NOR flash over
+  USB-MIDI. The README warns that bugs in the tools or firmware could brick the device and that there is no
+  warranty.
+brick_risk: true
+tags: [synth-engine, fm, usb-midi, midi, open-source]
+versions:
+  - version: main @ e73b826
+    date: 2026-10-19
+    url: https://github.com/edco/jellybean-37/commit/e73b826
+    notes: No tagged releases; this is the latest commit.

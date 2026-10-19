@@ -1,0 +1,50 @@
+device: m-vave-fm-1
+name: Octo-Vave
+kind: tool
+summary: >-
+  Local Python and browser app for the FM-1: ranks and downloads community firmware into a checked library, keeps
+  patches and a DX7-style voice editor for the stock firmware, and has MIDI tools and guided sound checks.
+description: >-
+  A small Python server on 127.0.0.1 and a page in Chrome or Edge, with nothing to install beyond Python 3. The
+  Firmware page rebuilds a ranking of free firmware with .fwsc releases from the awesome-fm-1 list and a GitHub
+  search, tags each card (open or closed source, published checksum, return-to-stock option, installer type),
+  downloads files into a local library and compares each SHA-256 with what the project publishes. A card also
+  records hands-on validations, an install, a play session and a revert to stock V15, with the tested file's hash.
+  The FM-1 Home page has a key bed, effects controls and a DX7-style voice editor, and the Library, Play and MIDI,
+  and Sound check pages hold firmware-aware patches, a generic MIDI utility with a monitor, and listening tests.
+  It does not flash anything, so each project's own installer or M-UPGRADE does that. It overlaps with this
+  catalog as a firmware directory, but also edits and tests the device over MIDI. Note: when asked, it downloads
+  M-VAVE's current stock firmware, the M-UPGRADE updater and the FM1 Open releases directly from M-VAVE's own
+  servers into the local library; these are not limited to the Apache-licensed V15 image, and the tool itself
+  redistributes none of them.
+status: active
+authors:
+- name: Adrian Macias (amacias)
+  url: https://github.com/amacias
+source: https://github.com/amacias/octo-vave
+source_status: open
+license: MIT
+license_notes: >-
+  Copyright is held by Artificial Music. The firmware screen captures in web/img/fw belong to their projects and
+  are credited in firmware/catalog.json.
+homepage: https://amacias.github.io/octo-vave/
+distribution: source-only
+install_notes: >-
+  Clone or unzip the repository and run python server.py (or start.cmd on Windows), then open
+  http://127.0.0.1:8765. It never flashes firmware. Its downloads come only from GitHub release assets and an
+  allowed host list that includes M-VAVE's own file servers, which serve the stock FM-1.fwsc and M-UPGRADE.zip
+  when you ask for the Official card. The repository itself contains no firmware images. The voice editor and
+  effects controls target the stock firmware only. Developed and tested on Windows 11 with Chrome.
+brick_risk: false
+tags: [librarian, editor, config-tool, midi, sysex, utility, web-ui]
+image:
+  url: https://raw.githubusercontent.com/amacias/octo-vave/main/docs/img/firmware.jpg
+  alt: "Octo-Vave Firmware page showing a safety tips strip, an On the device logger and the Official cards for Stock V15 and FM-1 Open, each with an orange octopus validation mark and a SHA-256"
+  credit: Adrian Macias
+  source_url: https://github.com/amacias/octo-vave
+  first_party: true
+versions:
+- version: main @ 099aa81
+  date: 2026-10-19
+  url: https://github.com/amacias/octo-vave/commit/099aa81
+  notes: No tagged releases; this is the latest commit.

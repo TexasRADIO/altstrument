@@ -1,0 +1,39 @@
+device: m-vave-fm-1
+name: Clipper
+summary: >-
+  Experimental synthesizer firmware that grew out of SLOOP: one instrument with 23 engines and 407 sounds, including
+  a three-oscillator, two-filter HYBRID voice, a twelve-slot modulation matrix, four macros and a web editor.
+description: >-
+  Where SLOOP is a groovebox, Clipper is a single synth (two parts in MULTI mode) with no tracks, drum machine,
+  song mode or built-in samples. It keeps SLOOP's twelve sound engines, effects, arpeggiator, step sequencer, USB
+  audio and MIDI, and adds HYBRID, an opsix-style six-operator FMX engine, wavetable, vector and wave-sequencing
+  engines, a Juno-style engine with chorus, a Plaits-style macro engine, physical models and more. Every engine
+  gets a modulation matrix, a third LFO, a looping second envelope, a four-lane modulation sequencer, per-voice
+  stereo spread, hall and shimmer reverbs and a tape delay. Tunings include just, meantone, maqam and Scala
+  files, and the browser editor edits patches live, loads DX7 banks and your own wavetables and backs up the
+  whole FM-1. The README calls 1.0 experimental and says it has run very little on real hardware.
+status: active
+authors:
+- name: isod89
+  url: https://github.com/isod89
+source: https://github.com/isod89/clipper-fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Code is GPL-3.0-only; the icon atlas and panel image are separate assets (LICENSING.md). Includes msfa
+  (Apache-2.0) for the FM6 engine and ports of DaisySP, Rings and CrispyZebra code. The bundled sample sets are
+  CC0, except one electric piano set under CC BY 3.0 whose credit has to travel with it.
+homepage: https://isod89.github.io/clipper-fm1/webapp/installer/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or the .fwsc from the release with tools/fm1_install.py; on Windows
+  INSTALL-CLIPPER.bat builds and installs from source. Make a backup with the web editor first. The installer
+  can write M-VAVE's V15 back when you pick M-VAVE's own file, which it checks by SHA-256 and size, and SLOOP can
+  be reinstalled with INSTALL-SLOOP.bat. Projects, user presets and samples share SLOOP's flash areas.
+brick_risk: true
+tags: [synth-engine, oscillator, wavetable, fm, filter, lfo, fx, reverb, delay, arpeggiator, sequencer, scales, midi, usb-audio, editor, physical-modeling]
+versions:
+- version: 1.0-experimental
+  date: 2026-10-19
+  url: https://github.com/isod89/clipper-fm1/releases/tag/v1.0-experimental
+  notes: Pre-release; first public release, from SLOOP.

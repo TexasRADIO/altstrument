@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: KIDBOY
+summary: >-
+  Toddler toy firmware with four cards on the PRESETS wheel (nursery songs, spoken letters, spoken numbers and a
+  piano) and drums on the buttons. Warning: includes copyrighted songs and non-commercial voice clips.
+description: >-
+  Rights warning: the author describes this as a private family build. Its song bank includes a few modern
+  copyrighted children's songs, and the spoken-voice clips are ElevenLabs free-plan output licensed for
+  non-commercial use only, so the package is not clear for public or commercial redistribution as it stands.
+  On SONGS each of the 27 keys plays a song, on LETTERS a key shows a large letter, says it and plays a note, on
+  NUMBERS a key shows a number and counts dots up to it, and on PIANO the keys play their pitches and show the note
+  name. The twelve buttons are drums, with a kit per card, SELECT picks one of seventeen sounds, MASTER is the
+  volume and OCT- and OCT+ stop everything. It remembers the last card, sound and song speed. The spoken voices are
+  a separate store uploaded to the FM-1 flash with a script, and they are not part of the firmware package. It is
+  a fork of the author's ChordBoy firmware, which is not in the catalog, and both are built on Felucca 1.6.1.
+  Flashing it leaves ChordBoy's saved keys in place.
+status: active
+authors:
+- name: Will McCambley (WillCMcC)
+  url: https://github.com/WillCMcC
+source: https://github.com/WillCMcC/kidboy-firmware
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Firmware is GPL-3.0-only (LICENSING.md). The spoken-voice clips in assets/speech are ElevenLabs free-plan output
+  licensed for non-commercial use with attribution and are not GPL; the project says a public or commercial
+  release needs regenerated speech. It also notes that a few modern children's songs were added for a private
+  family build. Included CC0 samples, SIL OFL fonts and three Apache-2.0 JieLi SDK files are listed there too.
+distribution: download
+install_notes: >-
+  Download kidboy-2e400c2.fwsc from the release and install it over USB with tools/fm1_install.py or the Felucca
+  installer, then upload the voice bank with tools/kid_speech_upload.py. The project's INSTALL.md describes
+  switching to and from ChordBoy as ordinary updates with the Felucca loader, and says no M-VAVE firmware is
+  bundled and the V15 bridge must be supplied separately and checked by hash.
+brick_risk: true
+tags: [synth-engine, drums, voice, ui, midi]
+versions:
+- version: '0.1'
+  date: 2026-10-18
+  url: https://github.com/WillCMcC/kidboy-firmware/releases/tag/v0.1
+  notes: First release, build 2e400c2, as posted to the FM-1 subreddit.

@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: FN ACID
+summary: >-
+  Test-build firmware where each track is a function drawn on one pair of axes and played as drawn: a 303-style
+  16-step line, a formula mode, dotted-eighth ping-pong delay, a small room and curve-editing punch-in effects.
+description: >-
+  The author's own words call it a test build of Function Acid, after a post on turning mathematics into acid
+  music, ported from a browser prototype. The ACID track plays sixteen steps written 303-style with decay, or a
+  formula, through a four-pole ladder filter by default (the two-pole filter stays as an option). Eight patterns
+  each carry a line and its sound, and holding FX with a key gives punch-in effects, some of which operate on the
+  curve itself, such as shifting it, mirroring it or halving its rate. Turning the cutoff, resonance, envelope or
+  decay knobs while recording writes four bars of motion that plays back smoothly. Versions step by 0.01 and the
+  FM-1 shows the number at power-on. Built on Dinghy, SLOOP and Felucca, using a copy of SLOOP's web installer.
+status: active
+authors:
+- name: Electro-Dig
+  url: https://github.com/Electro-Dig
+source: https://github.com/Electro-Dig/function-acid-fw
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0 only, inherited from Dinghy, Felucca and SLOOP. The logo files are marked as
+  designburg's and not under the GPL.
+homepage: https://fn-acid.netlify.app
+distribution: browser-installer
+install_notes: >-
+  Web installer on the project site in Chrome or Edge over USB, or build with ./build.sh and install with
+  tools/fm1_install.py. The package uses a test identity, FM-1_956. The installer's return to stock asks you to
+  pick M-VAVE's own V15 file, which it checks by hash. A Chinese test guide is in TEST-ZH.md.
+brick_risk: true
+tags: [synth-engine, sequencer, fx, delay, filter, generative]
+versions:
+- version: main @ 3b8ac66
+  date: 2026-10-19
+  url: https://github.com/Electro-Dig/function-acid-fw/commit/3b8ac66
+  notes: No tagged releases; this is the latest commit, test build 0.32.

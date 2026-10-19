@@ -1,0 +1,37 @@
+device: m-vave-fm-1
+name: GROOVEDECK
+summary: >-
+  Drum machine and groovebox built on Dinghy: sixteen synthesized drums, one per pad, with a 16-step sequencer,
+  eight patterns, four kits, a per-drum mixer, a tempo-synced delay and MIDI in and out.
+description: >-
+  Four kits (CYBER, 909, 808 and DUST) change what the sixteen pads play, and each drum has four knobs. The
+  sequencer has swing, accent, live recording and note repeat, patterns queue to the end of the bar, and the mixer
+  has level, pan, delay send, mute and solo per drum, followed by a bit crusher and a limiter. Projects save to
+  their own flash sector. MIDI notes 36 to 51 play the pads over USB or the TRS jack, and the pad hits and steps
+  go out over USB on channel 10. The status notes say the drum sounds, the CPU figure, the first project save and
+  the MIDI additions have not been checked on hardware; the earlier v0.2 package was flashed. MIDI clock is
+  ignored. The repository's README is still Dinghy's, with a notice at the top.
+status: active
+authors:
+- name: anonymousacademe
+  url: https://github.com/anonymousacademe
+source: https://github.com/anonymousacademe/FM-1-GrooveDeck
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0 only, inherited from Dinghy, Felucca and SLOOP. The logo files are marked as
+  designburg's and not under the GPL, and a Terminus font (SIL OFL 1.1) and three Apache-2.0 JieLi SDK files are
+  used at build time.
+distribution: source-only
+install_notes: >-
+  Build with ./build.sh (JieLi toolchain and three AC79 SDK files needed) and install the package with
+  tools/fm1_install.py. The repository also holds a prebuilt releases/groovedeck-0.2-wip.fwsc that predates the
+  MIDI work. Hold OCT- while switching on for USB rescue; the README points to the FM-1 Firmware Hub for
+  returning to other firmware or to the official one.
+brick_risk: true
+tags: [drums, drum-synth, sequencer, fx, midi, groovebox]
+versions:
+- version: master @ 20bf2de
+  date: 2026-10-19
+  url: https://github.com/anonymousacademe/FM-1-GrooveDeck/commit/20bf2de
+  notes: No tagged releases; this is the latest commit.
