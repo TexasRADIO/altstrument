@@ -1,0 +1,44 @@
+device: electrosmith-daisy-patch
+name: Joy and Joy Lite
+summary: >-
+  Mutable Instruments Braids macro oscillator for the Patch.Init: Joy has 48 models and a 64x48 OLED navigator, and
+  Joy Lite is a screenless build of 16 models for a stock unit.
+description: >-
+  Both builds compile Braids' own DSP unmodified and share a two-point V/Oct calibration done at power-on. Joy
+  keeps all 48 models, uses the four knobs for sound parameters, selects patches with the B7 button and shows
+  menus on a 64x48 SSD1306 OLED; it needs the B8 toggle removed to make room for the screen. Joy Lite leaves out the
+  models that Plaits covers and offers 16 distinctively Braids ones in two toggle banks, with the model number shown
+  by LED blinks. The last model is saved to QSPI flash. Both remain drones when no gate is patched, as a stock
+  Braids does. They are the second of the author's nursery-rhyme family of Patch.Init firmwares. Panel files for
+  3D printing and PCB faceplates are in the author's workshop repository.
+status: active
+authors:
+  - name: David Baghurst (Eight4aWish)
+    url: https://github.com/Eight4aWish
+source: https://github.com/Eight4aWish/eurorack_daisy_patch_init/tree/main/daisy_braids_oled
+source_status: open
+license: MIT
+license_notes: >-
+  Original work and the Braids DSP by Émilie Gillet are MIT, and the releases carry a NOTICES file. The README says
+  the project is not affiliated with Mutable Instruments or Electrosmith.
+homepage: https://eight4awish.com/modules/joy/
+distribution: download
+requires_stock: >-
+  Daisy Patch.Init with the Daisy bootloader. Joy also needs a 64x48 SSD1306 OLED on the expansion header with the
+  B8 toggle removed; Joy Lite needs the toggle fitted.
+install_notes: >-
+  Needs the Daisy bootloader in QSPI, installed once with make program-boot. Then copy joy.bin or joy_lite.bin from
+  the release to a FAT32 SD card and power-cycle, or upload it with dfu-util during the bootloader's grace period.
+brick_risk: false
+tags: [oscillator, synth-engine, open-source]
+video:
+  url: https://www.youtube.com/watch?v=qR6oma1cY7w
+  title: "Vibe coding a Eurorack Module: Mutable Braids on a Daisy Patch Init"
+  credit: Eight4aWish
+  first_party: true
+  found_via: https://eight4awish.com/modules/joy/
+versions:
+  - version: v1.4.0
+    date: 2026-08-04
+    url: https://github.com/Eight4aWish/eurorack_daisy_patch_init/releases/tag/joy-v1.4.0
+    notes: Joy v1.4.0; Joy Lite v1.4.0 was released the same day as joy_lite-v1.4.0.

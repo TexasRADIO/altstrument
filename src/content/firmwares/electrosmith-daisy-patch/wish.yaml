@@ -1,0 +1,39 @@
+device: electrosmith-daisy-patch
+name: Wish on Daisy patch.Init()
+summary: >-
+  Mutable Instruments Beads granular texture synthesizer on a stock Patch.Init, with four knobs on three layers, a
+  freeze button, SEED and FREEZE gates and V/Oct calibration.
+description: >-
+  This build compiles Beads' own DSP and runs it behind the Patch.Init's four knobs, button, toggle and LED. The toggle
+  picks PLAY or TONE, and holding B7 gives a RANDOM layer. B7 also freezes the buffer, grain gates appear on GATE OUT
+  1, and the gate inputs trigger SEED and FREEZE. It uses the same pot laws and load governor as the author's Alchemy
+  Lab version and shares Joy's V/Oct calibration. The README says the module was benched on one unit on the day of
+  release, with loading and saving settings not tested before release.
+status: active
+authors:
+  - name: David Baghurst (Eight4aWish)
+    url: https://github.com/Eight4aWish
+source: https://github.com/Eight4aWish/eurorack_daisy_patch_init/tree/main/daisy_beads_patch_init
+source_status: open
+license: MIT
+license_notes: >-
+  Original work and the Beads DSP by Émilie Gillet are MIT, and the release carries a NOTICES file. The README says
+  the project is not affiliated with Mutable Instruments or Electrosmith.
+homepage: https://eight4awish.com/modules/wish-patch-init/
+distribution: download
+requires_stock: Stock Daisy Patch.Init with the Daisy bootloader installed once
+install_notes: >-
+  Needs the Daisy bootloader in QSPI, installed once with make program-boot. Copy wish_patch_init.bin from the
+  release to a FAT32 SD card and power-cycle, or upload it with dfu-util during the bootloader's grace period.
+brick_risk: false
+tags: [fx, granular, synth-engine, open-source]
+video:
+  url: https://www.youtube.com/watch?v=D-5XmIFGvwI
+  title: "Vibe Coding a Eurorack Module: Mutable Beads on Two Daisies"
+  credit: Eight4aWish
+  first_party: true
+  found_via: https://eight4awish.com/modules/wish-patch-init/
+versions:
+  - version: v1.0.0
+    date: 2026-10-12
+    url: https://github.com/Eight4aWish/eurorack_daisy_patch_init/releases/tag/wish_patch_init-v1.0.0

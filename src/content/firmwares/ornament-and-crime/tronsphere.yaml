@@ -1,0 +1,35 @@
+device: ornament-and-crime
+name: TronSphere
+summary: Minimal Teensy 3.2 build of the Hemisphere shell from Phazerville's T32 branch that carries only the author's own applets, so far a Likembe pattern generator. Early, not yet run on hardware.
+description: >-
+  Keeps the Hemisphere dual-applet shell of Phazerville Suite, vendored from its Teensy 3.2 branch as a git subtree,
+  and drops the roughly 95 stock applets so that upstream ones are added one at a time. The custom build registers
+  two applets, a Hello test applet and Likembe, which plays one likembe-style part per instance, using two virtual
+  thumbs that loop short figures of different lengths to make interlocking rhythms, with a pulse clock on TR1, a
+  re-roll trigger on TR2, density CV and gate and pitch outputs. The authored work lives in a custom/ folder
+  with host-side tests and a simulator, and the repository has no tagged releases. The README calls the project
+  scaffolding, and its notes say Likembe has been tested in the simulator but not yet on hardware. It targets the
+  Teensy 3.2 hardware only, not Teensy 4.x or ORN8, and its notes shelve a planned master clock rework.
+status: active
+authors:
+  - name: Ralf Traunsteiner
+    url: https://github.com/tronstoner
+source: https://github.com/tronstoner/O_C-TronSphere
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  The authored code carries GPL-3.0-or-later SPDX headers and LICENSE holds the GPLv3 text. The vendored Phazerville
+  subtree keeps its own MIT headers, and four of its core files are GPLv3, so built firmware is treated as GPLv3
+  (docs/UPSTREAM.md).
+distribution: source-only
+requires_stock: Teensy 3.2
+install_notes: >-
+  Build with PlatformIO using the custom_min environment (task build) and load the hex with the Teensy loader
+  (task flash); see docs/BUILD.md. No hex is published. Flashing has not been run on hardware yet according to
+  the project's notes.
+tags: [sequencer, generative, platform, open-source]
+versions:
+  - version: main @ 5a7191f
+    date: 2026-10-19
+    url: https://github.com/tronstoner/O_C-TronSphere/commit/5a7191f
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,50 @@
+device: korg-electribe-2
+name: BLECH and Kuhler's GELUMPE
+summary: >-
+  BLECH patch set for Electribe 2 firmware 2.02, with Plugins, themes, pattern-change confirmation and more, plus
+  GELUMPE, an app with firmware patcher, emulator, effect and pattern editors and a rescue guide.
+description: >-
+  GELUMPE runs as a desktop app or in a browser and has an emulator that boots the real 2.02 firmware's ARM code
+  without sound, a patcher that applies BLECH to your own SYSTEM.VSB and checks the result in the emulator before
+  offering the file, an effect and pattern editor, a plugin editor and a rescue page. BLECH, the firmware changes,
+  runs on the red Sampler either over Hacktribe 2.02 or directly on Korg's original 2.02. The blue Synth has a
+  smaller patch set. It adds a BLECH menu with plugins written in a small JavaScript subset that compile to
+  bytecode for a VM in the firmware, display and LED colors, pattern changes only after confirmation, TAP Motion, a
+  note assistant for the keyboard mode, a melody generator, a splash screen editor, clearer sample-load messages
+  and a Doom port. The release notes say only some features have been tested on a device and the rest in the
+  emulator. The README, written in German with an English version, says AI agents also work on the project.
+status: active
+authors:
+  - name: Kuhler Buhler (KuhlerBuhler)
+    url: https://github.com/KuhlerBuhler
+source: https://github.com/KuhlerBuhler/kuhlers-gelumpe
+source_status: patcher-only
+license: AGPL-3.0-only
+license_notes: >-
+  The LICENSE file is AGPL-3.0 and the NOTICE file says the editor is AGPL-3.0-only; the emulator program under
+  tools/emu is GPL-2.0-only. The firmware changes are published as patch files and JSON patch descriptions, not as
+  readable source. The repository also holds a Doom engine build and the Freedoom WAD under their own licenses; the
+  NOTICE says they are not yet cleared for redistribution. The repository includes no Korg firmware, patterns or
+  samples, and a CI check rejects pull requests that add any.
+homepage: https://github.com/KuhlerBuhler/kuhlers-gelumpe#readme
+distribution: patch-your-own
+requires_stock: Electribe 2 Sampler 2.02 (Korg original or Hacktribe 2.02); Synth 2.02 with a reduced patch set
+install_notes: >-
+  Load your own SYSTEM.VSB in the Patcher page, choose patches and let the emulator check the result, then install
+  the new file from the SD card as a firmware update. Back up the SD card, the Global settings and the original
+  SYSTEM.VSB first. Holding EXIT at power-on starts the firmware without patches for that boot and allows a firmware
+  update. The README says the bootloader is never touched and that a dead unit needs JTAG. Without the app, apply
+  BLECH.patch or the .bsdiff that matches your file's checksum from the release.
+brick_risk: true
+tags: [patch, editor, emulator, scripting, plugins, fx, midi, open-source]
+image:
+  url: https://raw.githubusercontent.com/KuhlerBuhler/kuhlers-gelumpe/main/docs/images/preview/patcher.png
+  alt: Dark GELUMPE app window with a navigation list at the left and the Firmware patchen page, which has a file drop area for SYSTEM.VSB, a progress bar and the text 4 von 10
+  credit: KuhlerBuhler
+  source_url: https://github.com/KuhlerBuhler/kuhlers-gelumpe
+  first_party: true
+versions:
+  - version: v1.2.0
+    date: 2026-10-17
+    url: https://github.com/KuhlerBuhler/kuhlers-gelumpe/releases/tag/v1.2.0
+    notes: Adds pad color options and pre-checks Korg's original 2.02 for the blue Electribe.

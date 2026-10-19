@@ -1,0 +1,61 @@
+device: electrosmith-daisy-patch
+name: Sorrow
+summary: >-
+  Drum module firmware for a stock Daisy Patch.Init, built on Mutable Instruments Grids with three synthesised drum
+  voices drawn from a pool of ten models, a kit-roll toggle and four pattern banks.
+description: >-
+  Sorrow plays Grids' X/Y pattern morphing through three drum voices chosen from ten DaisySP models spanning synthetic,
+  808-style and physical-modelling kinds. A Wildness knob sets how far a rolled kit may stray, and flipping the
+  B8 toggle out and back rolls a new kit. The pattern banks are Grids' original map, a club bank and a traditional
+  bank built from MIDI corpora with a self-organising map, and a Latin bank, with a user bank reserved in the code.
+  It follows a sixteenth-note clock at any tempo, has a reset input, sends triggers on B5, B6 and CV_OUT_1 alongside
+  the internal kit, and pans each drum. The first of the author's nursery-rhyme family of Patch.Init firmwares, it
+  keeps Grids' GPL license. The author's YouTube video describes it as vibe coded.
+status: active
+authors:
+  - name: David Baghurst (Eight4aWish)
+    url: https://github.com/Eight4aWish
+source: https://github.com/Eight4aWish/eurorack_daisy_patch_init/tree/main/daisy_grids
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  Grids is GPL-3.0-or-later, unlike most Mutable Instruments sources, so Sorrow is copyleft; the README says
+  distributing it in source or binary form requires passing on the complete corresponding source. The rest of the
+  repository is MIT, and the release carries a NOTICES file.
+homepage: https://eight4awish.com/modules/sorrow/
+distribution: download
+requires_stock: Stock Daisy Patch.Init with the Daisy bootloader installed once
+install_notes: >-
+  Needs the Daisy bootloader in QSPI, installed once with make program-boot, which overwrites internal flash. Then
+  copy the release .bin to the root of a FAT32 SD card and power-cycle, or upload it with dfu-util during the
+  bootloader's short grace period.
+brick_risk: false
+tags: [drum-machine, sequencer, generative, synth-engine, open-source]
+video:
+  url: https://www.youtube.com/watch?v=O400BdPY1MU
+  title: "Vibe coding a Eurorack Module: Mutable Grids on a Daisy Patch Init"
+  credit: Eight4aWish
+  first_party: true
+  found_via: https://eight4awish.com/modules/sorrow/
+versions:
+  - version: sorrow-v2.4.1
+    date: 2026-08-25
+    url: https://github.com/Eight4aWish/eurorack_daisy_patch_init/releases/tag/sorrow-v2.4.1
+  - version: sorrow-v2.3.1
+    date: 2026-08-24
+    url: https://github.com/Eight4aWish/eurorack_daisy_patch_init/releases/tag/sorrow-v2.3.1
+  - version: sorrow-v2.3.0
+    date: 2026-08-24
+    url: https://github.com/Eight4aWish/eurorack_daisy_patch_init/releases/tag/sorrow-v2.3.0
+  - version: sorrow-v2.2.0
+    date: 2026-08-22
+    url: https://github.com/Eight4aWish/eurorack_daisy_patch_init/releases/tag/sorrow-v2.2.0
+  - version: sorrow-v2.1.0
+    date: 2026-08-22
+    url: https://github.com/Eight4aWish/eurorack_daisy_patch_init/releases/tag/sorrow-v2.1.0
+  - version: sorrow-v2.0.0
+    date: 2026-08-21
+    url: https://github.com/Eight4aWish/eurorack_daisy_patch_init/releases/tag/sorrow-v2.0.0
+  - version: sorrow-v1.0.1
+    date: 2026-07-16
+    url: https://github.com/Eight4aWish/eurorack_daisy_patch_init/releases/tag/sorrow-v1.0.1

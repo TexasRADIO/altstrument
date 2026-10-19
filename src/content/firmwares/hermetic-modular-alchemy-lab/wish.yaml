@@ -1,0 +1,39 @@
+device: hermetic-modular-alchemy-lab
+name: Wish
+summary: >-
+  Mutable Instruments Beads granular texture synthesizer for the Alchemy Lab, running Beads' own DSP behind the six
+  knobs and three buttons, with freeze, seed and randomiser layers.
+description: >-
+  Beads is a granular processor with four recording qualities, a delay mode, a reverb and a wavetable voice for when
+  nothing is patched in. Wish runs the original DSP, compiled from Mutable Instruments' source, which Émilie Gillet
+  published on 2026-10-12, and the port was built and first played that day. A load governor thins the grains at the
+  heaviest settings, where the first build hung. The attenuverters become randomisers on a layer reached by holding
+  B3. Settings are saved three seconds after a change.
+status: active
+authors:
+  - name: David Baghurst (Eight4aWish)
+    url: https://github.com/Eight4aWish
+source: https://github.com/Eight4aWish/eurorack_daisy_patch_init/tree/main/daisy_beads
+source_status: open
+license: MIT
+license_notes: >-
+  Original work, the Alchemy SDK and the Beads DSP by Émilie Gillet are MIT, and the release carries a NOTICES file.
+homepage: https://eight4awish.com/modules/wish/
+distribution: download
+requires_stock: Alchemy Lab V2
+install_notes: >-
+  Connect the front USB-C, hold B3 while powering on to enter DFU, then flash the release .bin with make flash or the
+  Hermetic Modular web programmer. With Wish or Secret already running, make program-live reboots into the bootloader
+  over USB.
+brick_risk: false
+tags: [fx, granular, synth-engine, open-source]
+video:
+  url: https://www.youtube.com/watch?v=D-5XmIFGvwI
+  title: "Vibe Coding a Eurorack Module: Mutable Beads on Two Daisies"
+  credit: Eight4aWish
+  first_party: true
+  found_via: https://eight4awish.com/modules/wish/
+versions:
+  - version: v1.0.0
+    date: 2026-10-12
+    url: https://github.com/Eight4aWish/eurorack_daisy_patch_init/releases/tag/wish-v1.0.0

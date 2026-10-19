@@ -12,9 +12,9 @@ links:
   manufacturer: https://novationmusic.com/products/circuit-rhythm
 related: [novation-circuit, novation-circuit-tracks]
 notes: >-
-  The custom firmware here is a patched copy of Novation's official 5706 update and is entered through the
-  Rhythm's update mode, which a custom image does not replace. Novation Components can reinstall the official
-  firmware.
+  The custom firmware here is built from Novation's official 5706 update, either as a patched copy served by an
+  installer or patched locally from the user's own file, and is entered through the Rhythm's update mode, which a
+  custom image does not replace. Novation Components can reinstall the official firmware.
 image:
   src: /images/devices/novation-circuit-rhythm.webp
   style: photo

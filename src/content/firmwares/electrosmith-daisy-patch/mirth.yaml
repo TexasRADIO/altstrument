@@ -1,0 +1,38 @@
+device: electrosmith-daisy-patch
+name: Mirth and Mirth Lite
+summary: >-
+  Neural amp modelling firmware for the Patch.Init that runs NAM A2-Lite captures from microSD and twelve "not-amps"
+  with one steer control each; Mirth Lite is the screenless build.
+description: >-
+  Mirth runs Neural Amp Modeler A2-Lite networks read from the microSD card, with input trim, dry/wet mix, bypass, an
+  input peak meter and a CPU readout, at about 64 percent CPU with a capture running. The twelve not-amps are
+  captures altered inside the network. The author aims it at their dual pingable low-pass gate, whose vactrol memory
+  a static curve cannot reproduce. A capture of an Orange TH100 is compiled in as a fallback, so the module works
+  without a card. The starter captures, CC0 or CC BY, are a separate release asset. Mirth uses a 64x48 OLED; Mirth Lite
+  runs on a stock unit with no screen and uses the toggle for banks. The A2 engine comes from bkshepherd's
+  DaisySeedProjects.
+status: active
+authors:
+  - name: David Baghurst (Eight4aWish)
+    url: https://github.com/Eight4aWish
+source: https://github.com/Eight4aWish/eurorack_daisy_patch_init/tree/main/daisy_neural
+source_status: open
+license: MIT
+license_notes: >-
+  The A2 runtime is MIT from DaisySeedProjects. The starter captures are credited individually in the repository and
+  are CC0 or CC BY. The repository never commits captures; they ship as a release asset.
+homepage: https://eight4awish.com/modules/mirth/
+distribution: download
+requires_stock: >-
+  Daisy Patch.Init with the Daisy bootloader and a microSD card. Mirth also needs a 64x48 OLED; Mirth Lite runs on
+  an unmodified unit.
+install_notes: >-
+  Needs the Daisy bootloader in QSPI, installed once with make program-boot. Copy mirth.bin or mirth_lite.bin from
+  the release to the SD card and power-cycle, with the captures in the folders the README describes.
+brick_risk: false
+tags: [fx, neural-network, synth-engine, open-source]
+versions:
+  - version: v1.0.0
+    date: 2026-10-03
+    url: https://github.com/Eight4aWish/eurorack_daisy_patch_init/releases/tag/mirth-v1.0.0
+    notes: Mirth; Mirth Lite was released with it as mirth_lite-v1.0.0.
