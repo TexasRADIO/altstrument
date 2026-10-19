@@ -16,12 +16,16 @@ function hiddenFirmwarePaths() {
   const paths = new Set();
   const devicesDir = 'src/content/devices';
   for (const file of readdirSync(devicesDir).filter((f) => f.endsWith('.yaml'))) {
-    const years = parse(readFileSync(`${devicesDir}/${file}`, 'utf8'))?.hide_stale_after_years;
+    const deviceData = parse(readFileSync(`${devicesDir}/${file}`, 'utf8')) ?? {};
+    const years = deviceData.hide_stale_after_years;
     if (years === undefined) continue;
+    // Pinned entries are never hidden.
+    const pinned = new Set(deviceData.pinned ?? []);
     const device = file.replace(/\.yaml$/, '');
     const dir = `src/content/firmwares/${device}`;
     if (!existsSync(dir)) continue;
     for (const fw of readdirSync(dir).filter((f) => f.endsWith('.yaml'))) {
+      if (pinned.has(fw.replace(/\.yaml$/, ''))) continue;
       const data = parse(readFileSync(`${dir}/${fw}`, 'utf8')) ?? {};
       if (isStale({ status: data.status ?? 'unknown', versions: data.versions ?? [] }, years)) {
         paths.add(`/firmware/${device}/${fw.replace(/\.yaml$/, '')}`);

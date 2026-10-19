@@ -8,6 +8,7 @@ import BrickWarning from './BrickWarning.astro';
 import TagList from './TagList.astro';
 import AuthorList from './AuthorList.astro';
 import VersionTable from './VersionTable.astro';
+import Badge from './Badge.astro';
 import { youtubeId, youtubeThumb } from '@/lib/media';
 interface Props { firmware: FirmwareItem }
 const { firmware: fw } = Astro.props;
@@ -38,6 +39,7 @@ const thumb = vid ? { src: youtubeThumb(vid), cover: true } : d.image ? { src: d
   <p class="mt-1 max-w-[68ch]">{d.summary}</p>
   <p class="mt-1 text-sm text-muted">by <AuthorList authors={d.authors} /></p>
   <div class="mt-2 flex flex-wrap items-center gap-1.5">
+    {fw.pin !== undefined && <Badge tone="gray" plain title="Pinned to the top of this device's list">Pinned</Badge>}
     <StatusBadge status={d.status} />
     <SourceBadge status={d.source_status} />
     <LicenseBadge license={d.license} />

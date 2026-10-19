@@ -78,6 +78,9 @@ const deviceSlugs = new Set<string>();
 const deviceNotes = new Map<string, string | undefined>();
 /** hide_stale_after_years per device, for the stale-entry warning and summary. */
 const deviceHideYears = new Map<string, number>();
+/** pinned slugs per device, checked against that device's firmware files. */
+const devicePinned = new Map<string, string[]>();
+const firmwareSlugsByDevice = new Map<string, Set<string>>();
 let hiddenTotal = 0;
 const deviceRelated = new Map<string, string[]>();
 const deviceManufacturers = new Set<string>();
@@ -97,6 +100,7 @@ for (const file of listYaml(DEVICES_DIR)) {
   deviceNotes.set(slug, parsed.data.notes);
   deviceRelated.set(slug, parsed.data.related);
   if (parsed.data.hide_stale_after_years !== undefined) deviceHideYears.set(slug, parsed.data.hide_stale_after_years);
+  if (parsed.data.pinned.length) devicePinned.set(slug, parsed.data.pinned);
   deviceManufacturers.add(parsed.data.manufacturer);
   if (parsed.data.image && !existsSync(join(ROOT, 'public', parsed.data.image.src))) {
     fail(file, `image file ${parsed.data.image.src} does not exist under public/`);
@@ -186,7 +190,7 @@ for (const dir of deviceDirs) {
     if (hideYears !== undefined) {
       if (!newestDate(fw.versions)) {
         warn(file, `no dated version, so hide_stale_after_years (${hideYears}) on ${fw.device} can never hide it`);
-      } else if (isStale(fw, hideYears)) {
+      } else if (!devicePinned.get(fw.device)?.includes(fwSlug) && isStale(fw, hideYears)) {
         hiddenTotal++;
       }
     }
@@ -194,6 +198,20 @@ for (const dir of deviceDirs) {
     if (fw.image) remoteChecks.push({ file, kind: 'image', url: fw.image.url });
     firmwareTotal++;
     firmwareCountByDevice.set(fw.device, (firmwareCountByDevice.get(fw.device) ?? 0) + 1);
+    if (!firmwareSlugsByDevice.has(fw.device)) firmwareSlugsByDevice.set(fw.device, new Set());
+    firmwareSlugsByDevice.get(fw.device)!.add(fwSlug);
+  }
+}
+
+for (const [slug, pinned] of devicePinned) {
+  const file = join(DEVICES_DIR, `${slug}.yaml`);
+  const seen = new Set<string>();
+  for (const p of pinned) {
+    if (seen.has(p)) fail(file, `pinned lists "${p}" more than once`);
+    seen.add(p);
+    if (!firmwareSlugsByDevice.get(slug)?.has(p)) {
+      fail(file, `pinned entry "${p}" has no file src/content/firmwares/${slug}/${p}.yaml`);
+    }
   }
 }
 

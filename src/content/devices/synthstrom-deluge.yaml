@@ -23,6 +23,7 @@ notes: >-
   firmware is developed in Synthstrom's own GitHub organisation. Release notes
   recommend backing up the SD card before updating.
 hide_stale_after_years: 2
+pinned: [deluge-community-firmware]
 image:
   src: /images/devices/synthstrom-deluge.jpg
   style: photo

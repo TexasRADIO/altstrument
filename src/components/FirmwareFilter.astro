@@ -113,10 +113,14 @@ const selects = [...(search ? filters : []), sortSelect];
       var coll = new Intl.Collator('en', { sensitivity: 'base', numeric: true });
 
       // Reorders cards within each section using data-name / data-updated / data-order.
+      // Pinned cards (data-pin, the device's pinned-list position) stay first in every mode.
       function sortItems() {
         var mode = sort.value;
         function attr(el, n) { return el.getAttribute(n) || ''; }
+        function pin(el) { var p = el.getAttribute('data-pin'); return p === null ? Infinity : Number(p); }
         function cmp(a, b) {
+          var pa = pin(a), pb = pin(b);
+          if (pa !== pb) return pa - pb;
           if (mode === 'status') return Number(attr(a, 'data-order')) - Number(attr(b, 'data-order'));
           var byName = coll.compare(attr(a, 'data-name'), attr(b, 'data-name'));
           if (mode === 'updated') {

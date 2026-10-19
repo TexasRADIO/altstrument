@@ -51,6 +51,7 @@ const itemAttrs = (f: FirmwareItem) => ({
   'data-name': f.data.name,
   'data-updated': isoDate(firmwareUpdated(f)) ?? '',
   'data-order': statusOrder.get(f.id),
+  'data-pin': f.pin,
 });
 ---
 <Base

@@ -199,6 +199,12 @@ export const deviceSchema = z.object({
    * search, feeds and the sitemap.
    */
   hide_stale_after_years: z.number().int().positive().optional(),
+  /**
+   * Entry slugs (file names under firmwares/<device>/) shown first in this
+   * device's firmware and tool lists, in this order. Pinned entries are never
+   * hidden by hide_stale_after_years.
+   */
+  pinned: z.array(slug).default([]),
 });
 
 export const authorSchema = z.object({

@@ -5,7 +5,8 @@
  *
  * An entry is hidden when its status is dormant or archived and its newest
  * dated version is older than the cutoff. Entries without a dated version are
- * never hidden; the validator warns about them instead.
+ * never hidden; the validator warns about them instead. Entries in the device's
+ * `pinned` list are never hidden either; callers skip them before calling isStale.
  */
 
 /** Statuses the rule may hide. Active, maintained, announced and unknown entries always show. */

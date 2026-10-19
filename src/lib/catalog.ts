@@ -25,6 +25,8 @@ export interface FirmwareItem {
   data: FirmwareEntry['data'];
   /** Newest first, undated last. */
   versions: Version[];
+  /** Position in the device's `pinned` list; pinned entries sort first. */
+  pin?: number;
 }
 
 export interface DeviceItem {
@@ -38,7 +40,7 @@ export interface DeviceItem {
    */
   logo?: ManufacturerLogo;
   /**
-   * Sorted: kind firmware before tool, then by status, then name. Excludes
+   * Sorted: kind firmware before tool, then pinned, then by status, then name. Excludes
    * entries hidden by the device's `hide_stale_after_years`, so every list,
    * count, feed and search index built from it leaves them out.
    */
@@ -90,16 +92,25 @@ export function compareText(a: string, b: string): number {
   return collator.compare(a, b);
 }
 
+/** Pinned entries first, in pinned-list order; 0 when neither or both are unpinned. */
+function comparePins(a: FirmwareItem, b: FirmwareItem): number {
+  return (a.pin ?? Infinity) - (b.pin ?? Infinity) || 0;
+}
+
 export function compareFirmwares(a: FirmwareItem, b: FirmwareItem): number {
   const kind = Number(a.data.kind === 'tool') - Number(b.data.kind === 'tool');
   if (kind) return kind;
+  const pin = comparePins(a, b);
+  if (pin) return pin;
   const status = statusRank(a.data.status) - statusRank(b.data.status);
   if (status) return status;
   return compareText(a.data.name, b.data.name);
 }
 
-/** Newest dated version first, undated last, then name. Matches "Recently updated" in FirmwareFilter. */
+/** Pinned first, then newest dated version, undated last, then name. Matches "Recently updated" in FirmwareFilter. */
 export function compareFirmwaresByUpdated(a: FirmwareItem, b: FirmwareItem): number {
+  const pin = comparePins(a, b);
+  if (pin) return pin;
   const au = isoDate(firmwareUpdated(a)) ?? '';
   const bu = isoDate(firmwareUpdated(b)) ?? '';
   if (au !== bu) return !au ? 1 : !bu ? -1 : au < bu ? 1 : -1;
@@ -147,10 +158,12 @@ export async function getDevicesWithFirmwares(): Promise<DeviceItem[]> {
     getManufacturerEntries(),
   ]);
 
+  const pinnedBy = new Map(devices.map((d) => [d.id, d.data.pinned]));
   const byDevice = new Map<string, FirmwareItem[]>();
   for (const fw of firmwares) {
     const deviceId = fw.data.device.id;
     const slug = fw.id.split('/').pop() as string;
+    const pin = pinnedBy.get(deviceId)?.indexOf(slug) ?? -1;
     const item: FirmwareItem = {
       id: fw.id,
       slug,
@@ -158,6 +171,7 @@ export async function getDevicesWithFirmwares(): Promise<DeviceItem[]> {
       url: `/firmware/${deviceId}/${slug}`,
       data: fw.data,
       versions: sortVersions(fw.data.versions),
+      ...(pin >= 0 ? { pin } : {}),
     };
     const list = byDevice.get(deviceId) ?? [];
     list.push(item);
@@ -169,7 +183,8 @@ export async function getDevicesWithFirmwares(): Promise<DeviceItem[]> {
       const manufacturerSlug = slugify(d.data.manufacturer);
       const logo = d.data.image ? undefined : manufacturers.get(manufacturerSlug)?.data.logo;
       const all = (byDevice.get(d.id) ?? []).sort(compareFirmwares);
-      const stale = (f: FirmwareItem) => isStale(f.data, d.data.hide_stale_after_years);
+      // Pinned entries are never hidden as stale.
+      const stale = (f: FirmwareItem) => f.pin === undefined && isStale(f.data, d.data.hide_stale_after_years);
       return {
         id: d.id,
         url: `/devices/${d.id}`,
