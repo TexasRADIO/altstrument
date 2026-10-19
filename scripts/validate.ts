@@ -20,6 +20,7 @@ import { parse } from 'yaml';
 import { deviceSchema, firmwareBaseSchema, manufacturerSchema, refineFirmware } from '../src/content/schema';
 import { slugify } from '../src/lib/slug';
 import { youtubeOembedUrl } from '../src/lib/media';
+import { isStale, newestDate } from '../src/lib/stale';
 import { z } from 'astro/zod';
 
 const ROOT = new URL('..', import.meta.url).pathname;
@@ -75,6 +76,9 @@ function loadYaml(file: string): unknown {
 
 const deviceSlugs = new Set<string>();
 const deviceNotes = new Map<string, string | undefined>();
+/** hide_stale_after_years per device, for the stale-entry warning and summary. */
+const deviceHideYears = new Map<string, number>();
+let hiddenTotal = 0;
 const deviceRelated = new Map<string, string[]>();
 const deviceManufacturers = new Set<string>();
 
@@ -92,6 +96,7 @@ for (const file of listYaml(DEVICES_DIR)) {
   deviceSlugs.add(slug);
   deviceNotes.set(slug, parsed.data.notes);
   deviceRelated.set(slug, parsed.data.related);
+  if (parsed.data.hide_stale_after_years !== undefined) deviceHideYears.set(slug, parsed.data.hide_stale_after_years);
   deviceManufacturers.add(parsed.data.manufacturer);
   if (parsed.data.image && !existsSync(join(ROOT, 'public', parsed.data.image.src))) {
     fail(file, `image file ${parsed.data.image.src} does not exist under public/`);
@@ -176,6 +181,14 @@ for (const dir of deviceDirs) {
     }
     if (fw.license === 'unspecified' && fw.source_status === 'open') {
       warn(file, 'open source but license unspecified; double-check the repo for a LICENSE file');
+    }
+    const hideYears = deviceHideYears.get(fw.device);
+    if (hideYears !== undefined) {
+      if (!newestDate(fw.versions)) {
+        warn(file, `no dated version, so hide_stale_after_years (${hideYears}) on ${fw.device} can never hide it`);
+      } else if (isStale(fw, hideYears)) {
+        hiddenTotal++;
+      }
     }
     if (fw.video) remoteChecks.push({ file, kind: 'video', url: fw.video.url });
     if (fw.image) remoteChecks.push({ file, kind: 'image', url: fw.image.url });
@@ -282,5 +295,5 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(
-  `\nCatalog OK: ${deviceSlugs.size} device(s), ${firmwareTotal} firmware entr${firmwareTotal === 1 ? 'y' : 'ies'}, ${manufacturerTotal} manufacturer file(s)${remoteNote}.`,
+  `\nCatalog OK: ${deviceSlugs.size} device(s), ${firmwareTotal} firmware entr${firmwareTotal === 1 ? 'y' : 'ies'}, ${manufacturerTotal} manufacturer file(s)${hiddenTotal ? ` (${hiddenTotal} hidden as stale)` : ''}${remoteNote}.`,
 );

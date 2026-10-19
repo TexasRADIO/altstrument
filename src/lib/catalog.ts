@@ -37,8 +37,14 @@ export interface DeviceItem {
    * (the fallback visual). Pages and cards read this instead of re-querying.
    */
   logo?: ManufacturerLogo;
-  /** Sorted: kind firmware before tool, then by status, then name. */
+  /**
+   * Sorted: kind firmware before tool, then by status, then name. Excludes
+   * entries hidden by the device's `hide_stale_after_years`, so every list,
+   * count, feed and search index built from it leaves them out.
+   */
   firmwares: FirmwareItem[];
+  /** Entries hidden as stale (same sort). They still get their own page. */
+  hiddenFirmwares: FirmwareItem[];
 }
 
 export interface Manufacturer {
@@ -64,6 +70,8 @@ export interface RecentVersion {
   firmware: FirmwareItem;
   device: DeviceItem;
 }
+
+import { isStale } from './stale';
 
 /** kebab-case of a name; used for manufacturer slugs everywhere. */
 import { slugify } from './slug';
@@ -160,13 +168,16 @@ export async function getDevicesWithFirmwares(): Promise<DeviceItem[]> {
     .map((d): DeviceItem => {
       const manufacturerSlug = slugify(d.data.manufacturer);
       const logo = d.data.image ? undefined : manufacturers.get(manufacturerSlug)?.data.logo;
+      const all = (byDevice.get(d.id) ?? []).sort(compareFirmwares);
+      const stale = (f: FirmwareItem) => isStale(f.data, d.data.hide_stale_after_years);
       return {
         id: d.id,
         url: `/devices/${d.id}`,
         data: d.data,
         manufacturerSlug,
         ...(logo ? { logo } : {}),
-        firmwares: (byDevice.get(d.id) ?? []).sort(compareFirmwares),
+        firmwares: all.filter((f) => !stale(f)),
+        hiddenFirmwares: all.filter(stale),
       };
     })
     .sort(compareDevices);

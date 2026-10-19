@@ -192,6 +192,13 @@ export const deviceSchema = z.object({
   /** Other devices that share firmware or hardware (device slugs). */
   related: z.array(slug).default([]),
   image: imageSchema.optional(),
+  /**
+   * Hide this device's dormant and archived entries whose newest dated version
+   * is more than this many years before the build date (see src/lib/stale.ts).
+   * Hidden entries keep their own page (noindex) but leave lists, counts,
+   * search, feeds and the sitemap.
+   */
+  hide_stale_after_years: z.number().int().positive().optional(),
 });
 
 export const authorSchema = z.object({

@@ -18,8 +18,10 @@ interface Props {
   editUrl?: string;
   /** Footer link text when editUrl is set. */
   editLabel?: string;
+  /** Ask search engines not to index the page (entries hidden as stale). */
+  noindex?: boolean;
 }
-const { title, description, home = false, image, editPath, editUrl, editLabel } = Astro.props;
+const { title, description, home = false, image, editPath, editUrl, editLabel, noindex = false } = Astro.props;
 const SITE = 'altstrument';
 const REPO = 'https://github.com/philmillman/altstrument';
 // Pages generated from the whole catalog (home, recent) have no single file; they link to the repo.
@@ -58,6 +60,7 @@ const nav = [
     </script>
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     {canonical && <link rel="canonical" href={canonical} />}
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

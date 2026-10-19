@@ -12,20 +12,25 @@ import Prose from '@/components/Prose.astro';
 import FirmwareMedia from '@/components/FirmwareMedia.astro';
 import DevicePhoto from '@/components/DevicePhoto.astro';
 import { KIND_LABELS, DISTRIBUTION_LABELS } from '@/lib/labels';
-import { getDevicesWithFirmwares, githubEditUrl, hostOf, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
+import { getDevicesWithFirmwares, githubEditUrl, hostOf, plural, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
 
 export async function getStaticPaths() {
   const devices = await getDevicesWithFirmwares();
-  return devices.flatMap((device) =>
-    device.firmwares.map((firmware) => ({
+  // Entries hidden as stale still get a page so existing links keep working.
+  return devices.flatMap((device) => [
+    ...device.firmwares.map((firmware) => ({
       params: { device: device.id, fw: firmware.slug },
-      props: { device, firmware },
+      props: { device, firmware, hidden: false },
     })),
-  );
+    ...device.hiddenFirmwares.map((firmware) => ({
+      params: { device: device.id, fw: firmware.slug },
+      props: { device, firmware, hidden: true },
+    })),
+  ]);
 }
 
-interface Props { device: DeviceItem; firmware: FirmwareItem }
-const { device, firmware: fw } = Astro.props;
+interface Props { device: DeviceItem; firmware: FirmwareItem; hidden: boolean }
+const { device, firmware: fw, hidden } = Astro.props;
 const d = fw.data;
 const links = [
   d.source && { label: 'Source', url: d.source },
@@ -39,8 +44,13 @@ const edit = d.generated_from
   ? { editUrl: githubEditUrl(d.generated_from), editLabel: 'Edit upstream on GitHub' }
   : { editPath: `src/content/firmwares/${fw.id}.yaml` };
 ---
-<Base title={`${d.name} for ${device.data.name}`} description={`${d.name}: ${d.summary}`} {...edit}>
+<Base title={`${d.name} for ${device.data.name}`} description={`${d.name}: ${d.summary}`} noindex={hidden} {...edit}>
   <Breadcrumb items={[{ label: 'Devices', href: '/' }, { label: device.data.name, href: device.url }, { label: d.name }]} />
+  {hidden && (
+    <p class="mb-4 max-w-[68ch] text-sm text-muted">
+      Hidden from the <a href={device.url}>{device.data.name}</a> list as inactive: no release in the last {plural(device.data.hide_stale_after_years ?? 0, 'year')}.
+    </p>
+  )}
 
   {/* Media sits above the title on narrow screens and in a right-hand column from lg up. */}
   <div class:list={[(hasMedia || devicePhoto) && 'flex flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,30rem)] lg:items-start lg:gap-8']}>

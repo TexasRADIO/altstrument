@@ -40,8 +40,9 @@ export async function getStaticPaths() {
         footer: counts(d) || 'No custom firmware listed yet',
       }),
     ),
+    // Hidden entries keep their page, so they keep their card too.
     ...devices.flatMap((d) =>
-      d.firmwares.map((fw) =>
+      [...d.firmwares, ...d.hiddenFirmwares].map((fw) =>
         card(fw.url.slice(1), {
           eyebrow: `${KIND_LABELS[fw.data.kind]} for ${d.data.name} · ${d.data.manufacturer}`,
           title: fw.data.name,

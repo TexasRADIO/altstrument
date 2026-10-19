@@ -27,6 +27,8 @@ const tools = byUpdated.filter((f) => f.data.kind === 'tool');
 // device.firmwares is in Status order (compareFirmwares); kept as data-order for that sort.
 const statusOrder = new Map(device.firmwares.map((f, i) => [f.id, i]));
 const none = device.firmwares.length === 0;
+// Entries hidden by hide_stale_after_years; only their number is shown here.
+const hidden = device.hiddenFirmwares.length;
 const image = data.image;
 const logo = image ? undefined : device.logo;
 const counts = [
@@ -161,5 +163,11 @@ const itemAttrs = (f: FirmwareItem) => ({
         {tools.map((f) => <li {...itemAttrs(f)}><FirmwareCard firmware={f} /></li>)}
       </ul>
     </section>
+  )}
+
+  {hidden > 0 && (
+    <p class="mt-8 text-sm text-muted" data-hidden-count={hidden}>
+      {plural(hidden, 'older project')} not shown: dormant or archived, with no release in the last {plural(data.hide_stale_after_years ?? 0, 'year')}.
+    </p>
   )}
 </Base>
