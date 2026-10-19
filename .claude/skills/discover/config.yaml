@@ -75,6 +75,42 @@ github_queries:
 # generic names (Force, Tracker, Arc) from pulling in unrelated projects.
 device_query_template: '{manufacturer} "{name}" firmware'
 
+# Categories whose devices need different searches, one per template. Consoles
+# and handhelds only matter for music software, and "<console> firmware" mostly
+# finds general custom firmware, so they search for music terms instead.
+# GitHub repository search treats OR as top level, so each term is its own query.
+# A bare "tracker" also matches expense and task trackers, so trackers are
+# searched as "music tracker" and chiptune.
+category_query_templates:
+  handheld:
+    - '"{name}" chiptune'
+    - '"{name}" "music tracker"'
+    - '"{name}" synth'
+    - '"{name}" midi'
+
+# Per device slug, the names to search for instead of the display name (which
+# can be too long or too generic). Default: the display name before any " / ".
+device_search_names:
+  anbernic-rg35xx: [RG35XX]
+  anbernic-rg-nano: [RG Nano]
+  atari-lynx: [Atari Lynx]
+  m5stack-cardputer: [Cardputer]
+  miyoo-miyoo-mini: [Miyoo Mini]
+  nintendo-3ds: [Nintendo 3DS]
+  nintendo-game-boy-advance: [Game Boy Advance, GBA]
+  portmaster-compatible-handhelds: [PortMaster]
+  sega-master-system-game-gear: [Master System, Game Gear]
+  sega-mega-drive: [Mega Drive, Sega Genesis]
+  sony-ps-vita: [PS Vita]
+
+# Per device slug, exact queries that replace the templates. "NES" also matches
+# words like "Nest", so it is only searched together with chiptune terms.
+device_queries:
+  nintendo-nes:
+    - '"NES" chiptune'
+    - '"NES" "music tracker"'
+    - '"Famicom" chiptune'
+
 # Other catalogs of music-gear firmware. Recent commits here often mean a new project.
 prior_art_repos:
   - Lapin/awesome-music-gear-firmware
@@ -265,3 +301,63 @@ ignore:
   - url: https://github.com/scannerlicker/lpgtracker-themer
     reason: theme configurator with a one-line README and no releases; revisit if it grows
     date: 2026-10-17
+  - url: https://github.com/LumaTeam/Luma3DS
+    reason: general Nintendo 3DS custom firmware, not music software
+    date: 2026-10-19
+  - url: https://github.com/Cellenseres/OpenDSP
+    reason: replacement 3DS system DSP firmware for homebrew audio in general, not music software
+    date: 2026-10-19
+  - url: https://github.com/mentalblank/PYXIS
+    reason: general Nintendo Switch custom firmware and homebrew bundle, not music software
+    date: 2026-10-19
+  - url: https://github.com/arebaka/console-kitchen
+    reason: general Nintendo Switch custom firmware builder, not music software
+    date: 2026-10-19
+  - url: https://github.com/Wander-Eule/Switch-CFW-Tool
+    reason: general Nintendo Switch custom firmware pack tool, not music software
+    date: 2026-10-19
+  - url: https://github.com/MeoWDev-MOD/JNX
+    reason: general Nintendo Switch homebrew bundle, not music software
+    date: 2026-10-19
+  - url: https://github.com/Ghost0159/NXProjects-tracker
+    reason: tracker of Switch homebrew projects' firmware requirements, not music software
+    date: 2026-10-19
+  - url: https://github.com/srg0/s1-adv
+    reason: Cardputer voice-assistant and keyboard firmware, not music software
+    date: 2026-10-19
+  - url: https://github.com/greghonox/m5stack-cardputer-adv
+    reason: generic Cardputer Arduino build example, not music software
+    date: 2026-10-19
+  - url: https://github.com/otavio-dias-leite/netrunner
+    reason: Cardputer security and hardware exploration firmware, not music software
+    date: 2026-10-19
+  - url: https://github.com/LexLongcoding/ghoulbox-vst3
+    reason: desktop VST3 plugin port of GHOULBOX, not firmware or a device tool
+    date: 2026-10-19
+  - url: https://github.com/doofywilsons-rgb/Tall-Horse-Firmware-Hub-Website
+    reason: link directory with no tool or working site, like the removed FM-1 firmware feed
+    date: 2026-10-19
+  - url: https://github.com/De-Pattern/Ravel-FM1
+    reason: earlier duplicate of De-Pattern/Ravel_FM1, which is catalogued as ravel
+    date: 2026-10-19
+  - url: https://github.com/KrisCagle/SegaGenesisSynth
+    reason: desktop VST3/AU plugin emulating the Mega Drive sound chips, not software for the console
+    date: 2026-10-19
+  - url: https://github.com/tatvama/gba-bbmp-tracker
+    reason: unrelated civic web app (GBA here is the Greater Bengaluru Authority)
+    date: 2026-10-19
+  - url: https://github.com/jfalvarez1/chiptune_music_maker
+    reason: desktop chiptune DAW, not music software for a console or handheld
+    date: 2026-10-19
+  - url: https://github.com/Arhythmetic-Units/RackNES
+    reason: VCV Rack plugin, desktop only
+    date: 2026-10-19
+  - url: https://github.com/tommitytom/RetroPlug
+    reason: desktop DAW plugin that hosts emulators, not software for a console or handheld
+    date: 2026-10-19
+  - url: https://github.com/eliotbyte/sega-paint
+    reason: browser music editor with Mega Drive sound, not software that runs on the console
+    date: 2026-10-19
+  - url: https://github.com/DeepNESReverse/xrom-apu
+    reason: TypeScript library emulating the NES sound chip, not music software for the console
+    date: 2026-10-19

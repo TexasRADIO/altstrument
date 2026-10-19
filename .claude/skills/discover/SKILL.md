@@ -23,7 +23,7 @@ pnpm discover:candidates --since-days 14
 - First run in a while, or the catalog looks stale: use `--since-days 30`.
 - `$ARGUMENTS` is a URL: skip the script. That URL is the only candidate. If it is already in the catalog (grep `src/content` for the repository and the project name), treat it as an update check on that entry rather than a new one.
 - `$ARGUMENTS` is a device slug or a topic word: run the script with `--filter "<argument>"`, and also treat the argument itself as a research lead (search the web for `"<device name>" custom firmware`).
-- A full run takes a few minutes: the reddit feeds allow about one request a minute, and the per-device GitHub searches take another four. Pass `--no-device-queries` for a quicker pass; the generic searches catch most new projects.
+- A full run takes a few minutes: the reddit feeds allow about one request a minute, and the per-device GitHub searches take another seven or so (consoles and handhelds run several music-term searches each; see `category_query_templates` and `device_search_names` in config.yaml). Pass `--no-device-queries` for a quicker pass; the generic searches catch most new projects.
 
 The script prints a markdown report and writes `discover-candidates.json`. It already drops repositories that the catalog links to and anything under `ignore` in `.claude/skills/discover/config.yaml`. News items are not dropped when they mention a catalog entry; the "Mentions catalog" column tells you which one.
 
@@ -34,7 +34,7 @@ Go through every row. For each one decide: new firmware, new device, update to a
 In scope (README "Scope"): firmware that replaces or modifies what runs on a music device, and host-side tools that support it (editors, flashers, emulators, SDKs). A device is listed even when no custom firmware exists, with a note saying why.
 
 Reject when any of these hold. Record the reason.
-- Official manufacturer firmware, unless the device's existing entries already catalog official firmware the same way (Noise Engineering Legio and Versio do this; follow the device directory's precedent).
+- Closed official manufacturer firmware (stock OS releases). Open-source firmware published by the manufacturer itself IS in scope: list it with the `official` tag (e.g. MatrixOS, FM1 Open, Poly Effects digit_ui, Glitch Boy). Closed official firmware only where the device's existing entries already catalog it the same way (Noise Engineering Legio and Versio do this; follow the device directory's precedent).
 - Redistributed or mirrored stock firmware, or anything that links to it. Exception: a file the manufacturer licenses for redistribution, matched by hash. Today that is only M-VAVE's FM-1 V15 image (`sdk/firmware/FM-1_015.fwsc` in `m-vave/fm1_open`, Apache-2.0, git blob `ce49cc1595b67347c68a3ac7463017f9fa8c19dd`, 699,956 bytes). Compare a bundled copy's blob SHA from the repo tree API. SMK-37 stock packages and any other M-VAVE file are not covered.
 - No working source repository and no working homepage.
 - Not music hardware: desktop software, plugins, single-board computers, general MCU projects, keyboards in the computer sense, lighting. Game consoles and similar handhelds ARE in scope when the project is music software for them (trackers, sequencers, synths, MIDI tools): list them under category `handheld`.

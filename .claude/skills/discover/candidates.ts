@@ -118,6 +118,12 @@ const configSchema = z.object({
   github_queries: z.array(z.string().min(1)).default([]),
   /** {name} and {manufacturer} are replaced per device. */
   device_query_template: z.string().min(1).default('{manufacturer} "{name}" firmware'),
+  /** Per device category, templates that replace device_query_template (one search each). */
+  category_query_templates: z.record(z.string(), z.array(z.string().min(1))).default({}),
+  /** Per device slug, the names to search for instead of the device's display name. */
+  device_search_names: z.record(z.string(), z.array(z.string().min(1))).default({}),
+  /** Per device slug, exact search queries that replace all templates for that device. */
+  device_queries: z.record(z.string(), z.array(z.string().min(1))).default({}),
   prior_art_repos: z.array(z.string().regex(/^[\w.-]+\/[\w.-]+$/, 'expected owner/repo')).default([]),
   ignore: z
     .array(
@@ -240,6 +246,7 @@ interface DeviceInfo {
   slug: string;
   name: string;
   manufacturer: string;
+  category: string;
   fullName: string;
 }
 
@@ -319,7 +326,8 @@ function buildCatalog(problems: string[]): Catalog {
     const name = d && str(d.name);
     const manufacturer = d && str(d.manufacturer);
     if (name && manufacturer) {
-      devices.push({ slug: slugOf(file), name, manufacturer, fullName: `${manufacturer} ${name}` });
+      const category = (d && str(d.category)) ?? '';
+      devices.push({ slug: slugOf(file), name, manufacturer, category, fullName: `${manufacturer} ${name}` });
     }
   }
 
@@ -907,9 +915,19 @@ async function main() {
     const queries = [...config.github_queries];
     if (!values['no-device-queries']) {
       for (const d of catalog.devices) {
-        queries.push(
-          config.device_query_template.replaceAll('{name}', d.name).replaceAll('{manufacturer}', d.manufacturer),
-        );
+        const exact = config.device_queries[d.slug];
+        if (exact) {
+          queries.push(...exact);
+          continue;
+        }
+        // "Mega Drive / Genesis" never matches as one quoted phrase; search the first name unless overridden.
+        const names = config.device_search_names[d.slug] ?? [d.name.split(' / ')[0].trim()];
+        const templates = config.category_query_templates[d.category] ?? [config.device_query_template];
+        for (const name of names) {
+          for (const t of templates) {
+            queries.push(t.replaceAll('{name}', name).replaceAll('{manufacturer}', d.manufacturer));
+          }
+        }
       }
     }
     const unique = [...new Set(queries)];
