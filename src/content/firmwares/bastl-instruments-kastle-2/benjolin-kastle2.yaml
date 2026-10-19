@@ -1,0 +1,37 @@
+device: bastl-instruments-kastle-2
+name: Benjolin on Kastle 2
+summary: Unofficial Benjolin-style app for the Kastle 2 with two cross-modulating oscillators, a rungler and a filter, plus a browser emulator and a printable panel. Not tested on hardware.
+description: >-
+  A Kastle 2 app that models a Benjolin-style instrument: two oscillators that modulate each other, an 8-bit rungler
+  shift register and a resonant filter that can run as low, band or high pass. A SHIFT layer on the knobs adds
+  bitcrush and delay effects, a quantizer and a tempo setting, and the patch pins carry rungler, oscillator and CV
+  signals. The repository also holds a single-page browser emulator laid out on the Kastle 2 panel, which runs the
+  same design in floating point, and an STL of a blank top panel made from Bastl's template. The firmware runs the DSP
+  in fixed point and is built on Bastl's open-source Kastle 2 framework. The README states that nobody has flashed it
+  to a Kastle 2 or printed the panel, that its CPU load on the RP2040 is unmeasured, and that the knob and pin
+  mapping is the author's proposal. It is not affiliated with Bastl or based on Rob Hordijk's circuit.
+status: active
+authors:
+  - name: mranthropology
+    url: https://github.com/mranthropology
+source: https://github.com/mranthropology/benjolin-kastle2
+source_status: open
+license: MIT
+license_notes: >-
+  MIT (LICENSE), except the faceplate drawing in the emulator page and the panel/ folder, which are CC BY-SA 4.0
+  because they are adapted from Bastl's panel diagram and blank panel template. The build downloads Bastl's MIT
+  licensed kastle2 repository at a pinned commit, so the .uf2 also contains Bastl's code, the Pico SDK (BSD-3-Clause)
+  and TinyUSB (MIT). No Bastl firmware binary is included.
+distribution: download
+install_notes: >-
+  Not tested on hardware. A GitHub Actions run builds kastle2-benjolin.uf2 on each push to main and keeps it as a run
+  artifact; there is no release page. Switch the Kastle 2 off, hold SHIFT while switching it on so it appears as a USB
+  drive, copy the .uf2 onto it, and the unit restarts. Bastl's official .uf2 from their website goes on the same way
+  to go back. The first start clears the app's part of the EEPROM, as switching between Bastl's own apps does.
+brick_risk: false
+tags: [synth-engine, oscillator, filter, fx, emulator, generative]
+versions:
+  - version: main @ 0683682
+    date: 2026-10-19
+    url: https://github.com/mranthropology/benjolin-kastle2/commit/0683682
+    notes: No tagged releases; this is the latest commit.

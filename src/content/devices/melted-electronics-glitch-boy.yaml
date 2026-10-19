@@ -1,0 +1,24 @@
+name: Glitch Boy
+manufacturer: Melted Electronics
+category: synth
+tagline: ESP32 video glitch and chiptune box that runs NES and Game Boy emulator cores from microSD
+description: >-
+  Glitch Boy is a small unit from Melted Electronics that runs a NES emulator core and a Game Boy and Game Boy Color
+  core on an ESP32 and outputs composite video in NTSC or PAL. Two glitch knobs and two buttons corrupt the emulated
+  console's CPU and picture hardware in real time, and MIDI notes can be mapped to controller buttons or used to play
+  the emulated sound chip as a chiptune synth. It has CV inputs, an audio-reactive input, microSD game loading and
+  Bluetooth controller support. It was launched on Kickstarter in 2026, as a desktop unit and as a 16 HP Eurorack
+  module on the same board.
+platform: ESP32
+links:
+  manufacturer: https://meltedelectronics.com/
+  community:
+    - label: Glitch Boy on Kickstarter
+      url: https://www.kickstarter.com/projects/meltedelectronics/glitch-boy
+    - label: Glitch Boy firmware repository
+      url: https://github.com/meltdream/Glitch-Boy
+notes: >-
+  The firmware is published by the manufacturer as open source and is the only firmware catalogued for this device.
+  The firmware repository documents a USB reflash with no signing or lock, but does not give step-by-step flashing
+  instructions. Games are supplied by the user on a microSD card.
+related: []

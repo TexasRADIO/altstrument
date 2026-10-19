@@ -1,0 +1,37 @@
+name: Citadel
+manufacturer: Bastl Instruments
+category: eurorack
+tagline: 16HP Eurorack version of the Kastle 2 platform, sold as Alchemist, Wave Bard and FX Wizard
+description: >-
+  Citadel is the Eurorack adaptation of Bastl Instruments' Kastle 2, a 16HP module with patch jacks, knobs and
+  switches, MIDI input and a Raspberry Pi RP2040 inside. Bastl sells it with Alchemist, Wave Bard and FX Wizard
+  panels and firmware. It runs the same firmware as the Kastle 2, so there are no separate Citadel builds, and the
+  firmware detects which of the two it is running on. Bastl publishes the schematics, panel template and build tools
+  as open source.
+platform: RP2040
+links:
+  manufacturer: https://bastl-instruments.com/eurorack/modules/citadel-alchemist
+  community:
+    - label: Citadel schematics and build tools
+      url: https://github.com/bastl-instruments/citadel
+    - label: Kastle 2 firmware framework and app list
+      url: https://github.com/bastl-instruments/kastle2
+    - label: Citadel Wave Bard
+      url: https://bastl-instruments.com/eurorack/modules/citadel-wave-bard
+    - label: Citadel FX Wizard
+      url: https://bastl-instruments.com/eurorack/modules/citadel-fx-wizard
+notes: >-
+  The Citadel repository holds schematics and build tools only. Firmware code and the app list are in the Kastle 2
+  repository, and a .uf2 built for the Kastle 2 framework is also the Citadel build. Soldering a connector for a
+  debug probe voids the official warranty, according to Bastl's repository.
+related: [bastl-instruments-kastle-2]
+image:
+  src: /images/devices/bastl-instruments-citadel.webp
+  style: photo
+  alt: Front panel of a black Citadel Alchemist Eurorack module with rows of patch jacks, a large central knob with a white cat-face graphic, smaller knobs, two toggles and two buttons
+  width: 750
+  height: 1000
+  credit: Bastl Instruments
+  license: manufacturer product image
+  source_url: https://bastl-instruments.com/eurorack/modules/citadel-alchemist
+  original_url: https://bastl-instruments.com/thumbs/eurorack/modules/citadel-alchemist/bastl-citadel-alchemist-1r-750x1000.jpg

@@ -1,0 +1,35 @@
+name: Kastle 2
+manufacturer: Bastl Instruments
+category: synth
+tagline: Pocket patchable DSP platform on an RP2040, sold as Alchemist, Wave Bard and FX Wizard
+description: >-
+  The Kastle 2 is a small battery or USB-C powered instrument from Bastl Instruments with seven knobs, two buttons and
+  pin headers for patching, running on a Raspberry Pi RP2040. It has stereo audio in and a headphone output, sync in
+  and out, three analog and three digital outputs, and USB MIDI. Bastl sells the same hardware with different panels
+  and official apps as Alchemist, Wave Bard and FX Wizard, and publishes the firmware framework, two official firmwares
+  and the schematics as open source. The same platform is used in the Citadel Eurorack module.
+platform: RP2040
+links:
+  manufacturer: https://bastl-instruments.com/instruments/kastle-2-alchemist
+  community:
+    - label: Kastle 2 firmware framework and app list
+      url: https://github.com/bastl-instruments/kastle2
+    - label: Kastle 2 Wave Bard
+      url: https://bastl-instruments.com/instruments/kastle-2-wave-bard
+    - label: Kastle 2 FX Wizard
+      url: https://bastl-instruments.com/instruments/kastle2-fx-wizard
+notes: >-
+  Apps are installed by holding SHIFT while powering on so the unit shows up as a USB drive, then copying a .uf2 file
+  to it. Bastl's app list reserves an ID range for community apps, and the repository includes two official firmwares
+  with source.
+related: [bastl-instruments-citadel]
+image:
+  src: /images/devices/bastl-instruments-kastle-2.webp
+  style: photo
+  alt: Top-down view of a black Kastle 2 Alchemist with seven black knobs, two buttons and pin-header patch points marked with white arrows and labels on the panel
+  width: 1000
+  height: 750
+  credit: Bastl Instruments
+  license: manufacturer product image
+  source_url: https://bastl-instruments.com/instruments/kastle-2-alchemist
+  original_url: https://bastl-instruments.com/thumbs/instruments/kastle-2-alchemist/bastl-kastle-2-alchemist-01r-1000x750.jpg

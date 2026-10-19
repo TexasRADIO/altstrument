@@ -1,0 +1,42 @@
+device: bastl-instruments-kastle-2
+name: Knoscillator
+summary: Stereo oscillator app that traces a rotating 3D knot, with FM, a sequencer and stereo delay, written for Citadel on Bastl's Kastle 2 firmware framework.
+description: >-
+  Knoscillator generates its left and right outputs from the X and Y coordinates of a rotating three-dimensional
+  curve. The MODE button cycles through trefoil, Lissajous and torus knots, two integer coefficients (1 to 8) set how
+  complex the knot is, and a morph control blends between neighbouring knots. The LFO controls the speed and direction
+  of rotation, TIMBRE applies phase modulation in three dimensions with a switchable FM ratio, and a macro control
+  sets the wet level, filter and feedback of a tempo-synced stereo delay. Sequencing, pattern, quantizer and tap tempo
+  follow Bastl's Alchemist app. The author wrote it first for Befaco's Lich module.
+  The manual and release notes are written for Citadel, the Eurorack module that runs the same firmware family as
+  the Kastle 2, so see the Citadel entry; nothing says whether it has been run on a Kastle 2 unit. Bastl's app
+  list gives it a community app ID.
+status: active
+authors:
+  - name: Damien Quartz
+    url: https://github.com/ddf
+source: https://github.com/ddf/kastle2
+source_status: open
+license: MIT
+license_notes: >-
+  MIT, with the app's source files carrying Damien Quartz's copyright alongside Marek Mach's (Bastl Instruments).
+  The repository is a fork of Bastl's kastle2, whose README keeps Bastl's panel graphics, case artwork and sample
+  banks (including the Wave Bard SAMPLES.bin) under all rights reserved. The Knoscillator release file does not
+  contain Wave Bard samples.
+homepage: https://github.com/ddf/kastle2/blob/release/KNOSCILLATOR.md
+distribution: download
+install_notes: >-
+  Download the .uf2 from the GitHub release. Switch the unit off, hold SHIFT while switching it on so it appears as a
+  USB drive, and copy the .uf2 onto it. The manual recommends the Alchemist faceplate for the control labels. Bastl's
+  own .uf2 files put an official app back the same way.
+brick_risk: false
+tags: [synth-engine, oscillator, fx, sequencer, delay]
+versions:
+  - version: v1.0.1
+    date: 2026-05-31
+    url: https://github.com/ddf/kastle2/releases/tag/knoscillator-v1.0.1
+    notes: Envelope can be triggered with SHIFT; audio input can be mixed in, with a routing setting.
+  - version: v1.0.0
+    date: 2026-05-25
+    url: https://github.com/ddf/kastle2/releases/tag/knoscillator-v1.0.0
+    notes: First release, for Citadel.

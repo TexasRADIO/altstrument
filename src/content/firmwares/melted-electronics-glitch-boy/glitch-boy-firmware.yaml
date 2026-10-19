@@ -1,0 +1,43 @@
+device: melted-electronics-glitch-boy
+name: Glitch Boy firmware
+summary: >-
+  Manufacturer's open ESP32 firmware for the Glitch Boy, with NES and Game Boy cores, hardware-style glitches, MIDI
+  control and a MIDI-playable NES sound chip.
+description: >-
+  An Arduino sketch for the ESP32, forked from Peter Barrett's esp_8_bit, that runs the Nofrendo NES core and the
+  Walnut-CGB Game Boy and Game Boy Color core. The Glitch A knob corrupts the emulated CPU and the Glitch B knob the
+  picture processor. MIDI notes can be mapped to controller buttons, and the NES sound chip can be played over MIDI
+  as four voices with CC control of duty, volume and envelope. It also includes a music visualizer ported from VID
+  PIX PAL, CV and audio-reactive inputs, microSD game folders and Bluetooth controller support. The repository
+  was opened on 2026-10-15 with two sample games bundled under their authors' licenses. The README says the
+  firmware will be hackable, with custom mappings and new glitch behaviors.
+status: active
+authors:
+  - name: Martino (meltdream)
+    url: https://github.com/meltdream
+source: https://github.com/meltdream/Glitch-Boy
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  Mixed licenses. The project's own files are under an ISC-style license, and Nofrendo is LGPL-2.0, Walnut-CGB and
+  minigb_apu are MIT. Because GPL-3.0-or-later visualizer code is compiled into the same image, the repository's
+  LICENSE says the firmware as a whole is distributed under GPL version 3 or, at your option, any later version.
+homepage: https://meltedelectronics.com/
+distribution: source-only
+install_notes: >-
+  No prebuilt images or flashing steps are published yet. Build with arduino-cli for the ESP32 using Arduino ESP32
+  core 1.0.6, keeping the build path short because long paths break the NimBLE build. Put NES games in a nofrendo
+  folder and Game Boy games in a gameboy folder on the microSD card.
+brick_risk: false
+tags: [official, emulator, midi, chiptune, glitch, video, open-source]
+image:
+  url: https://raw.githubusercontent.com/meltdream/Glitch-Boy/main/images/microsd.jpg
+  alt: Top-down photo of a black Glitch Boy unit with a framed landscape panel, two knobs and a D-pad and A/B buttons, beside a small CRT television and a MIDI keyboard on a red rug
+  credit: Melted Electronics
+  source_url: https://github.com/meltdream/Glitch-Boy
+  first_party: true
+versions:
+  - version: main @ ff49284
+    date: 2026-10-15
+    url: https://github.com/meltdream/Glitch-Boy/commit/ff49284
+    notes: No tagged releases; this is the latest commit.
