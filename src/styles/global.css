@@ -444,3 +444,21 @@ html[data-grouping="category"] [data-group-view="category"] {
 html[data-grouping="category"] [data-group-view="manufacturer"] {
   display: none;
 }
+
+/*
+ * Jump lists above the index groups show two rows by default; SearchBox.astro
+ * marks the entries past that with data-clipped and shows a "show all" toggle.
+ * Without JS the full list shows.
+ */
+[data-jump-list][data-collapsed] > [data-clipped] {
+  display: none;
+}
+.jump-more {
+  color: var(--accent);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.jump-more:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}

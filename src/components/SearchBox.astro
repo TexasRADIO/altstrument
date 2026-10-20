@@ -166,7 +166,52 @@ const json = JSON.stringify(index).replace(/</g, '\\u003c');
       status.hidden = !filtering;
       status.textContent = filtering ? shown + ' of ' + total + ' devices match' : '';
       if (none) none.hidden = shown !== 0;
+      fitJumps();
     }
+    // Jump lists show two rows by default. Entries that would start a third row
+    // get data-clipped (hidden by global.css) and a "show all" toggle takes the
+    // last slot of the second row; it toggles the full list.
+    var jumpLists = Array.prototype.slice.call(document.querySelectorAll('[data-jump-list]'));
+    function fitJumps() {
+      jumpLists.forEach(function (ul) {
+        var more = ul.querySelector('[data-jump-more]');
+        if (!more) return;
+        var btn = more.querySelector('button');
+        ul.appendChild(more); // fwSort appends entries, so keep the toggle last
+        var entries = Array.prototype.filter.call(ul.children, function (li) {
+          return li !== more && !li.hidden;
+        });
+        entries.forEach(function (li) { li.removeAttribute('data-clipped'); });
+        if (!ul.hasAttribute('data-collapsed')) { more.hidden = false; return; }
+        more.hidden = true;
+        if (ul.offsetParent === null || entries.length === 0) return;
+        var top0 = entries[0].offsetTop, top1 = null;
+        for (var i = 0; i < entries.length; i++) {
+          if (entries[i].offsetTop > top0) { top1 = entries[i].offsetTop; break; }
+        }
+        var over = top1 === null ? [] : entries.filter(function (li) { return li.offsetTop > top1; });
+        if (over.length === 0) return;
+        over.forEach(function (li) { li.setAttribute('data-clipped', ''); });
+        more.hidden = false;
+        var shown = entries.filter(function (li) { return !li.hasAttribute('data-clipped'); });
+        while (more.offsetTop > top1 && shown.length > 1) shown.pop().setAttribute('data-clipped', '');
+        btn.setAttribute('aria-label', 'Show all ' + entries.length);
+      });
+    }
+    jumpLists.forEach(function (ul) {
+      var more = ul.querySelector('[data-jump-more]');
+      if (!more) return;
+      var btn = more.querySelector('button');
+      btn.addEventListener('click', function () {
+        var open = ul.hasAttribute('data-collapsed');
+        if (open) ul.removeAttribute('data-collapsed');
+        else ul.setAttribute('data-collapsed', '');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? '← show less' : 'show all →';
+        btn.removeAttribute('aria-label');
+        fitJumps();
+      });
+    });
     var root = document.documentElement;
     group.value = root.getAttribute('data-grouping') === 'category' ? 'category' : 'manufacturer';
     sort.value = root.getAttribute('data-sorting') || 'popularity';
@@ -182,6 +227,7 @@ const json = JSON.stringify(index).replace(/</g, '\\u003c');
       var g = group.value === 'category' ? 'category' : 'manufacturer';
       root.setAttribute('data-grouping', g);
       remember('group', 'groupBy', g);
+      fitJumps();
     }
     function setSort() {
       var m = sort.value;
@@ -189,6 +235,7 @@ const json = JSON.stringify(index).replace(/</g, '\\u003c');
       root.setAttribute('data-sorting', m);
       window.fwSort(m);
       remember('sort', 'sortBy', m);
+      fitJumps();
     }
     form.hidden = false;
     form.addEventListener('submit', function (e) { e.preventDefault(); });
@@ -198,6 +245,8 @@ const json = JSON.stringify(index).replace(/</g, '\\u003c');
     sort.addEventListener('change', setSort);
     var m = /[?&]q=([^&]*)/.exec(location.search);
     if (m) { try { q.value = decodeURIComponent(m[1].replace(/\+/g, ' ')); } catch (e) {} apply(); }
+    fitJumps();
+    window.addEventListener('resize', fitJumps);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
