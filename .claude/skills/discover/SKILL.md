@@ -61,6 +61,14 @@ Dedupe once more by hand: grep `src/content` for the repository owner, the proje
 ## 4. Write the entries
 
 - Device first when it does not exist: `src/content/devices/<slug>.yaml` from the CONTRIBUTING device template. Slug is `manufacturer-device` in kebab-case. Fill `description` with two to four factual sentences, `platform` and `stock_firmware` when known, `links.manufacturer` and a community link or two.
+- Every new device gets an `image` whenever one can be sourced. The only exceptions are pseudo-devices that are not one product (the `*-tools` entries, `portmaster-compatible-handhelds`, `spin-fv-1`), which fall back to the manufacturer logo. Use the first source that works:
+  1. the manufacturer's product page (`license: manufacturer product image`, `credit` the manufacturer's display name);
+  2. the manufacturer's press kit (`manufacturer press kit`);
+  3. for discontinued gear, the manufacturer's own page archived on web.archive.org, with an `im_` Wayback URL as `original_url` (`manufacturer archive image`; see `akai-mpc1000.yaml`), or the manufacturer's heritage pages (`manufacturer heritage image`);
+  4. for open or DIY hardware, a photo in the project's official repository or site (`project photo, published in the official <name> repository`);
+  5. only after 1–4 fail, a Wikimedia Commons file with a free license, with `credit: "Photo: <author>, via Wikimedia Commons"` and the exact license from the File: page.
+
+  Never use a retailer, a review, a forum post or another catalog. Do not use a pre-production or concept render (a manufacturer's own product render is fine), a bare circuit board or a photo of a different model or revision. Download into a fresh empty directory under the scratchpad and open the file to confirm it shows the exact device, then write the alt text from what is visible. Save it as `public/images/devices/<slug>.webp`, no wider than 1200 px, with `cwebp -q 82` (adding `-resize 1200 0` when the source is wider). Read `width` and `height` from the final file with `sips -g pixelWidth -g pixelHeight`. Append the `image:` block at the end of the device file. If nothing acceptable exists, leave `image` out and say why in the report.
 - Then `src/content/firmwares/<device-slug>/<firmware-slug>.yaml` from the firmware template. Keep the field order of the template and of neighbouring files in the same directory.
 - Prose is yours. Never paste text from the README, release notes, forum posts or other catalogs. Plain factual sentences, no marketing language.
 - Tags: lowercase kebab-case words that neighbouring entries already use where possible (`grep -rh '^tags:' src/content/firmwares | sort | uniq -c | sort -rn | head -40`).
@@ -90,6 +98,7 @@ End with a short report:
 
 - Files written, each as a clickable path, one line each saying what the entry is and the evidence link for its version.
 - Updates to existing entries, with the file path and the version added.
+- For each new device, the image source used (and which tier from section 4), or why it has no image.
 - Rejected candidates with their one-line reasons.
 - Open questions the maintainer must settle, for example an unclear license, a device that might belong to an existing family, or a video whose first-party status is uncertain.
 - The validator's final summary line.
