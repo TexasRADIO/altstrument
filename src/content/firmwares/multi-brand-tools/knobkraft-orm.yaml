@@ -1,0 +1,46 @@
+device: multi-brand-tools
+name: KnobKraft Orm
+kind: tool
+summary: Cross-platform MIDI SysEx librarian that backs up, organises and sends patches for dozens of hardware synths, with per-synth support written as Python adaptations.
+description: >-
+  KnobKraft Orm reads patches from a connected synth over SysEx, keeps them in
+  a local library, and sends them back to the synth. It covers synths from Access,
+  Akai, Alesis, Behringer, Casio, Clavia, DSI and Sequential, Elektron, Kawai,
+  Korg, Moog, Novation, Oberheim, Roland, Waldorf and Yamaha, among others
+  (the Yamaha reface DX is listed as working in the project's support table), so
+  it is catalogued once here rather than per synth. Support for new synths is
+  added by writing an adaptation in Python. Windows, macOS and Linux
+  builds are provided.
+status: active
+authors:
+  - name: Christof
+    url: https://github.com/christofmuc
+source: https://github.com/christofmuc/KnobKraft-orm
+source_status: open
+license: AGPL-3.0-only
+license_notes: The LICENSE.md file holds the AGPL-3.0 text; no "or later" statement was found in the README.
+homepage: https://knobkraft.com/docs/
+distribution: download
+install_notes: >-
+  Download the installer or archive for your platform from the GitHub releases
+  page. The librarian only exchanges patch data over MIDI and does not change
+  the synth's operating system. Back up the synth before sending large batches
+  of patches.
+brick_risk: false
+tags: [librarian, editor, sysex, midi]
+versions:
+  - version: 2.10.2
+    date: 2026-09-15
+    url: https://github.com/christofmuc/KnobKraft-orm/releases/tag/2.10.2
+  - version: 2.10.1
+    date: 2026-09-09
+    url: https://github.com/christofmuc/KnobKraft-orm/releases/tag/2.10.1
+  - version: 2.10.0
+    date: 2026-09-04
+    url: https://github.com/christofmuc/KnobKraft-orm/releases/tag/2.10.0
+  - version: 2.9.0
+    date: 2026-04-19
+    url: https://github.com/christofmuc/KnobKraft-orm/releases/tag/2.9.0
+  - version: 2.8.4
+    date: 2026-02-17
+    url: https://github.com/christofmuc/KnobKraft-orm/releases/tag/2.8.4

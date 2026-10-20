@@ -1,0 +1,69 @@
+device: roland-sp-404-mkii
+name: DOOM OS MIDI Conductor
+summary: "Browser patcher for the SP-404MKII that builds DOOM OS 0.6.2-alpha plus a MIDI layer: pads and sequencer steps play external synths over DIN MIDI, 36 CTRL dials send CC, and dial moves can be recorded. Warning: it carries DOOM OS, whose license changed to restrictive terms."
+description: >-
+  Rights warning: this project is built on DOOM OS 0.6.2-alpha (build 3824), and
+  its patcher carries the DOOM OS changes. Upstream relicensed DOOM OS from MIT
+  to a custom license at that release; that license allows free use but does not
+  allow passing on the patch, the patcher or a patched file. This repository
+  keeps the earlier MIT text as LICENSE-DOOM-OS and licenses its own code MIT,
+  and the README says the project is not affiliated with the DOOM OS author.
+  On top of DOOM OS it adds a setup screen for assigning synths to pads, each on its own MIDI
+  channel, with pattern steps and piano-roll pitches sent out as notes. Six
+  banks of six CTRL dials send any CC, with built-in CC name lists for several
+  synths and the option to load your own, and SHIFT + VALUE records dial moves
+  into the pattern. It can route one synth's keys or dials to another, and a
+  keyboard can play and record the SP's pads. A GHOST synth mode and per-track
+  mute and solo CC mapping were added in the 0.6.x releases. The README calls it
+  experimental, tested on one unit only with Roland 5.52, and says it changes
+  some of Roland's own routines. It contains no Roland firmware.
+status: active
+authors:
+  - name: danielmcc123
+    url: https://github.com/danielmcc123
+source: https://github.com/danielmcc123/doom-os-midi-conductor
+source_status: patcher-only
+license: MIT
+license_notes: >-
+  The repository's LICENSE (MIT) covers this project's own code. The patcher
+  also carries the DOOM OS 0.6.2-alpha changes, which upstream licenses under
+  its custom DOOM OS License (all rights reserved; free to use, but passing on
+  or changing the patch, patcher or patched files needs written permission).
+  NOTICE.md and LICENSE-DOOM-OS in this repository describe DOOM OS as MIT,
+  which was true of DOOM OS up to 0.6.1. The patcher script is adapted from the
+  DOOM OS patcher. No Roland firmware is included; the patcher carries only the
+  bytes that differ from Roland's file.
+homepage: https://danielmcc123.github.io/doom-os-midi-conductor/
+distribution: patch-your-own
+requires_stock: "5.52"
+install_notes: >-
+  Download Roland's 5.52 system update and drop its SP404MKII_APP1.bin onto the
+  browser patcher, which accepts only the stock file and runs locally. Keep the
+  name SP404MKII_APP1.bin and install it with Roland's original
+  SP404MKII_APP0.bin, the same way as DOOM OS. Each release folder has
+  checksums for the stock and patched images. Installing Roland's original
+  files restores stock. The README says to keep them and warns that modified
+  firmware can brick the unit.
+brick_risk: true
+tags: [midi, sequencer, performance, os]
+versions:
+  - version: 0.6.4-alpha
+    date: 2026-10-20
+    url: https://github.com/danielmcc123/doom-os-midi-conductor/commit/494d0f6b972472c66d3a00f123b9c487aa899f0d
+    notes: Adds per-track MUTE and SOLO in the CC map to the SP, GHOST LEVEL on CC 7, and muted pads no longer send pattern notes.
+  - version: 0.6.3-alpha
+    date: 2026-10-18
+    url: https://github.com/danielmcc123/doom-os-midi-conductor/commit/57c1ee4b155b8986a876392f7d09831af5d2aeb1
+    notes: Adds GHOST programs with save, load and naming, a VOICES setting, and finer pitch EG, XMOD and VCO PITCH.
+  - version: 0.6.2-alpha
+    date: 2026-10-17
+    url: https://github.com/danielmcc123/doom-os-midi-conductor/commit/9adc8e4f9fa504616aa099b8188826eff185b468
+    notes: Notes routed to the SP play the device assigned to the current pad; adds a Bass Station II CC list.
+  - version: 0.6.1-alpha
+    date: 2026-10-15
+    url: https://github.com/danielmcc123/doom-os-midi-conductor/commit/1eded77f961f75d133db58f82c652eb4571db95c
+    notes: Fixes a freeze when recording notes from a MIDI keyboard.
+  - version: 0.6.0-alpha
+    date: 2026-10-15
+    url: https://github.com/danielmcc123/doom-os-midi-conductor/commit/9aa4498dcd9d12b3199f15ffb81befc37816d838
+    notes: Adds a CC map to the SP mixer and a keyboard that plays and records SP pads.

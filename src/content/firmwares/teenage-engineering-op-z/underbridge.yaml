@@ -1,0 +1,39 @@
+device: teenage-engineering-op-z
+name: Underbridge
+kind: tool
+summary: Python desktop app that records an OP-Z pattern or whole project over USB, muting tracks over MIDI, and saves each track as a separate audio file for use in a DAW.
+description: >-
+  The OP-Z is connected over USB as both audio and MIDI. Underbridge steps
+  through the tracks, mutes the others over MIDI and records the USB audio, so
+  each track ends up in its own file in a project folder. The user enters the
+  tempo, the length of the longest track in bars and an optional tail for
+  reverb. Single-pattern and multi-pattern project modes are available. Builds
+  for Windows, macOS and Linux are attached to the releases.
+status: maintained
+authors:
+  - name: Thomas Herrmann
+    url: https://github.com/BKLronin
+source: https://github.com/BKLronin/underbridge
+source_status: open
+license: GPL-3.0-only
+license_notes: The LICENSE file holds the GPL-3.0 text; no "or later" wording was found in the README or the main source file.
+homepage: https://app.raise-uav.com
+distribution: download
+install_notes: >-
+  Run a packaged build from the release page, or run underbridge.py with
+  Python, mido, python-rtmidi and pyaudio installed. Select the OP-Z as the
+  system audio input. If the recording has buzzing, the README suggests turning
+  off USB charging on the device, and MIDI IN must be enabled on the OP-Z for
+  the muting to work.
+tags: [utility, midi, usb-audio, usb-midi, python]
+versions:
+  - version: 1.2.0
+    date: 2025-07-24
+    url: https://github.com/BKLronin/underbridge/releases/tag/1.2.0
+    notes: Reworked interface, a fixed number of tracks, and stability changes.
+  - version: 1.1.3
+    date: 2022-04-29
+    url: https://github.com/BKLronin/underbridge/releases/tag/1.1.3
+  - version: v1.1.1
+    date: 2022-04-15
+    url: https://github.com/BKLronin/underbridge/releases/tag/v1.1.1

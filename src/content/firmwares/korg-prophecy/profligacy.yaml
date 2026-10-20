@@ -1,0 +1,51 @@
+device: korg-prophecy
+name: Profligacy
+kind: tool
+summary: Low-level emulator of the Korg Prophecy's chips that runs the original firmware from ROM dumps you supply, with a panel UI, desktop builds for macOS and Windows and a DSP JIT.
+description: >-
+  The emulator models the NEC V55PI, Hitachi H8/3003 and three TI TMS57002
+  chips and runs the Prophecy's original firmware from the two ROM images
+  of the user's own unit. The author compared the chip-to-chip traffic and
+  DSP outputs with a real Prophecy, and added a dynamic recompiler to the DSP
+  core to cut CPU use. The post-DAC analog stage is not modelled. A
+  parameter-slider editor sits alongside the front panel. Releases are
+  alpha builds for macOS on ARM and an experimental Windows x64 build. The
+  repository does not include the ROMs.
+status: active
+authors:
+  - name: Joe Landers
+    url: https://github.com/joelanders
+source: https://github.com/joelanders/profligacy
+source_status: open
+license: AGPL-3.0-only
+license_notes: >-
+  The README says Profligacy's own source is under the GNU Affero General
+  Public License, version 3 only; dependencies are listed in
+  THIRD_PARTY_NOTICES.md. Korg's ROM dumps are not included.
+homepage: https://github.com/joelanders/profligacy
+distribution: download
+install_notes: >-
+  Bring your own ROM dumps. On first launch a folder picker asks for a
+  directory with korgprop/ic12_v17.bin and korgprop/ic22_v17.bin, or a
+  korgprop.zip holding both. Nothing is flashed to hardware.
+tags: [emulator, research, synth-engine]
+video:
+  url: https://www.youtube.com/watch?v=TnSvMZZmUsw
+  title: Korg Prophecy emulation playing a couple patches from Prodigy's Fat of the Land
+  credit: Joe Landers
+  first_party: true
+  found_via: https://github.com/joelanders/profligacy#readme
+versions:
+  - version: v1.0.0-alpha.8
+    date: 2026-09-11
+    url: https://github.com/joelanders/profligacy/releases/tag/v1.0.0-alpha.8
+    notes: Pre-release; macOS arm64 and experimental Windows x64 builds.
+  - version: v1.0.0-alpha.7
+    date: 2026-08-26
+    url: https://github.com/joelanders/profligacy/releases/tag/v1.0.0-alpha.7
+  - version: v1.0.0-alpha.6
+    date: 2026-08-18
+    url: https://github.com/joelanders/profligacy/releases/tag/v1.0.0-alpha.6
+  - version: v1.0.0-alpha.5
+    date: 2026-08-17
+    url: https://github.com/joelanders/profligacy/releases/tag/v1.0.0-alpha.5

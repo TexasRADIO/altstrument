@@ -1,0 +1,32 @@
+device: polyend-play
+name: play-files
+kind: tool
+summary: Rust library that parses Polyend Play project folders from the microSD card into Rust structs, covering projects, patterns, tracks and steps. Read-only; writing is not implemented.
+description: >-
+  Reads a Play project directory and returns its settings, patterns, tracks and
+  steps as typed structures. The README lists what is still missing: the
+  samples metadata, many unknown settings, proper enums for some values and
+  writing files back. The repository includes example projects, with notes on
+  what each one contains, for testing. It was published to crates.io as version 0.1.0 and
+  has not changed since March 2023.
+status: dormant
+authors:
+  - name: Alex Charlton
+    url: https://github.com/AlexCharlton
+source: https://github.com/AlexCharlton/play-files
+source_status: open
+license: MIT
+license_notes: >-
+  Cargo.toml declares MIT, but the repository has no LICENSE file and the GitHub
+  licence detector reports none.
+homepage: https://crates.io/crates/play-files
+distribution: source-only
+install_notes: >-
+  Add play-files = "0.1" to Cargo.toml or run cargo add play-files. Library
+  only; there is no command line tool.
+tags: [research, converter, utility]
+versions:
+  - version: 0.1.0
+    date: 2023-03-05
+    url: https://crates.io/crates/play-files/0.1.0
+    notes: Only published version; the last commit is from the same day.

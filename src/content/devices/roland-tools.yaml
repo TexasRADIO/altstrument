@@ -1,0 +1,16 @@
+name: Roland cross-device tools
+manufacturer: Roland
+category: tools
+tagline: File-format libraries that work across several Roland instruments
+description: >-
+  This entry groups host-side software that reads or writes the project and sound
+  files of more than one Roland instrument, rather than a single device. It
+  currently lists a JavaScript library for the file formats shared by the MC-707,
+  MC-101, SH-4d, Verselab MV-1 and Fantom, which also covers ZEN-Core sound files.
+links:
+  manufacturer: https://www.roland.com/global/
+notes: >-
+  No replacement firmware is listed here. ZEN-Core is Roland's sound engine
+  rather than one product, so tools for its file formats sit on this page. Tools
+  for a single Roland instrument are on that instrument's page.
+related: [roland-mc-101]

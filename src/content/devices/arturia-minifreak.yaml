@@ -1,0 +1,16 @@
+name: MiniFreak
+manufacturer: Arturia
+category: synth
+tagline: Six-voice hybrid synth with two digital engines and a sampler mode
+description: >-
+  The MiniFreak is a six-voice hybrid synthesizer from Arturia with two digital sound engines, per-voice
+  resonant filters, a sampler oscillator mode, a 64-step sequencer and three effect slots. User
+  samples and wavetables are handled through the MiniFreak V plug-in, which shares presets with the
+  hardware.
+links:
+  manufacturer: https://www.arturia.com/products/hardware-synths/minifreak/overview
+notes: >-
+  No replacement firmware has been found. The entry here is a browser tool that prepares user samples
+  for Arturia's own sample sync. Freakout, catalogued under the MicroFreak, also reads and writes MiniFreak
+  patches.
+related: [arturia-microfreak]

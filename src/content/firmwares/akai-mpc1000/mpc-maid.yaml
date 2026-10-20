@@ -1,0 +1,35 @@
+device: akai-mpc1000
+name: MPC Maid
+kind: tool
+summary: Java editor for MPC1000, MPC2500 and MPC500 .PGM programs, with drag-and-drop pad assignment, multisample and batch program creation, and a beat-detecting loop slicer that exports WAV slices, a program and a MIDI groove.
+description: >-
+  Opens one window per program and switches between the MPC500's 12-pad and the
+  MPC1000's 16-pad layouts, adjusting the number of filters and sliders to
+  match. Samples dropped on pads are assigned one per pad or one per layer, and
+  programs are exported together with their sample files. Other features are
+  multisample creation from files named with note names, a batch mode that
+  builds listing programs from nested sample folders, copying one pad's settings
+  to all pads, and the slicer. The file format work builds on published
+  MPC1000 program documentation. The repository holds the Java source, a user
+  manual and a prebuilt jar; the last commit is from 2016.
+status: dormant
+authors:
+  - name: Cyrille Martraire
+    url: https://github.com/cyriux
+source: https://github.com/cyriux/mpcmaid
+source_status: open
+license: LGPL-2.1-only
+license_notes: >-
+  The LICENSE file is the GNU LGPL version 2.1 text and the README says "LGPL
+  license"; no "or later" is stated, so this is recorded as version 2.1 only.
+distribution: download
+install_notes: >-
+  Needs Java. Download the jar from the repository and double-click it; the
+  README links a PDF user manual. MPC500 support comes from the program layout
+  setting.
+tags: [editor, sampler, converter, midi]
+versions:
+  - version: master @ bd1409a
+    date: 2016-06-20
+    url: https://github.com/cyriux/mpcmaid/commit/bd1409a
+    notes: No tagged releases; this is the latest commit.

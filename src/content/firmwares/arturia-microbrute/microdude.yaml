@@ -1,0 +1,37 @@
+device: arturia-microbrute
+name: MicroDude
+kind: tool
+summary: Linux GTK editor and Python library for the MicroBrute's settings and sequences over SysEx, covering everything MicroBrute Connection does except firmware upload and the factory pattern reset. The author discourages new use in favour of Elektroid.
+description: >-
+  A Python package with a GTK window and a Connector class that gets and sets MicroBrute parameters
+  and sequences, with the option of saving changes permanently through SysEx or applying them as
+  non-persistent MIDI controllers. It also calibrates the pitch and modulation wheels and has French and
+  Spanish translations. The README says the project is complete but no longer supported as of 2023 and
+  recommends Elektroid, and the repository is archived.
+status: archived
+authors:
+  - name: David García Goñi
+    url: https://github.com/dagargo
+source: https://github.com/dagargo/microdude
+source_status: open
+license: GPL-3.0-or-later
+license_notes: The LICENSE file holds the GPL 3 text and the source file headers grant it "either version 3 of the License, or (at your option) any later version".
+distribution: source-only
+install_notes: >-
+  Needs Python 3 with mido, python-rtmidi, setproctitle and gettext; install with make and sudo make
+  install as described in the README. It talks to the stock firmware and does not flash anything.
+brick_risk: false
+tags: [editor, sysex, midi, python]
+versions:
+  - version: "2.3"
+    date: 2022-12-07
+    url: https://github.com/dagargo/microdude/tree/2.3
+    notes: Git tag; no GitHub release page. A later commit in September 2025 added the end-of-life notice.
+  - version: "2.2"
+    date: 2020-12-05
+    url: https://github.com/dagargo/microdude/tree/2.2
+    notes: Git tag; no GitHub release page.
+  - version: "2.1"
+    date: 2020-11-02
+    url: https://github.com/dagargo/microdude/tree/2.1
+    notes: Git tag; no GitHub release page.

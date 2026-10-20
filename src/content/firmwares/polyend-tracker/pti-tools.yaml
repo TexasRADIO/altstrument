@@ -1,0 +1,38 @@
+device: polyend-tracker
+name: Stich & Slice (pti-tools)
+kind: tool
+summary: Browser app that concatenates audio files into one beat-sliced Tracker instrument and exports a .pti file with slice markers, or a WAV with cue points.
+description: >-
+  Load several samples, optionally layer more than one sample per slice, trim
+  silence from the start and end of each, set per-slice volume, and export an
+  instrument file the Tracker can load. The WAV export carries cue points for
+  other samplers. Written in Vue 3 and TypeScript and hosted on GitHub Pages;
+  the README says it is not associated with Polyend. The last commit is from
+  January 2025.
+status: dormant
+authors:
+  - name: Jaap Roes
+    url: https://github.com/jaap3
+source: https://github.com/jaap3/pti-tools
+source_status: open
+license: ISC
+license_notes: >-
+  The LICENSE file is the ISC license (Jaap Roes, 2022).
+homepage: https://jaap3.github.io/pti-tools/
+distribution: browser-installer
+install_notes: >-
+  Open the project page in a browser, load samples and export the .pti file,
+  then copy it to the Tracker's SD card. Use at your own risk, as the README
+  states. To run it locally, use the Docker Compose setup in the README.
+tags: [web, converter, samples, utility]
+image:
+  url: https://raw.githubusercontent.com/jaap3/pti-tools/main/public/images/screenshot.png
+  alt: Stich & Slice showing three slices with waveforms, trim and gain controls and a file drop area
+  credit: Jaap Roes
+  source_url: https://github.com/jaap3/pti-tools
+  first_party: true
+versions:
+  - version: main @ 16bceef
+    date: 2025-01-06
+    url: https://github.com/jaap3/pti-tools/commit/16bceefe8b80ad0ac5abc33da9e5e19d8a2f9580
+    notes: No tagged releases; this is the latest commit.

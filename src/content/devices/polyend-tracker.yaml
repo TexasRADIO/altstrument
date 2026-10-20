@@ -13,8 +13,10 @@ stock_firmware: 1.9.2
 links:
   manufacturer: https://polyend.com/tracker/
 notes: >-
-  Official firmware 1.9.2 dates from October 2025. The one third-party tool
-  here targets the older 1.5.0 release and has not been updated since 2024.
+  Official firmware 1.9.2 dates from October 2025. Some of the third-party
+  firmware work here targets older releases, such as RETracker on 1.5.0. Polyend
+  also publishes an open library for the instrument, pattern and project files,
+  and a community browser tool builds sliced instruments.
 image:
   src: /images/devices/polyend-tracker.png
   style: photo

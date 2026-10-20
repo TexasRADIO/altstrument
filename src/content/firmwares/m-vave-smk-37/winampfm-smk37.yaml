@@ -1,0 +1,43 @@
+device: m-vave-smk-37
+name: winampFM SMK-37
+summary: >-
+  hericdk's Winamp 2.x-style SLOOP fork on the SMK-37: the pads show the selected track's loop in its colour,
+  and the knob and fader banks switch between pad sounds, level, filter, reverb and delay.
+description: >-
+  Lives on the smk37 branch of the genkigenki/winampFM fork and is offered upstream as hericdk/winampFM pull
+  request 1, which is still open. It is winampFM 0.1, built on SLOOP: a player window, a sound playlist,
+  effect sliders and a visualizer. The FM-1 build is unchanged and the SMK-37 code sits behind a BOARD_SMK37
+  switch. The project's 3D simulator can also be built for the SMK-37. Releases carry one package each for the
+  Pro, Elite and MKE-P37 names.
+status: active
+authors:
+- name: genkigenki
+  url: https://github.com/genkigenki
+- name: hericdk (winampFM)
+  url: https://github.com/hericdk
+source: https://github.com/genkigenki/winampFM/tree/smk37
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Same terms as winampFM; firmware/LICENSING.md, inherited from Felucca, keeps the icon atlas and panel image
+  under separate terms and carries a section 7 additional permission.
+homepage: https://genkigenki.github.io/smk37/
+distribution: browser-installer
+install_notes: >-
+  Installs from the browser at genkigenki.github.io/smk37, or with firmware/tools/fm1_install.py and a package
+  from the release or your own build (BOARD=smk37, with MODEL=elite or MODEL=mke). Back up the whole flash
+  first as SMK37.md advises, and have M-VAVE's package for your model and its updater ready. The first start
+  clears the stock settings and other firmware's data in the shared data area. Unofficial; install at your
+  own risk.
+brick_risk: true
+tags: [ui, looper, fx, performance]
+image:
+  url: https://genkigenki.github.io/smk37/assets/shot-winamp.png
+  alt: "winampFM main window and sound playlist on the SMK-37 display"
+  credit: genkigenki
+  source_url: https://genkigenki.github.io/smk37/
+  first_party: true
+versions:
+- version: smk37-0.1
+  date: 2026-10-13
+  url: https://github.com/genkigenki/winampFM/releases/tag/smk37-v0.1

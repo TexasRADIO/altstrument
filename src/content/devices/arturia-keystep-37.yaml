@@ -1,0 +1,18 @@
+name: KeyStep 37
+manufacturer: Arturia
+category: controller
+tagline: 37-key controller keyboard with a step sequencer and arpeggiator
+description: >-
+  The KeyStep 37 is a keyboard controller from Arturia with thirty-seven slim keys, a step sequencer
+  and an arpeggiator. It connects over USB and MIDI and has CV and gate connections for analog gear.
+  The KeyStep 37 MK2 is a separate, newer product.
+platform: STM32 (ARM Cortex-M)
+stock_firmware: 1.1.6.579
+links:
+  manufacturer: https://www.arturia.com/support/downloads-manuals/product/keystep-37
+notes: >-
+  The entries here are two independent research projects on stock firmware 1.1.6.579 (the original
+  KeyStep 37, not the MK2). Neither distributes Arturia's firmware; the tools work on a copy you supply.
+  One includes the source of an additional generator mode that was run on a device. Flashing is at your
+  own risk.
+related: [arturia-keystep-pro]

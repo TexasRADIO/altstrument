@@ -1,0 +1,38 @@
+device: roland-mc-101
+name: mctools_sidechain
+kind: tool
+summary: Experimental Python scripts that imitate a sidechain effect on the MC-707, MC-101 and MV-1 by exchanging SysEx messages with the unit over USB.
+description: >-
+  The repository holds the scripts shown in the author's video. They include a
+  SysEx communication layer that identifies the connected model, helpers for
+  reading and editing sequencer steps and clips, and a script that finds
+  trigger notes in a clip and uses them to shape another track so it ducks
+  around them. The README calls it experimental, and the author's MIDI
+  scripts choose between mido and ALSA backends.
+status: active
+authors:
+  - name: Ada Locriana
+    url: https://github.com/Locriana
+source: https://github.com/Locriana/mctools_sidechain
+source_status: open
+license: MIT
+homepage: https://www.youtube.com/watch?v=U5ZBAstmlmE
+distribution: source-only
+install_notes: >-
+  Python scripts with no packaging; run the entry-point script in the
+  repository after connecting the unit over USB. The README has no setup
+  steps, so the video and the source are the documentation. It edits
+  sequencer data on the unit, so keep a backup of your project.
+brick_risk: false
+tags: [sysex, midi, fx, python, research]
+video:
+  url: https://www.youtube.com/watch?v=U5ZBAstmlmE
+  title: The Sidechain Effect for Roland MC-101, MC-707, & MV-1 (or the closest we can get to it)
+  credit: Locriana
+  first_party: true
+  found_via: https://github.com/Locriana/mctools_sidechain#readme
+versions:
+  - version: main @ a9387a4
+    date: 2026-08-16
+    url: https://github.com/Locriana/mctools_sidechain/commit/a9387a45b95c71185099e0a508ffd9ebdddd856c
+    notes: No tagged releases; this is the latest commit.

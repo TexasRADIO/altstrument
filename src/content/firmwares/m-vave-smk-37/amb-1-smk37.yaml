@@ -1,0 +1,42 @@
+device: m-vave-smk-37
+name: AMB-1 SMK-37
+summary: >-
+  Charles Vestal's generative ambient machine AMB-1 on the SMK-37: the 37 keys set the scale, the 16 pads
+  ring bells, and fader banks control levels, space and the garden.
+description: >-
+  Lives on the smk37 branch of the genkigenki/fm1-amb fork and is offered upstream as
+  charlesvestal/fm1-amb pull request 2, which is still open. The port is AMB-1 1.1: loops of different
+  lengths drift against each other while a bass and quiet percussion play. The FM-1 build is unchanged and
+  the SMK-37 code sits behind a BOARD_SMK37 switch. The pitch wheel bends and the mod wheel adds vibrato.
+  Releases carry one package each for the Pro, Elite and MKE-P37 names.
+status: active
+authors:
+- name: genkigenki
+  url: https://github.com/genkigenki
+- name: Charles Vestal (AMB-1)
+  url: https://github.com/charlesvestal
+source: https://github.com/genkigenki/fm1-amb/tree/smk37
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Same terms as AMB-1 and the Felucca platform layer it builds on; LICENSING.md lists the fonts (OFL 1.1) and
+  the JieLi SDK files (Apache-2.0) that are read from your SDK checkout at build time.
+homepage: https://genkigenki.github.io/smk37/
+distribution: browser-installer
+install_notes: >-
+  Installs from the browser at genkigenki.github.io/smk37, or with tools/fm1_install.py and a package from the
+  release or your own build (BOARD=smk37, with MODEL=elite or MODEL=mke). Have M-VAVE's package for your model
+  and its updater ready before installing. The first start clears the stock settings and other firmware's
+  data in the shared data area. Unofficial; install at your own risk.
+brick_risk: true
+tags: [synth-engine, performance]
+image:
+  url: https://genkigenki.github.io/smk37/assets/shot-amb.png
+  alt: "AMB-1 screen on the SMK-37 display"
+  credit: genkigenki
+  source_url: https://genkigenki.github.io/smk37/
+  first_party: true
+versions:
+- version: smk37-1.1
+  date: 2026-10-13
+  url: https://github.com/genkigenki/fm1-amb/releases/tag/smk37-v1.1

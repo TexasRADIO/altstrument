@@ -1,0 +1,39 @@
+device: roland-sp-404-mkii
+name: open404
+kind: tool
+summary: Go library, command-line tool and local web dashboard that control an SP-404MKII over its USB serial protocol, as reverse-engineered by the author. Imports and exports samples, backs up projects and extracts patterns as MIDI files.
+description: >-
+  Talks to the unit over its USB CDC-ACM serial port and covers pad auditioning,
+  pad parameters (volume, pan, BPM, gate, loop, envelope, pitch and others),
+  tempo, banks and patterns. WAV files are converted to and from the unit's own
+  sample format, a whole project of 160 pads and 160 patterns can be backed up and
+  restored, and pattern files can be exported or imported as standard MIDI files.
+  The open404d daemon serves a small web controller on localhost. The protocol is
+  written up in docs/PROTOCOL.md with Kaitai Struct definitions. The README says it
+  was tested on firmware 5.51, and the project warns that it writes to the unit's
+  storage directly.
+status: active
+authors:
+  - name: Joe Amorosa
+    url: https://github.com/iare-digital
+source: https://github.com/iare-digital/open404
+source_status: open
+license: MIT
+homepage: https://iare-digital.github.io/open404/
+distribution: download
+requires_stock: "5.51"
+install_notes: >-
+  Release assets are archives for Linux, macOS and Windows plus Debian packages; the README also
+  describes a Homebrew formula, a Nix flake, a Docker image and go install for the
+  sp404 and open404d programs. On Linux a bundled udev rule gives non-root access
+  to the serial port. Back up projects and the SD card before importing samples or
+  changing parameters.
+tags: [librarian, sampler, midi, converter, research]
+versions:
+  - version: v0.1.1
+    date: 2026-09-09
+    url: https://github.com/iare-digital/open404/releases/tag/v0.1.1
+  - version: v0.1.0
+    date: 2026-09-09
+    url: https://github.com/iare-digital/open404/releases/tag/v0.1.0
+    notes: First public release.

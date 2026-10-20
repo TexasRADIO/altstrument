@@ -17,11 +17,14 @@ notes: >-
   MPC2000 MODS builds a new OS file from your original and leaves the
   original untouched. The author recommends running the built-in memory test
   on the stock OS first and warns against installing the Classic OS on the
-  F-ROM expansion.
+  F-ROM expansion. The other entries are tools: emulators that run on a
+  computer and libraries and scripts for the Akai disk format and the .PGM
+  and .SND files.
 related:
   - akai-mpc-live
   - akai-mpc500
   - akai-mpc1000
+  - akai-mpc3000
   - akai-force
 image:
   src: /images/devices/akai-mpc2000.webp

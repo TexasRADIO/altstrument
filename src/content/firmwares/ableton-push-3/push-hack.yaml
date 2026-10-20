@@ -1,0 +1,52 @@
+device: ableton-push-3
+name: Push Hack
+summary: >-
+  Unofficial framework that adds third-party apps to Push 3 Standalone on top of the stock software, with a web
+  manager, a screen and MIDI takeover hook, and an on-device catalog; a self-described prototype.
+description: >-
+  Push Hack installs three base modules on the unit over SSH: Push Manager, a web interface served from the Push
+  that also handles file access, a MIDI monitor and an app switcher; Push Display, a preload hook in Push's own
+  process that lets other programs draw on the screen and take over pad and button MIDI; and Push Catalog, an
+  on-device installer for community modules. Because it cannot reach inside Live, it creates virtual MIDI and audio
+  ports for apps to talk to Live, and uses Live remote scripts to load presets. Apps can take over the whole screen,
+  pads and buttons, and are opened from Push Hack Home with Shift + Help. The author calls it a prototype that is not
+  meant for production use, says it was inspired by Move Anything and Schwung, and discloses that most of the code
+  was written with coding agents under human supervision.
+status: active
+authors:
+  - name: Federico P.
+    url: https://github.com/federico-pepe
+source: https://github.com/federico-pepe/ableton-push-hack
+source_status: open
+license: MIT
+homepage: https://github.com/federico-pepe/ableton-push-hack#readme
+distribution: download
+requires_stock: Push software 2.4.3 stable or 2.4.5b8 (tested versions)
+install_notes: >-
+  Pair the computer at push.local/pair, download and unzip the repository, then run scripts/install.sh from a
+  terminal (Git Bash on Windows) or use the Push Hack Installer app. The script creates an SSH key if needed, which
+  must be added at push.local/ssh and confirmed on the Push. The unit reboots at the end. Back up sets and samples
+  first, know Ableton's recovery methods for Push 3 Standalone, and run scripts/uninstall.sh before every Push
+  software update and install again afterwards; the project warns that updating with the hack present can leave
+  the unit on a black screen.
+brick_risk: false
+tags: [platform, sdk, ui, midi, performance]
+video:
+  url: https://www.youtube.com/watch?v=fsYWSZ-MSDk
+  title: "Hacking Ableton Push 3: Push Manager, full MIDI and LEDs control, Display Takeover and much more..."
+  credit: Frequenze Academy
+  first_party: true
+  found_via: https://github.com/federico-pepe/ableton-push-hack#readme
+versions:
+  - version: v0.1.14-alpha
+    date: 2026-10-19
+    url: https://github.com/federico-pepe/ableton-push-hack/tree/v0.1.14-alpha
+    notes: Git tag; no GitHub release page.
+  - version: v0.1.13-alpha
+    date: 2026-10-19
+    url: https://github.com/federico-pepe/ableton-push-hack/tree/v0.1.13-alpha
+    notes: Git tag; no GitHub release page.
+  - version: v0.1.12-alpha
+    date: 2026-10-04
+    url: https://github.com/federico-pepe/ableton-push-hack/tree/v0.1.12-alpha
+    notes: Git tag; no GitHub release page.

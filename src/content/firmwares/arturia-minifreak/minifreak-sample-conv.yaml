@@ -1,0 +1,32 @@
+device: arturia-minifreak
+name: MiniFreak sample conversion
+kind: tool
+summary: Browser tool that converts WAV, AIFF and MP3 files into the .raw12b format so user samples appear in the MiniFreak's Factory list after Arturia's sample sync.
+description: >-
+  Dropped audio files are converted in the browser, with optional fade and normalise steps and a
+  duration setting, and downloaded as .raw12b files. They are copied into the MiniFreak V Factory sample
+  folder on the computer, and the standalone MiniFreak V application then offers to synchronize them to the
+  hardware. The page credits an earlier Reddit post for the original code and method. It is not an official
+  Arturia tool.
+status: dormant
+authors:
+  - name: Matti Ziemła
+    url: https://github.com/mtizim
+source: https://github.com/mtizim/minifreak_sample_conv
+source_status: open
+license: unspecified
+license_notes: The repository has no license file or license statement.
+homepage: https://mtizim.github.io/minifreak_sample_conv/
+distribution: browser-installer
+install_notes: >-
+  Convert files on the web page, copy them to the Factory sample folder of MiniFreak V (a path under
+  /Library/Arturia on macOS or C:\ProgramData\Arturia on Windows), then run the standalone MiniFreak V
+  app, not the plug-in, and accept the sync prompt. The author advises backing up first and adding samples in
+  small batches.
+brick_risk: false
+tags: [samples, converter, web]
+versions:
+  - version: master @ 7bca5a4
+    date: 2025-06-11
+    url: https://github.com/mtizim/minifreak_sample_conv/commit/7bca5a487ca62aced5001ef251f62eb875d5ff8f
+    notes: No tagged releases; this is the latest commit.

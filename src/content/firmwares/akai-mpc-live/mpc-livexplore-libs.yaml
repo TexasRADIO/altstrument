@@ -1,0 +1,38 @@
+device: akai-mpc-live
+name: MPCLiveXplore-libs
+summary: "LD_PRELOAD libraries for SSH-enabled MPCs and the Force: a MIDI mapper with controller plugins, a control-surface substitution library, and a dump tool for the traffic between the app and the hardware controller."
+description: >-
+  A companion to the MPC-LiveXplore project, aimed at units that already run
+  one of its SSH images. TKGL_MIDIMAPPER loads per-controller plugins written
+  in C that remap incoming MIDI to the buttons the MIDI-learn screen cannot
+  reach, such as Play Start and Stop on the MPC or Launch and Matrix on the
+  Force. The IamForce2 launcher is built on it, with plugins for the APC Key 25
+  Mk2, APC Mini Mk2, Launchpad Mini Mk3, Launchpad X and the author's Kikpad.
+  TKGL_ANYCTRL lets another MIDI controller stand in for the built-in control
+  surface, and TKGL_CTRLDUMP logs what the MPC application exchanges with its
+  hardware controller. Older libraries are kept in a deprecated folder. The
+  repository holds the C sources, compiled libraries and the plugins, with a
+  wiki; the last commit is 2023-11-12.
+status: dormant
+authors:
+  - name: TheKikGen (Franck Touanen)
+    url: https://github.com/TheKikGen
+source: https://github.com/TheKikGen/MPCLiveXplore-libs
+source_status: open
+license: CC0-1.0
+homepage: https://github.com/TheKikGen/MPCLiveXplore-libs/wiki
+distribution: download
+requires_stock: An MPC-LiveXplore SSH image
+install_notes: >-
+  Needs an MPC or Force running one of the SSH-enabled images from
+  MPC-LiveXplore. The libraries are loaded with LD_PRELOAD from an SD card or
+  USB stick, either by hand over SSH or from a bootstrap module; the README
+  and wiki give the command lines. Building plugins needs an ARM
+  cross-compiler and a glibc matching the one on the device (2.30 per the
+  README).
+tags: [research, midi, loader]
+versions:
+  - version: main @ df1be83
+    date: 2023-11-12
+    url: https://github.com/TheKikGen/MPCLiveXplore-libs/commit/df1be83ec209a1e8be63759bb05fa217b4f0d0ae
+    notes: No tagged releases; this is the latest commit.

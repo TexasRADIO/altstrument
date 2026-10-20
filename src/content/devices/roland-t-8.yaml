@@ -1,0 +1,15 @@
+name: T-8
+manufacturer: Roland
+category: drum-machine
+tagline: AIRA Compact beat machine with a rhythm and a bass sequencer
+description: >-
+  The T-8 is a compact beat machine in Roland's AIRA Compact range. It has a
+  rhythm part with step sequencing, per-step probability and velocity, and a
+  bass part with accents, slides and ties. Its patterns can be backed up to a
+  computer and restored in USB disk mode, as .PRM files.
+links:
+  manufacturer: https://www.roland.com/global/products/t-8/
+notes: >-
+  No replacement firmware exists. The entry here is a browser-based editor for
+  the T-8's pattern backup files.
+related: [roland-j-6, roland-s-1]

@@ -1,0 +1,31 @@
+device: teenage-engineering-op-xy
+name: op-xy-vibing
+kind: tool
+summary: Python conductor that plays a JSON loop on the OP-XY over USB MIDI, with a web UI and a WebSocket API so a person or an AI assistant can edit the loop while it plays. Also exports preset folders.
+description: >-
+  Loops are written in a JSON format (opxyloop-1.0) and played to the OP-XY as
+  MIDI by a Python server that can follow the device's clock or run its own.
+  A browser interface and a WebSocket API let the loop be changed during
+  playback, and the repository includes sample loops and a MIDI panic command.
+  A second set of scripts builds copy-ready .preset folders and project
+  mappings for the device's storage. The author says the preset export may
+  move to a separate repository.
+status: active
+authors:
+  - name: Kevin Morrill
+    url: https://github.com/kmorrill
+source: https://github.com/kmorrill/op-xy-vibing
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Needs Python 3, the portmidi library and ffmpeg for the preset export; macOS
+  is the primary tested platform. Connect the OP-XY over USB-C, install the
+  Python requirements in a virtual environment, then start the conductor with
+  the Makefile targets.
+tags: [sequencer, midi, scripting, web, python]
+versions:
+  - version: main @ 62a015a
+    date: 2026-06-14
+    url: https://github.com/kmorrill/op-xy-vibing/commit/62a015a
+    notes: No release pages; this is the latest commit. The only tag is ckpt-m3a.

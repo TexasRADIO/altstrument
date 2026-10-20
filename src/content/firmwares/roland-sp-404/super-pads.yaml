@@ -1,0 +1,51 @@
+device: roland-sp-404
+name: Super Pads
+kind: tool
+summary: Desktop app for managing the samples and patterns on an SP-404SX SD card. It edits pad settings, moves samples between pads and converts patterns to and from MIDI.
+description: >-
+  Super Pads opens the root folder of the sampler's SD card and shows all ten
+  pad banks as a matrix. Each pad's settings can be edited, audio files can be
+  dropped onto a pad (they are converted to the Roland WAV layout on save), and
+  samples can be dragged to other pads. A Patterns tab covers the 120 pattern
+  slots, with MIDI import and export, note-to-pad assignment and export of the
+  native pattern files. Changes stay queued until the card is written, and
+  writes keep recovery backups. The author has no original SP-404 or SP-404A
+  and has tested on the SP-404SX.
+status: active
+authors:
+  - name: Matthew Callis
+    url: https://github.com/MatthewCallis
+source: https://github.com/MatthewCallis/super-pads
+source_status: open
+license: MIT
+homepage: https://github.com/MatthewCallis/super-pads/releases
+distribution: download
+requires_stock: SP-404SX (SP-404A is untested)
+install_notes: >-
+  The releases page has macOS (Apple Silicon and Intel), Windows and Linux
+  builds, or run it from source with Node.js 24 (npm ci, then npm start).
+  Mount the SD card on the computer, pick its root folder in the app, edit,
+  and use Write SD Card. If a save is interrupted, reopen the card in the app
+  to recover before putting it back in the sampler. It only changes files on
+  the card and does not touch the sampler's firmware.
+brick_risk: false
+tags: [editor, samples, converter, midi]
+video:
+  url: https://www.youtube.com/watch?v=DIjpT0F07uU
+  title: "Super Pads: a New Program for Loading Sounds Onto Your SP-404SX"
+  credit: friendkerrek
+  first_party: false
+versions:
+  - version: v2.0.0
+    date: 2026-10-05
+    url: https://github.com/MatthewCallis/super-pads/releases/tag/v2.0.0
+    notes: Adds pattern import and export to and from MIDI and a wider pad editor showing all ten banks.
+  - version: 1.3.0
+    date: 2026-09-15
+    url: https://github.com/MatthewCallis/super-pads/releases/tag/1.3.0
+  - version: 1.2.1
+    date: 2021-08-01
+    url: https://github.com/MatthewCallis/super-pads/releases/tag/1.2.1
+  - version: 1.2.0
+    date: 2021-04-04
+    url: https://github.com/MatthewCallis/super-pads/releases/tag/1.2.0

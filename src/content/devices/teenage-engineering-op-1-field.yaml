@@ -1,0 +1,26 @@
+name: OP-1 Field
+manufacturer: Teenage Engineering
+category: synth
+tagline: Portable synth, sampler and tape sequencer, successor to the OP-1
+description: >-
+  The OP-1 Field is a portable synthesizer, sampler and sequencer from Teenage
+  Engineering, released in 2022 as the follow-up to the original OP-1. It keeps
+  the OP-1's synth and drum engines, effects, sequencers and four-track
+  tape-style recorder, and has a built-in speaker and a rechargeable battery. A
+  computer sees the device over USB-C as a portable device (MTP) rather than a
+  disk, and projects and patches are exchanged that way.
+stock_firmware: 1.7.3
+links:
+  manufacturer: https://teenage.engineering/products/op-1
+  community:
+    - label: OP-1 Field guide
+      url: https://teenage.engineering/guides/op-1
+    - label: op-forums
+      url: https://op-forums.com/
+notes: >-
+  No custom firmware was found for the OP-1 Field. The entries here are
+  host-side tools for its patch files. Tools that cover both OP-1 models, such
+  as DigiChain, are listed on the original OP-1 page. The stock firmware
+  version listed is the one the catalogued patch tool was written against, not
+  a statement of the latest release.
+related: [teenage-engineering-op-1, teenage-engineering-op-z, teenage-engineering-op-xy]

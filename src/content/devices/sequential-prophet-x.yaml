@@ -1,0 +1,25 @@
+name: Prophet X
+manufacturer: Sequential Circuits
+category: synth
+tagline: Five-octave hybrid synth with sampled instruments and analog filters
+description: >-
+  The Prophet X is a keyboard synthesizer from Sequential that combines
+  sampled instruments with two digital oscillators per layer, all passed
+  through analog low-pass filters. It has two layers, a 16-slot mod matrix,
+  four LFOs, four loopable envelopes, a dual effects engine, a 64-step
+  polyphonic sequencer and an arpeggiator. Sequential supplies it with 150 GB
+  of factory samples on an internal SSD, with a further 50 GB set aside for user
+  samples.
+platform: x86-64 PC board running QNX, with an FPGA and a PIC32 controller
+stock_firmware: 2.2.2.0.0
+links:
+  manufacturer: https://sequential.com/product/prophet-x/
+  community:
+    - label: Prophet X reverse-engineering notes (rvense)
+      url: https://rven.se/prophet-x/
+notes: >-
+  Operating system updates are .bin files that Sequential distributes and that
+  the synth installs from a USB drive. The entry here patches that official
+  file on your own computer; the OS is not redistributed. The application runs
+  from the internal SSD, and a failed experiment can leave it unbootable, so
+  back up the whole SSD before modifying anything.

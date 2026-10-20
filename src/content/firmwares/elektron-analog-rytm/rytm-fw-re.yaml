@@ -1,0 +1,34 @@
+device: elektron-analog-rytm
+name: rytm-fw-re
+summary: Reverse-engineering notes and tooling for the Analog Rytm MKII OS 1.74 container, boot sequence and display, plus a from-source C++ replacement OS that boots and draws a test pattern, and same-size patches for the boot splash and LED palette.
+description: >-
+  The repository states that it holds no Elektron firmware: it has pyghidra
+  scripts, protocol notes, the replacement OS source (about 900 bytes of image),
+  and Python scripts that wrap it into a flashable .syx using
+  elektron-firmware-tool, send it over USB MIDI, and patch the splash bitmaps and LED
+  palette in a stock OS file you supply. The author reports that the replacement
+  OS and the static-data patches have been flashed and booted on a real unit.
+  Only the main OS section is rewritten, so the bootstrap and its startup menu
+  stay intact. The status file warns that recovery from the startup menu works over
+  DIN MIDI only, so a unit running a custom OS cannot be reflashed back over USB.
+status: active
+authors:
+  - name: ethernet
+    url: https://github.com/ethernet8023
+source: https://github.com/ethernet8023/rytm-fw-re
+source_status: open
+license: unspecified
+license_notes: No license file or license statement in the repository.
+distribution: source-only
+requires_stock: "1.74"
+install_notes: >-
+  Build with a m68k cross toolchain (the repo uses Nix) and supply your own
+  Analog-Rytm_MKII_OS1.74.syx. STATUS.md says to assume one USB flash per
+  custom-OS cycle and to have a MIDI DIN sender ready to return to the stock OS
+  through the startup menu (hold FUNC at power-on).
+tags: [research, os, flasher, boot-splash]
+versions:
+  - version: main @ 2f7f0c4
+    date: 2026-10-13
+    url: https://github.com/ethernet8023/rytm-fw-re/commit/2f7f0c4c01da3433e6386774416ea33f6c3753af
+    notes: No tagged releases; this is the latest commit.

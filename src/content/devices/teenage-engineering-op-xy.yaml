@@ -1,0 +1,26 @@
+name: OP-XY
+manufacturer: Teenage Engineering
+category: groovebox
+tagline: Portable 16-track sequencer, sampler and synth
+description: >-
+  The OP-XY is a battery-powered sequencer, sampler and synthesizer from
+  Teenage Engineering, built on the workflow of the OP-Z. It has eight
+  instrument tracks and eight auxiliary tracks for controlling external gear, a
+  set of synth engines plus drum sampler and multisampler engines, built-in
+  effects, and a tape looper. Projects, presets and samples live on internal
+  storage that the computer sees over USB-C, and the device also does USB and
+  Bluetooth LE MIDI.
+links:
+  manufacturer: https://teenage.engineering/products/op-xy
+  community:
+    - label: OP-XY guide
+      url: https://teenage.engineering/guides/op-xy
+    - label: op-forums
+      url: https://op-forums.com/
+notes: >-
+  No replacement firmware exists. The entries here are host-side tools that
+  read and write the device's project files, build preset folders for its
+  multisampler, or drive it over USB MIDI.
+related:
+  - teenage-engineering-op-z
+  - teenage-engineering-op-1

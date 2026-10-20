@@ -1,0 +1,41 @@
+device: akai-mpc2000
+name: VMPC2000XL
+kind: tool
+summary: Emulator of the MPC2000XL as a standalone app and VST3, AU and LV2 plugin for desktop and iOS, written as a reimplementation of the OS rather than by booting Akai's ROM.
+description: >-
+  The JUCE front end of VMPC2000XL, an emulation of the MPC2000XL sampler and
+  sequencer with its front panel, display, pads, sequencer and sampler. Unlike
+  the MAME-based emulators it does not boot Akai's operating system image, so
+  no ROM file is needed. Builds target Windows, macOS, Linux and iOS, with
+  standalone, VST3 and LV2 outputs and AU on macOS. Windows, macOS and Ubuntu
+  installers are attached to each release, and the repository carries a plugin
+  compatibility matrix. Not affiliated with inMusic.
+status: active
+authors:
+  - name: Izmar Verhage
+    url: https://github.com/izzyreal
+source: https://github.com/izzyreal/vmpc-juce
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  The README states GPL version 3 or later. JUCE is used under its AGPL terms,
+  so combined binaries must comply with both.
+distribution: download
+install_notes: >-
+  Use the installers or zips attached to each release page. To build from
+  source, the README gives CMake commands for Windows, macOS, iOS and Linux, for
+  example the vmpc2000xl_Standalone and vmpc2000xl_VST3 targets.
+tags: [emulator, sampler, sequencer]
+versions:
+  - version: v0.9.19
+    date: 2026-10-17
+    url: https://github.com/izzyreal/vmpc-juce/releases/tag/v0.9.19
+  - version: v0.9.18
+    date: 2026-09-19
+    url: https://github.com/izzyreal/vmpc-juce/releases/tag/v0.9.18
+  - version: v0.9.17
+    date: 2026-08-21
+    url: https://github.com/izzyreal/vmpc-juce/releases/tag/v0.9.17
+  - version: v0.9.16
+    date: 2026-08-06
+    url: https://github.com/izzyreal/vmpc-juce/releases/tag/v0.9.16

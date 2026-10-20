@@ -1,0 +1,30 @@
+device: arturia-beatstep-pro
+name: beatstep-pro-handler
+kind: tool
+summary: Python library and command-line tool that reads and writes the BeatStep Pro's global settings and per-control assignments over USB SysEx, without MIDI Control Center. Changes apply live.
+description: >-
+  A single SysEx frame format reads or writes any parameter, and the package wraps it in a Python API
+  and a bsp command. It covers the global settings (95 are writable) and the mode, channel and range
+  fields of the knobs, pads and step buttons, and the author reports that per-pad note and channel
+  changes in drum mode also take effect immediately. Sequencer pattern data is out of scope. A name table
+  is bundled, and a script can regenerate it from your own MIDI Control Center install. The author
+  states it was checked against real hardware.
+status: active
+authors:
+  - name: Jamison
+    url: https://github.com/jamisonx-dev
+source: https://github.com/jamisonx-dev/beatstep-pro-handler
+source_status: open
+license: MIT
+license_notes: Covers the repository only; Arturia's MIDI Control Center device dictionary, templates and firmware are not included.
+distribution: source-only
+install_notes: >-
+  Needs Python and python-rtmidi; install with pip or from the repository. The configuration SysEx is
+  accepted over USB only, not DIN. The tool changes settings in the stock firmware and does not flash anything.
+brick_risk: false
+tags: [sysex, midi, python, editor]
+versions:
+  - version: master @ 1928ebd
+    date: 2026-09-16
+    url: https://github.com/jamisonx-dev/beatstep-pro-handler/commit/1928ebdfd4de31598002ff2034f9688092b8ccd9
+    notes: No tagged releases; this is the latest commit. pyproject.toml declares version 0.1.0.

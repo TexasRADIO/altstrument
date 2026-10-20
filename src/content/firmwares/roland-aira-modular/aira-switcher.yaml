@@ -1,0 +1,40 @@
+device: roland-aira-modular
+name: AIRA Switcher
+kind: tool
+summary: Browser tool that reads a full ROM backup of your own AIRA Modular unit and prepares a restore package that makes it behave as Bitrazer, Demora, Torcido or Scooper.
+description: >-
+  Runs locally in the browser on your own AIRA_MODULAR_ROM.BIN and ROMINFO.TXT
+  backup files, which you make with a button gesture documented in the project.
+  After checking the backup against known builds, it changes the one stored
+  product value in the image and produces a ZIP with an install folder and a
+  recovery folder. You copy the two install files to the unit's updater drive
+  and let it restore the image. It does not add DSP code or change the system
+  version. Only application builds 0491 and 0493 are accepted, and the author
+  tested the conversions on a single Scooper. No Roland firmware or backups are
+  in the repository.
+status: active
+authors:
+  - name: tracelistener
+    url: https://github.com/tracelistener
+source: https://github.com/tracelistener/aira-switcher
+source_status: open
+license: unspecified
+license_notes: The README states that no source-code license has been selected.
+homepage: https://tracelistener.github.io/aira-switcher/
+distribution: browser-installer
+requires_stock: "1.05 (builds 0491 and 0493)"
+install_notes: >-
+  Make a backup first: with USB disconnected, hold GRF 6 while powering on, press
+  GRF 5 ten times, connect USB and copy AIRA_MODULAR_ROM.BIN and ROMINFO.TXT from
+  the BACKUP folder. Load both files into the tool, pick a model, download the
+  ZIP and copy only the two files in install/ to the unit's drive. Keep power
+  connected until the restore finishes, and keep the recovery files. Use a backup
+  from the same physical unit. The restore rewrites boot code, and a power cut can
+  need hardware repair.
+brick_risk: true
+tags: [flasher, converter, web, research]
+versions:
+  - version: main @ 187315a
+    date: 2026-10-01
+    url: https://github.com/tracelistener/aira-switcher/commit/187315a8df53be77c819055e04cdabe48ea265f0
+    notes: No tagged releases; this is the latest commit.

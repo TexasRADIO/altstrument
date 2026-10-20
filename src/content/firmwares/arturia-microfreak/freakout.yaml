@@ -1,0 +1,31 @@
+device: arturia-microfreak
+name: Freakout
+kind: tool
+summary: Python command-line tools that convert MicroFreak and MiniFreak presets to and from lossless JSON and talk to the synths over USB MIDI to read and write presets, wavetables and samples.
+description: >-
+  For the MicroFreak it reads and writes saved presets, user wavetables and the global settings,
+  inventories the 128 sample slots and downloads sample bodies, with backups, read-back checks and
+  rollback on guarded writes. For the MiniFreak it parses and writes .mnfx files and reads the active
+  patch and any of the 512 saved slots over USB. A JSON schema describes the patch format, and the
+  documents cover the SysEx and file formats found by the author. The code is independent of
+  Arturia's, and the repository holds no Arturia firmware or presets. Also usable with the MiniFreak.
+status: active
+authors:
+  - name: Kevin Morrill
+    url: https://github.com/kmorrill
+source: https://github.com/kmorrill/freakout
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Needs Python 3; install with pip in a virtual environment. The MicroFreak transport uses CoreMIDI
+  through mido, so the direct commands are written for macOS, and Elektroid's command-line tool is an optional
+  alternative backend. Writes to the device require explicit acknowledgement flags. The tools change
+  presets and data, not the firmware.
+brick_risk: false
+tags: [editor, librarian, sysex, samples, python, research]
+versions:
+  - version: main @ 7e3d8eb
+    date: 2026-08-02
+    url: https://github.com/kmorrill/freakout/commit/7e3d8ebeab3d2b41276994111d6a622da16b6a4c
+    notes: No tagged releases; this is the latest commit. pyproject.toml declares version 0.3.0.

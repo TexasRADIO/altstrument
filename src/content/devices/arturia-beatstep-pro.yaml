@@ -1,0 +1,15 @@
+name: BeatStep Pro
+manufacturer: Arturia
+category: controller
+tagline: Two melodic sequencers and a 16-track drum sequencer with CV, gate and USB
+description: >-
+  The BeatStep Pro is a hardware sequencer and controller from Arturia with two monophonic melodic
+  sequencers of up to 64 steps and a 16-track drum sequencer, with sixteen pads and a row of step
+  buttons. It has USB, MIDI, clock, CV and gate connections and stores sixteen projects. Its settings
+  are managed with the Arturia MIDI Control Center editor.
+links:
+  manufacturer: https://www.arturia.com/products/hybrid-synths/beatstep-pro/overview
+notes: >-
+  No replacement firmware exists; the entry here is a host-side library and command-line tool that
+  reads and writes the stock firmware's settings over USB SysEx.
+related: [arturia-beatstep, arturia-keystep-pro]

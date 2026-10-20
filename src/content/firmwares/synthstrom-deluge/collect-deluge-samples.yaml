@@ -11,7 +11,7 @@ authors:
     url: https://github.com/RTX
 source: https://github.com/RTX/CollectDelugeSamples
 source_status: open
-license: unspecified
+license: ISC
 license_notes: package.json declares ISC; there is no LICENSE file.
 distribution: source-only
 requires_stock: firmware 2.0.x

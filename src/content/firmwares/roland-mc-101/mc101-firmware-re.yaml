@@ -1,0 +1,38 @@
+device: roland-mc-101
+name: mc101-firmware-re
+kind: tool
+summary: Research notes and Python probe scripts from an analysis of the MC-101 firmware (v1.82, shared with the MC-707), including a read-only SysEx probe of the unit's parameter memory.
+description: >-
+  The repository documents a static analysis of Roland's v1.82 update for the
+  MC-101 and MC-707: the update's file layout, an inter-core protocol, parameter
+  address tables and a cross-version comparison. Alongside the reports are
+  scripts that run against a connected unit. pmb_probe.py reads parameter
+  regions with SysEx data requests, clip_grid_scan.py maps the clip grid,
+  dt1_write.py sends a write and checks it by reading back, and further
+  scripts decode the factory init project and find functions in an extracted
+  image. It contains no Roland binaries; the author points to Roland's support
+  page for the update file. The README and legal notes say the work is for
+  interoperability.
+status: active
+authors:
+  - name: Daniel Molnar
+    url: https://github.com/soobrosa
+source: https://github.com/soobrosa/mc101-firmware-re
+source_status: open
+license: unspecified
+license_notes: The repository has no license file and the README states no license.
+homepage: https://soobrosa.github.io/mc101-firmware-re/
+distribution: source-only
+requires_stock: "1.82"
+install_notes: >-
+  Python scripts in tools/ with no packaging. The offline analysis scripts need
+  the update file from Roland's MC-101 or MC-707 support page, which you
+  download yourself. The probe scripts talk to a connected unit over MIDI;
+  pmb_probe.py only reads, while dt1_write.py writes to the unit's memory.
+brick_risk: false
+tags: [research, sysex, python]
+versions:
+  - version: main @ 8002416
+    date: 2026-08-17
+    url: https://github.com/soobrosa/mc101-firmware-re/commit/800241673bc0db59b4f67ba9579f3ecf38029b63
+    notes: No tagged releases; this is the latest commit.

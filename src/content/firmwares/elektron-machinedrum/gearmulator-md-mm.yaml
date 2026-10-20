@@ -1,0 +1,60 @@
+device: elektron-machinedrum
+name: Gearmulator MD/MM
+kind: tool
+summary: VST3, Audio Unit and standalone emulations of the Machinedrum and Monomachine, a fork of the Gearmulator DSP56300 emulator that boots the OS file you supply.
+description: >-
+  A fork of the Gearmulator project that adds emulated Machinedrum and
+  Monomachine instruments. Each shows the unit's front panel in a window with
+  mouse shortcuts for held-down buttons, parameter locks and encoder presses,
+  can route host audio to the input effects and sampling, and sends .syx files
+  to the emulated unit. Multi-output hosts get extra output pairs. Releases are
+  alpha builds for macOS, Windows and Linux. The author asks that firmware and
+  ROMs are not requested or shared; the repository and releases hold no Elektron
+  code. The MDMM editors and the Machinedrum kit's test harness are built on this
+  fork.
+status: active
+authors:
+  - name: Joe Landers
+    url: https://github.com/joelanders
+source: https://github.com/joelanders/gearmulator-md-mm
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  GPLv3 text from the upstream Gearmulator project; no "or later" statement was
+  found in the README or the license file.
+homepage: https://github.com/joelanders/gearmulator-md-mm/releases
+distribution: download
+requires_stock: Machinedrum and Monomachine OS files (supplied by you)
+install_notes: >-
+  Download the build for your platform from the releases page. The macOS builds
+  are ad-hoc signed and not notarised, so a bundled setup command may be needed
+  before they open. Supply your own OS files from units you own; the project
+  asks users not to discuss or exchange them.
+tags: [emulator, sysex, synth-engine, drums]
+video:
+  url: https://www.youtube.com/watch?v=NmfE5xljYRU
+  title: MD + MM emulations playing 2008 Autechre Echoplex sysexes
+  credit: Joe Landers
+  first_party: true
+  found_via: https://github.com/joelanders/gearmulator-md-mm#readme
+versions:
+  - version: mdmm-v0.1.0-alpha.14
+    date: 2026-09-21
+    url: https://github.com/joelanders/gearmulator-md-mm/releases/tag/mdmm-v0.1.0-alpha.14
+    notes: Pre-release; fixes a project-restore and kit synchronisation issue, adds PGO builds and the first Linux x64 download.
+  - version: mdmm-v0.1.0-alpha.13
+    date: 2026-09-17
+    url: https://github.com/joelanders/gearmulator-md-mm/releases/tag/mdmm-v0.1.0-alpha.13
+    notes: Pre-release.
+  - version: mdmm-v0.1.0-alpha.12
+    date: 2026-09-15
+    url: https://github.com/joelanders/gearmulator-md-mm/releases/tag/mdmm-v0.1.0-alpha.12
+    notes: Pre-release.
+  - version: mdmm-v0.1.0-alpha.11
+    date: 2026-09-11
+    url: https://github.com/joelanders/gearmulator-md-mm/releases/tag/mdmm-v0.1.0-alpha.11
+    notes: Pre-release.
+  - version: mdmm-v0.1.0-alpha.10
+    date: 2026-09-06
+    url: https://github.com/joelanders/gearmulator-md-mm/releases/tag/mdmm-v0.1.0-alpha.10
+    notes: Pre-release; fixes Monomachine modulation timing.

@@ -1,0 +1,47 @@
+device: roland-sp-404-mkii
+name: SparkyMK2
+kind: tool
+summary: Desktop editor and librarian for the SP-404MKII for Linux, Windows and Apple Silicon Macs that aims at feature parity with Roland's official app, plus a command-line tool.
+description: >-
+  Manages samples, pads, patterns and projects on the unit over USB. It imports
+  WAV, AIFF, FLAC and MP3 files, edits pad parameters on a waveform with chop
+  points, exports pads, banks or projects as WAV, exports patterns as MIDI, and
+  backs up and restores projects. It also adds a file browser for the unit and the
+  SD card, an editor for startup and screen saver images, and key detection, none
+  of which the official app has. Missing so far are waveform zoom, chop helpers,
+  emphasis and pattern import. The README says it was verified on firmware 5.52 and
+  that an AI assistant wrote most of the code from protocol notes, which are in the
+  repository. It does not change the unit's firmware.
+status: active
+authors:
+  - name: Mateusz Drabowicz
+    url: https://github.com/TuscanPL
+source: https://github.com/TuscanPL/SparkyMK2
+source_status: open
+license: GPL-3.0-or-later
+license_notes: The README and the crate manifests state GPL-3.0-or-later.
+distribution: download
+install_notes: >-
+  Releases carry .deb, .rpm, AppImage, Windows installer and macOS (Apple Silicon)
+  packages, and the README lists an AUR package. The Windows installer is unsigned
+  and the macOS build needs extra setup steps from the README. With the AppImage on
+  Linux, set up serial port access once as described there.
+tags: [editor, librarian, sampler, midi, converter]
+versions:
+  - version: v0.7.3
+    date: 2026-10-04
+    url: https://github.com/TuscanPL/SparkyMK2/releases/tag/v0.7.3
+    notes: Fixes sample imports and other card writes timing out on Windows.
+  - version: v0.7.2
+    date: 2026-10-03
+    url: https://github.com/TuscanPL/SparkyMK2/releases/tag/v0.7.2
+    notes: Adds an optional diagnostic log and longer waits for card writes.
+  - version: v0.7.1
+    date: 2026-09-27
+    url: https://github.com/TuscanPL/SparkyMK2/releases/tag/v0.7.1
+  - version: v0.6.0
+    date: 2026-09-24
+    url: https://github.com/TuscanPL/SparkyMK2/releases/tag/v0.6.0
+  - version: v0.5.0
+    date: 2026-09-21
+    url: https://github.com/TuscanPL/SparkyMK2/releases/tag/v0.5.0

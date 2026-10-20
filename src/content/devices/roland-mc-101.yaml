@@ -1,0 +1,18 @@
+name: MC-101
+manufacturer: Roland
+category: groovebox
+tagline: Four-track clip groovebox in the MC range
+description: >-
+  The MC-101 is a compact groovebox from Roland with four tracks, clip-based
+  sequencing and scenes. It shares its design with the larger MC-707, which
+  has eight tracks, and the MV-1 is a related unit that speaks the same SysEx
+  dialect. All three accept parameter reads and writes over MIDI System
+  Exclusive.
+links:
+  manufacturer: https://www.roland.com/global/products/mc-101/
+notes: >-
+  No replacement firmware exists. The entries here are host-side tools that
+  talk to the stock operating system over MIDI SysEx, plus a firmware-analysis
+  project that ships probe scripts. Tools that cover the MC-707 and MV-1 as
+  well are listed here, on the MC-101 page.
+related: []

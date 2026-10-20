@@ -1,0 +1,30 @@
+device: korg-nts-1
+name: key4
+summary: Four-voice polyphonic oscillator for the NTS-1 inspired by the volca keys, with poly, unison, octave, fifth and ring-modulated modes and a drive control.
+description: >-
+  The oscillator keeps the last four notes it was given and renders them with
+  band-limited saw or square waves. The mode parameter picks poly, unison,
+  octave, fifth, unison with ring modulation or poly with ring modulation, and
+  a second parameter sets drive. The repository is a single C source plus
+  makefile and manifest for the logue SDK, has no README, and has had no
+  commits since May 2023. The manifest is marked version 0.9-0.
+status: dormant
+authors:
+  - name: Beat Vontobel
+    url: https://github.com/bvontob
+source: https://github.com/bvontob/key4
+source_status: open
+license: BSD-3-Clause
+license_notes: LICENSE file is BSD 3-Clause, Copyright 2023 Beat Vontobel.
+homepage: https://github.com/bvontob/key4
+distribution: source-only
+install_notes: >-
+  No prebuilt unit is published. Build it inside a logue SDK checkout (the
+  Makefile expects the SDK's platform folder layout) and load the resulting
+  unit onto the NTS-1.
+tags: [oscillator, synth-engine, nts-1, volca-keys, open-source]
+versions:
+  - version: main @ b1dc958
+    date: 2023-05-01
+    url: https://github.com/bvontob/key4/commit/b1dc958937aaf3202098092a2ed53bfe7222590e
+    notes: No tagged releases; this is the latest commit.

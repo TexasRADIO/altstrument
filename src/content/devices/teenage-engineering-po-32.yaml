@@ -1,0 +1,22 @@
+name: PO-32 tonic
+manufacturer: Teenage Engineering
+category: drum-machine
+tagline: Pocket Operator drum synth built around Microtonic sounds
+description: >-
+  The PO-32 tonic is a pocket-sized drum synthesizer and sequencer from Teenage
+  Engineering, made in collaboration with Magnus Lidström of Sonic Charge. It
+  has 16 preset sounds, parameter locks, punch-in effects and a built-in
+  speaker and microphone. New sounds and patterns arrive as audio-coded data,
+  played into the microphone or through the audio input from the Microtonic
+  plugin.
+links:
+  manufacturer: https://teenage.engineering/products/po-32
+  community:
+    - label: PO-32 guide
+      url: https://teenage.engineering/guides/po-32/en
+notes: >-
+  No replacement firmware exists. The entry here is a software library that
+  reimplements the audio data transfer and the drum voice model, so sounds
+  and patterns can be built and sent without the official plugin.
+related:
+  - teenage-engineering-po-33

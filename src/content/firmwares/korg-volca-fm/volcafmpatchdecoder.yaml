@@ -1,0 +1,33 @@
+device: korg-volca-fm
+name: volcafmpatchdecoder
+kind: tool
+summary: Command-line program that decodes a recording of volca fm patch data (the audio the synth can output) into DX7-style MIDI SysEx files.
+description: >-
+  Takes a mono 44.1 kHz 16-bit WAV of volca fm patches and writes a .syx file,
+  printing the patch names it finds. Version 1.1 added support for the
+  64-patch dump from the volca fm 2, which produces two SysEx files. Windows
+  and Linux (x86 and ARM) binaries are attached to the releases, and the C
+  source builds with any C compiler. The repository includes one sample bank
+  recording.
+status: dormant
+authors:
+  - name: Pajen
+    url: https://github.com/pajen
+source: https://github.com/pajen/volcafmpatchdecoder
+source_status: open
+license: unspecified
+license_notes: No license file or statement in the repository.
+homepage: https://github.com/pajen/volcafmpatchdecoder
+distribution: download
+install_notes: >-
+  Download the binary for your system from the releases page, or compile main.c
+  with cc, and run it with the WAV file as the only argument.
+tags: [converter, sysex, patch-library, volca-fm]
+versions:
+  - version: v1.1
+    date: 2022-12-28
+    url: https://github.com/pajen/volcafmpatchdecoder/releases/tag/v1.1
+    notes: Adds volca fm 2 64-patch dumps.
+  - version: v1.0
+    date: 2022-09-12
+    url: https://github.com/pajen/volcafmpatchdecoder/releases/tag/v1.0

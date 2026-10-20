@@ -1,0 +1,32 @@
+device: elektron-analog-rytm
+name: rytm-builder
+kind: tool
+summary: Builds Analog Rytm project SysEx files from a library of dumps. Place pattern and kit pairs on a pattern grid, then export a whole-project file or only the changes. Rust command line plus a Mac app; no MIDI sending.
+description: >-
+  Source dumps stay read-only and each run writes a new file. Samples must
+  already be on the unit's +Drive, because the tool copies only the sample
+  fingerprints so restored kits bind to those files. The object sizes follow Analog
+  Rytm OS 1.70 (version 5 dumps from an MK1). The engine is a Rust library with
+  catalog and compose commands, with a Vite and React interface in web/ and a
+  Tauri shell for an unsigned universal Mac app. You restore the result by
+  sending the file with any SysEx tool.
+status: active
+authors:
+  - name: stampman3000-jpg
+    url: https://github.com/stampman3000-jpg
+source: https://github.com/stampman3000-jpg/rytm-builder
+source_status: open
+license: MIT
+license_notes: Cargo.toml declares MIT; the repository has no LICENSE file. The repository commits one empty whole-project template dump (web/templates/Untitled-4.syx, a user project, not an Elektron OS file).
+distribution: source-only
+requires_stock: Analog Rytm OS 1.70 object layout
+install_notes: >-
+  CLI: cargo build (Rust 1.83 or similar). Mac app: npm install in web/, then
+  npm run desktop:build for a .app and .dmg; the app is unsigned, so open it
+  with right-click then Open. The default branch is cursor/rytm-mac-app-0afb.
+tags: [sysex, editor, librarian]
+versions:
+  - version: main @ 90af848
+    date: 2026-10-14
+    url: https://github.com/stampman3000-jpg/rytm-builder/commit/90af848d80e2d412a3b5ad38ee68ee37998a9cf8
+    notes: No tagged releases; this is the latest commit.

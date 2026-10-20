@@ -1,0 +1,31 @@
+device: arturia-keystep-pro
+name: KeyStepProPlus
+kind: tool
+summary: Converts KeyStep Pro project files to standard MIDI files and MIDI clips to KeyStep Pro patterns, with a macOS app and a kspplus command-line tool that can also read a project straight from the device.
+description: >-
+  The Swift package builds a command called kspplus with subcommands to dump a project, export it as
+  MIDI, convert a MIDI file into playable patterns (chords, a drum track, note lengths, tempo, and long
+  sequences split and chained) and pull a project over USB SysEx. A small macOS app, Key Step Pro Plus,
+  wraps the conversions in a drop window and writes files into MIDI Control Center's templates folder. The
+  repository also holds a detailed write-up of the .KeyStepPro file format. The author says results
+  were checked on a KeyStep Pro. An earlier Python version is archived in a separate repository.
+status: active
+authors:
+  - name: bauerc
+    url: https://github.com/bauerc
+source: https://github.com/bauerc/KeyStepProPlus
+source_status: open
+license: unspecified
+license_notes: The repository has no license file or license statement.
+distribution: source-only
+install_notes: >-
+  macOS only; building needs Swift 6.2 and the Command Line Tools, then make install puts the app in
+  /Applications and make install-cli links kspplus on the PATH. Reading a project from the device uses
+  CoreMIDI. The tool works on project files and does not change the device firmware.
+brick_risk: false
+tags: [converter, midi, sequencer, sysex, research]
+versions:
+  - version: main @ 86c9718
+    date: 2026-09-12
+    url: https://github.com/bauerc/KeyStepProPlus/commit/86c97182b3e8fce4f8e38a2854d48b992e35bd74
+    notes: No tagged releases; this is the latest commit.

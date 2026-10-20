@@ -526,3 +526,78 @@ ignore:
   - url: https://github.com/gmoben/lsdj-decompiled
     reason: matching decompilation of LSDj, whose terms forbid redistribution; skipped by maintainer decision
     date: 2026-10-20
+  - url: https://github.com/Lapin/awesome-music-gear-mods
+    reason: link list of physical mods and add-ons, not firmware or a tool
+    date: 2026-10-20
+  - url: https://github.com/bnjreece/awesome-te
+    reason: link list of Teenage Engineering hacks and tools, not a project
+    date: 2026-10-20
+  - url: https://github.com/v3rm0n/awesome-m8
+    reason: link list of M8 clients and tools, not a project
+    date: 2026-10-20
+  - url: https://github.com/newdigate/eurorack-awesome
+    reason: link list of Eurorack resources, not a project
+    date: 2026-10-20
+  - url: https://hacktronauts.com
+    reason: general forum for hacking music hardware, not tied to one device and not firmware or a tool
+    date: 2026-10-20
+  - url: https://github.com/charlesvestal/schwung-catalog-site
+    reason: source of the schwung.dev website; the Move device already links the catalog page
+    date: 2026-10-20
+  - url: https://github.com/possan/ableton-move-hacks
+    reason: notes on SSH access and hardware buses only, no runnable code
+    date: 2026-10-20
+  - url: https://github.com/JGuzak/push3-standalone-app-example
+    reason: empty repository
+    date: 2026-10-20
+  - url: https://github.com/JGuzak/Tiny-Push-Utility
+    reason: README-only repository with no source or releases; revisit if code appears
+    date: 2026-10-20
+  - url: https://github.com/steven-law/Forcemodding
+    reason: notes on cross-compiling for the Force (README, PDF, command list), no runnable code
+    date: 2026-10-20
+  - url: https://github.com/bcrowe306/MPC-One-Control-Mode-MIDI-Protocol
+    reason: single README documenting the control-mode protocol, no code
+    date: 2026-10-20
+  - url: https://github.com/m-dwyer/digikit
+    reason: old name of ElekLabs/digikit, catalogued as elektron-tools/digikit
+    date: 2026-10-20
+  - url: https://github.com/KaiDrange/OctaChainer
+    reason: abandoned original replaced by OctaChainer2, catalogued as elektron-octatrack/octachainer2
+    date: 2026-10-20
+  - url: https://drolez.com/blog/music/korg-volca-fm-firmware-update.php
+    reason: third-party how-to for Pajen volca fm 1.09, already catalogued as korg-volca-fm/pajen-volca-fm
+    date: 2026-10-20
+  - url: https://github.com/genkigenki/ChoralRootFM1
+    reason: fork whose SMK-37 branch was merged upstream; catalogued as m-vave-smk-37/choralroot-smk37 from Quixotic7/ChoralRootFM1
+    date: 2026-10-20
+  - url: https://github.com/tracelistener/aira-modular-system-osc
+    reason: ships modified Roland AIRA Modular 1.05 system images with Roland DSP code for a current product
+    date: 2026-10-20
+  - url: https://github.com/compuphonic/TR-8S-SysEx
+    reason: notes and MIDI captures plus JavaScript copied from Roland's site, no runnable tool; its findings are used by tr8s-studio
+    date: 2026-10-20
+  - url: https://github.com/garrettjwilke/ep_133_sysex_thingy
+    reason: hand-made .syx command files and notes with no code
+    date: 2026-10-20
+  - url: https://op1.fun
+    reason: user-upload site for sharing OP-1 patches and samples, not firmware or a tool
+    date: 2026-10-20
+  - url: https://github.com/copych/RDX-Reface-DX-emu
+    reason: firmware for the author's own ESP32 FM instrument modelled on the reface DX, not a tool for the Yamaha
+    date: 2026-10-20
+  - url: https://github.com/Preskton/bitboxctl
+    reason: empty scaffold (one 2022 commit and a 13-byte README)
+    date: 2026-10-20
+  - url: https://github.com/tracelistener/rd6-scatter
+    reason: RD-6 patcher whose repository bundles Behringer's official 1.0.5 and 1.0.6 SysEx images for a current product; no license
+    date: 2026-10-20
+  - url: https://github.com/DominoTree/MoSKito
+    reason: hardware clone of the SK-1, not firmware for the device; bundles a Casio ROM dump and the service manual
+    date: 2026-10-20
+  - url: https://github.com/RowdyVoyeur/m8c-rpi4
+    reason: Raspberry Pi 4 build guide (single-board computer) around an m8c fork with minor tweaks; m8c is catalogued
+    date: 2026-10-20
+  - url: https://github.com/adwuard/TrackerKB
+    reason: hardware project running stock M8 Headless on a Teensy plus a keyboard HID firmware that does not touch the M8
+    date: 2026-10-20

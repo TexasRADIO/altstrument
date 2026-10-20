@@ -1,0 +1,54 @@
+device: elektron-monomachine
+name: ems-monomachine-firmware
+summary: Custom Monomachine OS with per-track lengths and speeds, trig conditions, extended song and pattern workflow, and a stock-bug fix list, patched in the browser from your OS file.
+description: >-
+  A patch set applied to the official Monomachine OS 1.32B. It adds track
+  lengths and speeds, trig conditions, trig preview, parameter-page copy, paste,
+  randomise and undo shortcuts, extra transpose scales including equal
+  divisions of the octave, song-row program-change overrides and a song
+  duration estimate, and fixes a long list of stock bugs. BBOX banks let a unit
+  with a +Drive store 32 custom BBOX sample banks. A Machinedrum link lets a
+  compatible Machinedrum OS follow the Monomachine's song position. Song slots
+  13 to 24 are removed to make room for the extended data, and anything left in
+  them is corrupted on boot. The repository holds the changelog and release
+  patches; the patcher is a page on the author's website, shared with the
+  author's Machinedrum project.
+status: active
+authors:
+  - name: June Kiff (emuyia)
+    url: https://github.com/emuyia
+source: https://github.com/emuyia/ems-monomachine-firmware
+source_status: patcher-only
+license: unspecified
+license_notes: No license file or statement; the repository holds the changelog and a patch release.
+homepage: https://www.junes.website/goodies/fw-patcher
+distribution: patch-your-own
+requires_stock: 1.32B
+install_notes: >-
+  Use the browser patcher on the author's site with your own official
+  Monomachine OS 1.32B file. Back up all projects first and move any songs out
+  of slots 13 to 24. Beta builds may change behaviour destructively between
+  releases, so read the changelog before each update. Backups made with the
+  custom OS restore onto stock 1.32B with the extended data discarded.
+tags: [sequencer, ui, performance, sysex, bugfixes]
+versions:
+  - version: 26A09-beta
+    date: 2026-10-09
+    url: https://github.com/emuyia/ems-monomachine-firmware/releases/tag/26A09-beta
+    notes: Pre-release; adds BBOX banks, pattern and kit workflow shortcuts and EDO transpose scales.
+  - version: 26910-release
+    date: 2026-09-10
+    url: https://github.com/emuyia/ems-monomachine-firmware/releases/tag/26910-release
+    notes: Release build.
+  - version: 26725-beta-h1
+    date: 2026-07-25
+    url: https://github.com/emuyia/ems-monomachine-firmware/releases/tag/26725-beta-h1
+    notes: Pre-release hotfix.
+  - version: 26725-beta
+    date: 2026-07-25
+    url: https://github.com/emuyia/ems-monomachine-firmware/releases/tag/26725-beta
+    notes: Pre-release.
+  - version: 26719-beta
+    date: 2026-07-20
+    url: https://github.com/emuyia/ems-monomachine-firmware/releases/tag/26719-beta
+    notes: Pre-release.

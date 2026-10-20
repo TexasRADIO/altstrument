@@ -1,0 +1,31 @@
+device: elektron-octatrack
+name: OctaChainer 2
+kind: tool
+summary: Desktop app and VST3 plug-in that joins audio files into one chain and writes the matching slice file for the Octatrack, and for other samplers.
+description: >-
+  A JUCE rewrite of the original Qt-based OctaChainer, which its author has
+  abandoned in favour of this version. It combines several audio files into one
+  long WAV and writes the .ot slice file the Octatrack reads, so each source file
+  becomes a slice. It is released as a standalone application for Windows and
+  macOS and as a VST3 plug-in for hosts that support drag and drop of files out
+  of a plug-in. The original OctaChainer repository (KaiDrange/OctaChainer) is
+  marked as replaced by this one.
+status: active
+authors:
+  - name: Kai Drange
+    url: https://github.com/KaiDrange
+source: https://github.com/KaiDrange/OctaChainer2
+source_status: open
+license: GPL-3.0-only
+license_notes: README states the GNU General Public License v3.0; no "or later" wording.
+homepage: https://ticticelectro.com/2017/08/26/octachainer-v1-3/
+distribution: download
+install_notes: >-
+  Download the release for your platform from the GitHub releases page, or build
+  with CMake and JUCE using the presets in the README. The homepage is the page
+  for the original OctaChainer 1.3.
+tags: [utility, samples, converter, sampler]
+versions:
+  - version: v2.0.0
+    date: 2026-08-05
+    url: https://github.com/KaiDrange/OctaChainer2/releases/tag/v2.0.0

@@ -1,0 +1,32 @@
+device: teenage-engineering-op-1-field
+name: te-op1
+kind: tool
+summary: Patch file format reference for the OP-1 Field with mondo, a C toolkit that dumps, builds, checks and sorts patch files and backs up or restores the device on Windows, plus a web patch library and editor.
+description: >-
+  Documents the OP-1 Field preset .aif format and its knob layouts, and ships
+  mondo, a single-source C program with subcommands to dump a patch to JSON,
+  build a loadable .aif from JSON, test a file against the format, diff two
+  patches, tag and sort them, and wrap audio as a sampler patch. On Windows,
+  mondo can also copy files to a connected OP-1 and pull or push a full device
+  project folder. The same repository contains the source of a web patch
+  library and in-browser patch editor. Written against OP-1 Field firmware 1.7.3,
+  so it targets the OP-1 Field rather than the original OP-1.
+status: active
+authors:
+  - name: Justin (jstnfst)
+    url: https://github.com/jstnfst
+source: https://github.com/jstnfst/te-op1
+source_status: open
+license: unspecified
+homepage: https://te-op1.pages.dev/
+distribution: source-only
+install_notes: >-
+  Build mondo with build.bat (MSVC) or the repository's master-control.sh build
+  script. The device-copy and backup subcommands are Windows only; the OP-1
+  Field appears over USB as an MTP device.
+tags: [research, converter, editor, librarian, web]
+versions:
+  - version: main @ cc73d1b
+    date: 2026-10-19
+    url: https://github.com/jstnfst/te-op1/commit/cc73d1b
+    notes: No tagged releases; this is the latest commit.

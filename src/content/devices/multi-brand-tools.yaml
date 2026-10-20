@@ -1,0 +1,20 @@
+name: Multi-brand synth tools
+manufacturer: Multi-brand
+category: tools
+tagline: Librarians and editors that cover synths from many manufacturers
+description: >-
+  This entry groups host-side software that backs up, organises or edits patches
+  for synths from many different makers, rather than for one device or one
+  manufacturer. It currently lists the KnobKraft Orm MIDI SysEx librarian, whose
+  per-synth support is written as Python adaptations. Software that covers
+  several instruments of a single maker is listed on that maker's own cross-device
+  tools page.
+links:
+  community:
+    - label: KnobKraft documentation
+      url: https://knobkraft.com/docs/
+notes: >-
+  No replacement firmware is listed here. The tools exchange patch data with the
+  stock operating system over MIDI SysEx. Tools for one instrument, or for one
+  manufacturer's range, are on that device's or manufacturer's page.
+related: []

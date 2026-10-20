@@ -1,0 +1,35 @@
+device: akai-mpc-live
+name: akai_standalone_remap
+summary: "LD_PRELOAD shim that remaps the hardware buttons of a rooted MPC or Force: open any screen from any button, with double taps, long presses and Shift layers defined in a text config."
+description: >-
+  A library, hwremap.so, that sits between the MPC application and its
+  hardware controller and rewrites the MIDI stream so that a press of a
+  chosen button is replaced by other buttons, pads or a touchscreen tap.
+  Rules live in /sdcard/hwremap.conf, which is re-read when it changes.
+  Example configs are included for an MPC Live (Pad Bank and plus/minus
+  buttons open Mode Menu icons) and a Force (double-press Mixer for Master,
+  Knobs shortcuts). The author tested it on a first-generation MPC Live on
+  3.9.1 and a Force on 3.9.0. Written in C with host tests and a Docker
+  cross-build; the first commit is from October 2026.
+status: active
+authors:
+  - name: Misha Miroshnikov
+    url: https://github.com/mmiroshnikov
+source: https://github.com/mmiroshnikov/akai_standalone_remap
+source_status: open
+license: MIT
+homepage: https://github.com/mmiroshnikov/akai_standalone_remap
+distribution: source-only
+requires_stock: MPC 3.9.1 (Live, first generation); Force 3.9.0
+install_notes: >-
+  Needs root SSH access to the unit. Build hwremap.so with the included
+  Docker script, copy it to the device, remount the root filesystem
+  read-write and append it to the LD_PRELOAD lines of /usr/bin/az01-launch-MPC
+  (the README tells you to keep a backup of that file). Restarting the app to
+  load a new library closes the open project. Config edits need no restart.
+tags: [midi, ui, utility]
+versions:
+  - version: main @ 9d2aa57
+    date: 2026-10-05
+    url: https://github.com/mmiroshnikov/akai_standalone_remap/commit/9d2aa57a570b0c4788f88b04ca242bb82176c380
+    notes: No tagged releases; this is the latest commit.

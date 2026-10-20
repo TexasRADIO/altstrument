@@ -1,0 +1,14 @@
+name: MicroBrute
+manufacturer: Arturia
+category: synth
+tagline: Monophonic analog synth with a step sequencer and a modulation matrix
+description: >-
+  The MicroBrute is a compact monophonic analog synthesizer from Arturia. It has one analog oscillator
+  with Ultra Saw and Metalizer wave shaping, a Steiner-Parker multimode filter, a modulation matrix with
+  patch cables, and a mini-keyboard with a sequencer of up to 64 steps. It has USB MIDI, a 5-pin DIN
+  MIDI input and CV connections.
+links:
+  manufacturer: https://www.arturia.com/products/hardware-synths/microbrute/overview
+notes: >-
+  No replacement firmware exists. The entries here are host-side tools that send settings and sequences
+  to the stock firmware over USB MIDI and SysEx.

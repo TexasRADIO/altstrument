@@ -1,0 +1,29 @@
+device: novation-circuit-tracks
+name: ctpatch
+kind: tool
+summary: Python module that reads, edits and writes Circuit Tracks synth patch SysEx (.syx) files as typed objects, and can send patches to the device.
+description: >-
+  Parses a single-patch SysEx file into dataclasses covering the patch name,
+  voice, oscillators, mixer, filter, envelopes, LFOs, effects and modulation
+  matrix, so patches can be changed or generated from a script. An example
+  script shows reading a patch, changing it, writing it back and sending it
+  to the device. It needs Python 3.10 or newer. The last commit is from
+  September 2023.
+status: dormant
+authors:
+  - name: Martin Stone
+    url: https://github.com/martin-stone
+source: https://github.com/martin-stone/ctpatch
+source_status: open
+license: MIT
+homepage: https://github.com/martin-stone/ctpatch#readme
+distribution: source-only
+install_notes: >-
+  Copy ctpatch.py next to your script and see example.py for reading, modifying,
+  writing and sending patches. No package or releases are published.
+tags: [python, sysex, editor, utility]
+versions:
+  - version: main @ 4a302dc
+    date: 2023-09-08
+    url: https://github.com/martin-stone/ctpatch/commit/4a302dcafd151f21a07a6739241d39ca577c5817
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,36 @@
+device: akai-mpc2000
+name: akaifat
+kind: tool
+summary: C++ library that reads and writes the Akai FAT12/FAT16 disk format with 16.3 file names used by the MPC60, MPC2000 and MPC2000XL, including disk images.
+description: >-
+  Akai's disks are FAT volumes whose directory entries carry extra filename
+  characters that ordinary DOS or VFAT drivers ignore. The library treats the
+  FAT allocation codec and the Akai name handling as separate parts and exposes
+  a file-system and block-device API, with an image-file block device. It also
+  accepts the 800 KiB MPC60 disk profile. It is not a generic FAT API, and
+  formatting still creates FAT16 volumes. Maintained by the author of the
+  VMPC2000XL emulator, whose release numbers its tags follow.
+status: active
+authors:
+  - name: Izmar Verhage
+    url: https://github.com/izzyreal
+source: https://github.com/izzyreal/akaifat
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSE is the GPL version 3 text; neither the README nor the sources say
+  "or later".
+distribution: source-only
+install_notes: >-
+  Build with CMake and link it into your own program; it has no command-line
+  tool or installer.
+tags: [sdk, utility, converter]
+versions:
+  - version: vmpc-0.9.19
+    date: 2026-09-27
+    url: https://github.com/izzyreal/akaifat/tree/vmpc-0.9.19
+    notes: Git tag; no GitHub release page.
+  - version: vmpc-0.9.18
+    date: 2026-09-11
+    url: https://github.com/izzyreal/akaifat/tree/vmpc-0.9.18
+    notes: Git tag; no GitHub release page.

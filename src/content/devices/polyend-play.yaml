@@ -1,0 +1,17 @@
+name: Play
+manufacturer: Polyend
+category: groovebox
+tagline: Sample-based groovebox with eight audio and eight MIDI tracks
+description: >-
+  The Play is a standalone sample-based groovebox and MIDI controller from
+  Polyend. It has eight audio tracks and eight polyphonic MIDI tracks for
+  outboard gear, with a pad grid for placing samples and steps and a performance
+  mode for changing playback on the fly. It has a stereo output, MIDI in and
+  out, USB-C and a microSD card that holds projects and samples.
+links:
+  manufacturer: https://polyend.com/play/
+notes: >-
+  No replacement firmware is known for the Play. The one entry here is a
+  host-side library that reads the project files the device stores on its
+  microSD card.
+related: [polyend-tracker]

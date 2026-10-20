@@ -1,0 +1,16 @@
+name: TR-8S
+manufacturer: Roland
+category: drum-machine
+tagline: Rhythm performer with 808, 909 and sample-based sounds
+description: >-
+  The TR-8S is a drum machine from Roland with eleven instruments, 128 pattern
+  slots and eight variations per pattern. It combines drum sounds modelled on
+  the TR-808 and TR-909 with sample playback, and connects over USB for audio
+  and MIDI. Roland's AIRA website can transfer kits and patterns to the unit
+  over SysEx.
+links:
+  manufacturer: https://www.roland.com/global/products/tr-8s/
+notes: >-
+  No replacement firmware exists. The entry here is a host-side studio that
+  talks to the stock operating system over a reverse-engineered SysEx layer.
+related: []

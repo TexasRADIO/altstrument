@@ -1,0 +1,36 @@
+device: roland-boutique
+name: boutique-control
+kind: tool
+summary: C++ command-line utility for macOS that turns the SysEx messages a Boutique module sends for its sliders and knobs into ordinary MIDI CC, and the other way round, via virtual MIDI ports.
+description: >-
+  Boutique modules report panel moves as SysEx rather than as control changes.
+  boutique-control connects to a module's MIDI input and output, creates a
+  virtual "Boutique Control" port pair for a DAW, and translates in both
+  directions. An optional second input lets an external controller drive the
+  module directly. The command line selects the JX-03, JP-08 or JU-06. The
+  README notes that sliders and knobs are only sent when Chain Mode is on, and
+  describes the tool as unfinished.
+status: dormant
+authors:
+  - name: drew harris
+    url: https://github.com/drewbharris
+source: https://github.com/drewbharris/boutique-control
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README states "GPLv3" and there is no LICENSE file; no "or later"
+  wording was found. The bundled RtMidi library carries its own license.
+distribution: source-only
+requires_stock: JX-03, JP-08 or JU-06
+install_notes: >-
+  The Makefile builds against CoreMIDI, so it targets macOS. List the ports
+  with --list, then run it with --input, --output and --device. Do not enable
+  monitoring on the DAW channel, because the modules echo MIDI input back and
+  that creates a feedback loop.
+brick_risk: false
+tags: [midi, sysex, utility, converter]
+versions:
+  - version: 0.0.1
+    date: 2016-03-15
+    url: https://github.com/drewbharris/boutique-control/releases/tag/0.0.1
+    notes: Pre-release; the release notes say it "kinda works".

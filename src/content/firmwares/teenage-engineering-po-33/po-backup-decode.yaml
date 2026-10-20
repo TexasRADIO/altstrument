@@ -1,0 +1,30 @@
+device: teenage-engineering-po-33
+name: po-backup-decode
+kind: tool
+summary: Single-file Python tool that demodulates a PO-33 sound and pattern transfer recording and writes out the packets, raw sample bytes, patterns, tempo and audition WAV files.
+description: >-
+  The tool reads a stereo WAV of a PO-33 transfer, calibrates the symbol clock,
+  checks every packet CRC and refuses to write anything if the transfer is
+  damaged. Its output includes the configuration payloads, the 16 pattern
+  payloads and the audio objects, which it also converts to one WAV per slot or
+  pad. The README separates what was verified (the transport, the raw audio
+  bytes, the tempo) from what is inferred, and notes that the pattern note
+  layout is not mapped. It decodes only; it cannot send data to the device.
+status: active
+authors:
+  - name: Daniel Pradilla
+    url: https://github.com/danielpradilla
+source: https://github.com/danielpradilla/po-backup-decode
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Needs Python 3.9 or newer and NumPy. Run po33_decode.py with a transfer WAV
+  and an output folder that does not exist yet, or install it as the po33-decode
+  command with pipx. Running it with no arguments performs its self-checks.
+tags: [research, converter, samples, python]
+versions:
+  - version: main @ 782337e
+    date: 2026-09-29
+    url: https://github.com/danielpradilla/po-backup-decode/commit/782337e
+    notes: No tagged releases; this is the latest commit.

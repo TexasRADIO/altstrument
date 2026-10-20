@@ -1,0 +1,42 @@
+device: ableton-move
+name: "303"
+summary: >-
+  Schwung sound generator that models a TB-303 bass synth with the Open303 engine, Devilfish-style
+  modifications and two drive models, played from any MIDI source.
+description: >-
+  The module is a monophonic acid bass voice built on Robin Schmidt's Open303 engine, with the Devilfish
+  extensions taken from the jc303 plug-in: separate normal and accent decay, a feedback high-pass filter, soft
+  attack, longer slide time and a pre-filter shaper. A Soft tanh drive and a port of the dm-Rat distortion
+  follow it, with a mix control. It has no sequencer of its own. A note with velocity of 100 or more triggers
+  the accent, and a note that starts before the previous one ends is played as a slide. The README presents it
+  as a port rather than original DSP, and names schwung-tb3po as a companion pattern generator.
+status: maintained
+authors:
+  - name: Charles Vestal
+    url: https://github.com/charlesvestal
+source: https://github.com/charlesvestal/schwung-303
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file says version 3 of the GPL only, inherited from jc303 and dm-Rat. The Open303 engine in
+  src/dsp/open303 keeps its own MIT licence.
+homepage: https://github.com/charlesvestal/schwung-303#readme
+distribution: download
+requires_stock: Schwung installed on the Move, with SSH access enabled
+install_notes: >-
+  Needs Schwung. Install 303 from Schwung's Module Store, or build it from source with the repository's build
+  and install scripts, which copy it to the Move over SSH.
+brick_risk: false
+tags: [synth-engine, synth, emulator]
+versions:
+  - version: v0.3.3
+    date: 2026-08-31
+    url: https://github.com/charlesvestal/schwung-303/releases/tag/v0.3.3
+    notes: Corrects the help text, which wrongly described knobs 7 and 8 in v0.3.2.
+  - version: v0.3.2
+    date: 2026-08-31
+    url: https://github.com/charlesvestal/schwung-303/releases/tag/v0.3.2
+    notes: Superseded by v0.3.3, which fixes an error in its knob help.
+  - version: v0.3.1
+    date: 2026-08-29
+    url: https://github.com/charlesvestal/schwung-303/releases/tag/v0.3.1

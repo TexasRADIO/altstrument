@@ -1,0 +1,34 @@
+device: teenage-engineering-op-1
+name: teoperator
+kind: tool
+summary: Go command-line program and web server that turn audio files into OP-1 and OP-Z drum and synth patches, with the key and slice metadata written into the .aif.
+description: >-
+  Converts wav, aif, mp3 or flac input to the mono 44.1 kHz .aif patch format
+  and writes the metadata the OP-1 and OP-Z read. Subcommands build sample-based
+  synth patches with an optional base frequency, drum kits from several files,
+  drum patches sliced at detected transients, and loop patches cut into equal
+  slices. A built-in web server offers the same conversion in a browser, and the
+  author's write-up explains the reverse-engineered patch metadata.
+status: dormant
+authors:
+  - name: Zack Scholl (schollz)
+    url: https://github.com/schollz
+source: https://github.com/schollz/teoperator
+source_status: open
+license: MIT
+homepage: https://teoperator.com
+distribution: source-only
+install_notes: >-
+  Needs ffmpeg. Install with the Go toolchain as the README describes, or use the
+  hosted page. The GitHub releases carry no attached binaries.
+tags: [samples, converter, drums, sampler, web]
+versions:
+  - version: v1.3.5
+    date: 2022-11-15
+    url: https://github.com/schollz/teoperator/releases/tag/v1.3.5
+  - version: v1.3.4
+    date: 2022-11-15
+    url: https://github.com/schollz/teoperator/releases/tag/v1.3.4
+  - version: v1.3.3
+    date: 2021-08-06
+    url: https://github.com/schollz/teoperator/releases/tag/v1.3.3

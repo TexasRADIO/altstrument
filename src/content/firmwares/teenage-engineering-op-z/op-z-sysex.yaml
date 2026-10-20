@@ -1,0 +1,32 @@
+device: teenage-engineering-op-z
+name: OP-Z SysEx
+kind: tool
+summary: Unofficial documentation and a Python package for the OP-Z's app SysEx protocol, StateSync, file transfer and project-global format, with command-line tools for queries, project edits and sampler file preparation.
+description: >-
+  The repository documents the OP-Z's SysEx frames, the handshake, live state
+  messages, the file-transfer sessions and the layout of the project-global
+  state, marking each claim as device-proven, decoded, observed, inferred or
+  unknown. The opzsysex package builds and parses these frames using only the
+  Python standard library, with optional live MIDI access through mido. Tools
+  in the repository decode frames, run read-only queries, edit saved project
+  data offline, build file-transfer manifests and prepare AIFF samples for the
+  sampler. It contains no stock projects, audio or firmware.
+status: active
+authors:
+  - name: Kevin Morrill
+    url: https://github.com/kmorrill
+source: https://github.com/kmorrill/op-z-sysex
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Install with pip from a clone; the device extra adds mido and python-rtmidi
+  for live MIDI. The author warns that malformed writes can corrupt a project,
+  and recommends a backup, a disposable project and a readback after every
+  write.
+tags: [sysex, research, midi, python]
+versions:
+  - version: main @ 2a54390
+    date: 2026-08-29
+    url: https://github.com/kmorrill/op-z-sysex/commit/2a54390
+    notes: No tagged releases; this is the latest commit.

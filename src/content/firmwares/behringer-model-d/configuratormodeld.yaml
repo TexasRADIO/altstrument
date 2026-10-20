@@ -1,0 +1,47 @@
+device: behringer-model-d
+name: ConfiguratorModelD
+kind: tool
+summary: Qt desktop app that sends the Model D's MIDI SysEx settings (MIDI channel, key priority, pitch bend range, Poly Chain and more) from a window of controls.
+description: >-
+  Several Model D settings are changed by SysEx messages rather than from the
+  panel. ConfiguratorModelD puts them in a small window: pitch bend range and
+  mode, key priority, transpose, modulation curve, multi trigger, MIDI channel
+  and channel switches, the MIDI note that gives zero volts, and the Poly
+  Chain on/off, style and ID. The app can only write values; it cannot read
+  them back from the synth, so the values it shows at start-up may differ from
+  what the unit holds. Release 0.4 added the settings that arrived with Model
+  D firmware 1.0.6. The program is built with Qt and the QMidi library.
+status: dormant
+authors:
+  - name: masc4ii
+    url: https://github.com/masc4ii
+source: https://github.com/masc4ii/ConfiguratorModelD
+source_status: open
+license: GPL-3.0-only
+license_notes: The LICENSE file holds the GPL-3.0 text; no "or later" wording was found in the README or source headers.
+homepage: https://github.com/masc4ii/ConfiguratorModelD
+distribution: download
+install_notes: >-
+  Releases carry builds for macOS and Windows; on Linux, or to build it
+  yourself, open the .pro file in Qt Creator (Qt 5.6 or newer). Connect the
+  Model D by USB or MIDI, choose the port named MODEL D, change the values and
+  send them. The app only sends settings and does not touch the synth's
+  firmware.
+brick_risk: false
+tags: [editor, sysex, midi, utility, open-source]
+versions:
+  - version: v0.4
+    date: 2018-06-26
+    url: https://github.com/masc4ii/ConfiguratorModelD/releases/tag/v0.4
+    notes: Adds the settings introduced with firmware 1.0.6.
+  - version: v0.3
+    date: 2018-02-08
+    url: https://github.com/masc4ii/ConfiguratorModelD/releases/tag/v0.3
+    notes: All parameters listed in the Model D manual; high-resolution display support.
+  - version: v0.2
+    date: 2018-02-03
+    url: https://github.com/masc4ii/ConfiguratorModelD/releases/tag/v0.2
+    notes: First Windows build.
+  - version: v0.1
+    date: 2018-02-02
+    url: https://github.com/masc4ii/ConfiguratorModelD/releases/tag/v0.1

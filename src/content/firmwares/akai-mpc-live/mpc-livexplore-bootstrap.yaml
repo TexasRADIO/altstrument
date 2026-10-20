@@ -1,0 +1,40 @@
+device: akai-mpc-live
+name: MPC-LiveXplore bootstrap
+summary: "Boot-time scripts for SSH-enabled MPCs and the Force: a folder on an SD card or USB stick that starts modules before the MPC application, including network MIDI, VNC, screen streaming and the IamForce2 launcher."
+description: >-
+  A shell-script framework that runs from a folder named
+  tkgl_bootstrap_[ProjectData] on an SD card or USB stick, started by an
+  MPC-LiveXplore SSH image before the MPC application launches. Modules are
+  switched on in a doer_list file. The README lists modules for RTP-MIDI over
+  Ethernet, a VNC server, screen streaming and framebuffer redirection with
+  ffmpeg, an intro video, SMB network shares, a custom arpeggio pattern
+  overlay, stopping SSH during a performance, and the IamForce2 launcher that
+  runs Force software on an MPC. New modules follow a fixed directory and
+  script naming scheme. The repository also carries compiled helper binaries
+  and libraries; its last commit is 2023-11-30.
+status: dormant
+authors:
+  - name: TheKikGen (Franck Touanen)
+    url: https://github.com/TheKikGen
+source: https://github.com/TheKikGen/MPC-LiveXplore-bootstrap
+source_status: open
+license: unspecified
+license_notes: >-
+  No license file. The repository bundles third-party binaries and libraries
+  (ffmpeg, curl, Samba parts and others) under their own terms.
+homepage: https://github.com/TheKikGen/MPCLiveXplore-libs/wiki
+distribution: download
+requires_stock: An MPC-LiveXplore SSH image
+install_notes: >-
+  Update the unit with an SSH and bootstrap image from MPC-LiveXplore, then
+  copy the tkgl_bootstrap_[ProjectData] folder to the root of an SD card or
+  USB stick (ext4 recommended) and list the modules to start in doer_list.
+  If the unit hangs at boot, remove the card and restart; logs are written to
+  the logs folder on the card. The README also links ready-made bootstrap
+  card images.
+tags: [research, loader, utility]
+versions:
+  - version: main @ a2d77eb
+    date: 2023-11-30
+    url: https://github.com/TheKikGen/MPC-LiveXplore-bootstrap/commit/a2d77eb7a7c91981fcccb9910c7bd2de31086357
+    notes: No tagged releases; this is the latest commit.

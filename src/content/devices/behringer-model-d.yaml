@@ -1,0 +1,16 @@
+name: Model D
+manufacturer: Behringer
+category: synth
+tagline: Monophonic analog synth modelled on the Minimoog Model D
+description: >-
+  The Model D is a monophonic analog synthesizer from Behringer, modelled on
+  the Minimoog Model D. It has three oscillators, a noise source, a 24 dB
+  ladder filter and a triangle/square LFO, and comes as a desktop unit that
+  can also be fitted into a Eurorack case. It has MIDI and USB MIDI ports and
+  CV and gate jacks, and up to sixteen units can be chained for polyphony.
+links:
+  manufacturer: https://www.behringer.com/en/products/0718-AAC
+  community: []
+notes: >-
+  No replacement firmware is known for the Model D. The entry here is a
+  host-side configurator that writes settings to the synth over MIDI SysEx.

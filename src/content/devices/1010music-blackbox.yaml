@@ -1,0 +1,20 @@
+name: Blackbox
+manufacturer: 1010music
+category: sampler
+tagline: Compact touchscreen sampling studio
+description: >-
+  The Blackbox is a compact sampler and sequencer from 1010music with a
+  touchscreen. It records and plays samples from a microSD card, streaming long
+  files up to 4 GB, and has one stereo input, three stereo outputs and a
+  headphone output. Pads can be sliced, multisampled and sent through delay and
+  reverb, and sequences can be arranged into songs with MIDI in, out and clock
+  over USB and TRS.
+stock_firmware: 3.1.9
+links:
+  manufacturer: https://1010music.com/product/blackbox
+notes: >-
+  This entry is for the original Blackbox, not the later Blackbox 2. The mods
+  here patch a stock 3.1.9 image that you download from 1010music yourself and
+  are installed the same way as an official update, so flashing the stock image
+  again restores a stock unit.
+related: [1010music-bitbox-micro, 1010music-bluebox]

@@ -1,0 +1,42 @@
+device: akai-mpc-live
+name: Plugin Manager for MPC
+summary: VST2 plugin that works as an app on the MPC screen, listing the mpc-vst-plugins catalog and installing, updating and removing plugins and addins with one MPC restart per batch.
+description: >-
+  Loads as an instrument plugin but shows a store-style interface: tabs for
+  plugins to discover, installed ones and available updates, with filters,
+  sorting, search, a details page and release notes for each plugin. Queued
+  changes are downloaded and checked against their SHA-256 sums first, then
+  applied by stopping MPC, running each package's own install or uninstall
+  script and starting MPC again. Addins, libraries that MPC loads at start, are
+  handled the same way. It reads the catalog over HTTPS and takes install
+  locations from the device's settings file. Tested on an MPC One and an MPC
+  Key 37 running MPC OS 3.9.1; the Force and the other first-generation
+  models are expected to work but are untested. Second-generation 64-bit
+  devices are not supported yet.
+status: active
+authors:
+  - name: poloq-instruments
+    url: https://github.com/poloq-instruments
+source: https://github.com/poloq-instruments/mpc-vst-manager
+source_status: open
+license: MIT
+license_notes: The built plugin includes the mpc-vst-plugins VST2 wrapper, also MIT.
+distribution: download
+requires_stock: MPC OS 3.x
+install_notes: >-
+  Install the release zip like any catalog plugin: copy it to the device over
+  root SSH and run its install.sh. The device needs internet access to reach
+  the catalog. Applying changes restarts MPC, so save the project first.
+  Installing plugins this way is unofficial and needs a modded unit.
+tags: [loader, utility, platform, ui]
+versions:
+  - version: v1.2.0
+    date: 2026-10-11
+    url: https://github.com/poloq-instruments/mpc-vst-manager/releases/tag/v1.2.0
+    notes: Details page, search, filter and sort menus, restart prompt.
+  - version: v1.1.0
+    date: 2026-10-05
+    url: https://github.com/poloq-instruments/mpc-vst-manager/releases/tag/v1.1.0
+  - version: v1.0.1
+    date: 2026-10-05
+    url: https://github.com/poloq-instruments/mpc-vst-manager/releases/tag/v1.0.1

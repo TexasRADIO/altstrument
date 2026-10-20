@@ -16,10 +16,11 @@ links:
     - label: DOOM OS manual
       url: https://klangfeldlabs.com/doom-os/manual/
 notes: >-
-  Both entries here are layers on top of Roland's own system rather than
-  replacements for it. DOOM OS is built by patching the official 5.52 update
-  file in your browser, and running the updater with Roland's original file
-  restores stock.
+  The custom firmware here is a layer on top of Roland's own system rather than a
+  replacement for it. DOOM OS and its fork are built by patching the official 5.52
+  update file in your browser, and running the updater with Roland's original file
+  restores stock. The host-side tools (open404, SparkyMK2, sp404mk2-tools) talk to
+  the unit over USB or read its project files and do not change the firmware.
 image:
   src: /images/devices/roland-sp-404-mkii.jpg
   style: photo

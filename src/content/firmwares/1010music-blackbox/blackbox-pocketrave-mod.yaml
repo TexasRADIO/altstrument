@@ -1,0 +1,49 @@
+device: 1010music-blackbox
+name: Blackbox PocketRave mod
+summary: Patcher that turns your own Blackbox 3.1.9 image into a clip launcher with per-clip step counts, trig conditions, fills, MIDI-controlled FX sends and clip colours.
+description: >-
+  An unofficial mod for the original Blackbox that boots into the sequence
+  screen and adds a launcher of eight columns by five rows with quantised
+  launches. Each clip has its own step length and step count, so polyrhythms are
+  possible, and step lengths go down to 1/128. The piano roll gains Elektron-style
+  trig conditions and a fill mode, a page of per-pad delay and reverb send
+  levels that MIDI CCs can control, and clips can be given a colour and a short
+  label. MIDI notes select presets and launch or stop columns. The mod is
+  generated as Thumb-2 machine code by Python scripts, and releases are diff-only
+  patches. It has been tested on one unit, according to the README.
+status: active
+authors:
+  - name: pocketrave
+    url: https://github.com/pocketrave
+source: https://github.com/pocketrave/blackbox
+source_status: open
+license: MIT
+license_notes: Third-party material (the Spleen font, BSD-2-Clause) is listed in THIRD_PARTY.md. 1010music's firmware is not included.
+homepage: https://pocketrave.live/#/projects/blackbox
+distribution: patch-your-own
+requires_stock: 3.1.9
+install_notes: >-
+  Download the stock 3.1.9 firmware from 1010music, patch BLACKBOX.bin in the
+  browser patcher or with apply.py, copy the result to the root of the microSD
+  card as BLACKBOX.bin and boot holding A and B so the update runs. The splash
+  screen then shows 3.1.9 followed by the mod release number. Keep the stock
+  file; installing it the same way goes back to stock.
+brick_risk: false
+tags: [sequencer, performance, midi, ui]
+versions:
+  - version: v070
+    date: 2026-10-14
+    url: https://github.com/pocketrave/blackbox/tree/v070
+    notes: Git tag; no GitHub release page. Adds per-clip colour and label. Date is the tagged commit's date.
+  - version: v064
+    date: 2026-10-08
+    url: https://github.com/pocketrave/blackbox/tree/v064
+    notes: Git tag; no GitHub release page. Adds the FX send page and MIDI CC with Learn for the pad sends.
+  - version: v057
+    date: 2026-10-06
+    url: https://github.com/pocketrave/blackbox/tree/v057
+    notes: Git tag; no GitHub release page. Adds trig conditions and FILL.
+  - version: v052
+    date: 2026-10-05
+    url: https://github.com/pocketrave/blackbox/tree/v052
+    notes: Git tag; no GitHub release page.

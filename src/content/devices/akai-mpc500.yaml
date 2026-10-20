@@ -15,11 +15,14 @@ links:
       url: https://m45k.github.io/open500/
 notes: >-
   Open500 only adds a small loader to the OS file you supply. The bootloader
-  is never touched, so flashing the original OS removes it.
+  is never touched, so flashing the original OS removes it. MPC Maid, a
+  Java program editor listed under the MPC1000 / 2500 device, also supports
+  the MPC500's 12-pad layout.
 related:
   - akai-mpc-live
   - akai-mpc1000
   - akai-mpc2000
+  - akai-mpc3000
   - akai-force
 image:
   src: /images/devices/akai-mpc500.webp

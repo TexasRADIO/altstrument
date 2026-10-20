@@ -17,11 +17,14 @@ links:
     - label: SuperFreaker compatibility table
       url: https://freakierfirmware.com/compatibility/
 notes: >-
-  The only custom firmware found, SuperFreaker, supports official firmware
-  5.0.0.2084 and nothing newer; its patcher rejects any other file, and its
-  authors advise not updating the official firmware until a newer version is
-  listed as ported. Modified builds are loaded through Arturia MIDI Control
+  The custom firmware here (SuperFreaker, freakpatch and FreakSwap) supports
+  official firmware 5.0.0.2084 and nothing newer; the patchers reject any other
+  file, and the SuperFreaker authors advise not updating the official firmware
+  until a newer version is listed as ported. Modified builds are loaded through Arturia MIDI Control
   Center's force upgrade, and the same step restores the official file.
+  Host-side preset, wavetable and sample tools for the stock firmware are listed
+  alongside it.
+related: [arturia-minifreak]
 image:
   src: /images/devices/arturia-microfreak.jpg
   style: photo

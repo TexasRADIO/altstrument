@@ -1,0 +1,54 @@
+device: roland-sp-404-mkii
+name: Sound Generator + Kits (doom-os-etc)
+summary: Fork of DOOM OS 0.6.1 for the SP-404MKII, built by a browser patcher from your own 5.52 update file. Adds a four-voice Sound Generator with extra waveforms, envelopes, scales and an arpeggiator, plus thirteen synthesized drum machine kits.
+description: >-
+  Keeps DOOM OS 0.6.1 (build ED5E) as its base and adds work by tracelistener on
+  top. The Sound Generator has four live voices, 17 added waveforms, nine envelope
+  presets, 34 scales, an arpeggiator and MIDI input on all voices. The kits mode
+  models thirteen drum machines, among them TR-808, TR-909, TR-606, CR-78 and
+  TR-707, as independent synthesized voices rather than recovered Roland data. It
+  adds external MIDI control, a BOUNC function that writes a kit into a sample bank,
+  drum recording, and use of the kits on the RESAMPLE and LOOPER screens. The README
+  says the latest build is checked in an emulator and was only partly tested on
+  hardware, and that CPU headroom under load is unmeasured. The patcher builds a
+  single release, currently v9.46.
+status: active
+authors:
+  - name: tracelistener
+    url: https://github.com/tracelistener
+  - name: Quintus Oostendorp (Klangfeld Labs)
+    url: https://klangfeldlabs.com
+source: https://github.com/tracelistener/doom-os-etc.
+source_status: open
+license: MIT
+license_notes: >-
+  The repository's LICENSE is the MIT text of Quintus Oostendorp, which applied to
+  DOOM OS up to 0.6.1; upstream DOOM OS moved to a restrictive license at 0.6.2.
+  The Sound Generator and kit additions have no separate license statement. The
+  patcher carries only bytes that differ from Roland's file; no Roland firmware is
+  included.
+homepage: https://tracelistener.github.io/doom-os-etc./
+distribution: patch-your-own
+requires_stock: "5.52"
+install_notes: >-
+  Download Roland's 5.52 system update and load the stock SP404MKII_APP1.bin into
+  the browser patcher, which accepts only the official file and checks the result
+  against published checksums. Use the patched file with Roland's unchanged
+  SP404MKII_APP0.bin: hold SHIFT while powering on and press the VALUE knob. Back
+  up first and keep your known-good update, since running Roland's original update
+  restores stock. The repository's own notes call it experimental.
+brick_risk: true
+tags: [synth-engine, drums, sequencer, fx, midi, os]
+versions:
+  - version: Sound Generator + Kits v9.46
+    date: 2026-10-13
+    url: https://github.com/tracelistener/doom-os-etc./commit/2ff958b289e9ea081721f60626948337998bafc0
+    notes: Adds external MIDI, BOUNC, drum recording to each drum's own length and kits on the RESAMPLE and LOOPER screens.
+  - version: Sound Generator + Kits v9.43
+    date: 2026-10-12
+    url: https://github.com/tracelistener/doom-os-etc./commit/8270db73d10b5eaef5c38f65b959b13842223a0f
+    notes: First published kits build.
+  - version: Sound Generator v9.9.3
+    date: 2026-10-07
+    url: https://github.com/tracelistener/doom-os-etc./commit/ca79c799328ad5fbfaa1f42f1cfbc045fa4e8113
+    notes: Arpeggiator tempo fix; the Sound Generator now inside the kits build.

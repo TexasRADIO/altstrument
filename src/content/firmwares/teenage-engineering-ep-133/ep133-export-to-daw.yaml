@@ -1,0 +1,31 @@
+device: teenage-engineering-ep-133
+name: EP-133 Export to DAW
+kind: tool
+summary: Browser app that reads projects from an EP-133, EP-40 or EP-1320 over WebMIDI, or from a backup file, and exports them as Ableton Live, DAWproject, REAPER, MIDI or FastTracker 2 files with samples.
+description: >-
+  Reads a project over WebMIDI, or from a .pak or .ppak backup dropped into the
+  page, and writes arrangements or session clips for Ableton Live 11.3.35 and
+  later, DAWproject, REAPER, a MIDI file with archived samples, or an XM module.
+  The Ableton export carries sampler envelopes, trim points, play modes, fader
+  parameters and send effects, and can turn a group into a Drum Rack. The page
+  installs as an offline web app. EP-40 support is partial.
+status: active
+authors:
+  - name: Yura V
+    url: https://github.com/phones24
+source: https://github.com/phones24/ep133-export-to-daw
+source_status: open
+license: AGPL-3.0-only
+license_notes: The LICENSE file is the unmodified AGPL v3 text, and the README and package.json carry no "or later" statement.
+homepage: https://ep133-to-daw.cc/
+distribution: browser-installer
+install_notes: >-
+  Open the hosted page in a Chromium-based browser with WebMIDI and connect the
+  device. To run it locally, install with pnpm and start the Vite dev server
+  from a checkout.
+tags: [converter, web, midi, sysex, samples]
+versions:
+  - version: main @ db8f439
+    date: 2026-08-25
+    url: https://github.com/phones24/ep133-export-to-daw/commit/db8f439
+    notes: No tagged releases; this is the latest commit.

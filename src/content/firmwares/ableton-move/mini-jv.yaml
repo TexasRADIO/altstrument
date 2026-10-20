@@ -1,0 +1,46 @@
+device: ableton-move
+name: Mini-JV
+summary: >-
+  Schwung sound generator that emulates the Roland JV-880 with its 192 internal patches and SR-JV80 expansion
+  cards; you supply the ROM files.
+description: >-
+  Mini-JV runs an emulation of the JV-880 based on giulioz's mini-jv880, which in turn builds on the Nuked-SC55
+  emulator. It plays the internal patches and any number of SR-JV80 expansion cards, and edits patch and
+  performance parameters from Move's menus and eight encoder macros, with performances saved to 16 internal
+  slots. The JV-880 ROM dumps are not in the repository: the README asks for version 1.0.0 ROMs, which it says
+  are the only ones that work, and for the expansion card dumps to be copied to the unit. It can run alone or
+  as the sound source in a Schwung signal chain. The README says patch edits cannot yet be saved to the
+  internal bank.
+status: active
+authors:
+  - name: Charles Vestal
+    url: https://github.com/charlesvestal
+source: https://github.com/charlesvestal/schwung-jv880
+source_status: open
+license: proprietary
+license_notes: >-
+  The LICENSE file is the original MAME-style licence inherited from Nuked-SC55 and juce-jv880. It bars
+  selling the code and using it in a commercial product or activity, and requires full source for modified
+  redistributions. It is not an OSI licence and has no SPDX identifier.
+homepage: https://github.com/charlesvestal/schwung-jv880#readme
+distribution: download
+requires_stock: Schwung installed on the Move, with SSH access enabled; JV-880 ROM v1.0.0 files that you supply
+install_notes: >-
+  Needs Schwung and your own ROM files. Install Mini-JV from the Sound Generators section of Schwung's Module
+  Store, then copy jv880_rom1.bin, jv880_rom2.bin, jv880_waverom1.bin, jv880_waverom2.bin and jv880_nvram.bin
+  to the module's roms folder over SSH. Expansion card ROMs go in a roms/expansions subfolder. The ROMs are
+  never part of the repository.
+brick_risk: false
+tags: [emulator, synth-engine, synth]
+versions:
+  - version: v0.6.2
+    date: 2026-10-03
+    url: https://github.com/charlesvestal/schwung-jv880/releases/tag/v0.6.2
+    notes: Fixes an 8 MB memory leak on each load and unload.
+  - version: v0.6.1
+    date: 2026-08-31
+    url: https://github.com/charlesvestal/schwung-jv880/releases/tag/v0.6.1
+    notes: Corrects the documented knob layouts.
+  - version: v0.6.0
+    date: 2026-08-29
+    url: https://github.com/charlesvestal/schwung-jv880/releases/tag/v0.6.0

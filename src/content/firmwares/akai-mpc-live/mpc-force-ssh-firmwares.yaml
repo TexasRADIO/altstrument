@@ -1,0 +1,53 @@
+device: akai-mpc-live
+name: MPC-Force-SSH-Firmwares
+summary: "Akai MPC (first generation) and Force update images with SSH and USB mouse support added, plus the shell script and sources to make them from Akai's own file. Warning: the ready-made images are modified Akai firmware."
+description: >-
+  Rights warning: the ready-made images are Akai's own update images with
+  changes applied, shared through two Google Drive folders linked from the
+  README, and no permission from Akai to redistribute them is stated; the
+  README itself says the original firmware content belongs to inMusic. The
+  changes are small. SSH is switched on, the networking files are copied in from
+  the host, and a library preloaded by the MPC application's systemd service
+  draws a mouse cursor, so a USB mouse can be used on the touchscreen UI. The
+  SSH tooling comes from the MPC-LiveXplore project and the mouse add-on from
+  the MockbaMod community and Amit Talwar. The Drive folders list Force images
+  for 3.7.0, 3.7.1, 3.8.0 and 3.9.0 and first-generation MPC images for 3.7.0,
+  3.7.1 and 3.8.0. The repository itself holds no firmware images; it has
+  patch_firmware.sh, the mpcimg2 packer, the config files and the cursor
+  library sources, so you can patch a stock update yourself. The author says
+  the mouse library was last updated for MPC OS 3.9.0. This entry sits under
+  the MPC Live family; the images also cover the Force.
+status: active
+authors:
+  - name: Jukka Korhonen (bonsaipanda)
+    url: https://github.com/bonsaipanda
+source: https://github.com/bonsaipanda/MPC-Force-SSH-Firmwares
+source_status: patcher-only
+license: Unlicense
+license_notes: >-
+  The repository's LICENSE is the Unlicense. The README says the modifications
+  and scripts are under various open source licenses and that the original
+  firmware content is copyrighted by inMusic and its subsidiaries, so the
+  Unlicense does not cover the Akai software inside the images. The images are
+  hosted on Google Drive, not in the repository, and no permission from Akai
+  to redistribute them is stated.
+homepage: https://github.com/bonsaipanda/MPC-Force-SSH-Firmwares
+distribution: download
+requires_stock: MPC 3.7.0 to 3.8.0 (first generation) or Force 3.7.0 to 3.9.0, matching the image
+install_notes: >-
+  Download the image for your unit from the README's Drive links, copy it to the
+  root of a USB stick or SD card, then in Preferences choose the update button
+  and USB Drive Update. Installing any official Akai update afterwards
+  overwrites the changes. Connect the mouse before boot; the cursor speed and
+  input device are set in /etc/force_cursor.conf. The README warns that
+  deleting or moving system files over SSH can leave the unit unrecoverable and
+  says not to install it before a live show. To avoid the shared images, run
+  patch_firmware.sh from the repository on Linux with Akai's update file; it
+  needs sudo and udisksctl.
+brick_risk: false
+tags: [research, loader, ui]
+versions:
+  - version: main @ 64b1b37
+    date: 2026-06-20
+    url: https://github.com/bonsaipanda/MPC-Force-SSH-Firmwares/commit/64b1b3785270f923549712597d793cfda606463c
+    notes: No tagged releases; this is the latest commit.

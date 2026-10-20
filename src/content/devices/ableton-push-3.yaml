@@ -1,0 +1,29 @@
+name: Push 3 Standalone
+manufacturer: Ableton
+category: groovebox
+tagline: Push 3 with a built-in computer that runs Ableton Live without a laptop
+description: >-
+  Push 3 Standalone is the version of Ableton's Push 3 that contains its own computer. It has an 8 by 8 grid of
+  pressure-sensitive pads, encoders, a touch strip, a colour display, audio, MIDI and CV/gate connections, and runs
+  Ableton Live itself, so sets can be made and played without a laptop. The same hardware also works as a
+  controller for Live on a computer when it is used tethered. The standalone unit runs Ableton's Linux-based
+  AbletonOS on an Intel x86-64 processor.
+platform: Intel x86-64, Linux-based AbletonOS
+stock_firmware: 2.4.3
+links:
+  manufacturer: https://www.ableton.com/en/push/
+  community:
+    - label: Push Hack Discord
+      url: https://discord.gg/8y6aYxy9nU
+    - label: "Ableton Forum: Unlock Push 3"
+      url: https://forum.ableton.com/viewtopic.php?t=248249
+notes: >-
+  Ableton does not support custom code on Push 3 Standalone. Third-party projects use the SSH key page that the
+  unit serves on the local network (push.local/ssh) and warn that this is unsupported and that Push updates can
+  break them. Push Hack states that it must be uninstalled before a Push software update and installed again
+  afterwards, and that an update with the hack still installed can leave the unit stuck with a black screen. The
+  projects point to Ableton's documented recovery methods for Push 3 Standalone as the way back to stock. Most
+  work here adds apps on top of the stock software through the Push Hack framework rather than replacing the
+  operating system. Push 2 and Push 3 used as a tethered controller are not covered by these entries.
+related:
+  - ableton-move

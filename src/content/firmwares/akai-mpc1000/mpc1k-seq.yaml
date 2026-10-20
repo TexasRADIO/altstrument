@@ -1,0 +1,37 @@
+device: akai-mpc1000
+name: mpc1k-seq
+kind: tool
+summary: Command-line Python utility that inspects MPC1000 .SEQ sequence files and batch-edits their audio-track file names, BPM and loop length.
+description: >-
+  Meant for the workflow of keeping one template sequence per speed of a backing
+  track or drum loop. Given a folder of .SEQ files, it can search and replace
+  strings in the file contents, point the audio track at a wav with the same
+  base name, set the BPM or loop length to the values written in the file name,
+  restrict processing to names matching a filter, and show hex values. It was written for files from an MPC1000 running JJOS; the
+  author expects MPC2500 files to work and was unsure about the MPC500. Some
+  example sequence files are in the repository. Self-contained Windows and
+  macOS executables are attached to release v1.2.
+status: dormant
+authors:
+  - name: J0J0 Todos
+    url: https://github.com/JOJ0
+source: https://github.com/JOJ0/mpc1k-seq
+source_status: open
+license: unspecified
+license_notes: No license file or license statement in the repository.
+distribution: download
+install_notes: >-
+  Use the seq.exe or seq executable from release v1.2, or run seq.py with
+  Python 2.7. The README gives steps for Windows, macOS and Linux.
+tags: [python, converter, sequencer, utility]
+versions:
+  - version: v1.2
+    date: 2020-01-17
+    url: https://github.com/JOJ0/mpc1k-seq/releases/tag/v1.2
+    notes: Adds --correct-length and standalone executables.
+  - version: v1.1
+    date: 2018-05-31
+    url: https://github.com/JOJ0/mpc1k-seq/releases/tag/v1.1
+  - version: v1.0
+    date: 2018-04-15
+    url: https://github.com/JOJ0/mpc1k-seq/releases/tag/v1.0

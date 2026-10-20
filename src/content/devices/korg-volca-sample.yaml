@@ -13,6 +13,8 @@ links:
   community:
     - label: Gearspace thread "Volca Sample firmware hack"
       url: https://gearspace.com/board/electronic-music-instruments-and-electronic-music-production/1232112-volca-sample-firmware-hack.html
+    - label: ranzee.com firmware mirror (Beta 7)
+      url: https://ranzee.com/volca-sample-unofficial-firmware/
 notes: >-
   Covers the original (mk1) volca sample. The unofficial firmware installs the
   same way as Korg's own updates and can be overwritten with the official

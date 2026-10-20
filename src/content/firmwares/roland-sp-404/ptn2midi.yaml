@@ -1,0 +1,38 @@
+device: roland-sp-404
+name: ptn2midi
+kind: tool
+summary: >-
+  Python script that exports a pattern from an SP-404SX SD card as a MIDI file plus a SoundFont built from the
+  samples the pattern uses. Warning: the repository bundles an SD card image with Roland's factory samples.
+description: >-
+  Rights warning: the repository includes a 25 MB zipped SD card image that the
+  author made from a card holding Roland's factory samples; it is not covered by
+  the code's license. Given the SD card's root folder, a pattern name such as A1 and a tempo,
+  ptn2midi parses the card's PAD_INFO.BIN and the pattern file, writes a MIDI
+  file with one pitch per sample, and builds a SoundFont containing the trimmed
+  samples so the pattern can be rebuilt in a DAW. The author's write-up lists
+  limits such as a maximum of 12 samples per pattern and mono samples only.
+status: dormant
+authors:
+  - name: Tyler Oderkirk
+    url: https://github.com/TylerOderkirk
+source: https://github.com/TylerOderkirk/ptn2midi
+source_status: open
+license: BSD-2-Clause
+license_notes: >-
+  Covers the repository's LICENSE file. The bundled pysf.py is a SoundFont
+  helper; its opening lines carry no separate license header.
+homepage: http://tyleroderkirk.github.io/ptn2midi/
+distribution: source-only
+requires_stock: SP-404SX
+install_notes: >-
+  Run ptn2midi.py with the SD card path, the pattern name and the tempo.
+  Needs pygame and midiutil; the script is an older Python script and may need
+  small changes on current Python versions. It only reads the card.
+brick_risk: false
+tags: [converter, midi, samples, python]
+versions:
+  - version: master @ 1958f6c
+    date: 2014-07-03
+    url: https://github.com/TylerOderkirk/ptn2midi/commit/1958f6cbbd650506adbe8b35f7c97387bc8f30af
+    notes: No tagged releases; this is the latest commit.

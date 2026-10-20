@@ -1,0 +1,18 @@
+name: EP-40 riddim
+manufacturer: Teenage Engineering
+category: groovebox
+tagline: Pocket riddim composer and sampler
+description: >-
+  The EP-40 riddim is a Teenage Engineering product separate from the EP-133
+  K.O. II, with the same SysEx file protocol and a sibling firmware line. Its
+  firmware adds a loop mode and synth-style sound engines that the K.O. II does
+  not have. Projects and the shared sample library are stored in internal flash
+  and can be read and written over USB MIDI.
+links:
+  manufacturer: https://teenage.engineering/products/ep-40
+notes: >-
+  No replacement firmware exists, and no tool here is written only for the
+  EP-40. The EP-133 K.O. II entries marked as covering the EP-40 (SysEx
+  protocol documentation and tooling, the DAW exporter and the SKU-rewriting
+  flasher) are catalogued under that device.
+related: [teenage-engineering-ep-133]

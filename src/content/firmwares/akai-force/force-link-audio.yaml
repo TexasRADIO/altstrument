@@ -1,0 +1,44 @@
+device: akai-force
+name: Force Link Audio
+summary: "MockbaMod add-on that taps the Force's audio output and publishes it as an Ableton Link Audio channel on the network, leaving the unit standalone with pads lit; a 1.1 package uses the OpenMPC add-in format."
+description: >-
+  An LD_PRELOAD library, forceStream.so, intercepts the ALSA playback calls
+  inside the Force application and forwards each buffer to a separate
+  forceLinkAudio process on localhost, which publishes it as a Link Audio
+  channel that Ableton Live or another receiver on the same network can pick
+  up. Only the stereo main mix is available. The author measures about 20 ms of
+  added latency and describes the rest as receiver buffering. Version 1.0.x
+  installs from the MockbaMod SD card; version 1.1.0 is packaged for OpenMPC's
+  add-in catalog, with network publishing off by default and other MPC
+  hardware unverified. Tested on one machine so far, according to the README.
+status: active
+authors:
+  - name: mac digi
+    url: https://github.com/macdigi
+source: https://github.com/macdigi/force-link-audio
+source_status: open
+license: GPL-2.0-or-later
+license_notes: >-
+  The LICENSE file is GPL version 2; the README states "GPLv2-or-later" and
+  notes that it links Ableton Link under its GPLv2+ option.
+homepage: https://github.com/macdigi/force-link-audio
+distribution: download
+requires_stock: Force 3.x with MockbaMod (1.0.x)
+install_notes: >-
+  For 1.0.x, copy the ForceLinkAudio folder into AddOns on a MockbaMod SD
+  card, run install.sh over SSH and reboot. Do not enable the old add-on and
+  the 1.1 add-in together. manage.sh disables or removes it; the README says
+  nothing is written outside the card and /dev/shm. Building needs Zig and an
+  Ableton Link checkout that includes Link Audio.
+tags: [usb-audio, utility]
+versions:
+  - version: v1.1.0
+    date: 2026-10-14
+    url: https://github.com/macdigi/force-link-audio/releases/tag/v1.1.0
+    notes: OpenMPC add-in package; armv7 zip with checksums.
+  - version: v1.0.1
+    date: 2026-07-28
+    url: https://github.com/macdigi/force-link-audio/releases/tag/v1.0.1
+  - version: v1.0.0
+    date: 2026-07-27
+    url: https://github.com/macdigi/force-link-audio/releases/tag/v1.0.0

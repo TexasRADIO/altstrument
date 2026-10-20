@@ -1,0 +1,35 @@
+device: ableton-push-3
+name: Push Dev Tools
+kind: tool
+summary: >-
+  Research notes and scripts for the Linux system inside Push 3 Standalone: SSH setup, an AbletonOS toolset
+  reference, a cross-compile dev container, a usbmon kernel module and Preferences.cfg reverse engineering.
+description: >-
+  The repository documents how to get a shell on the unit and what AbletonOS contains, and builds extra kernel
+  modules such as usbmon in a dev container so they can be loaded onto the Push. It also holds captured
+  Preferences.cfg files with a PowerShell script that checks whether Live accepts a sideloaded preferences file,
+  and a Max for Live environment note. The author says the material is under construction and may be made obsolete
+  by new Push releases; it is written against Push 2.4.2. It is a research repository that ships scripts, listed
+  as a fence-sitter.
+status: active
+authors:
+  - name: Jordan Guzak
+    url: https://github.com/JGuzak
+source: https://github.com/JGuzak/push-dev-tools
+source_status: open
+license: unspecified
+license_notes: No license file and no license statement in the README.
+homepage: https://github.com/JGuzak/push-dev-tools#readme
+distribution: source-only
+requires_stock: Push software 2.4.2 (Live 12.4.2)
+install_notes: >-
+  Follow the First Time Setup section of the README: add an SSH public key on the unit's page at push.local/ssh
+  and connect as ableton@push.local. The scripts and kernel modules write to the unit over SSH and are unsupported
+  by Ableton. Read the docs for each module before loading it.
+brick_risk: false
+tags: [research, platform, sdk, utility]
+versions:
+  - version: "2.4.2"
+    date: 2026-06-23
+    url: https://github.com/JGuzak/push-dev-tools/releases/tag/2.4.2
+    notes: Release named for Push 2.4.2 / Live 12.4.2; no assets or release notes.

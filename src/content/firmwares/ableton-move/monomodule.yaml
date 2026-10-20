@@ -1,0 +1,49 @@
+device: ableton-move
+name: Monomodule
+summary: >-
+  Schwung port of shnolk's Monomachine emulator: a one-track synth module and an effect module that run the
+  Monomachine's own OS inside an emulated DSP; you download the OS file from Elektron.
+description: >-
+  Monomodule One plays a single Monomachine track with 15 synth machines (GND, SWAVE, SID, DPRO, FM+ and VO-6)
+  and the hardware's synth, amp, filter, effect and LFO pages. Monomodule FX runs the seven effect machines
+  as an audio effect. Both load the Monomachine OS 1.32B SysEx file into an emulated Motorola DSP56300, and
+  the README says it is a free download from Elektron's site and is never included in the repository. The
+  Move port by legsmechanical builds on the desktop plug-in project by shnolk and carries it in a submodule.
+  The releases are marked as test builds for Schwung 1.4.0, and the author asks testers to report the engine's
+  CPU load on their Move. The README says the project is not affiliated with Elektron.
+status: active
+authors:
+  - name: legsmechanical
+    url: https://github.com/legsmechanical
+  - name: shnolk
+    url: https://github.com/shnolk
+source: https://github.com/legsmechanical/schwung-monomodule
+source_status: open
+license: AGPL-3.0-only
+license_notes: >-
+  The LICENSE file is the GNU AGPL version 3 text with no or-later grant in the files read. The README says
+  GPLv3 as upstream and the module metadata says GPL-3.0, while the upstream shnolk/monomodule repository's
+  LICENSE is also AGPL-3.0. The Move port patches and links the dsp56300 emulator, which has its own licence.
+homepage: https://github.com/legsmechanical/schwung-monomodule#readme
+distribution: download
+requires_stock: Schwung 1.4.0, plus the Monomachine OS 1.32B file from Elektron
+install_notes: >-
+  Needs Schwung 1.4.0. Download the monomodule-one and monomodule-fx tarballs from a release, install each with
+  Install from File in Schwung's web manager, download Elektron_SFX6-60_OS1.32B.zip from Elektron's site, unzip
+  it and upload the .syx file on Monomodule One's module page, then restart the Move. One upload serves both
+  modules. The releases are pre-releases.
+brick_risk: false
+tags: [emulator, synth-engine, fx]
+versions:
+  - version: v0.1.0-test.5
+    date: 2026-09-28
+    url: https://github.com/legsmechanical/schwung-monomodule/releases/tag/v0.1.0-test.5
+    notes: Test build. The FX module no longer asks the host to keep running through silence.
+  - version: v0.1.0-test.4
+    date: 2026-09-25
+    url: https://github.com/legsmechanical/schwung-monomodule/releases/tag/v0.1.0-test.4
+    notes: Test build. Fixes a crash on a standard Move caused by each engine reserving a large block of memory.
+  - version: v0.1.0-test.3
+    date: 2026-09-25
+    url: https://github.com/legsmechanical/schwung-monomodule/releases/tag/v0.1.0-test.3
+    notes: Test build, superseded by test.4.

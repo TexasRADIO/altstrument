@@ -1,0 +1,51 @@
+device: roland-s-1
+name: S-1 Utility
+kind: tool
+summary: Desktop editor for the S-1 that mirrors and sets its parameters over MIDI CC, with a read-only inspector for the synth's .PRM patch backups and MIDI export of pattern data.
+description: >-
+  S-1 Utility connects to the synth over USB MIDI and shows its parameters as
+  knobs, sliders and waveform displays, tracking which values it has actually
+  confirmed from the hardware. Pointed at a folder of .PRM backups, it follows
+  pattern changes on the synth and its Patch Inspector shows every stored
+  field, including sequencer, draw and chop data that has no MIDI CC. It also
+  draws estimated envelope, filter and waveform views and exports the pattern
+  sequencer data as a MIDI file. It sends only control changes, uses no SysEx
+  and never writes .PRM files. The README says much of the code was written
+  with Claude Code.
+status: active
+authors:
+  - name: Denis Zlobin
+    url: https://github.com/denzlobin
+source: https://github.com/denzlobin/S1Utility
+source_status: open
+license: GPL-3.0-or-later
+license_notes: The README states GPL v3 or later; the LICENSE file holds the GPL-3.0 text.
+homepage: https://github.com/denzlobin/S1Utility/releases
+distribution: download
+install_notes: >-
+  Releases include self-contained Windows (.zip) and Linux (.AppImage and
+  .tar.gz) builds, and the synth must be connected over USB MIDI. macOS has no
+  prebuilt download; the README reports an Intel Mac build from source with the
+  .NET 10 SDK. To use the inspector, put the synth in USB disk mode (power on
+  while holding Play) and copy its BACKUP folder to the computer.
+brick_risk: false
+tags: [editor, midi, converter]
+video:
+  url: https://www.youtube.com/watch?v=QvIQj3y7kds
+  title: S-1 Utility - Free Patch Editor & Inspector for the Roland AIRA Compact S-1
+  credit: Denis Zlobin
+  first_party: true
+  found_via: https://github.com/denzlobin/S1Utility#readme
+versions:
+  - version: v1.1.1
+    date: 2026-09-29
+    url: https://github.com/denzlobin/S1Utility/releases/tag/v1.1.1
+  - version: v1.1.0
+    date: 2026-06-01
+    url: https://github.com/denzlobin/S1Utility/releases/tag/v1.1.0
+  - version: v1.0.1
+    date: 2026-05-26
+    url: https://github.com/denzlobin/S1Utility/releases/tag/v1.0.1
+  - version: v1.0.0
+    date: 2026-05-25
+    url: https://github.com/denzlobin/S1Utility/releases/tag/v1.0.0

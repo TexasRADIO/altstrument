@@ -1,0 +1,21 @@
+name: PO-33 K.O!
+manufacturer: Teenage Engineering
+category: sampler
+tagline: Pocket Operator sampler and sequencer with a built-in microphone
+description: >-
+  The PO-33 K.O! is a pocket-sized sampler and sequencer from Teenage
+  Engineering. It has melodic and drum sample slots, a sequencer with
+  punch-in effects, and a built-in microphone and speaker. Sample banks and
+  full backups move between the device and a computer as audio-coded data
+  over the headphone jack or the microphone.
+links:
+  manufacturer: https://teenage.engineering/guides/po-33/en
+  community:
+    - label: PO-33 K.O! backup reverse engineering notes
+      url: https://github.com/cspotcode/PO-33-KO-backup-re
+notes: >-
+  No replacement firmware exists. The entries here are host-side tools that
+  load sample banks into the device, or decode its audio backup transfers into
+  samples and patterns.
+related:
+  - teenage-engineering-po-32

@@ -1,0 +1,48 @@
+device: ableton-move
+name: 9W9
+summary: >-
+  Schwung drum module that models the TR-909 drum circuits, with sampled hi-hats, ride and crash, per-voice
+  drive, send reverb and delay, and a browser editor. Warning: bundles three WAV samples of unstated origin.
+description: >-
+  Rights warning: the repository bundles three WAV files (hi-hat, ride and crash) that it does not attribute, and
+  it does not say how they were made or under what terms they may be redistributed; they are not clearly covered
+  by the code's license. 9W9 models the kick, snare, toms, rim shot and hand clap of the TR-909 from its circuits and plays the
+  hi-hats, ride and crash from samples. Every voice has drive and a choice of seven distortion types, the
+  kit has a master drive and compressor, and each voice except the kick feeds a reverb and a tempo-synced
+  delay. Controls are 0 to 127 values like the hardware. It has no step sequencer since version 2.5.0 and is
+  played from Move's own sequencer or pads, with eleven voices on a drum rack note map or General MIDI. A
+  full editor opens in a browser at move.local:7700/remote-ui. The README says it was developed with Claude
+  and verified on hardware, and that it is not affiliated with Roland.
+status: active
+authors:
+  - name: Gustavo Lima
+    url: https://github.com/athousanddetails
+source: https://github.com/athousanddetails/schwung-9W9
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file is the GPL version 3 text and the README and source headers say GPL-3.0 with no or-later
+  grant. The repository bundles three WAV files (hi-hat, ride, crash) in src/samples with no attribution
+  or license statement; the README names only the TR-909 service notes and analyses as credits and does not say
+  how the samples were made. Treat their redistribution terms as unknown.
+homepage: https://github.com/athousanddetails/schwung-9W9#readme
+distribution: download
+requires_stock: Schwung 0.12.1 or later installed on the Move
+install_notes: >-
+  Needs Schwung 0.12.1 or later. Install 9W9 from Schwung's Module Store or Schwung Manager, or build it with
+  Docker and copy the dist/9w9 folder to the sound_generators modules folder on the Move. Screen reader
+  navigation needs Schwung 1.0 or later.
+brick_risk: false
+tags: [synth-engine, drums, fx, emulator]
+versions:
+  - version: v2.7.0
+    date: 2026-09-19
+    url: https://github.com/athousanddetails/schwung-9W9/releases/tag/v2.7.0
+  - version: v2.6.0
+    date: 2026-09-04
+    url: https://github.com/athousanddetails/schwung-9W9/releases/tag/v2.6.0
+    notes: Tells the host that the module is a drum rack and which note each voice plays.
+  - version: v2.5.0
+    date: 2026-09-04
+    url: https://github.com/athousanddetails/schwung-9W9/releases/tag/v2.5.0
+    notes: Removes the internal step sequencer; the module is now sound only.

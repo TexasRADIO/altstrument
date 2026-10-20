@@ -1,0 +1,42 @@
+device: m-vave-smk-37
+name: Polly SMK-37
+summary: >-
+  Charles Vestal's QY70-style pocket arranger Polly on the SMK-37: pads trigger sections, follow mode and
+  16 chord progressions, faders mix the band, and the keys play chords and the selected instrument.
+description: >-
+  Lives on the smk37 branch of the genkigenki/fm1-polly fork and is offered upstream as
+  charlesvestal/fm1-polly pull request 1, which is still open. It is Polly 0.4.1, in which a style plays an
+  eight-instrument General MIDI band that follows your chords. The SMK-37 build has no QY70 style bank.
+  The FM-1 build is unchanged and the SMK-37 code sits behind a BOARD_SMK37 switch. Releases carry one
+  package each for the Pro, Elite and MKE-P37 names.
+status: active
+authors:
+- name: genkigenki
+  url: https://github.com/genkigenki
+- name: Charles Vestal (Polly)
+  url: https://github.com/charlesvestal
+source: https://github.com/genkigenki/fm1-polly/tree/smk37
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Same terms as Polly; LICENSING.md covers the Sonivox EAS synth (Apache-2.0), the Groove MIDI Dataset drum
+  performances (CC BY 4.0) and the fonts (OFL 1.1).
+homepage: https://genkigenki.github.io/smk37/
+distribution: browser-installer
+install_notes: >-
+  Installs from the browser at genkigenki.github.io/smk37, or with tools/fm1_install.py and a package from the
+  release or your own build (BOARD=smk37, with MODEL=elite or MODEL=mke). Back up first and have M-VAVE's
+  package for your model and its updater ready. The first start clears the stock settings and other
+  firmware's data in the areas Polly uses. Unofficial; install at your own risk.
+brick_risk: true
+tags: [sequencer, chords, midi, usb-midi]
+image:
+  url: https://genkigenki.github.io/smk37/assets/shot-polly.png
+  alt: "Polly screen on the SMK-37 display"
+  credit: genkigenki
+  source_url: https://genkigenki.github.io/smk37/
+  first_party: true
+versions:
+- version: smk37-0.4.1
+  date: 2026-10-13
+  url: https://github.com/genkigenki/fm1-polly/releases/tag/smk37-v0.4.1

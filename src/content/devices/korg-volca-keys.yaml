@@ -1,0 +1,21 @@
+name: volca keys
+manufacturer: Korg
+category: synth
+tagline: Analog loop synth with three-voice polyphony and delay
+description: >-
+  The volca keys is a compact analog synthesizer made by Korg and released in
+  2013 as part of its volca series. It has three oscillators that can be played
+  as a polyphonic, unison or ring-modulated voice, a voltage-controlled filter
+  with a peak control, a delay, and a 16-step sequencer with motion
+  sequencing. The unit has sync in/out and MIDI in.
+links:
+  manufacturer: https://www.korg.com/us/products/dj/volca_keys/
+notes: >-
+  No replacement firmware is catalogued. The only entry is a browser-based
+  editor that sends parameter changes to the stock firmware over MIDI. Korg's
+  volca keys also inspired a polyphonic oscillator for the NTS-1, listed under
+  that device.
+related:
+  - korg-nts-1
+  - korg-volca-bass
+  - korg-volca-beats

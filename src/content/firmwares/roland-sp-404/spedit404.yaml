@@ -1,0 +1,35 @@
+device: roland-sp-404
+name: spEdit404
+kind: tool
+summary: Python command-line tool that reads, edits and writes the binary pattern files of the SP-404SX. It can add and delete notes, change pattern length and render a preview.
+description: >-
+  spEdit works on the pattern files that the SP-404SX stores on its SD card.
+  It is menu driven in a terminal: load a pattern, add or delete notes, remove
+  every occurrence of a pad, change the number of bars and save the result
+  back as a pattern file. A preview function renders a pattern to audio and
+  needs the simpleaudio package. The README links blog posts on the pattern
+  format, but that site no longer loads.
+status: dormant
+authors:
+  - name: Robert Gonzalez
+    url: https://github.com/bobgonzalez
+source: https://github.com/bobgonzalez/spEdit404
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file holds the GPL-3.0 text; no "or later" wording was found in
+  the README or source headers.
+distribution: source-only
+requires_stock: SP-404SX
+install_notes: >-
+  Needs Python 3 and the packages in requirements.txt (pydub); the repository
+  includes a Dockerfile. Run spEdit.py from the project folder. It only
+  produces pattern files, so copy them to the SD card yourself and keep a
+  backup of the originals.
+brick_risk: false
+tags: [editor, sequencer, python]
+versions:
+  - version: master @ 63036b4
+    date: 2020-02-13
+    url: https://github.com/bobgonzalez/spEdit404/commit/63036b445a2d90748f69d9b77641f21b83c3d431
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,19 @@
+name: SP-404 / SP-404SX / SP-404A
+manufacturer: Roland
+category: sampler
+tagline: Pad sampler line with a pattern sequencer and onboard effects
+description: >-
+  The SP-404 line is Roland's series of compact pad samplers, made up of the
+  original SP-404 and the later SP-404SX and SP-404A. The SX and A models store
+  samples and patterns as files on an SD card, with a sample bank per pad and
+  a pattern sequencer that triggers those pads. The line is a predecessor of
+  the SP-404MKII, which has its own page.
+links:
+  manufacturer: https://www.roland.com/global/products/sp-404sx/
+notes: >-
+  No replacement firmware is catalogued for these samplers. The entries here
+  are host-side tools that read and write the sample and pattern files on the
+  SD card, so they leave the sampler's own operating system alone. They were
+  written against the SP-404SX; the pattern format is documented for the SX
+  and A models, and the original SP-404 is not covered by them.
+related: [roland-sp-404-mkii]

@@ -1,0 +1,25 @@
+name: MegaCommand / MegaCMD
+manufacturer: MegaCommand project
+category: controller
+tagline: Open-source MIDI sequencer and controller for the Machinedrum
+description: >-
+  The MegaCommand is an open-source hardware MIDI controller and sequencer
+  designed by Justin Mammarella to sit next to an Elektron Machinedrum and
+  other MIDI gear. The original board is a through-hole design around an
+  Arduino Mega 2560 with an OLED display, four encoders, four buttons, an SD
+  card slot and two MIDI inputs and outputs. The MegaCMD is a second hardware
+  design with its own design files and firmware build target, and the MCL
+  firmware also has an RP2040 port in progress.
+platform: ATmega2560 (MegaCommand), AVR (MegaCMD), RP2040 (in progress)
+links:
+  manufacturer: https://jmamma.github.io/MCL/
+  community:
+    - label: MegaCommand hardware design files
+      url: https://github.com/jmamma/MegaCommand_Design
+    - label: MegaCMD hardware design files
+      url: https://github.com/jmamma/MegaCMD
+notes: >-
+  MCL is the firmware the device is built to run, so it is catalogued here as
+  its own entry rather than as a Machinedrum mod: the Machinedrum itself is
+  not flashed. Updates are sent over the MegaCommand's serial OS UPGRADE mode.
+related: [elektron-machinedrum, elektron-monomachine]

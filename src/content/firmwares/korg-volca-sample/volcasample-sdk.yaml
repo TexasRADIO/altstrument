@@ -1,0 +1,33 @@
+device: korg-volca-sample
+name: volca sample SDK (SYRO)
+kind: tool
+summary: Korg's C library and examples for turning samples, sequence patterns and delete commands into the audio stream the volca sample reads through its SYNC IN jack.
+description: >-
+  The SYRO library converts 16-bit mono samples (single slots or all 100),
+  pattern data or erase commands into a WAV that is played into the volca
+  sample, with a selectable transfer bit depth. The repository has the library,
+  an example that builds a transfer WAV from a sample file, pattern structure
+  definitions, the factory-sample restore data, and a Makefile and Visual Studio
+  project. The latest commit is from December 2014. Other sample managers for
+  the volca sample are built on this library.
+status: dormant
+authors:
+  - name: Korg Inc.
+    url: https://github.com/korginc
+source: https://github.com/korginc/volcasample
+source_status: open
+license: BSD-3-Clause
+license_notes: COPYING is the BSD 3-Clause text, Copyright 2014 KORG Inc.
+homepage: http://korginc.github.io/volcasample/index.html
+distribution: source-only
+install_notes: >-
+  Build the example with the Makefile (gcc or clang) or the Visual Studio
+  project, produce a WAV, and play it into SYNC IN with the volca sample in its
+  receive state. The README gives the call sequence for using the library from
+  your own code.
+tags: [official, sdk, sampler, samples, converter, volca-sample]
+versions:
+  - version: "1.0.0"
+    date: 2014-11-18
+    url: https://github.com/korginc/volcasample/tree/1.0.0
+    notes: Git tag; no GitHub release page. Date is the tagged commit's date.

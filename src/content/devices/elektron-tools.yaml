@@ -6,17 +6,22 @@ description: >-
   This entry groups host-side software that works across more than one Elektron
   instrument, rather than a single device. It covers the loader used to apply
   mods to the Digitakt and Digitone families, emulators of their firmware, an OS
-  container tool and a Ghidra module for the DSP56300 processor family.
+  container tool and a Ghidra module for the DSP56300 processor family. It also
+  lists the Elektroid sample and SysEx manager, the Overwitch Overbridge audio
+  client for Linux and a browser piano roll that writes patterns over SysEx.
 links:
   community:
     - label: elektronmods.com
       url: https://elektronmods.com/
     - label: Modwerk
       url: https://modwerk.app/
+    - label: r/elektronmods
+      url: https://www.reddit.com/r/elektronmods/
 notes: >-
   Host-side tools that serve more than one device: the elekloader mod loader,
   digiemu and digikit emulators, the OS container tool, and a Ghidra module for
-  the DSP56300. None bundle Elektron firmware; you supply your own .syx. Elektron
+  the DSP56300, plus Elektroid, Overwitch and digi-roll, which talk to the stock
+  OS rather than change it. None bundle Elektron firmware; you supply your own .syx. Elektron
   does not permit sharing mod files or links on Elektronauts (policy of
   2026-09-16); community discussion moved to elektronmods.com and modwerk.app.
 related: [elektron-digitakt, elektron-digitone, elektron-digitakt-ii, elektron-digitone-ii, elektron-octatrack, elektron-model-cycles, elektron-model-samples]

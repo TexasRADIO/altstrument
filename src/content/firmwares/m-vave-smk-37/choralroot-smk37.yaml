@@ -1,0 +1,59 @@
+device: m-vave-smk-37
+name: ChoralRoot SMK-37
+summary: >-
+  Quixotic7's ChoralRoot chord instrument on the SMK-37: all 37 keys play roots, the chord types and
+  extensions sit on pads, and the pads also hold strum, harp, arpeggio and pattern modes. Warning: includes Casio CZ-1 factory tones.
+description: >-
+  Rights warning: the build includes the 64 factory tones of the Casio CZ-1 as sound data, and the repository
+  says no license is granted for them and that the rights stay with Casio, so the package is not clear for
+  commercial redistribution as it stands. genkigenki's port, first kept on the smk37 branch of the genkigenki/ChoralRootFM1 fork, was merged into
+  Quixotic7/ChoralRootFM1 as pull requests 14 and 22, and the upstream project now publishes SMK-37 test
+  builds beside its FM-1 releases (the fork's own smk37 branch stopped at 0.21). The upstream maintainer has
+  no SMK-37, so the builds are described as community-tested. Each release has one package per model (Pro,
+  Elite, MKE-P37), with a "1core" twin for units that freeze with the standard one. The faders set the
+  sends into the effects, and the TRS jack is not used.
+status: active
+authors:
+- name: Quixotic7 (ChoralRoot)
+  url: https://github.com/Quixotic7
+- name: genkigenki
+  url: https://github.com/genkigenki
+source: https://github.com/Quixotic7/ChoralRootFM1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Same terms as the FM-1 ChoralRoot (code GPL-3.0-only; ported parts such as DaisySP, Rings and the uPD933
+  emulation keep their own licences, listed in LICENSING.md). The repository bundles the 64 Casio CZ-1
+  factory tones (assets/cz1-factory) as sound data, rebuilt from archived CZ-1 patch dumps and Oli Larkin's
+  VirtualCZ presets; LICENSING.md and the folder's README say the tones are Casio's, that no licence is
+  granted for them by this project and that the rights stay with Casio.
+homepage: https://github.com/Quixotic7/ChoralRootFM1/blob/main/SMK37.md
+distribution: download
+install_notes: >-
+  Download the package for your model from the SMK-37 release (pre-release) and install it with
+  tools/fm1_install.py over USB, or use the SMK-37 web installer at genkigenki.github.io/smk37. Have M-VAVE's
+  package for your model and its M-UPGRADE updater ready first; installing M-VAVE's package afterwards
+  restores stock firmware because the build keeps the model name. Keep the cable connected until the
+  keyboard restarts. The first start clears the stock settings and other firmware's data in the shared data
+  area. Unofficial; install at your own risk.
+brick_risk: true
+tags: [chords, synth-engine, performance]
+image:
+  url: https://genkigenki.github.io/smk37/assets/shot-choralroot.png
+  alt: "ChoralRoot screen on the SMK-37 display showing a D major 7 chord and its notes"
+  credit: genkigenki
+  source_url: https://genkigenki.github.io/smk37/
+  first_party: true
+versions:
+- version: 0.26-smk37
+  date: 2026-10-20
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.26-smk37
+  notes: Pre-release; the FM-1's 0.26 on the SMK-37.
+- version: 0.25-smk37
+  date: 2026-10-17
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.25-smk37
+  notes: Pre-release.
+- version: 0.24-beta3-smk37.1
+  date: 2026-10-17
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.24-beta3-smk37.1
+  notes: Pre-release; adds the fix for the stock firmware's key mapping after going back.

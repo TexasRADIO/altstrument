@@ -1,0 +1,30 @@
+device: roland-t-8
+name: aira_pattern_editor
+kind: tool
+summary: Flutter web app with a grid editor for the T-8's rhythm and bass pattern backup files. Patterns are pasted in and copied out as .PRM text.
+description: >-
+  The app has two editors. The rhythm editor edits steps with repeat types,
+  per-step probability and velocity, last-step and shuffle settings. The bass
+  editor edits steps with accents, slides and ties but no pitch. A pattern
+  backup is imported by pasting the file's contents and exported by copying
+  the result back into a file. The author notes that the interface is built
+  around the mouse and probably needs a large screen.
+status: dormant
+authors:
+  - name: Nate Bosch
+    url: https://github.com/natebosch
+source: https://github.com/natebosch/aira_pattern_editor
+source_status: open
+license: BSD-3-Clause
+distribution: source-only
+install_notes: >-
+  Needs the Flutter SDK; run it with flutter run -d web-server --web-port 8080
+  and open localhost:8080 in a browser. Back up the unit first using the steps
+  in Roland's T-8 manual, then restore the edited file the same way.
+brick_risk: false
+tags: [editor, sequencer, web]
+versions:
+  - version: main @ 8120483
+    date: 2025-07-10
+    url: https://github.com/natebosch/aira_pattern_editor/commit/8120483b0e3e6ab16d143c718a06cb2f5e8dae8c
+    notes: No tagged releases; this is the latest commit.

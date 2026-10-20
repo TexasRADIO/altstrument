@@ -1,0 +1,32 @@
+device: teenage-engineering-op-z
+name: libopz
+kind: tool
+summary: C++ library for reading and saving OP-Z project files and syncing with a connected OP-Z over MIDI SysEx, with a terminal companion app that mirrors the official app's telemetry.
+description: >-
+  The library has classes for loading and saving .opz project files, for
+  syncing project data and live telemetry from a device over SysEx, and for
+  doing that through RtMidi. It parses project levels, tempo, pattern data,
+  track notes and track sound parameters, while step components and writing
+  changes back to the device are listed as not done yet. The examples include
+  opz_companion, a terminal program that shows the device's state.
+status: active
+authors:
+  - name: Patricio Gonzalez Vivo
+    url: https://github.com/patriciogonzalezvivo
+source: https://github.com/patriciogonzalezvivo/libopz
+source_status: open
+license: proprietary
+license_notes: >-
+  Prosperity Public License 3.0.0 (free for noncommercial use, with a 30-day
+  trial for commercial use). The README adds a Patron License for sponsors and
+  contributors, who may ignore the noncommercial limit.
+distribution: source-only
+install_notes: >-
+  Build with CMake; it needs libz and, for the C++ examples, ncurses. The
+  OP-Z has to be connected and turned on before running opz_companion.
+tags: [sdk, sysex, midi, research]
+versions:
+  - version: main @ f3f50af
+    date: 2026-09-30
+    url: https://github.com/patriciogonzalezvivo/libopz/commit/f3f50af
+    notes: No tagged releases; this is the latest commit.

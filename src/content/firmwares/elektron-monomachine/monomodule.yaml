@@ -1,0 +1,39 @@
+device: elektron-monomachine
+name: Monomodule
+kind: tool
+summary: DAW plug-ins and a sysex library app that run the Monomachine's own sound engine in a DSP56300 emulator, using the OS file you supply.
+description: >-
+  Three plug-ins (AU, VST3 and standalone for the instruments): one plays a
+  single Monomachine track, one plays all six tracks with six stereo outputs,
+  and one applies the effect machines to an audio input. A separate library app
+  imports Monomachine sysex dumps, keeps a version history per unit and previews
+  presets, kits and patterns. The DSP program and fonts are read from the user's
+  official Monomachine OS 1.32B file at start-up; nothing from Elektron is
+  included in the repository or the releases. The Digibank waveforms used by two
+  DigiPro machines live outside the OS file, so stand-in waveforms are used.
+  MIDI transfer to and from hardware is not implemented yet. Builds exist for
+  macOS, Windows and Linux.
+status: active
+authors:
+  - name: shnolk
+    url: https://github.com/shnolk
+source: https://github.com/shnolk/monomodule
+source_status: open
+license: AGPL-3.0-only
+license_notes: >-
+  README states the GNU Affero General Public License v3.0 with no "or later"
+  wording. Built on JUCE (AGPLv3) and the dsp56300 emulator (GPLv3), with a
+  patch to the latter listed in THIRD_PARTY_NOTICES.md.
+distribution: download
+requires_stock: Monomachine OS 1.32B (supplied by you)
+install_notes: >-
+  Install the release for your platform, then choose your own OS file from
+  Elektron's support page when a plug-in first starts; the file is read in
+  place and not copied. Linux builds keep emulator memory in /dev/shm, which
+  needs at least 1 GB in a container.
+tags: [emulator, sysex, librarian, synth-engine]
+versions:
+  - version: "1.0.0"
+    date: 2026-09-24
+    url: https://github.com/shnolk/monomodule/releases/tag/release
+    notes: First public release; the GitHub release is tagged "release".

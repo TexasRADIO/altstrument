@@ -1,0 +1,37 @@
+device: polyend-tracker
+name: tracker-lib
+kind: tool
+summary: Polyend's TypeScript library for reading, writing and creating Tracker instrument (.pti), pattern (.mtp) and project (.mt) files in Node.js or the browser.
+description: >-
+  Covers instrument data including sample audio, slice markers, playback modes,
+  filters, LFOs, envelopes and granular or wavetable settings, plus pattern
+  tracks, steps and step effects, and project and song headers. It works with
+  Node file paths or browser File and Blob objects and ships type definitions
+  and generated API docs. The README names the Tracker, Tracker Mini and Tracker+
+  as supported and links third-party browser editors for instruments and
+  patterns built on it.
+status: active
+authors:
+  - name: Polyend
+    url: https://github.com/polyend
+source: https://github.com/polyend/tracker-lib
+source_status: open
+license: MIT
+homepage: https://polyend.github.io/tracker-lib/
+distribution: source-only
+install_notes: Install from npm with npm install @polyend/tracker-lib.
+tags: [official, sdk, converter, utility]
+video:
+  url: https://www.youtube.com/watch?v=6vzHuB2HkdE
+  title: The Polyend Tracker Ecosystem is opening up
+  credit: Sandroid
+  first_party: true
+  found_via: https://github.com/polyend/tracker-lib#readme
+versions:
+  - version: v0.1.2
+    date: 2026-06-25
+    url: https://github.com/polyend/tracker-lib/releases/tag/v0.1.2
+    notes: Fixes pattern parsing for 8- and 12-track patterns.
+  - version: v0.1.1
+    date: 2026-06-15
+    url: https://github.com/polyend/tracker-lib/releases/tag/v0.1.1

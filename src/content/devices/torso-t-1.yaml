@@ -1,0 +1,14 @@
+name: T-1
+manufacturer: Torso Electronics
+category: other
+tagline: Algorithmic MIDI sequencer
+description: >-
+  The T-1 is an algorithmic sequencer from Torso Electronics, a company based in
+  Copenhagen. It generates and varies rhythms and melodies from patterns of
+  steps, with per-step parameter locks, cycles and scales, and sends them out as
+  MIDI. Banks are saved to and restored from a ZIP backup file.
+links:
+  manufacturer: https://torsoelectronics.com/store/product/t-1-algorithmic-sequencer
+notes: >-
+  No replacement firmware is known; the entries here are host-side tools that
+  read and write the backup files the device produces.

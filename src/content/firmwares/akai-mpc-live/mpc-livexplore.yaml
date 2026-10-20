@@ -2,13 +2,17 @@ device: akai-mpc-live
 name: MPC-LiveXplore
 summary: "Reverse-engineering project for Linux-based MPCs and the Force: SSH-enabled update images, an image extractor and maker, IamForce2 to run Force software on MPC hardware, and a control-surface library."
 description: >-
-  Technical explorations and hacks for the MPC Live, X, One and Force. The
+  Rights warning: the SSH and bootstrap update images linked from the README are
+  Akai's own update images with changes applied, shared through Google Drive
+  links, and the repository states no permission from Akai to redistribute
+  them. Technical explorations and hacks for the MPC Live, X, One and Force. The
   repository holds the mpcimg tool, rewritten in C after Akai changed the
   image format in 3.4, the bootstrap code and documentation, with a wiki.
   IamForce2 launches Force software from an external SD card and does not
   update the MPC; removing the card restores normal boot. SSH and bootstrap
   images for Force 3.3.0, MPC 2.14 and MPC 3.4.2.13 are shared through
-  download links in the README. The last push was 2025-03-03.
+  download links in the README. The last push was 2026-10-17 (README edits and
+  an autorun.zip upload).
 status: maintained
 authors:
   - name: TheKikGen (Franck Touanen)
@@ -16,7 +20,11 @@ authors:
 source: https://github.com/TheKikGen/MPC-LiveXplore
 source_status: patcher-only
 license: unspecified
-license_notes: No license file. Modified update images are shared through cloud links, not the repository.
+license_notes: >-
+  No license file. The modified update images are shared through Google Drive
+  links in the README, not stored in the repository. They are Akai's firmware
+  with changes applied, and Akai's copyright is not covered by any license from
+  this project; no permission from Akai to redistribute them is stated.
 homepage: https://github.com/TheKikGen/MPC-LiveXplore/wiki
 distribution: download
 install_notes: >-

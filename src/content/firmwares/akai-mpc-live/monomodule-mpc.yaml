@@ -1,0 +1,48 @@
+device: akai-mpc-live
+name: Monomodule for MPC OS
+summary: Native VST2 instrument and effect that run an emulation of the Elektron Monomachine synth engine on MPC and Force, built from your own Monomachine OS file.
+description: >-
+  An MPC OS port of shnolk's Monomodule engine, which emulates the
+  Monomachine's DSP56300 chip. A static recompiler turns the DSP code the
+  engine uses into native ARM code so it can run in real time on first-generation
+  hardware. Monomodule One is the instrument, with 15 synth machines, and
+  Monomodule FX is the seven effect machines as an insert effect. The
+  touchscreen skin is drawn from your own OS file and adds whole-cell touch,
+  several layouts and colour presets, a bank selector, randomise buttons and the
+  factory kit bank. There is no download because the recompiled code contains
+  Elektron's DSP program; each user builds the plugin from their own file.
+  The author lists it under the manufacturer name sd88me and states that
+  shnolk neither makes nor supports the port.
+status: active
+authors:
+  - name: sd88me
+    url: https://github.com/sd88me
+source: https://github.com/sd88me/mpc-vst-monomodule
+source_status: open
+license: AGPL-3.0-only
+license_notes: >-
+  The README states AGPL-3.0-only. The engine is adapted from
+  schwung-monomodule (AGPLv3). The built plugin embeds Elektron code and is
+  not to be redistributed.
+distribution: source-only
+requires_stock: MPC OS 3.x
+install_notes: >-
+  Build on a computer with release/release.sh from your own Monomachine OS file,
+  then copy the resulting zip to the device and run its install script over
+  root SSH. On MPC OS 2.x the plugin loads and plays from the Q-Links but its
+  touchscreen page stays empty. Installing plugins this way is unofficial and
+  needs a modded unit.
+tags: [synth-engine, fx, emulator, platform]
+versions:
+  - version: v0.10.2
+    date: 2026-10-02
+    url: https://github.com/sd88me/mpc-vst-monomodule/releases/tag/v0.10.2
+    notes: Reloaded projects and the autosampler keep the sound.
+  - version: v0.10.1
+    date: 2026-10-02
+    url: https://github.com/sd88me/mpc-vst-monomodule/releases/tag/v0.10.1
+    notes: Patches are saved with the project.
+  - version: v0.10.0
+    date: 2026-09-30
+    url: https://github.com/sd88me/mpc-vst-monomodule/releases/tag/v0.10.0
+    notes: Plugins listed under the sd88me name.

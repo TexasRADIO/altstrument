@@ -1,0 +1,42 @@
+device: ableton-push-3
+name: Push Hack Audio Loopback
+summary: >-
+  Push Hack module that adds a virtual audio device to Live on Push 3 Standalone, so other processes on the unit
+  can send audio into Live or read audio from it.
+description: >-
+  It loads the standard Linux ALSA Loopback driver on every boot and keeps checking that it stays loaded, which
+  gives Live a selectable device named Push Hack Virtual Audio without touching the exclusively locked hardware
+  audio device. The repository ships a prebuilt snd-aloop kernel module for the stock Push kernel, and
+  declines to load anything if the running kernel does not match. For other kernels the README explains how to build
+  a module from the GPL sources that Ableton publishes. Push Hack Braids and puXenia depend on it.
+status: active
+authors:
+  - name: Federico P.
+    url: https://github.com/federico-pepe
+source: https://github.com/federico-pepe/push-hack-audio-loopback
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no license file. The bundled snd-aloop module comes from the Linux kernel, which is GPL-2.0.
+homepage: https://github.com/federico-pepe/ableton-push-hack#readme
+distribution: download
+requires_stock: Push Hack installed; bundled module matches kernel 5.15.48-intel-pk-preempt-rt
+install_notes: >-
+  Install it from Push Catalog on the unit. Then pick Push Hack Virtual Audio in Push's audio preferences and
+  route it on an audio track. Device 0 is the one to select in Live; the other half of the pair is opened directly by
+  the program that feeds it. Releases are tarballs, and all current ones are marked alpha.
+brick_risk: false
+tags: [usb-audio, platform, utility]
+versions:
+  - version: v0.1.2-alpha
+    date: 2026-10-19
+    url: https://github.com/federico-pepe/push-hack-audio-loopback/releases/tag/v0.1.2-alpha
+  - version: v0.1.1-alpha
+    date: 2026-09-06
+    url: https://github.com/federico-pepe/push-hack-audio-loopback/releases/tag/v0.1.1-alpha
+  - version: v0.1.0-alpha
+    date: 2026-09-06
+    url: https://github.com/federico-pepe/push-hack-audio-loopback/releases/tag/v0.1.0-alpha
+  - version: v0.1.0
+    date: 2026-09-05
+    url: https://github.com/federico-pepe/push-hack-audio-loopback/releases/tag/v0.1.0

@@ -1,0 +1,31 @@
+device: teenage-engineering-ep-133
+name: ep-series-sysex
+kind: tool
+summary: Reverse-engineered documentation of the EP-133 and EP-40 SysEx protocol and project format, with a Python package that compiles, parses, reads and writes projects and manages the sample library.
+description: >-
+  A research repository that documents the wire format, the SysEx file protocol
+  and the byte layout of saved projects (.pak and .ppak archives) for the EP-133
+  K.O. II and the EP-40 riddim, with claims marked as verified, observed or
+  inferred. Alongside the documents it ships the epsysex Python package and
+  command-line scripts that compile a JSON project description into a project
+  archive, read and send projects to a connected device with checkpointing, and
+  list, upload and delete samples in the shared library. Tested against OS 2.5.1.
+status: active
+authors:
+  - name: Kevin Morrill
+    url: https://github.com/kmorrill
+source: https://github.com/kmorrill/ep-series-sysex
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Install the Python package with pip from a checkout; the extras add mido for
+  device I/O and NumPy for the audio test rig. The README advises backing up
+  first and never running two device tools at once, and notes that a stray
+  debug SysEx frame from the device means power-cycling and restoring.
+tags: [research, sysex, editor, python, converter, samples]
+versions:
+  - version: main @ 891a905
+    date: 2026-07-11
+    url: https://github.com/kmorrill/ep-series-sysex/commit/891a905
+    notes: No tagged releases; this is the latest commit.

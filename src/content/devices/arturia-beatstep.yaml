@@ -1,0 +1,18 @@
+name: BeatStep
+manufacturer: Arturia
+category: controller
+tagline: Controller with 16 pads, 16 encoders and a 16-step sequencer
+description: >-
+  The BeatStep is a compact controller from Arturia with sixteen velocity-sensitive pads, sixteen
+  assignable rotary encoders and a 16-step sequencer. It connects over USB and has CV and gate outputs
+  for analog gear, and its settings are managed with the Arturia MIDI Control Center editor. Its
+  processor is an STM32F103.
+platform: STM32F103
+stock_firmware: 1.2.0.3
+links:
+  manufacturer: https://www.arturia.com/products/hybrid-synths/beatstep/overview
+notes: >-
+  No replacement firmware has been released. The entries here are an early reverse-engineering attempt
+  at running custom code on the unit and a command-line tool that configures the stock firmware over
+  SysEx.
+related: [arturia-beatstep-pro]

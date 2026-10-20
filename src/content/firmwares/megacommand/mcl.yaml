@@ -1,0 +1,55 @@
+device: megacommand
+name: MCL
+summary: Firmware for the MegaCommand and MegaCMD that turns them into a pattern-based MIDI sequencer and Machinedrum/Monomachine controller with projects, grids and live performance tools.
+description: >-
+  MCL is the sequencer and controller firmware written for the MegaCommand
+  hardware. It stores projects on an SD card, sequences external MIDI gear next
+  to Machinedrum and Monomachine tracks, and supports live recording and
+  performance features. Version 5.00 introduced a new project format with
+  folders and project versions, and expects Machinedrum OS X.13 and Monomachine
+  OS X.01 on the connected units. The repository also holds the user manual,
+  the build tooling and the compiled firmware manifest, and it builds for the
+  AVR boards and, in progress, RP2040/RP2350 boards.
+status: active
+authors:
+  - name: Justin Mammarella
+    url: https://github.com/jmamma
+  - name: Yatao Li
+  - name: Manuel Odendahl
+    url: https://github.com/wesen
+source: https://github.com/jmamma/MCL
+source_status: open
+license: BSD-3-Clause
+license_notes: >-
+  The LICENSE file is the BSD 3-clause text, naming Justin Mammarella, Yatao Li
+  and Manuel Odendahl as copyright holders (GitHub reports it as NOASSERTION).
+  Bundled libraries such as the Arduino cores and SdFat keep their own licenses.
+homepage: https://jmamma.github.io/MCL/
+distribution: download
+install_notes: >-
+  Back up your projects before installing 5.00 or later, because existing
+  projects are converted to the new format and older MCL versions cannot load
+  them. Hold the Page button while powering on the MegaCommand, choose OS
+  UPGRADE and run the PlatformIO upload command from the README, which fetches
+  the latest firmware from the release manifest. Releases also carry a
+  hex file for each version.
+tags: [sequencer, midi, performance, ui, flasher]
+versions:
+  - version: "5.02"
+    date: 2026-07-27
+    url: https://github.com/jmamma/MCL/releases/tag/5.02
+    notes: Hotfix for track LEV parameter loading.
+  - version: "5.01"
+    date: 2026-07-13
+    url: https://github.com/jmamma/MCL/releases/tag/5.01
+    notes: Hotfix for external MIDI and transport forwarding.
+  - version: "5.00"
+    date: 2026-07-12
+    url: https://github.com/jmamma/MCL/releases/tag/5.00
+    notes: New project format with folders and project versions.
+  - version: "4.70"
+    date: 2025-10-01
+    url: https://github.com/jmamma/MCL/releases/tag/4.70
+  - version: "4.60"
+    date: 2024-11-11
+    url: https://github.com/jmamma/MCL/releases/tag/4.60

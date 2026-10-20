@@ -1,0 +1,31 @@
+device: elektron-digitakt
+name: screendump
+kind: tool
+summary: Python command-line tool that reads an Elektron instrument's own screenshot command over MIDI and draws the 128x64 screen in the terminal. It can also record GIFs and video with audio. Only the Digitakt is implemented so far.
+description: >-
+  Nothing on the instrument is changed. Capturing needs the instrument's two
+  SysEx id bytes, so each model is added only after a real screen has been
+  captured from it; the README lists Digitakt II, Digitone and Digitone II,
+  Syntakt, Analog Rytm, Analog Four, Analog Heat, Model:Samples,
+  Model:Cycles, Octatrack and Machinedrum as known but not implemented.
+  Single frames can be saved as .syx and re-rendered later, and recordings
+  are stored as MIDI files with timing. The author tested it on macOS and
+  lists Linux and Windows as untested.
+status: active
+authors:
+  - name: Jakob Bak
+    url: https://github.com/jakobbak
+source: https://github.com/jakobbak/screendump
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Single Python script; pip install python-rtmidi, plus sounddevice for audio
+  and ffmpeg for video. Run it with --list-midi to find the ports, then
+  screendump -x --instrument dt.
+tags: [utility, midi, sysex, python]
+versions:
+  - version: main @ 33e2888
+    date: 2026-09-19
+    url: https://github.com/jakobbak/screendump/commit/33e2888ca268b76e39ee65ad1af102be1ca3e849
+    notes: No tagged releases; this is the latest commit.

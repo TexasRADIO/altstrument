@@ -1,0 +1,35 @@
+device: korg-nts-3
+name: nts3-rs
+kind: tool
+summary: Rust framework and build tool for NTS-3 kaoss pad generic effect units, with Docker-based builds, example effects (smooth echo, diopser, OTT, granular freeze) and a WebAssembly preview.
+description: >-
+  A workspace of a no_std Rust crate for writing NTS-3 effects, macros that
+  declare parameters, a build tool that cross-compiles to the Cortex-M target
+  and produces a .nts3unit, and a launcher script that runs the pinned
+  toolchain in Docker. The build checks the resulting ELF against the SDK's
+  memory and ABI limits. Four example effects are included, and a WebAssembly
+  crate lets an effect be tried in a browser. There is no README or license
+  file; the usage is documented under docs/.
+status: active
+authors:
+  - name: fractalysis
+    url: https://github.com/fractalysis
+source: https://github.com/fractalysis/nts3-rs
+source_status: open
+license: unspecified
+license_notes: >-
+  No LICENSE file. The crates/nts3 Cargo.toml declares "MIT OR Apache-2.0", but
+  the repository has no license text and the other manifests carry no license
+  field.
+homepage: https://github.com/fractalysis/nts3-rs/blob/main/docs/building.md
+distribution: source-only
+install_notes: >-
+  Needs Bash and Docker. Run ./container/run.sh build-image, then ./nts3.sh
+  build -p <package> --release, and load the .nts3unit from target/nts3 with
+  Korg's librarian. ./nts3.sh new <name> starts a new effect.
+tags: [rust, sdk, fx, genericfx, nts-3, open-source]
+versions:
+  - version: main @ 65b5e00
+    date: 2026-10-03
+    url: https://github.com/fractalysis/nts3-rs/commit/65b5e00a73e321137ce3344cc3ab54911b83ef79
+    notes: No tagged releases; this is the latest commit.

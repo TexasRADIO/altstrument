@@ -1,0 +1,43 @@
+device: elektron-tools
+name: Elektroid
+kind: tool
+summary: Sample and SysEx manager for Linux, macOS and Windows with a GUI and a CLI. Started as a replacement for Elektron Transfer; covers most Elektron instruments and a number of devices from other makers. Does not change the instrument's firmware.
+description: >-
+  Browses the instrument's sample, project and preset storage, transfers files
+  both ways, and can record, play back, trim and loop-edit samples before
+  sending them. It also has an autosampler that writes SFZ files and a raw
+  SysEx send and receive mode. Elektron devices supported are Analog Four
+  (MKI, MKII, Keys), Analog Heat (MKI, MKII, +FX), Analog Rytm (MKI, MKII),
+  Digitakt (I, II), Digitone (I, II, Keys), Model:Cycles, Model:Samples,
+  Monomachine MKII and Syntakt. The same program also supports non-Elektron
+  devices: Arturia MicroBrute and MicroFreak, Casio CZ-101, Eventide
+  ModFactor, PitchFactor, TimeFactor, Space and H9, KORG padKONTROL, KORG
+  prologue, minilogue xd and NTS-1 units, Volca Sample and Volca Sample 2, MFB
+  Tanzmaus, Moog Little Phatty and Slim Phatty, Novation Summit and Peak, and
+  any sampler that implements MIDI SDS.
+status: active
+authors:
+  - name: David García Goñi
+    url: https://github.com/dagargo
+source: https://github.com/dagargo/elektroid
+source_status: open
+license: GPL-3.0-or-later
+license_notes: The LICENSE file is the GPL v3 text and the source file headers grant "version 3 or (at your option) any later version", although the README says only GPLv3. Bundles Korg's volca sample SDK.
+homepage: https://dagargo.github.io/elektroid/
+distribution: source-only
+install_notes: >-
+  Build with autotools (autoreconf --install, ./configure, make); pass
+  BUILD_CLI=no or BUILD_GUI=no to skip one of the two programs. Packages exist
+  for some Linux distributions, and the README points to a Flatpak on Flathub.
+tags: [librarian, sysex, samples, midi, editor, utility]
+versions:
+  - version: "3.4"
+    date: 2026-08-22
+    url: https://github.com/dagargo/elektroid/releases/tag/3.4
+    notes: Adds Syntakt samples, KORG logue units, Monomachine, a macOS app bundle and an option to turn off safety questions.
+  - version: 3.3.2
+    date: 2026-02-26
+    url: https://github.com/dagargo/elektroid/releases/tag/3.3.2
+  - version: "3.3"
+    date: 2026-02-22
+    url: https://github.com/dagargo/elektroid/releases/tag/3.3

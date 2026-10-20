@@ -1,0 +1,42 @@
+device: elektron-tools
+name: Overwitch
+kind: tool
+summary: JACK clients that stream multitrack Overbridge 2 audio from Elektron instruments to a Linux machine (and PipeWire) without Elektron's Overbridge software. Includes a GUI, a hotplug service and command-line record and play tools.
+description: >-
+  Based on Stefan Rehm's USB reverse engineering of Overbridge in dtdump. It
+  supports the Overbridge 2 devices: Analog Four MKII, Analog Rytm MKII,
+  Digitakt, Digitakt II, Digitone, Digitone II, Digitone Keys, Analog Heat (all
+  three versions) and Syntakt. Overbridge 1 devices (Analog Four MKI, Analog
+  Keys, Analog Rytm MKI) are not supported. A D-Bus service creates a JACK
+  client for each connected device, and overwitch-record and overwitch-play
+  capture and play multitrack audio from the command line. It does not touch
+  the instrument's firmware.
+status: active
+authors:
+  - name: David García Goñi
+    url: https://github.com/dagargo
+source: https://github.com/dagargo/overwitch
+source_status: open
+license: GPL-3.0-or-later
+license_notes: The LICENSE file is the GPL v3 text and the source file headers grant "version 3 or (at your option) any later version", although the README says only GPLv3.
+homepage: https://dagargo.github.io/overwitch/
+distribution: source-only
+install_notes: >-
+  Build with autotools (autoreconf --install, ./configure, make); pass
+  CLI_ONLY=yes to skip the GUI. udev rules and a systemd user service are
+  installed from the udev and systemd directories. The README advises a block
+  setting of at least 10 and a raised block count if USB transfer timeouts appear.
+tags: [usb-audio, utility, midi]
+versions:
+  - version: "2.2"
+    date: 2025-12-21
+    url: https://github.com/dagargo/overwitch/releases/tag/2.2
+  - version: 2.1.1
+    date: 2025-12-02
+    url: https://github.com/dagargo/overwitch/releases/tag/2.1.1
+  - version: "2.1"
+    date: 2025-08-26
+    url: https://github.com/dagargo/overwitch/releases/tag/2.1
+  - version: "2.0"
+    date: 2024-12-24
+    url: https://github.com/dagargo/overwitch/releases/tag/2.0

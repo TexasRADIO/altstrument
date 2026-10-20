@@ -1,0 +1,38 @@
+device: ableton-push-3
+name: puXenia
+summary: >-
+  Push Hack apps that run emulations of the Waldorf Microwave XT (puXenia) and the Elektron Monomachine (puMMa)
+  on Push 3 Standalone; you supply your own ROMs.
+description: >-
+  The repository holds two Push Hack apps built on the gearmulator emulator, which runs the original synth firmware
+  on emulated processors. The Xenia app plays a Microwave XT with an 82-parameter, two-bank screen UI on the Push's
+  encoders, a program change page, a web UI and a MIDI receive-channel filter. The puMMa app does the same for a
+  Monomachine, with parameter pages, a step sequencer page and transport buttons, and its notes say it had not been
+  tested against real hardware or a ROM when written. A push-hub app switches between them. The repository contains
+  no ROM files and the scripts copy ROMs from a folder on the user's computer to the unit; the quickstart says the
+  Monomachine ROM must be one the user owns.
+status: active
+authors:
+  - name: Szphynx
+    url: https://github.com/Szphynx
+source: https://github.com/Szphynx/puxenia
+source_status: open
+license: unspecified
+license_notes: >-
+  No license file and no license statement. It builds against gearmulator and its Monomachine fork, which are
+  GPL-3.0.
+homepage: https://github.com/Szphynx/puxenia
+distribution: source-only
+requires_stock: Push Hack installed on the Push, and your own Microwave XT and Monomachine ROM images
+install_notes: >-
+  Needs Push Hack with push-manager and push-display, a snd-aloop virtual audio device, Go, CMake and ALSA
+  development headers on the build machine, and SSH access as root. Build with the deploy scripts in the repository
+  (deploy.sh for Xenia, push-hack-mm/install_mm_push.sh for puMMa) and copy your own ROM images; none are supplied.
+  Deployed files live in /tmp and are lost on reboot, so the deploy has to be repeated.
+brick_risk: false
+tags: [emulator, synth-engine, performance, midi]
+versions:
+  - version: main @ d729484
+    date: 2026-09-23
+    url: https://github.com/Szphynx/puxenia/commit/d729484
+    notes: No tagged releases; this is the latest commit. The VERSION file reads 0.3.0.

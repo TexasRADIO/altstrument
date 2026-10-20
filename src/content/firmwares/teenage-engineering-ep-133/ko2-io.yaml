@@ -1,0 +1,29 @@
+device: teenage-engineering-ep-133
+name: ko2-io
+kind: tool
+summary: Rust command-line tool for Linux that lists, uploads, downloads and deletes samples and projects on an EP-133 over its SysEx file protocol, mounts the sample library as a FUSE filesystem and edits projects as YAML.
+description: >-
+  The ko2 binary talks to the device through the ALSA raw MIDI node, without the
+  official sample tool. It transfers samples of any WAV format and resamples
+  them to the device rate, assigns samples to pads, and backs up, copies and
+  diffs whole projects. Projects can be exported to a YAML document and
+  compiled back to identical bytes. Uploads and project writes are read back and
+  compared, and project writes are checkpointed first.
+status: active
+authors:
+  - name: Tino Rusch
+    url: https://github.com/trusch
+source: https://github.com/trusch/ko2-io
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Linux only. Build with cargo install from the repository; it needs libfuse3
+  and read and write access to the /dev/snd/midiC*D* node. The README says a
+  macOS transport is not written yet.
+tags: [sysex, librarian, samples, editor, converter]
+versions:
+  - version: main @ 3d5622f
+    date: 2026-08-07
+    url: https://github.com/trusch/ko2-io/commit/3d5622f
+    notes: No tagged releases; this is the latest commit.

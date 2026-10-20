@@ -1,0 +1,38 @@
+device: akai-mpc2000
+name: MPC2000XL Emulator
+kind: tool
+summary: Experimental MAME-based emulator that boots a stock MPC2000XL OS 1.20 file you supply, with a drawn front panel, display and pads, launched through a Python script.
+description: >-
+  Adds an mpc2000xldiag machine to a pinned MAME source tree. It loads the
+  512 KiB stock MPC2KXL.BIN into the XL memory map, starts the V53A at its reset
+  vector and lets the machine's boot ROM load its own OS. The display shows
+  what the OS writes, and the panel has 16 pads, four banks, a note variation
+  fader and LEDs driven by the OS. Optional floppy images are HFE v1 or raw
+  1.44 MB images. The status document says the OS reached its main screen on
+  an Apple silicon Mac, while loading and saving, audio and full input coverage
+  are unverified. Audio is disabled, and Windows builds are untested. Classic OS
+  files do not work with this model. No firmware, disk image or MAME binary is
+  distributed. A sibling repository covers the MPC2000 Classic.
+status: active
+authors:
+  - name: vubeatz
+    url: https://github.com/dariuszchynek
+source: https://github.com/dariuszchynek/mpc2000xl-emulator
+source_status: open
+license: BSD-3-Clause
+license_notes: >-
+  Project-written files are BSD-3-Clause. MAME as a whole is GPL-2.0, so a
+  compiled emulator needs MAME's notices and corresponding source (see
+  THIRD_PARTY.md).
+distribution: source-only
+requires_stock: OS 1.20 (XL)
+install_notes: >-
+  Build the MAME target with the repository's scripts (macOS shown; Windows is
+  described but unverified), put your own MPC2KXL.BIN in the system folder, and
+  start it with the launch script or run.py. Nothing writes to a real MPC.
+tags: [emulator, sampler]
+versions:
+  - version: main @ a2d8ae4
+    date: 2026-09-18
+    url: https://github.com/dariuszchynek/mpc2000xl-emulator/commit/a2d8ae4
+    notes: No tagged releases; this is the latest commit.

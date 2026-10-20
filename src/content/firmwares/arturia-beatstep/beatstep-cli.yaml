@@ -1,0 +1,29 @@
+device: arturia-beatstep
+name: beatstep-cli
+kind: tool
+summary: Cross-platform command-line program that reads and writes BeatStep settings over SysEx, including loading and saving preset files, setting pad colours and reading the firmware version.
+description: >-
+  A C++ program built with CMake on top of RtMidi. Subcommands list the MIDI devices, load or save a
+  .beatstep preset file, change the colour of a pad LED, report the firmware version, and get or set
+  single parameters by their SysEx ids. It also has a debugging command that emulates a BeatStep to
+  watch the messages another program sends. It works with the stock firmware and does not change the
+  operating system.
+status: dormant
+authors:
+  - name: David Konsumer
+    url: https://github.com/konsumer
+source: https://github.com/konsumer/beatstep-cli
+source_status: open
+license: unspecified
+license_notes: The repository has no license file or license statement.
+distribution: source-only
+install_notes: >-
+  Clone with submodules (RtMidi) and build with CMake as described in the README; the repository has a
+  CI workflow but the release page lists no prebuilt binaries.
+brick_risk: false
+tags: [sysex, midi, editor, librarian]
+versions:
+  - version: v0.0.1
+    date: 2022-12-07
+    url: https://github.com/konsumer/beatstep-cli/tree/v0.0.1
+    notes: Git tag; no GitHub release page.

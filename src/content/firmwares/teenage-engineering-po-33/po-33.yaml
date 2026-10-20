@@ -1,0 +1,25 @@
+device: teenage-engineering-po-33
+name: PO-33 drum sample loader
+kind: tool
+summary: Browser app that loads up to 16 dropped audio files onto pads and plays them back to the PO-33 K.O! as one drum bank, with settings for speed, maximum length and the gap between samples.
+description: >-
+  Audio files are dragged onto 16 pads, previewed in the browser and reordered
+  by dragging. Pressing Play all sends the samples in sequence to the K.O!
+  through its audio input so it can record and slice them into a drum bank. The
+  speed setting lets samples be played faster and pitched down on the device to
+  fit more audio into its memory. Processing happens locally in the browser,
+  and the settings can be preset through URL parameters.
+status: dormant
+authors:
+  - name: Riley Shaw
+    url: https://github.com/rileyjshaw
+source: https://github.com/rileyjshaw/po-33
+source_status: open
+license: GPL-3.0-only
+license_notes: The LICENSE.md file holds the GPL-3.0 text and the README says "GNU GPLv3"; no "or later" wording was found.
+homepage: https://rileyjshaw.com/po-33/
+tags: [sampler, samples, web, utility]
+versions:
+  - version: v1.0.0
+    date: 2020-07-30
+    url: https://github.com/rileyjshaw/po-33/releases/tag/v1.0.0

@@ -1,0 +1,46 @@
+device: akai-mpc-live
+name: Tributary
+summary: "Native MPC plugin that plays Elektron Overbridge audio over USB on the MPC track it sits on, with switches to sum chosen outputs; heard on a Digitone II, other Overbridge machines listed but untested."
+description: >-
+  A plugin for rooted standalone MPCs, based on the channel maps and device
+  ids of Overwitch, that opens the USB audio stream of a connected Overbridge
+  machine and sends the selected outputs to its MPC track. Several copies on
+  different tracks share one USB read. The author describes about 4 ms of
+  buffering, says the MPC should be the clock, and notes that recording needs
+  a resample because the audio is live USB input. Builds exist for 32-bit ARM
+  and AArch64 MPCs. The author has only tested a Digitone II (OS 1.10A or
+  newer). The wrapper needed to build comes from the separate
+  sd88me/mpc-vst-plugins repository.
+status: active
+authors:
+  - name: stampman3000-jpg
+    url: https://github.com/stampman3000-jpg
+source: https://github.com/stampman3000-jpg/mpc-tributary
+source_status: open
+license: GPL-3.0-only
+license_notes: The README and source header state GPL version 3 with no "or later" wording.
+homepage: https://github.com/stampman3000-jpg/mpc-tributary
+distribution: download
+install_notes: >-
+  Needs root SSH access. Copy the plugin folder into the Synths folder on the
+  MPC's storage card, add its line to the MPC plugin list (back up
+  MPC.settings first; pluginList-arm for 32-bit units, pluginList-arm-64bit
+  for Gen 2), restart the MPC once, then insert the plugin on a track. Release
+  zips are provided for armv7 and aarch64. Building from source needs Docker
+  and a checkout of mpc-vst-plugins.
+tags: [usb-audio, platform]
+video:
+  url: https://youtu.be/QJIlWZKR8m0
+  title: "Tributary- Overwitch for MPC Standalone"
+  credit: Johnny Barter
+  first_party: true
+  found_via: https://github.com/stampman3000-jpg/mpc-tributary#readme
+versions:
+  - version: v1.1.0
+    date: 2026-10-10
+    url: https://github.com/stampman3000-jpg/mpc-tributary/releases/tag/v1.1.0
+    notes: Release zips for armv7 and aarch64.
+  - version: v1.0.0
+    date: 2026-10-09
+    url: https://github.com/stampman3000-jpg/mpc-tributary/releases/tag/v1.0.0
+    notes: armv7 only.

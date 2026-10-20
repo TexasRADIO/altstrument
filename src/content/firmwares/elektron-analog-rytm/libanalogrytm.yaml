@@ -1,0 +1,24 @@
+device: elektron-analog-rytm
+name: libanalogrytm
+kind: tool
+summary: Portable C library for decoding, editing and encoding the SysEx messages of the Analog Rytm (kits, sounds, patterns, settings, global data and whole-project dumps). No MIDI I/O or user interface; meant to be built into other software.
+description: >-
+  File formats were worked out by comparing many SysEx dumps sent by the unit;
+  the project says it is not an official Elektron development. The library
+  can turn a whole-project .syx into raw data and back. The kit, pattern,
+  settings and global formats are mostly documented in the headers. The
+  repository has a CI build and a Visual Studio test project.
+status: dormant
+authors:
+  - name: bsp2
+    url: https://github.com/bsp2
+source: https://github.com/bsp2/libanalogrytm
+source_status: open
+license: MIT
+distribution: source-only
+tags: [sysex, sdk, editor]
+versions:
+  - version: main @ a0a19f6
+    date: 2023-12-21
+    url: https://github.com/bsp2/libanalogrytm/commit/a0a19f69fcfd44968f05ab7f0af8195633cb83f3
+    notes: No tagged releases; this is the latest commit.

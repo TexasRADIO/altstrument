@@ -10,8 +10,9 @@ description: >-
   loop lengths and note repeat, eight automation lanes per track, conductor tracks for live transposition
   and snapshot slots for mute and solo states. Each track can send to Move's instruments, a Schwung slot or
   external MIDI, and sessions can be exported to Live. The README describes it as built with AI coding tools
-  under a human designer and gives no warranty.
-status: active
+  under a human designer and gives no warranty. The author has frozen this version as dAVEBOx Legacy; new
+  work goes into the standalone successor dAVEBOx SA, which does not open Legacy projects.
+status: maintained
 authors:
   - name: legsmechanical
     url: https://github.com/legsmechanical
@@ -22,8 +23,8 @@ homepage: https://github.com/legsmechanical/schwung-davebox#readme
 distribution: download
 requires_stock: Schwung 0.9.16 or later
 install_notes: >-
-  Needs Schwung. Install dAVEBOx from Schwung's module store or Schwung Manager. It is at 1.0 beta and under
-  active development.
+  Needs Schwung. Install dAVEBOx from Schwung's module store or Schwung Manager. It is at 1.0 beta; the README of
+  dAVEBOx SA says this version still works but gets no new features.
 brick_risk: false
 tags: [sequencer, midi, performance]
 video:

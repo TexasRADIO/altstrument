@@ -1,0 +1,15 @@
+name: J-6
+manufacturer: Roland
+category: synth
+tagline: AIRA Compact chord synthesizer with a chord sequencer
+description: >-
+  The J-6 is a compact chord synthesizer in Roland's AIRA Compact range. It
+  plays chord sets from its keys and sequences them in patterns. Its pattern data can be copied to a computer by
+  starting the unit in USB disk mode, which exposes the patterns as .PRM
+  files.
+links:
+  manufacturer: https://www.roland.com/global/products/j-6/
+notes: >-
+  No replacement firmware exists. The entry here is a host-side reader for the
+  .PRM pattern files that the J-6 writes in USB disk mode.
+related: [roland-s-1, roland-t-8]

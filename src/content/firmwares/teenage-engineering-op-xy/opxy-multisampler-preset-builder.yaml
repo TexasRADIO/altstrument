@@ -1,0 +1,37 @@
+device: teenage-engineering-op-xy
+name: OP-XY Multisampler Preset Builder
+kind: tool
+summary: Browser app that turns dropped audio files into OP-XY multisampler presets, detecting each sample's pitch and grouping velocity layers and round-robins.
+description: >-
+  Samples dropped onto the page are assigned to keys from their file names or
+  by pitch detection, with a keyboard to fix any that cannot be detected. The
+  app resamples them to the chosen rate and bit depth, writes the preset's
+  patch.json with the key regions, and offers a ZIP containing the .preset
+  folder. Everything runs in the browser, and the repository can also be built
+  and served locally.
+status: active
+authors:
+  - name: sixthlaw
+    url: https://github.com/sixthlaw
+source: https://github.com/sixthlaw/opxy-multisampler-preset-builder
+source_status: open
+license: MIT
+license_notes: >-
+  The README and package.json state MIT; the repository has no LICENSE file.
+homepage: https://sixthlaw.github.io/opxy-multisampler-preset-builder/
+install_notes: >-
+  Use the hosted page or run it locally with npm. Unzip the download, put the
+  OP-XY in disk mode over USB, copy the .preset folder into the presets
+  directory and eject the device.
+tags: [sampler, converter, samples, web]
+video:
+  url: https://www.youtube.com/watch?v=IFNUySQX6XM
+  title: How to quickly get samples onto your OPXY (Preset Builder App)
+  credit: Matt Duff
+  first_party: true
+  found_via: https://github.com/sixthlaw/opxy-multisampler-preset-builder#readme
+versions:
+  - version: main @ f672467
+    date: 2025-11-25
+    url: https://github.com/sixthlaw/opxy-multisampler-preset-builder/commit/f672467
+    notes: No tagged releases; this is the latest commit.

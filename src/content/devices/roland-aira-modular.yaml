@@ -1,0 +1,29 @@
+name: AIRA Modular
+manufacturer: Roland
+category: eurorack
+tagline: Bitrazer, Demora, Torcido and Scooper Eurorack effect modules
+description: >-
+  AIRA Modular is a set of four Eurorack effect modules from Roland: Bitrazer
+  (crusher), Demora (delay), Torcido (distortion) and Scooper (scatter and
+  looper). Each has CV and gate inputs and is patched with the AIRA Modular
+  Customizer on a computer, which loads user-built signal chains onto the unit.
+  The four units run the same system program, and a stored product value
+  decides which of them a given unit behaves as.
+stock_firmware: "1.05"
+links:
+  manufacturer: https://www.roland.com/global/products/scooper/
+  community:
+    - label: Roland BITRAZER
+      url: https://www.roland.com/global/products/bitrazer/
+    - label: Roland DEMORA
+      url: https://www.roland.com/global/products/demora/
+    - label: Roland TORCIDO
+      url: https://www.roland.com/global/products/torcido/
+notes: >-
+  One entry covers all four modules because they share a single system update
+  file. No replacement firmware is listed. A custom SYSTEM-1m oscillator build
+  for the Scooper and Demora is not catalogued because its repository bundles
+  a modified copy of Roland's firmware image and Customizer files for a current
+  product. The tool here works on your own backup of a unit and does not carry
+  any Roland code.
+related: []

@@ -1,0 +1,31 @@
+device: roland-tools
+name: Roland Structured Storage
+kind: tool
+summary: JavaScript library that parses and writes Roland structured binary files, including project files for the MC-707, MC-101, SH-4d and Verselab MV-1, and Fantom and ZEN-Core files.
+description: >-
+  Reads these files into a tree of chunks and named properties, lets you change
+  values or compare two files, and writes the result back out as binary. Mapped
+  formats include MC-707, MC-101 and MV-1 project files, SH-4d projects and
+  patches, and ZEN-Core tones, kits and properties. Sample and sequencer import and
+  export and most ZEN-Core sample data are listed as still to do. A separate
+  command-line repository by the same author inspects files, and a pattern file
+  for the ImHex hex editor shows the layout. It is a code library with no user
+  interface of its own, and the format coverage varies by device.
+status: active
+authors:
+  - name: Dr Knackerator
+    url: https://github.com/DrKnackeratorStrikesAgain
+source: https://github.com/DrKnackeratorStrikesAgain/Roland-Structured-Storage
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  An ES6 module set with no package or build step. Copy the files into a project
+  and import RolandStructuredFileFactory and the other classes from them. Work on
+  copies of your project files and keep backups.
+tags: [research, sdk, converter, utility]
+versions:
+  - version: main @ 5d19044
+    date: 2025-12-13
+    url: https://github.com/DrKnackeratorStrikesAgain/Roland-Structured-Storage/commit/5d190448a003ff612c78b5886eca6e20b9f9defe
+    notes: No tagged releases; this is the latest commit.

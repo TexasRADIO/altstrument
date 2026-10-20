@@ -1,0 +1,50 @@
+device: ableton-move
+name: Schwung-Eloquence
+summary: "Add-on for Schwung on the Move that swaps the Flite voice of Schwung's screen reader for Eloquence speech from OpenEVV. Warning: the installer downloads speech data transcribed from IBM's Eloquence."
+description: >-
+  Rights warning: the installer downloads an archive containing OpenEVV's
+  libeci.so.1, and OpenEVV's own notice says its language data is transcribed
+  from IBM's ETI-Eloquence and is not covered by its MIT license; neither the
+  project nor OpenEVV shows a permission from IBM to distribute it. A small
+  proxy library takes the place of Schwung's libflite.so.1 and speaks through
+  OpenEVV, so choosing Flite in the Global Settings screen reader menu gives
+  Eloquence instead, while eSpeak and Schwung itself are left unchanged. It
+  offers eight preset voices, speed, pitch and inflection settings in a JSON
+  file, and a regular-expression file of text fixes for words Eloquence reads
+  badly. Community pronunciation dictionaries can be copied in by hand and are
+  not included. The installer makes a Schwung + Eloquence boot target the
+  default so the change returns after Schwung updates, and an uninstall option
+  restores Schwung's Flite. It needs Schwung 1.5 or later. The README says some
+  of the code was written with Claude and that all of it was tested by hand.
+status: active
+authors:
+  - name: Simon Jaeger (Simon818)
+    url: https://github.com/Simon818
+source: https://github.com/Simon818/schwung-eloquence
+source_status: open
+license: MIT
+license_notes: >-
+  The repository's LICENSE (MIT) covers this project's code. The archive the
+  installer downloads also holds OpenEVV's libeci.so.1 and PCRE2 (BSD). The
+  README states that OpenEVV's code is MIT but its language data is transcribed
+  from IBM's ETI-Eloquence and is not covered by that license, and OpenEVV's
+  NOTICE says the same. The repository holds no IBM data itself; the library is
+  fetched from simonj.me at install time and built from the OpenEVV submodule.
+homepage: https://simonj.me/schwung-eloquence/
+distribution: download
+requires_stock: Schwung 1.5 or later on the Move, with SSH access enabled
+install_notes: >-
+  Over SSH, run the README's one-liner, which pipes install.sh from
+  simonj.me into sh; the Move restarts when it finishes. The README notes that
+  the Move's wget does not check HTTPS certificates, and offers a local install
+  by copying install.sh and the tar.gz from the project site to the Move. Then
+  set the screen reader engine to Flite in Global Settings. Running
+  sh /data/UserData/eloquence/install.sh --uninstall restores Schwung's Flite
+  and deletes the eloquence folder, including your settings and dictionaries.
+brick_risk: false
+tags: [accessibility, speech, voice, utility]
+versions:
+  - version: main @ c28029c
+    date: 2026-10-03
+    url: https://github.com/Simon818/schwung-eloquence/commit/c28029c199c73db49cd808c6d1a19ae2d861b482
+    notes: No tagged releases; this is the latest commit. The VERSION file reads 0.2.0 and the commit requires Schwung 1.5.

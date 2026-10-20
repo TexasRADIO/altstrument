@@ -1,0 +1,43 @@
+device: dirtywave-m8
+name: m8-js
+kind: tool
+summary: JavaScript library and m8 command-line tool that read, edit and write M8 song, instrument, scale and theme files.
+description: >-
+  m8-js parses the M8's binary file formats and exposes songs, instruments,
+  scales and themes as JavaScript objects that can be changed and written back
+  to disk. The m8 command prints songs, instruments, scales and themes in a
+  readable form, shows chains, phrases, tables, grooves, the mixer, effects and
+  MIDI settings, and converts files to and from JSON. Bytes the author has not
+  decoded are kept when a loaded file is written back. The format was worked
+  out from a community gist, a hex editor and help from the M8 Discord, and the
+  project says it is meant for utilities and extra features, not as another
+  editor.
+status: dormant
+authors:
+  - name: Jeremy Whitlock
+    url: https://github.com/whitlockjc
+source: https://github.com/whitlockjc/m8-js
+source_status: open
+license: Apache-2.0
+homepage: https://github.com/whitlockjc/m8-js
+distribution: download
+install_notes: >-
+  Install from npm with npm install m8-js --global to get the m8 command, or
+  clone the repository and run bin/m8 after npm install. Work on copies of your
+  files: the last release is from March 2023, so files saved by newer M8
+  firmware may not be fully covered.
+brick_risk: false
+tags: [converter, sdk, scripting, utility, open-source]
+versions:
+  - version: v0.2.1
+    date: 2023-03-23
+    url: https://github.com/whitlockjc/m8-js/tree/v0.2.1
+    notes: Git tag; no GitHub release page. Adds a default view command.
+  - version: v0.2.0
+    date: 2023-03-23
+    url: https://github.com/whitlockjc/m8-js/tree/v0.2.0
+    notes: Git tag; no GitHub release page.
+  - version: v0.1.0
+    date: 2022-10-05
+    url: https://github.com/whitlockjc/m8-js/tree/v0.1.0
+    notes: Git tag; no GitHub release page.

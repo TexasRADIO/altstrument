@@ -1,0 +1,44 @@
+device: akai-mpc3000
+name: MPC3K-VST
+kind: tool
+summary: VST3 and AU plugin that emulates the MPC3000 by booting your own firmware ROMs in an embedded MAME core, with the front panel as its editor and MIDI, audio, floppy and SCSI images.
+description: >-
+  The plugin runs the MPC3000 operating system (v3.12) inside a headless MAME
+  machine wrapped in a JUCE plugin, building on the Sojus Records MAME-VST
+  host. The front panel is drawn from the MAME layout, with pads, buttons and
+  the data entry dial mapped to the emulated controls. MIDI goes to the
+  emulated UART, floppy and CD images can be swapped while it runs, and a SCSI
+  hard-disk image can be mounted at start. The repository holds the port
+  sources and build scripts for Windows and does not include MAME, JUCE or any
+  ROMs. A release zip with a Windows 64-bit VST3 build is published. The
+  README names an AI assistant as co-developer of the port.
+status: active
+authors:
+  - name: Tuth
+    url: https://github.com/Tuth
+source: https://github.com/Tuth/MPC3K-VST
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file is GPL version 3 and the README says GPL version 3 without
+  "or later"; one source header reads "GPLv2/v3". MAME and JUCE parts keep
+  their own licenses.
+distribution: download
+install_notes: >-
+  Copy the VST3 from the release zip to the VST3 folder, then put your own
+  MPC3000 ROM set in Documents/MPC3000/ROMs/mpc3000/. No ROMs are included and
+  the plugin makes no sound without them. Building from source needs Visual
+  Studio 2022 build tools, JUCE and MAME 0.288 source.
+tags: [emulator, sampler, drums]
+versions:
+  - version: v1.2
+    date: 2026-08-04
+    url: https://github.com/Tuth/MPC3K-VST/releases/tag/v1.2
+    notes: Live data entry dial that wraps like the hardware encoder.
+  - version: v1.1
+    date: 2026-08-03
+    url: https://github.com/Tuth/MPC3K-VST/releases/tag/v1.1
+    notes: Full stereo sample playback and display refresh.
+  - version: v1.0
+    date: 2026-07-24
+    url: https://github.com/Tuth/MPC3K-VST/releases/tag/v1.0

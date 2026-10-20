@@ -1,0 +1,46 @@
+device: sequential-prophet-x
+name: PX-RE
+summary: Python patcher that turns Sequential's Prophet X 2.2.2.0.0 update into a modified 2.2.2.2.2 image with sample-window, voice-steal and SysEx fixes, plus a guide to fitting a larger SSD.
+description: >-
+  PX-RE patches the official Prophet X update file you supply and writes a new
+  update with the changes applied to the QNX application and the PIC
+  controller; the FPGA part is left unchanged. The changes fix a click on voice
+  steal, SysEx being ignored on some MIDI channels, clicks when scrolling
+  sample start and end across loop boundaries, window handling that let start
+  pass end, and a retrigger of the tail when End is raised. They also add a
+  5 ms fade at sample end, let Center move the sample window and be pushed by
+  Start and End, add 1/32 and 1/64 loop sync divisions, speed up preset
+  browsing, remove encoder acceleration outside the sample controls, and make
+  stretch use the held velocity layer. The repository also has a recovery
+  guide, a map of the update container and a step-by-step guide to replacing
+  the SSD with a larger one, which has been tested with one drive model. The
+  author states that LLMs were used throughout the work, and builds on earlier
+  reverse-engineering notes by rvense.
+status: active
+authors:
+  - name: water-feature
+    url: https://github.com/water-feature
+source: https://github.com/water-feature/PX-RE
+source_status: open
+license: MIT
+license_notes: Covers the project's own code and documentation. The license changed from GPL-2.0-or-later to MIT on 2026-10-18, after the v2.2.2.2.2 release; Sequential's firmware is not included.
+homepage: https://github.com/water-feature/PX-RE
+distribution: patch-your-own
+requires_stock: 2.2.2.0.0
+install_notes: >-
+  Download Sequential's PxUpdate_V2.2.2.0.0.bin, put it next to
+  firmware_builder/patch.py and run python3 patch.py (Python 3.11 or newer).
+  The patcher writes PxUpdate_V2.2.2.2.2.bin; compare its size and SHA-256 with
+  the values in the README, copy it to a USB drive under that exact name and
+  install it as described in Sequential's update guide. The project asks you to
+  read RECOVERY.md and make a full image of the SSD before flashing, and to keep
+  the generated image private. Going back to stock is possible by installing
+  the official file again, and a MIDI recovery path exists for the controller.
+  The author reports no affiliation with Sequential.
+brick_risk: true
+tags: [research, sampler, os, utility]
+versions:
+  - version: 2.2.2.2.2
+    date: 2026-10-11
+    url: https://github.com/water-feature/PX-RE/releases/tag/v2.2.2.2.2
+    notes: Source-only release; build locally from the official 2.2.2.0.0 update.

@@ -14,11 +14,14 @@ links:
       url: http://www7a.biglobe.ne.jp/~mpc1000/
 notes: >-
   JJOS is the established alternative OS for this family. The JJOS site
-  lists the MPC1000 variants and links to a separate MPC2500 page.
+  lists the MPC1000 variants and links to a separate MPC2500 page. The other
+  entries are host-side tools for program and sequence files. MPC Maid also
+  supports the MPC500.
 related:
   - akai-mpc-live
   - akai-mpc500
   - akai-mpc2000
+  - akai-mpc3000
   - akai-force
 image:
   src: /images/devices/akai-mpc1000.webp

@@ -1,0 +1,21 @@
+name: EP-133 K.O. II
+manufacturer: Teenage Engineering
+category: sampler
+tagline: Pocket sampler, sequencer and composer
+description: >-
+  The EP-133 K.O. II is a portable sampler and sequencer from Teenage
+  Engineering. It records and plays back samples on a pad grid, sequences them
+  in patterns and scenes, and applies a master effect. Samples and projects
+  live in an internal flash filesystem, and a USB-C port carries USB audio and
+  MIDI. The official EP Sample Tool runs in a browser over WebMIDI to manage
+  samples and projects.
+links:
+  manufacturer: https://teenage.engineering/products/ep-133
+notes: >-
+  No replacement firmware exists; the entries here are host-side tools that
+  talk to the stock OS over its SysEx file protocol, plus one browser tool that
+  rewrites the header of a user-supplied official update so the EP-40 riddim
+  firmware can be flashed. The device has no mass-storage interface, so every
+  tool tunnels file access through SysEx. Several of these tools also cover the
+  EP-40 riddim and, in the case of the DAW exporter, the EP-1320 medieval.
+related: [teenage-engineering-ep-40]

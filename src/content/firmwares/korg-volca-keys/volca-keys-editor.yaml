@@ -1,0 +1,32 @@
+device: korg-volca-keys
+name: Volca Keys editor
+kind: tool
+summary: Browser-based editor for the Korg volca keys that sends slider changes to the synth as MIDI control changes over Web MIDI, with patches shareable as a URL fragment.
+description: >-
+  A small React app with one slider per volca keys parameter. Each slider sends
+  a MIDI control change on the chosen channel to the connected volca keys, and
+  the current slider set is encoded into the page address so a patch can be
+  shared as a link. It needs a browser with Web MIDI support. The hosted copy
+  at volcaeditor.com no longer resolves, so the editor has to be run from the
+  source. The author describes it as a learning project and the last commit
+  is from December 2016.
+status: dormant
+authors:
+  - name: Rodrigo López Dato
+    url: https://github.com/rolodato
+source: https://github.com/rolodato/volca-keys-editor
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file and package.json give GPL-3.0 with no "or later" wording.
+distribution: source-only
+install_notes: >-
+  Run yarn install and yarn run dev from the repository, then open the page in
+  a browser with Web MIDI and pick the MIDI output that goes to the volca
+  keys. Nothing is written to the instrument's firmware.
+tags: [editor, midi, web, patch-library]
+versions:
+  - version: main @ db79c16
+    date: 2016-12-27
+    url: https://github.com/rolodato/volca-keys-editor/commit/db79c162935cbc1a2b27da27c8331fe0c73109c0
+    notes: No tagged releases; this is the latest commit.

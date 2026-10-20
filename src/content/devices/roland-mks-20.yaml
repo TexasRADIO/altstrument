@@ -1,0 +1,21 @@
+name: MKS-20
+manufacturer: Roland
+category: synth
+tagline: Rack digital piano module using SA synthesis
+description: >-
+  The MKS-20 is a rack-mounted digital piano sound module from Roland. It is
+  built around a Hitachi HD6301 microcontroller and a custom SA sound chip on
+  the same CPU-B board that the RD-1000 stage piano and the Rhodes MK-80 use,
+  and it holds eight piano, harpsichord, clavinet, vibraphone and electric piano
+  patches.
+links:
+  community:
+    - label: MKS-20 on Wikipedia
+      url: https://en.wikipedia.org/wiki/Roland_MKS-20
+    - label: rdpiano, the board emulator
+      url: https://github.com/giulioz/rdpiano
+notes: >-
+  No replacement firmware exists, and the unit is out of production. The one
+  entry here is a browser emulator that plays the unit's own ROM images, which you
+  supply from an instrument you own.
+related: []

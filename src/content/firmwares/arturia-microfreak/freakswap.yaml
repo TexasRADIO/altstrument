@@ -1,0 +1,36 @@
+device: arturia-microfreak
+name: FreakSwap
+summary: Browser tool that prepares a modified MicroFreak firmware file in which one of the original synth engines is replaced by an engine adapted from Mutable Instruments Plaits, applied to your own official 5.0.0.2084 file.
+description: >-
+  The page offers 11 replacement engines and a choice of which original engine each one takes over,
+  for 38 combinations in all. The patches are small binary deltas published with the page, applied
+  in the browser to the firmware file you supply; the author states the official file is neither included
+  nor uploaded, and that the result is installed with MIDI Control Center. Presets that use the replaced engine
+  will sound different. The notice file says the engines are adapted from Mutable Instruments Plaits and
+  stmlib code under the MIT licence. The patch data is published but no source for the adapted engines was
+  found, so the source status is patcher-only.
+status: active
+authors:
+  - name: doriamxyz
+    url: https://github.com/doriamxyz
+source: https://github.com/doriamxyz/FreakSwap
+source_status: patcher-only
+license: unspecified
+license_notes: >-
+  The repository has no license file. NOTICE.txt reproduces the MIT licence of Emilie Gillet for the
+  Plaits and stmlib components it adapts and says it does not distribute the complete official firmware.
+homepage: https://doriamxyz.github.io/FreakSwap/
+distribution: patch-your-own
+requires_stock: 5.0.0.2084
+install_notes: >-
+  Back up your presets first. Choose an engine and the engine to replace, select your official 5.0.0.2084
+  firmware file, download the modified .mff and its guide, and install it with Arturia MIDI Control
+  Center. The author states that installing modified firmware carries a risk of bricking the unit and
+  gives no guarantee.
+brick_risk: true
+tags: [synth-engine, patch, web, plaits]
+versions:
+  - version: main @ 75a9ab7
+    date: 2026-10-10
+    url: https://github.com/doriamxyz/FreakSwap/commit/75a9ab7e7183e371982e53a8136ee6cc5663d4f1
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,47 @@
+device: ableton-push-3
+name: Push Hack Braids
+summary: >-
+  Push Hack module that plays Mutable Instruments Braids from Push 3's pads, with an on-screen parameter UI,
+  rendering into the Push Hack virtual audio device.
+description: >-
+  The module reads pad and button MIDI from the Push's own ALSA sequencer, feeds notes into a Braids macro
+  oscillator DSP module ported by Charles Vestal from Schwung, and writes audio to the virtual sound card from push-hack-audio-loopback. Shift +
+  Device opens pages for the oscillator and amplitude envelope, the filter and an I/O picker for MIDI port, audio
+  device and channel pair. Live needs an audio track whose input is the virtual device to route the sound out. It
+  runs as a service that restarts itself if it crashes, and its settings survive reboots. Pitch bend and aftertouch
+  are ignored.
+status: active
+authors:
+  - name: Federico P.
+    url: https://github.com/federico-pepe
+source: https://github.com/federico-pepe/push-hack-braids
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no license file of its own. The vendored Braids and stmlib code is MIT, copyright Emilie Gillet,
+  and the Schwung port code is MIT, copyright Charles Vestal, as listed in third_party/braids/THIRD_PARTY_LICENSES.md.
+homepage: https://github.com/federico-pepe/ableton-push-hack#readme
+distribution: download
+requires_stock: Push Hack with push-manager and push-display, and push-hack-audio-loopback
+install_notes: >-
+  Install it from Push Catalog on the unit; push-hack-audio-loopback is installed first if it is missing. In Live,
+  add an audio track with input set to Push Hack Virtual Audio and monitor set to In. Releases are tarballs built
+  by the project's GitHub workflow, and all current ones are marked alpha.
+brick_risk: false
+tags: [synth-engine, oscillator, performance, midi]
+versions:
+  - version: v0.2.9-alpha
+    date: 2026-10-19
+    url: https://github.com/federico-pepe/push-hack-braids/releases/tag/v0.2.9-alpha
+  - version: v0.2.8-alpha
+    date: 2026-10-19
+    url: https://github.com/federico-pepe/push-hack-braids/releases/tag/v0.2.8-alpha
+  - version: v0.2.7-alpha
+    date: 2026-09-08
+    url: https://github.com/federico-pepe/push-hack-braids/releases/tag/v0.2.7-alpha
+  - version: v0.2.6-alpha
+    date: 2026-09-08
+    url: https://github.com/federico-pepe/push-hack-braids/releases/tag/v0.2.6-alpha
+  - version: v0.2.5-alpha
+    date: 2026-09-07
+    url: https://github.com/federico-pepe/push-hack-braids/releases/tag/v0.2.5-alpha

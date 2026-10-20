@@ -1,0 +1,43 @@
+device: akai-mpc-live
+name: Granola MPC / OpenMPC
+summary: "Boots a first-generation MPC One straight into Granola MPC, a five-voice granular instrument with a drum section, running in a Debian chroot on an SD card while the stock Akai application is switched off."
+description: >-
+  OpenMPC is a small framework that runs apps from a chroot on an SD card on
+  top of the unit's own Linux kernel, masking the Akai application at boot.
+  Its example app, Granola MPC, is built on SuperCollider and gives five
+  granular tracks with a filter, LFOs, parameter-lock pads, gesture loops,
+  shared delay and reverb, performance effects, a synthesised drum section
+  with generative patterns, and a source generator that renders material
+  with sfizz, Yoshimi, a DX7 clone, Plaits or bytebeat expressions. Projects
+  and patterns are stored on the card. The README targets the MPC One Gen 1
+  only and says the installer is untested end to end. Third-party
+  components such as the sample library are fetched separately and carry their
+  own licenses.
+status: active
+authors:
+  - name: Nuno Zimas
+    url: https://github.com/nzimas
+source: https://github.com/nzimas/granola-openmpc
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the OpenMPC source in the repository only. The components it builds
+  on or installs have their own licenses, several of them copyleft, listed in
+  the README.
+homepage: https://github.com/nzimas/granola-openmpc
+distribution: source-only
+requires_stock: MPC One Gen 1 with working root SSH access
+install_notes: >-
+  Needs SSH root access to the MPC One. The README asks for a verified full
+  eMMC backup first (backup-mpc-emmc.sh is included) and says U-Boot and the
+  partition table are left untouched and the stock root filesystem stays
+  read-only. install.sh leaves boot activation off unless asked, but with the
+  stock application disabled there is no fallback interface, and a failed
+  start leaves the app retrying with SSH reachable. Installation voids any
+  remaining warranty, per the author.
+tags: [sampler, synth-engine, performance, platform]
+versions:
+  - version: master @ 9709dfa
+    date: 2026-08-26
+    url: https://github.com/nzimas/granola-openmpc/commit/9709dfaddd1f44feb9d4c1405ac52575212bd639
+    notes: No tagged releases; this is the latest commit.

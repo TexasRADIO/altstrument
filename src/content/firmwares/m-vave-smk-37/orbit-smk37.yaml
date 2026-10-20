@@ -1,0 +1,46 @@
+device: m-vave-smk-37
+name: ORBIT SMK-37
+summary: >-
+  dspaudio's ORBIT groovebox on the SMK-37: the 16 pads are the steps in track colours, fader banks set
+  level, pan, reverb and delay, and the outer keys play drums on the drum track. Warning: includes Teenage Engineering OP-1 data tables.
+description: >-
+  Rights warning: the CLUSTER engine is built on tables and 16 factory presets extracted from teenage
+  engineering's OP-1 software, which the README says keep teenage engineering's rights and are neither GPL nor
+  CC0, and that extraction alone does not establish permission to distribute them. Lives on the smk37 branch of the genkigenki/orbit fork and is offered upstream as dspaudio/orbit pull
+  request 4, which is still open. It is ORBIT 0.7.0, a four-track groovebox with three synth parts, a drum
+  machine, an event tape editor and a mixer. The FM-1 build is unchanged and the SMK-37 code sits behind a
+  BOARD_SMK37 switch. Releases carry one package each for the Pro, Elite and MKE-P37 names. USR3 and USR4
+  have no flash on the SMK-37, so only two user sample slots are usable.
+status: active
+authors:
+- name: genkigenki
+  url: https://github.com/genkigenki
+- name: dspaudio (ORBIT)
+  url: https://github.com/dspaudio
+source: https://github.com/genkigenki/orbit/tree/smk37
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Code is GPL-3.0-only with the msfa (Apache-2.0) exception; see LICENSING.md. The README says the extracted
+  OP-1 tables and factory data (assets/op1-cluster, used by the CLUSTER engine) keep Teenage Engineering's
+  rights, are not GPL or CC0, and that extraction alone does not establish distribution permission. The
+  repository includes no OP-1 logo or artwork.
+homepage: https://genkigenki.github.io/smk37/
+distribution: browser-installer
+install_notes: >-
+  Installs from the browser at genkigenki.github.io/smk37, or with tools/fm1_install.py and a package from the
+  release or your own build (BOARD=smk37, with MODEL=elite or MODEL=mke). Back up the whole flash first as
+  SMK37.md advises, and have M-VAVE's package for your model and its updater ready. The first start clears
+  the stock settings and other firmware's data in the shared data area. Unofficial; install at your own risk.
+brick_risk: true
+tags: [sequencer, sampler, synth-engine, fx, performance, ui]
+image:
+  url: https://genkigenki.github.io/smk37/assets/shot-orbit.png
+  alt: "ORBIT event tape screen on the SMK-37 display, with two reels above four coloured track lanes"
+  credit: genkigenki
+  source_url: https://genkigenki.github.io/smk37/
+  first_party: true
+versions:
+- version: smk37-0.7.0
+  date: 2026-10-13
+  url: https://github.com/genkigenki/orbit/releases/tag/smk37-v0.7.0

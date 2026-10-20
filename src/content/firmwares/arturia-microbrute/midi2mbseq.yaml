@@ -1,0 +1,31 @@
+device: arturia-microbrute
+name: midi2mbseq
+kind: tool
+summary: Java tool that converts MIDI files into MicroBrute sequence files (.mbseq), with a window and a batch mode, splitting long files across the eight sequence slots.
+description: >-
+  Notes from a MIDI file are written into the MicroBrute's step format, taking the highest note when a
+  step holds a chord. Options pad a sequence with rests to a multiple of 16 steps, to a custom length or
+  to the 64-step maximum, and set the sequence length. A directory of files can be converted in one run
+  from the command line. The output is the .mbseq sequence file type used for the MicroBrute.
+status: dormant
+authors:
+  - name: mebitek
+    url: https://github.com/mebitek
+source: https://github.com/mebitek/midi2mbseq
+source_status: open
+license: Apache-2.0
+distribution: download
+install_notes: >-
+  The repository carries a runnable jar plus Windows and macOS builds in its releases folder and a Maven
+  build; run it with java -jar. The tool writes sequence files only and does not change the device firmware.
+brick_risk: false
+tags: [converter, sequencer, midi]
+versions:
+  - version: 0.3.1
+    date: 2018-02-17
+    url: https://github.com/mebitek/midi2mbseq/commit/da1d9a4
+    notes: Commit that uploaded the 0.3.1 builds; no GitHub release page.
+  - version: "0.3"
+    date: 2018-02-15
+    url: https://github.com/mebitek/midi2mbseq/tree/0.3
+    notes: Git tag; no GitHub release page.

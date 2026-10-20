@@ -1,0 +1,17 @@
+name: Prophecy
+manufacturer: Korg
+category: synth
+tagline: Monophonic physical-modeling synth from 1995
+description: >-
+  The Prophecy is a monophonic synthesizer made by Korg and released in 1995.
+  It uses the company's MOSS (Multi Oscillator Synthesis System) modeling
+  engine, with oscillator types that imitate analog, FM, comb, ring and
+  physical-modeling sounds, plus a filter section, effects and a ribbon
+  controller. It has a 37-key keyboard and 128 user programs. It is no longer
+  made.
+links:
+  manufacturer: https://www.korg.com/us/products/software/kc_prophecy/
+notes: >-
+  No replacement firmware exists. The one entry is an emulator that runs ROM
+  dumps from the user's own unit. Korg's product page above is the software
+  edition, which describes the original hardware.

@@ -1,0 +1,31 @@
+device: arturia-beatstep
+name: beatstep-analysis
+kind: tool
+summary: Early reverse-engineering work toward running custom firmware on the BeatStep, with a script that unpacks Arturia's .led update file into a binary for disassembly. Packing a modified binary back into a .led does not work yet.
+description: >-
+  The repository records the author's notes on the BeatStep's STM32F103 microcontroller, the shift
+  registers that scan its buttons, LEDs and encoders, and a debug header on the circuit board. Two small
+  Python scripts handle the .led update format: led_unpack.py extracts the firmware binary from an
+  update file you download yourself, and led_pack.py, meant to go the other way, is unfinished. The stated
+  goal is a custom sequencer for the unit, loaded either through a SysEx update or over the debug
+  header. No custom firmware has been published.
+status: dormant
+authors:
+  - name: David Konsumer
+    url: https://github.com/konsumer
+source: https://github.com/konsumer/beatstep-analysis
+source_status: open
+license: unspecified
+license_notes: The repository has no license file or license statement.
+distribution: source-only
+requires_stock: 1.2.0.3
+install_notes: >-
+  Needs Python 3 and your own copy of the official BeatStep update file; the repository does not include
+  it. The scripts only read and convert files on the computer and do not talk to the device.
+brick_risk: false
+tags: [research, converter]
+versions:
+  - version: main @ fc3023f
+    date: 2025-01-30
+    url: https://github.com/konsumer/beatstep-analysis/commit/fc3023f29c1d464ac75199b137c27451c4a5692c
+    notes: No tagged releases; this is the latest commit.

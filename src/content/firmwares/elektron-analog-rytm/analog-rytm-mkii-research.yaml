@@ -1,0 +1,34 @@
+device: elektron-analog-rytm
+name: analog-rytm-mkii-research
+kind: tool
+summary: Reverse-engineering workspace for Analog Rytm MKII OS 1.72 with a custom QEMU ColdFire machine and a desktop emulator that boots your own OS file, plus Python tracing scripts and notes on the audio path.
+description: >-
+  Contains patches and a machine model for QEMU (m68k, MCF5441x), a Python
+  desktop panel with keyboard and mouse input, GitHub workflows that build the
+  emulator, and many research scripts and JSON trace reports covering the
+  firmware container, the sample bit-reduction path and the FPGA. The
+  repository ignores .syx, .bin and similar files and states that Elektron
+  firmware is not bundled; the emulator asks you for your own official 1.72 file,
+  and a verifier script checks input files against stored hashes. The project says its custom-image work
+  is unverified on hardware and lists a staged test protocol before anything
+  is flashed.
+status: active
+authors:
+  - name: genosdk
+    url: https://github.com/genosdk
+source: https://github.com/genosdk/analog-rytm-mkii-research
+source_status: open
+license: unspecified
+license_notes: No license file or license statement in the repository.
+distribution: source-only
+requires_stock: "1.72"
+install_notes: >-
+  See docs/DESKTOP_EMULATOR.md and qemu/QEMU_BUILD.md. Supply the official OS 1.72
+  .syx; the emulated firmware shows four warnings that you dismiss with NO
+  because storage and calibration hardware are not modelled.
+tags: [emulator, research]
+versions:
+  - version: main @ 14570ea
+    date: 2026-09-25
+    url: https://github.com/genosdk/analog-rytm-mkii-research/commit/14570ead9aa5d1eb450ef0ea297bf8b9401d2390
+    notes: No tagged releases; this is the latest commit.

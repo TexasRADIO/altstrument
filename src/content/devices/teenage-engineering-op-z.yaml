@@ -1,0 +1,27 @@
+name: OP-Z
+manufacturer: Teenage Engineering
+category: groovebox
+tagline: Portable 16-track sequencer and synth with MIDI, light and visual control
+description: >-
+  The OP-Z is a portable sequencer and synthesizer from Teenage Engineering,
+  released in 2018. It has 16 tracks that hold synth, sampler and control
+  parts, a set of sound engines, step components that add per-step variations,
+  punch-in effects, a tape track and a six-axis motion sensor. It can also
+  sequence lights and visuals through an external interface and talks to a
+  companion phone app over USB and Bluetooth MIDI. An Analog Devices Blackfin
+  DSP runs the instrument.
+platform: Analog Devices Blackfin BF70x
+links:
+  manufacturer: https://teenage.engineering/products/op-z
+  community:
+    - label: opzdoc wiki (OP-Z SysEx notes)
+      url: https://github.com/hyphz/opzdoc/wiki
+    - label: op-forums
+      url: https://op-forums.com/
+notes: >-
+  No replacement firmware exists. The entries here are host-side tools that
+  talk to the stock OS over MIDI SysEx or USB audio, or read and write its
+  project files.
+related:
+  - teenage-engineering-op-xy
+  - teenage-engineering-op-1

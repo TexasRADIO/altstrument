@@ -1,0 +1,46 @@
+device: akai-mpc-live
+name: LXRXXL
+summary: Native VST2 drum machine for MPC and Force based on the open-source Sonic Potions LXR engine, with the whole panel on one touchscreen page, an LXR-02-style sequencer and FX unit, and a bundled preset project.
+description: >-
+  A port of the LXR drum synth for MPC OS. The six voices are the LXR's own DSP
+  code, taken from Brendan Clarke's LXR02Open, and the features the Erica
+  Synths LXR-02 added are written from its manual and changelog rather than
+  from its closed firmware: a PWM waveform, an FX unit and a 64-pattern
+  sequencer with parameter locks, rolls, songs and probability. The page shows
+  the pots, faders, keys and step buttons, and the pads play the voices. Added
+  here are random and sequence-random controls, a reset key, 64 kits and 16
+  demo patterns from the Hrtl LXR-02 DLC project, and tempo that follows MPC.
+  The wrapper and installer come from sd88me's mpc-vst-plugins. The project is
+  not affiliated with Sonic Potions or Erica Synths.
+status: active
+authors:
+  - name: L'Cronx
+    url: https://github.com/sunskiefer
+source: https://github.com/sunskiefer/LXR02XXL
+source_status: open
+license: proprietary
+license_notes: >-
+  Distributed under the LXR02 Open-Source license: source-available, not for
+  sale or commercial use, and every binary must come with its complete source.
+  The mpc-vst-plugins parts are MIT and the fonts SIL OFL 1.1. Not an
+  OSI-approved license.
+distribution: download
+requires_stock: MPC OS 3.x
+install_notes: >-
+  Needs root SSH access to the device (the README names MockbaMod as an
+  example). Unzip the release, copy the folder to the device with scp and run
+  install.sh, which stops MPC, copies the plugin to /sdcard/Synths, registers
+  it and restarts MPC. Save the project first. uninstall.sh removes it. Tested
+  on a Force; installing plugins this way is unofficial.
+tags: [drums, synth-engine, sequencer, emulator, platform]
+versions:
+  - version: v0.5.9
+    date: 2026-10-16
+    url: https://github.com/sunskiefer/LXR02XXL/releases/tag/v0.5.9
+    notes: Repackaged under the L'Cronx plugin folder name; uninstall 0.5.8 first.
+  - version: v0.5.8
+    date: 2026-10-12
+    url: https://github.com/sunskiefer/LXR02XXL/releases/tag/v0.5.8
+  - version: v0.5.7
+    date: 2026-10-12
+    url: https://github.com/sunskiefer/LXR02XXL/releases/tag/v0.5.7

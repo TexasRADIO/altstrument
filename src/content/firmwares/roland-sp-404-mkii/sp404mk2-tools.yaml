@@ -1,0 +1,31 @@
+device: roland-sp-404-mkii
+name: sp404mk2-tools
+kind: tool
+summary: Research notes and small scripts for the SP-404MKII file formats, covering PADCONF.BIN and pattern files, with a script that sets a pad's BPM in a project file.
+description: >-
+  Collects the author's notes on the byte layout of the project's PADCONF.BIN
+  (pad entries, bank tempos, volumes, pad links and mute groups) and of exported
+  pattern files, plus sample project dumps used to work them out. The notes were
+  written against firmware 5.01. Scripts include mk2_bpm_edit.py, which writes a
+  new BPM into a pad entry, and shell scripts that download Roland's update from
+  Roland's site and search it for strings. The repository has no README and was
+  worked on over a few days in August 2025. It is a small research repository
+  rather than a finished tool.
+status: dormant
+authors:
+  - name: gsterlin
+    url: https://github.com/gsterlin
+source: https://github.com/gsterlin/sp404mk2-tools
+source_status: open
+license: unspecified
+distribution: source-only
+install_notes: >-
+  Run the Python and shell scripts from a clone. mk2_bpm_edit.py edits a
+  PADCONF.BIN in place, so use a copy of the file. The firmware helper downloads
+  Roland's 5.01 update from Roland's site rather than including it.
+tags: [research, converter, utility]
+versions:
+  - version: main @ 4d7d12d
+    date: 2025-08-28
+    url: https://github.com/gsterlin/sp404mk2-tools/commit/4d7d12d8d00fabab81252b27b8343c1c44182fd4
+    notes: No tagged releases; this is the latest commit.

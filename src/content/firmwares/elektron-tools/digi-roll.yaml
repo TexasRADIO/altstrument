@@ -1,0 +1,43 @@
+device: elektron-tools
+name: digi-roll
+kind: tool
+summary: Browser piano roll that sends patterns to Digitakt II and Digitone II pattern slots over Web MIDI SysEx, or pulls a track off the box, edits it and writes it back. Other Elektron boxes can capture patterns by live recording.
+description: >-
+  Plain HTML and JavaScript with no build step, based on the protocol code of
+  the elk-herd editor. Writes to a track keep the other tracks and the kit
+  untouched: the tool backs up the destination pattern as a .syx, checks the OS
+  version against an allowlist, and reads the result back to compare it byte
+  for byte. A separate device console backs up whole projects from Digitakt,
+  Digitakt II and Digitone II, copies tracks between patterns or boxes, and
+  has a pattern generator. A lab page diffs pattern dumps so that owners of
+  other boxes can help map their pattern format; it only sends read requests.
+  It needs a Chromium-based browser, and the README notes that Chrome 152 on
+  macOS can break SysEx connections.
+status: active
+authors:
+  - name: zooloo303
+    url: https://github.com/zooloo303
+source: https://github.com/zooloo303/digi-roll
+source_status: open
+license: unspecified
+license_notes: >-
+  No license file or license statement in the repository. The protocol code is
+  ported from elk-herd by mzero (BSD-2-Clause). The repository commits eight
+  single-pattern .syx test fixtures and some capture files from the author's
+  own boxes; none of them is an Elektron OS file.
+homepage: https://zooloo303.github.io/digi-roll/
+distribution: browser-installer
+install_notes: >-
+  Open the hosted page in Chrome, Edge or Brave (not Safari) and allow MIDI
+  access, or serve the folder locally, for example with python3 -m http.server.
+  Writes are limited to OS builds on the tool's allowlist.
+tags: [sysex, editor, sequencer, web, midi]
+versions:
+  - version: main @ aa22ced
+    date: 2026-09-16
+    url: https://github.com/zooloo303/digi-roll/commit/aa22cede04b89b01286f3118542273c34c182993
+    notes: Latest commit.
+  - version: v1.0.0
+    date: 2026-08-02
+    url: https://github.com/zooloo303/digi-roll/tree/v1.0.0
+    notes: Git tag; no GitHub release page.

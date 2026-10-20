@@ -1,0 +1,16 @@
+name: Boutique series
+manufacturer: Roland
+category: synth
+tagline: Compact modules modelled on classic Roland synths and drum machines
+description: >-
+  Boutique is Roland's range of compact desktop modules that recreate classic
+  Roland instruments. It includes the JU-06 and JU-06A (Juno-60), the JP-08
+  (Jupiter-8) and the JX-03 (JX-3P), among others. The modules take MIDI and
+  USB.
+links:
+  manufacturer: https://www.roland.com/global/categories/boutique/
+notes: >-
+  No replacement firmware is catalogued for the Boutique range. The entry here
+  is a host-side utility that translates the modules' SysEx control messages
+  into ordinary MIDI control changes.
+related: []

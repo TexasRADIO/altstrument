@@ -1,0 +1,42 @@
+device: ableton-push-3
+name: Push Hack Installer
+kind: tool
+summary: >-
+  Desktop app for Windows, macOS and Linux that installs the Push Hack base modules on a Push 3 Standalone over SSH,
+  as a guided alternative to the install script.
+description: >-
+  The app connects to the Push over SSH and installs Push Manager, Push Display and Push Catalog, doing the same job
+  as the install script in the Push Hack repository. It is built with Wails and checks for a newer version of
+  itself at startup. All releases so far are marked beta.
+status: active
+authors:
+  - name: Federico P.
+    url: https://github.com/federico-pepe
+source: https://github.com/federico-pepe/push-hack-installer
+source_status: open
+license: MIT
+homepage: https://github.com/federico-pepe/ableton-push-hack#readme
+distribution: download
+install_notes: >-
+  Download the build for your platform from the releases page and follow the pairing steps in the app, with the
+  computer and Push on the same network. It installs software on the Push over SSH, so the Push Hack warnings about
+  backups, recovery methods and Push software updates apply.
+brick_risk: false
+tags: [flasher, platform]
+versions:
+  - version: v0.1.4-beta
+    date: 2026-10-09
+    url: https://github.com/federico-pepe/push-hack-installer/releases/tag/v0.1.4-beta
+    notes: Adds an update check at startup.
+  - version: v0.1.3-beta
+    date: 2026-10-09
+    url: https://github.com/federico-pepe/push-hack-installer/releases/tag/v0.1.3-beta
+  - version: v0.1.2-beta
+    date: 2026-09-29
+    url: https://github.com/federico-pepe/push-hack-installer/releases/tag/v0.1.2-beta
+  - version: v0.1.1-beta
+    date: 2026-09-28
+    url: https://github.com/federico-pepe/push-hack-installer/releases/tag/v0.1.1-beta
+  - version: v0.1.0-beta
+    date: 2026-09-28
+    url: https://github.com/federico-pepe/push-hack-installer/releases/tag/v0.1.0-beta

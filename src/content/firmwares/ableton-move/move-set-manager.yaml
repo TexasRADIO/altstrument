@@ -1,0 +1,45 @@
+device: ableton-move
+name: Move Set Manager
+kind: tool
+summary: >-
+  Archived Electron desktop app that backs up, restores, pages and edits the metadata of Ableton Move sets over
+  SSH; its job moved into Move's own firmware in version 1.6.
+description: >-
+  The app connects to a Move over SSH and copies sets to and from a computer, keeps them in a local Git
+  repository, groups them into pages that can be uploaded to the unit in one go, and edits the name and pad
+  colour of a set. Version 0.4.2 added downloading every set as an .ablbundle into a chosen folder. The README
+  says it was tested only on macOS and that cloud-synced sets do not work with uploads, and its release
+  list includes macOS and Windows builds. The author archived the repository and states that Move firmware 1.6
+  made the tool obsolete. The front end is described there as AI-assisted and untidy.
+status: archived
+authors:
+  - name: Vratislav Kalenda
+    url: https://github.com/Vratislav
+source: https://github.com/Vratislav/move-set-manager
+source_status: open
+license: MIT
+license_notes: >-
+  The code is MIT. The sample sets in the UserLibrary and UserLibrary_Test folders, used for testing, are
+  licensed CC BY-NC 4.0.
+homepage: https://github.com/Vratislav/move-set-manager#readme
+distribution: download
+requires_stock: Move firmware before 1.6, with SSH access enabled
+install_notes: >-
+  Add an SSH key without a passphrase at move.local/development/ssh, then download the app from the releases
+  page or run it from source with Node.js 22 or later and Git installed, and point the app at the private key.
+  The README warns that SSH access is unsupported by Ableton, that the tool carries a risk of breaking things,
+  and that the documented restore procedure is the fallback.
+brick_risk: false
+tags: [librarian, utility, ui]
+versions:
+  - version: v0.4.2
+    date: 2025-05-17
+    url: https://github.com/Vratislav/move-set-manager/releases/tag/v0.4.2
+    notes: Adds downloading all sets as .ablbundle files.
+  - version: v0.4.1
+    date: 2025-05-17
+    url: https://github.com/Vratislav/move-set-manager/releases/tag/v0.4.1
+  - version: v0.3.14
+    date: 2025-05-17
+    url: https://github.com/Vratislav/move-set-manager/releases/tag/v0.3.14
+    notes: Windows build and crash fixes.

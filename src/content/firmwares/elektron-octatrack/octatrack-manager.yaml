@@ -1,0 +1,45 @@
+device: elektron-octatrack
+name: Octatrack Manager
+kind: tool
+summary: Desktop app for finding, inspecting and editing Octatrack projects, patterns, parts and sample pools on CompactFlash cards and local backups.
+description: >-
+  Built with Tauri and React for Windows, macOS and Linux. It scans cards, USB
+  drives and backup folders for sets and projects, shows mixer, MIDI, memory and
+  metronome settings and every pattern step including micro-timing and trig
+  conditions, and browses the audio pool with conversion of added files to 44.1
+  kHz WAV. A parts editor changes machine, effect and LFO settings, and bulk
+  operations copy banks, parts, patterns and sample slots between projects.
+  Only projects saved on OS 1.40 or later can be opened. It reads and writes the
+  unit's project files and does not touch the OS.
+status: active
+authors:
+  - name: David Ferlay
+    url: https://github.com/davidferlay
+source: https://github.com/davidferlay/octatrack-manager
+source_status: open
+license: GPL-3.0-only
+license_notes: GPLv3 license file; no "or later" statement in the README or manifests.
+homepage: https://davidferlay.github.io/octatrack-manager/
+distribution: download
+requires_stock: Projects saved on OS 1.40 or later
+install_notes: >-
+  Download the build for your platform from the releases page. On macOS the app
+  is not notarised, so Gatekeeper needs to be bypassed as described in the
+  project's installation guide. Back up projects before editing them.
+tags: [editor, librarian, samples, utility]
+versions:
+  - version: v0.49.0
+    date: 2026-10-18
+    url: https://github.com/davidferlay/octatrack-manager/releases/tag/v0.49.0
+  - version: v0.48.0
+    date: 2026-09-24
+    url: https://github.com/davidferlay/octatrack-manager/releases/tag/v0.48.0
+  - version: v0.47.0
+    date: 2026-09-05
+    url: https://github.com/davidferlay/octatrack-manager/releases/tag/v0.47.0
+  - version: v0.46.0
+    date: 2026-09-05
+    url: https://github.com/davidferlay/octatrack-manager/releases/tag/v0.46.0
+  - version: v0.45.0
+    date: 2026-08-16
+    url: https://github.com/davidferlay/octatrack-manager/releases/tag/v0.45.0

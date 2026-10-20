@@ -1,0 +1,17 @@
+name: S-1
+manufacturer: Roland
+category: synth
+tagline: AIRA Compact tweak synthesizer with a pattern sequencer
+description: >-
+  The S-1 is a compact tweak synthesizer in Roland's AIRA
+  Compact range, with an oscillator section that can be drawn or chopped, a
+  filter, an LFO, effects and a sequencer. It takes MIDI control changes over
+  USB. Its 64 patterns can be copied to a computer by starting the unit in USB
+  disk mode, which exposes them as .PRM files.
+links:
+  manufacturer: https://www.roland.com/global/products/s-1/
+notes: >-
+  No replacement firmware exists. The entry here is a desktop editor that
+  works over MIDI control changes and reads the .PRM backups; it does not use
+  SysEx and does not write to the synth's storage.
+related: [roland-j-6, roland-t-8]

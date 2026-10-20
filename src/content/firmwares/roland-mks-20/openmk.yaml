@@ -1,0 +1,37 @@
+device: roland-mks-20
+name: OpenMK
+kind: tool
+summary: Browser-based emulator of the MKS-20 and Rhodes MK-80 piano modules. It runs the rdpiano board emulator as WebAssembly in an AudioWorklet and loads ROM images you supply.
+description: >-
+  Plays all 16 patches of the MKS-20 and the Rhodes MK-80 from a MIDI keyboard,
+  the computer keyboard or an on-screen keyboard. The sound comes from rdpiano
+  by Giulio Zausa, a hardware-level emulation of the HD6301 and SA chip on the
+  shared CPU-B board. OpenMK adds a Space D style stereo chorus, a tape echo, a
+  tune control and a chord-detection panel. The board only accepts note on and
+  off, program change and damper, so the page has no pitch bend or mod wheel. The
+  twelve ROM files are Roland's data; the page asks you to drop them in once and
+  keeps them in the browser's local storage.
+status: active
+authors:
+  - name: Keith Adler
+    url: https://github.com/keithadler
+source: https://github.com/keithadler/openmk
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README states GPL-3.0 without an "or later" clause. The emulation core in
+  engine/librdpiano is from rdpiano by Giulio Zausa, also GPL-3.0. Demo MIDI
+  files are public domain. No ROM data is included.
+homepage: https://keithadler.github.io/openmk/
+distribution: browser-installer
+install_notes: >-
+  Open the page and drop in ROM images dumped from an instrument you own; they
+  stay in your browser. MIDI keyboard input works in Chrome and Edge.
+  Nothing is flashed to hardware. To run it locally, serve the folder
+  with any static web server.
+tags: [emulator, synth-engine, web, midi]
+versions:
+  - version: main @ eafc21f
+    date: 2026-10-03
+    url: https://github.com/keithadler/openmk/commit/eafc21f129e29663ca508d8bbe1da5dd9d825389
+    notes: No tagged releases; this is the latest commit.

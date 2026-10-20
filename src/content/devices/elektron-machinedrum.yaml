@@ -23,8 +23,12 @@ notes: >-
   the unit; none of the projects here distributes Elektron firmware. User
   machines are separate: they are small SysEx files stored in Machine Manager
   slots and need a third-party OS that supports them (MDX X.20 B for the entry
-  listed here). Elektron does not
+  listed here, which the MDS tools and the machinedrum-kit documentation also
+  target). Gearmulator MD/MM and MDMM emulate the Machinedrum and the
+  Monomachine on a desktop from an OS file you supply, and the MegaCommand
+  runs the MCL sequencer firmware as a separate device built to accompany the
+  Machinedrum. Elektron does not
   permit sharing mod files or links on Elektronauts (policy of 2026-09-16, as
   noted on the other Elektron devices); community discussion moved to
   elektronmods.com and modwerk.app.
-related: [elektron-octatrack, elektron-tools]
+related: [elektron-octatrack, elektron-tools, elektron-monomachine, megacommand]

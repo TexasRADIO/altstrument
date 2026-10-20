@@ -1,0 +1,35 @@
+device: arturia-keystep-37
+name: KeyStep 37 Research
+summary: Research toolkit for KeyStep 37 firmware 1.1.6.579 with an address map, Python tools that inspect, verify and patch your own firmware file, and the C source of an extra hardware generator mode.
+description: >-
+  The repository contains a curated map of addresses in the stock firmware, a Python package for
+  inspecting the .led update container and planning guarded patches with both checksum layers, and the
+  full C and Thumb assembly source of an additional GEN mode (rhythm, motif and accent cycles, chord
+  capture, scale controls) with the build scripts that place it into an image in memory. The author
+  states it was observed running on one device, with extended controls untested. It does not include
+  Arturia's firmware, does not flash, and is not a plugin loader; the build needs Clang with the ARM
+  target and ld.lld. Sequencer reverse and ping-pong playback and arpeggiator changes are documented as
+  research routes only.
+status: active
+authors:
+  - name: rndpatch
+    url: https://github.com/rndpatch
+source: https://github.com/rndpatch/keystep37-research
+source_status: open
+license: MIT
+license_notes: Covers the repository only; Arturia firmware is not included.
+distribution: patch-your-own
+requires_stock: 1.1.6.579
+install_notes: >-
+  Download the original KeyStep 37 firmware 1.1.6.579 from Arturia and place it in a local folder, then
+  run the build script with --stock; an output file is only written when --output is given. Load the result
+  with Arturia MIDI Control Center. Back up settings and sequences first. The author warns that no
+  recovery mechanism is supplied, that an earlier test image with a wrong checksum failed to boot, and
+  that a previous recovery does not cover every failure. Original KeyStep 37 only, not the MK2.
+brick_risk: true
+tags: [research, sequencer, midi, patch]
+versions:
+  - version: main @ 5b0ca35
+    date: 2026-09-20
+    url: https://github.com/rndpatch/keystep37-research/commit/5b0ca3527d46f1c25a10c55bda5bf22d746a163a
+    notes: No tagged releases; this is the latest commit.

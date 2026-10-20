@@ -1,0 +1,29 @@
+device: roland-sp-404-mkii
+name: OpenSP
+summary: Announced open set of firmware, tools and guides for the SP-404MKII. Its first add-on, openSynth, plays a synth on the pads for firmware 5.52, but the installer is withdrawn for now. A browser firmware emulator is live.
+description: >-
+  The site lists releases, guides and a synth add-on called openSynth, described
+  as played on the pads, shaped across four pages and routed through the bus
+  effects. Its page is dated 9 October 2026 and is written for firmware 5.52. It
+  says the installer is temporarily unavailable while release artifacts are
+  reviewed, so nothing can be downloaded yet. A separate research-build emulator
+  page runs a firmware file you load from your computer in the browser and
+  bundles none. The authors are not named, no license is stated, and the linked
+  GitHub repository is empty.
+status: announced
+authors:
+  - name: AntiWorkProTwerk
+    url: https://github.com/AntiWorkProTwerk
+source_status: closed
+license: unspecified
+license_notes: >-
+  No license or source is published. The linked repository, AntiWorkProTwerk/openSP,
+  was empty on 2026-10-20.
+homepage: https://opensp.fyi/
+requires_stock: "5.52"
+install_notes: >-
+  No installer is available at the time of writing; the site says it is held back
+  while release artifacts are reviewed. Check the project page before installing
+  anything that claims to be OpenSP.
+tags: [synth-engine, emulator, web, os]
+versions: []

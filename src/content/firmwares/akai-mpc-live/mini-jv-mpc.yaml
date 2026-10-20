@@ -1,0 +1,46 @@
+device: akai-mpc-live
+name: MINI-JV (JV-880 for MPC OS)
+summary: Native VST2 instrument that emulates the Roland JV-880 on MPC and Force, with banks, tone and envelope pages on the touchscreen; it needs your own JV-880 ROM dump.
+description: >-
+  The sound engine is the JV-880 microcontroller and PCM wavetable emulation
+  that traces back to nukeykt's Nuked-SC55 core, via giulioz's mini-jv880 and
+  charlesvestal's Schwung port for Ableton Move. This repository wraps it as
+  an MPC OS plugin with its own skin: a play page with macro controls, a bank
+  and patch browser, and pages for each of the four tones. SR-JV80 expansion
+  cards placed next to the ROMs appear as extra banks. The ROMs and expansion
+  cards are Roland's and are not included in the repository or release zip; the
+  README says only the v1.0.0 ROM dump works. Builds for 32-bit and 64-bit ARM
+  are released, tested on a Force. A related Force-only version, force-jv880,
+  is a separate project by the same author.
+status: active
+authors:
+  - name: sd88me
+    url: https://github.com/sd88me
+source: https://github.com/sd88me/mpc-vst-jv880
+source_status: open
+license: proprietary
+license_notes: >-
+  Distributed under the original MAME license inherited from Nuked-SC55 and
+  juce-jv880: source-available, not for sale or commercial use, and modified
+  versions must ship complete source. Not an OSI-approved license.
+distribution: download
+requires_stock: MPC OS 3.x (v1.0.6 and later are built for 2.x as well, untested there)
+install_notes: >-
+  Needs root SSH access to the device. Unzip the release, copy the folder over
+  with scp and run its install.sh, which stops MPC, so save the project first.
+  Then copy your own JV-880 v1.0.0 ROMs to the plugin's jv880-roms/roms folder.
+  Plan for a few instances at most; one playing instance used about half of a
+  core on a Force. Installing plugins this way is unofficial and needs a modded
+  unit.
+tags: [synth-engine, sampler, emulator, platform]
+versions:
+  - version: v1.0.7
+    date: 2026-10-12
+    url: https://github.com/sd88me/mpc-vst-jv880/releases/tag/v1.0.7
+  - version: v1.0.6
+    date: 2026-10-06
+    url: https://github.com/sd88me/mpc-vst-jv880/releases/tag/v1.0.6
+    notes: Library and skin built in the shapes MPC OS 2.15.1 reads.
+  - version: v1.0.5
+    date: 2026-10-02
+    url: https://github.com/sd88me/mpc-vst-jv880/releases/tag/v1.0.5

@@ -1,0 +1,25 @@
+name: MPC3000
+manufacturer: Akai Professional
+category: sampler
+tagline: 16-bit MPC sampler and sequencer from 1994
+description: >-
+  The MPC3000 is a sampling drum machine and sequencer from Akai Professional,
+  introduced in 1994 as the successor to the MPC60 series and designed with
+  Roger Linn. It has 16 velocity-sensitive pads, records 16-bit audio at 44.1
+  kHz and plays it back on 32 voices. Sequences and sounds are stored on a
+  built-in floppy drive, with SCSI used for hard disks and other storage.
+stock_firmware: "3.12"
+links:
+  manufacturer: https://web.archive.org/web/20081229001201/http://www.akaipro.com/mpc3000
+  community:
+    - label: Akai MPC overview on Wikipedia
+      url: https://en.wikipedia.org/wiki/Akai_MPC
+notes: >-
+  No replacement firmware is catalogued for this model. The only entry is an
+  emulator that boots a copy of the stock OS you supply, so it needs ROM files
+  from your own unit.
+related:
+  - akai-mpc2000
+  - akai-mpc1000
+  - akai-mpc500
+  - akai-mpc-live

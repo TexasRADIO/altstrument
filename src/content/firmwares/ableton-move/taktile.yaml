@@ -1,0 +1,47 @@
+device: ableton-move
+name: Taktile
+summary: >-
+  Schwung overtake module that turns Move into a 16-track groovebox with its own synth and drum DSP, a step
+  sequencer with parameter locks, effects, a sample engine and a song mode.
+description: >-
+  Taktile takes over Move's pads, buttons, knobs and display and makes all of its sound in its own C DSP
+  module. It has 16 tracks of synths or drums, with up to four drum tracks of 16 sounds each, up to 128 steps
+  per track, eight clips per track, parameter locks, probability, ratchets and a Euclidean generator. The
+  README counts 1462 built-in sounds, plays user WAV samples on drum tracks, and lists per-track delay,
+  reverb and insert effects, a granulator, a master bus chain, 32 project slots and a song list for long live
+  sets. Manuals are published as PDFs in English and German. The release is built against one Schwung plugin
+  header version, and the README says the module was checked on a desktop simulator for the latest release,
+  not on a Move, and asks users to report differences.
+status: active
+authors:
+  - name: Takton
+    url: https://github.com/taktonmusic
+source: https://github.com/taktonmusic/Taktile
+source_status: open
+license: MIT
+license_notes: >-
+  The MIT LICENSE sits in the taktile/ folder. The wavetables in src/wtab.inc are derived from AKWF-FREE (CC0).
+homepage: https://github.com/taktonmusic/Taktile#readme
+distribution: download
+requires_stock: Schwung with a plugin API matching v1.8.0
+install_notes: >-
+  Needs Schwung. Download taktile-module.tar.gz from the latest release and upload it as a custom module in
+  Schwung's web interface at move.local:7700 without unpacking it, or copy the taktile folder to
+  /data/UserData/schwung/modules/overtake/ over SSH. The header must match the host exactly, so for a different
+  Schwung version the README says to build with SCHWUNG_REF set to that tag. The GitHub page holds one release
+  named latest that is replaced with each version.
+brick_risk: false
+tags: [sequencer, synth-engine, drums, sampler, fx, performance]
+versions:
+  - version: "1.8.0"
+    date: 2026-10-20
+    url: https://github.com/taktonmusic/Taktile/commit/acd491a3c2316709943733e9ca4849dc746f7129
+    notes: Adds a per-track speed ratio on the quantise page.
+  - version: "1.7.3"
+    date: 2026-10-19
+    url: https://github.com/taktonmusic/Taktile/commit/e6dff8d
+    notes: Song page fixes; the Euclid switch is off or on again.
+  - version: "1.7.2"
+    date: 2026-10-19
+    url: https://github.com/taktonmusic/Taktile/commit/cea75b7
+    notes: Speech sound gets a letter per step.

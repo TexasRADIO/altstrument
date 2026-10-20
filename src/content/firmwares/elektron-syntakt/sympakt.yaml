@@ -1,0 +1,33 @@
+device: elektron-syntakt
+name: Sympakt
+kind: tool
+summary: Browser app for building 64-slot Syntakt sample packs, with previews, loop and slice editing, and export of converted WAV files in a ZIP.
+description: >-
+  Works offline as a single HTML file with no backend. Dropped audio is
+  converted to the Syntakt's 16-bit, 48 kHz mono format, and a pack holds 64
+  slots that can be reordered. It has loop points with crossfade, a built-in
+  sample editor (trim, fades, normalise, reverse, bit and rate reduction,
+  filters and slicing), a virtual keyboard for auditioning pitches, and LOFI
+  modes that export pitched-up audio to fit longer samples. Dual-sample mode
+  packs two samples in one slot, the second stored reversed. Packs are saved and
+  reloaded as ZIP files, and the session is kept in the browser. It produces
+  files only; the result still has to be transferred to the unit with Elektron's
+  own transfer tools or another file-transfer program.
+status: maintained
+authors:
+  - name: Yohan Lasorsa
+    url: https://github.com/sinedied
+source: https://github.com/sinedied/sympakt
+source_status: open
+license: MIT
+homepage: https://sinedied.github.io/sympakt/
+distribution: browser-installer
+install_notes: >-
+  Open the hosted page, or build the single HTML file with npm (Node.js 24 or
+  later) and open it from disk. Nothing is uploaded.
+tags: [samples, web, utility, converter, editor]
+versions:
+  - version: main @ 08a7fc8
+    date: 2026-05-26
+    url: https://github.com/sinedied/sympakt/commit/08a7fc8
+    notes: No tagged releases; this is the latest commit.

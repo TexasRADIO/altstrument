@@ -1,0 +1,31 @@
+device: teenage-engineering-op-xy
+name: xy-format
+kind: tool
+summary: Reverse-engineering notes and Python tools for the OP-XY .xy project format, including a decoder and encoder, a project inspector and a MIDI-to-project generator.
+description: >-
+  The repository documents how an .xy project file is built (a short wrapper
+  around a run-length-encoded project image) and ships a Python library and
+  command-line tools that decode, edit and re-encode it. The tools can inspect
+  a project, apply edits such as notes, p-locks and scenes to the decoded
+  image, and build a project from a JSON spec or a MIDI file. Several of the
+  generated projects have been loaded on a real OP-XY, and the notes mark which
+  parts of the format are still only partly mapped.
+status: active
+authors:
+  - name: Kevin Morrill
+    url: https://github.com/kmorrill
+source: https://github.com/kmorrill/xy-format
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Clone the repository and run the scripts under tools/ with Python. Edited
+  projects are copied to the device's projects folder in disk mode. The author
+  records that some generated files have crashed the device, so work on copies
+  and keep backups of your projects.
+tags: [editor, converter, research, midi, python]
+versions:
+  - version: main @ 7a74acc
+    date: 2026-09-16
+    url: https://github.com/kmorrill/xy-format/commit/7a74acc
+    notes: No tagged releases; this is the latest commit.

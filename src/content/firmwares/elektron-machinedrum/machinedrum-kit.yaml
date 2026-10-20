@@ -1,0 +1,39 @@
+device: elektron-machinedrum
+name: machinedrum-kit
+kind: tool
+summary: Reverse-engineering documentation for Machinedrum OS 1.63 plus a Python toolkit, a headless emulator and example DSP machines for building custom machines into an OS image from your own file.
+description: >-
+  Documents the firmware image and SysEx update formats, the ColdFire OS
+  structures behind machines and kits, the DSP voice interface, the audio path
+  and the compression codec, all for the SPS-1UW OS 1.63 image. The tools
+  include mdkit, a standard-library Python package that extracts, packs and
+  checks images and converts them to SysEx; a headless emulator, debugger and
+  kernel runner built on a Gearmulator Machinedrum board model; and four example
+  machines (GND-SW, NFX-GN, NFX-SV and NFX-4P) with build scripts and verifiers.
+  The repository contains no Elektron firmware or disassembly. Images built with
+  the kit contain Elektron's OS and must not be shared. The emulator tooling
+  needs Linux, and the example builds also need a DSP56300 assembler.
+status: active
+authors:
+  - name: Janne Heikkarainen
+    url: https://github.com/janne808
+source: https://github.com/janne808/machinedrum-kit
+source_status: open
+license: GPL-3.0-only
+license_notes: GPLv3 license file with no "or later" statement in the README. Third-party code is pulled in as git submodules and patches at build time.
+distribution: source-only
+requires_stock: Machinedrum SPS-1UW OS 1.63 (supplied by you)
+install_notes: >-
+  Clone without recursing into submodules, then follow the README's steps to
+  fetch the emulator sources, build the harness, check your OS file against the
+  documented SHA-256 and build the DSP assembler. The boot-ROM updater can
+  normally restore a bad OS by sending the stock update, but an image that
+  alters the boot-sector copy MainOS carries can leave a unit recoverable only
+  with an external flash programmer, so leave those bytes alone.
+brick_risk: true
+tags: [research, emulator, sysex, machines, os]
+versions:
+  - version: main @ 4ea4729
+    date: 2026-10-19
+    url: https://github.com/janne808/machinedrum-kit/commit/4ea4729f0501a0257c30d0efc47000b3140eabbf
+    notes: No tagged releases; this is the latest commit.

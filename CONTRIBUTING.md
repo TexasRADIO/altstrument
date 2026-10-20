@@ -242,7 +242,7 @@ versions:
 
 The validator warns when `source_status` is `open` and `license` is `unspecified`.
 
-Accepted values: `MIT`, `BSD-2-Clause`, `BSD-3-Clause`, `Apache-2.0`, `GPL-2.0-only`, `GPL-2.0-or-later`, `GPL-3.0-only`, `GPL-3.0-or-later`, `LGPL-2.1-or-later`, `LGPL-3.0-or-later`, `AGPL-3.0-only`, `AGPL-3.0-or-later`, `MPL-2.0`, `Unlicense`, `WTFPL`, `CC0-1.0`, `CC-BY-4.0`, `CC-BY-SA-4.0`, `CC-BY-NC-4.0`, `CC-BY-NC-SA-4.0`, `Elastic-2.0`, `proprietary`, `unspecified`.
+Accepted values: `MIT`, `BSD-2-Clause`, `BSD-3-Clause`, `ISC`, `Apache-2.0`, `GPL-2.0-only`, `GPL-2.0-or-later`, `GPL-3.0-only`, `GPL-3.0-or-later`, `LGPL-2.1-only`, `LGPL-2.1-or-later`, `LGPL-3.0-or-later`, `AGPL-3.0-only`, `AGPL-3.0-or-later`, `MPL-2.0`, `Unlicense`, `WTFPL`, `CC0-1.0`, `CC-BY-4.0`, `CC-BY-SA-4.0`, `CC-BY-NC-4.0`, `CC-BY-NC-SA-4.0`, `CC-BY-SA-3.0`, `CC-BY-NC-SA-3.0`, `PolyForm-Noncommercial-1.0.0`, `Elastic-2.0`, `proprietary`, `unspecified`.
 
 ## Rules of evidence
 

@@ -1,0 +1,30 @@
+name: Monomachine SFX-6 / SFX-60
+manufacturer: Elektron
+category: synth
+tagline: Six-track synthesizer and sequencer (end of life)
+description: >-
+  The Monomachine is a synthesizer and sequencer from Elektron, sold as the
+  SFX-6 with a keyboard and as the SFX-60, a desktop module later revised as the
+  SFX-60 MKII. It has six synthesis tracks that each load one of its machines
+  (GND, SWAVE, SID, DPRO, FM+, VO-6 and effects machines), three LFOs per track,
+  and a parameter-lock sequencer. Elektron no longer makes it.
+platform: Motorola DSP56300-family DSP
+stock_firmware: 1.32B
+links:
+  manufacturer: https://www.elektron.se/support-downloads/monomachine
+  community:
+    - label: elektronmods.com
+      url: https://elektronmods.com/
+    - label: Modwerk
+      url: https://modwerk.app/
+notes: >-
+  The Monomachine is out of production. The OS entries here patch the final
+  official 1.32B file that you supply yourself, in the browser, and the result
+  goes to the unit as a SysEx update; sending the original file again restores
+  it. Nothing here distributes Elektron firmware. Elektron does not permit
+  sharing mod files or links on Elektronauts (policy of 2026-09-16, as noted on
+  the other Elektron devices); community discussion moved to elektronmods.com
+  and modwerk.app. The MDMM editors catalogued under the Machinedrum also
+  emulate the Monomachine, and MCL (see the MegaCommand) can sequence and
+  control it.
+related: [elektron-machinedrum, megacommand]

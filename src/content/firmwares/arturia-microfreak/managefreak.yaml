@@ -1,0 +1,38 @@
+device: arturia-microfreak
+name: ManageFreak
+kind: tool
+summary: Cross-platform desktop preset manager for the MicroFreak that backs up all 512 preset slots, keeps a local library, rearranges slots by drag and drop, and manages wavetables and samples, as an alternative to MIDI Control Center.
+description: >-
+  An Electron app that scans the synth's presets, wavetables and samples over USB MIDI, shows Arturia
+  categories and characteristics, and writes with read-back checks and rollback. Presets can be renamed,
+  reordered, auditioned from the library, volume-adjusted in batches and sent to the synth in bulk, and
+  the last five operations can be undone. It imports .mfp, .mbp, .mfpz, .mfprojz and .syx files, exports
+  .mfp, .mfpz and .mfprojz files, and converts samples to the format the synth needs. It does not
+  change the firmware.
+status: active
+authors:
+  - name: GiovanniBitbyBit
+    url: https://github.com/GiovanniBitbyBit
+source: https://github.com/GiovanniBitbyBit/managefreak
+source_status: open
+license: GPL-3.0-or-later
+license_notes: README and package.json state GPL-3.0-or-later; the LICENSE file holds the GPL 3 text.
+distribution: download
+install_notes: >-
+  Releases are built for Windows (including portable), macOS and Linux. Linux needs the ALSA libraries.
+  Back up the synth before large changes, as the app writes to preset, wavetable and sample slots.
+brick_risk: false
+tags: [librarian, editor, samples, sysex]
+versions:
+  - version: v1.2.3
+    date: 2026-10-07
+    url: https://github.com/GiovanniBitbyBit/managefreak/releases/tag/v1.2.3
+  - version: v1.2.2
+    date: 2026-09-24
+    url: https://github.com/GiovanniBitbyBit/managefreak/releases/tag/v1.2.2
+  - version: v1.2.1
+    date: 2026-09-24
+    url: https://github.com/GiovanniBitbyBit/managefreak/releases/tag/v1.2.1
+  - version: v1.2.0
+    date: 2026-09-24
+    url: https://github.com/GiovanniBitbyBit/managefreak/releases/tag/v1.2.0

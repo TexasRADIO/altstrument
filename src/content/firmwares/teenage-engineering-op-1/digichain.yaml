@@ -1,0 +1,35 @@
+device: teenage-engineering-op-1
+name: DigiChain
+kind: tool
+summary: Browser app that joins samples into slice-marked chains and drum kits for the OP-1, OP-1 Field and OP-Z, and also for the Digitakt, Octatrack and Dirtywave M8, and splits existing kits back into samples.
+description: >-
+  Converts batches of audio files to a chosen bit depth, sample rate and channel
+  layout, edits them (trim, normalize, reverse, pitch, slice) and joins them into
+  chains with slice markers written for the target device. Besides the OP-1
+  family and OP-Z it exports for the Elektron Digitakt and Octatrack and the
+  Dirtywave M8, and it imports OP-1 and OP-Z drum kits, Octatrack .ot files and
+  OP-1 Field tape files for slicing. It runs in the browser without a
+  connection once loaded, and desktop builds exist for Windows and macOS. It
+  does not talk to a device and does not touch device firmware.
+status: active
+authors:
+  - name: Brian Barnett
+    url: https://github.com/brian3kb
+source: https://github.com/brian3kb/digichain
+source_status: open
+license: AGPL-3.0-only
+license_notes: The LICENSE file is the unmodified AGPL v3 text with no "or later" statement. A separate EULA for the desktop builds is also in the repository.
+homepage: https://digichain.brianbar.net/
+distribution: browser-installer
+install_notes: Use the hosted page, install it as a web app, or run a desktop build from the project's itch.io page.
+tags: [samples, converter, web, sampler, utility]
+versions:
+  - version: v1.6.0
+    date: 2026-06-03
+    url: https://github.com/brian3kb/digichain/releases/tag/v1.6.0
+  - version: v1.5.2
+    date: 2026-01-01
+    url: https://github.com/brian3kb/digichain/releases/tag/v1.5.2
+  - version: v1.5.1
+    date: 2025-09-20
+    url: https://github.com/brian3kb/digichain/releases/tag/v1.5.1

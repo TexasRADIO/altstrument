@@ -1,0 +1,40 @@
+device: korg-nts-1
+name: logue-hub (leandrob13)
+summary: Three custom NTS-1 oscillators, Harmonik (six-sine harmonic), Kord (diatonic chord) and SubHarmonikorg (subharmonic), with prebuilt units on the releases page.
+description: >-
+  Harmonik is an oscillator built from six sine waves at harmonic multiples,
+  Kord plays diatonic chords from a single note, and SubHarmonikorg adds
+  subharmonic partials. The releases carry the compiled .ntkdigunit files and
+  the repository holds the sources, which build with the logue SDK and a GCC
+  ARM toolchain. The README notes that units built with SDK 1.1-0 need NTS-1
+  firmware 1.02 or later. The latest release is a Harmonik 1.1.0 update.
+status: dormant
+authors:
+  - name: Leandro Bolivar
+    url: https://github.com/leandrob13
+source: https://github.com/leandrob13/logue-hub
+source_status: open
+license: BSD-3-Clause
+license_notes: >-
+  The LICENSE file is Korg's BSD 3-Clause text (Copyright 2018 KORG Inc.),
+  matching the SDK files the repository builds on; the README says the repo
+  contents are under that licence.
+homepage: https://github.com/leandrob13/logue-hub
+distribution: download
+requires_stock: "1.02"
+install_notes: >-
+  Download the .ntkdigunit files from the releases page and load them with
+  Korg's librarian or the logue-cli. To build, install gcc-arm-none-eabi and
+  run make in the folder of the unit you want.
+tags: [oscillator, nts-1, open-source]
+versions:
+  - version: harmonik-v1-1-0
+    date: 2023-12-23
+    url: https://github.com/leandrob13/logue-hub/releases/tag/harmonik-v1-1-0
+    notes: Harmonik v1.1.0.
+  - version: v1.0.1
+    date: 2022-04-14
+    url: https://github.com/leandrob13/logue-hub/releases/tag/v1.0.1
+  - version: v1.0
+    date: 2022-04-05
+    url: https://github.com/leandrob13/logue-hub/releases/tag/v1.0

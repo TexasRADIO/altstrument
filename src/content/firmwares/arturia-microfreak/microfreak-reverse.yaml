@@ -1,0 +1,29 @@
+device: arturia-microfreak
+name: microfreak-reverse
+kind: tool
+summary: React web app and notes from early SysEx reverse engineering of the MicroFreak, with a WebMIDI page that pulls presets from the synth and shows which bytes change between them.
+description: >-
+  The notes describe the SysEx messages for identifying the device, naming presets and dumping preset
+  data, plus a list of which bytes move when each control changes. The web app, built with Create React
+  App and WebMIDI, connects to the synth, displays raw preset bytes and differences, and includes views
+  for the modulation matrix. Captured preset dumps from the author's experiments are included. The
+  repository is archived and the work is from 2021, so it describes older firmware.
+status: archived
+authors:
+  - name: François Georgy
+    url: https://github.com/francoisgeorgy
+source: https://github.com/francoisgeorgy/microfreak-reverse
+source_status: open
+license: unspecified
+license_notes: The repository has no license file or license statement.
+distribution: source-only
+install_notes: >-
+  Run the app locally with yarn start (a browser with WebMIDI is needed). The app reads and sends MIDI to
+  the synth; it was written against a 2021 firmware version and has not been updated.
+brick_risk: false
+tags: [research, sysex, web, midi]
+versions:
+  - version: master @ 51bde8f
+    date: 2021-03-30
+    url: https://github.com/francoisgeorgy/microfreak-reverse/commit/51bde8fa2855a43a6906c35b0f61304f3fc457b5
+    notes: No tagged releases; this is the latest commit.

@@ -12,16 +12,21 @@ description: >-
 platform: Analog Devices Blackfin
 stock_firmware: R246
 links:
-  manufacturer: https://teenage.engineering/products/op-1
+  manufacturer: https://teenage.engineering/products/op-1/original
   community:
     - label: op-forums custom firmware thread
       url: https://op-forums.com/t/custom-firmware-on-the-op-1/4283/680
+    - label: op1hacks firmware and hardware research notes
+      url: https://github.com/op1hacks/docs
 notes: >-
-  Original OP-1 only. No custom firmware was found for the OP-1 Field, OP-Z,
-  EP-133, EP-1320 or Pocket Operators. R246 (2022-12-13) is the latest official
+  Original OP-1 only. A few host-side tools that make patches and sample chains
+  also cover the OP-1 Field and OP-Z (teoperator, DigiChain) and are catalogued
+  here; the OP-1 Field, OP-Z, OP-XY, EP-133 and Pocket Operators have their own
+  device pages. R246 (2022-12-13) is the latest official
   OP-1 update on Teenage Engineering's download page. Repacker-based mods target
   older builds (tested on 235); op1r targets R246 only. Mods are installed
   through the standard update mode and leave the bootloader untouched.
+related: [teenage-engineering-op-1-field, teenage-engineering-op-z, teenage-engineering-op-xy, teenage-engineering-ep-133]
 image:
   src: /images/devices/teenage-engineering-op-1.png
   style: photo

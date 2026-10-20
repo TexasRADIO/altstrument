@@ -1,0 +1,30 @@
+device: teenage-engineering-op-z
+name: OP-Manager
+kind: tool
+summary: Python software for a Raspberry Pi Zero W handheld unit that acts as a USB host to back up, restore and upload OP-Z projects and samples and OP-1 patches and projects without a computer.
+description: >-
+  The project is a small battery-powered box built around a Raspberry Pi Zero
+  W, an OLED screen and a few buttons, which plugs into the instrument over
+  USB OTG. For the OP-Z it can freeze and recall the whole state, including
+  projects and samples, and upload or delete samples. For the OP-1 it backs up
+  and uploads patches and projects. It can also pass USB MIDI through to 5-pin
+  MIDI ports. The OP-1 side of the project is listed here too, because
+  the same README and code cover both instruments.
+status: dormant
+authors:
+  - name: Hsuan Han Lai
+    url: https://github.com/adwuard
+source: https://github.com/adwuard/OP_Manager
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Needs the Raspberry Pi hardware described in the README (Pi Zero W, SD card,
+  OLED panel, direction pad and buttons). Run the Python application on the Pi
+  with run.py; opmanager.service is provided for starting it at boot.
+tags: [utility, librarian, python]
+versions:
+  - version: master @ 0da6d29
+    date: 2021-06-01
+    url: https://github.com/adwuard/OP_Manager/commit/0da6d29
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,55 @@
+device: ableton-move
+name: dAVEBOx SA
+summary: >-
+  Standalone successor to dAVEBOx: an eight-track MIDI sequencer that restarts Move under its own fork of the
+  Schwung host, with a browser editor, note effects, automation and project export to Live.
+description: >-
+  dAVEBOx SA is not a module that runs inside Schwung. Launching it restarts Move under a build of the
+  Schwung host that ships in the same repository, and quitting restarts Move back into the normal Schwung,
+  which the project says it never modifies. It has eight melodic or drum tracks with 16 clips each, up to
+  256 steps per clip, per-clip note effects, insert and send effects, macros, sound snapshots, automation
+  lanes and a performance mode. Each track can play one of Move's own instruments, a Schwung synth or an
+  external synth on the USB-A port. A browser editor on port 7700 mirrors the screen and holds the manual,
+  and projects can be exported to an Ableton Live set or as MIDI files. The README names it the successor to
+  dAVEBOx, which is now frozen as dAVEBOx Legacy, and says the two projects are kept separate and do not
+  open each other's files. Releases so far are marked as test builds.
+status: active
+authors:
+  - name: legsmechanical
+    url: https://github.com/legsmechanical
+source: https://github.com/legsmechanical/dbxhost
+source_status: open
+license: MIT
+license_notes: >-
+  The source is MIT, inherited from Schwung. The release binaries combine it with copyleft libraries: the
+  shim links eSpeak NG and is conveyed under GPL-3.0-or-later, and the Ableton Link subscriber is
+  GPL-2.0-or-later. THIRD_PARTY_LICENSES.md in the repository lists each one.
+homepage: https://legsmechanical.github.io/dbxhost/
+distribution: download
+requires_stock: Schwung 1.3.0 or later installed on the Move
+install_notes: >-
+  Needs Schwung 1.3.0 or later. Download davebox-sa-module.tar.gz from the newest release, install it in
+  Schwung Manager at move.local:7700 under Modules, Install Custom Module, From Tarball, then choose dAVEBOx SA
+  from the Tools menu. The first launch finishes the install. The README says a reboot returns the Move to
+  stock unless dAVEBOx is made the boot default, and a separate uninstall tarball is attached to each release.
+brick_risk: false
+tags: [sequencer, midi, performance, platform]
+video:
+  url: https://youtu.be/8-Cta7-WApQ
+  title: dAVEBOx SA - A Sequencer for Schwung on Ableton Move - Showcase
+  credit: dAVEBOx
+  first_party: true
+  found_via: https://github.com/legsmechanical/dbxhost#readme
+versions:
+  - version: v0.0.21
+    date: 2026-10-19
+    url: https://github.com/legsmechanical/dbxhost/releases/tag/v0.0.21
+    notes: Test build. Adds project and per-track groove from swing or a MIDI or Ableton groove file.
+  - version: v0.0.20
+    date: 2026-10-12
+    url: https://github.com/legsmechanical/dbxhost/releases/tag/v0.0.20
+    notes: Test build. Adds a Notes to Seq switch for recording what a MIDI effect generates.
+  - version: v0.0.19
+    date: 2026-10-11
+    url: https://github.com/legsmechanical/dbxhost/releases/tag/v0.0.19
+    notes: Test build. Adds a custom chords pad layout.

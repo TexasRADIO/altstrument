@@ -1,0 +1,45 @@
+device: roland-tr-8s
+name: TR-8S Studio
+kind: tool
+summary: Python web studio that follows a TR-8S over USB, reads and writes its patterns and kits through a reverse-engineered SysEx layer, and adds an AI assistant that builds patterns from text requests.
+description: >-
+  The studio runs locally and mirrors the machine: it shows the playing step,
+  recognised variation and knob moves, and a step clicked on screen reaches the
+  unit immediately. A protocol layer reads and writes every pattern and kit
+  byte, and 52 tools are shared between a command line, the web interface, an
+  assistant and an MCP server, so other MCP clients can drive the unit. The
+  assistant can use a Claude subscription login or an API key. Writes snapshot
+  the slot first, which gives an undo history. The protocol is documented in
+  the repository, with each claim marked as verified or not.
+status: active
+authors:
+  - name: Stefaan Van Hoof
+    url: https://github.com/ideaCompany
+source: https://github.com/ideaCompany/tr8s-studio
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file is the MIT text followed by a note that the protocol was
+  derived by observing Roland's AIRA web client and measuring the hardware, and
+  that no Roland code or data is redistributed.
+distribution: source-only
+requires_stock: 2.51 (the version the author tested against)
+install_notes: >-
+  Clone the repository, create a Python virtual environment, install with pip
+  and run scripts/restart.sh, then open the local address it prints. On the
+  unit, set UTILITY, MIDI, Tx Prog Chg and Tx EditData to ON, and set tempo,
+  shuffle and kit sources to PTN. Edits overwrite pattern and kit slots, so
+  back up first. restart.sh --offline runs the interface without a machine.
+brick_risk: false
+tags: [editor, sequencer, sysex, python, web]
+video:
+  url: https://www.youtube.com/watch?v=9lKcmGzcwPQ
+  title: "TR-8S Studio: asking Claude for a house track on a Roland TR-8S (open source)"
+  credit: Stefaan van hoof
+  first_party: true
+  found_via: https://github.com/ideaCompany/tr8s-studio#readme
+versions:
+  - version: main @ a62ae22
+    date: 2026-09-02
+    url: https://github.com/ideaCompany/tr8s-studio/commit/a62ae22c5f7816a75db61722fc006c536d4f096b
+    notes: No tagged releases; this is the latest commit.

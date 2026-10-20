@@ -1,0 +1,31 @@
+device: roland-j-6
+name: j6reader
+kind: tool
+summary: Small Rust command-line tool that reads the .PRM pattern backups of the J-6 and prints their tempo, beat, filter setting and chord steps as note names.
+description: >-
+  The J-6 exposes its pattern files when it is switched on while holding Play,
+  after which they appear in a BACKUP folder on the computer. j6reader parses
+  one of those .PRM files and prints the tempo, beat, filter value, number of
+  measures and pattern bank, followed by the notes of each chord step. Output
+  to MIDI or JSON is listed as future work in the README. The repository also
+  contains a set of sample backup files.
+status: dormant
+authors:
+  - name: Andy Little
+    url: https://github.com/sa48k
+source: https://github.com/sa48k/j6reader
+source_status: open
+license: unspecified
+license_notes: The repository has no license file and the README states no license.
+distribution: source-only
+install_notes: >-
+  Build with Cargo, then run it with the path to a J6_PTNxx.PRM file and any
+  second argument. It only reads files, and the author tested it on Ubuntu
+  only.
+brick_risk: false
+tags: [research, converter, utility]
+versions:
+  - version: master @ 3ec75d7
+    date: 2023-03-12
+    url: https://github.com/sa48k/j6reader/commit/3ec75d79852b14f912327789674c5e829a362841
+    notes: No tagged releases; this is the latest commit.

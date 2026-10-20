@@ -23,6 +23,8 @@ links:
     url: https://github.com/AL-255/FM-1-RE
   - label: r/MVaveFM1
     url: https://www.reddit.com/r/MVaveFM1/
+  - label: M-VAVE forum (official)
+    url: https://forum.m-vave.com/
 notes: >-
   Flash is single-bank. AL-255/FM-1-RE states that the update protocol is not a demonstrated recovery
   mechanism and that ROM recovery, rollback and safe interrupted-write behaviour are not established,

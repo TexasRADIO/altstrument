@@ -1,0 +1,32 @@
+device: torso-t-1
+name: t1-backup-file-format
+kind: tool
+summary: Python tools that decode the T-1's .t1 backup banks, export patterns as MIDI files and build banks back from MIDI files, checked on real hardware.
+description: >-
+  The repository documents the byte layout of the T-1 backup format, including
+  steps up to 64, per-step locks, chords, cycles, track routing and the tempo and
+  timing fields. A parser reads a bank into a data model, an exporter writes one
+  MIDI file per pattern, and an importer turns MIDI files into a bank or splices
+  one into a full device backup. The author says the work was done with heavy
+  help from an AI coding assistant. Needs only the Python standard library.
+status: active
+authors:
+  - name: pizboese
+    url: https://github.com/pizboese
+source: https://github.com/pizboese/t1-backup-file-format
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Run the scripts with Python 3 from a clone of the repository. The importer can
+  write a fresh single-bank backup that only touches the chosen bank when
+  restored, or splice a bank into a backup you made yourself; keep that original
+  backup before restoring anything. The tools do not change the device's
+  operating system.
+brick_risk: false
+tags: [research, converter, midi, sequencer, python]
+versions:
+  - version: main @ ee8de38
+    date: 2026-08-11
+    url: https://github.com/pizboese/t1-backup-file-format/commit/ee8de38fd6afbabe55551544aabdd2fbf87eafb7
+    notes: No tagged releases; this is the latest commit.

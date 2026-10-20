@@ -1,0 +1,28 @@
+device: akai-mpc2000
+name: MPC 2000 floppy extractor
+kind: tool
+summary: Python script that lists and extracts files, with their long names, from MPC2000 floppies, floppy images and Gotek-formatted USB drives.
+description: >-
+  The MPC2000 stores long file names in reserved space of FAT12 directory
+  entries, so mtools and the system mount cannot show them. This script reads
+  the volume layout with a Kaitai Struct parser and copies the files out under
+  their full names. It can read a physical floppy, a disk image, or one or a
+  range of virtual floppies on a Gotek-formatted USB stick, and the README gives
+  dd recipes for making images.
+status: dormant
+authors:
+  - name: Jordan Besly
+    url: https://github.com/p3r7
+source: https://github.com/p3r7/mpc-2000-floppy-extractor
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Needs Python and the kaitaistruct module (pip install kaitaistruct). Reading a
+  raw device needs sudo; reading an image file does not.
+tags: [python, converter, utility]
+versions:
+  - version: main @ b870818
+    date: 2021-04-14
+    url: https://github.com/p3r7/mpc-2000-floppy-extractor/commit/b870818
+    notes: No tagged releases; this is the latest commit.

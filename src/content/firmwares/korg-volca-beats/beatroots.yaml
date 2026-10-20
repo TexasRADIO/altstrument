@@ -1,0 +1,40 @@
+device: korg-volca-beats
+name: BEATROOTS
+summary: Patcher that turns Korg's volca beats 1.04 update file into a modified one where the clap, claves, agogo and crash PCM parts become a noise grain, a glitch loop, a code loop and a sine bass.
+description: >-
+  A Python script, plus a browser version that runs offline in the page, takes
+  the unmodified official 1.04 update WAV and writes a patched WAV, refusing
+  any other input and checking file hashes before and after. PCM SPEED sets
+  grain length on clap, base pitch on claves and agogo, and bass pitch on
+  crash, and crash also plays chromatically from MIDI channel 11. The patched
+  update installs through the alternate update mode (hold MEMORY and PLAY at
+  power-on), and the unit still reports version 1.04 with btrt on the SYS
+  screen. The repository does not contain Korg's firmware or the generated
+  file. The README calls the work experimental and notes that a failed boot
+  could need hardware recovery.
+status: active
+authors:
+  - name: Paulo Ricca
+    url: https://github.com/pauloricca
+source: https://github.com/pauloricca/beatroots
+source_status: patcher-only
+license: unspecified
+license_notes: >-
+  No license file or statement. The repository holds the patcher (replacement
+  bytes for the system image) and no firmware source or Korg files.
+homepage: https://github.com/pauloricca/beatroots
+distribution: patch-your-own
+requires_stock: "1.04"
+install_notes: >-
+  Download Korg's volca beats system updater 1.04, put patch_volca_beats.py next
+  to volcabeats_sys_0104.wav and run it (or use the browser patcher in the
+  browser folder), then play INSTALL_BEATROOTS_V10C.wav into SYNC IN with the
+  unit powered on while holding MEMORY and PLAY. Use an external supply or fresh
+  batteries, and keep the original WAV to restore stock the same way.
+brick_risk: true
+tags: [drums, synth-engine, midi, patcher, python]
+versions:
+  - version: main @ 78847a3
+    date: 2026-09-17
+    url: https://github.com/pauloricca/beatroots/commit/78847a3a15f2d6d281e884aaea1b1c5f92fc3fcb
+    notes: No tagged releases; this is the latest commit. Generates the v10c firmware.

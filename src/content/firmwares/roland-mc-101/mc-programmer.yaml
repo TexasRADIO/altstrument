@@ -1,0 +1,32 @@
+device: roland-mc-101
+name: mc-programmer
+kind: tool
+summary: Python and Swift libraries that read and write the MC-101, MC-707 and MV-1 over MIDI SysEx, covering sequencer steps, ZEN-Core tone parameters, scenes and clips, and whole-project dump and restore.
+description: >-
+  Both libraries share a data model and a parameter table of about 389 named
+  ZEN-Core tone parameters. They can set note and motion steps in a clip,
+  change per-track settings, switch scenes and clips, and dump and restore a
+  full project. A loopback transport simulates a groovebox so code can be
+  developed without hardware, and real units are reached through CoreMIDI or
+  python-rtmidi. Drum kit parameters and scene-level part parameters are listed
+  as not yet done in the roadmap.
+status: active
+authors:
+  - name: Douglas Carmichael
+    url: https://github.com/douglas-carmichael
+source: https://github.com/douglas-carmichael/mc-programmer
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  The Python package is in python_lib (Python 3.9 or newer; python-rtmidi is
+  only needed for real hardware) and the Swift package is in swift_lib. Writes
+  change the groovebox's sequencer and sound data, so dump a project first.
+  Uses the stock operating system and does not flash anything.
+brick_risk: false
+tags: [sysex, midi, sdk, python, scripting]
+versions:
+  - version: main @ b79a734
+    date: 2026-04-09
+    url: https://github.com/douglas-carmichael/mc-programmer/commit/b79a73429cc15db44a5c039fd1e249511abcb4de
+    notes: No tagged releases; this is the latest commit.

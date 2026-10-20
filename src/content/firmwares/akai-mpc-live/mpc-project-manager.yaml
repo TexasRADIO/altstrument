@@ -1,0 +1,32 @@
+device: akai-mpc-live
+kind: tool
+name: MPCProjectManager
+summary: "Windows desktop tool that reads project files from the current MPC software generation (MPC Live, Live II, X, One) and shows two projects side by side to copy sequences, programs and samples between them."
+description: >-
+  A WPF application written in C# that parses MPC project files and their
+  _[ProjectData] folders: programs, sequences stored as MIDI files, songs,
+  mixer and pad settings. The window shows a left and a right project and
+  queues copy jobs between them. The repository has no README or license; the
+  last commit, from January 2022, updated the project classes for the 2.10
+  firmware structure, and a zipped build is kept in the Binaries folder.
+status: dormant
+authors:
+  - name: Frank von Welt
+    url: https://github.com/frankvonwelt
+source: https://github.com/frankvonwelt/MPCProjectManager
+source_status: open
+license: unspecified
+license_notes: No license file or statement.
+homepage: https://github.com/frankvonwelt/MPCProjectManager
+distribution: source-only
+requires_stock: MPC software 2.10 project format (per the last commit)
+install_notes: >-
+  Open the Visual Studio solution to build it; a prebuilt zip sits in the
+  Binaries folder of the repository. Work on copies of your projects, since the
+  tool is unmaintained and untested against newer project formats.
+tags: [editor, utility]
+versions:
+  - version: master @ fa69709
+    date: 2022-01-22
+    url: https://github.com/frankvonwelt/MPCProjectManager/commit/fa697095f8a34309121fbf59ecbc0af0e54f2353
+    notes: No tagged releases; this is the latest commit.

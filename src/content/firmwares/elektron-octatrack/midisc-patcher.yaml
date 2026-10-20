@@ -1,0 +1,37 @@
+device: elektron-octatrack
+name: midisc-patcher
+summary: Browser patcher that builds the frozen 1.40MIDISC8.1 Octatrack OS, with MIDI scene locks, from your own stock OS 1.40C file.
+description: >-
+  A static web page that reads your official OS 1.40C .syx in the browser,
+  checks the main OS against a stock hash, applies a stored list of byte patches
+  and writes a flashable .bin for the CompactFlash card plus a matching .syx.
+  Nothing is uploaded and no Elektron data is stored in the repository. It
+  freezes one older build, 1.40MIDISC8.1, which is a separate line from the
+  current builds in the midisc entry; the project's own pages link to the
+  patcher for building the midisc releases. The hosted page named in the README
+  returned 404 on 2026-10-20, so the files have to be served locally.
+status: active
+authors:
+  - name: bkkbrls-del
+    url: https://github.com/bkkbrls-del
+source: https://github.com/bkkbrls-del/midisc-patcher
+source_status: patcher-only
+license: unspecified
+license_notes: >-
+  The repository has no license file or statement. The sibling midisc repository
+  is MIT; this one says nothing.
+distribution: patch-your-own
+requires_stock: 1.40C
+install_notes: >-
+  Serve the repository files with any static web server, drop your stock
+  OCTATRACK_OS1.40C.syx onto the page and build. Copy the resulting 1.40MIDISC8.1.bin
+  to the root of the CompactFlash card and choose OS UPGRADE. Keep stock 1.40C
+  for recovery. The page warns that modified firmware can brick or soft-brick the
+  unit and that the generated files must not be shared.
+brick_risk: true
+tags: [midi, sequencer, web, patcher]
+versions:
+  - version: main @ 1ce2245
+    date: 2026-09-18
+    url: https://github.com/bkkbrls-del/midisc-patcher/commit/1ce22456a01dc149d598d2b3808b8a6b36c82e41
+    notes: No tagged releases; this is the latest commit, which freezes 1.40MIDISC8.1.

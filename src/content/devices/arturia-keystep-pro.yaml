@@ -1,0 +1,15 @@
+name: KeyStep Pro
+manufacturer: Arturia
+category: controller
+tagline: 37-key controller keyboard with four polyphonic tracks and a drum sequencer
+description: >-
+  The KeyStep Pro is a keyboard controller from Arturia with thirty-seven slim keys and a sequencer
+  with four polyphonic tracks plus a drum sequencer. It has USB and MIDI ports, four CV, gate and
+  modulation outputs, eight drum gate outputs, and clock connections. Projects and settings are managed
+  with the Arturia MIDI Control Center editor.
+links:
+  manufacturer: https://www.arturia.com/products/hybrid-synths/keystep-pro/overview
+notes: >-
+  No replacement firmware exists; the entry here is a host-side converter between KeyStep Pro project
+  files and standard MIDI files.
+related: [arturia-beatstep-pro, arturia-keystep-37]

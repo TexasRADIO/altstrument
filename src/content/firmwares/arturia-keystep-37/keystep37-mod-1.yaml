@@ -1,0 +1,33 @@
+device: arturia-keystep-37
+name: keystep37-mod-1
+kind: tool
+summary: Reverse-engineering notes for KeyStep 37 firmware 1.1.6.579 plus Python scripts that decode the .led update format, build and retarget a patched image, and send an image over the stock USB-MIDI update path.
+description: >-
+  The notes catalogue about 270 flash addresses and 75 RAM addresses in the application firmware,
+  every Shift gesture on the panel, and the structure of the .led update file. The scripts cover
+  encoding and checksum fixing (led_codec.py), assembling a patch and implanting it (build_patch.py),
+  a bounded Unicorn emulation of parts of the firmware, and a flasher that talks to the bootloader
+  without MIDI Control Center. The author says there is no custom firmware here and that the work is a
+  base for later patches. Vendor files are kept out of the repository.
+status: active
+authors:
+  - name: Jim Curlis
+    url: https://github.com/jim-bitbot
+source: https://github.com/jim-bitbot/keystep37-mod-1-public
+source_status: open
+license: MIT
+license_notes: The licence covers the notes and scripts; Arturia's firmware is not included and is not covered.
+distribution: source-only
+requires_stock: 1.1.6.579
+install_notes: >-
+  Needs Python with Capstone and Unicorn for the analysis scripts, and your own copy of the official
+  1.1.6.579 update file. The repository's safety rules say never to touch the bootloader region or the
+  USB update path, to keep a stock backup, and to stage tests. The flasher is a Windows-oriented
+  workflow described in the repository's scripts and docs.
+brick_risk: true
+tags: [research, patch, flasher, python]
+versions:
+  - version: master @ a18d34b
+    date: 2026-09-23
+    url: https://github.com/jim-bitbot/keystep37-mod-1-public/commit/a18d34b2b6ee246eaddc83f36d59cc0cffcbb5a3
+    notes: No tagged releases; this is the latest commit.

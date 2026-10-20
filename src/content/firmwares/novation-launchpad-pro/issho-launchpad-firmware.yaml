@@ -1,0 +1,43 @@
+device: novation-launchpad-pro
+name: Issho Launchpad firmware (FLOW)
+summary: Launchpad Pro MK1 firmware built on Novation's open framework that provides FLOW, an eight-stage sequencer with per-stage note markers, repeats and extended durations, plus a small pad game called Poke.
+description: >-
+  Each of FLOW's eight stages can hold different notes and lengths and repeat
+  itself several times, set by placing markers on the stage, so sequences of
+  irregular length are possible. Later releases add shuffle, stage length
+  control, a jump mode for picking the next stage by hand, multi-pattern
+  sequencing, repeat-transpose and per-port MIDI output switching. The
+  code builds on the dvhdr/launchpad-pro framework, with the sequencer on top. Releases attach a SysEx file and a PDF manual. The
+  last release is v0.4 from June 2021.
+status: dormant
+authors:
+  - name: Mike Perkowitz
+    url: https://github.com/perkowitz
+source: https://github.com/perkowitz/issho-launchpad-firmware
+source_status: open
+license: BSD-3-Clause
+license_notes: Inherited from the Novation launchpad-pro framework; the LICENSE file carries Focusrite's 2015 notice.
+distribution: download
+install_notes: >-
+  Download issho_launchpad_flow.syx and the manual from the release page and
+  follow the manual's installation steps, which send the SysEx to the unit in
+  bootloader mode (hold Setup while powering on). To build it yourself, follow
+  the dvhdr/launchpad-pro instructions.
+tags: [sequencer, performance, midi]
+versions:
+  - version: v0.4
+    date: 2021-06-11
+    url: https://github.com/perkowitz/issho-launchpad-firmware/releases/tag/v0.4
+    notes: Adds repeat-transpose mode and per-port MIDI output switching.
+  - version: v0.3
+    date: 2021-05-16
+    url: https://github.com/perkowitz/issho-launchpad-firmware/releases/tag/v0.3
+    notes: Adds jump mode and multi-pattern sequencing.
+  - version: v0.2
+    date: 2021-05-08
+    url: https://github.com/perkowitz/issho-launchpad-firmware/releases/tag/v0.2
+    notes: Adds shuffle and length control.
+  - version: v0.1
+    date: 2021-03-19
+    url: https://github.com/perkowitz/issho-launchpad-firmware/releases/tag/v0.1
+    notes: First version of FLOW.

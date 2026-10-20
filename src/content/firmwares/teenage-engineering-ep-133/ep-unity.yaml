@@ -1,0 +1,33 @@
+device: teenage-engineering-ep-133
+name: ep-unity
+kind: tool
+summary: Browser tool that rewrites the SKU bytes in a Teenage Engineering update file so an EP-133 K.O. II can be flashed with EP-40 riddim firmware (or the reverse), with WebMIDI flashing and project and sample backup.
+description: >-
+  Parses an official .tfw update file that the user downloads from Teenage
+  Engineering, shows the four header bytes it changes, and flashes the result
+  over WebMIDI DFU after three risk acknowledgements. It also backs up and
+  restores projects and samples as a .pak, and trims a factory pack down to the
+  samples its pads use. EP-1320 medieval images are refused because that line is
+  signed with a different key. The README says cross-flashing is unsupported and that
+  Teenage Engineering asked the author to publish that warning with it.
+status: active
+authors:
+  - name: Chris Farrell (seajaysec)
+    url: https://github.com/seajaysec
+source: https://github.com/seajaysec/ep-unity
+source_status: open
+license: unspecified
+distribution: patch-your-own
+install_notes: >-
+  Needs a Chromium browser with WebMIDI and SysEx. Download the matching .tfw
+  from Teenage Engineering yourself; the repository ships no firmware. Run
+  node web/serve.mjs and open localhost:8766. Back up first. Cross-flashing is
+  unsupported and has been tried on very few units: the README reports one
+  EP-40 image on a 64 MiB EP-133 and no EP-133 image on EP-40 hardware.
+brick_risk: true
+tags: [flasher, research, web, sysex]
+versions:
+  - version: main @ 4603976
+    date: 2026-09-29
+    url: https://github.com/seajaysec/ep-unity/commit/4603976
+    notes: No tagged releases; this is the latest commit.
