@@ -19,3 +19,13 @@ notes: >-
   MCU source code for the panel and suggests replacing the GUI. The rest of the firmware is not open, flashing
   custom firmware voids the warranty, and the company offers paid repair if a unit is bricked. The GR-2 and
   GR-MEGA are not covered here.
+image:
+  src: /images/devices/tasty-chips-gr-1.webp
+  style: photo
+  alt: "Tasty Chips GR-1 granular synthesizer in black, 3/4 top view: large waveform display, row of faders, rotary encoders and backlit square buttons"
+  width: 1200
+  height: 800
+  credit: Tasty Chips Electronics
+  license: manufacturer product image
+  source_url: https://www.tastychips.nl/gr-1-black-edition-out-of-stock-until-februari-2023/
+  original_url: https://www.tastychips.nl/wordpress/wp-content/uploads/2022/09/GR_Black_LeftSide-1500x1000.jpg

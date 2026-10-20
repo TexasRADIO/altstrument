@@ -27,3 +27,13 @@ notes: >-
   product. The tool here works on your own backup of a unit and does not carry
   any Roland code.
 related: []
+image:
+  src: /images/devices/roland-aira-modular.webp
+  style: photo
+  alt: "Front panel of a black Roland Scooper Eurorack module (one of the AIRA Modular range) with two large knobs, two smaller knobs, a blue REC/PLAY button, two red trigger buttons and rows of patch jacks"
+  width: 873
+  height: 1050
+  credit: Roland
+  license: manufacturer product image
+  source_url: https://www.roland.com/global/products/scooper/
+  original_url: https://static.roland.com/assets/images/products/gallery/scooper_front_gal.jpg

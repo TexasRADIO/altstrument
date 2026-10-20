@@ -17,3 +17,13 @@ notes: >-
   written against the SP-404SX; the pattern format is documented for the SX
   and A models, and the original SP-404 is not covered by them.
 related: [roland-sp-404-mkii]
+image:
+  src: /images/devices/roland-sp-404.webp
+  style: photo
+  alt: "Top view of the Roland SP-404SX sampler (the SX model from the SP-404 line): grey metal case with four knobs, a red three-digit display, effect and sampling buttons and twelve rubber pads"
+  width: 720
+  height: 1050
+  credit: Roland
+  license: manufacturer product image
+  source_url: https://www.roland.com/global/products/sp-404sx/
+  original_url: https://static.roland.com/assets/images/products/gallery/sp-404sx_top_gal.jpg

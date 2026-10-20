@@ -15,3 +15,13 @@ notes: >-
   works over MIDI control changes and reads the .PRM backups; it does not use
   SysEx and does not write to the synth's storage.
 related: [roland-j-6, roland-t-8]
+image:
+  src: /images/devices/roland-s-1.webp
+  style: photo
+  alt: "Top-angle view of the Roland S-1 tweak synthesizer: black body with a green base, red tempo display, oscillator, filter and envelope knobs and a row of sixteen orange and grey step buttons"
+  width: 1200
+  height: 569
+  credit: Roland
+  license: manufacturer product image
+  source_url: https://www.roland.com/global/products/s-1/
+  original_url: https://static.roland.com/assets/images/products/gallery/s-1_top_angle_gal.jpg

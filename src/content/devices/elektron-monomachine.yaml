@@ -28,3 +28,13 @@ notes: >-
   emulate the Monomachine, and MCL (see the MegaCommand) can sequence and
   control it.
 related: [elektron-machinedrum, megacommand]
+image:
+  src: /images/devices/elektron-monomachine.webp
+  style: photo
+  alt: "Elektron Monomachine SFX60+ MKII, top view: silver panel with a black graphic display, eight data knobs, six track keys at right and a row of sixteen trig keys"
+  width: 620
+  height: 330
+  credit: Elektron
+  license: manufacturer archive image
+  source_url: https://web.archive.org/web/20130314151709/http://www.elektron.se/products/monomachine?section=overview
+  original_url: https://web.archive.org/web/20130314140321im_/http://www.elektron.se/sites/default/files/products/images/Header-Mono.jpg

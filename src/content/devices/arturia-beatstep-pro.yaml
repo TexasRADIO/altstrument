@@ -13,3 +13,13 @@ notes: >-
   No replacement firmware exists; the entry here is a host-side library and command-line tool that
   reads and writes the stock firmware's settings over USB SysEx.
 related: [arturia-beatstep, arturia-keystep-pro]
+image:
+  src: /images/devices/arturia-beatstep-pro.webp
+  style: photo
+  alt: Three-quarter view of the white Arturia BeatStep Pro controller and sequencer, with two rows of rotary knobs, step buttons, large pads and colour-coded sequencer sections
+  width: 800
+  height: 604
+  credit: Arturia
+  license: manufacturer product image
+  source_url: https://www.arturia.com/products/hybrid-synths/beatstep-pro/overview
+  original_url: https://medias.arturia.net/images/products/beatstep-pro/gallery/8.png

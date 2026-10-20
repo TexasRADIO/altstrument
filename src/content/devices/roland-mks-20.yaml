@@ -19,3 +19,13 @@ notes: >-
   entry here is a browser emulator that plays the unit's own ROM images, which you
   supply from an instrument you own.
 related: []
+image:
+  src: /images/devices/roland-mks-20.webp
+  style: photo
+  alt: "Front panel of the black two-rack-unit Roland MKS-20 digital piano module, with a blue-backlit display, eight voice buttons, write, save and load keys, an alpha dial and a memory cartridge slot"
+  width: 1200
+  height: 242
+  credit: Roland
+  license: manufacturer archive image
+  source_url: https://www.roland.com/jp/lp/catalog_museum/pdf/NAM-0447.pdf
+  original_url: https://www.roland.com/jp/lp/catalog_museum/pdf/NAM-0447.pdf

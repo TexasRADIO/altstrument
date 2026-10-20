@@ -16,3 +16,13 @@ notes: >-
   at running custom code on the unit and a command-line tool that configures the stock firmware over
   SysEx.
 related: [arturia-beatstep-pro]
+image:
+  src: /images/devices/arturia-beatstep.webp
+  style: photo
+  alt: Front view of the white Arturia BeatStep controller and sequencer, with sixteen dark rotary knobs, a large blue-ringed encoder at the left and sixteen grey pads
+  width: 1200
+  height: 375
+  credit: Arturia
+  license: manufacturer product image
+  source_url: https://www.arturia.com/products/hybrid-synths/beatstep/overview
+  original_url: https://medias.arturia.net/images/products/beatstep/ow-section-2.jpg

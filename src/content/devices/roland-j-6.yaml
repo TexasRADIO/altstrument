@@ -13,3 +13,13 @@ notes: >-
   No replacement firmware exists. The entry here is a host-side reader for the
   .PRM pattern files that the J-6 writes in USB disk mode.
 related: [roland-s-1, roland-t-8]
+image:
+  src: /images/devices/roland-j-6.webp
+  style: photo
+  alt: "Top-angle view of the Roland J-6 chord synthesizer: black body with a blue base, red tempo display, eight orange chord sequencer buttons, filter, envelope, delay and reverb knobs and two rows of pads"
+  width: 1200
+  height: 568
+  credit: Roland
+  license: manufacturer product image
+  source_url: https://www.roland.com/global/products/j-6/
+  original_url: https://static.roland.com/assets/images/products/gallery/j-6_top_angle_gal.jpg

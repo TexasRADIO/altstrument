@@ -13,3 +13,13 @@ notes: >-
   No replacement firmware exists; the entry here is a host-side converter between KeyStep Pro project
   files and standard MIDI files.
 related: [arturia-beatstep-pro, arturia-keystep-37]
+image:
+  src: /images/devices/arturia-keystep-pro.webp
+  style: photo
+  alt: Top-down view of the white Arturia KeyStep Pro, a 37-key controller and four-track sequencer with colour-coded track buttons, a row of numbered step buttons and five knobs
+  width: 1200
+  height: 463
+  credit: Arturia
+  license: manufacturer product image
+  source_url: https://www.arturia.com/products/hybrid-synths/keystep-pro/overview
+  original_url: https://medias.arturia.net/images/products/keystep-pro/gallery/06.jpg

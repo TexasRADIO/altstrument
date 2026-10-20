@@ -30,3 +30,13 @@ notes: >-
   to connected equipment. An embedded USBSID-Player and Cynthcart firmware
   variant overclocks the Pico to 250 MHz.
 related: []
+image:
+  src: /images/devices/loud-usbsid-pico.webp
+  style: photo
+  alt: Black USBSID-Pico v1.3 board with a Raspberry Pi Pico 2 on the left, two SID chips in sockets, yellow jumpers and a 3.5 mm audio jack, with a USB cable plugged in
+  width: 800
+  height: 537
+  credit: LouD
+  license: project photo, published on the official USBSID-Pico site
+  source_url: https://usbsid.loudai.nl
+  original_url: https://usbsid.loudai.nl/images/blog/20250416_USBSIDv1.3.jpg

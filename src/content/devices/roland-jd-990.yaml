@@ -10,3 +10,13 @@ description: >-
 notes: >-
   No custom firmware is known; the entries here are host-side editors that
   work over MIDI SysEx and leave the module's own software untouched.
+image:
+  src: /images/devices/roland-jd-990.webp
+  style: photo
+  alt: "Front panel of the black two-rack-unit Roland JD-990 Super JD synthesizer module with a large green LCD, seven function buttons, a data dial, cursor keys, a headphone jack and two sliders"
+  width: 640
+  height: 250
+  credit: Roland
+  license: manufacturer heritage image
+  source_url: https://www.roland.com/global/roland-50th-anniversary/1990s/
+  original_url: https://static.roland.com/promos/50th_anniversary/images/1990/JD-990.jpg

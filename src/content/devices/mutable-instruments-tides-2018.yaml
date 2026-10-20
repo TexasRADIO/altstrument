@@ -22,3 +22,13 @@ notes: >-
   source folder is called tides2 in the pichenettes/eurorack repository.
 related: [mutable-instruments-tides-original]
 pinned: [tides-2018-source]
+image:
+  src: /images/devices/mutable-instruments-tides-2018.webp
+  style: photo
+  alt: Front panel of the Mutable Instruments Tides 2018 tidal modulator Eurorack module, with frequency, shape, slope and smoothness knobs and coloured mode LEDs
+  width: 593
+  height: 1080
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/tides_2018/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/tides_2018/images/front.jpg

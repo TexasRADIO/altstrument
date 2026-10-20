@@ -15,3 +15,13 @@ links:
 notes: >-
   No custom operating system is known for the Take 5. The entries here are
   host-side editors that talk to the synth over MIDI SysEx.
+image:
+  src: /images/devices/sequential-take-5.webp
+  style: photo
+  alt: "Sequential Take 5, 5-voice compact polysynth with 37 keys, dark grey panel, pitch and mod wheels at left, 3/4 view from the front left"
+  width: 1200
+  height: 932
+  credit: Sequential
+  license: manufacturer product image
+  source_url: https://sequential.com/hybrid-analog/take-5-compact-polysynth/
+  original_url: https://sequential.com/wp-content/uploads/2024/09/Take-5-Left-Angle_TY.png

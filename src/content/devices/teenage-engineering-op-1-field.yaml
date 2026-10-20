@@ -24,3 +24,13 @@ notes: >-
   version listed is the one the catalogued patch tool was written against, not
   a statement of the latest release.
 related: [teenage-engineering-op-1, teenage-engineering-op-z, teenage-engineering-op-xy]
+image:
+  src: /images/devices/teenage-engineering-op-1-field.webp
+  style: photo
+  alt: Top-down view of the OP-1 Field, a long off-white unit with a speaker grille at left, a small colour display, four coloured encoders, rounded keys and black buttons above a piano-style keyboard
+  width: 1200
+  height: 459
+  credit: Teenage Engineering
+  license: manufacturer product image
+  source_url: https://teenage.engineering/products/op-1
+  original_url: https://assets.teenage.engineering/_img/6509496bb045b1bd68c0375b_2048.webp

@@ -14,3 +14,13 @@ notes: >-
   No replacement firmware exists. The entry here is a host-side studio that
   talks to the stock operating system over a reverse-engineered SysEx layer.
 related: []
+image:
+  src: /images/devices/roland-tr-8s.webp
+  style: photo
+  alt: "Top view of the Roland TR-8S rhythm performer: black case with a grid of tune and decay knobs, eleven backlit instrument faders, a green start/stop pad and sixteen colour-graded step buttons"
+  width: 1200
+  height: 759
+  credit: Roland
+  license: manufacturer product image
+  source_url: https://www.roland.com/global/products/tr-8s/
+  original_url: https://static.roland.com/assets/images/products/gallery/tr-8s_top_gal.png

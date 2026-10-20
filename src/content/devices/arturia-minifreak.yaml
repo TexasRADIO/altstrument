@@ -14,3 +14,13 @@ notes: >-
   for Arturia's own sample sync. Freakout, catalogued under the MicroFreak, also reads and writes MiniFreak
   patches.
 related: [arturia-microfreak]
+image:
+  src: /images/devices/arturia-minifreak.webp
+  style: photo
+  alt: Three-quarter view of the black Arturia MiniFreak hybrid synthesizer with orange oscillator knobs, a small display, a step-button row and a 37-key keyboard
+  width: 1200
+  height: 800
+  credit: Arturia
+  license: manufacturer product image
+  source_url: https://www.arturia.com/products/hardware-synths/minifreak/overview
+  original_url: https://medias.arturia.net/images/products/minifreak/gallery/minifreak_01.jpg

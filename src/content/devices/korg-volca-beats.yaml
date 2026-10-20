@@ -20,3 +20,13 @@ related:
   - korg-volca-drum
   - korg-volca-sample
   - korg-volca-keys
+image:
+  src: /images/devices/korg-volca-beats.webp
+  style: photo
+  alt: Top-down view of the Korg volca beats analog and PCM drum machine, black panel with orange accents, drum part knobs and a 16-step key row
+  width: 1200
+  height: 700
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/dj/volca_beats/
+  original_url: https://cdn.korg.com/us/products/upload/fca40c6bfac5b6d0003268f79bf4ba69_pc.png

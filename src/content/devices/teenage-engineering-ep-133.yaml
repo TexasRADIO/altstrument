@@ -19,3 +19,13 @@ notes: >-
   tool tunnels file access through SysEx. Several of these tools also cover the
   EP-40 riddim and, in the case of the DAW exporter, the EP-1320 medieval.
 related: [teenage-engineering-ep-40]
+image:
+  src: /images/devices/teenage-engineering-ep-133.webp
+  style: photo
+  alt: Top-down view of the EP-133 K.O. II, a light grey unit with a speaker grille top right, a black segmented display, a white volume knob, orange and black encoders and a grid of black and white keys
+  width: 894
+  height: 1200
+  credit: Teenage Engineering
+  license: manufacturer product image
+  source_url: https://teenage.engineering/products/ep-133
+  original_url: https://assets.teenage.engineering/_img/69679fcdc59421146f2da1d5_2048.webp

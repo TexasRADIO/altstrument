@@ -17,3 +17,13 @@ related:
   - korg-volca-drum
   - korg-volca-fm
   - korg-volca-sample
+image:
+  src: /images/devices/korg-volca-bass.webp
+  style: photo
+  alt: Top-down view of the Korg volca bass analog bass machine, silver panel with pink knobs, a red tempo display and a 16-step key row
+  width: 1200
+  height: 700
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/dj/volca_bass/
+  original_url: https://cdn.korg.com/us/products/upload/3a20bf9d212ae59a8999a2ea79d43b61_pc.png

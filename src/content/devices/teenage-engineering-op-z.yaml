@@ -25,3 +25,13 @@ notes: >-
 related:
   - teenage-engineering-op-xy
   - teenage-engineering-op-1
+image:
+  src: /images/devices/teenage-engineering-op-z.webp
+  style: photo
+  alt: Top-down view of the OP-Z, a long dark grey unit with four large ringed encoders in green, blue, yellow and red at the right and rows of small round buttons across the rest of the panel
+  width: 1200
+  height: 371
+  credit: Teenage Engineering
+  license: manufacturer product image
+  source_url: https://teenage.engineering/products/op-z
+  original_url: https://assets.teenage.engineering/_img/5bc066ec1a41630004a9ce50_2048.png

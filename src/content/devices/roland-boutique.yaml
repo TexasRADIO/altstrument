@@ -14,3 +14,13 @@ notes: >-
   is a host-side utility that translates the modules' SysEx control messages
   into ordinary MIDI control changes.
 related: []
+image:
+  src: /images/devices/roland-boutique.webp
+  style: photo
+  alt: "Top view of a black Roland JX-03 Boutique module with a left-hand pitch and mod pad, rows of knobs and sliders for DCO, VCF, VCA, LFO and envelope, and a row of sixteen red and grey step buttons"
+  width: 1200
+  height: 508
+  credit: Roland
+  license: manufacturer product image
+  source_url: https://www.roland.com/global/products/jx-03/
+  original_url: https://static.roland.com/assets/images/products/gallery/jx-03_gal.jpg

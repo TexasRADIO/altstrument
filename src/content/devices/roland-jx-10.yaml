@@ -19,3 +19,13 @@ notes: >-
   EPROM or flash module, is listed under the MKS-70 because the editors here
   target the rack version. It supports both machines.
 related: [roland-mks-70]
+image:
+  src: /images/devices/roland-jx-10.webp
+  style: photo
+  alt: "Front view of the Roland JX-10 Super JX synthesizer: a dark grey 76-key keyboard with a pitch lever on the left, a data dial, rows of small red and black buttons and a central blue display"
+  width: 460
+  height: 180
+  credit: Roland
+  license: manufacturer heritage image
+  source_url: https://www.roland.com/global/roland-50th-anniversary/1980s/
+  original_url: https://static.roland.com/promos/50th_anniversary/images/1980/JX-10.jpg

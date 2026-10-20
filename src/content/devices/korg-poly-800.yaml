@@ -20,3 +20,13 @@ notes: >-
   from 2007 and the kits are no longer available; the same author is developing
   a successor, the HAWK-832, on an STM32 board that plugs into the EPROM socket,
   which is not released yet.
+image:
+  src: /images/devices/korg-poly-800.webp
+  style: photo
+  alt: Angled view of a black Korg Poly-800 synthesizer on a white background, with its 49-key keyboard, red LED display and a panel of numbered parameter buttons
+  width: 780
+  height: 554
+  credit: "Photo: Fataltourist, via Wikimedia Commons"
+  license: public domain
+  source_url: https://commons.wikimedia.org/wiki/File:Korg_poly800.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/0/0f/Korg_poly800.jpg

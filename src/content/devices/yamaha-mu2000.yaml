@@ -21,3 +21,13 @@ notes: >-
   the unit an MU2000EX. The catalogued entries are an emulator that runs the
   original firmware and a ROM dumper; both work with ROMs extracted from your own
   unit, which is not shared.
+image:
+  src: /images/devices/yamaha-mu2000.webp
+  style: photo
+  alt: "Yamaha MU2000 tone generator, front view: champagne-grey rackmount panel with a green LCD, part-select buttons, sampling inputs, MIDI in and a large data wheel"
+  width: 1000
+  height: 439
+  credit: Yamaha
+  license: manufacturer archive image
+  source_url: https://www.yamaha.com/en/about/experience/innovation-road/collection/detail/2087/
+  original_url: https://www.yamaha.com/en/about/experience/innovation-road/collection/detail/2087/image/2087.jpg

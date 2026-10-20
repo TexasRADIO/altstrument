@@ -18,3 +18,13 @@ notes: >-
   are installed the same way as an official update, so flashing the stock image
   again restores a stock unit.
 related: [1010music-bitbox-micro, 1010music-bluebox]
+image:
+  src: /images/devices/1010music-blackbox.webp
+  style: photo
+  alt: "1010music Blackbox sampler, top view: dark grey panel with a square colour screen showing a waveform, four knobs, a row of eight backlit buttons and record, stop and play keys"
+  width: 1200
+  height: 1162
+  credit: 1010music
+  license: manufacturer product image
+  source_url: https://1010music.com/product/blackbox
+  original_url: https://1010music.com/wp-content/uploads/2019/05/1010music_blackbox_01-square-wav-1.jpg

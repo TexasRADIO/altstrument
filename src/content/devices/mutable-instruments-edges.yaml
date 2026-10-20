@@ -21,3 +21,13 @@ notes: >-
   documentation site offers only the original firmware image, for reverting to
   stock; no update was ever released.
 pinned: [edges-source]
+image:
+  src: /images/devices/mutable-instruments-edges.webp
+  style: photo
+  alt: Front panel of the Mutable Instruments Edges quad chiptune audio generator Eurorack module, with four channels of knobs, jacks and waveform select buttons
+  width: 947
+  height: 1200
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/edges/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/edges/images/front.jpg

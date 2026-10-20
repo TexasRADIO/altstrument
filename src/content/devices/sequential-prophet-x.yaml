@@ -23,3 +23,13 @@ notes: >-
   file on your own computer; the OS is not redistributed. The application runs
   from the internal SSD, and a failed experiment can leave it unbootable, so
   back up the whole SSD before modifying anything.
+image:
+  src: /images/devices/sequential-prophet-x.webp
+  style: photo
+  alt: "Sequential Prophet X, 61-key sampling and synthesis keyboard with black panel, wheels at left, seen from the front"
+  width: 1024
+  height: 524
+  credit: Sequential
+  license: manufacturer product image
+  source_url: https://sequential.com/product/prophet-x/
+  original_url: https://sequential.com/wp-content/uploads/2018/04/PX-Front-Angle.jpg

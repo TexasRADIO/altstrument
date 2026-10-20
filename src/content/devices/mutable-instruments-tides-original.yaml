@@ -24,3 +24,13 @@ notes: >-
   here.
 related: [mutable-instruments-tides-2018]
 pinned: [tides-source]
+image:
+  src: /images/devices/mutable-instruments-tides-original.webp
+  style: photo
+  alt: Front panel of the original Mutable Instruments Tides tidal modulator Eurorack module, with frequency, shape, slope and smoothness knobs and range and output mode switches
+  width: 661
+  height: 1200
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/tides_original/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/tides_original/images/front.jpg

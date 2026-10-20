@@ -23,3 +23,13 @@ notes: >-
   instructions. Games are supplied by the user on a microSD card.
 related: []
 pinned: [glitch-boy-firmware]
+image:
+  src: /images/devices/melted-electronics-glitch-boy.webp
+  style: photo
+  alt: Black Glitch Boy unit standing at an angle, with an etched gold panel, two black glitch knobs, a D-pad and face buttons, MIDI, video, audio and CV jacks, beside two SNES controllers
+  width: 960
+  height: 1200
+  credit: Melted Electronics
+  license: manufacturer product image
+  source_url: https://meltedelectronics.com/products/glitch-boy
+  original_url: https://meltedelectronics.com/images/HERO2.jpg

@@ -21,3 +21,13 @@ notes: >-
   is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name.
   Parasites by Matthias Puech also exists for Warps; see its entry here.
 pinned: [warps-source]
+image:
+  src: /images/devices/mutable-instruments-warps.webp
+  style: photo
+  alt: Front panel of the Mutable Instruments Warps meta-modulator Eurorack module, with a large algorithm knob, timbre and level controls and two inputs
+  width: 472
+  height: 1200
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/warps/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/warps/images/front.jpg

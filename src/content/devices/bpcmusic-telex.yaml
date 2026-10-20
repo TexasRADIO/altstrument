@@ -23,3 +23,13 @@ notes: >-
   Loader, and the README warns not to power the module while the Teensy is
   connected to USB. The last firmware release is from 2021.
 related: [monome-teletype, monome-ansible, monome-crow, 16n-faderbank]
+image:
+  src: /images/devices/bpcmusic-telex.webp
+  style: photo
+  alt: Eurorack case with two black-knob TXi input modules, a monome Teletype, and four TXo output modules with LEDs, all mounted side by side
+  width: 800
+  height: 450
+  credit: Brendon Cassidy (bpcmusic)
+  license: project photo, published in the official TELEX repository
+  source_url: https://github.com/bpcmusic/telex
+  original_url: https://raw.githubusercontent.com/bpcmusic/telex/master/telex.jpg

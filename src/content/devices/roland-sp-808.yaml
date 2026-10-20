@@ -16,3 +16,13 @@ links:
   community:
     - label: sp-808-disk-studio
       url: https://github.com/yuyoi/sp-808-disk-studio
+image:
+  src: /images/devices/roland-sp-808.webp
+  style: photo
+  alt: "Top view of the Roland SP-808 Groove Sampler: dark grey case with a green LCD, six faders, a jog dial, a D Beam controller section, three knobs and sixteen red-lit sample pads"
+  width: 1192
+  height: 1050
+  credit: Roland
+  license: manufacturer product image
+  source_url: https://www.roland.com/global/products/sp-808/
+  original_url: https://static.roland.com/assets/images/products/gallery/sp808_gal.jpg

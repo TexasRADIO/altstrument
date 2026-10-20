@@ -25,3 +25,13 @@ notes: >-
   editor (a USB WiFi adapter is a separate purchase). The EYESY replaced it
   with a newer OS and the same mode approach.
 related: [critter-and-guitari-eyesy]
+image:
+  src: /images/devices/critter-and-guitari-etc.webp
+  style: photo
+  alt: Top-down view of the Critter & Guitari ETC video synthesizer, a grey brushed-metal panel with a red top strip, black knobs, wooden-look buttons and a USB drive plugged into the right edge
+  width: 1200
+  height: 900
+  credit: Critter & Guitari
+  license: project photo, published in the official ETC_Manual repository
+  source_url: https://github.com/critterandguitari/ETC_Manual
+  original_url: https://raw.githubusercontent.com/critterandguitari/ETC_Manual/master/ETC-row-1.png

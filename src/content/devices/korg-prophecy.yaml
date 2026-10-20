@@ -15,3 +15,13 @@ notes: >-
   No replacement firmware exists. The one entry is an emulator that runs ROM
   dumps from the user's own unit. Korg's product page above is the software
   edition, which describes the original hardware.
+image:
+  src: /images/devices/korg-prophecy.webp
+  style: photo
+  alt: Angled view of a grey Korg Prophecy hardware synthesizer on a stand, with a green LCD, five knobs, a ribbon controller, two wheels and a 37-key keyboard
+  width: 1200
+  height: 900
+  credit: "Photo: Athousandchickens, via Wikimedia Commons"
+  license: CC-BY-SA-4.0
+  source_url: https://commons.wikimedia.org/wiki/File:Korg_prophecy.jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/6/69/Korg_prophecy.jpg

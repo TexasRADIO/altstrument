@@ -16,3 +16,13 @@ notes: >-
   project that ships probe scripts. Tools that cover the MC-707 and MV-1 as
   well are listed here, on the MC-101 page.
 related: []
+image:
+  src: /images/devices/roland-mc-101.webp
+  style: photo
+  alt: "Top view of the Roland MC-101 groovebox: black panel with four colour-lit track faders, sixteen RGB pads, a small text display, four control knobs and a large value knob"
+  width: 1200
+  height: 692
+  credit: Roland
+  license: manufacturer product image
+  source_url: https://www.roland.com/global/products/mc-101/
+  original_url: https://static.roland.com/assets/images/products/gallery/mc-101_top_gal.jpg

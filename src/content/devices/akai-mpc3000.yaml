@@ -23,3 +23,13 @@ related:
   - akai-mpc1000
   - akai-mpc500
   - akai-mpc-live
+image:
+  src: /images/devices/akai-mpc3000.webp
+  style: photo
+  alt: "Akai Professional MPC3000, top view: grey MIDI production centre with a blue display, sixteen rubber pads, a data wheel, transport keys and numeric keypad"
+  width: 288
+  height: 246
+  credit: Akai Professional
+  license: manufacturer archive image
+  source_url: https://web.archive.org/web/20000304193733/http://www.akaipro.com:80/products/MPC3000.html
+  original_url: https://web.archive.org/web/20000826215514im_/http://www.akaipro.com:80/images/MPC3000front.gif

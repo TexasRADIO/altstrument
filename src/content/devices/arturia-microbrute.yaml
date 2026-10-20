@@ -12,3 +12,13 @@ links:
 notes: >-
   No replacement firmware exists. The entries here are host-side tools that send settings and sequences
   to the stock firmware over USB MIDI and SysEx.
+image:
+  src: /images/devices/arturia-microbrute.webp
+  style: photo
+  alt: Top-down view of the black Arturia MicroBrute analog synthesizer, with oscillator, filter, LFO, envelope and sequencer sections above a 25-key mini keyboard
+  width: 1200
+  height: 809
+  credit: Arturia
+  license: manufacturer product image
+  source_url: https://www.arturia.com/products/hardware-synths/microbrute/overview
+  original_url: https://medias.arturia.net/images/products/microbrute/ow-content-2.jpg

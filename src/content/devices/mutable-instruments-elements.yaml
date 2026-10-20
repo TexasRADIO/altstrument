@@ -23,3 +23,13 @@ notes: >-
   under those devices.
 related: [mutable-instruments-rings]
 pinned: [elements-source]
+image:
+  src: /images/devices/mutable-instruments-elements.webp
+  style: photo
+  alt: Front panel of the Mutable Instruments Elements modal synthesizer Eurorack module, with large Geometry and Brightness knobs and exciter and resonator sections
+  width: 1200
+  height: 895
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/elements/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/elements/images/front.jpg

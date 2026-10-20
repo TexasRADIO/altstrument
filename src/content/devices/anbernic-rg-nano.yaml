@@ -15,5 +15,15 @@ links:
 notes: >-
   Apps are SDL1 builds packaged as OPK files and run from the stock menu. The only music software found is one
   experimental fork of Little Piggy Tracker; its audio input feature needs a modified FunKey-OS with USB audio
-  support. No free photo of the device was found on Wikimedia Commons, so there is no image.
+  support.
 related: [anbernic-rg35xx, portmaster-compatible-handhelds]
+image:
+  src: /images/devices/anbernic-rg-nano.webp
+  style: photo
+  alt: Three Anbernic RG Nano handhelds side by side in teal, dark grey and red, each with a small square screen, a white D-pad, four coloured face buttons and two small pill buttons
+  width: 800
+  height: 800
+  credit: Anbernic
+  license: manufacturer archive image
+  source_url: https://web.archive.org/web/20250113110239/https://anbernic.com/products/rg-nano
+  original_url: https://web.archive.org/web/20250113110239im_/http://anbernic.com/cdn/shop/files/253d136d6311772c750fcebf0237893.jpg?v=1735367344&width=2048

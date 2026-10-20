@@ -14,3 +14,13 @@ links:
 notes: >-
   No replacement firmware is known for the Model D. The entry here is a
   host-side configurator that writes settings to the synth over MIDI SysEx.
+image:
+  src: /images/devices/behringer-model-d.webp
+  style: photo
+  alt: "Behringer Model D desktop synthesizer, front view: black panel with rotary knobs, red, blue and white switches, and wood side cheeks"
+  width: 1200
+  height: 464
+  credit: Behringer
+  license: manufacturer product image
+  source_url: https://www.behringer.com/en/products/0718-AAC
+  original_url: https://cdn-media.empowertribe.com/77b1b3d065584b9ca79834d37892f474/Image_BE_0718-AAC_MODEL-D_Top-Front_XL.png

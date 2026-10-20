@@ -18,3 +18,13 @@ notes: >-
   existing MASOS v2 wavesamples. It boots from a Gotek floppy emulator image.
   The Boxed Ear page states the original boot ROM is hardware-protected, so
   nothing is changed permanently.
+image:
+  src: /images/devices/ensoniq-mirage.webp
+  style: photo
+  alt: "Ensoniq Mirage DSK digital sampling keyboard seen from the front in its road case: black panel with red stripe and orange Mirage-DSK logo, small display, disk slot and 61 keys"
+  width: 1120
+  height: 340
+  credit: "Photo: emily przybylinski (cropped), via Wikimedia Commons"
+  license: CC-BY-2.0
+  source_url: https://commons.wikimedia.org/wiki/File:Ensoniq_Mirage_(with_cable).jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/e/ef/Ensoniq_Mirage_%28with_cable%29.jpg

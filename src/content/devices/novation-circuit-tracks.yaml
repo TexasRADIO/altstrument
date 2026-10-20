@@ -22,3 +22,13 @@ notes: >-
   which you download from Novation yourself; the project does not distribute
   it. The bootloader is left untouched, so holding Scales, Preset and Note at
   power-on gets back to the official firmware.
+image:
+  src: /images/devices/novation-circuit-tracks.webp
+  style: photo
+  alt: "Novation Circuit Tracks, top view: black groovebox with ten rotary knobs, 32 backlit pads in blue and purple, and labelled track and function buttons"
+  width: 1200
+  height: 1200
+  credit: Novation
+  license: manufacturer product image
+  source_url: https://novationmusic.com/products/circuit-tracks
+  original_url: https://cdn11.bigcommerce.com/s-itgb7ssiy1/images/stencil/1920w/image-manager/circuit-tracks-straight-top-2400-2400.png

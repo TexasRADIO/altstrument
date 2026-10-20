@@ -23,3 +23,13 @@ notes: >-
   its own entry rather than as a Machinedrum mod: the Machinedrum itself is
   not flashed. Updates are sent over the MegaCommand's serial OS UPGRADE mode.
 related: [elektron-machinedrum, elektron-monomachine]
+image:
+  src: /images/devices/megacommand.webp
+  style: photo
+  alt: Hand holding an assembled MegaCommand 1.0.2 board, a white PCB with an OLED display, four rotary encoders, four black push buttons and an Arduino Mega underneath
+  width: 900
+  height: 1200
+  credit: Justin Mammarella
+  license: project photo, published in the official MegaCommand_Design repository
+  source_url: https://github.com/jmamma/MegaCommand_Design
+  original_url: https://raw.githubusercontent.com/jmamma/MegaCommand_Design/master/1_0_2/photos/IMG_0834.jpg

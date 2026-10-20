@@ -22,3 +22,13 @@ notes: >-
   system ROM, so they need a chip swap rather than a software update. Keep the
   original chip to revert. The Tauntek page also covers a separate Matrix-6/6R
   firmware, which is not listed here.
+image:
+  src: /images/devices/oberheim-matrix-1000.webp
+  style: photo
+  alt: "Oberheim Matrix-1000 rack module, front panel of the black version: red LED program display, numeric keypad and small round buttons, in a 1U rack case"
+  width: 1200
+  height: 95
+  credit: "Photo: GeschnittenBrot (crop by Clusternote), via Wikimedia Commons"
+  license: CC-BY-SA-2.0
+  source_url: https://commons.wikimedia.org/wiki/File:Oberheim_Matrix-1000_(black).jpg
+  original_url: https://upload.wikimedia.org/wikipedia/commons/4/49/Oberheim_Matrix-1000_%28black%29.jpg

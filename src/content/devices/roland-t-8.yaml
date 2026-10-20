@@ -13,3 +13,13 @@ notes: >-
   No replacement firmware exists. The entry here is a browser-based editor for
   the T-8's pattern backup files.
 related: [roland-j-6, roland-s-1]
+image:
+  src: /images/devices/roland-t-8.webp
+  style: photo
+  alt: "Top-angle view of the Roland T-8 beat machine: black body with an orange base, red tempo display, rows of drum and bass knobs with coloured rings and a row of sixteen orange and grey step buttons"
+  width: 1200
+  height: 570
+  credit: Roland
+  license: manufacturer product image
+  source_url: https://www.roland.com/global/products/t-8/
+  original_url: https://static.roland.com/assets/images/products/gallery/t-8_top_angle_gal.jpg

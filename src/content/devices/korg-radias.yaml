@@ -15,3 +15,13 @@ notes: >-
   The only catalogued entry is a reimplementation that runs in the browser
   without any firmware; its desktop and interpreter modes need data from your
   own unit.
+image:
+  src: /images/devices/korg-radias.webp
+  style: photo
+  alt: Front view of the Korg RADIAS synthesizer, a 49-key keyboard in a silver aluminium frame with the angled control panel of knobs, pink buttons and display raised above the keys
+  width: 1200
+  height: 405
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/de/products/synthesizers/radias/
+  original_url: https://cdn.korg.com/de/products/upload/85129ca6d360c031386ec3d39d8ee260_pc.jpg

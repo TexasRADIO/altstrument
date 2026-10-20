@@ -24,3 +24,13 @@ notes: >-
 related:
   - teenage-engineering-op-z
   - teenage-engineering-op-1
+image:
+  src: /images/devices/teenage-engineering-op-xy.webp
+  style: photo
+  alt: Top-down view of the OP-XY, a long black unit with a speaker grille at the left, a small screen, four knobs and a grid of round and square buttons with a row of grey and white keys
+  width: 1200
+  height: 466
+  credit: Teenage Engineering
+  license: manufacturer product image
+  source_url: https://teenage.engineering/products/op-xy
+  original_url: https://assets.teenage.engineering/_img/6735138db0f88c1a719dbd38_2048.webp

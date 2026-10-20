@@ -17,3 +17,13 @@ notes: >-
   The custom firmware here targets the official 1.8 update (build 3592) and is
   entered through the Circuit's bootloader, which a custom image does not
   replace. Stock firmware can be reinstalled through Novation Components.
+image:
+  src: /images/devices/novation-circuit.webp
+  style: photo
+  alt: "Novation Circuit, top view: black groovebox with ten rotary knobs, a grid of 32 colour-lit pads in purple, green, orange and yellow, and round function buttons at the sides"
+  width: 1067
+  height: 886
+  credit: Novation
+  license: manufacturer archive image
+  source_url: https://web.archive.org/web/20190101185417/https://novationmusic.com/circuit/circuit
+  original_url: https://web.archive.org/web/20190101185417im_/https://novationmusic.com/sites/novation/files/Circuit-overhead-1067-113_0.png

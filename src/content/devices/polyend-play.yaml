@@ -15,3 +15,13 @@ notes: >-
   host-side library that reads the project files the device stores on its
   microSD card.
 related: [polyend-tracker]
+image:
+  src: /images/devices/polyend-play.webp
+  style: photo
+  alt: Top-down view of the Polyend Play, a black unit with a small display at the top left, rows of black knobs, a few square buttons and a large grid of lit pads in white, blue, green and orange
+  width: 837
+  height: 660
+  credit: Polyend
+  license: manufacturer product image
+  source_url: https://polyend.com/play/
+  original_url: https://polyend-website.fra1.digitaloceanspaces.com/wp-content/uploads/2022/05/01084313/play__front2.png

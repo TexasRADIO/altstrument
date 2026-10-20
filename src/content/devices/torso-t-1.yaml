@@ -12,3 +12,13 @@ links:
 notes: >-
   No replacement firmware is known; the entries here are host-side tools that
   read and write the backup files the device produces.
+image:
+  src: /images/devices/torso-t-1.webp
+  style: photo
+  alt: Top-down view of the T-1 algorithmic sequencer, a black panel with two rows of black knobs above two rows of square backlit buttons in pale yellow, blue and grey
+  width: 1200
+  height: 475
+  credit: Torso Electronics
+  license: manufacturer product image
+  source_url: https://torsoelectronics.com/store/product/t-1-algorithmic-sequencer
+  original_url: https://framerusercontent.com/images/FgRVpMxbdkpegjypfBvdwMqhfYk.jpg

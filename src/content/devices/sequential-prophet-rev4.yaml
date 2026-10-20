@@ -20,3 +20,13 @@ notes: >-
   path documented by Sequential if an update fails to boot. Mods patch
   Sequential's own Main OS file, which you download yourself; the OS is not
   redistributed. The stock OS has no arpeggiator or sequencer.
+image:
+  src: /images/devices/sequential-prophet-rev4.webp
+  style: photo
+  alt: "Sequential Prophet-5 Rev4, 61-key polysynth with walnut side panels and black control panel, 3/4 view from the front right"
+  width: 1200
+  height: 978
+  credit: Sequential
+  license: manufacturer product image
+  source_url: https://sequential.com/prophet-5-10/
+  original_url: https://sequential.com/wp-content/uploads/2025/01/Prophet-5-Right-Angle_TY.png

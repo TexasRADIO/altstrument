@@ -20,3 +20,13 @@ notes: >-
   Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
   is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name.
 pinned: [streams-source]
+image:
+  src: /images/devices/mutable-instruments-streams.webp
+  style: photo
+  alt: Front panel of the Mutable Instruments Streams dual dynamics gate Eurorack module, with two channels of shape, mod and level mod controls and an LED meter
+  width: 562
+  height: 1200
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/streams/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/streams/images/front.jpg

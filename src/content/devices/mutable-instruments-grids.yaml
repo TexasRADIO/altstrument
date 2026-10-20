@@ -21,3 +21,13 @@ notes: >-
   documentation site offers the original firmware image and a 5 ms trigger
   build; no update was ever released.
 pinned: [grids-source]
+image:
+  src: /images/devices/mutable-instruments-grids.webp
+  style: photo
+  alt: Front panel of the Mutable Instruments Grids topographic drum sequencer Eurorack module, with Map X, Map Y and Chaos knobs and trigger and accent outputs
+  width: 753
+  height: 1200
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/grids/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/grids/images/front.jpg

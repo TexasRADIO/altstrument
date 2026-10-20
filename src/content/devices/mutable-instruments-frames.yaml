@@ -21,3 +21,13 @@ notes: >-
   is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name.
   Parasites by Matthias Puech also exists for Frames; see its entry here.
 pinned: [frames-source]
+image:
+  src: /images/devices/mutable-instruments-frames.webp
+  style: photo
+  alt: Front panel of the Mutable Instruments Frames keyframer and mixer Eurorack module, with a large central frame knob and four channel knobs
+  width: 850
+  height: 1200
+  credit: Mutable Instruments
+  license: manufacturer product image
+  source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/frames/
+  original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/frames/images/front.jpg

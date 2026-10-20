@@ -19,3 +19,13 @@ related:
   - korg-nts-1
   - korg-volca-bass
   - korg-volca-beats
+image:
+  src: /images/devices/korg-volca-keys.webp
+  style: photo
+  alt: Top-down view of the Korg volca keys analog loop synthesizer, gold panel with VCO, VCF, LFO and EG knobs, delay controls and a 16-step key row
+  width: 1200
+  height: 700
+  credit: Korg
+  license: manufacturer product image
+  source_url: https://www.korg.com/us/products/dj/volca_keys/
+  original_url: https://cdn.korg.com/us/products/upload/a5e4db79b6e04c9be1300b695dd65816_pc.png
