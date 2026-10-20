@@ -102,6 +102,7 @@ device_search_names:
   sega-master-system-game-gear: [Master System, Game Gear]
   sega-mega-drive: [Mega Drive, Sega Genesis]
   sony-ps-vita: [PS Vita]
+  zynthian: [Zynthian]
 
 # Per device slug, exact queries that replace the templates. "NES" also matches
 # words like "Nest", so it is only searched together with chiptune terms.
@@ -119,7 +120,9 @@ prior_art_repos:
   - pichenettes/mutable-instruments-documentation
 
 # Candidates the maintainer looked at and rejected. The skill appends here.
-# A GitHub URL matches by owner/repo; any other URL matches as a prefix.
+# A GitHub repo URL matches by owner/repo; any other URL, including a bare
+# https://github.com/<owner>, matches as a prefix. An entry's optional `except`
+# list names URLs under it that stay visible.
 ignore:
   - url: https://github.com/cmlarsen/fm1-zed
     reason: byte-identical copy of Felucca v1.5.1 with only the README changed
@@ -601,3 +604,40 @@ ignore:
   - url: https://github.com/adwuard/TrackerKB
     reason: hardware project running stock M8 Headless on a Teensy plus a keyboard HID firmware that does not touch the M8
     date: 2026-10-20
+  - url: https://github.com/guysoft/ZynthianOS
+    reason: dormant 2018-2022 CustomPiOS builder for a Pi 1-3 Zynthian image; official images are now built from zynthian-sys setup scripts, catalogued as zynthian/zynthianos
+    date: 2026-10-20
+  - url: https://github.com/zynthian/ZynthianOS
+    reason: fork of guysoft/ZynthianOS, the dormant CustomPiOS image builder (last commit 2022); the current image is catalogued as zynthian/zynthianos
+    date: 2026-10-20
+  - url: https://github.com/dcoredump/zynthian-recipe
+    reason: personal package build notes for Zynthian (2020), not a firmware or tool
+    date: 2026-10-20
+  - url: https://github.com/sstojos/zynthian-mini
+    reason: hardware design, superseded; merged into zynthian-hw as MINI_V2
+    date: 2026-10-20
+  - url: https://github.com/sstojos/zynthian-miniature
+    reason: Zynthian PCB hardware design, no firmware or tool
+    date: 2026-10-20
+  - url: https://github.com/riban-bw/zynaudiox8
+    reason: 8-channel I2S sound card hardware for Zynthian, no firmware or tool
+    date: 2026-10-20
+  - url: https://github.com/beckdac/zynthian-build
+    reason: 2017 build log for one Raspberry Pi 3 Zynthian
+    date: 2026-10-20
+  - url: https://github.com/eriser/zynthian
+    reason: 2015 copy of early Zynthian code
+    date: 2026-10-20
+  - url: https://github.com/vandekul/LC-Zynthian
+    reason: laser-cut case files, not firmware
+    date: 2026-10-20
+  - url: https://github.com/francescoganassin/FaustDSP-synths
+    reason: Faust synth plugins that load on stock ZynthianOS; content, not firmware
+    date: 2026-10-20
+  - url: https://github.com/zynthian
+    reason: the Zynthian org is mostly forks of LV2 plugins and engines, sound data and site code; zynthian-ui, zynthian-webconf, zynthian-sys and zynthian-emuface are catalogued under zynthian
+    date: 2026-10-20
+    except:
+      - https://github.com/zynthian/zynthian-controller
+      - https://github.com/zynthian/zynthian-stm32controller
+      - https://github.com/zynthian/zyncoder

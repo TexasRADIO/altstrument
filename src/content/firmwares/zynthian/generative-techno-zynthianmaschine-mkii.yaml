@@ -1,0 +1,53 @@
+device: zynthian
+name: Generative-Techno ZynthianMaschine MKII
+summary: Installs onto ZynthianOS on a Raspberry Pi 4 and turns it into an eight-channel generative groovebox played from a Native Instruments Maschine MK2, with euclidean drum channels and Turing-machine melody voices.
+description: >-
+  The project adds a Zynthian controller driver, a Rust HID daemon for the
+  Maschine MK2 (its pads, encoders, LEDs and two displays) and a set of
+  snapshots. Five channels are euclidean drum generators and three are voices
+  driven by Turing-machine shift registers or a bounded random walk, with a
+  chord walker that moves their shared root along the scale. The generators
+  write notes into Zynthian's own step sequencer, so patterns are saved in
+  snapshots and show in the touchscreen pattern editor. Pads are pressure
+  sensitive, and bar-synced macros, LFOs on any knob, a mute grid and master
+  recording to WAV are mapped to the Maschine's buttons.
+
+  The README targets ZynthianOS Oram-2601-1 on a Raspberry Pi 4 and uses the
+  Pi's headphone output; other sound cards are untested. Third-party plugins
+  and drum kits are not bundled: they come from Debian packages and the
+  ZynthianOS image. The daemon descends from wrl/maschine.rs by William Light
+  through the author's MaschineMK2_linux fork.
+status: active
+authors:
+  - name: Witzman
+    url: https://github.com/Witzman
+source: https://github.com/Witzman/Generative-Techno-ZynthianMaschine-MKII
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE is the GPLv3 text and the README says GPL-3.0; no "or later" grant found. The daemon keeps the upstream maschine.rs license and notices.
+homepage: https://witzman.github.io/Generative-Techno-ZynthianMaschine-MKII/
+distribution: source-only
+requires_stock: ZynthianOS Oram-2601-1 on a Raspberry Pi 4, with a Native Instruments Maschine MK2 over USB
+install_notes: >-
+  On a Pi already running ZynthianOS, clone the repository, run
+  tools/check-prereqs.sh and then ./install.sh (--dry-run first shows what it
+  would change); the daemon is built with Cargo on the Pi. The build guide
+  also has a one-command fast install and a manual installation section that
+  lists failure modes the installer cannot report. The README names Oram
+  only; Vangelis is not mentioned.
+tags: [generative, sequencer, drums, controller-mode, performance]
+video:
+  url: https://www.youtube.com/watch?v=VJs85sTF880
+  title: GenerativeTechno ZynthianMaschine MKII
+  credit: witzman
+  first_party: true
+  found_via: https://github.com/Witzman/Generative-Techno-ZynthianMaschine-MKII#readme
+versions:
+  - version: main @ 7f5a24e
+    date: 2026-10-10
+    url: https://github.com/Witzman/Generative-Techno-ZynthianMaschine-MKII/commit/7f5a24e1ed7a6c6e404137626bc7544410819990
+    notes: No releases; this is the latest commit.
+  - version: pre-ui-redesign-20260901
+    date: 2026-09-01
+    url: https://github.com/Witzman/Generative-Techno-ZynthianMaschine-MKII/tree/pre-ui-redesign-20260901
+    notes: Git tag marking the state before the panel redesign; no GitHub release page.

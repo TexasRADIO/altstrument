@@ -1,0 +1,27 @@
+device: zynthian
+name: Zynthian-OSC
+kind: tool
+summary: Open Stage Control templates for remote control of a Zynthian from a phone or tablet over the network, with a mixer, a control panel, a combined layout and a SooperLooper page.
+description: >-
+  The templates run on an Open Stage Control server on another computer (the
+  author uses a Raspberry Pi 4) and talk to the Zynthian over OSC; templates
+  that send MIDI control and program changes also need a network MIDI link
+  such as QMidiNet or RTP-MIDI enabled on the Zynthian. Each template is a
+  JSON layout with a JavaScript file in which the Zynthian's IP address is
+  set by hand. The author has not tried running the server on the Zynthian
+  itself.
+status: dormant
+authors:
+  - name: Tomas Kubina (ToFFmashines)
+    url: https://github.com/ToFFmashines
+source: https://github.com/ToFFmashines/Zynthian-OSC
+source_status: open
+license: Unlicense
+distribution: source-only
+install_notes: Install Open Stage Control, edit the host address in the template's JavaScript file, and start the server with the template's JSON and JS files and OSC port 1370.
+tags: [controller, web, mixer, looper]
+versions:
+  - version: main @ c3bd0b7
+    date: 2025-01-18
+    url: https://github.com/ToFFmashines/Zynthian-OSC/commit/c3bd0b717c0ea4617349507c2eab461a4fb786f4
+    notes: No tagged releases; this is the latest commit.

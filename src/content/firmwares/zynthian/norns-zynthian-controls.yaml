@@ -1,0 +1,34 @@
+device: zynthian
+name: norns-zynthian-controls
+summary: Patches and setup scripts for running monome norns in place of ZynthianOS on Zynthian-style hardware with a 480x320 screen, mapping the Zynthian encoders and switches to norns controls.
+description: >-
+  The repository holds a device-tree overlay that exposes the encoders wired
+  to the Pi's GPIO as Linux rotary-encoder devices, a gpio_keyd service (a git
+  submodule) that turns the switches, including those on the MCP23017 port
+  expander, into key events, a udev rule, and two patches against the 2020
+  norns source: one adds support for a 480x320 screen to matron and one
+  adjusts the norns-image setup for a standard Raspberry Pi. It was written
+  for the author's own build and documents only the setup commands and one
+  edit to /boot/config.txt.
+status: dormant
+authors:
+  - name: Javier Nonis (jnonis)
+    url: https://github.com/jnonis
+source: https://github.com/jnonis/norns-zynthian-controls
+source_status: open
+license: unspecified
+license_notes: No LICENSE file. The patches modify monome norns, which is GPL-3.0.
+distribution: patch-your-own
+requires_stock: A norns system built on a Raspberry Pi from the 2020 norns and norns-image sources, not ZynthianOS
+install_notes: >-
+  Clone with --recursive, run setup-encoders.sh and setup-keys.sh, and in
+  /boot/config.txt replace the norns-buttons-encoders overlay with
+  norns-encoders. Apply the patches in norns/ and norns-image/ to the
+  matching norns sources yourself. This replaces the Zynthian software on
+  that SD card; keep a separate card for ZynthianOS.
+tags: [platform, os, scripting]
+versions:
+  - version: master @ fdacd01
+    date: 2021-10-24
+    url: https://github.com/jnonis/norns-zynthian-controls/commit/fdacd0150b4717c41bfd54ad11c7c475f4740ea1
+    notes: No tagged releases; this is the latest commit.

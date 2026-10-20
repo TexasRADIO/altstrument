@@ -1,0 +1,58 @@
+name: Zynthian V5.1 / V5 / V4
+manufacturer: Zynthian
+category: diy-platform
+tagline: Open-source Raspberry Pi synth, sampler and effects workstation sold as a DIY kit
+description: >-
+  Zynthian is an open synth platform: a Raspberry Pi in an aluminium case that
+  runs ZynthianOS, a Debian-based image with a touch user interface that hosts
+  chains of synth engines, LV2 plugins, samplers, effects, a MIDI sequencer and
+  a mixer. The V5 kit (2023) puts a Raspberry Pi 4 on a main board with
+  balanced stereo audio in and out, a headphone output, MIDI in, out and thru on
+  DIN sockets and a USB device port, and adds a 5-inch capacitive touchscreen,
+  20 backlit buttons and four push encoders. The V5.1 kit (2024) is the same
+  design reworked for the Raspberry Pi 5.
+
+  The earlier V4 kit (2020) uses a Raspberry Pi 4 with a 3.5-inch touchscreen,
+  four encoders with switches, a HiFiBerry DAC+ADC sound card and a Zynaptik
+  board for MIDI. The same image also runs on DIY builds with a Raspberry Pi 3,
+  4 or 5 and a supported display and sound card, and the circuit boards are
+  published under CC-BY-SA-4.0 in the zynthian-hw repository.
+platform: Raspberry Pi 5 (V5.1), Raspberry Pi 4 (V5, V4); Raspberry Pi 3, 4 or 5 in DIY builds; Debian-based Linux
+stock_firmware: ZynthianOS Vangelis-2610
+links:
+  manufacturer: https://zynthian.org/
+  community:
+    - label: Zynthian forum (discourse.zynthian.org)
+      url: https://discourse.zynthian.org/
+    - label: Zynthian wiki
+      url: https://wiki.zynthian.org/
+    - label: Zynthian user's guide (on-screen help, online)
+      url: https://help.zynthian.org/
+    - label: zynthian-hw (open hardware, CC-BY-SA-4.0)
+      url: https://github.com/zynthian/zynthian-hw
+    - label: Zynthian on GitHub
+      url: https://github.com/zynthian
+notes: >-
+  ZynthianOS lives on the microSD card. A new major release (Oram, then
+  Vangelis) means writing a fresh image to a card of 32 GB or more with
+  Raspberry Pi Imager; point releases within a major version install from the
+  update option in the UI or webconf. On first boot the image detects the
+  official V5.1, V5, V4, V3, V2, Z2 and MINI V2 hardware; DIY builds and older
+  kits are set up from webconf under Hardware > Kit. Oram is no longer
+  supported since Vangelis became stable in October 2026, and the project
+  advises copying data by hand rather than restoring an Oram configuration
+  backup. Snapshots, presets, LV2 plugins and controller drivers that run on
+  the stock OS are content, not firmware, and are only catalogued when they
+  change how the instrument works.
+related: [monome-norns]
+image:
+  src: /images/devices/zynthian.webp
+  style: photo
+  alt: Zynthian V5.1 in a black aluminium case marked V5, with 20 backlit buttons, a touchscreen showing coloured pads and four knobs on the right
+  width: 1024
+  height: 686
+  credit: Zynthian
+  license: manufacturer product image
+  source_url: https://shop.zynthian.org/shop/zynthian-v5-1-kit-383
+  original_url: https://shop.zynthian.org/web/image/product.image/87/image_1920/Zynthian%20v5.1%20KIT?unique=b155001
+pinned: [zynthianos]

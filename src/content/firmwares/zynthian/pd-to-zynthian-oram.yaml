@@ -1,0 +1,30 @@
+device: zynthian
+name: pd_to_zynthian_oram
+kind: tool
+summary: Shell scripts that compile a Pure Data patch into an LV2 plugin for Zynthian with the hvcc (Heavy) compiler and the DISTRHO Plugin Framework, then link it into the Zynthian plugin folder.
+description: >-
+  An initialisation script creates a Python virtual environment, installs
+  hvcc and fetches heavylib, DPF and DPF-Widgets. A per-plugin config.sh sets
+  the hvcc options, compile.sh generates C++ and builds the .lv2 bundle, and
+  test.sh is a template for loading the plugin under JACK with an audio
+  player. The README suggests developing and testing the patch in Pure Data
+  or plugdata on a desktop, then cloning the scripts on the Zynthian, building
+  there, symlinking the result into /zynthian/zynthian-plugins/lv2 and running
+  Search For Engines in webconf. Patches must stay within the Pure Data
+  objects hvcc supports. It was written for Oram.
+status: dormant
+authors:
+  - name: gitnob
+    url: https://github.com/gitnob
+source: https://github.com/gitnob/pd_to_zynthian_oram
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE is the GPLv3 text; the scripts carry no headers and no "or later" grant was found.
+distribution: source-only
+install_notes: Needs Python 3.8 or later and a build toolchain; run bin/initialize_lv2_dev.sh once, edit config.sh for each plugin, then bin/compile.sh.
+tags: [sdk, pure-data, converter]
+versions:
+  - version: main @ 0a1f626
+    date: 2024-09-15
+    url: https://github.com/gitnob/pd_to_zynthian_oram/commit/0a1f626ec2aafe0b1502f062182f3bb2e91c34b2
+    notes: No tagged releases; this is the latest commit.

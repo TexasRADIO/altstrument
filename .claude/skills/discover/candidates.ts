@@ -131,6 +131,8 @@ const configSchema = z.object({
         url: z.string().min(1),
         reason: z.string().optional(),
         date: z.union([z.string(), z.date()]).optional(),
+        /** URLs under this entry that stay visible, e.g. useful repos of an ignored GitHub owner. */
+        except: z.array(z.string().min(1)).default([]),
       }),
     )
     .default([]),
@@ -390,19 +392,20 @@ function matchKeywords(text: string, keywords: string[]): string[] {
 const normUrl = (u: string) => u.trim().toLowerCase().replace(/\/+$/, '');
 
 function makeIgnore(entries: Config['ignore']): (url: string) => boolean {
-  const prepared = entries.map((e) => ({ norm: normUrl(e.url), key: repoKey(e.url) }));
+  const prep = (u: string) => ({ norm: normUrl(u), key: repoKey(u) });
+  const prepared = entries.map((e) => ({ ...prep(e.url), except: e.except.map(prep) }));
+  // A GitHub repo ignore matches its repo; any other URL (including a bare github.com/<owner>)
+  // matches itself and everything below it (path boundary, so ignoring .../foo does not hide
+  // .../foobar).
+  const matches = (p: { norm: string; key?: string }, norm: string, key?: string) =>
+    (p.key !== undefined && p.key === key) ||
+    norm === p.norm ||
+    norm.startsWith(p.norm.endsWith('/') ? p.norm : `${p.norm}/`) ||
+    norm.startsWith(`${p.norm}?`);
   return (url) => {
     const norm = normUrl(url);
     const key = repoKey(url);
-    // A GitHub ignore matches its repo; any other URL matches itself and everything below it
-    // (path boundary, so ignoring .../foo does not hide .../foobar).
-    return prepared.some(
-      (p) =>
-        (p.key !== undefined && p.key === key) ||
-        norm === p.norm ||
-        norm.startsWith(p.norm.endsWith('/') ? p.norm : `${p.norm}/`) ||
-        norm.startsWith(`${p.norm}?`),
-    );
+    return prepared.some((p) => matches(p, norm, key) && !p.except.some((x) => matches(x, norm, key)));
   };
 }
 
@@ -678,7 +681,7 @@ async function runSearches(queries: string[], since: Date, problems: string[]): 
     run++;
     progress(`  search ${run}/${queries.length}: ${base}`);
     const res = gh(['-X', 'GET', 'search/repositories', '-f', `q=${q}`, '-f', 'per_page=30', '-f', 'sort=updated']);
-    if (!res.ok) {
+    if (res.ok === false) {
       if (res.status === 403 || res.status === 429) {
         problems.push(`GitHub search rate limit hit after ${run - 1} of ${queries.length} queries (${res.message}); results are partial`);
         break;
@@ -719,7 +722,7 @@ function gatherPriorArt(repos: string[], since: Date, problems: string[]): { com
   for (const repo of repos) {
     progress(`  commits: ${repo}`);
     const res = gh([`repos/${repo}/commits?since=${since.toISOString()}&per_page=30`]);
-    if (!res.ok) {
+    if (res.ok === false) {
       problems.push(`prior art ${repo}: ${res.message}`);
       continue;
     }

@@ -1,0 +1,55 @@
+device: zynthian
+name: zynthian-ui
+summary: Official Python engine manager and touch user interface for Zynthian, which builds chains of synth engines, LV2 plugins and effects and runs the mixer, step sequencer, clip launcher and MIDI routing.
+description: >-
+  zynthian-ui is the main application of ZynthianOS. It starts and manages the
+  audio engines (ZynAddSubFX, FluidSynth, sfizz, setBfree, Pure Data, Aeolus,
+  LV2 plugins through jalv and others), maps the four encoders, the buttons
+  and the touchscreen to their parameters, and saves the whole state as
+  snapshots. It also contains the zynseq step sequencer, the audio mixer, MIDI
+  learn and the controller drivers for external MIDI devices. New engines are
+  added as Python classes; the wiki page "Creating a new Zynthian Synth
+  Engine" describes the interface.
+
+  The repository is tagged at each ZynthianOS point release, and the vangelis
+  branch carries current development. A unit tracks one of these branches or
+  tags from the webconf Repositories page and updates from the UI.
+status: active
+authors:
+  - name: Zynthian project
+    url: https://zynthian.org/
+  - name: Fernando Moyano (jofemodo)
+    url: https://github.com/jofemodo
+  - name: Brian Walton (riban-bw)
+    url: https://github.com/riban-bw
+  - name: Contributors
+    url: https://github.com/zynthian/zynthian-ui/graphs/contributors
+source: https://github.com/zynthian/zynthian-ui
+source_status: open
+license: GPL-2.0-or-later
+license_notes: LICENSE.txt is the GPLv3 text; the source file headers grant "version 2 of the License, or any later version".
+homepage: https://help.zynthian.org/
+distribution: download
+install_notes: Included in ZynthianOS. Updates install from the update option in the UI or webconf; the branch or tag to follow is set on the webconf Repositories page.
+tags: [official, ui, python, synth-engine, sequencer, mixer, midi]
+versions:
+  - version: vangelis-2610.1
+    date: 2026-10-11
+    url: https://github.com/zynthian/zynthian-ui/tree/vangelis-2610.1
+    notes: Git tag; no GitHub release page. Date of the tagged commit.
+  - version: oram-2601.1
+    date: 2026-01-22
+    url: https://github.com/zynthian/zynthian-ui/tree/oram-2601.1
+    notes: Git tag; no GitHub release page. Date of the tagged commit.
+  - version: oram-2511.0
+    date: 2025-10-26
+    url: https://github.com/zynthian/zynthian-ui/tree/oram-2511.0
+    notes: Git tag; no GitHub release page. Date of the tagged commit.
+  - version: oram-2502.0
+    date: 2025-02-14
+    url: https://github.com/zynthian/zynthian-ui/tree/oram-2502.0
+    notes: Git tag; no GitHub release page. Date of the tagged commit.
+  - version: oram-2409.0
+    date: 2024-10-11
+    url: https://github.com/zynthian/zynthian-ui/tree/oram-2409.0
+    notes: Git tag; no GitHub release page. Date of the tagged commit.

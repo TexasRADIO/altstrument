@@ -90,7 +90,7 @@ Append each rejected candidate to `ignore` in `.claude/skills/discover/config.ya
     date: 2026-10-14
 ```
 
-Use the repository URL for GitHub candidates and the article or project URL otherwise. Do not record news items that were merely uninteresting this week; only things that should never come back. Keep `ignore: []` syntax valid when adding the first item (replace `[]` with a list).
+Use the repository URL for GitHub candidates and the article or project URL otherwise. When most of a GitHub owner's repositories are noise (plugin forks, data, site code), ignore the owner as `https://github.com/<owner>` and list the repositories worth seeing again under `except:`. Do not record news items that were merely uninteresting this week; only things that should never come back. Keep `ignore: []` syntax valid when adding the first item (replace `[]` with a list).
 
 ## 6. Report and stop
 

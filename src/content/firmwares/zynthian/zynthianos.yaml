@@ -1,0 +1,79 @@
+device: zynthian
+name: ZynthianOS
+summary: Official Zynthian SD-card image, a Debian-based 64-bit Raspberry Pi OS build with the Zynthian UI, webconf, synth engines, LV2 plugins and sound libraries preinstalled and configured for the official kits.
+description: >-
+  ZynthianOS is the disk image the Zynthian project publishes at
+  os.zynthian.org. It is built from a Raspberry Pi OS Lite 64-bit base by the
+  setup scripts in the zynthian-sys repository, which also hold the system
+  configuration, and it bundles the zynthian-ui, zynthian-webconf and zyncoder
+  repositories, a real-time audio stack and the engines and plugins the UI
+  can load. Major releases are named after electronic music pioneers: Oram
+  (2024), the first 64-bit release, based on Debian Bookworm with Raspberry Pi
+  5 support, and Vangelis (2026), based on Debian Trixie, which adds a
+  clip launcher, the Clippy audio-clip engine, parameter automation in the
+  pattern editor and installable sound packages. Between major releases the
+  project tags point releases and publishes new stable images.
+
+  From the webconf Repositories page a unit can follow the stable release, a
+  fixed point release, the staging branch or a development branch. zynthian-sys
+  also contains a setup script for Debian Bookworm on amd64.
+status: active
+authors:
+  - name: Zynthian project
+    url: https://zynthian.org/
+  - name: Fernando Moyano (jofemodo)
+    url: https://github.com/jofemodo
+  - name: Contributors
+    url: https://github.com/zynthian/zynthian-sys/graphs/contributors
+source: https://github.com/zynthian/zynthian-sys
+source_status: open
+license: GPL-2.0-or-later
+license_notes: LICENSE.txt in zynthian-sys, zynthian-ui and zynthian-webconf is the GPLv3 text, but the source file headers grant "version 2 of the License, or any later version". The image bundles third-party engines, plugins and sound libraries under their own licenses.
+homepage: https://wiki.zynthian.org/index.php/Zynthian_Software
+distribution: download
+requires_stock: Raspberry Pi 3, 4 or 5; first boot auto-detects the V5.1, V5, V4, V3, V2, Z2 and MINI V2 kits
+install_notes: >-
+  Download the stable image (zynthianos-last-stable.img.xz) from
+  os.zynthian.org and write it to a microSD card of 32 GB or more with
+  Raspberry Pi Imager, dd or the GNOME Disks tool; the wiki no longer
+  recommends balenaEtcher. The first boot configures the system and reboots,
+  which takes a few minutes. If a kit is not detected the card is marked as
+  custom hardware; choose the kit or hardware in webconf, or run
+  set_first_boot.sh, or write the card again. Point releases install from the
+  update option in the UI or webconf. Moving from Oram to Vangelis needs a new
+  image: copy snapshots and other data by hand and do not restore the old
+  configuration.
+tags: [official, os, platform, linux, synth-engine, sequencer, fx, sampler]
+video:
+  url: https://www.youtube.com/watch?v=dtdIqBiWdjk
+  title: "Zynthian V5: The open source synthesizer workstation you might have been looking for"
+  credit: Floyd Steinberg
+  first_party: true
+  found_via: https://zynthian.org/
+versions:
+  - version: Vangelis-2610
+    date: 2026-10-15
+    url: https://discourse.zynthian.org/t/zynthianos-vangelis-stable-2610-is-released/13765
+    notes: First Vangelis stable image, based on Debian Trixie; Oram is no longer supported.
+  - version: Oram-2601
+    date: 2026-01-28
+    url: https://discourse.zynthian.org/t/new-stable-tag-release-oram-2601/12750
+    notes: Bug-fix release.
+  - version: Oram-2511
+    date: 2025-11-05
+    url: https://discourse.zynthian.org/t/new-stable-release-oram-2511/12547
+  - version: Oram-2505
+    date: 2025-05-30
+    url: https://discourse.zynthian.org/t/new-image-released-oram-stable-2505/11569
+    notes: Mostly bug fixes.
+  - version: Oram-2502
+    date: 2025-02-17
+    url: https://blog.zynthian.org/2025/02/new-stable-release-oram-2502/
+    notes: LV2 patch parameters, file selector for neural amp models and IR loaders, JC303 engine.
+  - version: Oram-2409
+    date: 2024-09-24
+    url: https://discourse.zynthian.org/t/new-zynthianos-stable-oram-2409-is-the-new-stable/10133
+    notes: First Oram stable; 64-bit Debian Bookworm base, Raspberry Pi 5 support, chain manager rewrite.
+  - version: stable-2211
+    date: 2022-11-02
+    url: https://blog.zynthian.org/2022/11/new-zynthianos-version-is-out-stable-2211/

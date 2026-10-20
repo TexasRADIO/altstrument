@@ -1,0 +1,46 @@
+device: zynthian
+name: zynthian-webconf
+kind: tool
+summary: Official browser-based configuration tool served by the Zynthian, used to set up hardware, audio and MIDI, manage presets, snapshots, sound packages and backups, choose the software branch and run updates.
+description: >-
+  Webconf is a Python web application that runs on the Zynthian and is opened
+  from a browser on the same network at the unit's address (zynthian.local by
+  default). It is where a DIY build or an older kit is configured: kit type,
+  display, sound card and the wiring of encoders and switches. It also handles
+  MIDI options and controller profiles, uploads of soundfonts, presets and LV2
+  plugins, snapshot and data backups, the installable sound packages added in
+  Vangelis, the software repository and branch the unit follows, and system
+  updates. Its tags follow the ZynthianOS point releases.
+status: active
+authors:
+  - name: Zynthian project
+    url: https://zynthian.org/
+  - name: Fernando Moyano (jofemodo)
+    url: https://github.com/jofemodo
+  - name: Contributors
+    url: https://github.com/zynthian/zynthian-webconf/graphs/contributors
+source: https://github.com/zynthian/zynthian-webconf
+source_status: open
+license: GPL-2.0-or-later
+license_notes: LICENSE.txt is the GPLv3 text; the source file headers grant "version 2 of the License, or any later version".
+homepage: https://wiki.zynthian.org/index.php/Web_Configuration_User_Guide
+distribution: download
+install_notes: Included in ZynthianOS and updated with it. Open http://zynthian.local (or the unit's IP address) in a browser and log in with the system password.
+tags: [official, web, editor, utility]
+versions:
+  - version: vangelis-2610.1
+    date: 2026-09-17
+    url: https://github.com/zynthian/zynthian-webconf/tree/vangelis-2610.1
+    notes: Git tag; no GitHub release page. Date of the tagged commit.
+  - version: oram-2601.1
+    date: 2026-01-08
+    url: https://github.com/zynthian/zynthian-webconf/tree/oram-2601.1
+    notes: Git tag; no GitHub release page. Date of the tagged commit.
+  - version: oram-2511.0
+    date: 2025-10-22
+    url: https://github.com/zynthian/zynthian-webconf/tree/oram-2511.0
+    notes: Git tag; no GitHub release page. Date of the tagged commit.
+  - version: oram-2409.0
+    date: 2024-11-05
+    url: https://github.com/zynthian/zynthian-webconf/tree/oram-2409.0
+    notes: Git tag; no GitHub release page. Date of the tagged commit.

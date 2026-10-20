@@ -1,0 +1,35 @@
+device: zynthian
+name: Zynthian Emuface
+kind: tool
+summary: Official desktop emulator of a 2016-2018 Zynthian box that runs the Zynthian UI and engines on a Linux computer, with on-screen encoders and switches in place of the GPIO controls.
+description: >-
+  Emuface is a Qt window that wraps the Zynthian UI with virtual rotary
+  encoders and push switches, so the UI and its synth engines can be developed
+  and tested on a Linux desktop. The GPIO is emulated through a wiringPi
+  wrapper and the encoders through POSIX signals. The wiki's emulator page
+  points to setup scripts for Debian Jessie and Fedora 23 and says they are
+  out of date; the repository has had no commits since March 2018 and
+  predates the Oram and Vangelis UI.
+status: dormant
+authors:
+  - name: Fernando Moyano (jofemodo)
+    url: https://github.com/jofemodo
+source: https://github.com/zynthian/zynthian-emuface
+source_status: open
+license: GPL-2.0-or-later
+license_notes: LICENSE.txt is the GPLv3 text; the source file headers grant "version 2 of the License, or any later version".
+homepage: https://wiki.zynthian.org/index.php/Zynthian_Emulator_Setup_for_Development
+distribution: source-only
+install_notes: Needs a Linux system with JACK, the Python ALSA sequencer and JACK client libraries and a checkout of zynthian-ui; engine binary paths may need adjusting.
+tags: [official, emulator, python]
+image:
+  url: https://raw.githubusercontent.com/zynthian/zynthian-emuface/master/img/zynthian_emuface_control_screenshot.png
+  alt: Emuface window showing the setBfree organ preset Jimmy Smith Plus in the Zynthian UI, with four red virtual knobs and labelled buttons for chan, back, opt and select
+  credit: Zynthian project
+  source_url: https://github.com/zynthian/zynthian-emuface
+  first_party: true
+versions:
+  - version: master @ a65efaa
+    date: 2018-03-22
+    url: https://github.com/zynthian/zynthian-emuface/commit/a65efaa33b0fd176fb6178917bf5b691ff777887
+    notes: No tagged releases; this is the latest commit.
