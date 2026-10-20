@@ -1,0 +1,31 @@
+device: benjamin-poilve-minichord
+name: fvig2001 minichord fork (MIDI in, pedals, looper)
+summary: Personal fork of the minichord firmware that plays incoming MIDI from a MIDI input or USB host connection, reads pedal messages for velocity and pitch bend, and adds a looper with overdub that records and replays played notes.
+description: >-
+  The fork's commits add playing notes received through MIDI input or a USB host connection, pedal control where a
+  control change on channel 1 sets velocity and pitch bend on channels 1 and 2 bends up or down, a looper with
+  overdub that records the notes played as timed events and replays them, started by a button press, serial
+  communication, and separate audio channels for the looper and the external device. A prebuilt firmware.hex with
+  MIDI input and USB host support is committed in the repository. The README is unchanged from upstream and
+  documents none of these features, and the fork has had no commits since October 2025.
+status: dormant
+authors:
+  - name: fvig2001
+    url: https://github.com/fvig2001
+source: https://github.com/fvig2001/minichord
+source_status: open
+license: BSD-3-Clause
+license_notes: Inherits the upstream firmware LICENSE; the repository metadata shows no license because the file sits in the firmware folder.
+homepage: https://github.com/fvig2001/minichord
+distribution: download
+install_notes: >-
+  Flash the fork's firmware/firmware.hex, or a build of its PlatformIO project, with PJRC's Teensy Loader as
+  described for the stock firmware. The repository does not say how a pedal, MIDI input or USB host device is
+  wired to the minichord.
+brick_risk: false
+tags: [fork, looper, midi, pedal, open-source, teensy]
+versions:
+  - version: main @ 1855699
+    date: 2025-10-25
+    url: https://github.com/fvig2001/minichord/commit/1855699ccc8c239dc978d64741deb45ac78e701a
+    notes: No tagged releases; this is the latest commit.

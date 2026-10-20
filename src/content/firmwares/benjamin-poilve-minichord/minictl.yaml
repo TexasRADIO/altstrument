@@ -1,0 +1,33 @@
+device: benjamin-poilve-minichord
+name: minictl
+kind: tool
+summary: Python command-line tool for the minichord that reads and sets parameters by name, backs up and restores banks, turns plain-language descriptions into presets, plays notes into it, records its USB audio and flashes firmware.
+description: >-
+  minictl uses the same SysEx protocol as minicontrol and detects whether the minichord runs the stock firmware or
+  the Key & Cable advanced fork, offering 206 named settings on stock and the fork's extra settings on the fork.
+  Commands cover reading and setting live parameters, loading and saving banks, backups in minicontrol's file
+  format, preset share codes, a describer that builds a preset from words and an instruction parser ported line
+  for line from the Key & Cable minicontrol, importing a twelve-note Scala tuning (fork firmware), MIDI and serial
+  monitoring, recording the USB audio to a WAV file, and flashing a .hex through PJRC's teensy_post_compile.
+  Commands that write to the instrument's memory ask for confirmation first. Its tests run against a simulated
+  minichord on virtual MIDI ports.
+status: active
+authors:
+  - name: Greg Miller (The Key & Cable Company)
+    url: https://github.com/keyandcableco
+source: https://github.com/keyandcableco/minictl
+source_status: open
+license: BSD-3-Clause
+license_notes: The LICENSE file carries the minichord firmware's BSD 3-clause text with Benjamin Poilvé's 2024 copyright and a 2026 Key and Cable line, since the tool bundles data and code from the firmware.
+homepage: https://github.com/keyandcableco/minictl
+install_notes: >-
+  Install with pip from the Git repository (the README gives the command, with an [all] extra that adds pyserial
+  and sounddevice for monitoring and recording). Needs Python 3.9 or later on Linux, macOS or Windows. Flashing
+  needs PJRC's Teensy tools from PlatformIO or the Arduino IDE, and on Linux it refuses to flash on kernel
+  6.1.0-53.
+tags: [cli, python, editor, librarian, presets, sysex, flasher]
+versions:
+  - version: main @ beae95b
+    date: 2026-10-20
+    url: https://github.com/keyandcableco/minictl/commit/beae95beab87c060deadc7bcce97ef0f34a12c8e
+    notes: No tagged releases; this is the latest commit, synced to the fork's firmware 99 parameters.

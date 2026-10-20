@@ -641,3 +641,81 @@ ignore:
       - https://github.com/zynthian/zynthian-controller
       - https://github.com/zynthian/zynthian-stm32controller
       - https://github.com/zynthian/zyncoder
+  - url: https://github.com/kikiisdead/minichord
+    reason: unrelated NYU class project, a different Teensy 4.1 mini Omnichord build that shares the name
+    date: 2026-10-20
+  - url: https://github.com/sinitsinmike/AAA-minichord
+    reason: copy of kikiisdead/minichord, an unrelated class project
+    date: 2026-10-20
+  - url: https://github.com/sinitsinmike/minichord
+    reason: non-fork copy of an old BenjaminPoilve/minichord snapshot with no changes
+    date: 2026-10-20
+  - url: https://github.com/matyaskunstmuller/minichord-sim
+    reason: standalone browser synth loosely modelled on the minichord; does not talk to the device
+    date: 2026-10-20
+  - url: https://github.com/keyandcableco/minichord-choir
+    reason: moved into keyandcableco/minichord-lab, which is catalogued
+    date: 2026-10-20
+  - url: https://github.com/keyandcableco/minichord-preset-manager
+    reason: superseded by the catalogued Key & Cable minicontrol; its GitHub Pages site serves only the Create React App README
+    date: 2026-10-20
+  - url: https://github.com/keyandcableco/minichord-random-generator
+    reason: one-file preset randomiser script; the same function is built into minicontrol and Sound Lab
+    date: 2026-10-20
+  - url: https://github.com/jinnyday0719/tab-to-minichord
+    reason: guitar tab to minichord chord chart converter; does not talk to the device
+    date: 2026-10-20
+  - url: https://github.com/sam0o0sam/Minichord-Tonality
+    reason: iOS Omnichord-style MIDI controller app, not related to the minichord device
+    date: 2026-10-20
+  - url: https://github.com/proverilproveryai/minichord-like-on-SuperCollider
+    reason: SuperCollider desktop patch imitating the minichord; desktop software
+    date: 2026-10-20
+  - url: https://github.com/mattiacozzi/minichord
+    reason: desktop tool that sends MIDI chords from a computer keyboard; unrelated to the device
+    date: 2026-10-20
+  - url: https://github.com/neolectron/my-minichord
+    reason: empty repository
+    date: 2026-10-20
+  - url: https://github.com/mkyas/minichord
+    reason: name collision, a university networking assignment (Chord DHT)
+    date: 2026-10-20
+  - url: https://github.com/xiaobasil/minichord
+    reason: name collision, a Chord DHT implementation
+    date: 2026-10-20
+  - url: https://github.com/FauxCrow/minichord
+    reason: name collision, an overlay networks assignment
+    date: 2026-10-20
+  - url: https://github.com/ParProg2026/Minichord
+    reason: name collision, a Go course project
+    date: 2026-10-20
+  - url: https://github.com/wachin/minichord
+    reason: name collision, a ChordPro songbook editor
+    date: 2026-10-20
+  - url: https://github.com/akpizutti/IHC-MiniChord
+    reason: name collision, a Java music theory learning app
+    date: 2026-10-20
+  - url: https://github.com/Jan125/pb.chordian
+    reason: desktop Omnichord OM-84 emulator; desktop software, not for the hardware
+    date: 2026-10-20
+  - url: https://github.com/Jan125/sfz.chordian
+    reason: Omnichord SFZ sample set; content, not firmware
+    date: 2026-10-20
+  - url: https://github.com/benjamindehli/Omni-84
+    reason: OM-84 sample library for DecentSampler; content, not firmware
+    date: 2026-10-20
+  - url: https://github.com/arcticmatt/online-omnichord
+    reason: browser recreation of the OM-27; does not talk to the hardware
+    date: 2026-10-20
+  - url: https://github.com/Amlan02/MicroChord
+    reason: DIY Omnichord-style MIDI controller, not a product or an Omnichord mod
+    date: 2026-10-20
+  - url: https://github.com/ndiggle/Teensy-Omnichord
+    reason: DIY Teensy Omnichord-style controller, not a product or an Omnichord mod
+    date: 2026-10-20
+  - url: https://github.com/rootmeanclaire/avr-omnichord
+    reason: DIY ATmega328P Omnichord-style controller, not a product or an Omnichord mod
+    date: 2026-10-20
+  - url: https://github.com/guysoft/midistrum
+    reason: Android strum app; phone software, not for the hardware
+    date: 2026-10-20

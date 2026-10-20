@@ -1,0 +1,38 @@
+device: suzuki-omnichord
+name: OpenChord
+summary: Work-in-progress MicroPython firmware and hardware for a Waveshare RP2350-Zero that replaces the OM-27's dead chord logic and top-octave generator chips, adding chord types and optional MIDI out. Not yet tested on a real instrument.
+description: >-
+  OpenChord is aimed at OM-27s whose AY-5-1317A chord logic IC has failed. An RP2350-Zero sits in that chip's
+  socket, scans the 27-button chord matrix and generates the top-octave frequencies in PIO, so the M083A
+  top-octave generator, its 4069 clock and the 4001 bass routing gate are no longer needed. CD4520 adapter boards
+  are planned to replace the two M747 octave dividers. The AY-5-1315 rhythm chip and the audio circuitry stay in
+  place. Besides major, minor and seventh chords, the firmware adds minor 7th, major 7th, diminished, augmented,
+  sus2, sus4 and slash chords from button combinations, Barry Harris voicings behind a solder jumper, and an
+  optional DIN MIDI output. The code is split into instrument-independent core modules and per-instrument
+  configuration. The OM-27 is the only instrument in the repository; the README also mentions a stub for the
+  Hammond X-5's top-octave generator, which has not been committed. The README says nothing has been tested on hardware yet and that the GPIO map, component values and
+  wiring are unverified.
+status: active
+authors:
+  - name: Greg Miller (The Key & Cable Company)
+    url: https://github.com/keyandcableco
+source: https://github.com/keyandcableco/openchord-project
+source_status: open
+license: MIT
+license_notes: Firmware only. The hardware designs and the documentation in docs/ are CERN-OHL-S-2.0.
+homepage: https://keyandcable.com/blog/Replacing_the_Brain_of_a_Suzuki_Omnichord_OM-27.html
+distribution: source-only
+requires_stock: OM-27 with a socketed AY-5-1317A
+install_notes: >-
+  Flash MicroPython to a Waveshare RP2350-Zero and copy main.py, config.py and the core modules to its root, then
+  fit it in the AY-5-1317A socket on a daughterboard. The instrument runs on +12 V and +5 V logic, and the README
+  warns that the AY-5-1315 bass-select outputs swing to +12 V and need voltage dividers, and that docs/
+  center-negative.md must be read before wiring the outputs. Since nothing has been tested on a real OM-27, treat
+  it as a bench project.
+brick_risk: false
+tags: [chords, midi, rp2350, micropython, repair, open-source]
+versions:
+  - version: master @ 6a18dc4
+    date: 2026-10-04
+    url: https://github.com/keyandcableco/openchord-project/commit/6a18dc44f414a78c8dd8fae4ffd0abe27440fa1d
+    notes: No tagged releases; this is the latest commit, which adds the MIT and CERN-OHL-S-2.0 license files.

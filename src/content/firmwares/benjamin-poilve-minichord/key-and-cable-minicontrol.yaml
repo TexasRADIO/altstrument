@@ -1,0 +1,30 @@
+device: benjamin-poilve-minichord
+name: minicontrol (Key & Cable)
+kind: tool
+summary: Expanded browser editor and librarian for the minichord by The Key & Cable Company, for the stock firmware and its advanced fork, with bank sets, backups, setting locks, a browser looper and edits typed in words.
+description: >-
+  This minicontrol talks to the minichord over Web MIDI SysEx like the official page and adds bank management on
+  top: reordering and bulk editing the 12 banks, saving and loading sets of twelve presets, backing up every bank
+  to a file and restoring it, snapshots of the live sound, and locks that keep chosen settings such as the harp
+  plate, touch thresholds and master tuning the same across presets (fork firmware 76 and later). It accepts
+  instructions in plain words such as making a sound darker across several banks, includes a looper that runs in
+  the browser, a minishop of shared presets, a guided tour and several visual themes, and shows the extra settings
+  of the advanced firmware when that is installed. The official minichord README links it as an alternative
+  control platform.
+status: active
+authors:
+  - name: Greg Miller (The Key & Cable Company)
+    url: https://github.com/keyandcableco
+source: https://github.com/keyandcableco/minicontrol
+source_status: open
+license: GPL-3.0-only
+homepage: https://minicontrol.keyandcable.com/
+install_notes: >-
+  Nothing to install. Open the page in a recent Chrome, connect the minichord with a USB cable with headphones
+  plugged in so it is on, and allow the MIDI permission prompt.
+tags: [editor, librarian, presets, sysex, looper, web-ui]
+versions:
+  - version: main @ 9b44dc8
+    date: 2026-10-20
+    url: https://github.com/keyandcableco/minicontrol/commit/9b44dc81d93c173187591478383d4afc79792157
+    notes: No tagged releases; this is the latest commit.

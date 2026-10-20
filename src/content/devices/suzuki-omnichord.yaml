@@ -1,0 +1,43 @@
+name: Omnichord (OM series)
+manufacturer: Suzuki
+category: synth
+tagline: Suzuki's handheld chord instrument with a touch strumplate, made from 1981 to 1996 and reissued in 2024 as the OM-108
+description: >-
+  The Omnichord is a portable electronic instrument with chord buttons, a touch-sensitive strumplate that plays an
+  arpeggio of the held chord, auto bass and chord accompaniment and built-in rhythms, powered by batteries or an
+  adapter. This entry covers the whole family. According to Suzuki's history page, the PC-27 (sold as Portachord or
+  Tronichord) came first, followed by the OM-27 in 1981, the OM-36 and OM-84 (System One and System Two) in 1984,
+  the OM-100 and OM-200M in 1989, the OM-150 and OM-250M in 1993 and the OM-300 in 1996. The M models and the OM-84
+  add a keyboard mode, transpose and chord memory, and the OM-200M and OM-250M also have MIDI out. Suzuki then sold
+  the Qchord QC-1 from 1999, with song cartridges and General MIDI sounds.
+
+  The OM-108, announced at NAMM in January 2024, is a new model with 108 chords including sus4 and add9, analog
+  circuitry that recreates the OM-84 sound alongside PCM voices, a keyboard and drum pad mode, and MIDI out for the
+  chords, strumplate and drums. There was no earlier OM-108.
+links:
+  manufacturer: https://www.suzuki-music.co.jp/special/omnichord_om-108/en/
+  community:
+    - label: OM-108 owner's manual (Suzuki)
+      url: https://www.suzuki-music.co.jp/support/download/54212/
+    - label: Key & Cable strumplate reproductions (OM-84, OM-27)
+      url: https://github.com/keyandcableco/Omnichord-Strumplates
+    - label: Replacing the brain of an OM-27 (Key & Cable blog)
+      url: https://keyandcable.com/blog/Replacing_the_Brain_of_a_Suzuki_Omnichord_OM-27.html
+notes: >-
+  Suzuki publishes no firmware source or updates for any Omnichord, and the vintage models do their chord logic in
+  custom ICs rather than updatable firmware. On the OM-27 that is a General Instrument AY-5-1317A chord chip with
+  an M083A top-octave generator and M747 dividers, none of which are made any more. OpenChord, the only open
+  project here, is an untested RP2350 replacement for those chips aimed at the OM-27. QFix is an external Arduino
+  box that rewrites the Qchord's MIDI output; it does not change the instrument. Worn strumplates are a common
+  fault, and Key & Cable publishes open flex-PCB reproductions under CERN-OHL-S-2.0.
+related: []
+image:
+  src: /images/devices/suzuki-omnichord.webp
+  style: photo
+  alt: Top view of a cream Omnichord OM-108 with voice and rhythm buttons and knobs, three rows of chord buttons, a vertical strumplate and a speaker grille
+  width: 1200
+  height: 652
+  credit: Suzuki
+  license: manufacturer product image
+  source_url: https://www.suzuki-music.co.jp/special/omnichord_om-108/en/
+  original_url: https://www.suzuki-music.co.jp/special/omnichord_om-108/en/assets/images/omnichord.png

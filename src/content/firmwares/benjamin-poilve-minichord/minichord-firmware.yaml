@@ -1,0 +1,42 @@
+device: benjamin-poilve-minichord
+name: minichord firmware (official)
+summary: Official open-source minichord firmware for the Teensy 4.0, with the chord and harp synth voices, 12 preset banks, an arpeggiator, two-port USB MIDI, USB audio output and the SysEx parameter interface.
+description: >-
+  The firmware is a PlatformIO project for the Teensy 4.0 built on the Teensy Audio Library. It runs a four-voice
+  chord section of three oscillators and noise per voice and a twelve-string harp section, each with its own
+  envelopes, vibrato, filter, waveshaper, delay and reverb, and stores 12 presets in flash. Every sound parameter has
+  a SysEx address. A Python generator reads parameters.json and writes both the firmware's SysEx handler and the
+  minicontrol web editor, so the two stay in step. Over USB the instrument is a two-port MIDI device with chords on
+  one port and the harp on the other, and it also streams its audio to the host. The repository builds the firmware
+  in GitHub Actions on every change and commits the result as firmware.hex, and it has merged community pull
+  requests that add chord inversions, drop voicings and user-defined scales. The firmware reports itself
+  as version 9.
+status: active
+authors:
+  - name: Benjamin Poilvé
+    url: https://github.com/BenjaminPoilve
+source: https://github.com/BenjaminPoilve/minichord/tree/main/firmware
+source_status: open
+license: BSD-3-Clause
+license_notes: The firmware/LICENSE file applies to the firmware folder, and libraries under firmware/lib keep their own licenses. The hardware in the same repository is CC BY-NC 4.0.
+homepage: https://minichord.com/source/
+distribution: download
+install_notes: >-
+  Install PJRC's Teensy Loader, connect the battery, plug the minichord into the computer with a data-capable micro
+  USB cable, plug in headphones so it powers on, and drop firmware.hex onto the loader. Then push a thin pin into the
+  hole in the back of the case to press the Teensy's program button. The manual suggests using "reset all banks" in
+  minicontrol afterwards, since a new firmware can make stored presets sound wrong. Building from source needs
+  PlatformIO with the Teensy platform; no edits to the Teensy core are needed any more.
+brick_risk: false
+tags: [official, synth-engine, chords, midi, usb-midi, usb-audio, sysex, arpeggiator, open-source, teensy]
+video:
+  url: https://www.youtube.com/watch?v=66Gu4NNnHgA
+  title: Minichord Makes Building Killer Chords Extremely Easy
+  credit: Seeed Studio
+  first_party: true
+  found_via: https://github.com/BenjaminPoilve/minichord#readme
+versions:
+  - version: main @ e5eae03
+    date: 2026-10-13
+    url: https://github.com/BenjaminPoilve/minichord/commit/e5eae038729188256f80346fbff005ea96b7b558
+    notes: No tagged releases; this is the latest commit, the CI rebuild of firmware.hex after merging a chord release fix.

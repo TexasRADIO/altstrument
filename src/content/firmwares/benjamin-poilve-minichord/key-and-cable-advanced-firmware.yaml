@@ -1,0 +1,40 @@
+device: benjamin-poilve-minichord
+name: minichord advanced firmware (Key & Cable)
+summary: Fork of the minichord firmware by The Key & Cable Company that adds a few hundred settings, among them sampled instruments, a drum machine, a looper, MIDI input, MPE output, historical and microtonal temperaments and support for its replacement harp plates.
+description: >-
+  The fork keeps every stock setting at the same SysEx address and adds its own above them. Its additions include
+  sampled piano, pizzicato strings, choir, string quartet, vibraphone, bass, sitar and electric piano voices, modelled
+  plucked string, reed piano and tonewheel organ voices, a drum machine with patterns and accompaniment styles, a
+  tanpura drone, a looper started with a double tap, playing notes received over MIDI, MPE output, voice leading,
+  temperaments including 19- and 31-note divisions, preset names and settings that stay locked across presets. A
+  phone deck mode follows a song sent to the minichord over USB audio. Releases 95 and 96 add calibrations and hover
+  sensing for the harp plates that Key & Cable sells. The firmware reports version numbers from 10 up, which
+  minictl and the Key & Cable minicontrol use to tell it from the stock firmware. The release notes describe it as
+  unofficial and experimental and not endorsed by Benjamin Poilvé, and pull requests from the fork have been
+  merged upstream.
+status: active
+authors:
+  - name: Greg Miller (The Key & Cable Company)
+    url: https://github.com/keyandcableco
+source: https://github.com/keyandcableco/minichord/tree/advanced
+source_status: open
+license: BSD-3-Clause
+license_notes: Inherits the upstream firmware LICENSE. The bundled sample data is not covered by it; lib/minichord_samples/LICENSE lists FluidR3_GM samples under CC BY 3.0 and Musyng Kite samples under CC BY-SA 3.0, and the tabla strokes are CC0.
+homepage: https://github.com/keyandcableco/minichord/releases
+distribution: download
+install_notes: >-
+  Back up all banks to a file in the Key & Cable minicontrol first, because switching between this firmware and the
+  stock one formats the preset storage. Then flash minichord-advanced-firmware-<n>.hex from the release page with
+  PJRC's Teensy Loader the same way as the stock firmware, pressing the button through the hole in the back with a
+  pin, and restore the backup or reset all banks. To go back, flash the upstream firmware.hex the same way.
+brick_risk: false
+tags: [fork, synth-engine, sampler, drum-machine, looper, mpe, microtonal, chords, midi, open-source, teensy]
+versions:
+  - version: firmware-96
+    date: 2026-10-16
+    url: https://github.com/keyandcableco/minichord/releases/tag/firmware-96
+    notes: Hover curves per harp plate, and a looper that keeps playing through a preset change.
+  - version: firmware-95
+    date: 2026-10-15
+    url: https://github.com/keyandcableco/minichord/releases/tag/firmware-95
+    notes: Adds the harp plate setting with a calibration for each Key & Cable plate.

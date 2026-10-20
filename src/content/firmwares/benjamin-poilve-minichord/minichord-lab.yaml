@@ -1,0 +1,28 @@
+device: benjamin-poilve-minichord
+name: Minichord Lab
+kind: tool
+summary: Collection of browser pages by The Key & Cable Company that use a connected minichord for music theory views, ear training, sight-reading drills, chord games and a multitrack looper.
+description: >-
+  The pages read the minichord's chord port over Web MIDI, with per-voice pitch from its MPE output where the
+  firmware provides it, and its parameter dump over SysEx for the key and temperament. Theory views draw each chord
+  on a pitch-class clock, a Tonnetz and a 3D chord-geometry prism, compare roughness across the instrument's
+  temperaments and show beating between voices. Training pages include an ear trainer, a sight-reading staff and a
+  timed practice room, and there are about twenty arcade-style games played on the chord buttons and harp. Other
+  pages add a multitrack looper that records the USB audio and MIDI, a vocoder, a string quartet and choir voicing
+  display, and recipes for the advanced firmware's phone-follow features. Several features need the Key & Cable
+  advanced firmware.
+status: active
+authors:
+  - name: Greg Miller (The Key & Cable Company)
+    url: https://github.com/keyandcableco
+source: https://github.com/keyandcableco/minichord-lab
+source_status: open
+license: GPL-3.0-only
+homepage: https://keyandcableco.github.io/minichord-lab/
+install_notes: Nothing to install. Open the page in a browser with Web MIDI and connect the minichord over USB.
+tags: [ear-training, visualizer, looper, mpe, web-ui]
+versions:
+  - version: main @ fad1876
+    date: 2026-10-20
+    url: https://github.com/keyandcableco/minichord-lab/commit/fad187640974a409b102a064fda50fcf282a0a41
+    notes: No tagged releases; this is the latest commit.

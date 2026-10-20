@@ -1,0 +1,36 @@
+device: benjamin-poilve-minichord
+name: minicontrol
+kind: tool
+summary: Official browser editor that reads and writes every minichord sound parameter over Web MIDI SysEx, manages the 12 preset banks and shares presets as text codes, with a companion minishop page of community presets.
+description: >-
+  minicontrol shows the parameters of the preset that is playing, grouped into global, harp and chord settings with a
+  tooltip for each, and sends changes to the minichord as they are made. Buttons save the live settings to a chosen
+  bank, reset one bank or all banks to the factory presets, copy the current preset as a parameter string and load a
+  string someone else shared. The minishop page lists community presets sent in by email, to try and save to a
+  bank. The editor page is generated from the firmware's parameters.json by the same script that writes the
+  firmware's SysEx handler. It is a single offline page that can be saved and opened locally, and it needs a
+  browser with Web MIDI SysEx support; the manual recommends desktop Chrome.
+status: active
+authors:
+  - name: Benjamin Poilvé
+    url: https://github.com/BenjaminPoilve
+source: https://github.com/BenjaminPoilve/minichord/tree/main/firmware/minicontrol
+source_status: open
+license: BSD-3-Clause
+license_notes: Covered by the firmware folder's LICENSE file.
+homepage: https://minichord.com/minicontrol/
+install_notes: >-
+  Nothing to install. Plug headphones into the minichord so it is on, connect it with a data-capable USB cable, open
+  the page in Chrome and allow the MIDI SysEx permission prompt.
+tags: [official, editor, librarian, presets, sysex, web-ui]
+video:
+  url: https://www.youtube.com/watch?v=h-6qkhU_WoA&t=933s
+  title: minichord - technical demonstration
+  credit: Ben P.
+  first_party: true
+  found_via: https://github.com/BenjaminPoilve/minichord#readme
+versions:
+  - version: main @ 6c135b9
+    date: 2026-10-13
+    url: https://github.com/BenjaminPoilve/minichord/commit/6c135b9389da2212ba4deb7d12530f3b667b48e3
+    notes: No tagged releases; this is the latest commit that touches the minicontrol folder.

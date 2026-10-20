@@ -1,0 +1,30 @@
+device: suzuki-omnichord
+name: QFix
+kind: tool
+summary: Arduino sketches for a small box that sits on the Suzuki Qchord's MIDI output and turns its unusual MIDI stream into standard MIDI for a DAW, over DIN MIDI on an Uno or USB MIDI on a Leonardo.
+description: >-
+  The author built QFix for a friend who played the Qchord professionally and found its MIDI output hard to use
+  in a DAW. QFix.ino runs on an Arduino Uno with the standard MIDI shield and was the version used in practice.
+  QFix2.ino is a rework for the Leonardo that also acts as a USB MIDI interface; the README says its new features
+  were tested but it may have new bugs, and that the author has no Qchord to develop it further. It does not
+  change the instrument itself.
+status: dormant
+authors:
+  - name: dctsystems
+    url: https://github.com/dctsystems
+source: https://github.com/dctsystems/QFix
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file and the README states no license.
+homepage: https://github.com/dctsystems/QFix
+distribution: source-only
+requires_stock: Qchord QC-1
+install_notes: >-
+  Upload QFix.ino to an Arduino Uno with a MIDI shield, or QFix2.ino to a Leonardo, using the Arduino IDE, and
+  connect the box between the Qchord's MIDI out and the next MIDI device or the computer.
+tags: [midi, converter, arduino]
+versions:
+  - version: main @ f96cbc2
+    date: 2023-05-29
+    url: https://github.com/dctsystems/QFix/commit/f96cbc2d3096d054d7380ed47820e7ccf0269ede
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,37 @@
+device: benjamin-poilve-minichord
+name: minichord Sound Lab
+kind: tool
+summary: Community browser companion for the minichord that mirrors what is being played, explains and graphs every firmware setting, edits presets live over Web MIDI and records the played notes to a MIDI file.
+description: >-
+  Sound Lab connects to the minichord over Web MIDI and lights up the chord buttons and harp strings on screen as
+  they are played. Because the instrument only sends notes, it infers which button or string was touched from the
+  current settings and the incoming notes, and says that this is sometimes a best guess. A Customize view lists
+  every setting with an explanation and a graph, and the app also has a preset browser, share codes, a randomiser,
+  trigger rules that change settings or load presets when a chord, string or key is played, MIDI recording to a
+  .mid file and accessibility options. Without a minichord it runs in a learning mode. It is plain HTML and
+  JavaScript with no build step and works offline from a downloaded copy. The official minichord README links it as
+  an alternative control platform.
+status: active
+authors:
+  - name: MinichordDrawn
+    url: https://github.com/MinichordDrawn
+source: https://github.com/MinichordDrawn/minichord-soundlab
+source_status: open
+license: CC-BY-NC-4.0
+license_notes: The LICENSE file names "the minichord Sound Lab contributors" as copyright holders.
+homepage: https://minichorddrawn.github.io/minichord-soundlab/
+install_notes: >-
+  Nothing to install. Open the web page, or download the repository as a ZIP and open index.html. Connecting the
+  instrument needs Chrome or Edge; Firefox asks for permission first, and Safari only runs the learning mode.
+tags: [editor, presets, sysex, visualizer, web-ui]
+image:
+  url: https://raw.githubusercontent.com/MinichordDrawn/minichord-soundlab/HEAD/Preview.png
+  alt: Sound Lab Play screen with a grid of 21 chord buttons, A and A7 lit, a harp column, the chord name A3maj7 and a 16-step rhythm pattern
+  credit: MinichordDrawn
+  source_url: https://github.com/MinichordDrawn/minichord-soundlab
+  first_party: true
+versions:
+  - version: main @ e2dfd1b
+    date: 2026-09-10
+    url: https://github.com/MinichordDrawn/minichord-soundlab/commit/e2dfd1bb9fb0748e40b282bd28372f9326e47a02
+    notes: No tagged releases; this is the latest commit.

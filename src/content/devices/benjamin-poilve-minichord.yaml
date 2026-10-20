@@ -1,0 +1,48 @@
+name: minichord
+manufacturer: Benjamin Poilvé
+category: synth
+tagline: Open-source pocket chord instrument with a strummed touch strip, built on a Teensy 4.0
+description: >-
+  The minichord is a battery-powered handheld chord instrument laid out like a small Suzuki Omnichord. It has 21
+  chord buttons in seven columns of major, minor and seventh chords plus a sharp modifier, a capacitive harp strip of 12 zones that is
+  strummed or tapped, three potentiometers, preset up and down buttons and a rhythm button that also runs an
+  arpeggiator. Sound comes out of a 3.5 mm jack, and plugging a cable into that jack is what turns it on.
+
+  A Teensy 4.0 runs the synthesis with the Teensy Audio Library. Over micro USB it charges and appears as a two-port
+  USB MIDI device, one port for the chords and one for the harp, and also sends its audio to the host for
+  recording. Its 12 preset slots are edited over SysEx from a web page. Seeed Studio sells it as a product
+  co-created with the designer, and the project's assembly guide covers both a build from scratch and finishing a
+  kit.
+platform: Teensy 4.0 (NXP i.MX RT1062)
+stock_firmware: "9"
+links:
+  manufacturer: https://minichord.com/
+  community:
+    - label: minichord user manual
+      url: https://minichord.com/user_manual/
+    - label: minichord assembly guide
+      url: https://minichord.com/assembly/
+    - label: minichord forum
+      url: https://minichord.discourse.group/
+    - label: Seeed Studio product page
+      url: https://www.seeedstudio.com/Minichord-Synthesizer-p-6414.html
+notes: >-
+  The firmware is open source (BSD-3-Clause) and its source, generator and a prebuilt firmware.hex live in the same
+  repository as the hardware. The hardware files (PCB Gerbers, BOM, enclosure and keycap files) are under CC BY-NC
+  4.0, so building one for sale is not permitted. Updating is done with PJRC's Teensy Loader and a pin pressed
+  through a hole in the back of the case to reach the Teensy's program button, and the Teensy's separate bootloader
+  chip means a bad image can be replaced the same way. After a firmware change the manual suggests resetting all
+  preset banks in minicontrol. Forks and the community editors talk to the same SysEx parameter map that the
+  firmware's generator script produces from parameters.json.
+related: []
+image:
+  src: /images/devices/benjamin-poilve-minichord.webp
+  style: photo
+  alt: White minichord with a curved body, three rows of white square chord buttons labelled f c g d a e b, a black comb-shaped harp strip, three black knobs and two small preset buttons
+  width: 1200
+  height: 815
+  credit: Benjamin Poilvé
+  license: manufacturer product image
+  source_url: https://minichord.com/
+  original_url: https://minichord.com/ressources/hero.webp
+pinned: [minichord-firmware, minicontrol]
