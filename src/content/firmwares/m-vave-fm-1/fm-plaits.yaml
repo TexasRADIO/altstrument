@@ -1,0 +1,46 @@
+device: m-vave-fm-1
+name: FM-PLAITS
+summary: >-
+  One-voice generative synth built on M-VAVE's FM1 Open code: sixteen engines modelled on Mutable Instruments Plaits, a
+  low pass gate, a generative melody sequencer, reverb, delay and MIDI out. No drums.
+description: >-
+  The engines are C re-implementations of the published Plaits algorithms, not a bit-exact copy: virtual analog,
+  waveshaping, FM, grain, additive, wavetable, chords, vowel, swarm, noise, particles, string, modal, phase
+  distortion, terrain and chiptune. A low pass gate sets pluck length or swell, and the melody generator, modelled on a
+  Max for Live device by the author, picks notes from eight scales with density, length, speed, triplet, chance and slide
+  controls. The sequencer follows the FM-1's own clock, so it follows PLAY and STOP, tempo, swing and external MIDI
+  clock. The reverb and ping-pong delay run at half rate to fit the FM-1's RAM. Because the current JieLi compiler
+  produces larger code than the one M-VAVE used, this build leaves out the stock editor pages and the 128 DX7 voices. The
+  manual says it was tested only in the FM-1 browser simulator and not yet on hardware. The repository also holds an
+  Android app version.
+status: active
+authors:
+- name: narti_live
+  url: https://instagram.com/narti_live
+source: https://github.com/netroxic/fm1-fm-plaits
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README and manual state GPL-3.0 with the FM1 SDK linking exception (M-VAVE's FM1 Open terms); there is no LICENSE
+  file in the repository. Plaits-derived code keeps its MIT notice, and the installer is fm1-base's (MPL-2.0). Source
+  is a zip in the repository (FM1_FM_PLAITS_v1_source.zip), built on M-VAVE FM1 Open V14.
+homepage: https://netroxic.github.io/fm1-fm-plaits/
+distribution: browser-installer
+install_notes: >-
+  One-button web installer on the project site, which arms M-VAVE's FM1 Open updater and can write M-VAVE's original V15
+  back. Back up projects, voices and samples with the M-VAVE workbench first, since FM-PLAITS may lose what the stock
+  firmware saved. The manual also describes building with a GitHub Actions workflow or the JieLi toolchain on Windows.
+  A browser version of the instrument plays on the site.
+brick_risk: true
+tags: [synth-engine, generative, sequencer, wavetable, physical-modeling, fx, reverb, delay, lfo, midi, emulator]
+image:
+  url: https://netroxic.github.io/fm1-fm-plaits/img/sound_string.png
+  alt: "FM-PLAITS sound page at 120 BPM: the STRING engine name in large yellow type above a white waveform, a decaying low pass gate curve, and HARMONIC, TIMBRE, MORPH and FREQ values at the bottom"
+  credit: narti_live
+  source_url: https://netroxic.github.io/fm1-fm-plaits/
+  first_party: true
+versions:
+- version: main @ 2884f45
+  date: 2026-10-19
+  url: https://github.com/netroxic/fm1-fm-plaits/commit/2884f45
+  notes: No tagged releases; this is the latest commit.

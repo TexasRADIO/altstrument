@@ -1,0 +1,36 @@
+device: mutable-instruments-warps
+name: Warps (official source)
+summary: Source code for the Warps firmware and its bootloader, published by Émilie Gillet in the pichenettes/eurorack repository, with DSP code and the hardware design files.
+description: >-
+  The warps folder in the pichenettes/eurorack repository holds the application
+  for the module's STM32F405, the audio bootloader, drivers, the modulator, vocoder
+  and oscillator DSP code, resources, a unit test, a filter generation script
+  and the hardware design files. The repository README asks that the Mutable
+  Instruments name not be used on derivative works.
+status: dormant
+authors:
+  - name: Émilie Gillet
+    url: https://github.com/pichenettes
+source: https://github.com/pichenettes/eurorack/tree/master/warps
+source_status: open
+license: MIT
+license_notes: >-
+  The repository README gives MIT for STM32 code, GPL 3.0 for AVR code and CC
+  BY-SA 3.0 for hardware. The Warps source files carry the MIT notice (Émilie
+  Gillet). The repository has no top-level LICENSE file.
+homepage: https://pichenettes.github.io/mutable-instruments-documentation/modules/warps/
+distribution: source-only
+requires_stock: 1.0a
+install_notes: >-
+  Build with the makefile in the warps folder and the ARM toolchain. The module
+  takes firmware updates as audio through its own bootloader: power on with the
+  INT. OSC button held, feed the update file into the carrier audio input, and
+  the ALGORITHM knob color shows the signal level. Unplug other CV connections
+  first.
+brick_risk: true
+tags: [official, modulation, vocoder, open-source]
+versions:
+  - version: master @ 3c23d03
+    date: 2019-04-02
+    url: https://github.com/pichenettes/eurorack/commit/3c23d03
+    notes: No tagged releases; this is the latest commit touching the warps folder.

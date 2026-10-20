@@ -1,0 +1,48 @@
+device: novation-circuit-rhythm
+name: Arrhythmia
+summary: Browser-installed patch of Novation's Circuit Rhythm 5706 firmware that fixes parameter-lock carry-over and a sound-processor hang, and adds a four-voice chord synth on track 8, ten scales on tracks 1 to 7 and an SD card module loader.
+description: >-
+  Arrhythmia does not ship Novation's firmware. The installer page reads the
+  5706 update file you supply, checks its SHA-256, patches it in the browser and
+  sends it to the unit over USB MIDI, and the user confirms on the unit. Two
+  builds are offered. The firmware build turns track 8 into a chord synth that
+  plays one to four notes per pad or step, also from MIDI on track 8's channel,
+  with one fixed saw sound and no attack or decay controls. It also adds ten
+  scales on tracks 1 to 7 and a loader for small programs on the microSD card.
+  The devkit build adds a DSP load meter and module tools and has no synth. Both
+  fix parameter locks so that a step without a lock returns to the knob's value,
+  and limit how long the unit waits for the sound processor before flagging a
+  fault with the Rec button. The release notes record the firmware build as
+  tested on one unit, with the fault handling and the devkit build untested on
+  hardware, and say the DSP voice source is not yet published, so that image
+  cannot be rebuilt from source. Novation Components cannot restore stock; the
+  installer has a Back to stock option.
+status: active
+authors:
+  - name: llcoolkm
+    url: https://github.com/llcoolkm
+source: https://github.com/llcoolkm/arrhythmia
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the code and documentation in the repository. Novation's firmware is
+  not included and is not covered. The DSP voice source for the synth is not
+  published yet.
+homepage: https://llcoolkm.github.io/arrhythmia/web/
+distribution: browser-installer
+requires_stock: "5706"
+install_notes: >-
+  Back up the microSD card first. Download Novation's 5706 update file yourself,
+  close Novation Components and other MIDI software, open the installer page in
+  Chrome, connect the unit, choose the file and press Install, then press Play
+  on the unit when it flashes. The unit needs bootloader 4799. To go back, use
+  Back to stock on the installer page or tools/flash.py on Linux. The README
+  advises stopping and reporting if the unit does not start after an install.
+  macOS is untested.
+brick_risk: true
+tags: [synth, chords, scales, sequencer, parameter-locks, modules]
+versions:
+  - version: v0.1.0
+    date: 2026-10-20
+    url: https://github.com/llcoolkm/arrhythmia/releases/tag/v0.1.0
+    notes: First release.

@@ -23,7 +23,7 @@ install_notes: >-
   write the zipped file with balenaEtcher to a microSD card of 8 GB or more
   (do not unzip it first, as the manual instructs), reinsert it and check the
   version under Settings > Info. This erases the card.
-tags: [os, platform, pure-data, linux]
+tags: [official, os, platform, pure-data, linux]
 video:
   url: https://www.youtube.com/watch?v=TW6FAxLFzLk
   title: Organelle - Critter & Guitari

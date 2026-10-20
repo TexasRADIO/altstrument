@@ -1,0 +1,45 @@
+device: nintendo-game-boy-advance
+name: GBA PSG Voice
+summary: >-
+  Synth voice and sound editor that run on a cartridge-less GBA booted over its link cable by a Music Thing Workshop
+  Computer card, which feeds it CV, gates and knob values.
+description: >-
+  The Workshop Computer card firmware uploads a program into a GBA through the BIOS multiboot over the pulse jacks, so
+  no cartridge or modification is needed. The GBA program then plays the four Game Boy sound channels from the
+  Workshop's pitch CV, gate and knobs, and sends its note, gate and button states back to the rack. Sound comes from the
+  GBA's headphone jack. The editor on the GBA screen has eleven pages, including 16 patch slots, per-channel envelopes,
+  a modulation matrix, ornaments, a drum engine, tracking calibration and key and scale quantising. The author lists
+  the AGB-001, the GBA SP with Nintendo's headphone adapter, and the Analogue Pocket as working.
+
+  The same project is catalogued under the Music Thing Workshop Computer as program card 108_GBA, an entry synced from
+  the upstream program card list; the homepage below is that card's page. This entry lists the part that runs on the
+  GBA.
+status: active
+authors:
+  - name: Andy Jenkinson
+    url: https://github.com/uglifruit
+source: https://github.com/uglifruit/89_GBA
+source_status: open
+license: MIT
+homepage: https://computer.musicthing.co.uk/programs/108-gba/
+distribution: download
+requires_stock: Music Thing Workshop Computer with this program card; link cable wired to the pulse jacks
+install_notes: >-
+  Flash UF2/gba_link.uf2 to the Workshop Computer, then connect a GBA link cable with the cartridge slot empty. Wire the
+  cable to the pulse jacks through two 1 kOhm resistors, because the pulse outputs swing to about 6 V and the GBA runs at
+  3.3 V. A Game Boy Color link cable is recommended. Switch on the Workshop first and the GBA second, and power-cycle
+  the GBA after every re-flash of the Workshop. The GBA program is built from the payload folder with an
+  arm-none-eabi toolchain and embedded in the card firmware.
+brick_risk: false
+tags: [synth-voice, chiptune, psg, link-cable, multiboot, eurorack, cv]
+video:
+  url: https://youtu.be/Hya3-_Gx0ko
+  title: "Turning a Game Boy Advance into a CV Controlled Eurorack Voice - Demo 1 : Bleeps and Bloops"
+  credit: Andy Jenkinson
+  first_party: true
+  found_via: https://github.com/uglifruit/89_GBA#readme
+versions:
+  - version: main @ e97d39f
+    date: 2026-10-19
+    url: https://github.com/uglifruit/89_GBA/commit/e97d39f
+    notes: No tagged releases; this is the latest commit. The card's info.yaml names it version 1.0.3.

@@ -1,0 +1,44 @@
+device: 1010music-bitbox-micro
+name: portkit
+summary: Browser-based patcher that edits your own 2.3.4 image to add Fidelity sample modes, a 24 dB state-variable filter, clip shift and time-stretch, reverb types, a third FX send, a master compressor and distortion, and a second page of pads.
+description: >-
+  The patcher page takes the unmodified 2.3.4 MICRO.BIN, checks it by hash, and
+  returns a patched image whose splash reads "portkit mod". The patch data holds
+  only the project's own bytes. Fidelity (SP1200, SP-12, S950, MPC60 and
+  fixed low sample rates), the 24 dB filter and the encoder code are ported from
+  the Blackbox mod by Justin Joe (MIT). The clip tools add shift, play length,
+  stretch with a pitch-keeping mode and loop fades, and the effects section adds
+  four reverb types and a second reverb on a third send. The README marks each
+  feature as tested on a unit or only in the test suite and a Renode simulation;
+  most of the sound and master-section features are not yet confirmed on
+  hardware. The author calls it unofficial and says 1010music does not support
+  it. The commits credit an AI assistant as co-author. A sister project targets
+  the Blackbox.
+status: active
+authors:
+  - name: kyrillleier-jpg
+    url: https://github.com/kyrillleier-jpg
+source: https://github.com/kyrillleier-jpg/portkit-micro
+source_status: open
+license: MIT
+license_notes: >-
+  Covers portkit's own code and documentation. 1010music's firmware is not
+  included and no rights over it are granted; the README asks people to share
+  the patcher link or build instructions, not patched images. Third-party parts
+  are listed in THIRD_PARTY.md.
+homepage: https://kyrillleier-jpg.github.io/portkit-micro/
+distribution: patch-your-own
+requires_stock: 2.3.4
+install_notes: >-
+  Download the stock 2.3.4 package from 1010music yourself and take MICRO.BIN
+  out of it. Drop it on the patcher page, which runs in the browser and only
+  accepts the unmodified 2.3.4, then copy the patched MICRO.BIN to the root of
+  the microSD card and hold the white right arrow key while powering on. To go
+  back, repeat the steps with the stock MICRO.BIN. The README advises flashing
+  stock back before sending the unit for service.
+tags: [sampler, fx, filter, clip, reverb, compressor, performance]
+versions:
+  - version: 2.3.4-pkZD
+    date: 2026-10-20
+    url: https://github.com/kyrillleier-jpg/portkit-micro/blob/main/CHANGELOG.md
+    notes: First public release, as dated in the changelog.

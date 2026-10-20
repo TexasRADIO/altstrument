@@ -20,7 +20,7 @@ license_notes: The repository has no LICENSE file; the earlier DaisyDuino versio
 homepage: https://www.synthux.academy/firmware
 distribution: download
 install_notes: Download TouchFX.bin from the release and flash it from Synthux's firmware page or the Daisy Seed web programmer.
-tags: [effects, delay, reverb, distortion, bitcrusher, open-source, touch-2]
+tags: [official, effects, delay, reverb, distortion, bitcrusher, open-source, touch-2]
 versions:
   - version: v1.0.0
     date: 2026-10-01

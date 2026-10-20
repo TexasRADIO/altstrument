@@ -1,0 +1,32 @@
+name: USBSID-Pico
+manufacturer: LouD
+category: synth
+tagline: Open-source Pico board that plays one or two real SID chips over USB
+description: >-
+  USBSID-Pico is an open-source board by the maker LouD that carries a Raspberry
+  Pi Pico or Pico 2 and two sockets for MOS 6581, 6582 and 8580 SID chips or
+  SID replacements such as SIDKick-pico, ARMSID, FPGASID and SwinSID. It appears
+  to a computer, phone or browser as a USB device, and SID players, C64
+  emulators, SID trackers and WebUSB pages write to the chips in real time. It
+  also acts as a USB MIDI device, which the project describes as beta. Later
+  board revisions set the socket voltage, filter capacitors and shunt resistor
+  automatically for the detected chip.
+platform: Raspberry Pi RP2040 or RP2350 (Pico, Pico W, Pico 2, Pico 2 W)
+links:
+  manufacturer: https://usbsid.loudai.nl
+  community:
+    - label: USBSID-Pico on GitHub
+      url: https://github.com/LouDnL/USBSID-Pico
+    - label: USBSID-Configtool
+      url: https://github.com/LouDnL/USBSID-Configtool
+    - label: USBSID Discord
+      url: https://discord.gg/zG2rxXuT2g
+notes: >-
+  Board design files and the firmware are published in the same repository. The
+  v1.0 and v1.3 boards are under CC BY-SA 4.0 and the v1.5 board is under CC
+  BY-NC-ND 4.0. The maker sells assembled boards through a SmallRun pre-order
+  and a reseller. SID chips are not included, and the author warns that the
+  project is a hobby build with no guarantees against damage to the chips or
+  to connected equipment. An embedded USBSID-Player and Cynthcart firmware
+  variant overclocks the Pico to 250 MHz.
+related: []

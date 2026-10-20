@@ -1,0 +1,23 @@
+name: 3rd Wave
+manufacturer: Groove Synthesis
+category: synth
+tagline: Wavetable synthesizer family with analog filters, sold as 24K keyboard, 24M and 8M desktop
+description: >-
+  The 3rd Wave is a family of wavetable synthesizers from Groove Synthesis. The
+  24K keyboard and the 24M desktop module have 24 voices and four parts, and the
+  8M desktop has 8 voices and two parts. Each voice has three oscillators that
+  can play classic wavetables, high-resolution wavetables, analog-modeled
+  waveforms or samples, three-operator linear FM per part, and an analog lowpass
+  filter in series with a state-variable filter. Patches made on the 8M load on
+  the larger models.
+stock_firmware: 2.0d
+links:
+  manufacturer: https://groovesynthesis.com/products/3rd-wave/24k-keyboard/
+  community:
+    - label: Groove Synthesis support (software, firmware, manuals)
+      url: https://groovesynthesis.com/support/
+notes: >-
+  No custom firmware is known. Groove Synthesis releases its own OS updates and
+  its companion app only to registered owners behind a login, so no download
+  links are given here. The listed tool is the manufacturer's own editor and
+  librarian.

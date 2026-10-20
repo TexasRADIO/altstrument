@@ -1,0 +1,34 @@
+device: sony-psp
+name: Open-PSP-MIDI
+kind: tool
+summary: >-
+  Kernel module, library and example MIDI monitor that make the PSP appear as a class-compliant USB MIDI device, with
+  system exclusive support; the README says it has not yet run on a real PSP.
+description: >-
+  The repository holds a PRX that provides the USB MIDI function on the PSP's USB bus, a static library that loads it
+  and sends and receives whole messages including system exclusive, a header with the API, and an example app called
+  USB MIDI Monitor that turns the PSP's buttons and stick into chords, pitch bend, modulation and clock. A macOS
+  command-line checker tests the link, system exclusive and latency from the computer, and host-side tests run the
+  descriptors and driver against a model of the bus. An RP2040 adapter design that would act as a USB host for the PSP
+  and add TRS or DIN MIDI is marked in progress. The README states that everything builds and the host tests pass but
+  that nothing has run on a real PSP, and it lists a hardware checklist for first testers.
+status: active
+authors:
+  - name: Cirocular
+    url: https://github.com/Cirocular-Vlasenko-Daniil
+source: https://github.com/Cirocular-Vlasenko-Daniil/Open-PSP-MIDI
+source_status: open
+license: MIT
+distribution: source-only
+requires_stock: PSP custom firmware (ARK-4 or PRO on 6.61)
+install_notes: >-
+  Build with pspdev using make, make test and make dist, then copy dist/PSP/GAME/MIDIMON/ to ms0:/PSP/GAME/. The README
+  says 6.60 probably works too and asks testers to report the load and start codes if USB MIDI is not available. As it
+  is untested on hardware, expect problems; the README asks anyone whose PSP hangs or powers off to report the step.
+brick_risk: false
+tags: [usb-midi, midi, sdk, prx, open-source]
+versions:
+  - version: main @ b85dc9a
+    date: 2026-10-17
+    url: https://github.com/Cirocular-Vlasenko-Daniil/Open-PSP-MIDI/commit/b85dc9a
+    notes: No tagged releases; this is the latest commit.

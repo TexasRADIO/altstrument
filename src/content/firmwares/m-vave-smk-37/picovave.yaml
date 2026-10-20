@@ -1,0 +1,41 @@
+device: m-vave-smk-37
+name: picovave
+summary: >-
+  PICO-8 player firmware for the SMK-37 Pro that maps its buttons, keys, pads, encoders and faders onto the PICO-8
+  controller, with a browser simulator built from the same sources and cart upload over USB MIDI.
+description: >-
+  Rights note: the repository bundles PICO-8 cartridges (.p8.png) from community authors, each under its
+  author's own terms; the page's cart gallery shows eight of them with links to their source threads. The firmware runs the
+  femto8 PICO-8 engine and holds one cartridge at a time in the unit's flash. Cartridges are sent as .p8.png
+  files over USB MIDI SysEx from the web page, which checks in advance, on the same allocator and arena size,
+  whether the unit can run a given cart. A cart that does not fit falls back to the built-in default instead of
+  freezing. The README lists several escape routes, including a power-on key that gives a headless USB rescue
+  mode, and notes that it has no BLE MIDI. The simulator compiles the same application layer as the firmware. The
+  release page says the build tagged 993b2146 passed the author's checks but had not yet been confirmed on a
+  unit, after two on-hardware faults found earlier were fixed. The repository's own documentation is in Korean
+  with an English toggle on the simulator page.
+status: active
+authors:
+- name: LEE JAE HO (acidsound)
+  url: https://github.com/acidsound
+source: https://github.com/acidsound/picovave
+source_status: open
+license: unspecified
+license_notes: >-
+  No LICENSE file at the top level of the repository. It vendors femto8 (MIT), Lua and LodePNG, and its platform
+  layer is copied from Makkuro37, which is GPL-3.0.
+homepage: https://acidsound.github.io/picovave/
+distribution: browser-installer
+install_notes: >-
+  Open the simulator page in Chrome or Edge to try it in the browser, then use its FLASH (USB) option to write the
+  package over Web MIDI; the release also offers the .fwsc. Restoring needs your own official SMK-37 Pro V016
+  package, which the repository does not include. Unofficial; install at your own risk. If the unit does not
+  start, the README documents holding OCT- at power-on for a USB rescue mode and mask-ROM recovery with
+  jl-uboot-tool.
+brick_risk: true
+tags: [game, emulator]
+versions:
+- version: 993b2146
+  date: 2026-10-19
+  url: https://github.com/acidsound/picovave/releases/tag/993b2146
+  notes: Build tag taken from the release; seven-button input without PICO-8's escape key.

@@ -19,7 +19,7 @@ homepage: https://monome.org/docs/norns/shield
 distribution: download
 requires_stock: Standard norns for 250530; Raspberry Pi 3B/3B+/4B shield for 231114-img
 install_notes: Flash with balenaEtcher or Raspberry Pi Imager; choose the file matching your Pi model and audio codec (shield revision 211028 and later use the cs4271 codec).
-tags: [platform, os]
+tags: [official, platform, os]
 video:
   url: https://www.youtube.com/watch?v=ifCavYKKiLo
   title: "Monome Norns Shield: An Introduction"

@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: M-Flasher (Kampling fork)
+kind: tool
+summary: >-
+  Independent fork of M-Flasher for the FM-1 and SMK-37 Pro/Elite that adds saved-file inspection commands, a native
+  MIDI update route for Felucca packages and experimental read-only FM-1 flash readers, ahead of the upstream releases.
+description: >-
+  A separate repository, not a GitHub fork, that its own contributing notes call an integration fork of
+  jvitkauskas/m-flasher; no pull request from it has reached upstream yet. Beyond the upstream backup, restore, install and flash-map features it has
+  inspect, verify and dry-plan commands that check saved dumps and packages without any device attached, a
+  MIDI-only command line that installs Felucca .fwsc packages over SysEx without Python or the ROM download
+  mode, and an opt-in reader-qualification build with a read-only RAM reader and raw-backup procedure for the
+  FM-1. The project's own rules keep day-to-day development offline, against fixtures and fakes, with hardware
+  checks recorded separately under docs/evidence. It has no tagged releases: GitHub Actions publish the MIDI
+  command line and test results, and the full app is built from source. It branched from upstream before that
+  project moved from fm1-bootloader to m-bootloader.
+status: active
+authors:
+- name: Jan Kampling (kmplngj)
+  url: https://github.com/kmplngj
+- name: Julius Vitkauskas (jvitkauskas)
+  url: https://github.com/jvitkauskas
+source: https://github.com/kmplngj/m-flasher
+source_status: open
+license: MIT
+license_notes: >-
+  MIT, copyright Julius Vitkauskas, as upstream. The flash loader in loader/ and the added ram-reader/ are
+  Apache-2.0, and the bundled bootloader builds are Apache-2.0 (see data/NOTICE.md).
+distribution: source-only
+install_notes: >-
+  Build with Rust (cargo build --release); the MIDI-only command line is also available as unsigned artifacts of
+  the native MIDI CLI workflow, with a source.json recording the commit and hash. The upstream download-mode
+  requirements apply: a unit with the stock bootloader cannot enter download mode from its keys. Bring your own
+  official .fwsc files; the repository holds only synthetic test packages. Treat it as experimental and take a full
+  backup before any write.
+brick_risk: true
+tags: [flasher, loader, utility]
+versions:
+- version: main @ e897df2
+  date: 2026-10-19
+  url: https://github.com/kmplngj/m-flasher/commit/e897df2fc5ed08350ad8f1ef0b9d480e03247f8c
+  notes: No tagged releases; this is the latest commit.

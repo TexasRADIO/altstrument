@@ -1,0 +1,37 @@
+device: sequential-take-5
+name: Take 5 Unofficial Editor
+kind: tool
+summary: Paid, closed-source editor for the Take 5 that runs as a VST3, Audio Unit or standalone app and controls every front-panel parameter, the 16-slot mod matrix and a 64-step polyphonic sequencer over MIDI.
+description: >-
+  Sold by Voidcontrol MIDI as a plugin that stays in sync with the synth over
+  USB or 5-pin DIN. Every sound parameter is exposed to DAW automation. It also
+  has a program library covering User and Factory slots with SysEx import and
+  export at program, bank and full-library scope, A/B snapshots with morphing,
+  an on-screen keyboard and a randomizer. It needs Take 5 OS 2.0 or 2.1; features
+  of the beta OS, arpeggiator modes added there, chaining and some globals are
+  not supported. The synth's operating system is not touched. The seller states
+  it is not affiliated with Sequential, and a licence key activates online on up
+  to three machines.
+status: active
+authors:
+  - name: Voidcontrol MIDI
+    url: https://voidcontrolmidi.com/
+source_status: closed
+license: proprietary
+license_notes: Commercial software sold through Gumroad. Launch price of USD 35 through 2026-10-31, then USD 40.
+homepage: https://voidcontrolmidi.com/l/vbgwth
+distribution: commercial
+requires_stock: Take 5 OS 2.0 or 2.1
+install_notes: >-
+  Copy the .vst3 (Windows) or .vst3 or .component (macOS) file into the usual
+  plugin folder, add it to a DAW track as an audio effect or run the standalone
+  app, then pick the Take 5 MIDI port in the editor. Windows 10 or 11, or macOS
+  12 or later on Apple Silicon.
+brick_risk: false
+tags: [editor, librarian, sequencer, plugin, commercial]
+video:
+  url: https://www.youtube.com/watch?v=UifJcWTyih0
+  title: Take 5 Unofficial Editor - Demo
+  credit: Voidcontrol MIDI
+  first_party: true
+  found_via: https://voidcontrolmidi.com/l/vbgwth

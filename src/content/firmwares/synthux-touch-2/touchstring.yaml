@@ -29,7 +29,7 @@ install_notes: >-
   Seed web programmer (flash.daisy.audio) or Synthux's firmware page.
   Vincent Maurer's fork at github.com/vincentltm/TouchString publishes the same
   binary under its own releases.
-tags: [synth, physical-modelling, karplus-strong, polyphonic, arpeggiator, open-source, touch-2]
+tags: [official, synth, physical-modelling, karplus-strong, polyphonic, arpeggiator, open-source, touch-2]
 video:
   url: https://www.youtube.com/watch?v=lsqrXFyhXEY
   title: TouchString(s)

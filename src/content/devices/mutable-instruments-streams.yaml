@@ -1,0 +1,22 @@
+name: Streams
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Dual dynamics gate (discontinued)
+description: >-
+  Streams is a 12HP Eurorack dual dynamics gate designed by Émilie Gillet and
+  sold by Mutable Instruments from 2015 to 2021. Each of its two channels
+  pairs an analog voltage-controlled amplifier and filter with digital control
+  that provides an envelope generator, a vactrol model, an amplitude and
+  frequency follower or a compressor and limiter. It runs on an STM32F103 at 72
+  MHz with a DAC8552 for its internal control voltages.
+platform: STM32F1
+stock_firmware: "1.01"
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/streams/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
+  is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name.
+pinned: [streams-source]

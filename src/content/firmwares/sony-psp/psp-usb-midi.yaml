@@ -1,0 +1,36 @@
+device: sony-psp
+name: PSP USB MIDI
+kind: tool
+summary: >-
+  Library and kernel module that let PSP homebrew present the console as a class-compliant USB MIDI device over its own
+  USB port, with note, controller and clock messages in both directions.
+description: >-
+  A user-mode static library plus a kernel PRX that the application loads from its own folder. The PRX handles USB
+  enumeration and the MIDI transport, and the library exposes non-blocking read and write calls through a C header and a
+  CMake package. Computers and other USB hosts see the PSP as a standard MIDI device with no driver. System exclusive
+  messages are not part of the 1.0 API. The repository includes a small example app and research notes on how the
+  PSP's USB bus builds descriptors, and says a coding agent was used to help reverse engineer the USB stack, with the
+  changes reviewed by the author. LittleGPTracker PSP uses it for MIDI output.
+status: active
+authors:
+  - name: YYUUGGOO
+    url: https://github.com/YYUUGGOO
+source: https://github.com/YYUUGGOO/psp-usb-midi
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file and the README makes no license statement.
+distribution: source-only
+requires_stock: PSP custom firmware (ARK-4 or 5 on 6.61)
+install_notes: >-
+  Build with the PSPDEV toolchain using psp-cmake. The README calls the implementation experimental and says it should
+  work on most models running ARK-4 or 5 on firmware 6.61; 6.60 is untested and probably does not work. The repository
+  also carries prebuilt copies of the library, the PRX and an example EBOOT in its dist folder. Copy the example
+  folder to ms0:/PSP/GAME/ for a smoke test. The driver is loaded by the application and unloaded when it exits, not
+  installed as a global plugin.
+brick_risk: false
+tags: [usb-midi, midi, sdk, prx]
+versions:
+  - version: master @ d4d2662
+    date: 2026-10-18
+    url: https://github.com/YYUUGGOO/psp-usb-midi/commit/d4d2662
+    notes: No tagged releases; this is the latest commit.

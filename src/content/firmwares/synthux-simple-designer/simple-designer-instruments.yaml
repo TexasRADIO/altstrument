@@ -19,4 +19,4 @@ license_notes: The repository root has no LICENSE file. The sketches, official/a
 homepage: https://synthux.academy/store/simple-designer-kit
 distribution: source-only
 install_notes: Flash a prebuilt .bin from an official folder with the Daisy Web Programmer, or upload a workshop sketch from the Arduino IDE or with make upload EXAMPLE=<name> using arduino-cli.
-tags: [collection, arduino, examples, synth, open-source, simple-designer]
+tags: [official, collection, arduino, examples, synth, open-source, simple-designer]

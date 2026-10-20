@@ -22,3 +22,4 @@ notes: >-
   The firmware repository documents a USB reflash with no signing or lock, but does not give step-by-step flashing
   instructions. Games are supplied by the user on a microSD card.
 related: []
+pinned: [glitch-boy-firmware]

@@ -1,0 +1,43 @@
+device: mutable-instruments-peaks
+name: Peaks (official source)
+summary: Source code for the Peaks firmware and its audio bootloader, published by Émilie Gillet in the pichenettes/eurorack repository. The documentation site lists v1.1 as the latest release.
+description: >-
+  The peaks folder in the pichenettes/eurorack repository holds the
+  application, the audio bootloader, drivers, the envelope, LFO, drum, pulse
+  processor and number-station code, resource generators, a desktop test
+  program and the hardware design files. Shared libraries (stmlib and the
+  audio bootloader encoder) are git submodules of that repository. The
+  repository has no version tags. The Mutable Instruments documentation site
+  lists v1.1 (released 20 May 2017) as the latest official release. The
+  Mutable Instruments name must not be used on derivative works. Dead Man's
+  Catch is the catalogued alternate firmware for this module, and the Braids
+  firmware reuses Peaks' drum excitation code.
+status: dormant
+authors:
+  - name: Émilie Gillet
+    url: https://github.com/pichenettes
+source: https://github.com/pichenettes/eurorack/tree/master/peaks
+source_status: open
+license: MIT
+license_notes: >-
+  The repository README gives MIT for STM32 code and CC BY-SA 3.0 for
+  hardware. The Peaks application, driver, bootloader and DSP files carry the
+  MIT notice (Copyright Émilie Gillet). One file, test/peaks_test.cc, carries
+  a GPL notice for version 3 or any later version; it is the desktop test
+  program, not module code. The repository has no top-level LICENSE file.
+homepage: https://pichenettes.github.io/mutable-instruments-documentation/modules/peaks/
+distribution: source-only
+install_notes: >-
+  Build with the makefile in the peaks folder and the ARM toolchain; the wav
+  target encodes the binary as an FSK audio update file. Official updates
+  install through the module's bootloader: power on with the TRIG1 button
+  pressed, play the file into the TRIG1 input, and the module reboots after
+  the last packet. The LEDs blink alternately if the level is wrong or too
+  high, and the manual says to press TRIG1 and retry from the start of the file.
+brick_risk: true
+tags: [official, envelopes, lfo, drums, open-source]
+versions:
+  - version: master @ 61d7146
+    date: 2019-04-02
+    url: https://github.com/pichenettes/eurorack/commit/61d7146
+    notes: No tagged releases; this is the latest commit touching the peaks folder.

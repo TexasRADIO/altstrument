@@ -1,0 +1,53 @@
+device: loud-usbsid-pico
+name: USBSID-Pico firmware
+summary: Firmware for the USBSID-Pico board that exposes one or two SID chips over a custom USB serial protocol, WebUSB and ASID MIDI, with beta USB MIDI synth control and optional embedded SID player and Cynthcart builds.
+description: >-
+  Written for the RP2040 and RP2350 Pico family on top of TinyUSB, with a
+  separate .uf2 build for each PCB revision, Pico variant and feature set. The
+  same firmware drives players such as DeepSID and the USBSID web player in the
+  browser, VICE, JSIDPlay2, Denise, sidplayfp, and the author's forks of SID
+  Factory II, GTUltra and LoadTracker. Settings such as socket addresses, clock
+  speed, stereo or mono and SID types are changed with the separate
+  USBSID-Configtool. Some builds embed a player for PSID, RSID, PRG and P00
+  files or the Cynthcart synthesizer, so the board can play without a computer
+  running an emulator. Release 0.8.0 rewrites the MIDI implementation with
+  stored configuration, a voice engine, patch and arpeggiator tables, MIDI
+  clock control and control of an OPL chip. The README still calls MIDI beta and
+  says it is in development, with features subject to change.
+status: active
+authors:
+  - name: LouD
+    url: https://github.com/LouDnl
+source: https://github.com/LouDnl/USBSID-Pico
+source_status: open
+license: GPL-2.0-only
+license_notes: >-
+  The README says the author's code is GPL version 2 and that code by others
+  keeps the license in its source headers. The PCB designs have separate
+  Creative Commons licenses (CC BY-SA 4.0 for v1.0 and v1.3, CC BY-NC-ND 4.0
+  for v1.5).
+homepage: https://usbsid.loudai.nl
+distribution: download
+install_notes: >-
+  Hold BOOTSEL while connecting the Pico, then copy the .uf2 that matches your
+  PCB revision, Pico model and RGB LED to the drive that appears. Flashing
+  resets all stored settings, so save them with the Configtool first. A wrong
+  PCB revision is documented as harmless. Builds with the embedded player or
+  Cynthcart overclock the Pico to 250 MHz and may need cooling.
+brick_risk: false
+tags: [sid, chiptune, usb-midi, webusb, rp2040]
+video:
+  url: https://www.youtube.com/watch?v=nh0SxO1y6I0
+  title: "“Raster Bar” (8-bit) on the USBSID-Pico \U0001F47E #c64 #commodore64 #chiptune"
+  credit: LukHash
+  first_party: true
+  found_via: https://github.com/LouDnl/USBSID-Pico#readme
+versions:
+  - version: v0.8.0
+    date: 2026-09-03
+    url: https://github.com/LouDnl/USBSID-Pico/releases/tag/v0.8.0
+    notes: Rewrites the MIDI implementation, adds OPL control, moves Cynthcart onto the embedded player and brings the embedded player to RP2040 boards.
+  - version: v0.7.7
+    date: 2026-08-18
+    url: https://github.com/LouDnl/USBSID-Pico/releases/tag/v0.7.7
+    notes: WebUSB fixes and OPL mute on clear.

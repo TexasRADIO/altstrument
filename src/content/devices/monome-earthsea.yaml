@@ -22,3 +22,4 @@ notes: >-
   Community work such as polyearthsea is built on the multipass framework
   and targets several modules. Back up before flashing.
 related: [monome-white-whale, monome-meadowphysics, monome-ansible, monome-tools]
+pinned: [earthsea]

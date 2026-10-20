@@ -1,0 +1,46 @@
+device: mutable-instruments-braids
+name: Braids (official source)
+summary: Source code for the Braids firmware and its audio bootloader, published by Émilie Gillet in the pichenettes/eurorack repository. The documentation site lists v1.8 as the latest release and offers an unreleased v1.9 build.
+description: >-
+  The braids folder in the pichenettes/eurorack repository holds the
+  application, the bootloader, drivers, the DSP code for the analog and digital
+  oscillator models, the resource generator scripts, a desktop test program and
+  the hardware design files. Shared libraries (stmlib and the audio bootloader
+  encoder) are git submodules of that repository. The repository has no version
+  tags. The Mutable Instruments documentation site lists v1.8 as the latest
+  official release, and separately offers an unreleased v1.9 build and an
+  FM-range fix build. The Mutable Instruments name must not be used on
+  derivative works. Bees-in-the-Trees (based on 1.7) and Braids Renaissance
+  (described against 1.9) are catalogued alternate firmwares for this module.
+status: dormant
+authors:
+  - name: Émilie Gillet
+    url: https://github.com/pichenettes
+source: https://github.com/pichenettes/eurorack/tree/master/braids
+source_status: open
+license: MIT
+license_notes: >-
+  The repository README gives MIT for STM32 code and CC BY-SA 3.0 for hardware.
+  The Braids application, driver, bootloader and resource files carry the MIT
+  notice (Copyright Émilie Gillet). Two files, test/braids_test.cc and
+  resources/waveshapers.py, carry a GPL notice for version 3 or any later
+  version; they are the desktop test program and a table generator, not module
+  code. The repository has no top-level LICENSE file.
+homepage: https://pichenettes.github.io/mutable-instruments-documentation/modules/braids/
+distribution: source-only
+install_notes: >-
+  Build with the makefile in the braids folder and the ARM toolchain; the wav
+  target encodes the binary as an audio update file. Official updates install
+  through the module's bootloader: power on with the encoder pressed, send the
+  audio file into the FM input with the FINE knob centred and the FM attenuverter
+  near 5 o'clock, and the module reboots after the last packet. The display shows
+  @SYN for a signal that is too weak and @CRC for a corrupted packet, and the
+  manual says to retry. The manual's calibration procedure is the way to restore
+  tuning if calibration data is lost.
+brick_risk: true
+tags: [official, oscillator, synth-engine, open-source]
+versions:
+  - version: master @ ab1e7e0
+    date: 2023-05-29
+    url: https://github.com/pichenettes/eurorack/commit/ab1e7e0
+    notes: No tagged releases; this is the latest commit touching the braids folder.

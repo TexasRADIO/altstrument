@@ -21,11 +21,12 @@ links:
       url: https://pspdev.github.io/
 notes: >-
   Homebrew needs custom firmware such as ARK-4 or PRO; the projects here report testing on firmware 6.61. The PSP's
-  own USB port cannot take MIDI from a computer or keyboard, so apps that need MIDI use an adapter that acts as a
-  USB host (HobbyChop sells one, the PSP-MIDI adapter) or a hardware modification of the headphone port. HobbyChop's
-  synth apps list the PSP-1000, 2000 and 3000 as supported and the PSP Go as not supported. Software that runs on
-  the PSP also runs on the PS Vita through its PSP emulation, with some limits. The USB MIDI kernel modules for the
-  PSP are not catalogued yet. Sony's own PSP firmware is not catalogued here.
+  own USB port acts only as a device and cannot host a MIDI keyboard, so apps that take keyboard MIDI use an adapter
+  that acts as a USB host (HobbyChop sells one, the PSP-MIDI adapter) or a hardware modification of the headphone port. HobbyChop's
+  synth apps list the PSP-1000, 2000 and 3000 as supported and the PSP Go as not supported. Two open-source kernel
+  modules, PSP USB MIDI and Open-PSP-MIDI, work the other way and make the PSP appear as a USB MIDI device to a computer
+  over its own cable; the second has not been run on a real PSP. Software that runs on the PSP also runs on the PS
+  Vita through its PSP emulation, with some limits. Sony's own PSP firmware is not catalogued here.
 related: [sony-ps-vita]
 image:
   src: /images/devices/sony-psp.jpg

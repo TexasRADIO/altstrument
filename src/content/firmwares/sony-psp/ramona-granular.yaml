@@ -1,0 +1,36 @@
+device: sony-psp
+name: Ramona Granular
+summary: >-
+  Four-voice granular synthesizer with a 16-step sequencer and a filter, delay and reverb rack for the PSP, loading WAV
+  samples from the Memory Stick.
+description: >-
+  A synth written in C with the PSP SDK and SDL2. Each of four voices plays a position in a loaded sample as short
+  grains, with controls for grain width, centre, pitch, tempo and an automatic scan of the sample, and an ADSR envelope.
+  A 16-step sequencer gives each step its own pitch from -24 to +24 semitones and a note length from 1 to 1/16. The
+  effects are a high-pass and low-pass filter with pan, a tape-style delay and a reverb. A file browser lists up to 48
+  WAV files and converts them to 44.1 kHz stereo. The interface is split into Texture, Effects, Samples and Sequencer
+  tabs and uses Portuguese labels, and the README, also in Portuguese, does not say which PSP models or firmware it
+  was tested on.
+status: active
+authors:
+  - name: Distopia Tunes
+    url: https://github.com/DistopiaTunes
+source: https://github.com/DistopiaTunes/ramona-granular
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no LICENSE file and the README makes no license statement. It bundles nine sample .wav files whose
+  origin and rights are not stated, and dr_mp3, which is public domain or MIT-0.
+distribution: download
+requires_stock: PSP running homebrew (custom firmware)
+install_notes: >-
+  The repository holds a built EBOOT.PBP next to the sample files, and the README gives build instructions that need
+  the PSP SDK and SDL2 for the PSP. Put your own .wav files in the folder the EBOOT runs from, named sample.wav and
+  sample2.wav to sample8.wav, or load others from the Samples tab.
+brick_risk: false
+tags: [granular, synth, sequencer, sampler, fx]
+versions:
+  - version: main @ 8af4306
+    date: 2026-10-09
+    url: https://github.com/DistopiaTunes/ramona-granular/commit/8af4306
+    notes: No tagged releases; this is the latest commit.

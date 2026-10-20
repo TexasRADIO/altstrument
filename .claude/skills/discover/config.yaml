@@ -421,3 +421,108 @@ ignore:
   - url: https://github.com/thisisbribery/stolperbeats_v2
     reason: browser emulator of a Eurorack module; v2 dropped the Deluge content
     date: 2026-10-19
+  - url: https://github.com/ChrisThoma/chiptune
+    reason: iOS step-sequencer app, not software for music hardware or a console
+    date: 2026-10-20
+  - url: https://github.com/jeiel85/dragon-quest-1
+    reason: web remake of a NES game, not music software
+    date: 2026-10-20
+  - url: https://github.com/jeiel85/super-mario-bros
+    reason: web remake of a NES game, not music software
+    date: 2026-10-20
+  - url: https://github.com/jeiel85/supermario3
+    reason: web remake of a NES game, not music software
+    date: 2026-10-20
+  - url: https://github.com/ogumaza/agbsf2
+    reason: desktop converter for GBA game music, not software for the console
+    date: 2026-10-20
+  - url: https://github.com/ogumaza/hacsf2
+    reason: desktop converter for Switch game sound archives, not software for the console
+    date: 2026-10-20
+  - url: https://github.com/ogumaza/citrusf2
+    reason: desktop converter for 3DS game sound archives, not software for the console
+    date: 2026-10-20
+  - url: https://github.com/tilman-schieber/arcade-kit
+    reason: shared code for browser games, not music software for hardware
+    date: 2026-10-20
+  - url: https://github.com/murapixel/famitracker2midi-rs
+    reason: desktop FamiTracker-to-MIDI converter, not software for the console
+    date: 2026-10-20
+  - url: https://github.com/JakimPL/SampleToNES
+    reason: desktop audio-to-NES converter, not software that runs on the console
+    date: 2026-10-20
+  - url: https://github.com/b1rdmania/motif
+    reason: web app that renders songs in a Game Boy style, not software for the console
+    date: 2026-10-20
+  - url: https://github.com/havesga86/NES-Shooter-Studio
+    reason: NES ROM editor for games, not music software
+    date: 2026-10-20
+  - url: https://github.com/ToThangGTVT/j2me-nxx
+    reason: J2ME emulator for the Switch, not music software
+    date: 2026-10-20
+  - url: https://github.com/blackox27/MegaDrive-VGM2MIDI-Online
+    reason: web VGM-to-MIDI converter, not software for the console
+    date: 2026-10-20
+  - url: https://github.com/easyeye163/8bit-bgm-collection
+    reason: pack of chiptune audio loops, not software
+    date: 2026-10-20
+  - url: https://github.com/easyeye163/chiptune-quest-bgm
+    reason: pack of chiptune audio tracks, not software
+    date: 2026-10-20
+  - url: https://github.com/steph4n-gh/starfall-salvage
+    reason: Game Boy Color game, not music software
+    date: 2026-10-20
+  - url: https://github.com/turboboy215/GB2MID
+    reason: desktop converter that rips Game Boy game music, not software for the console
+    date: 2026-10-20
+  - url: https://github.com/naniiic137/ufo-40
+    reason: game for PS Vita, PC and web, not music software
+    date: 2026-10-20
+  - url: https://github.com/Vansh1190/pixel-plumber-bros
+    reason: browser platformer game, not music software
+    date: 2026-10-20
+  - url: https://github.com/SuyamaCorporation/chiptune-sfx-nes-style-composer
+    reason: generated browser sound-effect app, not software for music hardware
+    date: 2026-10-20
+  - url: https://github.com/ifilex/naval
+    reason: game, not music software
+    date: 2026-10-20
+  - url: https://github.com/ifilex/lemontycoon
+    reason: game, not music software
+    date: 2026-10-20
+  - url: https://github.com/anacelos/tp1-markov-nes
+    reason: desktop chiptune generator coursework, not software for the console
+    date: 2026-10-20
+  - url: https://github.com/BinarryCode/Nano-Java-test
+    reason: J2ME runtime for the Nintendo DS, not music software
+    date: 2026-10-20
+  - url: https://github.com/mostazaniikkkk/Nano-Java
+    reason: J2ME runtime for the Nintendo DS, not music software
+    date: 2026-10-20
+  - url: https://github.com/sxilence6/ds-in-live
+    reason: Max for Live device that runs DS ROMs inside Ableton Live; desktop software
+    date: 2026-10-20
+  - url: https://github.com/Podwarden/SkyWarden
+    reason: Playdate game, not music software
+    date: 2026-10-20
+  - url: https://github.com/berkut0/Pureberry
+    reason: Pure Data to RP2350 firmware toolchain for general microcontroller boards, not a music device
+    date: 2026-10-20
+  - url: https://github.com/Kenneth-Rakentine/Ravel-FM1
+    reason: backup copy of De-Pattern/Ravel_FM1, which is catalogued as ravel
+    date: 2026-10-20
+  - url: https://github.com/numbpill3d/cardputer-adv-diviner
+    reason: general Cardputer ADV gadget firmware; 3 of 16 modes are music, the rest are visuals, network recon and IR remote
+    date: 2026-10-20
+  - url: https://github.com/MeguminBOT/md-synth-daw
+    reason: desktop DAW that exports Mega Drive-style VGM/XGM and audio; nothing runs on the console
+    date: 2026-10-20
+  - url: https://github.com/joshklomp/emu-elektron
+    reason: byte-identical copy of xerydian/elektron-emu, which is catalogued as elektron-emu
+    date: 2026-10-20
+  - url: https://github.com/Freakofspeed/lumon-os-xl
+    reason: third-party copy of MicheleDataBeat/lumon-os-xl, whose author grants no redistribution license
+    date: 2026-10-20
+  - url: https://github.com/gmoben/lsdj-decompiled
+    reason: matching decompilation of LSDj, whose terms forbid redistribution; skipped by maintainer decision
+    date: 2026-10-20

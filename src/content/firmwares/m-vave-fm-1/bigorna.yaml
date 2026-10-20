@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: Bigorna
+summary: >-
+  Six-track groovebox for rhythmic noise, power noise, industrial and IDM, modelled on the Elektron Digitone II: four
+  machines (4-OP FM, DRUM, WAVY, HIVE), a 16-step sequencer with parameter locks, a looper and send effects.
+description: >-
+  Bigorna follows the Digitone II's page layout and parameter ranges, with six tracks that each choose one of four
+  machines: four-operator FM, three-operator FM drums, a two-oscillator wavetable voice with phase distortion, and a
+  swarm of detuned oscillators. The HOME key draws a new sound from 56 recipes. Twelve voices are shared by the tracks, and
+  the chip's second core renders half of them and the send effects. Each track has a 16-step sequencer with trig
+  conditions, ratchets, parameter locks and a generated-phrase option, plus chord and mute modes, a break key that
+  rearranges the playing pattern, a looper, 16 patterns and 16 sessions. Chorus, delay, reverb and a sidechain
+  compressor are available as sends. The firmware is built on Tonitor, which is built on Felucca and SLOOP, and
+  takes its dual-core start from Melodee. The author states that no Elektron code or data is in it.
+status: active
+authors:
+- name: Nuno Zimas
+  url: https://github.com/nzimas
+source: https://github.com/nzimas/bigorna
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSING.md. The website and logo are MIT, the fonts are SIL OFL 1.1, and the AC79 SDK files are read
+  from your own SDK checkout at build time and are not in the repository.
+homepage: https://nzimas.github.io/bigorna/
+distribution: browser-installer
+install_notes: >-
+  Browser installer in desktop Chrome, Edge or Opera over USB, or ./install.sh from the source on macOS or Linux;
+  switch the FM-1 off and on once afterwards. Holding OCT- while switching on enters a rescue screen from which the
+  installer can run again, and two failed starts in a row enter it too. If the FM-1 stops answering over USB, holding
+  OCT- and OCT+ for five seconds enters the chip's update mode, and the README points to Melodee's recovery tool.
+  The README warns that an interrupted update can leave the FM-1 unable to start until it is recovered.
+brick_risk: true
+tags: [synth-engine, drums, fm, wavetable, sequencer, looper, chords, fx, generative, performance]
+image:
+  url: https://nzimas.github.io/bigorna/assets/screens/main.png
+  alt: "Bigorna track view on the FM-1 screen: track number 1 in large yellow type above DRUM and TIGHT KICK, with the pattern P1 and octave -1 at the top corners and two sliders below"
+  credit: Nuno Zimas
+  source_url: https://nzimas.github.io/bigorna/screens.html
+  first_party: true
+versions:
+- version: main @ f23826d
+  date: 2026-10-20
+  url: https://github.com/nzimas/bigorna/commit/f23826d
+  notes: No tagged releases; this is the latest commit. The site's installer offers build 37.

@@ -1,0 +1,40 @@
+device: roland-mks-70
+name: MKS-70 Editor/Librarian
+kind: tool
+summary: JUCE-based editor and librarian for the MKS-70 running Vecoven firmware, as a standalone app and VST3 plug-in, with tone and patch editing, an arpeggiator page and bank import and export. Windows build only; early and not confirmed on hardware.
+description: >-
+  Edits upper and lower tones, patch parameters and the Vecoven arpeggiator over
+  Roland SysEx and Vecoven NRPN, using a JSON file that maps each parameter to
+  its SysEx offset and NRPN number. The librarian holds banks of patches and
+  imports and exports SysEx files, and the README describes bulk dump backups.
+  It was written for the Vecoven 3.x and 4.x firmware, and the README also lists
+  a stock-firmware mapping. The README is in Hebrew, gives a Visual Studio 2022 build for Windows
+  and publishes no prebuilt binaries. The repository's testing guide lists ten
+  manual hardware checks as still to do and records no hardware results, and the
+  repository was published in October 2026 as a single commit. The repository
+  also bundles several hundred patch files for the synth, mostly SysEx, whose
+  authors and terms are not stated.
+status: active
+authors:
+  - name: David12752
+    url: https://github.com/David12752
+source: https://github.com/David12752/mks70-editor
+source_status: open
+license: AGPL-3.0-only
+license_notes: >-
+  The LICENSE file is the GNU AGPL version 3 text and the README says the editor
+  is AGPL v3 because it is built on JUCE 8 under its AGPL terms. The bundled
+  patch files are not covered by a stated license.
+distribution: source-only
+requires_stock: Vecoven 3.x or 4.x firmware
+install_notes: >-
+  Build the Visual Studio 2022 project with JUCE 8.0.10 or later, then run the
+  standalone app or copy the VST3 to the system VST3 folder. Choose the MIDI
+  ports, set the SysEx device ID and load the mapping file in Settings, and turn
+  on APR Send on the synth. The editor flashes nothing.
+tags: [editor, librarian, sysex, vst3, juce, vecoven]
+versions:
+  - version: main @ 93cd80c
+    date: 2026-10-19
+    url: https://github.com/David12752/mks70-editor/commit/93cd80c
+    notes: No tagged releases; this is the latest commit.

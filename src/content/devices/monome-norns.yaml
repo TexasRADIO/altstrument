@@ -42,3 +42,4 @@ image:
   license: manufacturer product image
   source_url: https://monome.org/docs/norns/
   original_url: https://monome.org/docs/norns/image/norns-grey.jpeg
+pinned: [norns-os, norns-image]

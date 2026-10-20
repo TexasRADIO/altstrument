@@ -1,0 +1,23 @@
+name: Edges
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Quad chiptune digital oscillator (discontinued)
+description: >-
+  Edges is a 20HP Eurorack chiptune oscillator designed by Émilie Gillet and
+  sold by Mutable Instruments from 2013 to 2016. Three channels produce square
+  and pulse waves from a 4 MHz timer, with selectable duty cycles or CV-controlled
+  pulse width, and a fourth channel produces noise and triangle waves through a
+  12-bit DAC at 48 kHz. Each channel has an optional semitone quantizer and an
+  eight-step sequencer. It runs on an ATxmega32A4U at 32 MHz.
+platform: ATxmega32A4U (AVR)
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/edges/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments AVR firmware is GPL-3.0-or-later and the hardware is
+  CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name. The
+  documentation site offers only the original firmware image, for reverting to
+  stock; no update was ever released.
+pinned: [edges-source]

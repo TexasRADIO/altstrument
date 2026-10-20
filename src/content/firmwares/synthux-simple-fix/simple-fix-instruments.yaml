@@ -20,4 +20,4 @@ license_notes: Copyright held by Stichting PTM Academy (LICENSE.md).
 homepage: https://synthux.academy/store/kit-simple-fix
 distribution: source-only
 install_notes: Open a sketch from the daisyduino folder in the Arduino IDE with the DaisyDuino library installed, select the Daisy Seed and upload.
-tags: [collection, daisyduino, arduino, examples, open-source, simple-fix]
+tags: [official, collection, daisyduino, arduino, examples, open-source, simple-fix]

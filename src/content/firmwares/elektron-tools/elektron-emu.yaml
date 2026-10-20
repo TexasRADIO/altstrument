@@ -1,0 +1,45 @@
+device: elektron-tools
+name: Elektron Emu
+kind: tool
+summary: Five VST3 emulators (Digitakt II, Syntakt, Analog Rytm MKII, Digitone II, Model:Cycles) that run each machine's real OS in an emulated CPU, with a front panel and a +Drive. Mac and Windows; bring your own .syx.
+description: >-
+  Rights note: the repository includes Elektron's panel photos as plug-in
+  artwork, which the README says belong to Elektron, and it states no license
+  for the code. The plug-ins emulate the CPU and run the OS from the Elektron
+  .syx file you place in the plug-in's folder, and the sources state that no
+  firmware is embedded. Only one OS version works per machine (Digitakt II 1.16,
+  Syntakt 1.41, Analog Rytm MKII 1.73, Digitone II 1.11, Model:Cycles 1.13).
+  The Rytm's analog voices and effects and the Syntakt's four analog tracks are
+  circuits rather than firmware, so the Rytm uses the author's own model that
+  sounds different from the hardware and the Syntakt leaves those tracks out.
+  The Digitone II's DSP is compiled on your computer on first use and needs a C
+  compiler. Factory samples and presets are not in the OS files and are not
+  included. Prebuilt plug-ins and sources are in the repository, and the Mac
+  builds are Apple silicon only and unsigned. It is a personal project, not made
+  by Elektron. The repository is a first public version of two commits whose git
+  author is named simo, and a second repository, joshklomp/emu-elektron, holds
+  identical commits. Code comments are in Italian.
+status: active
+authors:
+  - name: xerydian
+    url: https://github.com/xerydian
+source: https://github.com/xerydian/elektron-emu
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no LICENSE file and the README gives no license for the
+  code. Elektron's panel photos in it are Elektron's, as the README says.
+distribution: download
+requires_stock: Digitakt II 1.16, Syntakt 1.41, Analog Rytm MKII 1.73, Digitone II 1.11, Model:Cycles 1.13
+install_notes: >-
+  Download the OS .syx for each machine from Elektron's support page yourself
+  and put it in the plug-in's Firmware folder, which the plug-in creates. Copy
+  the .vst3 to the system VST3 folder and rescan plug-ins in the DAW. On macOS,
+  run the xattr command in the README to clear the quarantine flag. The first
+  start takes up to two minutes. Nothing is flashed to a device.
+tags: [emulator, vst3, research]
+versions:
+  - version: main @ 03961c6
+    date: 2026-10-17
+    url: https://github.com/xerydian/elektron-emu/commit/03961c6
+    notes: No tagged releases; this is the latest commit.

@@ -15,7 +15,7 @@ license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own 
 homepage: https://monome.org/docs/meadowphysics/
 distribution: download
 install_notes: Follow monome's modular update guide (dfu-programmer, update_firmware.command in the release zip).
-tags: [platform, sequencer, grid, random]
+tags: [official, platform, sequencer, grid, random]
 video:
   url: https://www.youtube.com/watch?v=O7lEoO6r5Ec
   title: "Meadowphysics Ambient ~ Eurorack"

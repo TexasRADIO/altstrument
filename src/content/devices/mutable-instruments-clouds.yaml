@@ -17,9 +17,8 @@ links:
 notes: >-
   Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
   is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name.
-  Parasites by Matthias Puech also exists for Tides (v1.121), Warps (v1.01)
-  and Frames (v1.21); those modules have no device page here, so only the
-  Clouds build is catalogued. After Later Audio Monsoon and Typhoon ship
+  Parasites by Matthias Puech also has builds for Tides, Warps and Frames,
+  listed under those modules. After Later Audio Monsoon and Typhoon ship
   Parasites / Superparasites-based firmware. Both Parasites and Beat-Repeat
   document some risk of bricking on flashing; see each entry.
 image:
@@ -32,3 +31,4 @@ image:
   license: manufacturer product image
   source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/clouds/
   original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/clouds/images/front.jpg
+pinned: [clouds-source]

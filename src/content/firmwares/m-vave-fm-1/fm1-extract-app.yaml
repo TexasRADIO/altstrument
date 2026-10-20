@@ -1,0 +1,35 @@
+device: m-vave-fm-1
+name: fm1_extract_app
+kind: tool
+summary: >-
+  Single Python script that cuts the app area out of an FM-1 .fwsc package, as the file to write back with
+  jl-uboot-tool when recovering a soft-bricked unit from ROM boot mode.
+description: >-
+  Written for a community guide to recovering an FM-1 with a black screen that shows up as a WL82 UBOOT disk. It
+  unscrambles the package, checks its header, chip name and flash image CRC, then writes flash 0x4000 to 0x92FFF
+  to a file and prints the SHA-256 of both package and app area. If the package is the official V15 file it
+  checks the extracted area against a known hash and exits with an error telling you not to write it on a mismatch. The flash head (header,
+  second-stage loader and config) is left out on purpose. The package format follows Felucca's packer. The script
+  flashes nothing itself and contains no M-VAVE code; you supply the .fwsc and run jl-uboot-tool separately.
+status: active
+authors:
+- name: Acrawf1
+  url: https://github.com/Acrawf1
+source: https://gist.github.com/Acrawf1/ae2b9930b49231db397568cfc2abc2a8
+source_status: open
+license: unspecified
+license_notes: >-
+  No license statement in the gist. Its docstring says no vendor code is included and use is at your own risk.
+homepage: https://www.reddit.com/r/MVaveFM1/comments/1wz48t7/guide_unbricking_a_softbricked_fm1_black_screen/
+distribution: source-only
+install_notes: >-
+  Run python fm1_extract_app.py FM-1.fwsc app.bin with Python 3, then follow the guide: in jl-uboot-tool write
+  0x4000 app.bin, read the area back and compare its hash with the one the script printed. The tool never
+  touches flash below 0x4000. The script does not include or fetch M-VAVE's firmware.
+brick_risk: false
+tags: [loader, utility]
+versions:
+- version: gist e624386
+  date: 2026-10-06
+  url: https://gist.github.com/Acrawf1/ae2b9930b49231db397568cfc2abc2a8/e6243860af336d701795c3d891559968b0da0e2d
+  notes: Single revision; this is the latest.

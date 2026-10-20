@@ -1,0 +1,52 @@
+device: mutable-instruments-tides-original
+name: Parasites (Tides)
+summary: Original Tides firmware adding a 16-harmonic Two-bumps oscillator, a Two-drunks random walk generator and a built-in quantizer with seven scales.
+description: >-
+  Built for the original 2014 Tides, not Tides 2018. The Parasites repository
+  folder for it is the STM32F103 code with the original module's plotter easter
+  egg, the last release is from 2017 and the project page names no later
+  hardware. Modes are switched by pressing both buttons: the stock function
+  generator, Two-bumps and Two-drunks. Two-bumps sums sine harmonics shaped by
+  two spectral bumps or notches and has a sub-oscillator, a 1-bit output and a
+  shuffled-harmonics output. Two-drunks runs two random walks timed by a
+  jittery clock and a biased coin-toss clock. The quantizer works in every
+  mode. The plotter easter egg is removed, and calibration is entered by
+  powering up while holding the Range control instead of the stock method.
+  Part of the Parasites project; the Clouds, Frames and Warps builds are
+  listed under their own modules.
+status: dormant
+authors:
+  - name: Matthias Puech
+    url: https://github.com/mqtthiqs
+source: https://github.com/mqtthiqs/parasites
+source_status: open
+license: MIT
+license_notes: >-
+  Inherits from Mutable Instruments; the repository README states STM32
+  projects are MIT and AVR projects GPL-3.0.
+homepage: https://mqtthiqs.github.io/parasites/tides.html
+distribution: download
+install_notes: >-
+  Download the latest build from the project page, unzip it and follow the
+  firmware update procedure in the official Tides manual, then recalibrate
+  using the Parasites method described on the project page. The project page
+  gives no module-specific bootloader warning; the Clouds build's caution
+  about faulty bootloaders applies to a different module.
+brick_risk: true
+tags: [lfo, oscillator, additive, generative, quantizer, mutable-instruments]
+video:
+  url: https://www.youtube.com/watch?v=3D2MwxLj9XU
+  title: "Tides Parasite - 1. Two Bumps"
+  credit: Matthias Puech
+  first_party: true
+  found_via: https://mqtthiqs.github.io/parasites/tides.html
+versions:
+  - version: tides-v1.121
+    date: 2017-08-09
+    url: https://github.com/mqtthiqs/parasites/releases/tag/tides-v1.121
+  - version: tides-v1.11
+    date: 2016-03-19
+    url: https://github.com/mqtthiqs/parasites/releases/tag/tides-v1.11
+  - version: tides-v1.0
+    date: 2015-09-13
+    url: https://github.com/mqtthiqs/parasites/releases/tag/tides-v1.0

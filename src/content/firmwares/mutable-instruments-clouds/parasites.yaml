@@ -1,13 +1,13 @@
 device: mutable-instruments-clouds
 name: Parasites (Clouds)
-summary: Clouds firmware adding a CV-controllable shimmer reverb, the Resonestor dual resonator with Karplus-Strong plucks, extended granular options and a tempo-synced looping delay. Also exists for Tides, Warps and Frames.
+summary: Clouds firmware adding a CV-controllable shimmer reverb, the Resonestor dual resonator with Karplus-Strong plucks, extended granular options and a tempo-synced looping delay. Builds for Tides, Warps and Frames are listed under those modules.
 description: >-
   Reverb is called Miverb on the project page and Oliverb in the release
   history and in later ports. Granular gains reversed playback, asymmetric
   grain envelopes and much smaller grains; the looping delay adds tempo sync,
-  ping-pong and an open feedback loop. Parasites for Tides (v1.121), Warps
-  (v1.01) and Frames (v1.21) come from the same repository and release list
-  but those modules have no device page here. Recalibrate after updating.
+  ping-pong and an open feedback loop. The Tides, Warps and Frames builds from
+  the same repository are listed under those modules. Recalibrate after
+  updating.
 status: dormant
 authors:
   - name: Matthias Puech

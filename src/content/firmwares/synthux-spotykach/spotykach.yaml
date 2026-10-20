@@ -33,7 +33,7 @@ install_notes: >-
   that a failed flash can temporarily brick the unit and require reinstalling
   the bootloader, the firmware or both. Synthux's firmware page also lists
   the releases.
-tags: [looper, granular, sampler, midi, open-source, daisy-seed]
+tags: [official, looper, granular, sampler, midi, open-source, daisy-seed]
 video:
   url: https://www.youtube.com/watch?v=e6ZjGcOIcM4
   title: Introducing Spotykach - a Looping Playground

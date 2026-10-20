@@ -3,8 +3,9 @@ name: riddim
 kind: tool
 summary: Rule-based generator of dub, dubstep and UK garage songs for the Deluge, with a local steering UI. Writes MIDI and previews, and can send songs, clips, automation and preset changes to the Deluge over a custom SysEx command set.
 description: >-
-  The SysEx features need the author's firmware fork, whose ai-sysex and
-  ai-save-load branches are in edholland/DelugeFirmware. MIDI export and
+  The SysEx features need the author's firmware fork, listed here as the Deluge
+  AI SysEx fork, whose ai-sysex and ai-save-load branches are in
+  edholland/DelugeFirmware and which has a prebuilt pre-release. MIDI export and
   previews work without a Deluge. The GitHub releases hold optional model
   data, not software builds. The default branch is show.
 status: active

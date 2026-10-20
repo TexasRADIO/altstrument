@@ -1,0 +1,24 @@
+name: Tides 2018
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Tidal modulator, 2018 version (discontinued)
+description: >-
+  Tides 2018 is a 14HP Eurorack function generator and oscillator designed by
+  Émilie Gillet and sold by Mutable Instruments from 2018 to 2022, as a
+  redesign of the original Tides. It has AD, AR and looping modes, shape, slope
+  and smoothness controls, an external clock or PLL input that can run at 1/16
+  to 16 times the clock rate, and four outputs with several output modes. The
+  module uses an STM32F373 at 72 MHz and a DAC8164.
+platform: STM32F3
+stock_firmware: "1.2"
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/tides_2018/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
+  is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name. The
+  source folder is called tides2 in the pichenettes/eurorack repository.
+related: [mutable-instruments-tides-original]
+pinned: [tides-2018-source]

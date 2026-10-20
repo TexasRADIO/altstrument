@@ -9,29 +9,31 @@ description: >-
   hold, bit reduction), STATIC, CHANCE and MUTATE, and PLAY starts four startup patterns. There are 56 factory
   presets and no conventional sound bank, and saved user presets are kept. Projects saved by 0.2 cannot be
   opened by 0.1. The author says it passed software checks and that tests on a real FM-1 were still pending.
-  The project page offers the build, the earlier 0.1 and an unchanged Felucca build, with the source in a
-  zip file.
+  The project page offers the build, the earlier 0.1 and an unchanged Felucca build. A GitHub repository holds only
+  a README and the licence, and its 0.2.1 pre-release attaches the .fwsc and the project zip with the source.
 status: active
 authors:
 - name: DJ Redacted
-source: https://fm1-redacted-installer.xrhetor.chatgpt.site/FM1-REDACTED-0.2.1-project.zip
+source: https://github.com/immersiveworldshandbook-source/FM1-REDACTED/releases/tag/v0.2.1
 source_status: open
 license: GPL-3.0-only
 license_notes: >-
-  The zip holds Felucca's source tree with its LICENSING.md, which states GPL-3.0-only and lists the ported
-  DaisySP and Rings (MIT) and msfa (Apache-2.0) code.
+  The GitHub repository has the GPL-3.0 licence text. The project zip, linked from the release, holds Felucca's source
+  tree with its LICENSING.md, which states GPL-3.0-only and lists the ported DaisySP and Rings (MIT) and msfa
+  (Apache-2.0) code.
 homepage: https://fm1-redacted-installer.xrhetor.chatgpt.site/
 distribution: browser-installer
 install_notes: >-
   Browser WebMIDI installer on the project page (Chrome or Edge, USB), which checks each package against a
-  known hash and the FM-1's identity. It asks you to back up first and to keep M-VAVE's restoration firmware
+  known hash and the FM-1's identity. The GitHub release also attaches FM1-REDACTED-0.2.1.fwsc. It asks you to back up first and to keep M-VAVE's restoration firmware
   and updater at hand. Its backup editor works for Felucca only; stock firmware needs its own backup method.
 brick_risk: true
 tags: [synth-engine, drums, glitch, noise, granular, performance]
 versions:
 - version: 0.2.1
-  url: https://fm1-redacted-installer.xrhetor.chatgpt.site/
-  notes: New startup artwork; sound and controls as 0.2. No dated release page.
+  date: 2026-10-19
+  url: https://github.com/immersiveworldshandbook-source/FM1-REDACTED/releases/tag/v0.2.1
+  notes: Pre-release; new startup artwork, sound and controls as 0.2.
 - version: '0.2'
   url: https://fm1-redacted-installer.xrhetor.chatgpt.site/
   notes: Four tracks and 56 presets. No dated release page.

@@ -1,0 +1,57 @@
+device: roland-mks-70
+name: Vecoven Super JX firmware
+summary: Rewritten assigner firmware for the Roland JX-10 and MKS-70, sold as a replacement EPROM or flash module, with new MIDI and SysEx handling, an arpeggiator and, in the 4.x line, PWM support that needs a hardware kit.
+description: >-
+  Frederic Vecoven rewrote the assigner code of the JX-10 and MKS-70 from
+  scratch after reverse-engineering the sound board and assigner ROMs. Each MIDI
+  parameter can be set to off, receive, send or on, and SysEx and MIDI CC allow
+  patch and both tones to be edited separately, so edits can be sequenced. Other
+  additions are a faster bulk dump and load, internal-to-cartridge copy, two
+  assignable controllers (C1 and C2), eight arpeggiator patches, PG-800 support
+  and an optional Noritake GU280 display driver. The JX-10 gets a chord mode. The
+  MKS-70 does not support its mono mode in the 3.0x release, and its arpeggiator
+  arrived in 3.14. The 3.x line (3.24 is the latest) runs on a stock instrument
+  with new assigner firmware. The 4.x line (4.18) is the same code plus parameters
+  for a separate PWM hardware kit, which replaces chips on the sound boards, and
+  it stores tones in a format 3.x cannot read. A separate firmware exists for
+  the JX-8P. Source code is not published.
+status: maintained
+authors:
+  - name: Frederic Vecoven
+    url: https://vecoven.com/
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  Source code is not published and the site carries a copyright line, "(c) 2019
+  Frederic Vecoven". The only statement about use is on the home page, which
+  invites visitors to download the files available there; no license terms are
+  given. The firmware is delivered on hardware sold by the author.
+homepage: https://vecoven.com/superjx/superjx.html
+distribution: commercial
+install_notes: >-
+  The firmware is supplied on a replacement EPROM for the assigner ROM A or on a
+  flash module that plugs into the same socket (listed at 99 euro for the
+  32-bank version, ordered by email). Updates for the flash module are SysEx
+  files on the download page, sent over MIDI through the module's bootloader,
+  and 4.12 and later need bootloader 1.02. Check the sound board ROMs first:
+  JX-10 ROMs older than 2.0 do not support the 12-semitone bender and MKS-70
+  ROMs 1.03 and older have bugs. Do not install 4.x without the PWM kit, and
+  dump all patches and tones before moving between 3.x and 4.x. The author's
+  disclaimer says builders need electronics experience and accept the risk.
+tags: [assigner, midi, sysex, arpeggiator, pwm, eprom, flash-module]
+video:
+  url: https://www.youtube.com/watch?v=MwD5gw6JFJw
+  title: JX10 v3714 - Arpeggiator Test - Milan E-LAB Studio
+  credit: Sandro Codazzi
+  first_party: true
+  found_via: https://vecoven.com/superjx/superjx.html
+versions:
+  - version: 4.18 (flash)
+    url: https://vecoven.com/superjx/superjx/release.html
+    notes: Last 4.x release listed. Adds the RANDOM2 arpeggiator mode and a larger arpeggiator MIDI buffer, and fixes the patch dirty flag. Needs the PWM kit.
+  - version: 3.24 (flash)
+    url: https://vecoven.com/superjx/superjx/release.html
+    notes: Last 3.x release listed. Adds the RANDOM2 arpeggiator mode and a larger arpeggiator MIDI buffer.
+  - version: "3.00"
+    url: https://vecoven.com/superjx/superjx/release.html
+    notes: Initial release, as listed in the release notes.

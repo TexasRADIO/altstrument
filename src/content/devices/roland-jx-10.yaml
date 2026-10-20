@@ -1,0 +1,21 @@
+name: JX-10 Super JX
+manufacturer: Roland
+category: synth
+tagline: 1986 twelve-voice analog synthesizer from Roland
+description: >-
+  The JX-10 Super JX is a 76-key analog synthesizer made by Roland between 1986
+  and 1989. It has twelve voices with two digitally controlled oscillators each,
+  reduced to six voices in dual mode, and can split or layer two tones. A PG-800
+  programmer can be connected for editing. Roland also made a rack-mounted
+  version, the MKS-70.
+links:
+  community:
+    - label: Wikipedia article (JX-10 and MKS-70)
+      url: https://en.wikipedia.org/wiki/Roland_JX-10
+    - label: Vecoven Super JX page
+      url: https://vecoven.com/superjx/superjx.html
+notes: >-
+  The Vecoven firmware for this synth, which replaces the assigner ROM with an
+  EPROM or flash module, is listed under the MKS-70 because the editors here
+  target the rack version. It supports both machines.
+related: [roland-mks-70]

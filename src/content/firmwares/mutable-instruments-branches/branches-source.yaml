@@ -1,0 +1,43 @@
+device: mutable-instruments-branches
+name: Branches (official source)
+summary: Source code for the Branches firmware and its audio bootloader for the ATmega88, published by Émilie Gillet in the pichenettes/eurorack repository under the GPL.
+description: >-
+  The branches folder in the pichenettes/eurorack repository is small: the
+  application (branches.cc), the audio bootloader, a makefile and the hardware
+  design files. The AVR support library (avrlib) and the audio bootloader
+  decoder are git submodules of that repository. The repository has no version
+  tags. The Mutable Instruments documentation site says no firmware update was
+  ever released for Branches and offers only the original v1.0 audio file for
+  reverting a module to stock. The Mutable Instruments name must not be used on
+  derivative works. Twigs is the catalogued alternate firmware for this module.
+status: dormant
+authors:
+  - name: Émilie Gillet
+    url: https://github.com/pichenettes
+source: https://github.com/pichenettes/eurorack/tree/master/branches
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  The repository README gives GPL3.0 for AVR projects and CC BY-SA 3.0 for
+  hardware. The Branches source files (application and bootloader) carry a GPL
+  notice for version 3 or any later version, hence GPL-3.0-or-later; the Twigs
+  fork records its own LICENSE as version 3 only. The repository has no
+  top-level LICENSE file.
+homepage: https://pichenettes.github.io/mutable-instruments-documentation/modules/branches/
+distribution: source-only
+install_notes: >-
+  Build with the makefile in the branches folder and the AVR toolchain; the wav
+  target encodes the binary as an FSK audio file. The bootloader source starts
+  its audio loader when the first switch input is held low at power-up, then
+  decodes the signal on the first gate input into flash pages and checks a CRC
+  for each. The manual has no firmware update section, so this procedure comes
+  from the source and is not documented by the author. A first programming of
+  the chip needs an ISP programmer; the makefile has a bootstrap target for
+  that.
+brick_risk: true
+tags: [official, random, utility, open-source]
+versions:
+  - version: master @ 61d7146
+    date: 2019-04-02
+    url: https://github.com/pichenettes/eurorack/commit/61d7146
+    notes: No tagged releases; this is the latest commit touching the branches folder.

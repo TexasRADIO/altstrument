@@ -41,6 +41,22 @@ image:
   source_url: https://github.com/sandlbn/polyend-tracker-re
   first_party: true
 versions:
+  - version: "2.0.7"
+    date: 2026-10-20
+    url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/2.0.7
+    notes: Fixes a screen freeze when a page exceeds the display chip's limit, Track Mixer volume, mute, solo and meters for synth tracks, and Global Mixer meters; Open Project and Import Mod lists grow to 200 entries.
+  - version: "2.0.6"
+    date: 2026-10-19
+    url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/2.0.6
+    notes: Fixes screen brightness and thin lines, streaming preview of long files in the Sample Loader, and several list and theme issues.
+  - version: "2.0.5"
+    date: 2026-10-18
+    url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/2.0.5
+    notes: Track Mixer meters and Performance screen drawing fixed; Beat Slice notes select the slice and pads audition it; adds a Sample Playback playhead.
+  - version: "1.9.8"
+    date: 2026-10-18
+    url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/1.9.8
+    notes: Bug-fix update on the 1.9.x line with the Track Mixer meter, Performance screen, Beat Slice and Song list fixes from 2.0.5.
   - version: "2.0.3"
     date: 2026-10-18
     url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/2.0.3

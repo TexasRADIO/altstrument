@@ -1,0 +1,49 @@
+device: mutable-instruments-frames
+name: Parasites (Frames)
+summary: Frames firmware adding a quad Euclidean sequencer, a shift register sequencer, a step editing mode, an autoplay keyframer and four extra preset memory slots.
+description: >-
+  Five modes are selected by pressing both buttons and moving a knob: the
+  keyframer, an improved quad sequencer, the shift register sequencer, the quad
+  LFO and the Euclidean sequencer. The keyframer wraps around between the last
+  and first frame, and its autoplay submode loops the animation at a rate set
+  by CV. Presets are saved to four user slots besides the startup slot. The
+  project page says to calibrate after updating (hold Del while powering up),
+  because wraparound and autoplay speed depend on it. Part of the Parasites
+  project; the Clouds, Tides and Warps builds are listed under their own
+  modules.
+status: dormant
+authors:
+  - name: Matthias Puech
+    url: https://github.com/mqtthiqs
+source: https://github.com/mqtthiqs/parasites
+source_status: open
+license: MIT
+license_notes: >-
+  Inherits from Mutable Instruments; the repository README states STM32
+  projects are MIT and AVR projects GPL-3.0.
+homepage: https://mqtthiqs.github.io/parasites/frames.html
+distribution: download
+install_notes: >-
+  Download the latest build from the project page, unzip it and follow the
+  firmware update procedure in the official Frames manual, then calibrate by
+  unplugging all cables and holding Del while the module powers up. The
+  project page gives no module-specific bootloader warning; the Clouds
+  build's caution about faulty bootloaders applies to a different module.
+brick_risk: true
+tags: [sequencer, euclidean, lfo, mixer, mutable-instruments]
+video:
+  url: https://www.youtube.com/watch?v=WBcCq3o0Lsw
+  title: "Frames Parasite - 2. Euclidean Sequencer"
+  credit: Matthias Puech
+  first_party: true
+  found_via: https://mqtthiqs.github.io/parasites/frames.html
+versions:
+  - version: frames-v1.21
+    date: 2016-01-31
+    url: https://github.com/mqtthiqs/parasites/releases/tag/frames-v1.21
+  - version: frames-v1.1
+    date: 2015-09-26
+    url: https://github.com/mqtthiqs/parasites/releases/tag/frames-v1.1
+  - version: frames-v1.0
+    date: 2015-07-30
+    url: https://github.com/mqtthiqs/parasites/releases/tag/frames-v1.0

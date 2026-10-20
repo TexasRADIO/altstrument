@@ -18,7 +18,8 @@ links:
     - label: GBAdev community site
       url: https://gbadev.net/
 notes: >-
-  Programs here are native GBA ROMs, run from a flash cartridge on hardware or in an emulator. The GBA also plays
+  Programs here are native GBA ROMs, run from a flash cartridge on hardware or in an emulator, except GBA PSG Voice,
+  which a Music Thing Workshop Computer uploads over the link cable with no cartridge. The GBA also plays
   Game Boy and Game Boy Color cartridges, so the Game Boy entry's software works on it. The DS and DS Lite play GBA
   cartridges in their second slot, and Nanoloop Two lists them as supported. The Analogue Pocket, a separate
   handheld that plays GBA cartridges, has Nanoloop built in and has no entry here. Libraries for writing GBA sound

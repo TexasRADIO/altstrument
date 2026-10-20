@@ -1,0 +1,39 @@
+device: mutable-instruments-elements
+name: Elements (official source)
+summary: Source code for the Elements firmware and its bootloader, published by Émilie Gillet in the pichenettes/eurorack repository, with DSP code, samples and hardware design files.
+description: >-
+  The elements folder in the pichenettes/eurorack repository holds the
+  application for the module's STM32F405, the audio bootloader, drivers, the
+  exciter and resonator DSP code, the sample and lookup table resources, a unit
+  test and the hardware design files. The repository README asks that the
+  Mutable Instruments name not be used on derivative works. Parts of this code
+  are reused in the Rings firmware.
+status: dormant
+authors:
+  - name: Émilie Gillet
+    url: https://github.com/pichenettes
+source: https://github.com/pichenettes/eurorack/tree/master/elements
+source_status: open
+license: MIT
+license_notes: >-
+  The repository README gives MIT for STM32 code, GPL 3.0 for AVR code and CC
+  BY-SA 3.0 for hardware. The Elements source files carry the MIT notice
+  (Émilie Gillet), except the unit test and the sample generation script,
+  which carry a GPL-3.0-or-later header. The repository has no top-level
+  LICENSE file.
+homepage: https://pichenettes.github.io/mutable-instruments-documentation/modules/elements/
+distribution: source-only
+requires_stock: "1.1"
+install_notes: >-
+  Build with the makefile in the elements folder and the ARM toolchain. The
+  module takes firmware updates as audio through its own bootloader: power on
+  with PLAY held, feed the update file into the first EXT IN input from an
+  audio interface, and the module restarts when the file ends. Recalibration
+  data lives in a settings area that a recovery flash can overwrite.
+brick_risk: true
+tags: [official, physical-modeling, synth-engine, open-source]
+versions:
+  - version: master @ 43b9c9f
+    date: 2020-04-29
+    url: https://github.com/pichenettes/eurorack/commit/43b9c9f
+    notes: No tagged releases; this is the latest commit touching the elements folder.

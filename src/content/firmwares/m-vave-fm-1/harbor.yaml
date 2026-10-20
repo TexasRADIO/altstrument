@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: Harbor
+kind: tool
+summary: >-
+  Android app for phones and tablets that plays FM-1 firmware packages unchanged on the fm1-emu emulator, takes
+  USB and Bluetooth MIDI and shows up as a MIDI device itself.
+description: >-
+  Draws the FM-1 panel with a keybed, knobs and screen, runs the emulator's AArch64 JIT on the phone's CPU and
+  outputs audio through AAudio. It can record the output to WAV files, keep saves in fm1-emu's .fm1save format and
+  keep playing in the background. The firmware list is taken from fm1-emu's site and the FM-1 Firmware Hub, and
+  packages are downloaded from their authors' or the hub's links when you pick them. M-VAVE's stock firmware is
+  not bundled or fetched; you supply FM-1.fwsc yourself. The repository was created on 2026-10-20 and has no
+  release or store listing yet, so you build the app yourself; the author has so far benchmarked it on a Pixel
+  7 Pro, where Felucca runs at about 1.3 times real time with the JIT on. Its Android JIT patch to fm1-emu is open as a pull
+  request upstream (joakimeriksson/fm1-emu#26) and is applied from a patch file until then. Not affiliated with
+  M-VAVE.
+status: active
+authors:
+- name: markterm
+  url: https://github.com/markterm
+source: https://github.com/markterm/harbor
+source_status: open
+license: unspecified
+license_notes: >-
+  No LICENSE file or license statement in the repository. The fm1-emu submodule it builds on is MIT, and the
+  bundled Barlow font ships with its SIL OFL text.
+distribution: source-only
+install_notes: >-
+  Build with JDK 17 or newer, the Android SDK with NDK 29.0.14206865, Rust with the aarch64-linux-android target,
+  cargo-ndk and the fm1-emu submodule (run tools/apply-patches.sh first), then install the debug APK. Needs Android
+  12 (API 31) or newer; release builds are arm64 only. Runs in software only and writes nothing to a real FM-1.
+brick_risk: false
+tags: [emulator, mobile, midi]
+versions:
+- version: main @ 80f9724
+  date: 2026-10-20
+  url: https://github.com/markterm/harbor/commit/80f9724a9fb5b36247843ee05167b711f48dd0e8
+  notes: No tagged releases; this is the latest commit.

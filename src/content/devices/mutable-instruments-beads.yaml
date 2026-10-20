@@ -16,7 +16,8 @@ links:
       url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
 notes: >-
   Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
-  is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name. The
+  is CC-BY-SA-3.0. The Beads source and hardware files were published on
+  2026-10-11, the last Mutable Instruments module to be released. Derivatives may not use the Mutable Instruments name. The
   official audio update is flashed through the module's own bootloader, and
   recalibration data lives in a settings sector that a recovery flash can
   overwrite.
@@ -31,3 +32,4 @@ image:
   license: manufacturer product image
   source_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/beads/
   original_url: https://pichenettes.github.io/mutable-instruments-documentation/modules/beads/images/front.jpg
+pinned: [beads-source]

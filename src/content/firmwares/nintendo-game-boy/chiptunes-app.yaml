@@ -1,0 +1,37 @@
+device: nintendo-game-boy
+name: Chiptunes.app
+kind: tool
+summary: >-
+  Browser app that composes complete songs for a register-level Game Boy sound chip emulation and exports them as a
+  32 KB .gb cartridge ROM, a WAV file or a MIDI file.
+description: >-
+  A deterministic composer writes a song from a mood or text prompt, and a built-in tracker lets every note be edited.
+  The browser plays the song through an emulation of the Game Boy's four sound channels, and the exporter builds a
+  small cartridge ROM whose driver writes the same register values in the same order, which the repository's tests
+  compare against the browser output. The README says the cartridge boots on real hardware; the repository's own checks
+  run the ROM on its bundled emulator and do not mention a hardware test. The site also has Game Boy and NES style
+  visualizers, share links, an MCP interface for agents and a link to a radio stream.
+
+  It runs in a browser, not on the Game Boy, and is listed here as a tool for the console.
+status: active
+authors:
+  - name: Shokunin
+    url: https://github.com/tetrisgm
+source: https://github.com/tetrisgm/chiptunes
+source_status: open
+license: MIT
+license_notes: >-
+  LICENSE is the MIT License, and a vendored Game Boy display shader pipeline under src/lib/shaders/brickboy is
+  Apache-2.0 and unmodified. GitHub reports the license as unrecognised because of that note.
+homepage: https://chiptunes.app
+install_notes: >-
+  Open chiptunes.app in a browser, compose or pick a song and use the export buttons. Running a .gb export on a real
+  Game Boy needs a flash cartridge, which the catalog does not list; the site has a button to try the ROM in an emulator
+  first. Building the site from source needs Node.
+brick_risk: false
+tags: [composer, generative, chiptune, export, web, emulator]
+versions:
+  - version: main @ c1bd696
+    date: 2026-10-13
+    url: https://github.com/tetrisgm/chiptunes/commit/c1bd696
+    notes: No tagged releases of the app; this is the latest commit. The repository's GitHub releases are for the Retro Rave Radio desktop app.

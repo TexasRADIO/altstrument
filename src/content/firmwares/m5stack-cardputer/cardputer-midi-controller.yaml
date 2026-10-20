@@ -1,0 +1,36 @@
+device: m5stack-cardputer
+name: Cardputer MIDI Controller
+summary: >-
+  Firmware for the original Cardputer and an M5Stack Unit MIDI that passes external MIDI to the SAM2695 sound chip and
+  edits tone, level, pan, effect sends and filter per channel, with eight presets.
+description: >-
+  The Cardputer receives MIDI from a keyboard or sequencer on the Unit MIDI input and forwards all 16 channels to the
+  unit's SAM2695 synthesizer, which makes the sound. From the Cardputer's keyboard you pick the General MIDI program,
+  volume, pan, reverb send and chorus send of each channel, plus cutoff, resonance, attack and release on a second
+  page, and an output-level screen sets the chip's DAC gain from -40 to 0 dB. Eight presets of all 16 channels are kept
+  in flash, and the last one used is restored at start. The README, written in Japanese, says the first version was
+  flashed to a Cardputer and checked by hand on 2026-10-17, and lists on-device checks of the later tone and output-level
+  additions as still open. USB MIDI is not supported, and sound leaves through the unit's audio output, not the
+  Cardputer's speaker.
+status: active
+authors:
+  - name: Daisuke Yamamura
+    url: https://github.com/mucho613
+source: https://github.com/mucho613/cardputer-midi-controller
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file and the README makes no license statement.
+distribution: source-only
+requires_stock: Original Cardputer (K132) and M5Stack Unit MIDI (SAM2695)
+install_notes: >-
+  Build with PlatformIO using the cardputer environment and upload over USB; the first upload should use PlatformIO's
+  own upload so the bootloader and partition table are written. Set the Unit MIDI switch to Bypass and connect it to the
+  Cardputer's Grove port. The build replaces the app on the Cardputer, and a full flash erase also deletes the saved
+  presets.
+brick_risk: false
+tags: [midi, sound-module, presets, open-source]
+versions:
+  - version: main @ 0c06e13
+    date: 2026-10-17
+    url: https://github.com/mucho613/cardputer-midi-controller/commit/0c06e13
+    notes: No tagged releases; this is the latest commit.

@@ -22,7 +22,7 @@ homepage: https://monome.org/docs/aleph/
 distribution: download
 requires_stock: aleph hardware with SD card
 install_notes: Hold the mode switch (upper right) while powering up to start the bootloader, then load an AVR32 app from the hex folder on the SD card.
-tags: [platform, sdk, synth-engine]
+tags: [official, platform, sdk, synth-engine]
 video:
   url: https://www.youtube.com/watch?v=KGCakC6YA_U
   title: "monome aleph bees op network: random clock and values (no talking)"

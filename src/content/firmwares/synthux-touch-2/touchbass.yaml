@@ -26,7 +26,7 @@ install_notes: >-
   Download TouchBass.bin from the latest release and flash it with the Daisy
   Seed web programmer or Synthux's firmware page, or build it with the Daisy
   toolchain (make libs, then make, then make program-dfu).
-tags: [synth, subtractive, arpeggiator, midi, open-source, touch-2]
+tags: [official, synth, subtractive, arpeggiator, midi, open-source, touch-2]
 video:
   url: https://www.youtube.com/watch?v=yXJ_aMJK8lg
   title: "Introducing: Touch Bass!"

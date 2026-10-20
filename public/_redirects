@@ -1,3 +1,4 @@
 # Cloudflare Workers static assets redirects (copied to dist/ by Astro).
 # @astrojs/sitemap writes sitemap-index.xml; crawlers and agents look for /sitemap.xml first.
 /sitemap.xml /sitemap-index.xml 301
+/firmware/m-vave-fm-1/fm1-bootloader /firmware/m-vave-fm-1/m-bootloader 301

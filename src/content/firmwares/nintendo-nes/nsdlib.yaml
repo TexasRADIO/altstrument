@@ -1,0 +1,40 @@
+device: nintendo-nes
+name: NSD.Lib
+kind: tool
+summary: >-
+  NES sound driver for cc65 and ca65 projects together with an MML compiler that turns music text into ca65 source for
+  games or into NSF files.
+description: >-
+  The sound driver runs on the console's 2A03 and is called once per frame from a game, with music and sound effects
+  played from compiled data and DPCM samples supported. The nsc compiler reads a short MML-style music language and
+  writes ca65 assembly to link into a game or a standalone NSF file, with options for NSFe and NSF version 2 output.
+  The repository also holds the driver and compiler source, include files, sample programs and a Japanese manual. The
+  newest GitHub release is v1.30 from December 2020, while development continues on the develop branch.
+
+  The compiler runs on a computer, and the driver runs on the NES; it is listed here as a tool for the console.
+status: active
+authors:
+  - name: Shaw02
+    url: https://github.com/Shaw02
+source: https://github.com/Shaw02/nsdlib
+source_status: open
+license: BSD-2-Clause
+license_notes: LICENSE.md is the BSD 2-Clause License with the copyright holder given as S.W.
+homepage: https://shaw02.github.io/nsdlib/
+distribution: source-only
+requires_stock: cc65 toolchain; NES or emulator to play the result
+install_notes: >-
+  Follow the manual: write music in MML, compile it with nsc, then assemble and link it with the driver library into a
+  cc65 or ca65 NES program, or compile straight to an NSF file for an emulator or NSF player. The manual is in
+  Japanese.
+brick_risk: false
+tags: [sound-driver, mml, nsf, compiler, sdk, chiptune]
+versions:
+  - version: develop @ 477e14c
+    date: 2026-10-15
+    url: https://github.com/Shaw02/nsdlib/commit/477e14c
+    notes: Latest commit on the develop branch, which is ahead of the newest release.
+  - version: v1.30
+    date: 2020-12-29
+    url: https://github.com/Shaw02/nsdlib/releases/tag/v1.30
+    notes: Fixes playback in Mesen and adds NSFe and NSF version 2 output and metadata commands.

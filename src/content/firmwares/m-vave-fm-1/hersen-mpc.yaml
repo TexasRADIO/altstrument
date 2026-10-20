@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: Hersen MPC
+summary: >-
+  Commercial closed sampler and drum-machine firmware for the FM-1: 64 sample slots at 8 or 12 bits, two banks of
+  16 pads, 32 sequences that can be chained into songs, per-sequence filter and effects, installed from FM-1 Manager.
+description: >-
+  Samples are loaded from the computer in the browser, trimmed, sliced and written to the unit, and a project
+  (samples, sequences, mixer and settings) can be saved to a .hmpcpj file and loaded back. The page says older
+  .zp12bak files also load; that is the backup format of zvenson's GPL-3.0-only ZP12, whose backup page writes it
+  as a raw dump of the unit's flash sectors behind a ZP12BAK1 header and a CRC. The sequencer has swing, several time signatures, per-note velocity, probability and sends, a mixer
+  with mute and solo, and a song page with repeat counts. It plays the last saved pattern at power-on. It is
+  sold through the author's store: the FM-1 Manager card shows a buy button, asks you to sign in, and ties the
+  firmware to a purchased serial number, which is registered against the unit's chip ID on first install. The
+  page does not publish the price, the source or any license terms, and does not say what the firmware is built
+  on. Its only mention of ZP12 is the file extension; whether it shares ZP12's code is not stated.
+status: active
+authors:
+- name: Hersen Zhuang (Grandtree)
+  url: https://store.grandtree.art/
+source_status: closed
+license: proprietary
+license_notes: >-
+  Paid, serial-locked firmware; the page gives no license text. It loads backups from ZP12, whose code is
+  GPL-3.0-only. Neither the page nor ZP12's repository (as of 2026-10-20) says whether Hersen MPC shares code with
+  ZP12 or its SLOOP and Felucca base.
+homepage: https://store.grandtree.art/HersenMPC/
+distribution: commercial
+install_notes: >-
+  Install from the card in FM-1 Manager (store.grandtree.art/FM1_Manager) in Chrome or Edge over USB, signed in to
+  a store account that has a serial number. A chip already registered to another account cannot be written. The
+  empty sample pool is about 823 KB, split across three flash regions.
+brick_risk: true
+tags: [sampler, drums, sequencer, performance]
+versions:
+- version: '1.2'
+  url: https://store.grandtree.art/HersenMPC/
+  notes: Adds time signatures, separate high-cut and low-cut resonance, a battery readout and faster knob steps. No date is published.
+- version: '1.1'
+  url: https://store.grandtree.art/HersenMPC/
+  notes: Adds a mixer with mute and solo, per-pad channels and a song page. No date is published.

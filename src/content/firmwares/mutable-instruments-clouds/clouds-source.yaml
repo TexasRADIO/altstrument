@@ -1,0 +1,42 @@
+device: mutable-instruments-clouds
+name: Clouds (official source)
+summary: Source code for the Clouds firmware and its audio bootloader, published by Émilie Gillet in the pichenettes/eurorack repository. The documentation site lists v1.31 as the latest release.
+description: >-
+  The clouds folder in the pichenettes/eurorack repository holds the
+  application, the audio bootloader, drivers, the granular, reverb, diffusion
+  and phase vocoder DSP code, resource generators, a test program and the
+  hardware design files. Shared libraries (stmlib and the audio bootloader
+  encoder) are git submodules of that repository. The repository has no
+  version tags. The Mutable Instruments documentation site lists v1.31 as the
+  latest official release. The Mutable Instruments name must not be used on
+  derivative works. Catalogued alternate firmwares built on this source are
+  Parasites, Superparasites, Kammerl Beat-Repeat and Lenticular, plus AChChid
+  for Monsoon, which runs on a Clouds clone rather than on Clouds.
+status: dormant
+authors:
+  - name: Émilie Gillet
+    url: https://github.com/pichenettes
+source: https://github.com/pichenettes/eurorack/tree/master/clouds
+source_status: open
+license: MIT
+license_notes: >-
+  The repository README gives MIT for STM32 code and CC BY-SA 3.0 for
+  hardware. Every Clouds source file carries the MIT notice (Copyright Émilie
+  Gillet). The repository has no top-level LICENSE file.
+homepage: https://pichenettes.github.io/mutable-instruments-documentation/modules/clouds/
+distribution: source-only
+install_notes: >-
+  Build with the makefile in the clouds folder and the ARM toolchain; the wav
+  target encodes the binary as an audio update file. Official updates install
+  through the module's bootloader: power on with FREEZE pressed, play the file
+  into the left audio input, and the module restarts when the file ends. The
+  LEDs blink red if the level is wrong, and the manual says to retry. The
+  manual's calibration procedure is the way to restore tuning if calibration
+  data is lost.
+brick_risk: true
+tags: [official, granular, fx, open-source]
+versions:
+  - version: master @ d1d8839
+    date: 2023-03-13
+    url: https://github.com/pichenettes/eurorack/commit/d1d8839
+    notes: No tagged releases; this is the latest commit touching the clouds folder.

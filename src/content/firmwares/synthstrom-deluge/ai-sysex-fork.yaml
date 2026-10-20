@@ -1,0 +1,36 @@
+device: synthstrom-deluge
+name: Deluge AI SysEx fork
+summary: Development fork of the Deluge firmware that adds an AI SysEx command set so a host program can write notes, clips and songs and save, load and arm sections over USB MIDI. Written for the riddim generator; a pre-release .bin is published.
+description: >-
+  This is a development fork of the community firmware, made to be driven by one
+  host tool, and is not a general-purpose build. It is five commits ahead of upstream and
+  well behind it, based on upstream commit 49ab377f, so it lacks later
+  upstream changes. The added commands cover notes and clip length, session
+  clip selection, cloning and creation, clip names, loading a synth preset,
+  per-note parameter automation, section repeat and sidechain, and the latest
+  build adds SAVE_SONG, LOAD_SONG and ARM_SECTION. The README lists them and says
+  two experimental features were removed from the fork again for performance.
+  The host side is the separate riddim tool, listed here. The repository README
+  keeps the upstream text and documents the fork under an AI SysEx heading.
+status: active
+authors:
+  - name: Ed Holland
+    url: https://github.com/edholland
+source: https://github.com/edholland/DelugeFirmware
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  LICENSE file is GPL version 3; inherited source headers grant version 3 or
+  any later version.
+distribution: download
+install_notes: >-
+  Copy the .bin from the pre-release to the SD card as a firmware update, as with
+  the community firmware, or load it from the build tool with ./dbt loadfw, which
+  needs the user's SYSEX key and loads into RAM. Back up the SD card first. The
+  release is marked a pre-release.
+tags: [fork, sysex, midi, generative, sequencer]
+versions:
+  - version: ai-save-load-build
+    date: 2026-10-14
+    url: https://github.com/edholland/DelugeFirmware/releases/tag/ai-save-load-build
+    notes: Pre-release built from ai-save-load at 9118913; adds SAVE_SONG, LOAD_SONG and ARM_SECTION.

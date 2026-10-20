@@ -1,0 +1,23 @@
+name: Warps
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Meta-modulator (discontinued)
+description: >-
+  Warps is a 10HP Eurorack meta-modulator designed by Émilie Gillet and sold by
+  Mutable Instruments from 2015 to 2022. It combines two audio signals with
+  crossfading, cross-folding, diode ring-modulation, digital ring-modulation,
+  XOR, a comparator-based octaver or a 20-band vocoder, and it can replace one
+  input with an internal oscillator. The module uses an STM32F405 at 168 MHz
+  and a WM8731 codec.
+platform: STM32F4
+stock_firmware: 1.0a
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/warps/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
+  is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name.
+  Parasites by Matthias Puech also exists for Warps; see its entry here.
+pinned: [warps-source]

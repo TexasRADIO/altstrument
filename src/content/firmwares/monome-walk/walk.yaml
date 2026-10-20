@@ -15,4 +15,4 @@ license: GPL-2.0-only
 license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own files.
 homepage: https://monome.org/docs/walk/
 distribution: source-only
-tags: [platform]
+tags: [official, platform]

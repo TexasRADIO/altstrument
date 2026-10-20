@@ -1,0 +1,42 @@
+device: bastl-instruments-citadel
+name: Sungam FX Wizard firmware
+summary: Replacement firmware for the Citadel FX Wizard with seven effects, the stock delay plus chorus, phaser, hall and plate reverb, distortion and a pitch shifter. Built from Bastl's Kastle 2 code; the author says it also runs on the Kastle 2.
+description: >-
+  This is a fork of Bastl's kastle2 repository whose default branch adds an app
+  called FX Wizard Plus. It replaces the nine stock FX Wizard effects with seven
+  modes, each shown by its own LED colour: the stock delay is kept and the other
+  six are new. The CV inputs, filter, LFO, pattern generator,
+  clock and MIDI work as on the stock FX Wizard. The firmware keeps its own
+  settings under a separate app ID and leaves calibration alone. The author
+  reports v1.0.0 as tested and working on a Citadel FX Wizard, and the same file
+  was first published as an untested pre-release. The Kastle 2 claim is not
+  stated as tested. Test mode reports the version as "draft".
+status: active
+authors:
+  - name: Sungam
+    url: https://github.com/SungamMagnus
+source: https://github.com/SungamMagnus/Sungam-Citadel-FXwizard-FW
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file is MIT. The repository carries Bastl's Kastle 2 README, which
+  keeps Bastl's panel graphics, case artwork and sample banks (including the Wave
+  Bard SAMPLES.bin) under all rights reserved and CC BY SA 4.0 for schematics and
+  documentation. The FX Wizard release file does not contain Wave Bard samples.
+distribution: download
+install_notes: >-
+  Disconnect the module from Eurorack power, hold SHIFT while connecting it to
+  the computer by USB-C so it appears as the RPI-RP2 drive, and copy the .uf2
+  from the release onto it. To go back, do the same with Bastl's factory FX
+  Wizard .uf2. The release page lists the file's SHA-256.
+brick_risk: false
+tags: [fx, delay, reverb, chorus, phaser, distortion, pitch-shifter]
+versions:
+  - version: v1.0.0
+    date: 2026-10-10
+    url: https://github.com/SungamMagnus/Sungam-Citadel-FXwizard-FW/releases/tag/v1.0.0
+    notes: Stable release, reported as tested on a Citadel FX Wizard. The same file as v0.1.0.
+  - version: v0.1.0
+    date: 2026-10-10
+    url: https://github.com/SungamMagnus/Sungam-Citadel-FXwizard-FW/releases/tag/v0.1.0
+    notes: Pre-release, published untested on hardware.

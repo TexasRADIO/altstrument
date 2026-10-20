@@ -1,0 +1,34 @@
+device: m-vave-fm-1
+name: FM1 Manager (Grandtree Store)
+kind: tool
+summary: >-
+  Closed browser installer that lists open-source FM-1 firmwares by GitHub repository, writes the one you pick over
+  Web MIDI, and can put M-VAVE's V15 back after checking its SHA-256. Not the bratta/fm1-manager preset editor.
+description: >-
+  Each card is a GitHub repository with a version taken from a copy the site's server keeps; a Reload from GitHub
+  button asks for newer releases, and cards can be sorted by installs or stars. Installing uses the same
+  USB MIDI update exchange as M-VAVE's updater, reads the unit's identity first, and can resume an interrupted
+  write if the updater is still running. The browser does not send the firmware to the site; the server fetches
+  GitHub packages itself because release files cannot be read from another site. Firmwares without public source
+  (Baud Girl, Groove OS) are left out, and the page says a unit stuck in WL82 UBOOT mode cannot be written here and
+  points to jl-uboot-tool and FM-1 Transporter. The site counts each install per firmware on its own server. It
+  also carries the author's closed Hersen MPC sampler firmware, which is bought through the same store account.
+  The Manager itself has no source repository and states no license; a Ko-fi link is on the page.
+status: active
+authors:
+- name: Hersen Zhuang (Grandtree)
+  url: https://store.grandtree.art/
+source_status: closed
+license: unspecified
+license_notes: >-
+  Hosted site with no published source and no license or terms text on the page.
+homepage: https://store.grandtree.art/FM1_Manager/
+distribution: browser-installer
+install_notes: >-
+  Use Chrome or Edge (Android Chrome also works) with a USB data cable, close other programs holding the FM-1's
+  MIDI port, connect, then install. Do not unplug during the write, which takes about a minute. The restore option
+  serves M-VAVE's V15 package from the site's own cache and writes only a file whose SHA-256 equals the V15 image
+  that M-VAVE publishes under Apache-2.0 in m-vave/fm1_open. Export presets first; community advice is to
+  return to V15 between firmwares.
+brick_risk: true
+tags: [flasher, utility, midi]

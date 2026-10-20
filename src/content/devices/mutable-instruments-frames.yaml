@@ -1,0 +1,23 @@
+name: Frames
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Keyframer / mixer (discontinued)
+description: >-
+  Frames is an 18HP Eurorack keyframer and four-channel mixer designed by
+  Émilie Gillet and sold by Mutable Instruments from 2014 to 2021. Four
+  voltage-controlled amplifiers based on a V2164 chip are driven by up to 20
+  stored keyframes, with a selectable easing curve and response curve for each
+  channel. It runs on an STM32F103 at 72 MHz with a DAC124S085 for its internal
+  control voltages.
+platform: STM32F1
+stock_firmware: "1.2"
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/frames/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
+  is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name.
+  Parasites by Matthias Puech also exists for Frames; see its entry here.
+pinned: [frames-source]

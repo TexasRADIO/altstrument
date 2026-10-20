@@ -1,0 +1,44 @@
+device: mutable-instruments-marbles
+name: Marbles (official source)
+summary: Source code for the Marbles firmware and its audio bootloader, published by Émilie Gillet in the pichenettes/eurorack repository. The documentation site lists v1.3 as the final release.
+description: >-
+  The marbles folder in the pichenettes/eurorack repository holds the
+  application, the audio bootloader, drivers, the random sampler, ramp and
+  quantizer code, resource generators, a desktop test program and the hardware
+  design files. Shared libraries (stmlib and the audio bootloader encoder) are
+  git submodules of that repository. The repository has no version tags. The
+  Mutable Instruments documentation site lists v1.3 as the latest and final
+  official release. The Mutable Instruments name must not be used on
+  derivative works. Marbles alternative firmware (Resurrection) is the
+  catalogued alternate firmware for this module.
+status: dormant
+authors:
+  - name: Émilie Gillet
+    url: https://github.com/pichenettes
+source: https://github.com/pichenettes/eurorack/tree/master/marbles
+source_status: open
+license: MIT
+license_notes: >-
+  The repository README gives MIT for STM32 code and CC BY-SA 3.0 for
+  hardware. The Marbles application, driver, bootloader and DSP files carry
+  the MIT notice (Copyright Émilie Gillet). Three desktop test files
+  (test/fixtures.h, test/marbles_test.cc, test/ramp_checker.h) carry a GPL
+  notice for version 3 or any later version; they are not module code. The
+  repository has no top-level LICENSE file.
+homepage: https://pichenettes.github.io/mutable-instruments-documentation/modules/marbles/
+distribution: source-only
+install_notes: >-
+  Build with the makefile in the marbles folder and the ARM toolchain; the wav
+  target encodes the binary as an audio update file. Official updates install
+  through the module's bootloader: unplug all CV, send the audio file into the
+  RATE CV input with the RATE knob at an intermediate position, and power on
+  with the Deja Vu button of the t section pressed. The RATE LED works as a
+  level meter, the LEDs blink red if the level is wrong, and the module
+  restarts at the end of the file.
+brick_risk: true
+tags: [official, random, quantizer, open-source]
+versions:
+  - version: master @ db1566f
+    date: 2023-01-08
+    url: https://github.com/pichenettes/eurorack/commit/db1566f
+    notes: No tagged releases; this is the latest commit touching the marbles folder.

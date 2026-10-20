@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: ODeath WAVE-1
+summary: >-
+  Four-voice wavetable synth on a Felucca base with 20 waveforms, morphing, eight bandlimiting levels and nine presets,
+  published as a browser installer and a prebuilt package without its modified source.
+description: >-
+  Rights warning: this is a derivative of the GPL-3.0-only Felucca, but the repository publishes the prebuilt package and
+  installer without the modified firmware source, and its own README says it is not yet a complete source release. The
+  repository calls the firmware Felucca WaveTable v0.7.5. It adds a wavetable synth with 20 waveforms, morphing between
+  them, 8 bandlimiting levels and 9 presets to Felucca. It holds a web installer adapted from Felucca's and a prebuilt
+  package of 610,086 bytes whose SHA-256 is pinned in the page. The page does not say whether it has been tested on a
+  real FM-1.
+status: active
+authors:
+- name: ODeath
+  url: https://github.com/gybe808-dotcom
+source: https://github.com/gybe808-dotcom/FeluccaWavetableOdeathMod
+source_status: binary-only
+license: GPL-3.0-only
+license_notes: >-
+  The repository has no LICENSE file. The README and the installer page state that the work is a Felucca derivative to be
+  licensed consistently with Felucca's GPL-3.0-only terms, and the installer source carries a GPL-3.0-only header.
+  The firmware source is not published, so this is not a complete source release.
+homepage: https://gybe808-dotcom.github.io/FeluccaWavetableOdeathMod/
+distribution: browser-installer
+install_notes: >-
+  Web installer on the project page in Chrome or Edge over USB; it checks the bundled package against its pinned SHA-256
+  and also accepts a file from your computer. The page warns that custom firmware can leave the FM-1 in update mode, tells
+  you to have a verified recovery method ready, and links community rescue resources.
+brick_risk: true
+tags: [synth-engine, wavetable, oscillator]
+versions:
+- version: main @ 2a661dc
+  date: 2026-10-20
+  url: https://github.com/gybe808-dotcom/FeluccaWavetableOdeathMod/commit/2a661dc
+  notes: No tagged releases; this is the latest commit. The README names the firmware Felucca WaveTable v0.7.5.

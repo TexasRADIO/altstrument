@@ -19,7 +19,8 @@ links:
 notes: >-
   Homebrew ROMs run from a flash cartridge such as an Everdrive N8 Pro or a PowerPak, or in an emulator. The
   Famicom and the NES use the same audio hardware, so ROMs are shared. Desktop trackers that only export music for
-  the NES, such as FamiTracker and FamiStudio, are not catalogued. An NES emulator for the M-VAVE FM-1 is listed
+  the NES, such as FamiTracker and FamiStudio, are not catalogued; NSD.Lib is listed because it includes a sound
+  driver that runs on the console. An NES emulator for the M-VAVE FM-1 is listed
   under that device. Commercial game ROMs and Nintendo firmware are not catalogued here.
 related: [m-vave-fm-1]
 image:

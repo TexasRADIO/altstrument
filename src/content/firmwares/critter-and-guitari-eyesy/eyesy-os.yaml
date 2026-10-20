@@ -28,7 +28,7 @@ install_notes: >-
   your modes, scenes and screen grabs from the web editor first. A forum
   poster reported a "Root directory is locked" error after flashing and
   suggested trying another computer; no confirmed fix is given there.
-tags: [os, platform, python, pygame, editor, video]
+tags: [official, os, platform, python, pygame, editor, video]
 video:
   url: https://www.youtube.com/watch?v=xIxchxVhVI0
   title: "Critter & Guitari - EYESY Video Synthesizer [Epilepsy Warning!]"

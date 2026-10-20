@@ -2,16 +2,18 @@ device: m-vave-fm-1
 name: M-Flasher
 kind: tool
 summary: >-
-  Windows and Linux app that backs up, restores and installs FM-1 and SMK-37 Pro/Elite firmware through the
+  Windows, macOS and Linux app that backs up, restores and installs FM-1 and SMK-37 Pro/Elite firmware through the
   chip's USB download mode, so it also works on a unit whose firmware is broken.
 description: >-
   Talks to the JieLi AC791N's built-in UBOOT1.00 download mode, reads the whole 1 MiB flash twice before
   writing, saves a backup first, writes only the 4 KiB sectors that change and reads everything back. It
-  installs M-VAVE .fwsc packages as published (or custom packages in the same format), installs the open
-  bootloader from the same author's fm1-bootloader project, and can put the stock bootloader back. A flash
-  map shows what each sector holds and which ones a write will touch. Supports the FM-1 and the SMK-37 Pro
-  and Elite; the author's testing so far was on an SMK-37 Pro, with an FM-1 not yet tried. Linux needs the
-  SCSI generic driver; macOS is not supported.
+  installs M-VAVE .fwsc packages as published (or custom packages in the same format), installs the author's
+  open m-bootloader, and can put the stock bootloader back. A flash map shows what each sector holds and which
+  ones a write will touch. Since 0.5.0 a unit that is running normally, on M-VAVE's own firmware or Felucca,
+  is found over USB MIDI and a DOWNLOAD MODE button restarts it into download mode with a SysEx message, so a
+  stock unit can be backed up and given the open bootloader without a USB_KEY dongle. Supports the FM-1 and the
+  SMK-37 Pro and Elite; the author tested on an FM-1 and an SMK-37 Pro, and tried the MIDI route from Linux
+  only. A command line is included.
 status: active
 authors:
 - name: Julius Vitkauskas (jvitkauskas)
@@ -20,37 +22,46 @@ source: https://github.com/jvitkauskas/m-flasher
 source_status: open
 license: MIT
 license_notes: >-
-  Bundles JieLi's WL82 USB flash loader (from jl-uboot-tool, for which JieLi has published no license) and
-  the Apache-2.0 open bootloader builds; see flasher/data/NOTICE.md in the repository.
+  Bundles the MIT-licensed m-bootloader builds and flash loaders from its release (see data/NOTICE.md in the
+  repository). The protocol follows jl-uboot-tool, for which JieLi has published no license.
 distribution: download
 install_notes: >-
-  Windows build is an unsigned zip that asks for administrator rights; Linux runs from source with Python
-  3.9+ and the sg driver. A unit with the stock bootloader and working stock firmware cannot enter download
-  mode from its keys, so install the open bootloader first (a USB_KEY dongle or M-VAVE's own updater on the
-  SMK-37 Pro). Bring your own official .fwsc files from M-VAVE; none are included.
+  Releases have an unsigned Windows zip (asks for administrator rights), a macOS dmg, .deb and .rpm packages and
+  a Linux tarball that needs one udev rule; the first start needs a manual approval on Windows and macOS. A unit
+  with the stock bootloader can enter download mode only through the DOWNLOAD MODE button (USB MIDI), not from its
+  keys, until m-bootloader is installed. Bring your own official .fwsc files from M-VAVE; none are included.
 brick_risk: true
 tags: [flasher, loader, utility]
 image:
   url: https://raw.githubusercontent.com/jvitkauskas/m-flasher/main/docs/screenshot.jpg
   alt: >-
-    M-Flasher window with an LCD panel reading SMK-37 Pro / Elite in download mode, a firmware install
-    pending, and a 256-sector flash map with 153 sectors highlighted
+    M-Flasher 0.4.1 window with an LCD panel reading FM-1 in USB download mode, firmware FM-1 015 (stock) with
+    m-bootloader 1.1, four operation buttons, and a 256-square flash map coloured by region
   credit: Julius Vitkauskas
   source_url: https://github.com/jvitkauskas/m-flasher
   first_party: true
 versions:
+- version: 0.5.0
+  date: 2026-10-19
+  url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.5.0
+  notes: Download mode over USB MIDI without keys, including on a stock unit; bundles m-bootloader 1.2.
+- version: 0.4.2
+  date: 2026-10-17
+  url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.4.2
+  notes: Recognises Baud Girl's FM-1 build.
+- version: 0.4.1
+  date: 2026-10-17
+  url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.4.1
+  notes: Installs m-bootloader 1.1, which makes the FM-1's power-on keys work.
 - version: 0.2.0
   date: 2026-10-14
-  url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.2.0
-  notes: Pre-release. New front-panel window with a live flash map.
+  notes: Pre-release. New front-panel window with a live flash map. The tag is no longer in the repository.
 - version: 0.1.2
   date: 2026-10-14
-  url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.1.2
-  notes: Bundles a newer open bootloader build.
+  notes: Bundles a newer open bootloader build. The tag is no longer in the repository.
 - version: 0.1.1
   date: 2026-10-13
-  url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.1.1
+  notes: The tag is no longer in the repository.
 - version: 0.1.0
   date: 2026-10-13
-  url: https://github.com/jvitkauskas/m-flasher/tree/v0.1.0
-  notes: Git tag; no GitHub release page.
+  notes: The tag is no longer in the repository.

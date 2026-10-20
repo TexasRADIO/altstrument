@@ -2,39 +2,55 @@ device: korg-volca-sample
 name: LUMON OS XL
 summary: Unofficial firmware for the first-generation volca sample, built from Korg's 1.42 image. Adds per-step eight-bar Predictability, microtiming, ratchets, intra-bar looping, musical pitch scales and a LIVE page with beat repeat, backcue gestures and freeze.
 description: >-
-  Version 1.0 is distributed as an updater WAV and a bundle that install through
-  the volca sample's normal audio update; the instrument shows LUMON OS at start-up.
-  Predictability lets each of the 16 steps in each of the ten parts follow one of 16
-  eight-bar play patterns. Other changes include microtiming of plus or minus 15
-  units of 1/32 step, trigger echo, up to four ratchet strokes, sixteen SPEED
-  scales, sixteen equal sample zones, audio pattern export, a tempo-synced lo-fi
-  delay and a quantised freeze effect. The author credits Pajen's earlier firmware
-  for research and ideas such as bar filtering and access to extra reverb programs,
-  and states the build input is Korg 1.42, not Pajen's image. The repository
-  publishes the extension sources, but the images also contain Korg's code and the
-  author grants no redistribution license. A companion tool, Volca Studio XL
-  (MIT), can also transfer the firmware.
+  The project's repository now holds documentation only. LUMON OS XL is built on
+  your computer by the companion app Volca Studio XL from Korg's own 1.42 system
+  updater, which you download from Korg, and the result is sent to the volca
+  sample through the normal audio update from SYNC IN. The app keeps Korg 1.42
+  so it can be restored. Predictability lets each of the 16 steps in each of the
+  ten parts follow one of 16 eight-bar play patterns. Other changes include
+  microtiming of plus or minus 15 units of 1/32 step, trigger echo, up to four
+  ratchet strokes, sixteen SPEED scales, sixteen equal sample zones, audio
+  pattern export, a tempo-synced lo-fi delay and a quantised freeze effect. The
+  author credits Pajen's earlier firmware for research and ideas such as bar
+  filtering and access to extra reverb programs, and states the build input is
+  Korg 1.42, not Pajen's image. Korg's MIDI behaviour is kept and Pajen's extra
+  MIDI modes are not included. Versions 1.0 and 1.0.1 were first distributed as
+  updater WAV files from the project's repository, which no longer hosts them or
+  any source, and its v1.0 release page is gone.
 status: active
 authors:
   - name: The DataBeat Project
     url: https://github.com/MicheleDataBeat
 source: https://github.com/MicheleDataBeat/lumon-os-xl
-source_status: binary-only
+source_status: patcher-only
 license: proprietary
 license_notes: >-
   The README states that no open-source or redistribution license is granted. The
-  repository holds the LUMON extension sources (C and assembly) but not Korg's
-  firmware; generated images contain Korg code and data.
-homepage: https://github.com/MicheleDataBeat/lumon-os-xl/releases/tag/v1.0
-distribution: download
+  repository holds no firmware, updater or code. The patch bytes ship inside
+  Volca Studio XL, whose LICENSE excludes them from its MIT terms, and Korg's
+  code stays under Korg's licence agreement.
+homepage: https://micheledatabeat.github.io/volcastudio-xl-releases/docs/lumon-os-xl.html
+distribution: patch-your-own
+requires_stock: Korg volca sample System Updater 1.42 (volcasample_updater_1_42.zip)
 install_notes: >-
-  Play the updater WAV from the release into the volca sample using Korg's audio
-  update procedure; Korg 1.41 or 1.42 does not need to be installed first. The
-  README links an installation guide, and the native version check can show 1.60,
-  which is the updater transport version rather than the release number.
+  Download Korg's 1.42 System Updater from Korg's volca sample page yourself.
+  Add the zip in Volca Studio XL (Reintegration, Severance or Firmware,
+  depending on the edition), which builds and checks LUMON OS XL, then power the
+  volca on holding FUNC + PLAY until UPdt appears and follow the guided update
+  from SYNC IN. The version check can show 1.60, which is the updater transport
+  version rather than the release number. Studio also offers Korg 1.42 to go
+  back. Volca sample 2 is not supported.
 tags: [sampler, sequencer, performance, fx, os, velocity]
 versions:
+  - version: v1.0.2
+    date: 2026-10-17
+    url: https://github.com/MicheleDataBeat/lumon-os-xl/blob/main/CHANGELOG.md
+    notes: The intra-bar loop keeps running while LIVE pads are used. Dated by the changelog; built through Volca Studio XL only.
+  - version: v1.0.1
+    date: 2026-10-15
+    url: https://github.com/MicheleDataBeat/lumon-os-xl/blob/main/CHANGELOG.md
+    notes: LIVE octave pads shift every sounding voice. Dated by the changelog.
   - version: v1.0
     date: 2026-10-14
-    url: https://github.com/MicheleDataBeat/lumon-os-xl/releases/tag/v1.0
-    notes: First release.
+    url: https://github.com/MicheleDataBeat/lumon-os-xl/blob/main/CHANGELOG.md
+    notes: First release, dated by the changelog. The release page this entry linked earlier no longer exists.

@@ -16,7 +16,7 @@ license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own 
 homepage: https://monome.org/docs/earthsea/
 distribution: download
 install_notes: Follow monome's modular update guide (dfu-programmer, update_firmware.command in the release zip).
-tags: [platform, sequencer, grid]
+tags: [official, platform, sequencer, grid]
 video:
   url: https://www.youtube.com/watch?v=GkY2-xNwjDw
   title: "monome earthsea / just friends eurorack"

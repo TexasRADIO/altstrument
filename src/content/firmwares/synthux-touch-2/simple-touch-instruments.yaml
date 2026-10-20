@@ -25,4 +25,4 @@ license_notes: Copyright held by Stichting PTM Academy (LICENSE.md).
 homepage: https://www.synthux.academy/firmware
 distribution: source-only
 install_notes: Open a sketch from the daisyduino folder with the DaisyDuino library in the Arduino IDE and upload it to the Daisy Seed, or build a libdaisy project with the Daisy toolchain.
-tags: [collection, daisyduino, arduino, examples, open-source, touch-2]
+tags: [official, collection, daisyduino, arduino, examples, open-source, touch-2]

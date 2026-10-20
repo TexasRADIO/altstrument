@@ -21,7 +21,7 @@ license_notes: LICENSE.txt is GPLv3; no "or later" grant found in the project's 
 homepage: https://monome.org/docs/crow/
 distribution: download
 install_notes: Run `druid firmware` on a computer, use fledge on norns, or follow the manual update guide. Windows may need a WinUSB driver (Zadig) for DFU.
-tags: [platform, scripting, i2c, envelopes, lfo]
+tags: [official, platform, scripting, i2c, envelopes, lfo]
 video:
   url: https://www.youtube.com/watch?v=HDTI9HBMf3o
   title: "ambient talkie: ep 54 - CROW a basic overview"

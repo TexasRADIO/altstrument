@@ -25,7 +25,7 @@ install_notes: >-
   simple-designer-instruments), open the Daisy Web Programmer in Chrome, put the
   Seed in bootloader mode with a data-capable USB cable, choose the file and
   press Program. Building needs the Daisy toolchain and make.
-tags: [synth, feedback, drone, karplus-strong, open-source, simple-designer, daisy-seed]
+tags: [official, synth, feedback, drone, karplus-strong, open-source, simple-designer, daisy-seed]
 video:
   url: https://www.youtube.com/watch?v=6eIFWffv6EY
   title: This Synth Feedbacks BETTER than GUITAR.

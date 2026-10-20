@@ -23,3 +23,4 @@ notes: >-
   target of the multipass alternative-firmware framework; Kria and Orca are the
   well-known alternative firmwares. Back up before flashing; an update replaces the whole image.
 related: [monome-meadowphysics, monome-earthsea, monome-ansible, monome-teletype, monome-tools]
+pinned: [whitewhale]

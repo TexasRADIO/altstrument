@@ -1,0 +1,49 @@
+device: m-vave-fm-1
+name: ZEN-1
+summary: >-
+  Ambient firmware that plays itself: animated Japanese scenes (cherry blossoms on a river, a koi pond, fireflies under a
+  moon) where each movement on screen sounds a note, with the keys and knobs available to play along.
+description: >-
+  There are three scenes, Sakura, Koi and Hotaru, each with four moods and a Natural mode that runs a whole day or night
+  in about half an hour. Notes come from what happens on screen, such as petals landing or koi eating, in Japanese
+  pentatonic scales over a three-voice drone, with reverb and CC0 field recordings, all on a six-operator FM engine.
+  PRESETS picks the scene, ALGORITHM the mood and PLAY draws a new picture. A sleep timer fades the output, mood settings
+  are remembered across power-offs, and the screen can switch between a painted and a pixel-art look. Holding HOME
+  switches to FuMi-1's koto instrument, which ZEN-1 is built on. The platform layer comes from Felucca by way of X0X and
+  FoMni. The README says it runs on the FM-1, and the project site has a browser emulator, a guide and a web installer.
+status: active
+authors:
+- name: aceyprime
+  url: https://github.com/aceyprime
+source: https://github.com/aceyprime/zen-1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSING.md. The msfa FM core is Apache-2.0, the recordings are CC0, the moon map is NASA public domain, and
+  the fonts keep their own licences.
+homepage: https://aceyprime.github.io/zen-1/
+distribution: browser-installer
+requires_stock: V15 recommended
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc from the release. The release
+  notes say the FM-1 should be on M-VAVE's V15 first and that the installer can put M-VAVE's firmware back, and the README
+  says installing is at your own risk. Holding OCT- and OCT+ for five seconds enters update mode.
+brick_risk: true
+tags: [generative, ambient, synth-engine, fm, reverb, emulator, ui]
+image:
+  url: https://raw.githubusercontent.com/aceyprime/zen-1/main/docs/img/gallery/koi-day.png
+  alt: "ZEN-1 Koi scene by day: red, white and black koi swimming in a dark green pond ringed by stones, with lily pads and a bamboo shishi-odoshi at the lower right"
+  credit: aceyprime
+  source_url: https://github.com/aceyprime/zen-1
+  first_party: true
+versions:
+- version: '1.1'
+  date: 2026-10-19
+  url: https://github.com/aceyprime/zen-1/releases/tag/v1.1
+  notes: Redrawn clouds, mist, frogs and lanterns, and a moon that changes phase between nights.
+- version: 1.0.2
+  date: 2026-10-17
+  url: https://github.com/aceyprime/zen-1/releases/tag/v1.0.2
+- version: 1.0.1
+  date: 2026-10-17
+  url: https://github.com/aceyprime/zen-1/releases/tag/v1.0.1

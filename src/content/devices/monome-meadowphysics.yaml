@@ -22,3 +22,4 @@ notes: >-
   Legacy monome module with open firmware; the same app also runs on ansible.
   The last official release is from 2021. Back up before flashing.
 related: [monome-white-whale, monome-earthsea, monome-ansible, monome-tools]
+pinned: [meadowphysics]

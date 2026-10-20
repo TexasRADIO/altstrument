@@ -1,0 +1,47 @@
+device: m-vave-fm-1
+name: ESTAMPIE
+summary: >-
+  Groovebox for medieval dance music, forked from GHOULBOX and Felucca: thirteen engines on four tracks, hurdy-gurdy,
+  lute, shawm and bagpipe sounds, modal tunings, velocity and aftertouch from the FM-1's own keys, and a screen-reader link.
+description: >-
+  ESTAMPIE keeps GHOULBOX's hurdy-gurdy, drone latch and historical temperaments and rebases them on Felucca 1.6.1, with
+  Felucca's later sequencer and effect additions, then adds its own look, a parchment-coloured screen with an illuminated
+  boot screen, and a TROTTO scene, a DANCE drum kit and medieval presets. KEY TOUCH estimates how hard 20 of the keys
+  are pressed to give velocity and aftertouch, after Charles Vestal's Velo and MONK-1, and has a calibration page. A screen
+  reader on the computer can read what the FM-1's screen shows through fm1-reader, using ESTAMPIE's own wording. The
+  project site has a browser emulator, a web installer, an editor and a user guide. The author says most sounds are
+  still GHOULBOX's, that 0.2.0 was tested on one FM-1, and that 0.3.0 was tested in the simulator and browser version.
+status: active
+authors:
+- name: Drew Robinson (ocean)
+  url: https://github.com/ocean
+source: https://github.com/ocean/estampie
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSING.md, as for GHOULBOX and Felucca. The five vendored Felucca engines are MIT, the Hügelton Sample
+  Pack is CC0 1.0, ported DaisySP and Rings code is MIT and msfa is Apache-2.0; other bundled parts keep their own
+  licences, listed in LICENSING.md.
+homepage: https://fm-1.drewr.dev/estampie/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or the .fwsc from the release with FM1Kit or FM-SWITCH. The installer
+  bundles M-VAVE's V15 to go back to stock and offers an optional full backup first. The README says M-VAVE's own
+  updater returns the FM-1 to stock, and the release notes ask for a backup before installing.
+brick_risk: true
+tags: [synth-engine, sequencer, drums, fx, performance, velocity, scales, chords, emulator, editor, ui]
+image:
+  url: https://raw.githubusercontent.com/ocean/estampie/main/docs/readme/estampie.jpg
+  alt: "ESTAMPIE on the FM-1 in its parchment look: the device panel with a hurdy-gurdy waveform on screen, framed by an illuminated manuscript border with vines and a calligraphic Estampie title"
+  credit: Drew Robinson (ocean)
+  source_url: https://github.com/ocean/estampie
+  first_party: true
+versions:
+- version: 0.3.0
+  date: 2026-10-20
+  url: https://github.com/ocean/estampie/releases/tag/v0.3.0
+  notes: Adds the screen-reader link; tested in the simulator and browser version.
+- version: 0.2.0
+  date: 2026-10-20
+  url: https://github.com/ocean/estampie/releases/tag/v0.2.0
+  notes: First release; adds KEY TOUCH and the web installer, tested on one FM-1.

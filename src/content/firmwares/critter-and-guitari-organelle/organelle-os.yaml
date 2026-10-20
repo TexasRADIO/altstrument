@@ -26,7 +26,7 @@ install_notes: >-
   8 GB or more with balenaEtcher, and put the card back in the unit. This
   erases the card, so back up patches first. Check the version under
   Settings > Info.
-tags: [os, platform, pure-data, linux, editor]
+tags: [official, os, platform, pure-data, linux, editor]
 video:
   url: https://www.youtube.com/watch?v=a5P7I7kWdOE
   title: New Synths for Organelle!

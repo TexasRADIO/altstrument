@@ -17,7 +17,7 @@ license_notes: >-
   their own licenses in their subdirectories.
 homepage: https://metamodule.info
 distribution: download
-tags: [platform]
+tags: [official, platform]
 video:
   url: https://www.youtube.com/watch?v=RQwzlIZjT0k
   title: "MetaModule firmware version 2.0 is here!"

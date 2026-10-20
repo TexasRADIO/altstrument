@@ -1,0 +1,44 @@
+device: korg-volca-sample
+name: Volca Studio XL
+kind: tool
+summary: Desktop and terminal app for the first-generation volca sample that builds kits, sends samples and pattern banks over SYNC IN, applies groove templates, and builds and installs LUMON OS XL from your own Korg 1.42 updater.
+description: >-
+  Studio comes in three editions that share one library: WMC runs as a local
+  page in Google Chrome, Outie is a native desktop window, and Innie is a
+  terminal program for Linux. It sends samples in Korg's SYRO format, saves and
+  restores pattern audio backups (which need a MIDI output and the headphone
+  output connected too), applies 270 groove templates, and handles the LUMON OS
+  XL install. Sample transfer works on Korg's own firmware, while pattern and
+  groove features need LUMON OS XL. It contains no Korg firmware and no ready
+  LUMON updater, and the LUMON patch inside it is excluded from the MIT terms.
+  The repository holds release files, documentation and the project's page
+  rather than the app's source, apart from the Innie source package attached to
+  each release. Packages are unsigned.
+status: active
+authors:
+  - name: The DataBeat Project
+    url: https://github.com/MicheleDataBeat
+source: https://github.com/MicheleDataBeat/volcastudio-xl-releases
+source_status: binary-only
+license: MIT
+license_notes: >-
+  The LICENSE file is MIT for the app's own code, interface assets, documentation
+  and groove templates. It excludes the LUMON OS XL patch, which has no
+  redistribution license, and Korg's SYRO SDK (BSD-3-Clause) and runtime
+  components keep their own terms. The repository itself holds release files and
+  documentation, not the app's source.
+homepage: https://micheledatabeat.github.io/volcastudio-xl-releases/
+distribution: download
+install_notes: >-
+  Download the package for your system from the release page, check it against
+  SHA256SUMS and open it; the Mac builds are Apple silicon only and Windows
+  builds are x64. WMC needs Google Chrome installed. Connect the computer's audio
+  output to the volca's SYNC IN and do not play the data signal through speakers
+  or headphones. Studio flashes nothing by itself apart from the guided firmware
+  update you start on the volca.
+tags: [sampler, sample-transfer, groove, pattern-backup, installer]
+versions:
+  - version: v1.0.1
+    date: 2026-10-17
+    url: https://github.com/MicheleDataBeat/volcastudio-xl-releases/releases/tag/v1.0.1
+    notes: Latest release; builds LUMON OS XL v1.0.2.

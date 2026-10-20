@@ -1,0 +1,25 @@
+name: Elements
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Modal synthesizer (discontinued)
+description: >-
+  Elements is a 34HP Eurorack modal synthesizer designed by Émilie Gillet and
+  sold by Mutable Instruments from 2015 to 2022. An exciter section with bow,
+  blow and strike generators feeds a resonator built from 64 filters, with
+  controls for geometry, brightness, damping and position and a stereo output
+  with a reverb. The module uses an STM32F405 at 168 MHz and a WM8731 codec.
+platform: STM32F4
+stock_firmware: "1.1"
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/elements/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
+  is CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name. The
+  Elements resonator and exciter code is reused in other projects, for example
+  the Rings Mini-Elements firmware, and ports to other platforms are listed
+  under those devices.
+related: [mutable-instruments-rings]
+pinned: [elements-source]

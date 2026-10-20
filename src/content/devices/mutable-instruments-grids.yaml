@@ -1,0 +1,23 @@
+name: Grids
+manufacturer: Mutable Instruments
+category: eurorack
+tagline: Topographic drum sequencer (discontinued)
+description: >-
+  Grids is a 16HP Eurorack drum pattern generator designed by Émilie Gillet and
+  sold by Mutable Instruments from 2013 to 2021. It picks patterns from a map
+  of drum rhythms with X and Y controls and per-channel density, and it
+  outputs bass drum, snare and hi-hat triggers with accent, clock and reset
+  outputs. It has an internal clock of 40 to 240 BPM or an external clock input,
+  and runs on an ATmega328P at 20 MHz.
+platform: ATmega328P (AVR)
+links:
+  manufacturer: https://pichenettes.github.io/mutable-instruments-documentation/modules/grids/
+  community:
+    - label: Mutable Instruments third-party firmware list
+      url: https://pichenettes.github.io/mutable-instruments-documentation/third_party_firmware/
+notes: >-
+  Mutable Instruments AVR firmware is GPL-3.0-or-later and the hardware is
+  CC-BY-SA-3.0. Derivatives may not use the Mutable Instruments name. The
+  documentation site offers the original firmware image and a 5 ms trigger
+  build; no update was ever released.
+pinned: [grids-source]

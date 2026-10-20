@@ -21,7 +21,7 @@ license_notes: LICENSE is GPLv2; no "or later" grant found in the project's own 
 homepage: https://monome.org/docs/teletype/
 distribution: download
 install_notes: Follow monome's modular update guide with dfu-programmer and the update_firmware.command script from the release zip.
-tags: [platform, scripting, sequencer, i2c, grid]
+tags: [official, platform, scripting, sequencer, i2c, grid]
 video:
   url: https://www.youtube.com/watch?v=hryDbTwHFp8
   title: "Teletype Tutorial 00 // Introduction"

@@ -1,0 +1,39 @@
+device: groove-synthesis-3rd-wave
+name: 3rd Wave Terminal
+kind: tool
+summary: Manufacturer's free companion app for the 3rd Wave 24K, 24M and 8M on macOS and Windows, with a librarian, a program editor, a sequencer editor and a wavetable and sample editor. Closed source; the download needs a Groove Synthesis account and a registered synth.
+description: >-
+  Made by composer and programmer Pedro Macedo Camacho of Ocean Control together
+  with Groove Synthesis, which extended the synth's MIDI and SysEx layer for it.
+  The librarian shows two banks side by side and moves programs by drag and drop,
+  the program editor expands each section of the synth and offers a mod table, a
+  mod matrix and a patching view, and the other editors cover recorded sequences
+  in a piano-roll view and wavetables and multisamples built from audio files,
+  including MP3. It needs the synth to run OS 2.0d or later and be connected by
+  USB. Groove Synthesis announced it on 2026-10-19, and the support page lists
+  build v370 for both systems. This is first-party software, not custom
+  firmware, and no source is published.
+status: active
+authors:
+  - name: Pedro Macedo Camacho
+  - name: Groove Synthesis
+    url: https://groovesynthesis.com/
+source_status: closed
+license: proprietary
+license_notes: >-
+  Free of charge to registered 3rd Wave owners. The announcement states this and
+  no other licence terms are published.
+homepage: https://groovesynthesis.com/introducing-the-3rd-wave-terminal-app/
+distribution: download
+requires_stock: OS 2.0d or later
+install_notes: >-
+  Create an account on the Groove Synthesis site, register the synth with its
+  serial number, then download the app from the Software Tools section of the
+  support page. Update the synth to OS 2.0d first, or the app does not recognise
+  it. The announcement does not describe any firmware flashing by the app.
+tags: [official, editor, librarian, wavetable, sysex]
+versions:
+  - version: v370
+    date: 2026-10-19
+    url: https://groovesynthesis.com/introducing-the-3rd-wave-terminal-app/
+    notes: Build named on the support page; date is the announcement post's. Both macOS and Windows builds are listed.

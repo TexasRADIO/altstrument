@@ -1,0 +1,44 @@
+device: m5stack-cardputer
+name: MORPHASE
+summary: >-
+  Four-operator FM polysynth for the Cardputer ADV, played from a MIDI keyboard with the Cardputer as the sound editor,
+  with patch morphing, an arpeggiator and optional tilt and distance-sensor control.
+description: >-
+  A 12-note polyphonic FM synth with 14 algorithms, operator waveforms that morph between eight shapes, fixed-frequency
+  operators for percussion, a pitch envelope, a GLITCH stutter and reverse mode, an arpeggiator with a 16-step note
+  pattern, crush, chorus, delay, reverb and drive effects, and 32 factory patches that are written to the microSD card
+  on first start. Notes come from a MIDI keyboard through an M5Stack Unit MIDI on the Grove port; the Cardputer's own
+  keys edit the sound, because the author found that its keyboard misses chords. The IMU can modulate the sound when
+  the unit is tilted, and an optional Unit ToF4M distance sensor works as a theremin. A second build adds Bluetooth
+  MIDI at the cost of two voices, giving 10. The original Cardputer is not supported, there is no step sequencer, and
+  the README says the code was written by Claude from the author's descriptions.
+status: active
+authors:
+  - name: Tokagetchi
+    url: https://github.com/oldtokage-collab
+source: https://github.com/oldtokage-collab/MORPHASE
+source_status: open
+license: CC-BY-NC-SA-4.0
+license_notes: >-
+  The LICENSE file is the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 license, so commercial use is not
+  allowed.
+distribution: download
+requires_stock: Cardputer ADV; M5Stack Unit MIDI for a DIN keyboard, or a Bluetooth MIDI source with the BLE build
+install_notes: >-
+  Each release has two merged images, a standard build with 12 voices and a BLE build with 10 voices and Bluetooth
+  MIDI; pick one. Flash it with M5Burner, from the SD card through Launcher, or with any tool that writes a merged
+  image at offset 0x0. To build from source, use PlatformIO with the morphase or morphase_ble environment. Patches are
+  stored on the microSD card, and earphones are recommended because the internal speaker reproduces low notes poorly.
+brick_risk: false
+tags: [synth, fm, polyphonic, midi, arpeggiator, theremin, open-source]
+image:
+  url: https://raw.githubusercontent.com/oldtokage-collab/MORPHASE/main/docs/images/screens/play.png
+  alt: MORPHASE PLAY screen in green on black showing the patch name 01_EPiano, a row of tab names, held notes F3 to B4, an arpeggiator and LFO readout, and an X and Y control box
+  credit: Tokagetchi
+  source_url: https://github.com/oldtokage-collab/MORPHASE
+  first_party: true
+versions:
+  - version: v1.0
+    date: 2026-10-10
+    url: https://github.com/oldtokage-collab/MORPHASE/releases/tag/v1.0
+    notes: First public release, with standard and BLE builds.

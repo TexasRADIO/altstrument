@@ -1,0 +1,23 @@
+name: MKS-70 Super JX
+manufacturer: Roland
+category: synth
+tagline: Rack-mount version of the Roland JX-10 analog synthesizer
+description: >-
+  The MKS-70 is the rack-mounted version of the Roland JX-10 Super JX, an
+  analog synthesizer made by Roland between 1986 and 1989. It has twelve voices
+  with two digitally controlled oscillators each, reduced to six voices in dual
+  mode, and can split or layer two tones. The unit has no performance keyboard,
+  and a PG-800 programmer can be connected for editing. Its control code runs on
+  an assigner board separate from the two sound boards.
+links:
+  community:
+    - label: Wikipedia article (JX-10 and MKS-70)
+      url: https://en.wikipedia.org/wiki/Roland_JX-10
+    - label: Vecoven Super JX page
+      url: https://vecoven.com/superjx/superjx.html
+notes: >-
+  The Vecoven firmware replaces the assigner ROM, either with a replacement
+  EPROM or a flash module, so it needs a chip swap rather than a software
+  update. The original chip can be kept to go back to stock. The JX-10
+  keyboard shares the same firmware family and has its own device page.
+related: [roland-jx-10]

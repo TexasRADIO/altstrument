@@ -1,0 +1,45 @@
+device: mutable-instruments-plaits
+name: Plaits (official source)
+summary: Source code for the Plaits firmware and its audio bootloader, published by Émilie Gillet in the pichenettes/eurorack repository. The documentation site lists v1.2 as the final release.
+description: >-
+  The plaits folder in the pichenettes/eurorack repository holds the
+  application, the audio bootloader, drivers, the synthesis engines (virtual
+  analog, FM, wavetable, speech, physical modelling, noise and percussion), a
+  chord table, resource generators, a desktop test program and the hardware
+  design files. Shared libraries (stmlib and the audio bootloader encoder) are
+  git submodules of that repository. The repository has no version tags. The
+  Mutable Instruments documentation site lists v1.2 as the latest and final
+  official release. The Mutable Instruments name must not be used on
+  derivative works. Plaits Palette and the older Lyle Mills alt firmware are
+  catalogued alternate firmwares built on this source.
+status: dormant
+authors:
+  - name: Émilie Gillet
+    url: https://github.com/pichenettes
+source: https://github.com/pichenettes/eurorack/tree/master/plaits
+source_status: open
+license: MIT
+license_notes: >-
+  The repository README gives MIT for STM32 code and CC BY-SA 3.0 for
+  hardware. The Plaits application, driver, bootloader and DSP files carry the
+  MIT notice (Copyright Émilie Gillet). One file, test/plaits_test.cc, carries
+  a GPL notice for version 3 or any later version; it is the desktop test
+  program, not module code. The repository has no top-level LICENSE file.
+homepage: https://pichenettes.github.io/mutable-instruments-documentation/modules/plaits/
+distribution: source-only
+install_notes: >-
+  Build with the makefile in the plaits folder and the ARM toolchain; the wav
+  target encodes the binary as an audio update file. Official updates install
+  through the module's bootloader: unplug all CV, play the file into the MODEL
+  CV input with the FREQUENCY knob at 12 o'clock, and power on with the left
+  model selection button pressed. The first group of LEDs works as a level
+  meter, the LEDs blink red if the level is wrong, and the manual says to press
+  the button and retry. The manual's calibration procedure is the way to
+  restore tuning if calibration data is lost.
+brick_risk: true
+tags: [official, synth-engine, oscillator, open-source]
+versions:
+  - version: master @ 08460a6
+    date: 2023-08-16
+    url: https://github.com/pichenettes/eurorack/commit/08460a6
+    notes: No tagged releases; this is the latest commit touching the plaits folder.

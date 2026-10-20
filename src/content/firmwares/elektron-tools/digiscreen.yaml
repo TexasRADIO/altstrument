@@ -1,0 +1,36 @@
+device: elektron-tools
+name: digiscreen
+kind: tool
+summary: Web page for Android that shows the 128 x 64 screen of a Digitakt mk1, Digitone mk1, Model:Cycles or Model:Samples at phone size over USB MIDI. It needs no firmware mod and sends only read-only requests.
+description: >-
+  The page asks the device for a screenshot through the same SysEx request that
+  Elektron Transfer uses, at a rate of 5 to 30 times a second, and draws the
+  bitmap full screen. It also works as an installable offline page, has a demo
+  mode, and needs Chrome or Edge because it uses Web MIDI, so iPhone and iPad
+  browsers cannot run it. The code builds only three requests (ping, software
+  version and screenshot) and the tests check that write commands are refused.
+  The README warns that each request makes the device queue incoming MIDI for
+  about 12 ms in the emulator, so timing may shift if the device follows MIDI
+  clock. Listed devices were tested against emulators, with a unit confirmed
+  only for the Digitakt 1.53 through the author's Python host tool. It is not
+  made by Elektron.
+status: active
+authors:
+  - name: irpina
+    url: https://github.com/irpina
+source: https://github.com/irpina/digiscreen
+source_status: open
+license: GPL-2.0-or-later
+license_notes: The LICENSE file is the GPL version 2 text and the README states "GPL-2.0-or-later".
+homepage: https://irpina.github.io/digiscreen/
+install_notes: >-
+  Power the device from its own supply, connect it to the phone with a USB-C
+  OTG cable, close Transfer, Overbridge and other apps that hold its MIDI port,
+  then open the page in Chrome and press Connect. The device's USB setting must
+  offer class-compliant MIDI. Nothing is flashed to the device.
+tags: [screen, display, android, web-midi, sysex]
+versions:
+  - version: main @ 2faefb1
+    date: 2026-10-19
+    url: https://github.com/irpina/digiscreen/commit/2faefb1
+    notes: No tagged releases; this is the latest commit, titled digiscreen 0.1.
