@@ -1,0 +1,50 @@
+device: m-vave-fm-1
+name: HERA
+summary: >-
+  Chord groovebox for the FM-1 that follows the workflow of the Roland AIRA Compact J-6: 100 chord sets, nine phrase
+  styles with twelve variations each, a 64-pattern step sequencer and a four-voice Juno-style synth with delay and reverb.
+description: >-
+  Rights warning: the chord sets and the phrase timings are Roland J-6 factory content. The 100 chord voicings were taken
+  from the J-6 owner's manual and the timing of phrase styles 6 to 9 was measured from a real J-6 over MIDI, and the
+  firmware also bundles three 909 cymbal recordings from the ER-99 project. The author describes the engine as a clean-room
+  recreation of the J-6's behaviour with no Roland code, firmware or samples. HERA maps a chord to every key, plays nine
+  phrase styles of arpeggios, rhythms and strums, and records a 64-pattern sequencer with ties, per-step phrases and
+  shuffle. The screen shows a chord map, a piano roll of the chosen phrase and a page of all patterns, and holding PLAY
+  silences everything. The sound is a Juno-style voice taken from Clipper, with saw, pulse, sub and noise sources and a
+  chorus. It grew from the author's earlier MORPHEUS groovebox, itself built on the X0X DSP suite, and uses Felucca's
+  hardware layer and update loader with SLOOP's changes. A browser workbench runs the firmware as WebAssembly on a virtual
+  FM-1 and edits sounds, chord sets and patterns. The README calls version 0.1 a preview and says patterns kept on the
+  FM-1 can be overwritten when another firmware is installed.
+status: active
+authors:
+- name: Ben Badio
+  url: https://github.com/benbadio
+source: https://github.com/benbadio/hera-fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0-only. The Juno voice is Clipper's (GPL-3.0), the drum, 303 and break engines come from the
+  X0X suite with Open303 (MIT) and 8W8, 9W9 and schwung ports (GPL-3.0), and the Terminus font is SIL OFL 1.1. The 909
+  hi-hat, ride and crash in assets/909 come from ER-99 via 9W9, and the J-6 chord and phrase data is described above.
+  JieLi SDK files (uboot.boot, cfg_tool.bin, eq_cfg_hw.bin, Apache-2.0) are committed under firmware/sdk_bins. No
+  M-VAVE firmware image is in the repository.
+homepage: https://benbadio.github.io/hera-fm1/
+distribution: browser-installer
+install_notes: >-
+  Web MIDI installer in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc from the repository. The
+  installer page also writes M-VAVE's V15 back from a file you download and choose yourself. Holding OCT- while switching on
+  opens a USB rescue, and HERA carries Felucca's update loader, so another firmware installs over it in the usual way.
+  Patterns and settings live in HERA's own flash area and can be lost when another firmware is installed.
+brick_risk: true
+tags: [chords, sequencer, synth-engine, arpeggiator, fx, delay, reverb, emulator, editor]
+image:
+  url: https://raw.githubusercontent.com/benbadio/hera-fm1/main/docs/screens/all-pages.png
+  alt: "Twelve HERA screens in a grid: Play showing the chord Cadd9, chord map, phrase piano roll, step sequencer, pattern grid, sound list, effects and settings pages, with orange titles"
+  credit: Ben Badio
+  source_url: https://github.com/benbadio/hera-fm1
+  first_party: true
+versions:
+- version: main @ a24d034
+  date: 2026-10-21
+  url: https://github.com/benbadio/hera-fm1/commit/a24d034b4cccd73e7a05c6be9ee1feef27b3610c
+  notes: No tagged releases; this is the latest commit. The README names this version 0.1, a preview before 1.0.

@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: M-Flasher (Kampling legacy)
+kind: tool
+summary: >-
+  The original Kampling integration fork of M-Flasher for the FM-1 and SMK-37 Pro/Elite, kept as m-flasher-legacy after a
+  rename: backup, restore and flashing through download mode, saved-file inspection, and a native MIDI route for Felucca packages.
+description: >-
+  This is the repository that was kmplngj/m-flasher until 2026-10-21, when the owner renamed it and reused the old name
+  for a fresh GitHub fork of the recreated jvitkauskas/m-flasher (see M-Flasher (Kampling fork)). It keeps the history,
+  issues, branches and the research archive, and the owner's migration note says the issue tracker for the FM-1 roadmap
+  stays here. Compared with upstream it adds inspect, verify and dry-plan commands that check saved dumps and packages
+  without a device, an experimental read-only FM-1 reader with a raw-backup procedure, and a MIDI-only command line that
+  installs Felucca .fwsc packages over SysEx without Python or the ROM download mode. That native MIDI route exists only
+  here: the new fork leaves it out and Felucca uses its Python updater instead. The project's rules keep day-to-day work
+  offline, against fixtures and fakes, with hardware checks recorded separately. It branched from upstream before that
+  project moved from fm1-bootloader to m-bootloader, so it bundles the older open bootloader builds.
+status: active
+authors:
+- name: Jan Kampling (kmplngj)
+  url: https://github.com/kmplngj
+- name: Julius Vitkauskas (jvitkauskas)
+  url: https://github.com/jvitkauskas
+source: https://github.com/kmplngj/m-flasher-legacy
+source_status: open
+license: MIT
+license_notes: >-
+  MIT, copyright Julius Vitkauskas, as upstream (LICENSE). The flash loader in loader/ and the added ram-reader/ are
+  Apache-2.0, and the bundled bootloader, loader and JieLi loader files are Apache-2.0 (data/NOTICE.md). The fixtures
+  under tests/fixtures are small synthetic .fwsc packages, not M-VAVE images.
+distribution: source-only
+install_notes: >-
+  Build with Rust (cargo build --release); the MIDI-only command line is also available as unsigned artifacts of the
+  native MIDI CLI workflow, with a source.json recording the commit and hash. The upstream download-mode requirements
+  apply: a unit with the stock bootloader cannot enter download mode from its keys. Bring your own official .fwsc files; the
+  repository holds only synthetic test packages. Treat it as experimental and take a full backup before any write.
+brick_risk: true
+tags: [flasher, loader, utility]
+versions:
+- version: main @ aeb061a
+  date: 2026-10-21
+  url: https://github.com/kmplngj/m-flasher-legacy/commit/aeb061a03b7b25a4ed042b08a6360248acd426db
+  notes: No tagged releases; this is the latest commit, which merged the research archive. The last code change was e897df2 on 2026-10-19.

@@ -1,0 +1,53 @@
+device: m-vave-fm-1
+name: Bytemania
+summary: >-
+  Bytebeat synth built on Dinghy: plays one-line formulas of t as notes, with 30 built-in patches, an on-device
+  formula editor with a live compiler, 64 user slots, four voice modes and a raster or scope view.
+description: >-
+  The note sets how fast the counter t runs and the four knobs change variables inside the formula, eight in all
+  with HOME held. The built-ins are 8 tuned basic waveforms and 22 classic bytebeats credited on screen to their
+  authors. Formulas can be written on the device, or drawn from a random generator. A loop or ping-pong range can
+  be set over any part of the formula. Voice modes are mono, a detuned stereo pair, four-voice poly and a
+  different formula on each side. USB MIDI gives notes, pitch bend and 12 learnable CC mappings. Releases are
+  prebuilt .fwsc files; the README documents building with the JieLi toolchain.
+status: active
+authors:
+- name: llozd
+  url: https://github.com/llozd
+source: https://github.com/llozd/bytemania
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSING.md. The platform code is Felucca (Leo Kuroshita) with SLOOP's changes, and the app began
+  as zvenson's Dinghy. Fonts are SIL OFL 1.1, and the AC79 SDK files are read from your own checkout at build time.
+homepage: https://github.com/llozd/bytemania
+distribution: download
+install_notes: >-
+  Download the .fwsc from a release or build it, then install over USB with tools/fm1_install.py (Python with
+  mido and python-rtmidi). Holding OCT- at power-on starts the USB rescue, and the README points to the FM-1
+  Firmware Hub for going back to M-VAVE's firmware. The README says installing is at your own risk.
+brick_risk: true
+tags: [synth-engine, generative, midi, usb-midi, performance, platform]
+image:
+  url: https://raw.githubusercontent.com/llozd/bytemania/main/docs/screens/main.png
+  alt: "Bytemania main screen on the FM-1 display, showing the patch name, its formula in colour-coded variables, a raster view and four knob boxes"
+  credit: llozd
+  source_url: https://github.com/llozd/bytemania
+  first_party: true
+versions:
+- version: v1.2.0
+  date: 2026-10-20
+  url: https://github.com/llozd/bytemania/releases/tag/v1.2.0
+  notes: Raster view is the default.
+- version: v1.1.0
+  date: 2026-10-20
+  url: https://github.com/llozd/bytemania/releases/tag/v1.1.0
+  notes: Stereo width for dual and multi modes, and a fix for a crash on the CC screen.
+- version: v1.0
+  date: 2026-10-20
+  url: https://github.com/llozd/bytemania/releases/tag/v1.0
+  notes: Voice engine with poly and dual modes, and a larger slot format.
+- version: v0.1
+  date: 2026-10-19
+  url: https://github.com/llozd/bytemania/releases/tag/v0.1
+  notes: First release; Dinghy turned into a bytebeat engine.

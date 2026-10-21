@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: SID-1
+summary: >-
+  Two Commodore 64 SID chips as a six-voice synth, with C64-style patches, a library of 128 and a web app that
+  edits them and pulls instruments and drum samples out of .sid tunes.
+description: >-
+  The SID core is a C port of reSID 0.16 that the README says matches it sample for sample in tests, for the
+  6581 and 8580 models, with three voices per chip. A patch works like a C64 music-player instrument: ADSR and
+  waveform, an eight-step wavetable for drums and arpeggios, pulse-width and filter sweeps, vibrato and hard
+  restart. The 128 slots sit in four banks of 32, and the modes are single, layer, split by MIDI channel and
+  voices, where channels 1 to 6 are the six voices. The web app edits patches, saves banks as JSON, and reads
+  PSID and RSID files you supply on its own 6502 to extract their instruments and sampled drums, then plays
+  the tune on the FM-1 as MIDI. No C64 music is included. It is built on Dinghy and Felucca with SLOOP's
+  changes, and the README says much of the code was written with Claude. Not the same project as FM-1 SID.
+status: active
+authors:
+- name: James (putchdev)
+  url: https://github.com/putchdev
+source: https://github.com/putchdev/sid-1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSE and LICENSING.md. The SID core is a port of reSID, which is GPL-2.0-or-later, and the
+  firmware as a whole is distributed under GPL-3.0. The repository's tests include an unmodified copy of reSID
+  0.16, which is not in the firmware. Fonts are SIL OFL 1.1.
+homepage: https://sid-1.putch.co.uk/
+distribution: download
+install_notes: >-
+  Download the .fwsc from the release and install it over USB with tools/fm1_install.py (Python with mido and
+  python-rtmidi); the installer asks before writing, and an interrupted install can be rerun. Holding OCT- at
+  power-on starts the USB updater only. To go back to M-VAVE's firmware the README points to the FM-1 Firmware
+  Hub. The README says installing is at your own risk. The library lives in flash that OPN-1 does not use.
+brick_risk: true
+tags: [synth-engine, chip-sound, midi, usb-midi, emulator, editor, sequencer]
+image:
+  url: https://raw.githubusercontent.com/putchdev/sid-1/HEAD/docs/images/fm1-sound.png
+  alt: "SID-1 sound page on the FM-1 screen, showing the SWEEP PAD patch with its pulse waveform, filter and main knobs"
+  credit: James (putchdev)
+  source_url: https://github.com/putchdev/sid-1
+  first_party: true
+versions:
+- version: 1.0.0
+  date: 2026-10-17
+  url: https://github.com/putchdev/sid-1/releases/tag/v1.0.0
+  notes: First release.

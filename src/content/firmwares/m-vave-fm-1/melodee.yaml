@@ -4,6 +4,9 @@ summary: >-
   Felucca fork with a Sequential Prophet-5 engine (all 200 factory programs, SysEx), a Casio CZ-1 phase-distortion
   engine (64 factory tones), FM6 with DX7 SysEx banks, 70 microtonal tunings and a unified note editor.
 description: >-
+  Rights warning: the repository bundles the 64 Casio CZ-1 factory tones and the 200 Sequential Prophet-5/10 factory
+  programs (v1.03) as SysEx sound data, which the build compiles in as factory presets. Its licensing file states the
+  rights stay with Casio and Sequential and that no licence is granted.
   Four tracks, 32 pattern banks and 1,024 recorded notes, plus a web editor. Its four audio outputs appear
   as discrete USB audio streams, which take-taker (an Android recorder) can capture as separate tracks.
   1.0.0 followed 0.13.1; the 1.0.0 release is noted to have crashed on some units (fixed in later 1.x).
@@ -14,7 +17,11 @@ authors:
 source: https://github.com/keremimo/melodee
 source_status: open
 license: GPL-3.0-only
-license_notes: Fonts, icons, ported DSP and SDK files keep their own licences (LICENSES/).
+license_notes: >-
+  Fonts, icons, ported DSP and SDK files keep their own licences (LICENSES/). The repository bundles the CZ-1 factory
+  tones (assets/cz1-factory) and Sequential's Prophet-5/10 factory programs v1.03 (assets/prophet5-factory) as sound
+  data; LICENSING.md and the folders' READMEs say no licence is granted for them by this project and that the rights
+  stay with Casio and Sequential.
 homepage: https://keremimo.github.io/melodee/
 distribution: browser-installer
 install_notes: >-

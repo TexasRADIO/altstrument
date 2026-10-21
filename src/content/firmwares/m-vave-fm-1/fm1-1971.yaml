@@ -4,6 +4,9 @@ summary: >-
   Early fork of Melodee 1.3.5 that renames the firmware to FM-1_971, adds a WebAssembly browser simulator, and removes
   the CZ-1, TRIO, SLICE and OBXF engines from the picker.
 description: >-
+  Rights warning: the repository bundles the 64 Casio CZ-1 factory tones and the 200 Sequential Prophet-5/10 factory
+  programs (v1.03) as SysEx sound data, inherited from Melodee. Its licensing file states the rights stay with Casio and
+  Sequential and that no licence is granted.
   Forked from Melodee (keremimo), which is built on Felucca. The firmware identity changes to FM-1_971, version
   v0.0.1-1971. The retired engines keep their stored IDs, so older projects stay identifiable, and the older PHASE,
   VOICE, WHEEL, PHYS and NOISE engines stay selectable next to FM6, SID, the Prophet engine and the drum engine.
@@ -19,7 +22,11 @@ authors:
 source: https://github.com/synthi/fm1-1971
 source_status: open
 license: GPL-3.0-only
-license_notes: Inherited from Melodee; some ported DSP code, fonts and SDK files keep their own licences (LICENSES/).
+license_notes: >-
+  Inherited from Melodee; some ported DSP code, fonts and SDK files keep their own licences (LICENSES/). The repository
+  bundles the CZ-1 factory tones (assets/cz1-factory) and Sequential's Prophet-5/10 factory programs v1.03
+  (assets/prophet5-factory) as sound data; LICENSING.md and the folders' READMEs say no licence is granted for them by
+  this project and that the rights stay with Casio and Sequential.
 distribution: source-only
 install_notes: >-
   No releases are published, so build it with build.sh as described in BUILDING.md. The README points to Melodee's

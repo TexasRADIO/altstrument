@@ -1,0 +1,50 @@
+device: roland-jx-8p
+name: Vecoven JX-8P firmware
+summary: Rewritten operating firmware for the Roland JX-8P, sold on a flash module that replaces the program EPROM, with new MIDI and SysEx handling, an arpeggiator, chord mode and 32 internal banks; the 6.x line needs a separate PWM hardware kit.
+description: >-
+  Frederic Vecoven wrote this firmware from scratch as a port of the changes
+  already made to the JX-10. Each MIDI parameter can be set to off, receive, send or
+  on, and SysEx and MIDI CC allow individual tone and patch parameters to be
+  edited, so edits can be sequenced. Other additions are a bulk dump and load
+  that takes one to two seconds, copying internal memory to and from a
+  cartridge, PG-800 support, an import mode that loads a bank from a SysEx
+  file, and a compatibility mode that turns the new features off. The
+  arpeggiator arrived in 5.04 and chord mode in 5.05. The flash module holds
+  32 banks of 32 tones, and M16C or M64C cartridge support adds more. The 5.x
+  line runs on the stock sound hardware. The 6.x line adds parameters for the
+  author's PWM kit, converts tones to a format 5.x cannot read, and is not for
+  an instrument without the kit. The Super JX firmware for the JX-10 and
+  MKS-70 is a separate release. Source code is not published.
+status: maintained
+authors:
+  - name: Frederic Vecoven
+    url: https://vecoven.com/
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  Source code is not published and the site carries a copyright line, "(c) 2019
+  Frederic Vecoven". The page invites visitors to download the files available
+  on the site; no license terms are given. The firmware is delivered on
+  hardware sold by the author.
+homepage: https://vecoven.com/jx8p/jx8p.html
+distribution: commercial
+install_notes: >-
+  The firmware runs only from the author's flash module, which plugs into the
+  EPROM socket and comes with a new EPROM B; the price listed is 99 euro plus
+  shipping, ordered by email. Orders must say whether the synth is an A2 or A3
+  board revision. Later versions are sent to the module over MIDI as SysEx
+  files from the download page, through a bootloader whose file differs for A2
+  and A3. Do not install 6.x without the PWM kit, and back up all tones before
+  moving between 5.x and 6.x, because tones are converted to the 6.x format and
+  look corrupted when going back.
+tags: [midi, sysex, arpeggiator, pwm, flash-module, eprom]
+versions:
+  - version: "6.07"
+    url: https://vecoven.com/jx8p/jx8p/release.html
+    notes: Last 6.x release listed. Adds TRANSPOSE mode and fixes IPR receive for PWM parameters. Needs the PWM kit.
+  - version: "5.10"
+    url: https://vecoven.com/jx8p/jx8p/release.html
+    notes: Last 5.x release listed. Adds TRANSPOSE mode and bulk dump in the old Roland APR and PGR SysEx format.
+  - version: "5.04"
+    url: https://vecoven.com/jx8p/jx8p/release.html
+    notes: First 5.x release listed. Adds the arpeggiator and bank import.

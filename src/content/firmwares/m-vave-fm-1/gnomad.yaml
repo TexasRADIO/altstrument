@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: Gnomad
+summary: >-
+  Firmware aimed at children and first-time synth players: a picture picker with ten sound families, four coloured
+  knobs per sound, a singing Gnome voice, factory grooves and a four-track looper, with the full synth behind an advanced mode.
+description: >-
+  EASY mode is the default. One knob picks a picture (the Gnome, organ, bells, laser, whale, choir, cloud, piano, funny
+  sounds, drums) and each of the 57 sounds gives the four coloured knobs their own jobs, named on screen in the knob's
+  colour. A help band at the bottom of each screen says what the buttons do on that page. The Gnome voice gives each key a
+  syllable. Five factory grooves are on keys 1 to 5 and four user songs on keys 6 to 9. A loop is recorded after a count-in,
+  restarted or stopped on the bar, and undone with SAVE. Holding HOME and SAVE for two seconds switches to the advanced
+  mode with four tracks, a step sequencer, effects, USB and TRS MIDI and every synth page. The sound core was written for
+  the project, with an FM kernel adapted from Google's msfa and drum models adapted from Mutable Instruments code, on top of
+  Felucca 1.0.1; FORK.md in the repository records every change to Felucca. Lessons are planned in a separate iPhone and iPad
+  app that is not released yet, and the firmware itself has none.
+status: active
+authors:
+- name: Kyle Palaniuk (kpalaniuk)
+  url: https://github.com/kpalaniuk
+source: https://github.com/kpalaniuk/gnomad-firmware
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSE and LICENSING.md give GPL-3.0-only, with the Gnomad sound core and factory content granted under the same
+  licence inside this firmware (the author keeps the right to use the core elsewhere under other terms). Parts that keep
+  their own licences are msfa (Apache-2.0), the DaisySP and Rings ports and the adapted drum models (MIT), CC0 instrument
+  samples, the SIL OFL Inter Tight font and three Apache-2.0 JieLi SDK files that go into every package.
+homepage: https://gnomad.cc
+distribution: download
+install_notes: >-
+  Download the .fwsc from the release, check it against SHA256SUMS and install it over USB with tools/fm1_install.py
+  (Python 3 with mido and python-rtmidi); add --port Gnomad when updating from an earlier Gnomad build. Installing from a
+  Mac is the only tested route. INSTALL.md warns that going back to M-VAVE's V15 or to Felucca has not been proven on real
+  hardware, and that going back erases the songs, user sounds, projects and sample slots saved by Gnomad. The project
+  states that no M-VAVE firmware is bundled. Felucca's web installer cannot load it.
+brick_risk: true
+tags: [synth-engine, sequencer, drums, voice, looper, performance, ui, midi, usb-midi]
+image:
+  url: https://raw.githubusercontent.com/kpalaniuk/gnomad-firmware/main/tests/gn_screens/easy-3c-pick.png
+  alt: "Gnomad picture picker: a Gnome in the centre of a row of sound icons, with the label GNOME, 4 SOUNDS and the names organ, bells, laser, whale, choir, cloud, piano, funny, drums"
+  credit: "Kyle Palaniuk"
+  source_url: https://github.com/kpalaniuk/gnomad-firmware
+  first_party: true
+versions:
+- version: v1.0.0-r12
+  date: 2026-10-20
+  url: https://github.com/kpalaniuk/gnomad-firmware/releases/tag/v1.0.0-r12
+  notes: Release 12, build 115e11e; package identity FM-1_900.

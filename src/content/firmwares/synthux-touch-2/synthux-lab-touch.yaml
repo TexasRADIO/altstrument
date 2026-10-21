@@ -1,0 +1,28 @@
+device: synthux-touch-2
+name: Synthux Lab Touch (browser emulator)
+kind: tool
+summary: Official browser emulator of the Simple Touch board that runs Touch firmwares compiled to WebAssembly, with playable pads, knobs, faders and switches on each instrument's faceplate.
+description: >-
+  The page draws the Simple Touch board with the faceplate of the chosen
+  instrument and runs that instrument's firmware on a virtual board in an
+  AudioWorklet. It offers five instruments: TouchString, TouchFX, TouchBass,
+  Touch Bloop (the TouchB firmware) and Touch Audrey (AudreyTouch). Knobs,
+  faders and switches are dragged with the mouse, pads can be held and slid
+  across, and computer keys also play the pads. Instruments that take audio in
+  are fed from a built-in tape or a file the visitor picks. Hovering a control
+  shows what it does, and the control descriptions are taken from each
+  firmware's code where it disagrees with its README or faceplate. The page
+  calls itself a playable prototype; it is not linked from synthux.academy yet
+  and asks search engines not to index it. It plays the firmware only and does
+  not flash or edit a board.
+status: active
+authors:
+  - name: Synthux Academy
+    url: https://github.com/Synthux-Academy
+source_status: closed
+license: unspecified
+license_notes: >-
+  No source repository or licence statement is published for the page; the
+  emulated firmwares keep their own licences (see their entries).
+homepage: https://lab.synthux.academy/
+tags: [official, emulator, web]

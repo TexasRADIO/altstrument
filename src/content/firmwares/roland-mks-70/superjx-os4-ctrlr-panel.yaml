@@ -1,0 +1,41 @@
+device: roland-mks-70
+name: SuperJX OS4.x Editor/Librarian (Ctrlr panel)
+kind: tool
+summary: Ctrlr panel for editing and managing patches on a JX-10 or MKS-70 running Vecoven 4.x firmware with the PWM kit, as a Windows standalone app and VSTi plug-in over MIDI.
+description: >-
+  The panel is a Ctrlr instance packaged as a standalone executable and a VSTi
+  plug-in, so Ctrlr itself does not need to be installed. The author's manual
+  says it edits and manages patches of a Super JX running OS 4.x and is of no
+  use without the PWM kit fitted, and that it works with both the JX-10 and the
+  MKS-70. The manual lists the MIDI menu settings the synth needs, such as
+  system exclusive, APR and tone CC on, and explains choosing MIDI ports in the
+  panel's settings tab. The download page links builds for Windows 64-bit and
+  32-bit, and the manual mentions Mac versions as well. The page shows the
+  published version as 3_462 from 21 April 2024. The panel was once listed
+  at ctrlr.org/49160, which now returns a 404, so the author's own page is the
+  working source.
+status: maintained
+authors:
+  - name: Possemo
+    url: https://roet32.wixsite.com/ctrlr
+source_status: binary-only
+license: unspecified
+license_notes: >-
+  The author's page offers the panels for free and says no certificate was
+  bought for signing the executables; it gives no license terms and no source
+  is published.
+homepage: https://roet32.wixsite.com/ctrlr/roland-superjx
+distribution: download
+requires_stock: Vecoven 4.x firmware with the PWM kit
+install_notes: >-
+  Downloads are linked from the author's page. Windows and macOS may warn
+  about the unsigned executable, which the author says is a false positive.
+  Set the synth's MIDI menu as the manual describes, then choose the MIDI ports
+  in the panel's Settings tab. The panel sends and receives patch data only
+  and flashes nothing.
+tags: [editor, librarian, ctrlr, vst, sysex, vecoven]
+versions:
+  - version: 3_462
+    date: 2024-04-21
+    url: https://roet32.wixsite.com/ctrlr/roland-superjx
+    notes: Version and date as printed on the author's download page.

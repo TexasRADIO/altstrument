@@ -1,0 +1,34 @@
+device: serious-shit-samplooler
+name: HUFF
+summary: Breath-controlled wind instrument firmware for the Samplooler Stack. Blow at the mic to play, tilt the board to change the note, with ocarina, flute, pan pipe, shakuhachi, clarinet, tin whistle and bottle models.
+description: >-
+  HUFF reads breath from the microphone and plays a physical model, with louder blowing giving a louder note and, on
+  the flutes and clarinet, a jump to the next register when blown hard. Tilt picks the note along a ladder, leaning
+  sideways adds vibrato or a bend, and the joystick bends the pitch. The sound list also has presets such as cave, desert
+  and theremin, and eight places for the player's own. Holding REC records a phrase that loops. USB MIDI sends notes,
+  breath as CC 2, pitch bend, every setting and program changes, and takes notes, breath, bend and the sustain pedal as
+  input. It joins the radio link to share key, scale and tempo with other boards. The README says it was installed from
+  the desktop app and has not been played much.
+status: active
+authors:
+  - name: Yaniv Schonfeld (Willbear)
+    url: https://github.com/willbearfruits
+source: https://github.com/willbearfruits/samplooler/tree/main/instruments/huff
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Covered by the repository LICENSE, GPL version 3 with no per-file later-version grant seen in the sources.
+homepage: https://willbearfruits.github.io/samplooler/#instruments
+distribution: browser-installer
+install_notes: >-
+  Install it from the project page in Chrome or Edge, or with the Samplooler Library desktop app, and flash the
+  Samplooler firmware back the same way. The settings and stored loops stay on the board. If the speaker feeds back into
+  the mic, run BREATH SETUP or switch the speaker off and use the line out. To build, use ESP-IDF 5.5.1 in the
+  instrument's firmware folder.
+brick_risk: false
+tags: [synth-engine, wind, breath-controller, physical-modeling, usb-midi, esp32-s3, open-hardware]
+versions:
+  - version: main @ 6a44bb2
+    date: 2026-10-19
+    url: https://github.com/willbearfruits/samplooler/commit/6a44bb2
+    notes: No tagged releases; this is the latest commit touching the instrument.

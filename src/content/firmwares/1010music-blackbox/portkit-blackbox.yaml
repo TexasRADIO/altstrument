@@ -1,0 +1,47 @@
+device: 1010music-blackbox
+name: portkit (JB1+pk)
+summary: Browser patcher that adds portkit's features to JOEBOX 1 on your own Blackbox 3.1.9 image, including master distortion, a third FX send with its own reverb, clip stretch and shift, an SSL-style compressor and USB audio recording.
+description: >-
+  An unofficial build on top of Justin Joe's JOEBOX 1 (blackbox-mod), which
+  keeps its master FX, pad inserts and USB audio. portkit adds a master
+  distortion with soft, hard, fold and tube modes, an FX3 send per pad with Plate, Room, Hall and
+  Chamber reverbs, clip shift, play length, time-stretch and loop-fade tools, a
+  ninth compressor model modelled on a bus compressor, recording of only the
+  effect returns, and recording from the computer over USB. Later additions are
+  four performance macro buttons, a pad that plays the computer's audio stream
+  and a headphone mix on Out 3, which the README marks as not yet tested on a
+  unit. Presets from stock and JOEBOX stay compatible. The repository also holds
+  a feature-picking build dashboard, a preset converter and a Renode simulation
+  of the unit. The commits credit an AI assistant as co-author. A sister project
+  targets the Bitbox micro.
+status: active
+authors:
+  - name: kyrillleier-jpg
+    url: https://github.com/kyrillleier-jpg
+source: https://github.com/kyrillleier-jpg/portkit-blackbox
+source_status: open
+license: MIT
+license_notes: >-
+  Covers portkit's own code and documentation. JOEBOX code, MIT-licensed by
+  Justin Joe, is fetched from its repository at a pinned commit rather than
+  copied in. 1010music's firmware is not included and no rights over it are
+  granted; the README asks people to share the patcher link or build
+  instructions, not patched images.
+homepage: https://kyrillleier-jpg.github.io/portkit-blackbox/
+distribution: patch-your-own
+requires_stock: 3.1.9
+install_notes: >-
+  Download the stock 3.1.9 package from 1010music yourself and take
+  BLACKBOX.bin out of it. Drop it on the patcher page, which runs in the browser
+  and only accepts the unmodified 3.1.9, then copy the two output files,
+  BLACKBOX.bin and BBEXTRA.BIN, to the root of the microSD card. Hold BACK and
+  INFO while powering on; the unit restarts once while it writes the second
+  file. Keep both files together or the added effects pass audio through
+  unchanged. To go back, repeat the steps with the stock BLACKBOX.bin.
+brick_risk: false
+tags: [fx, sampler, performance, usb-audio, reverb, compressor, clip]
+versions:
+  - version: main @ fa6e85b
+    date: 2026-10-21
+    url: https://github.com/kyrillleier-jpg/portkit-blackbox/commit/fa6e85b
+    notes: No tagged releases; this is the latest commit.

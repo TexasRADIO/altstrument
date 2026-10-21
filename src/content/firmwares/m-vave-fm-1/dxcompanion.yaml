@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: DXcompanion
+kind: tool
+summary: >-
+  Closed browser editor for Yamaha DX-family synths with a dedicated M-VAVE FM-1 profile: live voice editing over SysEx,
+  a panel for the effects chain on the effect MIDI channel, and voice library browsing, sending voices to the unit.
+description: >-
+  Rights warning: the site bundles voice libraries for the supported synths, and the FM-1 profile's library is the
+  DX7 collection of 21 banks (2688 voices), which includes the four Yamaha DX7 factory ROM banks, Grey
+  Matter E-card disks and VRC cartridge banks. That is factory and commercial sound data, and no licence for
+  redistribution is stated. The editor covers the reface DX,
+  DX7, DX7II/TX802, DX11/TX81Z, DX21/DX27/DX100/V50, Korg 707 and SEQTRAK as well as the FM-1. The FM-1 profile edits the
+  DX7 parameter set with single-parameter SysEx writes, sends a whole voice to the unit and has a panel for the 24
+  effect controllers of the FM-1's documented MIDI map. It cannot read voices back from the FM-1, because the unit does not
+  answer SysEx dump requests. The site's changelog records FM-1 support from V1.44.0 (2026-07-21) and real-hardware testing; the app is a single-author project with optional Google sign-in for syncing a user library.
+status: active
+authors:
+- name: Marian Fujara
+  url: https://dxcompanion.uk/
+source_status: closed
+license: unspecified
+license_notes: >-
+  Hosted site with a copyright line (Marian Fujara) and no source repository, licence text or terms for the bundled
+  voice banks.
+homepage: https://dxcompanion.uk/
+distribution: browser-installer
+install_notes: >-
+  Needs Chrome or Edge with Web MIDI; open the page, connect, allow SysEx and pick the M-VAVE FM-1 profile. It does not
+  flash firmware.
+brick_risk: false
+tags: [editor, librarian, midi, web]
+versions:
+- version: V1.69.1
+  date: 2026-09-09
+  url: https://dxcompanion.uk/CHANGELOG.TXT
+  notes: Changelog on the site; adds diagnostics that listen on every MIDI port.

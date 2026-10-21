@@ -1,0 +1,42 @@
+device: zynthian
+name: Zynthian MIDI-USB Controller
+summary: Official firmware, laser-cut case plans and photos for a 2017 USB MIDI controller with eight LED-ring encoders on a SparkFun ATmega32U4 board, giving 24 assignable MIDI CC parameters over three layers.
+description: >-
+  The repository holds a PlatformIO project for an Arduino-style board
+  (SparkFun Pro Micro 16 MHz) that reads eight rotary encoders, lights an
+  LED ring per encoder and sends MIDI CC over USB. Each encoder has three
+  layers, shown in red, green and blue, which gives up to 24 controllable
+  parameters. The case is described by SVG and DXF files for laser cutting,
+  and the photos show the finished box. It is a stand-alone controller for the
+  Zynthian platform rather than part of the main kit, and the code is derived
+  from an Arduino MIDIUSB example. The code was added in May 2017 and the last
+  commit, in 2019, only edited the README. The firmware/lib folder holds
+  Adafruit NeoPixel and MIDIUSB submodule links that have no .gitmodules file
+  in the repository.
+status: dormant
+authors:
+  - name: Fernando Moyano (jofemodo)
+    url: https://github.com/jofemodo
+source: https://github.com/zynthian/zynthian-controller
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE.txt is the GPLv3 text; the sketch has no GPL header, only a credit to the Arduino MIDIUSB example it started from, so no "or later" grant was found.
+homepage: https://github.com/zynthian/zynthian-controller
+distribution: source-only
+install_notes: >-
+  Build the project in firmware/ with PlatformIO for the sparkfun_promicro16
+  board and flash it over USB. The NeoPixel and MIDIUSB libraries have to be
+  supplied separately because their submodule entries are not documented. The
+  controller shows up as a class-compliant USB MIDI device.
+tags: [official, controller, midi, usb-midi, arduino, hardware]
+image:
+  url: https://raw.githubusercontent.com/zynthian/zynthian-controller/master/photos/zynthian_controller_01.jpg
+  alt: Wooden laser-cut box with eight black knobs, each ringed by small holes for LEDs, with the name zynthian engraved on the lid and a white USB cable at the left
+  credit: Zynthian project
+  source_url: https://github.com/zynthian/zynthian-controller
+  first_party: true
+versions:
+  - version: master @ 6c32f9e
+    date: 2019-09-04
+    url: https://github.com/zynthian/zynthian-controller/commit/6c32f9e
+    notes: No tagged releases; this is the latest commit.

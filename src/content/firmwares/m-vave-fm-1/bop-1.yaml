@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: BOP-1
+summary: >-
+  Music toy and teaching synth for children on the FM-1: music plays at power-on, and Play, Make, Lab and Games doors grow
+  from pressing keys to a two-oscillator subtractive synth with its real parameter names.
+description: >-
+  Each sound parameter is drawn as a character: waveform as its body, pitch as its size, filter cutoff as its mouth, and echo
+  and reverb as its surroundings. Play has no wrong notes and eight styles, Make has four layers on sixteen steps with eight
+  saved songs, and Lab exposes two oscillators, a filter, an envelope, an LFO, an arpeggiator, effects and ten
+  lessons the firmware checks. Games use public-domain tunes. A grown-ups' page sets a volume cap, a sleep timer and which
+  doors show. It is built on Felucca by way of X0X, AMB-1, IND-1, LCD-4 and CRT-4, and a browser emulator, printables and a
+  manual are published.
+status: active
+authors:
+- name: Roberto Vega (devrvega)
+  url: https://github.com/devrvega
+source: https://github.com/devrvega/BOP-1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0-only. The Fredoka font is SIL OFL 1.1. JieLi SDK files are read from the user's own SDK
+  checkout at build time.
+homepage: https://devrvega.github.io/BOP-1/
+distribution: browser-installer
+install_notes: >-
+  Installer page in Chrome or Edge over USB; the .fwsc is on the releases page. OCT- and OCT+ held for five seconds
+  enters update mode. The README says installing firmware is at the user's own risk and that the installer can put the stock
+  firmware back.
+brick_risk: true
+tags: [synth-engine, sequencer, drums, fx, emulator, ui]
+image:
+  url: https://raw.githubusercontent.com/devrvega/BOP-1/HEAD/docs/img/bop1.gif
+  alt: "BOP-1 Play screen: a large blue blob character with a face beside a small purple spiky one and a small yellow one in a bedroom scene, above a row of icons and four round dials"
+  credit: devrvega
+  source_url: https://github.com/devrvega/BOP-1
+  first_party: true
+versions:
+- version: 0.1.0
+  date: 2026-10-18
+  url: https://github.com/devrvega/BOP-1/releases/tag/v0.1.0

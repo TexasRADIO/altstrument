@@ -1,0 +1,45 @@
+device: korg-sq-64
+name: Jungle SQ-64 Bloom
+summary: Experimental generative sequencer firmware for the SQ-64 that adds fractal-variation, Turing-register and scale-quantised tracks and six track C engines to Aleph Void's Euclidean base. Emulator only; the author says not to flash hardware.
+description: >-
+  A prototype built on the Euclidean firmware's panel, output and updater code.
+  Pressing PATTERN switches between the Euclidean layer and a generative layer
+  in which track A plays lazy fractal variations of a trunk of up to 64 steps,
+  track B is a shift-register Turing engine with lock, rests and gradual
+  mutation, track C selects among Euclidean, random walk, weighted random,
+  Markov, arpeggiator and harmonic-progression engines, and track D stays a
+  Euclidean drum track. Output is quantised to one of fourteen scales, with a
+  seeded random generator for replay, a ratchet scheduler and a CRC-checked
+  project format. The README labels it an early milestone, marks it emulator
+  only and says not to flash a physical SQ-64. The work is on the
+  feature/generative-bloom branch, with an open pull request into the
+  repository's main branch, which still equals the Euclidean base. The authors
+  of the Qu-Bit Bloom module are cited only as functional inspiration.
+status: active
+authors:
+  - name: ivanvihe
+    url: https://github.com/ivanvihe
+source: https://github.com/ivanvihe/jungle-sq64-bloom/tree/feature/generative-bloom
+source_status: open
+license: MIT
+license_notes: >-
+  MIT, with Aleph Void LLC's copyright notice kept from the Euclidean firmware
+  it derives from. The Korg SQ-64 emulator used for testing is a separate
+  GPL-2.0-only project and is not part of the firmware code.
+homepage: https://github.com/ivanvihe/jungle-sq64-bloom
+distribution: source-only
+requires_stock: "Stock update mode (2.0x) for the first install"
+install_notes: >-
+  Build it with make and the GNU Arm toolchain, check the image against the
+  SQ-64 firmware specification, and load the resulting .vsb in the browser
+  emulator. The README says nothing in its workflow authorizes a physical
+  update, and that the board contract's MCU, electrical limits and recovery
+  path are unverified. It uses the same updater, storage map and saved-project
+  slots as the Euclidean firmware it derives from.
+brick_risk: true
+tags: [sequencer, generative, euclidean, turing-machine, fractal, cv-gate, midi, os]
+versions:
+  - version: feature/generative-bloom @ b922a08
+    date: 2026-10-21
+    url: https://github.com/ivanvihe/jungle-sq64-bloom/commit/b922a083871fc60350327ef59440d4cb8971a534
+    notes: Latest commit on the feature branch, which awaits merge into main through an open pull request; main still matches the upstream Euclidean firmware. No tags or releases.

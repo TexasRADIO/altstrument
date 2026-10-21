@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: Modular One
+summary: >-
+  Film-music firmware with a soft FM engine and Modular Town's delay, plate reverb and "island" effect, a four-green
+  interface, a town-view screen that follows the sound, and a built-in MIDI player that plays Satie's first Gymnopedie.
+description: >-
+  Rights warning: the TOWN engine and effects are ported from the Modular Town V2 plugin, and the repository does not say
+  who owns that plugin or under what terms it was used. Not the Modular-1 firmware by WiggisModular, which is a different project. The TOWN engine has a carrier, a modulator
+  with feedback, a detunable second modulator and a soft low-pass, with 16 presets in two families, pads and electric
+  pianos. Four controls (brightness, rise, night and island) shape the sound and the effects together. The screen shows a
+  shoreline view of Modular Town where the hour, light and water follow the sound, and the same picture is used as a
+  screen saver. The engine and effects are ported to integer arithmetic from the plugin. Holding OCT- and OCT+ for one
+  second plays a public-domain piano piece on the current track, and you can play over it. Three synth tracks remain
+  and Felucca's drum track and its sample set are removed. The README calls it a beta that has run only on the author's
+  FM-1.
+status: active
+authors:
+- name: Alexis Arakis (Bungle Society)
+  url: https://github.com/bunglesociety
+source: https://github.com/bunglesociety/modular-one
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and LICENSING.md, which is Felucca's text with a note that this tree has no icon atlas and no
+  drum sounds, so Felucca's own assets (icons, panel image, Hügelton Sample Pack), which are not GPL, are not part of
+  its builds. CC0 instrument samples, SIL OFL fonts and the JieLi SDK files read at build time are listed there too.
+  MODULAR_TOWN.md describes the sound as ported from the Modular Town V2 plugin (Amorph, Cmajor) but names no author or
+  licence for it, so the GPL-3.0 grant may not cover the ported engine.
+homepage: https://github.com/bunglesociety/modular-one
+distribution: download
+install_notes: >-
+  The README asks you to return to M-VAVE's official V15 or newer first with M-UPGRADE, connect the USB cable directly to
+  the computer with no hub, then install the .fwsc from the release with tools/fm1_install.py (--info reads the unit
+  and writes nothing). The way back is M-VAVE's M-UPGRADE, and FM-1-transporter is named as the recovery tool if the unit no
+  longer starts.
+brick_risk: true
+tags: [synth-engine, fm, fx, reverb, delay, ui, performance]
+versions:
+- version: 0.1-beta
+  date: 2026-10-20
+  url: https://github.com/bunglesociety/modular-one/releases/tag/v0.1-beta
+  notes: First public beta; package modular-one-0.1-beta.fwsc.

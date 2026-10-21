@@ -1,0 +1,59 @@
+device: m-vave-fm-1
+name: Shine On
+summary: >-
+  String ensemble in the style of 1970s string machines, with sixteen keyers, six register filters, a
+  three-line ensemble, phaser, delay and plate reverb, an arpeggiator and a two-track sequencer. Built from OberVave.
+description: >-
+  Each key has its own keyer, and the tone comes from phase-locked 16', 8' and 4' sawtooth and 8' square footages
+  run through fixed register filters (contrabass, cello, viola, violin, trumpet, horn) on the sum. Three
+  bucket-brigade delay lines swayed by two LFOs 120 degrees apart make the ensemble sound. There are 32 factory
+  programs in 99 slots, an arpeggiator for each sound and two sequencer tracks, where track B can have a sound of
+  its own. The panel, sequencer, delay and reverb come from OberVave, and the platform from Dinghy, Felucca and
+  SLOOP. Version 1.2.2 opened the FM-1's TRS MIDI IN jack, and 1.2.3 gave the update loader a progress screen.
+  The browser simulator compiles the firmware's own C code. The same releases carry SMK-37 builds, which are not
+  catalogued here and which the licensing notes say are untested on an SMK-37.
+status: active
+authors:
+- name: Sven Trogus (zvenson)
+  url: https://github.com/zvenson
+source: https://github.com/zvenson/shineon
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSE and LICENSING.md. The platform code is Felucca (Leo Kuroshita) with SLOOP's changes, and
+  the SMK-37 board layer is by M. Geisler. The Terminus font and Inter are SIL OFL 1.1, the logo uses URW Bookman
+  Demi outlines, and the AC79 SDK files are read from your own checkout at build time.
+homepage: https://github.com/zvenson/shineon
+distribution: download
+install_notes: >-
+  The README gives the FM-1 Firmware Hub (thefirmwarehub.com) as one install route, or tools/fm1_install.py
+  on the .fwsc over USB (Python with mido and python-rtmidi). Use the FM-1 build, whose package identity is
+  FM-1_962, not the SMK-37 files in the same release.
+brick_risk: true
+tags: [synth-engine, fx, reverb, delay, sequencer, arpeggiator, midi, usb-midi, emulator]
+image:
+  url: https://raw.githubusercontent.com/zvenson/shineon/main/docs/screen.png
+  alt: "Shine On screen showing program 01 ENSEMBLE on the PERFORM page, with four knobs, a scope trace and sixteen keyer LEDs"
+  credit: "zvenson"
+  source_url: https://github.com/zvenson/shineon
+  first_party: true
+versions:
+- version: v1.2.3
+  date: 2026-10-19
+  url: https://github.com/zvenson/shineon/releases/tag/v1.2.3
+  notes: Update loader screen shows its progress and failures.
+- version: v1.2.2
+  date: 2026-10-19
+  url: https://github.com/zvenson/shineon/releases/tag/v1.2.2
+  notes: TRS MIDI IN plays the instrument; the keys send notes on the set MIDI channel.
+- version: v1.2.1
+  date: 2026-10-18
+  url: https://github.com/zvenson/shineon/releases/tag/v1.2.1
+- version: v1.2
+  date: 2026-10-17
+  url: https://github.com/zvenson/shineon/tree/v1.2
+  notes: Git tag; no GitHub release page.
+- version: v1.0
+  date: 2026-10-17
+  url: https://github.com/zvenson/shineon/tree/v1.0
+  notes: Git tag; no GitHub release page.

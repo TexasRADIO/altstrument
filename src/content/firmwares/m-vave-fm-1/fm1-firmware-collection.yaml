@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: FM-1 Firmware Collection
+kind: tool
+summary: >-
+  Aggregator of community FM-1 firmware: each project as a git submodule at its latest commit, a catalog table and JSON,
+  and GitHub Actions builds of the permissively licensed ones that publish no package of their own.
+description: >-
+  A nightly workflow refreshes a catalog from the FM-1 Firmware Hub, the aroum/fm1-custom-fw list and GitHub searches,
+  probing each repository's license, releases and build entry point, and moves the 164 submodules in firmwares/ to their
+  upstream heads. A firmware is built only when it has no package upstream, its license allows redistribution and it has a
+  known build entry point (the Felucca family's build.sh, a firmware/build.sh or a Makefile). Repositories without a license
+  file are listed and pinned but never built. Each run publishes unofficial .fwsc packages, an index.json and SHA256SUMS as a
+  GitHub release, and a release named latest holds the newest build of each firmware. Upstream packages are linked and not
+  re-hosted. Non-firmware repositories such as editors, emulators and binary patchers of the stock image are excluded by a
+  manual list. The README says the builds are untested on hardware. The packages seen in the releases are community builds of
+  about 610 KB, and no M-VAVE firmware file is in the repository or its releases.
+status: active
+authors:
+- name: 2bit (2bbb)
+  url: https://github.com/2bbb
+source: https://github.com/2bbb/fm1-firmware-collection
+source_status: open
+license: MIT
+license_notes: >-
+  MIT covers the scripts and workflows (LICENSE). Each firmware keeps its own license, listed in the catalog. The built
+  packages are the work of their authors under those licenses and carry whatever bundled data the source repositories
+  have, so check the entry for the firmware itself.
+homepage: https://github.com/2bbb/fm1-firmware-collection/releases
+distribution: download
+install_notes: >-
+  Download a .fwsc from a release and install it with tools/fm1_install.py, the FM-1 Firmware Hub or the firmware's own
+  installer, checking the package against SHA256SUMS. The README says the builds are untested on hardware and that you
+  should keep a way back to M-VAVE's official V15.
+brick_risk: true
+tags: [flasher, utility, research]
+versions:
+- version: builds-20261021-13
+  date: 2026-10-21
+  url: https://github.com/2bbb/fm1-firmware-collection/releases/tag/builds-20261021-13
+  notes: Latest build run; the release holds the packages built in that run.

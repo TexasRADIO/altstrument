@@ -3,6 +3,9 @@ name: PurpleMonkey FM-1
 summary: >-
   Toddler instrument: any key plays a pentatonic FM note or a drum over a backing beat, with four animated
   animal friends on screen and no menus.
+description: >-
+  Rights warning: the repository bundles the 64 Casio CZ-1 factory tones as SysEx sound data, inherited from Melodee.
+  Its licensing file states the rights stay with Casio and that no licence is granted.
 status: active
 authors:
 - name: Quixotic7
@@ -10,6 +13,9 @@ authors:
 source: https://github.com/Quixotic7/PurpleMonkeyFM1
 source_status: open
 license: GPL-3.0-only
+license_notes: >-
+  The repository bundles Casio's CZ-1 factory tones (assets/cz1-factory) as sound data; LICENSING.md and the folder's
+  README say no licence is granted for them by this project and that the rights stay with Casio.
 homepage: https://quixotic7.github.io/PurpleMonkeyFM1/
 distribution: browser-installer
 install_notes: >-

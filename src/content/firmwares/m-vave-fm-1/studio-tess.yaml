@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: Studio Tess
+summary: >-
+  Melodee and Tess combined with studio additions: harmony and song features, USB MIDI capture, independent note lengths
+  and FM performance controls. A snapshot of the Performance 6 build, with source and rollback files.
+description: >-
+  Rights warning: the repository bundles the 64 Casio CZ-1 factory tones and the 200 Sequential Prophet-5 v1.03 factory programs as
+  SysEx data, inherited from Melodee. Its licensing file states the rights stay with Casio and Sequential and that no licence is granted.
+  Studio Tess takes Melodee's synthesizer engines and sound design and Tess's generative sequencing (Turing, Euclid, Markov,
+  Morph) and adds a song and harmony layer, USB MIDI and one-pass capture integration, generated-note duration and FM amplitude
+  and tone controls, and project migration. The maintainer credits the additions to Inputsignwave. The README says the
+  repository starts from a delivered snapshot rather than a rebuilt Git history, that dual core is the main build and single
+  core is for diagnosis, and that an intermittent fault in the FM6 Bells sound is unresolved. New project saves cannot be read by
+  the earlier Audio5 build.
+status: active
+authors:
+- name: Inputsignwave (jamesusmusic)
+  url: https://github.com/jamesusmusic
+source: https://github.com/jamesusmusic/fm1-studio-tess
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Melodee (performance6/LICENSING.md); ported DSP, fonts and SDK files keep their own licences, listed in
+  performance6/LICENSES. The CZ-1 and Prophet-5 factory data (performance6/source/assets/cz1-factory and
+  prophet5-factory) are Casio's and Sequential's, with no licence granted, and reSID wave data is GPL-2.0-or-later.
+distribution: download
+install_notes: >-
+  The Performance 6 package is installed with source/tools/fm1_install.py over USB from the .fwsc in
+  performance6/firmware-candidates. The install file says to export a full backup first and keep it, because new
+  project saves cannot be read by Audio5, and that rolling back needs the Audio5 package in performance6/rollback and the
+  earlier backup. A single-core diagnostic build is included for comparison only.
+brick_risk: true
+tags: [synth-engine, sequencer, generative, fm, chords, usb-midi, midi]
+versions:
+- version: main @ 3a764d6
+  date: 2026-10-17
+  url: https://github.com/jamesusmusic/fm1-studio-tess/commit/3a764d619c5f7bd51ff76cc40f7ab7f5b843a44e
+  notes: No tagged releases; this is the latest commit. The baseline is v1.4.1-studio-tess.6 (Performance 6).

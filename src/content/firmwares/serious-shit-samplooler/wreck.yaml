@@ -1,0 +1,32 @@
+device: serious-shit-samplooler
+name: WRECK
+summary: Breakcore-to-doom instrument firmware for the Samplooler Stack. One knob moves from a chopped break at double tempo down to a drone, with tilt, stick and knocks adding chaos, a step grid and sampling from the mic or USB.
+description: >-
+  WRECK plays a synthesised drum kit by itself and the knob moves through four zones, breakcore at twice the tempo,
+  hardcore, sludge at half tempo and drone at a quarter. Tilt adds chaos or drags the tape, rolling reverses or stutters,
+  the joystick adds rolls, dives, crush and drive, and knocking on the box triggers a fill. A 16-step grid chops the
+  break by hand, and takes of up to eight seconds can be sampled from the mic, the USB sound card input or WRECK itself.
+  The README says no recording of anyone else's break is bundled. Boards on the radio link keep the same beat. The README
+  says the latest build has so far run only in the simulator; an earlier build ran on a board.
+status: active
+authors:
+  - name: Yaniv Schonfeld (Willbear)
+    url: https://github.com/willbearfruits
+source: https://github.com/willbearfruits/samplooler/tree/main/instruments/wreck
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Covered by the repository LICENSE, GPL version 3 with no per-file later-version grant seen in the sources.
+homepage: https://willbearfruits.github.io/samplooler/#instruments
+distribution: browser-installer
+install_notes: >-
+  Install it from the project page in Chrome or Edge, or with the Samplooler Library desktop app, and flash the
+  Samplooler firmware back the same way. The settings and stored loops stay on the board. To build, use ESP-IDF 5.5.1 in
+  the instrument's firmware folder.
+brick_risk: false
+tags: [drum-machine, breakcore, sampler, chopper, esp32-s3, open-hardware]
+versions:
+  - version: main @ 6a44bb2
+    date: 2026-10-19
+    url: https://github.com/willbearfruits/samplooler/commit/6a44bb2
+    notes: No tagged releases; this is the latest commit touching the instrument, and the README dates its build to 2026-10-16.

@@ -1,0 +1,32 @@
+name: CDJ-3000
+manufacturer: AlphaTheta
+category: other
+tagline: DJ multi player with a 9-inch touchscreen, jog wheel display and hot cue pads
+description: >-
+  The CDJ-3000 is a DJ media player sold under the Pioneer DJ brand, now owned by AlphaTheta. It
+  plays tracks from USB drives, SD cards and linked rekordbox libraries, shows waveforms on a 9-inch touch
+  screen, and has a jog wheel with a display, eight hot cue pads, loop controls and a tempo fader. It runs a Linux application called EP122 on one of two hardware
+  variants (Renesas or Rockchip RK3399).
+platform: Renesas or Rockchip RK3399 (aarch64 Linux)
+stock_firmware: "3.22"
+links:
+  manufacturer: https://www.pioneerdj.com/en/product/dj-players-turntables/cdj-3000/
+  community:
+    - label: cdj3k-mods documentation
+      url: https://cdj3k-mods.com
+notes: >-
+  Firmware updates are USB .UPD files installed from the deck's utility menu. The one community project here
+  installs as a .UPD that adds files to the deck's update overlay without writing the read-only
+  root file system, and a service-mode key combination or a removal .UPD takes it off again. Installing it
+  voids the warranty, and its author advises against using a test build on a deck you depend on.
+related: []
+image:
+  src: /images/devices/alphatheta-cdj-3000.webp
+  style: photo
+  alt: "Pioneer DJ CDJ-3000 seen from the front at an angle: black DJ player with a large touch screen showing a waveform, a round jog wheel with a display, hot cue pads, and CUE and play buttons"
+  width: 1200
+  height: 1146
+  credit: AlphaTheta (Pioneer DJ)
+  license: manufacturer product image
+  source_url: https://www.pioneerdj.com/en/product/dj-players-turntables/cdj-3000/
+  original_url: https://www.pioneerdj.com/product-images/1990/d5163a7c-29d0-4d89-b7e7-3c98b01551f4/CDJ-3000_frontangle.webp

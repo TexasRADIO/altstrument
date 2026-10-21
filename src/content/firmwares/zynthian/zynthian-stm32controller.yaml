@@ -1,0 +1,45 @@
+device: zynthian
+name: zynthian-stm32controller
+kind: tool
+summary: Firmware for an STM32 Blue Pill board that adds a master volume knob to a Zynthian over USB, plus a host service on the Raspberry Pi that sets the ALSA mixer volume. Third-party add-on from 2018.
+description: >-
+  Joost Nieuwenhuijse wrote this as an I/O expander for Zynthian built around
+  the STM32F103C8T6 Blue Pill, connected over USB, with a master volume control
+  as the main aim. The firmware reads one potentiometer on an analog input and
+  reports it as a vendor HID device. A small C++ service on the Pi reads the
+  reports and sets the ALSA mixer volume, installed as a systemd unit by the
+  build script. Prebuilt firmware images exist for linear and logarithmic
+  potentiometers, and an update script flashes the board from the Pi through
+  the STM32duino bootloader. The README describes soldering a cut USB cable to
+  the Pi's internal USB pads and a resistor fix that most Blue Pill boards
+  need. The repository belongs to the author; the zynthian organization holds
+  an older fork of it.
+status: dormant
+authors:
+  - name: Joost Nieuwenhuijse
+    url: https://github.com/joostn
+source: https://github.com/joostn/zynthian-stm32controller
+source_status: open
+license: GPL-3.0-only
+license_notes: LICENSE.txt is the GPLv3 text; the source files have no license headers, so no "or later" grant was found.
+homepage: https://github.com/joostn/zynthian-stm32controller
+distribution: download
+install_notes: >-
+  The STM32duino bootloader must first be flashed with an SWD programmer or a
+  USB-serial converter. After that, clone the repository on the Zynthian, run
+  build.sh to install the host service and updatefirmware.sh to flash the
+  board over USB. Most Blue Pill boards need a resistor change on the USB
+  pull-up, and the USB connection is wired inside the case. Written for 2018
+  ZynthianOS and not checked against current releases.
+tags: [hardware, stm32, usb, arduino, controller]
+image:
+  url: https://raw.githubusercontent.com/joostn/zynthian-stm32controller/master/doc/hardware.jpg
+  alt: Blue STM32 Blue Pill board connected by a USB cable and wired to a slide potentiometer, the volume control hardware for a Zynthian
+  credit: Joost Nieuwenhuijse
+  source_url: https://github.com/joostn/zynthian-stm32controller
+  first_party: true
+versions:
+  - version: master @ 9238fcd
+    date: 2018-08-31
+    url: https://github.com/joostn/zynthian-stm32controller/commit/9238fcd
+    notes: No tagged releases; this is the latest commit.

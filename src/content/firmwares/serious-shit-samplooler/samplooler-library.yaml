@@ -1,0 +1,31 @@
+device: serious-shit-samplooler
+name: Samplooler Library
+kind: tool
+summary: Desktop app that lists the Samplooler instruments, installs any of them on a Stack over USB, restores the Samplooler firmware, and shows a connected board's settings and log. Tauri app, built from source; Linux first.
+description: >-
+  The app reads the instrument list from the project page or a local folder and caches what it downloads, so a firmware
+  can be installed again offline. A board running one of the firmwares is found by its MIDI port name and asked over
+  SysEx to restart into download mode. The app then checks that the serial port's MAC matches that board and writes the
+  bootloader, partition table and program, leaving the settings and stored loops alone. It will not open boards that are
+  not from this project. It also installs a build from a folder of the user's own, and for the Samplooler, WRECK, MANTRA and
+  HUFF it shows and changes settings over MIDI. The roadmap lists ready-made Linux packages next, then macOS and Windows.
+status: active
+authors:
+  - name: Yaniv Schonfeld (Willbear)
+    url: https://github.com/willbearfruits
+source: https://github.com/willbearfruits/samplooler/tree/main/app
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Cargo.toml says GPL-3.0 and the repository LICENSE is GPL version 3.
+homepage: https://github.com/willbearfruits/samplooler/blob/main/app/README.md
+distribution: source-only
+install_notes: >-
+  Build with stable Rust and the Tauri 2 requirements for the platform (webkit2gtk 4.1, gtk 3 and libsoup 3 on Linux)
+  using cargo build --release in app/src-tauri. No prebuilt downloads are listed yet.
+tags: [librarian, flasher, editor, desktop, tauri, rust, esp32-s3]
+versions:
+  - version: main @ ef9eb25
+    date: 2026-10-19
+    url: https://github.com/willbearfruits/samplooler/commit/ef9eb25
+    notes: No tagged releases; this is the latest commit touching the app folder. Cargo.toml says 0.1.0.

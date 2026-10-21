@@ -17,14 +17,14 @@ status: active
 authors:
 - name: narti_live
   url: https://instagram.com/narti_live
-source: https://github.com/netroxic/fm1-fm-plaits
+source: https://github.com/Narti-Live/fm1-fm-plaits
 source_status: open
 license: GPL-3.0-only
 license_notes: >-
   The README and manual state GPL-3.0 with the FM1 SDK linking exception (M-VAVE's FM1 Open terms); there is no LICENSE
   file in the repository. Plaits-derived code keeps its MIT notice, and the installer is fm1-base's (MPL-2.0). Source
   is a zip in the repository (FM1_FM_PLAITS_v1_source.zip), built on M-VAVE FM1 Open V14.
-homepage: https://netroxic.github.io/fm1-fm-plaits/
+homepage: https://narti-live.github.io/fm1-fm-plaits/
 distribution: browser-installer
 install_notes: >-
   One-button web installer on the project site, which arms M-VAVE's FM1 Open updater and can write M-VAVE's original V15
@@ -34,13 +34,13 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, generative, sequencer, wavetable, physical-modeling, fx, reverb, delay, lfo, midi, emulator]
 image:
-  url: https://netroxic.github.io/fm1-fm-plaits/img/sound_string.png
+  url: https://narti-live.github.io/fm1-fm-plaits/img/sound_string.png
   alt: "FM-PLAITS sound page at 120 BPM: the STRING engine name in large yellow type above a white waveform, a decaying low pass gate curve, and HARMONIC, TIMBRE, MORPH and FREQ values at the bottom"
   credit: narti_live
-  source_url: https://netroxic.github.io/fm1-fm-plaits/
+  source_url: https://narti-live.github.io/fm1-fm-plaits/
   first_party: true
 versions:
 - version: main @ 2884f45
   date: 2026-10-19
-  url: https://github.com/netroxic/fm1-fm-plaits/commit/2884f45
+  url: https://github.com/Narti-Live/fm1-fm-plaits/commit/2884f45
   notes: No tagged releases; this is the latest commit.

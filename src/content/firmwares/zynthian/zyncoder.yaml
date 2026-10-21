@@ -1,0 +1,48 @@
+device: zynthian
+name: zyncoder
+summary: Official C library with Python bindings that reads the Zynthian encoders, switches and analog inputs, drives its audio output chips and runs the MIDI router and master output code used by zynthian-ui.
+description: >-
+  zyncoder sits between the Zynthian hardware and the user interface. It reads
+  the push encoders, buttons, infinite potentiometers, ADS1115 analog inputs and
+  time-of-flight sensors through GPIO and the MCP23008 and MCP23017 expanders,
+  with a separate control map for each board generation (V5, V-series, Z2 and
+  Mini V2). It also sets volume on the LM4811 and TPA6130 headphone amplifiers
+  and holds the MIDI router and a JACK client for the master audio and MIDI
+  output, which the UI calls through the zyncore Python module. An emulation layer lets the UI run on a desktop
+  without the GPIO.
+
+  The repository is tagged alongside each ZynthianOS point release, and the
+  vangelis branch carries current development. It is built as part of
+  ZynthianOS; the README gives a build.sh script that needs liblo and, for real
+  hardware, wiringPi.
+status: active
+authors:
+  - name: Zynthian project
+    url: https://zynthian.org/
+  - name: Fernando Moyano (jofemodo)
+    url: https://github.com/jofemodo
+  - name: Brian Walton (riban-bw)
+    url: https://github.com/riban-bw
+  - name: Contributors
+    url: https://github.com/zynthian/zyncoder/graphs/contributors
+source: https://github.com/zynthian/zyncoder
+source_status: open
+license: GPL-2.0-or-later
+license_notes: LICENSE.txt is the GPLv3 text; the source file headers grant "version 2 of the License, or any later version".
+homepage: https://github.com/zynthian/zyncoder
+distribution: download
+install_notes: Included in ZynthianOS and rebuilt by its update scripts. Building by hand needs liblo, and wiringPi for use on real hardware.
+tags: [official, library, c, python, gpio, encoder, midi]
+versions:
+  - version: vangelis-2610.1
+    date: 2026-09-21
+    url: https://github.com/zynthian/zyncoder/tree/vangelis-2610.1
+    notes: Git tag; no GitHub release page. Date of the tagged commit.
+  - version: oram-2601.1
+    date: 2026-01-14
+    url: https://github.com/zynthian/zyncoder/tree/oram-2601.1
+    notes: Git tag; no GitHub release page. Date of the tagged commit.
+  - version: oram-2511.0
+    date: 2025-09-22
+    url: https://github.com/zynthian/zyncoder/tree/oram-2511.0
+    notes: Git tag; no GitHub release page. Date of the tagged commit.

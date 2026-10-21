@@ -1,0 +1,31 @@
+name: MIDI2CV
+manufacturer: elkayem
+category: other
+tagline: DIY Arduino Nano MIDI to CV converter with note, gate, trigger, velocity and clock outputs
+description: >-
+  MIDI2CV is a home-built MIDI to control voltage converter published as a schematic and Arduino sketch by
+  Larry McGovern (elkayem). An Arduino Nano reads MIDI through an optocoupler and drives two MCP4822 12-bit
+  DACs with op-amp buffering. The outputs are note CV at 1 V per octave over 88 keys, pitch bend, velocity,
+  one control change, trigger, gate and a clock pulse per quarter note. The author fitted it into a
+  home-built analog synthesizer.
+platform: ATmega328P (Arduino Nano)
+links:
+  manufacturer: https://github.com/elkayem/midi2cv
+  community:
+    - label: Morphanaut fork with MIDI channel routing
+      url: https://github.com/Morphanaut/midi2cv
+notes: >-
+  A DIY build with no manufacturer: the repository holds the Arduino sketch, an Eagle schematic and build photos.
+  Note priority (highest, lowest or last note) is chosen with a jumper or switch on the board. The Morphanaut
+  fork keeps the hardware unchanged and adds sketches that give outputs their own MIDI channels.
+related: []
+image:
+  src: /images/devices/elkayem-midi2cv.webp
+  style: photo
+  alt: "Home-built MIDI2CV converter: a black front panel with a MIDI DIN input and blue banana jacks for Note, Pitch, Ctrl, Gate, Trig, Clock and Vel, wired to a perfboard carrying an Arduino Nano and chips"
+  width: 640
+  height: 480
+  credit: Larry McGovern (elkayem)
+  license: project photo, published in the official midi2cv repository
+  source_url: https://github.com/elkayem/midi2cv
+  original_url: https://raw.githubusercontent.com/elkayem/midi2cv/master/images/IMG_0776.JPG

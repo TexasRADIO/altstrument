@@ -1,0 +1,30 @@
+device: elkayem-midi2cv
+name: midi2cv
+summary: Arduino sketch for a DIY MIDI to CV converter with note, pitch bend, velocity, control change, trigger, gate and clock outputs, plus selectable note priority.
+description: >-
+  A single Arduino sketch using the standard MIDI and SPI libraries to drive two MCP4822 DACs. Note CV covers 88
+  keys at 1 V per octave, pitch bend is centred at 0.5 V, velocity and one control change number run from 0 to
+  4 V, and the trigger, gate and clock outputs are 5 V pulses or levels. Note priority is read at start-up from a
+  three-pin header or switch. The repository also holds the Eagle schematic and build photos. The author last
+  pushed in 2018, and the sketch has been forked many times.
+status: dormant
+authors:
+  - name: Larry McGovern
+    url: https://github.com/elkayem
+source: https://github.com/elkayem/midi2cv
+source_status: open
+license: GPL-3.0-or-later
+license_notes: The sketch header grants GPL version 3 or any later version; the repository LICENSE file is the GPL-3.0 text.
+homepage: https://github.com/elkayem/midi2cv#readme
+distribution: source-only
+install_notes: >-
+  Build the circuit from the schematic, then compile midi2cv.ino in the Arduino IDE for an Arduino Nano and
+  upload it. The README advises 1% resistors for the note output gain and says tuning can be trimmed with the
+  NOTE_SF constant.
+brick_risk: false
+tags: [midi, cv-converter, cv-gate, arduino]
+versions:
+  - version: master @ 1626113
+    date: 2018-06-30
+    url: https://github.com/elkayem/midi2cv/commit/1626113
+    notes: No tagged releases; this is the latest commit.

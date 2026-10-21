@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: FM-1 Pulses
+kind: tool
+summary: >-
+  Browser generator that builds a bank of 16 sixty-four-step sequences from LFO, distribution and quantizer
+  settings and writes them into the FM-1's sequencer patterns over MIDI on the Baud Girl firmware.
+description: >-
+  The earlier project that FM-1 Pulses (Felucca) was forked from. A signal chain of clock, gate probability,
+  sample and hold, LFO, distribution and quantizer fills a loop buffer, and a Drift control moves the settings
+  across the sixteen slots. The pattern write uses a SysEx message that the README says exists only in the
+  Baud Girl (FM-1+VA) firmware, and it is refused while the FM-1's sequencer is playing. On any other
+  firmware the page works as a live MIDI sequencer that plays through a small FM synth in the browser as well as
+  the unit. It runs from the hosted page without a build step, can be installed as a web app, and holds 20
+  scale presets. The pattern encoding was checked byte by byte against the Virtual-FM-1 emulator's codec and on
+  hardware, according to the README.
+status: active
+authors:
+- name: mene311
+  url: https://github.com/mene311
+source: https://github.com/mene311/fm1-pulses
+source_status: open
+license: unspecified
+license_notes: No LICENSE file or license statement in the repository.
+homepage: https://mene311.github.io/fm1-pulses/
+requires_stock: Baud Girl FM-1+VA for pattern writes
+install_notes: >-
+  Use the hosted page in a Web MIDI browser such as Chrome, or serve the folder locally (python3 -m http.server).
+  Freeze and Send all 16 overwrite the unit's sequencer patterns, and Clear all 16 empties them; the page asks
+  first. Stop the FM-1's sequencer before writing.
+brick_risk: false
+tags: [generative, sequencer, editor, midi]
+versions:
+- version: mvp-1
+  date: 2026-10-04
+  url: https://github.com/mene311/fm1-pulses/tree/mvp-1
+  notes: Git tag; no GitHub release page.

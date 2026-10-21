@@ -10,8 +10,9 @@ description: >-
   a step-drummer, sample capture, and a changelog of RC and beta versions. RC2
   adds the custom synth engine's sample mode and custom scales, and RC2.02 adds
   a modulation matrix for the built-in synth and a split keyboard across any two
-  note tracks. The latest beta adds master filter resonance and bypass keys on
-  the FX view and has not been tested on hardware. The repository also
+  note tracks. RC2.04 to RC2.06 are bug-fix releases, and the latest beta
+  adds a four-operator FM oscillator for the MIDI-track synth and has not been
+  tested on hardware. The repository also
   holds builders, emulators and illustrated manuals in Spanish and English.
   Each release candidate has an "S" variant without features that write to the
   SD card by themselves. The author says the project was developed with Claude.
@@ -38,6 +39,34 @@ install_notes: >-
   touched: Scales + Preset + Note at power-on returns to the official firmware.
 tags: [sequencer, fx, midi, performance, ui, synth-engine]
 versions:
+  - version: B3.17
+    date: 2026-10-21
+    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/395d9e6
+    notes: Beta; RC2.06 plus a four-operator FM oscillator for the MIDI-track synth and per-project storage of that synth's settings, not yet tested on hardware. Date is from the changelog.
+  - version: RC2.06S
+    date: 2026-10-21
+    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/6950c3a
+    notes: RC2.06 without the features that write to the SD card by themselves.
+  - version: RC2.06
+    date: 2026-10-21
+    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/6950c3a
+    notes: Fixes a note left sounding when two pads of the same note are held at once. Date is from the changelog.
+  - version: RC2.05S
+    date: 2026-10-21
+    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/15b7009
+    notes: RC2.05 without the features that write to the SD card by themselves.
+  - version: RC2.05
+    date: 2026-10-21
+    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/15b7009
+    notes: Fixes a hang when the custom scale is changed while the transport is running. Date is from the changelog.
+  - version: RC2.04S
+    date: 2026-10-21
+    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/3feb586
+    notes: RC2.04 without the features that write to the SD card by themselves.
+  - version: RC2.04
+    date: 2026-10-21
+    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/3feb586
+    notes: Count-in follows the project tempo, and recorded notes of 16 steps or more are no longer cut short. Date is from the changelog.
   - version: B3.3
     date: 2026-10-19
     url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/ec565999808ca219bcf7a6271f3cf8d681db75d1

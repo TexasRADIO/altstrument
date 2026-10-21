@@ -1,0 +1,43 @@
+device: roland-jx-10
+name: Super-JX-10 V4 Vecoven Editor (SysEx)
+kind: tool
+summary: Teensy 4.1 sketch for a DIY front panel that edits a headless Roland JX-10 assigner board over MIDI SysEx, with patch, tone and arpeggiator pages, a display, MIDI menus and an SD card patch store.
+description: >-
+  The author built JX-10 internals into a CME UF-70 MIDI controller chassis and
+  wrote this editor as the replacement front panel. The README says the editor
+  controls the JX-10 over SysEx and talks to an assigner board that has no
+  front panel or display attached. The sketch drives a small colour display,
+  buttons, encoders and sliders through MCP23017 expanders, and the source has
+  pages for patch, tone, MIDI and arpeggiator settings, patch naming and bank
+  handling. The README lists limits: master tune, the pedal button and the C1
+  and C2 controllers cannot be reached, so the pedal, C1 and C2 are meant to be
+  routed through the controller or the Teensy's analog inputs. The repository
+  name points at the Vecoven 4.x firmware, though the README does not state a
+  version. The repository holds only source and one photo, with no schematics,
+  and it is a personal build rather than a packaged product.
+status: active
+authors:
+  - name: Craig Barnes (craigyjp)
+    url: https://github.com/craigyjp
+source: https://github.com/craigyjp/Super-JX-10-V4-Vecoven-Editor-SysEx
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file and no license statement in the README or source headers.
+distribution: source-only
+install_notes: >-
+  Build the sketch in src/ for a Teensy 4.1 with the Arduino IDE and Teensyduino.
+  The code is written for the author's own panel wiring and a headless JX-10
+  assigner, so it will not run unchanged on other hardware. Nothing is flashed
+  to the synth.
+tags: [editor, sysex, teensy, hardware, vecoven, diy]
+image:
+  url: https://raw.githubusercontent.com/craigyjp/Super-JX-10-V4-Vecoven-Editor-SysEx/main/Photos/synth.jpg
+  alt: Bare circuit board front panel with rows of sliders, small knobs, buttons and LEDs, and a display at the left reading a dual-mode patch named Electric Piano 1
+  credit: Craig Barnes
+  source_url: https://github.com/craigyjp/Super-JX-10-V4-Vecoven-Editor-SysEx
+  first_party: true
+versions:
+  - version: main @ 81c3b08
+    date: 2026-04-26
+    url: https://github.com/craigyjp/Super-JX-10-V4-Vecoven-Editor-SysEx/commit/81c3b08
+    notes: No tagged releases; this is the latest commit.

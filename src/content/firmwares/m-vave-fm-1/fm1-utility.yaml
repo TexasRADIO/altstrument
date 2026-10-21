@@ -1,0 +1,29 @@
+device: m-vave-fm-1
+name: FM-1 Utility
+kind: tool
+summary: >-
+  Closed web app for the FM-1 that edits DX7 voice parameters live over SysEx, controls the effects chain on the
+  effect MIDI channel, previews banks and has a piano-roll sequencer and a passive MIDI monitor.
+description: >-
+  Runs in Chrome or Edge with Web MIDI. The voice page edits the standard DX7 parameter set on the unit while it plays and
+  can mute operators for diagnosis. The effects page uses the FM-1's documented MIDI controller map on the separate effect
+  channel and notes that the effect order set on the unit cannot be changed over MIDI. A cartridge browser loads a DX7 bank or
+  single-voice SysEx file, and a bank page maps 32 voices onto FM-1 presets for local editing. The piano-roll sequencer plays
+  the FM-1 from the browser, and an experimental mode records into it, turning every note into a sixteenth-note step. A
+  passive monitor only listens. The page links a second site, fm1-librarian.pages.dev, as a dedicated librarian. No author
+  name or source repository is given; the page has a Buy Me a Coffee link and a feedback form.
+status: active
+authors:
+- name: Unknown
+  url: https://fm1-utility.pages.dev/
+source_status: closed
+license: unspecified
+license_notes: >-
+  A hosted bundle with no source repository, no license text and no author credit.
+homepage: https://fm1-utility.pages.dev/
+distribution: browser-installer
+install_notes: >-
+  Needs Chrome or Edge on a computer with Web MIDI; open the page, press Connect FM-1 and allow SysEx. It does not flash
+  firmware. The page says the passive monitor never changes the synth.
+brick_risk: false
+tags: [editor, librarian, sequencer, midi, web]

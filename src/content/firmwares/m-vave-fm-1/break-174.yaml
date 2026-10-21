@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: BREAK//174
+summary: >-
+  Jungle and drum-and-bass instrument for the FM-1: a generated break at 166 BPM with fills, reverse and dub-throw
+  effects, bass, pads and FM keys, built on Dinghy. An alpha that its README says has not been tried on the hardware.
+description: >-
+  Plays eight synthesized drum voices in seven break families, with variations from a repeatable seed, three sound
+  profiles, a sub bass, chords and an atmosphere control. Fills, repeats from 1/16 to 1/64, reverse, half-rate, gate,
+  pitch-down and dub-throw effects work on a recording of the previous bar, and eight scenes change on the bar line. The
+  drum samples are generated from noise, resonators and envelopes at build time, and the author states that no recorded
+  breaks are used. A browser build runs the same C core with sound. The platform layer comes from Dinghy, which is
+  built on Felucca and SLOOP. The README says the 0.2.0 alpha has passed automated checks only.
+status: active
+authors:
+- name: EremanSim
+  url: https://github.com/EremanSim
+source: https://github.com/EremanSim/Fm1dnbchatgpt
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and docs/upstream/DINGHY-LICENSING.md. The sound_lab/vendor/fm1_open directory holds source
+  files from M-VAVE's open-source fm1_open, with its licence and third-party notices, for audio auditions that are not part of the firmware. The
+  JieLi SDK files are read from the user's own SDK checkout at build time.
+homepage: https://eremansim.github.io/Fm1dnbchatgpt/
+distribution: download
+install_notes: >-
+  Written in Russian. The package releases/break174-0.2.0-alpha.fwsc is installed with tools/fm1_install.py over
+  USB, which shows the device and asks for confirmation. The README says the USB install has not been run on hardware
+  and advises keeping a known working firmware ready; the update and recovery code is inherited from Dinghy.
+brick_risk: true
+tags: [drums, sequencer, generative, performance, emulator, fx]
+versions:
+- version: main @ 86f16fd
+  date: 2026-10-18
+  url: https://github.com/EremanSim/Fm1dnbchatgpt/commit/86f16fdf5301310093b5dce797a4d4d95d182c64
+  notes: No tagged releases; this is the latest commit. The repository holds the 0.2.0-alpha package.

@@ -1,0 +1,24 @@
+name: D-70
+manufacturer: Roland
+category: synth
+tagline: 1990 Super LA synthesizer with PCM card slots and a backlit graphic LCD
+description: >-
+  The D-70 is a keyboard synthesizer from Roland's Super LA line, released in
+  1990. Each patch is built from four tones that can be layered or split, and
+  the unit is six-part multitimbral. A 240 by 64 pixel LCD shows its pages, four
+  faders on the left of the panel can be assigned to parameters such as level,
+  cutoff and resonance, and PCM cards add waveforms. An Intel 80C196 CPU runs
+  the program, which is stored on two EPROM chips.
+platform: Intel 80C196KB
+stock_firmware: "1.11"
+links:
+  manufacturer: https://www.roland.com/global/support/by_product/d-70/
+  community:
+    - label: Wikipedia article
+      url: https://en.wikipedia.org/wiki/Roland_D-70
+notes: >-
+  The one project here, Rosetta OS, is built from a dump of your own EPROMs and
+  runs from two newly burned chips that replace the originals, so installing it
+  means opening the case and swapping chips. It expects stock version 1.11 and
+  checks the dump against known hashes. Keep the original EPROMs to return to
+  stock. Roland's own firmware is not hosted here.

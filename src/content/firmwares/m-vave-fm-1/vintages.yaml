@@ -4,6 +4,9 @@ summary: >-
   Early Melodee fork for a synthesizer-only FM-1: no sequencer or arpeggiator, four sound banks, a layer and split
   mode and a retro boot screen.
 description: >-
+  Rights warning: the repository bundles the 64 Casio CZ-1 factory tones and the 200 Sequential Prophet-5/10 factory
+  programs (v1.03) as SysEx sound data, inherited from Melodee. Its licensing file states the rights stay with Casio and
+  Sequential and that no licence is granted.
   The repository description says synths only, with no SEQ or ARP and four sound banks. The nightly branch, which
   carries most of the work, names four banks (DX7, Prophet-5, Juno-106 and CZ/SID), a dual-layer and keyboard-split
   mode with a split point set from the keys, a DX7 voice bank compiled in from four 32-voice cartridge dumps, and
@@ -17,8 +20,11 @@ source: https://github.com/jazzfolderPARLA/VintageS/tree/nightly
 source_status: open
 license: GPL-3.0-only
 license_notes: >-
-  Inherited from Melodee and Felucca. The compiled-in DX7 factory-cartridge voices and Melodee's CZ-1 and
-  Prophet-5 factory data are sound data with no licence of their own stated.
+  Inherited from Melodee and Felucca. The compiled-in DX7 factory-cartridge voices and Melodee's CZ-1 and Prophet-5
+  factory data are sound data with no licence of their own stated. The repository bundles the CZ-1 factory tones
+  (assets/cz1-factory) and Sequential's Prophet-5/10 factory programs v1.03 (assets/prophet5-factory) as sound data;
+  LICENSING.md and the folders' READMEs say no licence is granted for them by this project and that the rights stay with
+  Casio and Sequential.
 distribution: source-only
 install_notes: >-
   No release is published. Build with the repository's build.sh (JieLi toolchain and AC79 SDK) or take the

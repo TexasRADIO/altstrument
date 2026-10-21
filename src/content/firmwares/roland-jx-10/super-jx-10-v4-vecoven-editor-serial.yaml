@@ -1,0 +1,42 @@
+device: roland-jx-10
+name: Super-JX-10 V4 Vecoven Editor (Serial)
+summary: Teensy 4.1 sketch for a DIY assigner, editor and patch manager that sends tone data over a serial line to the JX-10 voice boards in place of the stock assigner. Early; the README says the voice board connection is still to be tested.
+description: >-
+  This is the second approach by the same author, after a SysEx-based panel.
+  The README says that after seeing an MKS-70 edited over a serial link wired
+  to its voice cards, the author chose to bypass the JX-10 assigner and build a
+  new assigner, editor and patch manager for JX-10 voice boards fitted into a
+  CME UF-70 chassis. The sketch sends tone parameters out of a serial port at
+  the MIDI baud rate and also handles notes, hold, the arpeggiator, chase play,
+  patches, tone loading and MIDI settings, with a display, buttons, encoders
+  and sliders read through MCP23017 expanders. The repository includes PDF
+  schematics for the buttons, sliders, MCP23017 boards and programmer. The
+  README calls the project early days and says the author was nearly ready to
+  connect the assigner to the voice cards, so hardware results are not
+  recorded.
+status: active
+authors:
+  - name: Craig Barnes (craigyjp)
+    url: https://github.com/craigyjp
+source: https://github.com/craigyjp/Super-JX-10-V4-Vecoven-Editor-Serial
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file and no license statement in the README or source headers.
+distribution: source-only
+install_notes: >-
+  Build the sketch in src/ for a Teensy 4.1 with the Arduino IDE and Teensyduino.
+  It replaces the assigner board, so it only applies to a custom build that
+  wires the JX-10 voice boards to the Teensy as described in the schematics.
+  It is not an update for a stock or Vecoven-equipped JX-10.
+tags: [editor, assigner, teensy, hardware, schematic, vecoven, diy]
+image:
+  url: https://raw.githubusercontent.com/craigyjp/Super-JX-10-V4-Vecoven-Editor-Serial/main/photos/synth.jpg
+  alt: Bare circuit board front panel with rows of sliders, small knobs, buttons and LEDs, and a display at the left reading a dual-mode patch named Electric Piano 1
+  credit: Craig Barnes
+  source_url: https://github.com/craigyjp/Super-JX-10-V4-Vecoven-Editor-Serial
+  first_party: true
+versions:
+  - version: main @ cff3140
+    date: 2026-06-07
+    url: https://github.com/craigyjp/Super-JX-10-V4-Vecoven-Editor-Serial/commit/cff3140
+    notes: No tagged releases; this is the latest commit.

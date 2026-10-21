@@ -5,6 +5,9 @@ summary: >-
   Standalone app and VST3/AU/LV2 plugin that plays the FM-1's FM engine and syncs presets and patterns both
   ways with an FM-1 running FM-1+VA, Felucca, SLOOP or Melodee.
 description: >-
+  Rights warning: the vendored Melodee and ChoralRoot engines in the repository include the 64 Casio CZ-1 factory tones
+  and the 200 Sequential Prophet-5/10 factory programs (v1.03) as sound data, compiled into the plugin's generated
+  headers. Its third-party notice states the rights stay with Casio and Sequential and that no licence is granted.
   Uses the Dexed-derived msfa engine, with a DX7-style editor, the FM-1's effects chain, a 64-step
   sequencer and an arpeggiator that follow the host transport. Each instance is set to one firmware: M-VAVE
   stock, baud girl's FM-1+VA, Felucca, SLOOP or Melodee. Felucca, SLOOP and Melodee run from their own
@@ -20,8 +23,10 @@ source: https://github.com/jbschooley/Virtual-FM-1
 source_status: open
 license: GPL-3.0-or-later
 license_notes: >-
-  Vendored Felucca, SLOOP and Melodee are GPL-3.0-only. The Melodee sources include Casio CZ-1 tones and
-  Sequential Prophet-5 programs as sound data, with no licence granted (see THIRD_PARTY.md).
+  Vendored Felucca, SLOOP and Melodee are GPL-3.0-only. The Melodee sources include Casio CZ-1 tones and Sequential
+  Prophet-5 programs as sound data, with no licence granted (see THIRD_PARTY.md). The data sits in
+  engines/*/upstream/assets (cz1-factory, prophet5-factory); THIRD_PARTY.md says the rights stay with Casio and
+  Sequential and that the app carries them the way Melodee does.
 distribution: download
 install_notes: >-
   Installers on the releases page (macOS pkg, Windows exe, Linux tarball) are unsigned; the OS will warn

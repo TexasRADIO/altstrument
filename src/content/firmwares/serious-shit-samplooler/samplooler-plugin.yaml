@@ -1,0 +1,30 @@
+device: serious-shit-samplooler
+name: Samplooler plugin
+kind: tool
+summary: JUCE VST3 and standalone plugin that shows and sets the Samplooler Stack's parameters over USB MIDI from a computer.
+description: >-
+  The plugin takes and sends MIDI so a DAW or the standalone build can display the board's settings and change them, using
+  the board's USB MIDI and USB sound card connection. It is built with JUCE 8.0.13 and has to be compiled with CMake;
+  the repository publishes no binaries. The project's own site lists it among the computer features. It sits in a
+  separate folder with its own AGPL license because JUCE requires that.
+status: active
+authors:
+  - name: Yaniv Schonfeld (Willbear)
+    url: https://github.com/willbearfruits
+source: https://github.com/willbearfruits/samplooler/tree/main/plugin
+source_status: open
+license: AGPL-3.0-only
+license_notes: >-
+  The plugin folder has its own LICENSE, GNU Affero General Public License version 3, which the README says JUCE
+  requires. The rest of the repository is GPL-3.0.
+homepage: https://willbearfruits.github.io/samplooler/
+distribution: source-only
+install_notes: >-
+  Build with CMake; JUCE 8.0.13 is fetched during configure unless a local checkout is passed. Formats are VST3 and
+  Standalone.
+tags: [editor, vst3, juce, usb-midi, esp32-s3]
+versions:
+  - version: main @ f98a6ad
+    date: 2026-10-19
+    url: https://github.com/willbearfruits/samplooler/commit/f98a6ad
+    notes: No tagged releases; this is the latest commit touching the plugin folder. The CMake project says 0.1.0.

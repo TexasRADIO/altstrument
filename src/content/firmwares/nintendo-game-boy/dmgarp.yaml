@@ -1,0 +1,51 @@
+device: nintendo-game-boy
+name: DMGARP
+summary: Modal arpeggiator ROM for the original Game Boy with 28 scale banks, four-channel synthesis, a Euclidean kick, 8 battery save slots and a 4x4 preset matrix, written in RGBDS assembly.
+description: >-
+  A 32 KB ROM that plays an arpeggio from a chosen scale and root note, with
+  ascending, descending, ping-pong and random patterns, tap tempo with swing and
+  five gate modes. The 28 scale banks cover church modes, harmonic-minor modes,
+  Messiaen modes and Ethiopian pentatonic scales. Channel 2 plays the arpeggio,
+  channel 1 adds a companion voice such as an octave, a detuned unison or a
+  fixed interval, channel 3 plays wavetable shapes, and channel 4 supplies
+  accent, fill and tonal drum parts. A Euclidean kick runs on channel 1. Ten
+  pages of parameters take effect immediately, WILD and MILD randomise them,
+  and the cartridge's battery RAM holds eight save slots, each with its own
+  matrix of 16 presets. The author reports it running on DMG hardware from an
+  EMS 64M flash cartridge.
+status: active
+authors:
+  - name: Kenn Hartwig
+    url: https://kennhartwig.de/instruments.html
+source: https://github.com/kennhartwig/dmgarp
+source_status: open
+license: MIT
+homepage: https://kennhartwig.de/instruments.html
+distribution: download
+requires_stock: Flash cartridge, or an emulator
+install_notes: >-
+  Download dmg-arp.gb from the latest release and open it in an emulator or
+  write it to a flash cartridge. The repository documents flashing an EMS USB
+  64M Smart Card with a patched ems-flasher on Linux. Some EMS 64M units fail to
+  enable battery RAM under the 32 KB header, so the repository includes an SRAM
+  test ROM to run first. Build with make setup and make build.
+brick_risk: false
+tags: [arpeggiator, chiptune, sequencer, drums, euclidean, scales, performance]
+image:
+  url: https://raw.githubusercontent.com/kennhartwig/dmgarp/main/screenshots/screenshot_dmgarp_01.png
+  alt: DMGARP's first page on the Game Boy screen, headed Church Modes with Dorian selected and a list of controls for note, pattern, speed, gate, octave, mode, attack, stride, range and wave
+  credit: Kenn Hartwig
+  source_url: https://github.com/kennhartwig/dmgarp#screenshots
+  first_party: true
+versions:
+  - version: v38.5
+    date: 2026-10-20
+    url: https://github.com/kennhartwig/dmgarp/releases/tag/v38.5
+    notes: Fixes a blank or garbled screen at power-on on some consoles by selecting ROM bank 1 before reading from it.
+  - version: v38.2
+    date: 2026-07-07
+    url: https://github.com/kennhartwig/dmgarp/releases/tag/v38.2
+    notes: Adds the 4x4 preset matrix with a matrix saved per slot.
+  - version: v37.1
+    date: 2026-06-09
+    url: https://github.com/kennhartwig/dmgarp/releases/tag/v37.1

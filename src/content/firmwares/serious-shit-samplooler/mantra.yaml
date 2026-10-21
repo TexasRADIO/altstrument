@@ -1,0 +1,32 @@
+device: serious-shit-samplooler
+name: MANTRA
+summary: Formant-singing instrument firmware for the Samplooler Stack, with chants, overtone singing, a public-domain "Daisy Bell" and an optional wall of amps. Tilt, roll, flat turns and knocks shape the voice.
+description: >-
+  MANTRA sings through its own formant engine rather than any speech program's code. Sounds include OM, monks, OM MANI,
+  khoomei, sygyt, kargyraa and "Daisy Bell" in sung, hummed and 8-bit versions, plus three settings that bring in a held,
+  fuzzed chord with feedback. Tilting the box changes the vowel, rolling it changes the pitch, laying it flat walks the
+  overtone up the harmonics and knocking triggers a singing bowl. The mic can send the player's own voice through the
+  same mouth, and holding REC loops the result. The README says the chant ran on a board, and the amp section has so
+  far been heard only in the simulator.
+status: active
+authors:
+  - name: Yaniv Schonfeld (Willbear)
+    url: https://github.com/willbearfruits
+source: https://github.com/willbearfruits/samplooler/tree/main/instruments/mantra
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Covered by the repository LICENSE, GPL version 3 with no per-file later-version grant seen in the sources.
+homepage: https://willbearfruits.github.io/samplooler/#instruments
+distribution: browser-installer
+install_notes: >-
+  Install it from the project page in Chrome or Edge, or with the Samplooler Library desktop app, and flash the
+  Samplooler firmware back the same way. The settings and stored loops stay on the board. To build, use ESP-IDF 5.5.1 in
+  the instrument's firmware folder.
+brick_risk: false
+tags: [synth-engine, vocal, formant, drone, esp32-s3, open-hardware]
+versions:
+  - version: main @ 6a44bb2
+    date: 2026-10-19
+    url: https://github.com/willbearfruits/samplooler/commit/6a44bb2
+    notes: No tagged releases; this is the latest commit touching the instrument, and the README dates its build to 2026-10-17 and 18.

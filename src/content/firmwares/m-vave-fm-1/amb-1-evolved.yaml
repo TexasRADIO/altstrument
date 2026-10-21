@@ -1,0 +1,44 @@
+device: m-vave-fm-1
+name: AMB-1 Evolved
+summary: >-
+  Generative ambient firmware derived from AMB-1: the same four layers and seven pages, extended to 64 sound
+  presets, 32 themes, 20 scales and five generator variants, with the colours and animations of Bunkai Wolf A1.
+description: >-
+  A separate branch of Charles Vestal's AMB-1, which is built on Felucca through X0X and FoMni. Pad, melody,
+  bass and pulse layers each choose from 16 sounds that are synthesis descriptions, not samples. Eight themes
+  come from AMB-1 and 24 are new, and each theme keeps its own state. The project site has an installer, a
+  German manual, a tutorial and listening examples that are host renderings of the firmware's C DSP, not
+  recordings of the hardware. Saving writes a new project format, so projects from AMB-1 and Wolf firmware are
+  not imported, and saving replaces the previous project content. The README says the owner tested build E1
+  on one FM-1 and that this is not a general endurance clearance. The text, site and manual are in German.
+status: active
+authors:
+- name: Kid Bunka (kidbee85-beep)
+  url: https://github.com/kidbee85-beep
+source: https://github.com/kidbee85-beep/AMB-1-Evolved
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSE and firmware/LICENSING.md. The platform layer comes from Felucca (GPL-3.0-only) as changed
+  for X0X, FoMni and AMB-1; Barlow Semi Condensed and Terminus fonts are SIL OFL 1.1. The AC79 SDK files are
+  read from your own checkout at build time and are not in the repository.
+homepage: https://amb1-evolved.sugarypixie10.chatgpt.site/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome over USB; it checks the package identifier and SHA-256 and writes only after you
+  confirm. It can return the unit to AMB-1 1.2 or, from a file you download from M-VAVE yourself, to stock
+  V15. A firmware return does not restore your music, so back it up first. The README warns that power loss
+  while flashing may not be recoverable.
+brick_risk: true
+tags: [generative, ambient, synth-engine, sequencer, performance]
+video:
+  url: https://youtu.be/ZruX8F7dTHU
+  title: "AMB-1 Evolved: Dein FM-1 als Ambient-Garten | 64 Sounds, Demo & Installation"
+  credit: Kid Bunka
+  first_party: true
+  found_via: https://github.com/kidbee85-beep/AMB-1-Evolved/releases/tag/E1
+versions:
+- version: E1
+  date: 2026-10-16
+  url: https://github.com/kidbee85-beep/AMB-1-Evolved/releases/tag/E1
+  notes: Package ID FM-1_7080001.

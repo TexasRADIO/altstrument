@@ -55,4 +55,4 @@ image:
   license: manufacturer product image
   source_url: https://shop.zynthian.org/shop/zynthian-v5-1-kit-383
   original_url: https://shop.zynthian.org/web/image/product.image/87/image_1920/Zynthian%20v5.1%20KIT?unique=b155001
-pinned: [zynthianos]
+pinned: [zynthianos, zynthian-ui, zyncoder, zynthian-controller]

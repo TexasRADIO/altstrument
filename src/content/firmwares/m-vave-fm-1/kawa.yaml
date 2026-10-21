@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: KAWA
+summary: >-
+  Six-track tracker for the FM-1 aimed at chiptune and IDM: pulse, 4-bit wave, noise, FM, drum and sample engines, tables,
+  groove, 32 live effects, a song chain and a screen in English, French or Spanish. Beta, untested on hardware.
+description: >-
+  Patterns of 16, 32 or 64 steps are written with the keys and chained into a song. Each track chooses an engine, and
+  every sound has an envelope, an effect, an LFO and a modulation page, with a drive on every track. Eight synthesized drum
+  kits and six generated breaks that can be cut into 16 slices are included, along with four user sample slots filled
+  through a browser importer. The FM track uses the msfa engine as ported in Felucca. The firmware is built on Dinghy,
+  Felucca and SLOOP, and a web emulator and a manual in three languages are published. The README says beta 0.5 has
+  not been tried on a real FM-1 and passes the checks that need no hardware.
+status: active
+authors:
+- name: Omnipotard (Guizmoh)
+  url: https://github.com/Guizmoh
+source: https://github.com/Guizmoh/Kawa-Tracker-Fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0-only. msfa is Apache-2.0, the fonts are SIL OFL 1.1, and the sounds are synthesized, with
+  no recordings. JieLi SDK files are read from the user's own SDK checkout at build time.
+homepage: https://guizmoh.github.io/Kawa-Tracker-Fm1/
+distribution: browser-installer
+install_notes: >-
+  Browser installer in Chrome, Edge or Opera over USB, or a launcher script for Windows, macOS or Linux that needs
+  Python 3. The package is checked before anything is erased and a cut install resumes at the next power-on. After two failed
+  starts the FM-1 opens a USB rescue, which OCT- held at power-on also opens. Going back to V15 uses M-VAVE's M-UPGRADE, and
+  KAWA projects are lost.
+brick_risk: true
+tags: [tracker, sequencer, chiptune, synth-engine, drums, sampler, fx, fm, emulator]
+image:
+  url: https://raw.githubusercontent.com/Guizmoh/Kawa-Tracker-Fm1/HEAD/manual/img/en/02-tracks.png
+  alt: "KAWA tracks page: a pattern grid with six coloured track columns headed by the pulse track, note names such as C-5 and E-5 down the rows, and a DEMO notice in the middle"
+  credit: Omnipotard (Guizmoh)
+  source_url: https://github.com/Guizmoh/Kawa-Tracker-Fm1
+  first_party: true
+versions:
+- version: main @ 047d21f
+  date: 2026-10-20
+  url: https://github.com/Guizmoh/Kawa-Tracker-Fm1/commit/047d21f6154ff6f86c7d3dc4b90f8d5e3320c300
+  notes: No tagged releases; this is the latest commit. The repository holds the 0.5 beta package.

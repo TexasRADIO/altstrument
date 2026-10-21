@@ -1,0 +1,69 @@
+device: sega-mega-drive
+name: MD.Tracker
+summary: Native tracker for the Mega Drive, Genesis and Nomad that drives the YM2612 FM and PSG chips and plays PCM samples, with saves in cartridge SRAM and a basic MIDI sync input; has a companion desktop editor for ROM sample banks.
+description: >-
+  Rights warning: the ROM's default sample bank (res/samples/samples_1.wav,
+  about 6.7 MB) and the drum WAV files under the tools folder have no stated
+  source or license, so their rights are unverified.
+
+  A tracker written with SGDK that runs on the console itself, with a pattern
+  matrix, a pattern editor and an instrument editor. It plays the FM channels,
+  PSG voices and DAC samples. Version 1.05 added an expandable save format, a
+  channel auto-glide command, FM channel 3 special-mode pitch commands and basic
+  MIDI start, stop and tempo sync through an Everdrive USB port or a USB-serial
+  adapter on controller port 2. The README lists BlastEm and the Mega Everdrive
+  Pro as the working targets and PicoDrive as partial, and builds come in
+  variants for different flash cartridges. The repository also holds a
+  wxWidgets desktop editor that converts samples and saves and imports vgi and
+  tfi instrument presets into a ROM, and a copy of the Mega Drive MIDI Interface
+  release.
+status: active
+authors:
+  - name: Corthax
+    url: https://github.com/corthax
+source: https://github.com/corthax/mdtracker
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The GPL-3.0 text is the repository's LICENSE file, with no or-later statement
+  found. The default sample bank and the WAV files under mdtracker_tools have no
+  stated source or license. The repository also bundles third-party parts under
+  their own terms: a Dual PCM driver binary, the MSU-MD driver, SGDK headers and
+  a zip of the Mega Drive MIDI Interface release.
+homepage: https://github.com/corthax/mdtracker
+distribution: download
+requires_stock: Flash cartridge, or an emulator
+install_notes: >-
+  Download MD.Tracker.zip from the latest release and copy a ROM to a flash
+  cartridge such as the Mega Everdrive Pro, or open it in BlastEm. The README
+  says rom-pro.bin is the main build and rom-blastem.bin has a modified header
+  for standalone BlastEm. Saves go to cartridge SRAM, and the desktop editor
+  converts saves from older versions. Building needs SGDK and Code::Blocks.
+brick_risk: false
+tags: [tracker, ym2612, psg, pcm, midi, editor]
+video:
+  url: https://www.youtube.com/watch?v=evPza2j4I88
+  title: Scythe of Luna - Stormthrashed Legacy【VOCALOID | MEGADRIVE CHIPTUNE | METAL | ORIGINAL | ALBUM】
+  credit: Scythe of Luna
+  first_party: true
+  found_via: https://github.com/corthax/mdtracker#readme
+versions:
+  - version: v1.5
+    date: 2026-07-12
+    url: https://github.com/corthax/mdtracker/releases/tag/v1.5
+    notes: Version 1.05 with expandable save format, MIDI sync input and a new editor.
+  - version: v1.4
+    date: 2023-12-20
+    url: https://github.com/corthax/mdtracker/releases/tag/v1.4
+  - version: v1.3
+    date: 2023-01-31
+    url: https://github.com/corthax/mdtracker/releases/tag/v1.3
+  - version: v1.2
+    date: 2022-11-10
+    url: https://github.com/corthax/mdtracker/releases/tag/v1.2
+  - version: v1.1
+    date: 2022-01-05
+    url: https://github.com/corthax/mdtracker/releases/tag/v1.1
+  - version: v1.0
+    date: 2021-12-05
+    url: https://github.com/corthax/mdtracker/releases/tag/v1.0

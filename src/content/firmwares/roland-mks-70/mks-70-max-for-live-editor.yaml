@@ -1,0 +1,35 @@
+device: roland-mks-70
+name: M4L MKS-70 (Max for Live editor)
+kind: tool
+summary: Max for Live device for Ableton Live that edits all parameters of the MKS-70 or JX-10 running Vecoven 4.x firmware over SysEx, separately for upper and lower tones, with two-way sync and edit buffer requests.
+description: >-
+  The device sends parameters as SysEx rather than NRPN because the author
+  found Live handles NRPN poorly, especially for automation. It is two-way:
+  incoming patch data is parsed so the controls show the synth's real values,
+  and the edit buffer can be requested, which the README says needs a Vecoven
+  4.19 build that was not public at the time. Vecoven 3.x only works for patch
+  parameters, not tones. The device holds no patches of its own, so sounds are
+  stored on the synth. The README says it was built because the Ctrlr panels do
+  not run as plug-ins in Live with hardware controllers. It names Live Suite 11
+  or 12 as the tested versions, and each numbered .amxd file in the repository
+  is one version of the device.
+status: active
+authors:
+  - name: markusschloesser
+    url: https://github.com/markusschloesser
+source: https://github.com/markusschloesser/M4L_MKS-70
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file and no license statement in the README. The .amxd files hold the editable Max patcher.
+distribution: download
+requires_stock: Vecoven 4.x firmware (3.x for patch parameters only)
+install_notes: >-
+  Needs Ableton Live Suite with Max for Live. Copy the newest .amxd file
+  (v38) onto a MIDI track. Store sounds on the synth itself, since the device
+  has no patch storage.
+tags: [editor, max-for-live, sysex, vecoven]
+versions:
+  - version: v38
+    date: 2026-04-13
+    url: https://github.com/markusschloesser/M4L_MKS-70/commit/d2b82c4429ab9a19afa68bc45e021420b1c96738
+    notes: Commit that added the v38 file, with small help text corrections; no GitHub release page.

@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: OpenIFW-fm1
+summary: >-
+  Port of OpenIFW, a browser wind synthesizer modelled on IFW, to the FM-1 as a monophonic synth with four
+  oscillators, modulation matrix, filters and effects. Experimental release candidate, not yet accepted on hardware.
+description: >-
+  Rights warning: the six factory programs come from rcell233's OpenIFW, and the repository says their names and
+  parameter values belong to STUDIO-R, the author of IFW, and are not relicensed under MIT or GPL. The synth
+  has four oscillators at twice the internal sample rate with sine, triangle, saw and pulse-width shapes, noise, sync and FM,
+  four envelopes, an eight-slot modulation matrix, two filters, two LFOs and a chain of effects. It is
+  monophonic with last-note priority, takes breath, vibrato, glide and sustain over USB MIDI CCs, and holds
+  three user programs. DSP was ported to fixed-point C, and the same C code runs in the browser demo. The window
+  layout and user-slot operations follow Ghoulbox, and the platform is Dinghy and Felucca. The README is in Chinese,
+  says the author had no FM-1 in the development environment, and reports from device feedback that 0.4.5 had
+  serious problems and that 0.4.6-rc1 had distortion. The latest candidate, 0.4.6-rc2, is marked untested on hardware.
+status: active
+authors:
+- name: rcell233
+  url: https://github.com/rcell233
+source: https://github.com/rcell233/OpenIFW-fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  New integration code is GPL-3.0-only (LICENSE, THIRD_PARTY_NOTICES.md). The DSP derives from OpenIFW, which is
+  MIT. The six factory programs in vendor/openifw/presets are credited to STUDIO-R and explicitly not relicensed
+  under MIT or GPL. Dinghy, Felucca, Ghoulbox and the SLOOP changes are GPL-3.0-only, fonts are SIL OFL 1.1, and
+  the AC79 SDK boot files in each package are Apache-2.0. Compiled .fwsc builds are committed in firmware-bin/.
+homepage: https://rcell233.github.io/OpenIFW-fm1/
+distribution: browser-installer
+install_notes: >-
+  Browser installer in desktop Chrome or Edge over USB, which checks the firmware's SHA-256, the package CRC and
+  the device model before writing and can resume an interrupted update. Back up your music first. If the
+  screen shows the OPENIFW FM1 USB RESCUE page, the installer page can reinstall the current build or the 0.4.4
+  and 0.4.1 recovery packages. Holding OCT- at power-on enters the USB rescue.
+brick_risk: true
+tags: [synth-engine, fm, midi, usb-midi, emulator, fx, oscillator]
+versions:
+- version: main @ 7bc74fb
+  date: 2026-10-21
+  url: https://github.com/rcell233/OpenIFW-fm1/commit/7bc74fb936055d4b721ece16e8bf8cc105985cd0
+  notes: No tagged releases; this is the latest commit, version 0.4.6-rc2.

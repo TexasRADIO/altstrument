@@ -1,0 +1,39 @@
+device: m5stack-cardputer
+name: C.P.S. (CardPuter Synth)
+summary: >-
+  Monophonic synth for the Cardputer ADV and original Cardputer with 12 waveforms, filter, FX tab, IMU control, a 16-step
+  sequencer, song mode, MIDI input and an optional distance-sensor theremin.
+description: >-
+  The oscillator section has 12 band-limited waveforms with a per-waveform Shape control, a second oscillator, a sub
+  oscillator and noise, followed by a biquad filter with its own envelope, an LFO and a stackable FX tab with ring
+  modulator, soft limiter, chorus, delay, reverb and bitcrush. Patches are saved to the microSD card and up to ten can be
+  assigned to morph slots. On the ADV the IMU can drive a long list of parameters by tilting the unit; the original Cardputer
+  uses key-driven pads instead, which the author has not tested on hardware. There is an arpeggiator, a 16-step
+  sequencer with tie, slide and accent, a pattern bank and a song arranger. An M5Stack Unit MIDI adds MIDI input and
+  clock sync, and a Unit ToF4M distance sensor works as a theremin. The voice is single-note. The README says the project
+  is written entirely by Claude from the author's descriptions. The same author's MORPHASE is a separate polyphonic FM
+  project.
+status: active
+authors:
+  - name: Tokagetchi
+    url: https://github.com/oldtokage-collab
+source: https://github.com/oldtokage-collab/C.P.S.--Cardputer-SYHNTH--
+source_status: open
+license: CC-BY-NC-SA-4.0
+license_notes: >-
+  The LICENSE file is the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 license, so commercial use is not
+  allowed. GitHub does not detect it automatically.
+distribution: download
+requires_stock: Cardputer ADV or original Cardputer; microSD card for patches and settings
+install_notes: >-
+  The README lists M5Burner (search for C.P.S.), the Launcher firmware's OTA search or a .bin copied to the SD card root,
+  and a PlatformIO build that also produces a merged image. A FAT32 microSD card is needed for patches, sequences and
+  songs; the app still starts without one. Ten factory patches are in the repository's Patch folder and go in /CPS/Patch/
+  on the card.
+brick_risk: false
+tags: [synth, monophonic, sequencer, arpeggiator, fx, midi, theremin, open-source]
+versions:
+  - version: v1.0
+    date: 2026-09-01
+    url: https://github.com/oldtokage-collab/C.P.S.--Cardputer-SYHNTH--/releases/tag/v1.0
+    notes: Described by the author as the official release; adds 12 waveforms, Shape, morph slots, an FX tab, MIDI, theremin support and tap tempo.

@@ -1,0 +1,37 @@
+device: synthstrom-deluge
+name: deluge-rs
+kind: tool
+summary: Rust library that reads, edits and writes Deluge synth and kit patch XML, hides the differences between the three XML schema versions, and models a Deluge card's folder layout. Last changed in 2023.
+description: >-
+  The crate defines typed Synth and Kit structures with constrained value types such as pan, transpose and clipping
+  amount, and loads patches written by older firmware versions as well as the current layout. It can create a card,
+  check the folder structure and find the KITS, SYNTHS and SAMPLES directories, and includes a path replacer for sample
+  references. The repository holds a large set of real patch files used by its tests. The author's deluge-kit-generator
+  (Rust) uses it as a git submodule. The crate is not on crates.io under this repository; a different crate named deluge
+  is published there.
+status: dormant
+authors:
+  - name: Iohann Rabeson
+    url: https://github.com/IohannRabeson
+source: https://github.com/IohannRabeson/deluge-rs
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file is GNU General Public License version 3, and the Cargo manifest has no license field or later-version
+  statement.
+distribution: source-only
+install_notes: >-
+  Add it as a git dependency in Cargo.toml. The library's test suite pulls a test-generator crate from a GitHub fork,
+  which only matters when running the tests.
+tags: [library, rust, patches, librarian]
+versions:
+  - version: main @ 22b8d90
+    date: 2023-06-12
+    url: https://github.com/IohannRabeson/deluge-rs/commit/22b8d902572cd9c1eabf15da9cecaa0c5aa13376
+    notes: No release since 0.2.0; this is the latest commit, a dependency bump.
+  - version: 0.2.0
+    date: 2022-04-02
+    url: https://github.com/IohannRabeson/deluge-rs/releases/tag/0.2.0
+  - version: 0.1.0
+    date: 2022-03-18
+    url: https://github.com/IohannRabeson/deluge-rs/releases/tag/0.1.0

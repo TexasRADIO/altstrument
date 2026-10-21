@@ -4,6 +4,8 @@ summary: >-
   ChoralRoot fork that adds a chord-set mode with 100 sets laid out after the chord set list in Roland's J-6
   manual, with set, genre, transpose, hold and phrase controls on the left keys.
 description: >-
+  Rights warning: the repository bundles the 64 Casio CZ-1 factory tones as SysEx sound data, inherited from Melodee.
+  Its licensing file states the rights stay with Casio and that no licence is granted.
   Keeps ChoralRoot's engines and features. With a chord set on, the left nine keys act as a set controller and
   the right keys play the set's twelve chords, with extensions and slash chords, and one list scrolls all 144
   sounds. A browser emulator and a simple chord player are on the project site. The README (mostly in Russian,
@@ -19,7 +21,9 @@ source_status: open
 license: GPL-3.0-only
 license_notes: >-
   README states GPL-3.0-only for the project; fonts, icons and SDK files keep their own licences (LICENSING.md).
-  Upstream ChoralRoot is catalogued under the same licence.
+  Upstream ChoralRoot is catalogued under the same licence. The repository bundles Casio's CZ-1 factory tones
+  (assets/cz1-factory) as sound data; LICENSING.md and the folder's README say no licence is granted for them by this
+  project and that the rights stay with Casio.
 homepage: https://eremansim.github.io/ChoralRootj-6/
 distribution: browser-installer
 install_notes: >-

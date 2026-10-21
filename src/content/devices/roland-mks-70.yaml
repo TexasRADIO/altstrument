@@ -20,4 +20,4 @@ notes: >-
   EPROM or a flash module, so it needs a chip swap rather than a software
   update. The original chip can be kept to go back to stock. The JX-10
   keyboard shares the same firmware family and has its own device page.
-related: [roland-jx-10]
+related: [roland-jx-10, roland-jx-8p]

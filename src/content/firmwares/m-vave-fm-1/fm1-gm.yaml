@@ -1,0 +1,52 @@
+device: m-vave-fm-1
+name: FM1-GM
+summary: >-
+  General MIDI sound module and 16-track sequencer for the FM-1: 128 sampled GM programs and a GM drum kit, 64 song slots, overdub
+  and step recording, bar editing, with a browser emulator and song editor.
+description: >-
+  The sounds are samples cut down from the Fluid R3 SoundFont (MIT) to about 424 KiB, one velocity layer per program,
+  stored as 4-bit ADPCM, with looped sustains. Tracks can use any of the 16 MIDI channels, with program, volume, pan, reverb,
+  transpose and velocity each, and MIDI in over USB and the TRS jack plays them. Songs are stored in flash and saved
+  power-safely. A web song editor with a piano roll can read and write song slots over USB and export Standard MIDI Files.
+  The firmware is built on Felucca through X0X and FoMni, with a new sound engine, sequencer and screens. The reduced
+  SoundFont is also in the repository as a standard .sf2 file.
+status: active
+authors:
+- name: jartificer
+  url: https://github.com/jartificer
+source: https://github.com/jartificer/fm1-gm
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0-only. The samples come from Fluid R3 GM by Frank Wen and Toby Smithe under the MIT License,
+  with the notice kept in assets/soundfont/LICENSE, so the bundled sample data is under its own permissive licence.
+homepage: https://jartificer.github.io/fm1-gm/
+distribution: browser-installer
+install_notes: >-
+  The project page installs over Web MIDI in Chrome, Edge or Opera, or tools/fm1_install.py installs the .fwsc from a release.
+  After two failed starts the firmware comes up in a safe mode with USB on, and after four it enters the chip's own update
+  mode, from which tools/fm1_rescue.py writes the stock firmware back with the FM-1 Transporter. OCT- and OCT+ held for five
+  seconds enters update mode. The author reports testing on a real FM-1.
+brick_risk: true
+tags: [sampler, sequencer, midi, usb-midi, editor, emulator]
+versions:
+- version: 0.9.6
+  date: 2026-10-21
+  url: https://github.com/jartificer/fm1-gm/releases/tag/v0.9.6
+  notes: Drum panning centred.
+- version: 0.9.5
+  date: 2026-10-20
+  url: https://github.com/jartificer/fm1-gm/releases/tag/v0.9.5
+  notes: Adds the web song editor and the device-editor protocol.
+- version: 0.9.1
+  date: 2026-10-19
+  url: https://github.com/jartificer/fm1-gm/releases/tag/v0.9.1
+  notes: Sample rate optimisation.
+- version: 0.9.0
+  date: 2026-10-19
+  url: https://github.com/jartificer/fm1-gm/releases/tag/v0.9.0
+  notes: Improves sample loops and renders the honky-tonk piano's chorus.
+- version: 0.8.0
+  date: 2026-10-18
+  url: https://github.com/jartificer/fm1-gm/releases/tag/v0.8.0
+  notes: First release.

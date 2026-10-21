@@ -1,0 +1,37 @@
+device: m-vave-fm-1
+name: dx7toFM1
+kind: tool
+summary: >-
+  Python script that splits a Yamaha DX7 32-voice bank (.syx) into single-voice .syx files named after each voice, for
+  FM-1 third-party firmware that imports one voice per file.
+description: >-
+  Reads a 4104-byte DX7 bank dump, unpacks each of the 32 bit-packed voices into the 155-byte single-voice layout, adds a new
+  header and the Yamaha 7-bit checksum, and writes a 163-byte file per voice. Files are named from the voice name stored in
+  the bank, with options for numbering, a prefix, underscores for spaces and an output folder. It can list a bank without
+  writing, handles several banks in one file and reports bad checksums as warnings. The tool runs on Python 3.8 or later with
+  no packages and has a round-trip self-test, and the README reports that the voice names it recovers from ROM1A match the official list. It works
+  only one way and does not merge voices back into a bank. The README does not name particular firmwares; it says only
+  that FM-1 third-party firmware imports one voice per file and not whole banks, and it points to a public collection of DX7
+  patch banks to start from. Whether a given firmware accepts the files is not shown in the repository.
+status: active
+authors:
+- name: s0fx2
+  url: https://github.com/s0fx2
+source: https://github.com/s0fx2/YamahaDX7_to_FM-1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file is the unmodified GPL-3.0 text, and no file states "only" or "or later". The README is in English and
+  Chinese, and the script's comments are in Chinese.
+homepage: https://github.com/s0fx2/YamahaDX7_to_FM-1
+distribution: source-only
+install_notes: >-
+  Run python3 dx7toFM1.py bank.syx; it only reads and writes files on the computer and never talks to the FM-1. Import
+  the resulting voice files with a firmware that accepts single-voice DX7 SysEx.
+brick_risk: false
+tags: [librarian, fm, utility, patch]
+versions:
+- version: main @ 21e3e26
+  date: 2026-10-21
+  url: https://github.com/s0fx2/YamahaDX7_to_FM-1/commit/21e3e26c0add9b3eeb8432600138c7d6e86bac91
+  notes: No tagged releases; this is the latest commit.

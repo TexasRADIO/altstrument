@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: MORPHEUS
+summary: >-
+  Eight-track ReBirth-style groovebox for the FM-1: two TB-303 voices, TR-808 and TR-909 kits, an eight-slice break
+  player, a two-operator FM lead, a sub synth and a MIDI-only track, sequenced from a Reason Matrix-style step grid.
+description: >-
+  Each of the eight tracks has its own pattern storage, step length (1 to 32 steps), step resolution and MIDI output
+  channel. The two 303 tracks use a diode-ladder model with Devilfish-style envelope controls and a RAT-style overdrive,
+  the 808 kit is a circuit model, and the 909 kit mixes synthesis with sampled cymbals. Selecting a drum track turns the
+  grid into a twelve-lane drum matrix. The break track slices a loop into eight parts and reorders them with the BB Gen
+  generator ported from schwung-breakbeat; the repository holds no break recordings. The engines come from the X0X DSP
+  suite, and the hardware layer and update loader from Felucca with SLOOP's changes. A browser emulator and an
+  illustrated manual are on the project site. The same author's HERA chord groovebox grew out of this firmware.
+status: active
+authors:
+- name: Ben Badio
+  url: https://github.com/benbadio
+source: https://github.com/benbadio/morpheus-fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0-only. Open303 is MIT; schwung-303, the dm-Rat distortion, 8W8, 9W9/ER-99 and the
+  schwung-breakbeat port are GPL-3.0, and the Terminus font is SIL OFL 1.1. The 909 hi-hat, ride and crash in assets/909
+  come from ER-99 via 9W9. No M-VAVE firmware image is in the repository.
+homepage: https://benbadio.github.io/morpheus-fm1/
+distribution: browser-installer
+install_notes: >-
+  Web MIDI installer in Chrome or Edge over USB, or tools/fm1_install.py with a .fwsc built from the source. The
+  installer page also offers a way back to M-VAVE's stock V15 firmware.
+brick_risk: true
+tags: [groovebox, sequencer, drums, acid, breakbeat, fm, emulator]
+versions:
+- version: main @ 945c40c
+  date: 2026-10-19
+  url: https://github.com/benbadio/morpheus-fm1/commit/945c40c
+  notes: No tagged releases; this is the latest commit. The README badge says v1.0.0.

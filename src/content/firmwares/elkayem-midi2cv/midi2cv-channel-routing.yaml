@@ -1,0 +1,31 @@
+device: elkayem-midi2cv
+name: midi2cv channel routing (Morphanaut fork)
+summary: Fork of elkayem's midi2cv that adds two sketches giving the converter's outputs their own MIDI channels, one with three channels and one with six.
+description: >-
+  Keeps the original sketch unchanged and adds midi2cv_three_channels and midi2cv_full_channels, both for the
+  original hardware, DAC scaling and voltage ranges. The three-channel sketch puts note CV, gate, velocity and
+  pitch bend on channel 1, the trigger pulse on channel 2 and control change CV on channel 3. The full sketch
+  gives note, gate, trigger, velocity, pitch bend and control change CV channels 1 to 6. Channel numbers are
+  constants near the top of each sketch, and MIDI clock stays global because it has no channel. The fork has two
+  commits from 2026-10-12.
+status: active
+authors:
+  - name: Morphanaut
+    url: https://github.com/Morphanaut
+source: https://github.com/Morphanaut/midi2cv
+source_status: open
+license: GPL-3.0-or-later
+license_notes: Inherited from the upstream elkayem/midi2cv repository; the sketch headers grant GPL version 3 or any later version and the fork keeps the LICENSE file.
+homepage: https://github.com/Morphanaut/midi2cv#readme
+distribution: source-only
+requires_stock: elkayem midi2cv hardware (Arduino Nano build)
+install_notes: >-
+  Choose a sketch folder, select Arduino Nano with the ATmega328P (Old Bootloader) option in the Arduino IDE
+  and upload it to the converter. The README names that setting as the one tested.
+brick_risk: false
+tags: [midi, cv-converter, cv-gate, arduino, fork]
+versions:
+  - version: master @ ed7c552
+    date: 2026-10-12
+    url: https://github.com/Morphanaut/midi2cv/commit/ed7c552
+    notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: TheReFmB1rth
+summary: >-
+  Acid groovebox for the FM-1 modelled on a two-bassline, two-drum-machine workflow: two 303-style bass voices, 808
+  and 909-style drums, A to H patterns with song chaining, a four-track mixer and performance effects.
+description: >-
+  Two independent monophonic bass synths with accent, slide and a ladder filter whose design follows Open303, and two
+  synthesized drum machines, with a 909 flam setting. Patterns A to H can be chained into a song, and four project
+  slots are kept in the FM-1's flash. A browser build runs the same groovebox state model and can read the device's
+  state back. The package flow is built on a pinned Felucca 1.0.5 commit. The README calls it experimental and reports
+  fixes to the bass filter response after hardware tests; releases are marked as prereleases. Bundled audio is limited
+  to sources that carry a redistributable licence, listed in samples/sources.json.
+status: active
+authors:
+- name: Alexander Seel
+  url: https://github.com/AlexanderSeel
+source: https://github.com/AlexanderSeel/TheReFmB1rth
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The repository has no LICENSE file. Source files carry SPDX-License-Identifier: GPL-3.0-only headers, and
+  UPSTREAM.md names Felucca (GPL-3.0-only) as the foundation. The bass filter follows Open303 (MIT), whose notice is in
+  docs/THIRD_PARTY_DSP.md.
+homepage: https://github.com/AlexanderSeel/TheReFmB1rth
+distribution: download
+install_notes: >-
+  Each prerelease publishes a .fwsc with a SHA-256 list. docs/FLASH_SAFETY.md says no custom firmware can guarantee
+  zero brick risk, to keep the official firmware path and the FM-1-transporter recovery procedure ready, and to
+  confirm the package hash before flashing. A browser loader that checks the release asset and its SHA-256 is part of
+  the repository, but no hosted page was online when this entry was written.
+brick_risk: true
+tags: [sequencer, synth-engine, drums, fx, emulator, performance]
+versions:
+- version: 0.1.0-beta.18
+  date: 2026-10-16
+  url: https://github.com/AlexanderSeel/TheReFmB1rth/releases/tag/v0.1.0-beta.18
+  notes: Prerelease; reworked hardware pages with direct keyboard routing to the bass voices.
+- version: 0.1.0-beta.17
+  date: 2026-10-15
+  url: https://github.com/AlexanderSeel/TheReFmB1rth/releases/tag/v0.1.0-beta.17
+  notes: Prerelease.
+- version: 0.1.0-beta.16
+  date: 2026-10-15
+  url: https://github.com/AlexanderSeel/TheReFmB1rth/releases/tag/v0.1.0-beta.16
+  notes: Prerelease.

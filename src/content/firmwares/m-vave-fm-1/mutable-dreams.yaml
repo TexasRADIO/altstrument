@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: Mutable Dreams
+summary: >-
+  Six-track generative instrument with eight engines taken from or modelled on Mutable Instruments' Plaits and
+  Rings, 65 editable biomes, 128 sound presets and a granular send, with a browser version of the engine.
+description: >-
+  Each of the six tracks can take any engine: selected Plaits drum, FM, virtual analog and harmonic models, a
+  Rings-style modal resonator and a choir voice written by the author. The 64 biomes (plus a blank one) set
+  up scales, Euclidean rhythms, probability, swing and accents, and four live macros reshape them while playing.
+  Tracks have their own filters, envelopes and granular sends, and the grain cloud can be frozen, reversed and
+  transposed. A browser instrument runs the firmware engine for playing and for editing and exporting patch files,
+  which stay in the browser and are not sent to the hardware. The device holds one saved state, and the granular
+  audio is not saved. The README lists a physical FM-1 test run with stress cases, a ten-minute soak and a return
+  to V15. The repository holds the release documents and source zips rather than a browsable source tree, and
+  the author describes it as selected algorithms, not complete module ports.
+status: active
+authors:
+- name: Kid Bunka (kidbee85-beep)
+  url: https://github.com/kidbee85-beep
+source: https://github.com/kidbee85-beep/mutable-dreams
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The combined program is offered under GPL-3.0-only (LICENSING-GPL.txt), in addition to an earlier MIT grant
+  by the author. The Plaits, Rings and stmlib parts are MIT, by Emilie Gillet and Mutable Instruments, with
+  their notices kept. fm1-base and the Felucca board support code are MPL-2.0, distributed with the application
+  under MPL section 3.3. Fonts are SIL OFL 1.1 and SDK-derived files Apache-2.0. The complete source is the
+  Mutable-Dreams-1.0-GPL-Source.zip file in the repository and the release.
+homepage: https://mutable-dreams.sugarypixie10.chatgpt.site/
+distribution: browser-installer
+install_notes: >-
+  Browser installer in desktop Chrome or Edge over USB, which checks the package fingerprint and the identity
+  after the restart, or the Python updater in the installer kit. Start from M-VAVE V15; the guide says to
+  restore V15 first if M-VAVE Open firmware is installed. A firmware change does not back up your project, so
+  save your own copy first. See the Recovery guide in the repository.
+brick_risk: true
+tags: [generative, ambient, synth-engine, drums, granular, sequencer, physical-modeling, emulator]
+video:
+  url: https://www.youtube.com/watch?v=PP6dAPAhIrQ
+  title: "Mutable Dreams 1.0 — Generative Ambient & Rhythms for the FM-1 | Full Tour"
+  credit: Kid Bunka
+  first_party: true
+  found_via: https://github.com/kidbee85-beep/mutable-dreams#readme
+versions:
+- version: v1.0
+  date: 2026-10-18
+  url: https://github.com/kidbee85-beep/mutable-dreams/releases/tag/v1.0
+  notes: Package ID FM-1_710010000.

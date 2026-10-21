@@ -1,0 +1,58 @@
+device: m-vave-fm-1
+name: 386DX KaraokeBot
+summary: >-
+  Singing-robot firmware: sings words from imported .kar or .mid files, or lines typed on the unit, to the notes you
+  play, with Keys, Bass and Drums tracks, a step sequencer, sixteen punch-in effects, a browser installer and an emulator.
+description: >-
+  Rights warning: the thirteen bundled songs are third-party MIDI and karaoke files whose origin and licence are not
+  stated, so the public-domain claim covers the compositions at most and not these particular sequences. A tribute to Alexei Shulgin's band 386 DX, which sang pop songs with text-to-speech voices over MIDI accompaniment. The voice is eSpeak NG's Klatt synthesizer with singing extensions, from the author's
+  separate 386 DX Engine project, and the screen shows a face whose mouth, eyes and head follow the sound. A song is a set of
+  lyric lines with one note per syllable plus three backing tracks of sixteen-step patterns; a chorus can be written once
+  and sung several times. The web page installs and updates the firmware, imports a karaoke or MIDI file into one of eight
+  song slots, downloads or deletes slots, lists what changed in each version and runs the firmware in the browser. Thirteen
+  standards described as public domain come with the page. The firmware also builds on Felucca, on Charles
+  Vestal's X0X synth, drum and effects code and browser emulator. The README says an FM-1 that keeps crashing
+  starts in a safe mode.
+status: active
+authors:
+- name: Chris Farrell (seajaysec)
+  url: https://github.com/seajaysec
+source: https://github.com/seajaysec/386-DX-FM1-KaraokeBot
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSE and LICENSING.md. eSpeak NG (GPL-3.0-or-later) is linked, and Felucca and Charles Vestal's X0X code
+  are GPL-3.0. The bundled songs are third-party MIDI and karaoke files that the project describes as public-domain
+  standards; the build script requires a source and licence for every song, but the library list in the repository carries
+  neither field and the files name only titles and, for two, a composer or a recording artist, so the claim is the
+  author's own. An old composition can be public domain while a later MIDI arrangement or karaoke file of it is not, and
+  none of the files names who made the sequence. Terminus and Barlow fonts are SIL OFL 1.1, and the three JieLi SDK files in each package are Apache-2.0.
+homepage: https://386dx.linecross.ing
+distribution: browser-installer
+install_notes: >-
+  Open the project page in Chrome or Edge with the FM-1 on USB and press Install; the page also keeps the firmware up to
+  date. Keep the unit charged and the cable in until it restarts. The first start of 386DX on a unit clears the eight song slots
+  and puts Greensleeves in slot 1; later installs keep the songs. An update that was cut off finishes when
+  you install again, and the README says installing is at your own risk. The releases also carry the .fwsc and an app image
+  with SHA256SUMS. The project states that no M-VAVE firmware is included.
+brick_risk: true
+tags: [voice, synth-engine, sequencer, drums, fx, emulator, performance, midi]
+video:
+  url: https://youtu.be/pwLnpyxqBS4
+  title: "Meet 386DX - The Singing Robot for FM-1!"
+  credit: line crossing
+  first_party: true
+  found_via: https://github.com/seajaysec/386-DX-FM1-KaraokeBot
+versions:
+- version: v1.0.2
+  date: 2026-10-19
+  url: https://github.com/seajaysec/386-DX-FM1-KaraokeBot/releases/tag/v1.0.2
+  notes: Long lyric lines break in two, and a rest of two bars or more shows a progress bar where the words go.
+- version: v1.0.1
+  date: 2026-10-18
+  url: https://github.com/seajaysec/386-DX-FM1-KaraokeBot/releases/tag/v1.0.1
+  notes: Better song importing and reliable saving of songs to their slots.
+- version: v1.0-RC
+  date: 2026-10-18
+  url: https://github.com/seajaysec/386-DX-FM1-KaraokeBot/releases/tag/v1.0-RC
+  notes: Public release candidate.

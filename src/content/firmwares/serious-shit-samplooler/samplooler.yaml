@@ -1,0 +1,40 @@
+device: serious-shit-samplooler
+name: Samplooler
+summary: Looper firmware for the Samplooler Stack. Hold the button to record up to 20 seconds, let go to loop, and tilt the board to change speed and direction, with tape or grain playback, 18 input voices, USB MIDI and USB audio.
+description: >-
+  Tipping the board forward plays the loop faster and tipping it back plays it in reverse, with an optional snap to
+  octaves and fifths. Rolling it sideways adds a tape delay to one side and a stutter to the other. TAPE mode ties pitch
+  to speed and GRAIN mode separates them. Optional input voices from the SING engine (autotune, harmonies, choir,
+  vocoder, echo) can process the signal before it records, and eight loops are stored on the board and kept through
+  updates. Several boards talk over an ESP-NOW radio link, sharing tempo, key and scale. USB carries MIDI and a
+  32 kHz sound card on one cable. The project page also runs the playback engine in a browser.
+status: active
+authors:
+  - name: Yaniv Schonfeld (Willbear)
+    url: https://github.com/willbearfruits
+source: https://github.com/willbearfruits/samplooler
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The repository LICENSE is GPL version 3 with no per-file later-version grant seen in the sources. The plugin folder
+  is AGPL-3.0, and the circuit boards, docs and pictures are CC BY-SA 4.0.
+homepage: https://willbearfruits.github.io/samplooler/
+distribution: browser-installer
+install_notes: >-
+  The project page has a flash button that needs Chrome or Edge on a computer. Hold BOOT while plugging the board in,
+  because the running firmware uses USB for MIDI and audio and the browser only finds the board in download mode. The
+  desktop app and tools/flash.sh write the bootloader, partition table and app without touching the settings and the
+  stored loops. To build from source, use ESP-IDF 5.5.1 (firmware/ folder).
+brick_risk: false
+tags: [looper, sampler, tilt, esp32-s3, usb-midi, usb-audio, open-hardware]
+image:
+  url: https://raw.githubusercontent.com/willbearfruits/samplooler/main/media/tour.gif
+  alt: Animation of the Samplooler screen in blue pixels on black, with a small round operator figure on a dotted tape line; the README says it runs forwards, backwards, with echoes and stutter
+  credit: Yaniv Schonfeld (Willbear)
+  source_url: https://github.com/willbearfruits/samplooler
+  first_party: true
+versions:
+  - version: main @ 93b483f
+    date: 2026-10-19
+    url: https://github.com/willbearfruits/samplooler/commit/93b483f67b0dc6330732da51d12177443580645b
+    notes: No tagged releases; this is the latest commit. The app and flasher report version 0.1.0.

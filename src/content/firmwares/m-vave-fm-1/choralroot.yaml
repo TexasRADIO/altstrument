@@ -4,6 +4,11 @@ summary: >-
   Telepathic Orchid-style chord instrument: one hand plays roots, the other shapes voicings, with key
   and performance modes, a bass line and a looper, on Felucca engines and the monome-grid ChoralRoot musical
   engine.
+description: >-
+  Rights warning: the repository bundles the 64 Casio CZ-1 factory tones and the 200 Sequential Prophet-5/10 factory
+  programs (v1.03) as SysEx sound data, which the default build compiles in as factory presets (the Prophet-5 list is
+  cut to 115 programs). Its licensing file states the rights stay with Casio and Sequential and that no licence is
+  granted.
 status: active
 authors:
 - name: Quixotic7
@@ -11,6 +16,11 @@ authors:
 source: https://github.com/Quixotic7/ChoralRootFM1
 source_status: open
 license: GPL-3.0-only
+license_notes: >-
+  The repository bundles the CZ-1 factory tones (assets/cz1-factory) and Sequential's Prophet-5/10 factory programs
+  v1.03 (assets/prophet5-factory, of which shipped.txt names the 115 compiled in) as sound data; LICENSING.md and the
+  folders' READMEs say no licence is granted for them by this project and that the rights stay with Casio and
+  Sequential.
 homepage: https://quixotic7.github.io/ChoralRootFM1/
 distribution: browser-installer
 install_notes: >-

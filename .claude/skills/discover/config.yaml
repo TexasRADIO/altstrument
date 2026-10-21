@@ -635,11 +635,10 @@ ignore:
     reason: Faust synth plugins that load on stock ZynthianOS; content, not firmware
     date: 2026-10-20
   - url: https://github.com/zynthian
-    reason: the Zynthian org is mostly forks of LV2 plugins and engines, sound data and site code; zynthian-ui, zynthian-webconf, zynthian-sys and zynthian-emuface are catalogued under zynthian
+    reason: the Zynthian org is mostly forks of LV2 plugins and engines, sound data and site code; zynthian-ui, zynthian-webconf, zynthian-sys and zynthian-emuface are catalogued under zynthian; zynthian-stm32controller is a stale fork of joostn/zynthian-stm32controller, which is catalogued
     date: 2026-10-20
     except:
       - https://github.com/zynthian/zynthian-controller
-      - https://github.com/zynthian/zynthian-stm32controller
       - https://github.com/zynthian/zyncoder
   - url: https://github.com/kikiisdead/minichord
     reason: unrelated NYU class project, a different Teensy 4.1 mini Omnichord build that shares the name
@@ -719,3 +718,18 @@ ignore:
   - url: https://github.com/guysoft/midistrum
     reason: Android strum app; phone software, not for the hardware
     date: 2026-10-20
+  - url: https://github.com/withakay/JX10_BCR2000
+    reason: README-only repo; the BCR2000 presets it describes were never committed (last commit 2017)
+    date: 2026-10-21
+  - url: https://openpatch.es/
+    reason: general Yamaha DX7 web patch utility; does not target the FM-1 or its firmwares
+    date: 2026-10-21
+  - url: https://github.com/itsjavi/dotmatrix
+    reason: browser chiptune apps that imitate Game Boy audio and export WAV/asm; no Game Boy ROM
+    date: 2026-10-21
+  - url: https://github.com/noema-lands/power-strike-teardown
+    reason: reverse-engineering notes and a tile reskin for a Master System game; not music software
+    date: 2026-10-21
+  - url: https://github.com/tracelistener/rd6-scatter
+    reason: commits Behringer's stock RD-6 firmware (RD-6_V1.0.5.syx, RD-6_V1.0.6.syx); redistributed stock firmware
+    date: 2026-10-21

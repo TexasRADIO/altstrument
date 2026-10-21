@@ -1,0 +1,28 @@
+name: Samplooler Stack
+manufacturer: Serious S.H.I.T.
+category: diy-platform
+tagline: Open ESP32-S3 tilt looper on two stacked boards, flashable with other instruments
+description: >-
+  The Samplooler Stack is a hand-built, open-hardware instrument by Yaniv Schonfeld (Willbear) of Serious S.H.I.T. in
+  Haifa. Two 94 x 46 mm boards sit on standoffs and carry an ESP32-S3 SuperMini, a PCM5102 DAC with a 3.5 mm line
+  output, an MPU-6050 tilt sensor, an INMP441 microphone, a 0.96 inch SSD1306 OLED, an encoder and a joystick, with
+  spare GPIOs broken out on pads and a Qwiic connector. It appears to a computer as a USB MIDI device and a USB sound
+  card. The Samplooler firmware turns it into a looper played by tilting it, and the same board can be flashed with
+  other instruments such as WRECK, MANTRA and HUFF.
+platform: ESP32-S3 (ESP32-S3 SuperMini, ESP32-S3FH4R2)
+links:
+  manufacturer: https://willbearfruits.github.io/samplooler/
+  community:
+    - label: Samplooler on GitHub
+      url: https://github.com/willbearfruits/samplooler
+    - label: Build guide
+      url: https://github.com/willbearfruits/samplooler/blob/main/docs/BUILD.md
+    - label: Manual
+      url: https://github.com/willbearfruits/samplooler/blob/main/docs/MANUAL.md
+notes: >-
+  The project calls itself early. Rev C boards have been made and run the firmware; the board files in the repository
+  are rev D, which was still being tested in October 2026. The project sells hand-built units on request and runs a
+  workshop where a kit is included. Firmware and tools are GPL-3.0, the plugin AGPL-3.0, and the circuit boards,
+  documents and pictures CC BY-SA 4.0. The repository has no photograph of a finished unit yet, only renders of the
+  board design, so this entry has no image.
+related: []

@@ -1,0 +1,32 @@
+name: JX-8P
+manufacturer: Roland
+category: synth
+tagline: 1985 six-voice analog polyphonic synthesizer from Roland
+description: >-
+  The JX-8P is a 61-key analog synthesizer released by Roland in 1985. It has
+  six voices with two digitally controlled oscillators each, velocity and
+  aftertouch response, a chorus and MIDI. Most parameters are edited with a
+  single slider and a table of parameter numbers, and the PG-800 programmer
+  adds dedicated sliders. A cartridge slot holds extra patch memory.
+links:
+  community:
+    - label: Wikipedia article
+      url: https://en.wikipedia.org/wiki/Roland_JX-8P
+    - label: Vecoven JX-8P firmware page
+      url: https://vecoven.com/jx8p/jx8p.html
+notes: >-
+  The Vecoven firmware replaces the synth's program EPROM with a flash module
+  that plugs into the same socket, so installing it means opening the case but
+  needs no soldering. The module has to match the board revision (A2 or A3)
+  of the instrument. The original EPROM can be kept to return to stock.
+related: [roland-jx-10, roland-mks-70]
+image:
+  src: /images/devices/roland-jx-8p.webp
+  style: photo
+  alt: "Front view of the Roland JX-8P synthesizer: a dark grey 61-key keyboard with a pitch bender on the left, rows of orange, blue and grey membrane buttons and a small display above the keys"
+  width: 800
+  height: 550
+  credit: Roland
+  license: manufacturer heritage image
+  source_url: https://www.roland.com/global/roland-50th-anniversary/1980s/
+  original_url: https://static.roland.com/promos/50th_anniversary/images/1980/JX-8P.jpg

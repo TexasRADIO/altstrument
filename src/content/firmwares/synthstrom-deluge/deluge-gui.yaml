@@ -1,0 +1,33 @@
+device: synthstrom-deluge
+name: deluge-gui
+kind: tool
+summary: Python desktop app for browsing a Deluge SD card, with tabs for the card, songs, kits, synths and samples and a sample player. Built on deluge-card and PySimpleGUI. Pre-alpha, last changed in 2022.
+description: >-
+  The app opens a card folder through deluge-card and lists its songs, kits, synths and samples in tables and a tree,
+  and can play a sample through the sound device. It was published to PyPI as version 0.1.1 and pins deluge-card
+  0.7.2, a version that still exists. The package metadata marks it pre-alpha and the README's feature list says TODO.
+  Settings and the card path are kept with PySimpleGUI's user settings, and the app stops if no card path was saved.
+status: dormant
+authors:
+  - name: Chris Chamberlain (mupaduw)
+    url: https://github.com/mupaduw
+source: https://github.com/mupaduw/deluge-gui
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README and pyproject.toml state GPL-3.0-only and the LICENSE file is GPL version 3; GitHub does not detect the file
+  automatically.
+homepage: https://mupaduw.github.io/deluge-gui
+distribution: download
+install_notes: >-
+  pip install deluge-gui, then run the delgui script. It needs Python 3.8 or 3.9 era dependencies (PySimpleGUI 4.x,
+  SoundFile, sounddevice, numpy and pydel). Newer Python versions are untested.
+tags: [librarian, python, gui, samples]
+versions:
+  - version: v0.1.1
+    date: 2022-07-26
+    url: https://github.com/mupaduw/deluge-gui/releases/tag/v0.1.1
+    notes: First release on PyPI.
+  - version: v0.1.0
+    date: 2022-07-24
+    url: https://github.com/mupaduw/deluge-gui/releases/tag/v0.1.0

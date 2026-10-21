@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: Haunted FM-1
+summary: >-
+  Set of five generative firmwares for the FM-1 aimed at haunted ambient and dub-garage: Midnight Route, Voicemail, Untrue Step,
+  Half-Light and Worn Tape, each built around one organising idea and installable over any of the others.
+description: >-
+  Midnight Route lays out a song as a route of 16 stations with a density envelope per part. Voicemail plays chopped,
+  stuttered and reversed vocal fragments from formant voices in a call and answer. Untrue Step builds drums without a grid,
+  where every hit has a time in milliseconds and a spread. Half-Light moves chords by voice leading under a pressure that
+  builds and breaks, and Worn Tape records a short loop once and wears it away on each pass while new notes grow in the
+  gaps. SELECT and ALGORITHM take a different meaning in each, and the manual of each firmware lists every control. The five
+  share a DSP library with FM and formant voices, a plate reverb after Dattorro and a tape echo, and sit on the fm1-base
+  platform with felucca-bsp. The repository builds all five with GitHub Actions, runs scenarios on a host simulator,
+  builds browser emulators and publishes a flasher page. The repository does not say whether the firmwares have run on a
+  real FM-1.
+status: active
+authors:
+- name: David Ryan (davidpryan)
+  url: https://github.com/davidpryan
+source: https://github.com/davidpryan/haunted-fm1
+source_status: open
+license: MIT
+license_notes: >-
+  MIT covers the firmwares and the shared libraries (LICENSE). fm1-base and felucca-bsp are MPL-2.0 submodules, and the JieLi
+  SDK files the package needs are Apache-2.0 and fetched at build time. The reverb follows Jon Dattorro's published plate
+  design. No M-VAVE firmware file is in the repository; the flasher page links M-VAVE's own download for the way back to V15.
+homepage: https://github.com/davidpryan/haunted-fm1
+distribution: browser-installer
+install_notes: >-
+  Open the flasher page in Chrome or Edge with the FM-1 on USB, pick a firmware and press Install, or run
+  base/tools/fm1_install.py on the .fwsc from the release (needs mido and python-rtmidi). The page also writes M-VAVE's stock
+  firmware back from a file you download yourself. An FM-1 that fails to start twice comes up in a safe mode the installer
+  can reach, and one that does not start at all is recovered with felucca-bsp's rescue tool. Installing is at your own risk.
+brick_risk: true
+tags: [generative, ambient, sequencer, synth-engine, fx, reverb, delay, looper, chords, voice, emulator]
+versions:
+- version: '0.1'
+  date: 2026-10-21
+  url: https://github.com/davidpryan/haunted-fm1/releases/tag/v0.1
+  notes: First release; five packages, one per firmware.

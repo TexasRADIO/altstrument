@@ -1,0 +1,48 @@
+device: roland-d-70
+name: D-70 Rosetta OS
+summary: Work-in-progress replacement OS for the D-70, built by patching a dump of your own v1.11 EPROMs. It adds a boot animation, a ROSETTA OS menu with live synth edit pages, common sliders and a SysEx battery-RAM dump.
+description: >-
+  The build scripts read the two EPROM dumps from your unit and write two new
+  images for blank chips. The patched OS plays a 45-frame boot animation, starts
+  in a ROSETTA OS menu and has SYNTH pages that edit the four layers while you
+  play: wave, zone, pitch, filter, amp, both envelopes with a drawn curve, and
+  the LFO. Edits go through the stock SysEx parameter code. Four sliders can be
+  made common sliders that move one parameter on all four layers, and a tools
+  page sends the battery RAM out as SysEx. The ROM PLAY demo is removed to free
+  space. The README says the build runs on a real D-70 but not every page has
+  had a long session on hardware. The stated goal is a full replacement of the
+  stock OS, and today it is a patch on top of Roland's code. The author credits
+  Claude, an AI assistant, with the reverse engineering and tool code. A
+  homemade 80C196 assembler, disassembler and simulator are in the repository.
+status: active
+authors:
+  - name: JunkSmithWizard (yuyoi)
+    url: https://github.com/yuyoi
+source: https://github.com/yuyoi/D70-Rosetta-Os
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the repository only. The README says no Roland code or ROM data is
+  included, and the dumps folder is git-ignored; builds contain Roland's code
+  and should not be shared.
+distribution: patch-your-own
+requires_stock: "1.11"
+install_notes: >-
+  Dump both EPROMs from your own D-70 (IC4 holds the even bytes and IC9 the odd
+  ones) and read each twice to compare. The build script only accepts v1.11 and
+  checks both dumps by MD5. Run it to produce two images, burn them to new
+  27C512 chips, and swap them in with the originals kept aside. Hold EXIT at
+  power-on for the plain D-70 and EDIT for the boot menu. Not every page has
+  been used at length on hardware.
+tags: [eprom, ui, boot-splash, sysex, performance, research]
+image:
+  url: https://raw.githubusercontent.com/yuyoi/D70-Rosetta-Os/main/docs/synth_v05.png
+  alt: Six rendered D-70 LCD screens in dark blue on light blue - the ROSETTA OS menu and the wave, amp envelope, layers, filter and pitch pages
+  credit: JunkSmithWizard
+  source_url: https://github.com/yuyoi/D70-Rosetta-Os#readme
+  first_party: true
+versions:
+  - version: main @ f6740bb
+    date: 2026-10-21
+    url: https://github.com/yuyoi/D70-Rosetta-Os/commit/f6740bb8a7bdc562ed455be7439c47675751a2c0
+    notes: No tagged releases; this is the latest commit. The README calls the current build v0.5.

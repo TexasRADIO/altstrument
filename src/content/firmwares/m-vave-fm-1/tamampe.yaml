@@ -4,6 +4,9 @@ summary: >-
   Melodee fork adding MPE input: per-note pitch bend and channel pressure for FM6 sounds, with smart-macro MPE
   output and a browser emulator in progress on development branches.
 description: >-
+  Rights warning: the repository bundles the 64 Casio CZ-1 factory tones and the 200 Sequential Prophet-5/10 factory
+  programs (v1.03) as SysEx sound data, inherited from Melodee. Its licensing file states the rights stay with Casio and
+  Sequential and that no licence is granted.
   The default branch is currently an unchanged copy of an earlier Melodee state. The work is on the tamampe-dev
   and feature branches: note ownership for an MPE zone set by RPN 6, independent per-note pitch bend and pressure
   modulation for the FM6 engine in POLY mode, sustain and panic handling, and tests. Other branches add smart
@@ -16,7 +19,11 @@ authors:
 source: https://github.com/tamabotmusic/TamaMPE/tree/tamampe-dev
 source_status: open
 license: GPL-3.0-only
-license_notes: Inherited from Melodee and Felucca; Melodee's CZ-1 and Prophet-5 factory sound data keep their own terms (see Melodee).
+license_notes: >-
+  Inherited from Melodee and Felucca; Melodee's CZ-1 and Prophet-5 factory sound data keep their own terms (see
+  Melodee). The repository bundles the CZ-1 factory tones (assets/cz1-factory) and Sequential's Prophet-5/10 factory
+  programs v1.03 (assets/prophet5-factory) as sound data; LICENSING.md and the folders' READMEs say no licence is
+  granted for them by this project and that the rights stay with Casio and Sequential.
 homepage: https://github.com/tamabotmusic/TamaMPE/blob/tamampe-dev/docs/MPE_NOTES.md
 distribution: source-only
 install_notes: >-

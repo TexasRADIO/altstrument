@@ -1,0 +1,47 @@
+device: m-vave-fm-1
+name: Synthesthetic
+summary: >-
+  SLOOP-based firmware that adds 30 audio-reactive visualiser modes drawn from the sound on the FM-1's screen and sent over USB as a
+  320x180 webcam, in the manner of the Critter & Guitari EYESY, beside the groovebox, MIDI and USB audio. 0.1 beta.
+description: >-
+  The instrument side is SLOOP 2.7.1 with four tracks, twelve synth engines and a drum machine, and the visuals are new code.
+  The chip's second core draws scopes, spectra, geometric figures, drum shapes and feedback-warp effects from the audio, with
+  nine palettes, colour cycling, a fade between modes and an autopilot that changes the picture every 4 to 32 bars. A
+  thirty-first mode, SCREEN, sends the FM-1's own display instead. The unit shows up as a UVC camera named Synthesthetic next
+  to its USB MIDI and audio ports, the camera's brightness, saturation, contrast and hue controls turn the visualiser's knobs,
+  and an overlay can show tempo, bar and a title card. The web editor gains a page for the visual settings, and a Play page
+  runs the firmware as WebAssembly on a 3D FM-1. SLOOP is built on Felucca, and the project began on Dinghy. The handbook says
+  the webcam was tested on macOS only, and calls the release a beta.
+status: active
+authors:
+- name: Michael J. Smalley
+  url: https://github.com/michaeljsmalley
+source: https://github.com/michaeljsmalley/synthesthetic
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0-only for the project's own code and repeats Felucca's licensing notes, which still call the
+  Hügelton Sample Pack all rights reserved with an additional permission to combine it; Felucca's current README gives it as
+  CC0 1.0. msfa is Apache-2.0, the Terminus font is SIL OFL 1.1, and the sample sets in assets/samples-cc0 are CC0. The
+  repository's hip-hop sample pack for the user slots is CC0 except one electric piano set under CC BY 3.0 that needs credit
+  to its author. The three JieLi SDK files (Apache-2.0) are committed under vendor/ac79-sdk-min. No M-VAVE firmware image is in
+  the repository.
+homepage: https://michaeljsmalley.github.io/synthesthetic/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with the 0.1 package, from a unit running V15, Dinghy or
+  SLOOP. From any other firmware, go back to V15 with M-UPGRADE first. Holding OCT- while switching on opens a USB rescue
+  updater, which two boot crashes also open. The handbook calls it a beta to use at your own risk.
+brick_risk: true
+tags: [synth-engine, sequencer, drums, fx, usb-audio, usb-midi, midi, performance, editor, emulator]
+image:
+  url: https://raw.githubusercontent.com/michaeljsmalley/synthesthetic/main/docs/images/v3-modes-live.png
+  alt: "Contact sheet of the thirty visualiser modes in six rows of five, numbered and named from 1 WAVE to 30 FRESNEL: scopes, bar spectra, rings, tunnels, plasma and fire in bright colours on black"
+  credit: Michael J. Smalley
+  source_url: https://github.com/michaeljsmalley/synthesthetic/blob/main/HANDBOOK.md
+  first_party: true
+versions:
+- version: main @ dc3016b
+  date: 2026-10-21
+  url: https://github.com/michaeljsmalley/synthesthetic/commit/dc3016bdbda0f7a7bc3e98fb8d6c9940fc8863e1
+  notes: No tagged releases; this is the latest commit. The repository holds the 0.1 beta package in docs/firmware.

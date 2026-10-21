@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: Selva1
+summary: >-
+  SLOOP 2.7.1 with an added analog-style engine, SELVA1: two oscillators with classic waves, sub, noise, a tuned 24 dB ladder
+  filter, a filter envelope and 15 factory sounds. The same engine also runs in a browser and as a plugin.
+description: >-
+  The FM-1 firmware is SLOOP, so the sequencer, arpeggiator, slide and effects are SLOOP's, and SELVA1 is added as another
+  engine with eight voices that can run on either core. Filter and envelope pages and the HOME knobs control it, and
+  the boot screen and ABOUT page carry the Selva1 name. The author notes that SLOOP's official web editor will read the
+  drum track wrongly until it is adjusted, because the engine count changed. Oscillator and mixer settings come from
+  presets for now, and their own pages are planned. The same repository holds a wider Selva1 synthesizer with wavetable,
+  FM and noise oscillators, a modulation matrix and a sequencer, as a browser instrument and a VST3, AU and standalone
+  plugin. These are not catalogued, because the plugin does not edit the FM-1.
+status: active
+authors:
+- name: DeAbrew (deabrewcontato-code)
+  url: https://github.com/deabrewcontato-code
+source: https://github.com/deabrewcontato-code/Selva1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README says GPL-3.0, and firmware/ keeps SLOOP's and Felucca's GPL-3.0-only terms. The plugin uses JUCE 8 under AGPLv3
+  or a commercial licence. The bundled sample sets, from SLOOP, are CC0 recordings from VSCO-2 CE, VCSL and the Sonic Pi set,
+  plus Greg Sullivan's Wurlitzer samples under CC BY 3.0 in the hip-hop pack, with credits in the repository. Felucca's
+  icon atlas is a separate asset.
+homepage: https://deabrewmusic.com.br/selva1/
+distribution: browser-installer
+install_notes: >-
+  Written in Portuguese. Installer page in Chrome or Edge over USB, or tools/fm1_install.py with selva1-fm1-0.1.fwsc.
+  Hold OCT- while switching on for the USB rescue, and the installer's return-to-V15 option needs M-VAVE's own FM-1.fwsc
+  that you supply. The guide says the first install on a unit is the user's own test.
+brick_risk: true
+tags: [synth-engine, oscillator, filter, sampler, sequencer, drums, fx]
+versions:
+- version: 0.2.0
+  date: 2026-10-18
+  url: https://github.com/deabrewcontato-code/Selva1/releases/tag/v0.2.0
+  notes: Release of the plugin and the web page; the FM-1 package attached to it is selva1-fm1-0.1.fwsc.

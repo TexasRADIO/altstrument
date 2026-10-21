@@ -17,8 +17,10 @@ links:
 notes: >-
   The Vecoven firmware for this synth, which replaces the assigner ROM with an
   EPROM or flash module, is listed under the MKS-70 because the editors here
-  target the rack version. It supports both machines.
-related: [roland-mks-70]
+  target the rack version. It supports both machines. Entries here are tools
+  written only for the JX-10 itself, such as DIY front panels built around its
+  assigner and voice boards.
+related: [roland-mks-70, roland-jx-8p]
 image:
   src: /images/devices/roland-jx-10.webp
   style: photo

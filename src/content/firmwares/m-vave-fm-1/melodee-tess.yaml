@@ -4,6 +4,9 @@ summary: >-
   Fork of Melodee that adds algorithmic note generators to its four tracks (Turing, Euclid, Markov, Morph) with
   Evolve, Form and Tweak pages for mutating phrases and building song sections.
 description: >-
+  Rights warning: the repository bundles the 64 Casio CZ-1 factory tones and the 200 Sequential Prophet-5/10 factory
+  programs (v1.03) as SysEx sound data, inherited from Melodee. Its licensing file states the rights stay with Casio and
+  Sequential and that no licence is granted.
   Forked from Melodee (keremimo), which is itself built on Felucca. Each track either stays a step sequencer
   or runs one of the generator engines; the sound engines and effects are unchanged. Generator state is saved
   in its own flash object, and projects from stock Melodee load with the generators off. The README says it
@@ -16,7 +19,11 @@ authors:
 source: https://github.com/Rastapopolix/melodee-tess
 source_status: open
 license: GPL-3.0-only
-license_notes: Inherited from Melodee; original copyright and SPDX headers are kept.
+license_notes: >-
+  Inherited from Melodee; original copyright and SPDX headers are kept. The repository bundles the CZ-1 factory tones
+  (assets/cz1-factory) and Sequential's Prophet-5/10 factory programs v1.03 (assets/prophet5-factory) as sound data;
+  LICENSING.md and the folders' READMEs say no licence is granted for them by this project and that the rights stay with
+  Casio and Sequential.
 homepage: https://rastapopolix.github.io/melodee-tess/webapp/sim/
 distribution: browser-installer
 install_notes: >-
