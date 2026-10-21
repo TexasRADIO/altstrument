@@ -2,17 +2,26 @@ device: m-vave-fm-1
 name: PIGEON
 summary: >-
   Felucca 1.5.1 derivative that turns the FM-1 into an audio-only performance sampler: two chopped song samples
-  and a 16-pad drum kit, a 64-step sequencer, patterns and arrangement, with a browser emulator and sample tool.
+  and a 16-pad drum kit, USB audio sampling, a 64-step sequencer and piano roll, patterns and arrangement, with
+  a browser emulator and sample tool.
 description: >-
   PIGEON removes the synth engines and builds the instrument around samples. Two song samples (indexed mono
-  MP3 or IMA ADPCM) and a 16-pad drum kit share 408 KiB of flash. Each song takes up to 32 chops with transient
-  detection, per-chop pitch, envelope, one-shot, hold, loop and latch settings. A paged step grid of up to 64
-  steps per track records live or by step, with microtiming, conditions, probability and repeats, and feeds
-  patterns A to D and a 16-section arrangement. A three-track mixer, filter, delay, chorus, reverb, distortion
-  and compression sit on top. Samples are prepared in a browser sample tool and sent over USB; a separate
-  browser emulator runs the firmware without a device. The installer reads the running firmware and refuses
-  Sloop, old Felucca betas and unknown builds, and the package adds a recovery boot stub adapted from
-  ChoralRoot. Hardware verification of the beta build is listed as pending in the repository.
+  MP3 or IMA ADPCM) and a 16-pad drum kit share 500 KiB of usable flash. Each song takes up to 32 chops with
+  transient detection, editable boundaries and playback point, forward or reverse playback, pitch in semitones
+  and cents, gain, loop crossfade, envelope, one-shot, hold, loop, latch and choke settings, plus chop queues
+  and tempo sync by playback speed. Version 0.5 records digital USB audio (mono 16-bit, 22.05 kHz, stored as
+  ADPCM) straight to the selected song or drum pad, with immediate or threshold start, time or bar limits, and
+  audition and trimming before an unsaved take is kept. Marked chops can be kept while unused source audio is
+  trimmed, and the bank compacted to reclaim space. A step grid and piano roll edit the same sequences, up to
+  64 steps per track and four notes per step, with live or chord step entry, microtiming, conditions,
+  probability, repeats, Euclidean fills and parameter locks, feeding patterns A to D and a 16-section
+  arrangement. A three-track mixer, filter, delay, chorus, reverb, distortion and compression sit on top, with
+  per-track MIDI channels, MIDI clock and screen-reader support through the FM-1 Screen Reader protocol. A
+  browser sample tool prepares banks, sessions and reusable chop collections and sends them over USB; a
+  separate browser emulator runs the firmware without a device and records its output to WAV or MP3. The
+  installer reads the running firmware and refuses Sloop, old Felucca betas and unknown builds, and the
+  package adds a recovery boot stub adapted from ChoralRoot. Tagged releases from 0.4.1 are built and attested
+  by Firmware Hub's shared GitHub workflow. The 0.4 scratch decks are not part of 0.5.
 status: active
 authors:
 - name: The Shrimp Blimp
@@ -29,14 +38,41 @@ requires_stock: V15
 install_notes: >-
   Web installer on the project site (desktop Chrome or Edge, USB), or tools/fm1_install.py from the
   repository. Return to official M-VAVE V15 with your current firmware's stock-return procedure first; the
-  installer refuses Sloop, Felucca 0.x betas and unrecognised firmware. Back up before installing or replacing
-  sample banks. Recovery notes are in docs/PIGEON_RECOVERY.md.
+  installer refuses Sloop, Felucca 0.x betas and unrecognised firmware. Back up a complete session before
+  updating: 0.3.1 cannot open 0.4 or 0.5 projects, and an older build is refused when it cannot preserve an
+  expanded 0.5 bank. Release packages can be checked with gh attestation verify as described in
+  docs/RELEASE_SIGNING.md. Recovery notes are in docs/PIGEON_RECOVERY.md.
 brick_risk: true
-tags: [sampler, sequencer, performance, drums, fx, emulator, editor]
+tags: [sampler, sequencer, performance, drums, fx, recording, usb-audio, midi, accessibility, emulator, editor]
 versions:
-- version: main @ abb62aa
-  date: 2026-10-15
-  url: https://github.com/TheShrimpBlimp/pigeon/commit/abb62aaeb951d449c0e9bcc76d43c84d3750d8c3
+- version: 0.5.0-beta.1
+  date: 2026-10-21
+  url: https://github.com/TheShrimpBlimp/pigeon/releases/tag/v0.5.0-beta.1
   notes: >-
-    No tagged releases; this is the latest commit. The project site offers a 0.1 beta candidate package, and
-    the repository lists hardware checks for it as pending.
+    Beta, billed as the final one. Adds USB audio sampling to the selected song or drum pad, keep-selected-chops
+    trimming and bank reclaim, 500 KiB of sample storage, per-chop playback point, reverse, cents, gain and
+    crossfade, browser chop collections and emulator WAV/MP3 recording. Scratch decks are removed. The
+    maintainer reports the hardware checklist complete; validation is in docs/PIGEON_V05_ACCEPTANCE.md.
+    Package pigeon-0.5.0-beta.1.fwsc, SHA-256
+    a6cbb4fbd80baa38eb99400bb4bef5ddd5d4167024a8342189a07bc6b8861bed.
+- version: 0.4.1
+  date: 2026-10-19
+  url: https://github.com/TheShrimpBlimp/pigeon/releases/tag/v0.4.1
+  notes: >-
+    The 0.4 sampler rebuilt and attested by Firmware Hub's shared GitHub workflow; formats and flash layout
+    unchanged.
+- version: '0.4'
+  date: 2026-10-18
+  url: https://github.com/TheShrimpBlimp/pigeon/releases/tag/v0.4
+  notes: >-
+    Beta. Chop queues, per-note length and nudge in the piano roll, conditional fills, Euclidean rhythms,
+    pattern copy, per-track MIDI channels, experimental scratch decks and screen-reader support. 0.3.1 cannot
+    open 0.4 projects.
+- version: 0.3.1
+  date: 2026-10-16
+  url: https://github.com/TheShrimpBlimp/pigeon/releases/tag/v0.3.1
+  notes: Piano roll and up to four notes per step.
+- version: '0.3'
+  date: 2026-10-15
+  url: https://github.com/TheShrimpBlimp/pigeon/releases/tag/v0.3
+  notes: First tagged release. 496 KiB sample storage and Sample Loader 2.0.
