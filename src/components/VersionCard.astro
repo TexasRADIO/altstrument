@@ -16,7 +16,12 @@ const { row: r } = Astro.props;
     </h3>
     <p class="truncate text-muted">for <a href={r.device.url} class="relative">{r.device.data.name}</a></p>
     <p class="mt-auto flex items-baseline justify-between gap-3 text-xs">
-      <span class="mono truncate font-medium">{r.version.version}</span>
+      <span class="flex min-w-0 items-baseline gap-1.5">
+        <span class="mono truncate font-medium">{r.version.version}</span>
+        {r.more && (
+          <span class="shrink-0 text-muted" title={r.more.map((v) => v.version).join(', ')}>+{r.more.length} more</span>
+        )}
+      </span>
       <time class="mono shrink-0 text-muted" datetime={isoDate(r.date)}>{isoDate(r.date)}</time>
     </p>
   </div>

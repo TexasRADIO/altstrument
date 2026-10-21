@@ -3,13 +3,13 @@ import Base from '@/layouts/Base.astro';
 import VersionCard from '@/components/VersionCard.astro';
 import { getDevicesWithFirmwares, recentVersions } from '@/lib/catalog';
 
-const rows = recentVersions(await getDevicesWithFirmwares(), 50);
+const rows = recentVersions(await getDevicesWithFirmwares(), 50, { collapseRuns: true });
 ---
-<Base title="Recent versions" description="The 50 most recent dated firmware versions across the catalog.">
+<Base title="Recent versions" description="The most recent dated firmware versions across the catalog.">
   <h1 class="text-2xl">Recent versions</h1>
   <p class="mt-1 max-w-[68ch] text-muted">
-    The {rows.length} most recent dated versions across all firmware, newest first.
-    Also available as <a href="/feed.xml">RSS</a>.
+    The most recent dated versions across all firmware, newest first. Back-to-back
+    versions of the same firmware share a card. Also available as <a href="/feed.xml">RSS</a>.
   </p>
   {rows.length === 0 ? (
     <p class="mt-6 text-muted">No dated versions recorded yet.</p>

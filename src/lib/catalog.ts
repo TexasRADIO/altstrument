@@ -71,6 +71,8 @@ export interface RecentVersion {
   version: Version;
   firmware: FirmwareItem;
   device: DeviceItem;
+  /** Older versions folded into this row by `collapseRuns`, newest first. */
+  more?: Version[];
 }
 
 import { isStale } from './stale';
@@ -274,32 +276,44 @@ export function compareByPopularity(a: DeviceItem, b: DeviceItem): number {
 /**
  * The most recent dated versions across all firmwares, newest first.
  * `onePerFirmware` keeps only each firmware's newest dated version, so one
- * busy release day can't fill a short list.
+ * busy release day can't fill a short list. `collapseRuns` folds back-to-back
+ * versions of the same firmware (a batch of RCs and a release) into the first
+ * row's `more`; `limit` then counts rows, not versions.
  */
 export function recentVersions(
   devices: DeviceItem[],
   limit = 50,
-  { onePerFirmware = false }: { onePerFirmware?: boolean } = {},
+  { onePerFirmware = false, collapseRuns = false }: { onePerFirmware?: boolean; collapseRuns?: boolean } = {},
 ): RecentVersion[] {
-  const all: RecentVersion[] = [];
+  const all: (RecentVersion & { order: number })[] = [];
   for (const device of devices) {
     for (const firmware of device.firmwares) {
       // versions are sorted newest first, undated last
-      for (const version of firmware.versions) {
+      for (const [order, version] of firmware.versions.entries()) {
         if (!version.date) continue;
-        all.push({ date: version.date, version, firmware, device });
+        all.push({ date: version.date, version, firmware, device, order });
         if (onePerFirmware) break;
       }
     }
   }
-  return all
-    .sort(
-      (a, b) =>
-        b.date.getTime() - a.date.getTime() ||
-        compareText(a.firmware.data.name, b.firmware.data.name) ||
-        compareText(a.version.version, b.version.version),
-    )
-    .slice(0, limit);
+  all.sort(
+    (a, b) =>
+      b.date.getTime() - a.date.getTime() ||
+      compareText(a.firmware.data.name, b.firmware.data.name) ||
+      // Same-day versions of one firmware keep their authored order.
+      (a.firmware === b.firmware ? a.order - b.order : compareText(a.version.version, b.version.version)),
+  );
+  const rows: RecentVersion[] = [];
+  for (const { order: _, ...row } of all) {
+    const prev = rows.at(-1);
+    if (collapseRuns && prev?.firmware === row.firmware) {
+      (prev.more ??= []).push(row.version);
+      continue;
+    }
+    if (rows.length === limit) break;
+    rows.push(row);
+  }
+  return rows;
 }
 
 export function siteStats(devices: DeviceItem[]) {
