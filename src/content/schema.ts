@@ -255,6 +255,13 @@ export const firmwareImageSchema = z.object({
 });
 
 export const firmwareBaseSchema = z.object({
+  /**
+   * Other devices this same entry targets (device slugs). The file stays under
+   * its primary `device` and keeps one page there; every listed device shows
+   * it in its lists, and site totals count it once. Only for the same build
+   * and text: device-specific ports get their own file.
+   */
+  also_devices: z.array(slug).default([]),
   name: z.string().min(1),
   kind: z.enum(KINDS).default('firmware'),
   summary: z.string().min(1).max(280),
@@ -324,6 +331,13 @@ export function refineFirmware<T extends z.ZodType<FirmwareData>>(schema: T) {
     if (fw.image && !fw.image.url.startsWith('https://')) {
       ctx.addIssue({ code: 'custom', path: ['image', 'url'], message: 'image url must be https' });
     }
+    const also = new Set<string>();
+    fw.also_devices.forEach((d, i) => {
+      if (also.has(d)) {
+        ctx.addIssue({ code: 'custom', path: ['also_devices', i], message: `"${d}" is listed more than once` });
+      }
+      also.add(d);
+    });
     const seen = new Set<string>();
     fw.versions.forEach((v, i) => {
       if (seen.has(v.version)) {

@@ -22,6 +22,8 @@ export const GET: APIRoute = async ({ site }) => {
     // Present only when the device has an image (`style`: photo | line-art); `url` is the absolute file URL.
     ...(d.data.image ? { image: { ...d.data.image, url: abs(d.data.image.src) } } : {}),
     manufacturer_slug: d.manufacturerSlug,
+    // An entry that targets several devices (also_devices) appears under each of
+    // them with the same `id` and `url`; dedupe by `id` to count entries.
     firmwares: d.firmwares.map((f) => {
       const { device: _device, versions: _versions, ...rest } = f.data;
       return {

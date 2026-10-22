@@ -1,7 +1,7 @@
 import type { APIContext } from 'astro';
 import { KIND_LABELS } from '@/lib/labels';
 import { renderCard, type CardInput } from '@/lib/og';
-import { getDevicesWithFirmwares, getManufacturerEntries, groupByManufacturer, plural, siteStats, type DeviceItem } from '@/lib/catalog';
+import { getDevicesWithFirmwares, getManufacturerEntries, groupByManufacturer, listNames, plural, siteStats, type DeviceItem } from '@/lib/catalog';
 
 // One card per HTML page, at /og/<page path>.png (the home page is /og/index.png).
 // Base.astro derives the same path for og:image, so a new page type needs an entry here.
@@ -10,6 +10,7 @@ export async function getStaticPaths() {
   const stats = siteStats(devices);
   const card = (path: string, props: CardInput) => ({ params: { path }, props });
   const visualOf = (d: DeviceItem) => d.data.image?.src ?? d.logo?.src;
+  const byId = new Map(devices.map((d) => [d.id, d]));
   const counts = (d: DeviceItem) => {
     const fw = d.firmwares.filter((f) => f.data.kind === 'firmware').length;
     const tools = d.firmwares.length - fw;
@@ -40,11 +41,12 @@ export async function getStaticPaths() {
         footer: counts(d) || 'No custom firmware listed yet',
       }),
     ),
-    // Hidden entries keep their page, so they keep their card too.
+    // Hidden entries keep their page, so they keep their card too. One card per
+    // entry, from its primary device, naming every device it targets.
     ...devices.flatMap((d) =>
-      [...d.firmwares, ...d.hiddenFirmwares].map((fw) =>
+      [...d.firmwares, ...d.hiddenFirmwares].filter((fw) => fw.deviceId === d.id).map((fw) =>
         card(fw.url.slice(1), {
-          eyebrow: `${KIND_LABELS[fw.data.kind]} for ${d.data.name} · ${d.data.manufacturer}`,
+          eyebrow: `${KIND_LABELS[fw.data.kind]} for ${listNames(fw.deviceIds.map((id) => byId.get(id)!.data.name))} · ${d.data.manufacturer}`,
           title: fw.data.name,
           summary: fw.data.summary,
           visual: visualOf(d),

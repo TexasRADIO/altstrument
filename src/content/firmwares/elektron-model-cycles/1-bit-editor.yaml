@@ -1,4 +1,5 @@
 device: elektron-model-cycles
+also_devices: [elektron-model-samples]
 name: 1-Bit Editor
 kind: tool
 summary: Single-page browser pixel editor for 1-bit icons, sprites and animation frames for Model:Cycles and Model:Samples mods, exporting the column-wise .bin layout the OS uses.

@@ -1,4 +1,5 @@
 device: 203-systems-mystrix
+also_devices: [203-systems-mystrix-pro]
 name: Matrix Bootloader
 summary: 203 Systems' fork of the TinyUF2 bootloader for ESP32-S3 Mystrix controllers, which provides the USB drive used to install Matrix OS and adds LED animations.
 description: >-
@@ -6,8 +7,7 @@ description: >-
   update animation and some device functions. It is what shows the red and green arrow and the USB drive when the
   controller is in OS update mode. Boards are defined for Mystrix and for a Mystrix Ultra prototype, and the
   repository README describes building and flashing the bootloader through the boot pin and a USB-serial adapter.
-  Matrix OS 3.0 shipped a self-updating bootloader image for units that could not update or boot. A separate entry
-  lists the same bootloader on Mystrix Pro.
+  Matrix OS 3.0 shipped a self-updating bootloader image for units that could not update or boot.
 status: maintained
 authors:
   - name: 203 Systems

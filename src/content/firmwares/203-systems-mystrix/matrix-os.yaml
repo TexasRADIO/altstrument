@@ -1,4 +1,5 @@
 device: 203-systems-mystrix
+also_devices: [203-systems-mystrix-pro]
 name: Matrix OS
 summary: Official open-source operating system for 203 Systems' Mystrix grid controllers, with built-in note, sequencer, strum and control-map apps and support for Python and C++ apps.
 description: >-
@@ -9,7 +10,7 @@ description: >-
   SysEx and keyboard events, and a Bitfocus Companion integration. Since version 3.0 it also runs apps written in
   MicroPython from the SD card, and C++ apps can be added to a build by listing their Git repository. The
   repository also contains a Mystrix simulator target and builds for a Mystrix 2 hardware family, which
-  appear in the nightly builds. A separate entry lists the same OS on Mystrix Pro.
+  appear in the nightly builds.
 status: active
 authors:
   - name: 203 Systems

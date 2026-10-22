@@ -1,4 +1,5 @@
 device: poly-effects-beebo
+also_devices: [poly-effects-hector]
 name: Poly Effects Beebo/Hector firmware (digit_ui)
 summary: Official Poly Effects firmware for Beebo and Hector, whose Qt/QML touchscreen UI and Python glue code are published on GitHub.
 description: >-
@@ -10,7 +11,7 @@ description: >-
   frontend, debug a single widget with show_single_widget.py and regenerate the
   module cache after adding an LV2 module. The root file system is read-only
   through an overlay by default. The same firmware runs on the Hector Eurorack
-  module, and a separate entry lists it there. The full firmware image, the
+  module. The full firmware image, the
   update packages and the system packages other than this source are
   distributed from the Poly Effects site, not from the repository.
 status: active

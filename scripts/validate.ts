@@ -8,6 +8,10 @@
  *   - firmware directory name must equal the `device` field
  *   - `device` must point at an existing device file
  *   - `related` device slugs must exist
+ *   - `also_devices` slugs must exist, differ from `device`, and not collide
+ *     with a file of the same name in the other device's directory
+ *   - two files with the same `source` and `summary` are flagged as a likely
+ *     duplicate that should be one entry with `also_devices` (warning)
  *   - every device should have at least one firmware or an explanatory `notes`
  *   - file names must be kebab-case slugs
  *   - every hotlinked `video` / `image` still resolves (network; see below)
@@ -141,6 +145,11 @@ for (const [slug, related] of deviceRelated) {
 // ---- firmwares -------------------------------------------------------------
 
 const firmwareCountByDevice = new Map<string, number>();
+/** Entries listed on another device through also_devices: target device -> slug -> file. */
+const sharedSlugsByDevice = new Map<string, Map<string, string>>();
+/** Files per source URL, for the duplicate-entry warning. */
+const filesBySource = new Map<string, { file: string; summary: string }[]>();
+let sharedTotal = 0;
 /** Hotlinked media to check over the network once the local checks are done. */
 const remoteChecks: { file: string; kind: 'video' | 'image'; url: string }[] = [];
 let firmwareTotal = 0;
@@ -180,6 +189,25 @@ for (const dir of deviceDirs) {
     if (!deviceSlugs.has(fw.device)) {
       fail(file, `device "${fw.device}" does not exist`);
     }
+    for (const other of fw.also_devices) {
+      if (other === fw.device) {
+        fail(file, `also_devices lists "${other}", which is already the entry's device`);
+      } else if (!deviceSlugs.has(other)) {
+        fail(file, `also_devices device "${other}" does not exist`);
+      } else {
+        if (!sharedSlugsByDevice.has(other)) sharedSlugsByDevice.set(other, new Map());
+        const shared = sharedSlugsByDevice.get(other)!;
+        const clash = shared.get(fwSlug);
+        if (clash) fail(file, `also_devices "${other}": ${rel(clash)} already lists an entry named "${fwSlug}" there`);
+        else shared.set(fwSlug, file);
+      }
+    }
+    if (fw.also_devices.length) sharedTotal++;
+    if (fw.source) {
+      const list = filesBySource.get(fw.source) ?? [];
+      list.push({ file, summary: fw.summary });
+      filesBySource.set(fw.source, list);
+    }
     if (fw.kind === 'firmware' && fw.versions.length === 0 && fw.status !== 'announced') {
       warn(file, 'no versions listed');
     }
@@ -203,20 +231,38 @@ for (const dir of deviceDirs) {
   }
 }
 
+for (const [device, shared] of sharedSlugsByDevice) {
+  for (const [slug, file] of shared) {
+    if (firmwareSlugsByDevice.get(device)?.has(slug)) {
+      fail(file, `also_devices "${device}": src/content/firmwares/${device}/${slug}.yaml already exists; remove that copy or rename one of them`);
+    }
+  }
+}
+
+// Same source and same summary in two files: almost certainly one entry copied
+// per device. Ports with their own summary (different build, requirements or
+// install steps) are left alone.
+for (const list of filesBySource.values()) {
+  for (let i = 1; i < list.length; i++) {
+    const twin = list.slice(0, i).find((o) => o.summary === list[i].summary);
+    if (twin) warn(list[i].file, `same source and summary as ${rel(twin.file)}; make it one entry with also_devices`);
+  }
+}
+
 for (const [slug, pinned] of devicePinned) {
   const file = join(DEVICES_DIR, `${slug}.yaml`);
   const seen = new Set<string>();
   for (const p of pinned) {
     if (seen.has(p)) fail(file, `pinned lists "${p}" more than once`);
     seen.add(p);
-    if (!firmwareSlugsByDevice.get(slug)?.has(p)) {
-      fail(file, `pinned entry "${p}" has no file src/content/firmwares/${slug}/${p}.yaml`);
+    if (!firmwareSlugsByDevice.get(slug)?.has(p) && !sharedSlugsByDevice.get(slug)?.has(p)) {
+      fail(file, `pinned entry "${p}" has no file src/content/firmwares/${slug}/${p}.yaml and no entry lists ${slug} in also_devices`);
     }
   }
 }
 
 for (const slug of deviceSlugs) {
-  if (!firmwareCountByDevice.has(slug) && !deviceNotes.get(slug)) {
+  if (!firmwareCountByDevice.has(slug) && !sharedSlugsByDevice.has(slug) && !deviceNotes.get(slug)) {
     warn(
       join(DEVICES_DIR, `${slug}.yaml`),
       'device has no firmware entries and no notes explaining why',
@@ -313,5 +359,5 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(
-  `\nCatalog OK: ${deviceSlugs.size} device(s), ${firmwareTotal} firmware entr${firmwareTotal === 1 ? 'y' : 'ies'}, ${manufacturerTotal} manufacturer file(s)${hiddenTotal ? ` (${hiddenTotal} hidden as stale)` : ''}${remoteNote}.`,
+  `\nCatalog OK: ${deviceSlugs.size} device(s), ${firmwareTotal} firmware entr${firmwareTotal === 1 ? 'y' : 'ies'}${sharedTotal ? ` (${sharedTotal} listed on more than one device)` : ''}, ${manufacturerTotal} manufacturer file(s)${hiddenTotal ? ` (${hiddenTotal} hidden as stale)` : ''}${remoteNote}.`,
 );

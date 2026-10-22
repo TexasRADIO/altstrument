@@ -20,8 +20,10 @@ links:
 notes: >-
   Mods target OS 1.13 and patch the official .syx you supply. Model:Samples
   shares most of its firmware with the Model:Cycles; elektron-model-tweaks and
-  ms-multi-output are filed here, and the 1-Bit Editor is listed under both devices; Modded Cycles, Model-TG and plaits-on-models
-  are filed under elektron-model-cycles and say which parts also run here. Elektron does not permit sharing mod files or
+  ms-multi-output are filed here; the 1-Bit Editor is filed under
+  elektron-model-cycles and also listed here; Modded Cycles, Model-TG and
+  plaits-on-models are filed under elektron-model-cycles and say which parts
+  also run here. Elektron does not permit sharing mod files or
   links on Elektronauts (policy of 2026-09-16); community discussion moved to
   elektronmods.com and modwerk.app.
 related: [elektron-model-cycles]

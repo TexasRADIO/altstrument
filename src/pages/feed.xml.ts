@@ -1,6 +1,6 @@
 import rss from '@astrojs/rss';
 import type { APIContext } from 'astro';
-import { getDevicesWithFirmwares, recentVersions, versionAnchor } from '@/lib/catalog';
+import { getDevicesWithFirmwares, listNames, recentVersions, versionAnchor } from '@/lib/catalog';
 
 export async function GET(context: APIContext) {
   // Base URL of wherever the site is being served or built for: the request
@@ -17,7 +17,7 @@ export async function GET(context: APIContext) {
     site,
     trailingSlash: false,
     items: rows.map((r) => ({
-      title: `${r.firmware.data.name} ${r.version.version} (${r.device.data.name})`,
+      title: `${r.firmware.data.name} ${r.version.version} (${listNames(r.devices.map((d) => d.data.name))})`,
       link: new URL(`${r.firmware.url}#${versionAnchor(r.version.version)}`, site).href,
       pubDate: r.date,
       description: r.version.notes ?? r.firmware.data.summary,

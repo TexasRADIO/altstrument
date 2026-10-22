@@ -12,25 +12,26 @@ import Prose from '@/components/Prose.astro';
 import FirmwareMedia from '@/components/FirmwareMedia.astro';
 import DevicePhoto from '@/components/DevicePhoto.astro';
 import { KIND_LABELS, DISTRIBUTION_LABELS } from '@/lib/labels';
-import { getDevicesWithFirmwares, githubEditUrl, hostOf, plural, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
+import { getDevicesWithFirmwares, githubEditUrl, hostOf, listNames, plural, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
 
 export async function getStaticPaths() {
   const devices = await getDevicesWithFirmwares();
-  // Entries hidden as stale still get a page so existing links keep working.
+  const byId = new Map(devices.map((d) => [d.id, d]));
+  // One page per entry, under its primary device; devices that list it through
+  // also_devices link here. Entries hidden as stale still get a page so
+  // existing links keep working.
+  const page = (device: DeviceItem, hidden: boolean) => (firmware: FirmwareItem) => ({
+    params: { device: device.id, fw: firmware.slug },
+    props: { device, firmware, hidden, targets: firmware.deviceIds.map((id) => byId.get(id)!) },
+  });
   return devices.flatMap((device) => [
-    ...device.firmwares.map((firmware) => ({
-      params: { device: device.id, fw: firmware.slug },
-      props: { device, firmware, hidden: false },
-    })),
-    ...device.hiddenFirmwares.map((firmware) => ({
-      params: { device: device.id, fw: firmware.slug },
-      props: { device, firmware, hidden: true },
-    })),
+    ...device.firmwares.filter((f) => f.deviceId === device.id).map(page(device, false)),
+    ...device.hiddenFirmwares.filter((f) => f.deviceId === device.id).map(page(device, true)),
   ]);
 }
 
-interface Props { device: DeviceItem; firmware: FirmwareItem; hidden: boolean }
-const { device, firmware: fw, hidden } = Astro.props;
+interface Props { device: DeviceItem; firmware: FirmwareItem; hidden: boolean; targets: DeviceItem[] }
+const { device, firmware: fw, hidden, targets } = Astro.props;
 const d = fw.data;
 const links = [
   d.source && { label: 'Source', url: d.source },
@@ -44,7 +45,7 @@ const edit = d.generated_from
   ? { editUrl: githubEditUrl(d.generated_from), editLabel: 'Edit upstream on GitHub' }
   : { editPath: `src/content/firmwares/${fw.id}.yaml` };
 ---
-<Base title={`${d.name} for ${device.data.name}`} description={`${d.name}: ${d.summary}`} noindex={hidden} {...edit}>
+<Base title={`${d.name} for ${listNames(targets.map((t) => t.data.name))}`} description={`${d.name}: ${d.summary}`} noindex={hidden} {...edit}>
   <Breadcrumb items={[{ label: 'Devices', href: '/' }, { label: device.data.name, href: device.url }, { label: d.name }]} />
   {hidden && (
     <p class="mb-4 max-w-[68ch] text-sm text-muted">
@@ -57,8 +58,12 @@ const edit = d.generated_from
   <header>
     <h1 class="text-2xl">{d.name}</h1>
     <p class="mt-1 text-muted">
-      {KIND_LABELS[d.kind]} for <a href={device.url}>{device.data.name}</a>{' '}
-      (<a href={`/manufacturers/${device.manufacturerSlug}`}>{device.data.manufacturer}</a>)
+      {KIND_LABELS[d.kind]} for {targets.map((t, i) => (
+        <>{i > 0 && (i === targets.length - 1 ? ' and ' : ', ')}<a href={t.url}>{t.data.name}</a></>
+      ))}{' '}
+      ({targets.filter((t, i) => targets.findIndex((o) => o.manufacturerSlug === t.manufacturerSlug) === i).map((t, i) => (
+        <>{i > 0 && ', '}<a href={`/manufacturers/${t.manufacturerSlug}`}>{t.data.manufacturer}</a></>
+      ))})
     </p>
     <p class="mt-2 max-w-[68ch] text-base">{d.summary}</p>
     <p class="mt-2 text-sm text-muted">by <AuthorList authors={d.authors} /></p>

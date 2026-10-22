@@ -94,7 +94,7 @@ import { STATUS_INFO, SOURCE_INFO, LICENSE_SENTINELS } from '@/lib/labels';
       <h2 id="api">Data and API</h2>
       <p>The whole catalog is available as static files, rebuilt on every change:</p>
       <ul class="mt-2 list-disc pl-5">
-        <li><a href="/api/catalog.json">/api/catalog.json</a>: every manufacturer, device, firmware and version as JSON</li>
+        <li><a href="/api/catalog.json">/api/catalog.json</a>: every manufacturer, device, firmware and version as JSON. An entry that targets several devices is listed under each of them with the same <code>id</code>, and its <code>also_devices</code> names the others.</li>
         <li><a href="/api/stats.json">/api/stats.json</a>: device, firmware and tool counts</li>
         <li><a href="/feed.xml">/feed.xml</a>: RSS feed of the most recent dated versions</li>
         <li><a href="/sitemap-index.xml">/sitemap-index.xml</a>: every page on the site</li>

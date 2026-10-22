@@ -20,12 +20,15 @@ export interface FirmwareItem {
   /** "<device-slug>/<fw-slug>" */
   id: string;
   slug: string;
+  /** The primary device: the entry's directory, where its page lives. */
   deviceId: string;
+  /** Every device the entry targets: the primary, then its `also_devices`. */
+  deviceIds: string[];
   url: string;
   data: FirmwareEntry['data'];
   /** Newest first, undated last. */
   versions: Version[];
-  /** Position in the device's `pinned` list; pinned entries sort first. */
+  /** Position in the listing device's `pinned` list; pinned entries sort first. */
   pin?: number;
 }
 
@@ -42,7 +45,9 @@ export interface DeviceItem {
   /**
    * Sorted: kind firmware before tool, then pinned, then by status, then name. Excludes
    * entries hidden by the device's `hide_stale_after_years`, so every list,
-   * count, feed and search index built from it leaves them out.
+   * count, feed and search index built from it leaves them out. Includes entries
+   * from other directories whose `also_devices` lists this device (their
+   * `deviceId` is not this device's id); site-wide totals dedupe them by `id`.
    */
   firmwares: FirmwareItem[];
   /** Entries hidden as stale (same sort). They still get their own page. */
@@ -70,7 +75,10 @@ export interface RecentVersion {
   date: Date;
   version: Version;
   firmware: FirmwareItem;
+  /** The firmware's primary device. */
   device: DeviceItem;
+  /** Every device the firmware targets, primary first. */
+  devices: DeviceItem[];
   /** Older versions folded into this row by `collapseRuns`, newest first. */
   more?: Version[];
 }
@@ -165,19 +173,24 @@ export async function getDevicesWithFirmwares(): Promise<DeviceItem[]> {
   for (const fw of firmwares) {
     const deviceId = fw.data.device.id;
     const slug = fw.id.split('/').pop() as string;
-    const pin = pinnedBy.get(deviceId)?.indexOf(slug) ?? -1;
+    const deviceIds = [deviceId, ...fw.data.also_devices];
     const item: FirmwareItem = {
       id: fw.id,
       slug,
       deviceId,
+      deviceIds,
       url: `/firmware/${deviceId}/${slug}`,
       data: fw.data,
       versions: sortVersions(fw.data.versions),
-      ...(pin >= 0 ? { pin } : {}),
     };
-    const list = byDevice.get(deviceId) ?? [];
-    list.push(item);
-    byDevice.set(deviceId, list);
+    // One copy per targeted device, each with that device's pin.
+    for (const id of deviceIds) {
+      if (!pinnedBy.has(id)) throw new Error(`${fw.id}: also_devices lists unknown device "${id}"`);
+      const pin = pinnedBy.get(id)?.indexOf(slug) ?? -1;
+      const list = byDevice.get(id) ?? [];
+      list.push(pin >= 0 ? { ...item, pin } : item);
+      byDevice.set(id, list);
+    }
   }
 
   return devices
@@ -232,10 +245,13 @@ export function groupByManufacturer(
       map.set(d.manufacturerSlug, m);
     }
     m.devices.push(d);
-    m.firmwareCount += d.firmwares.length;
   }
   return [...map.values()]
-    .map((m) => ({ ...m, devices: m.devices.sort((a, b) => compareText(a.data.name, b.data.name)) }))
+    .map((m) => ({
+      ...m,
+      devices: m.devices.sort((a, b) => compareText(a.data.name, b.data.name)),
+      firmwareCount: uniqueFirmwares(m.devices).length,
+    }))
     .sort((a, b) => compareText(a.name, b.name));
 }
 
@@ -264,8 +280,15 @@ export function latestUpdateOf(devices: DeviceItem[]): Date | undefined {
   return best;
 }
 
+/** Listed entries across devices, each once even when it targets several of them. */
+export function uniqueFirmwares(devices: DeviceItem[]): FirmwareItem[] {
+  const byId = new Map<string, FirmwareItem>();
+  for (const d of devices) for (const f of d.firmwares) if (!byId.has(f.id)) byId.set(f.id, f);
+  return [...byId.values()];
+}
+
 export function firmwareTotal(devices: DeviceItem[]): number {
-  return devices.reduce((n, d) => n + d.firmwares.length, 0);
+  return uniqueFirmwares(devices).length;
 }
 
 /** Most firmware entries first; ties by name. Matches the "popularity" sort on the index. */
@@ -278,7 +301,8 @@ export function compareByPopularity(a: DeviceItem, b: DeviceItem): number {
  * `onePerFirmware` keeps only each firmware's newest dated version, so one
  * busy release day can't fill a short list. `collapseRuns` folds back-to-back
  * versions of the same firmware (a batch of RCs and a release) into the first
- * row's `more`; `limit` then counts rows, not versions.
+ * row's `more`; `limit` then counts rows, not versions. An entry that targets
+ * several devices is listed once, under its primary device.
  */
 export function recentVersions(
   devices: DeviceItem[],
@@ -286,12 +310,15 @@ export function recentVersions(
   { onePerFirmware = false, collapseRuns = false }: { onePerFirmware?: boolean; collapseRuns?: boolean } = {},
 ): RecentVersion[] {
   const all: (RecentVersion & { order: number })[] = [];
+  const deviceById = new Map(devices.map((d) => [d.id, d]));
   for (const device of devices) {
     for (const firmware of device.firmwares) {
+      if (firmware.deviceId !== device.id) continue;
+      const targets = firmware.deviceIds.map((id) => deviceById.get(id)).filter((d): d is DeviceItem => Boolean(d));
       // versions are sorted newest first, undated last
       for (const [order, version] of firmware.versions.entries()) {
         if (!version.date) continue;
-        all.push({ date: version.date, version, firmware, device, order });
+        all.push({ date: version.date, version, firmware, device, devices: targets, order });
         if (onePerFirmware) break;
       }
     }
@@ -317,11 +344,13 @@ export function recentVersions(
 }
 
 export function siteStats(devices: DeviceItem[]) {
+  const entries = uniqueFirmwares(devices);
   return {
     devices: devices.length,
     // Counted by kind: host-side tools (editors, flashers, SDKs) are not firmwares.
-    firmwares: devices.reduce((n, d) => n + d.firmwares.filter((f) => f.data.kind === 'firmware').length, 0),
-    tools: devices.reduce((n, d) => n + d.firmwares.filter((f) => f.data.kind === 'tool').length, 0),
+    // Each entry counts once, however many devices it targets.
+    firmwares: entries.filter((f) => f.data.kind === 'firmware').length,
+    tools: entries.filter((f) => f.data.kind === 'tool').length,
     manufacturers: new Set(devices.map((d) => d.manufacturerSlug)).size,
   };
 }
@@ -350,6 +379,13 @@ export function hostOf(url: string): string {
   } catch {
     return url;
   }
+}
+
+const listFormat = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
+
+/** "A", "A and B", "A, B and C" (no serial comma, matching the site's prose). */
+export function listNames(names: string[]): string {
+  return listFormat.format(names).replace(/, and /, ' and ');
 }
 
 export function plural(n: number, one: string, many = `${one}s`): string {

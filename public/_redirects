@@ -2,3 +2,10 @@
 # @astrojs/sitemap writes sitemap-index.xml; crawlers and agents look for /sitemap.xml first.
 /sitemap.xml /sitemap-index.xml 301
 /firmware/m-vave-fm-1/fm1-bootloader /firmware/m-vave-fm-1/m-bootloader 301
+# Per-device copies merged into one entry with also_devices.
+/firmware/elektron-model-samples/1-bit-editor /firmware/elektron-model-cycles/1-bit-editor 301
+/firmware/polyend-tracker-plus/tracker-lib /firmware/polyend-tracker/tracker-lib 301
+/firmware/203-systems-mystrix-pro/matrix-os /firmware/203-systems-mystrix/matrix-os 301
+/firmware/203-systems-mystrix-pro/matrix-bootloader /firmware/203-systems-mystrix/matrix-bootloader 301
+/firmware/203-systems-mystrix-pro/matrix-os-control-map-editor /firmware/203-systems-mystrix/matrix-os-control-map-editor 301
+/firmware/poly-effects-hector/poly-effects-firmware /firmware/poly-effects-beebo/poly-effects-firmware 301

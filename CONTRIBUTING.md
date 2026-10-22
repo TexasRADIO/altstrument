@@ -15,6 +15,7 @@ Not writing YAML? [Open an issue](https://github.com/philmillman/altstrument/iss
 1. Create `src/content/firmwares/<device-slug>/<firmware-slug>.yaml`. The directory must already exist as a device slug, so the device file comes first.
 2. The `device` field must equal the directory name, and that device file must exist.
 3. The firmware slug is lowercase kebab-case, named after the firmware (`octabam`).
+4. If the same entry applies to more than one device, write one file and list the other devices in `also_devices`. See "One project, several devices" below.
 
 ## Entries fetched at build time
 
@@ -90,8 +91,15 @@ related: []
 ```yaml
 # src/content/firmwares/example-co-example-synth/examplefw.yaml
 
-# REQUIRED. Must equal the directory name (the device slug).
+# REQUIRED. Must equal the directory name (the device slug). The entry's page
+# lives under this device.
 device: example-co-example-synth
+
+# OPTIONAL. Defaults to []. Other device slugs this same entry targets, when
+# the build and text apply to them unchanged. Each must have a device file,
+# must differ from `device`, and must not already have a file with this
+# entry's name. See "One project, several devices".
+also_devices: []
 
 # REQUIRED. Display name of the firmware or tool.
 name: ExampleFW
@@ -192,6 +200,14 @@ versions:
 
 `pnpm validate` checks every `video` against YouTube's oEmbed endpoint and every `image` URL for an image content type. A removed or missing target (404) is an error; network trouble is only a warning. Set `ALTSTRUMENT_SKIP_REMOTE=1` to skip these checks. Workshop Computer cards are fetched at build time (see above) and take their video from the upstream `info.yaml` `demo-link`, so there is no `video` to write for them.
 
+## One project, several devices
+
+Write a single file when the same build and the same text apply to every device, such as a browser editor for both Model:Cycles and Model:Samples, or an OS that ships unchanged on two sizes of one controller. Put the file under the device it was written for first, or the original model, and list the others in `also_devices`. The entry keeps one page under that primary device. Each device in `also_devices` lists it, links to that page and may name it in `pinned`. Site totals, the feed and the recent page count it once.
+
+Write a separate file per device when the entries differ: different builds or release lines, a different `requires_stock`, different install steps or wiring, or a summary that says something device-specific. Parasites for Clouds and for Warps, ChoralRoot for FM-1 and for SMK-37, and the DS and 3DS NitrousTracker entries are examples. `pnpm validate` warns when two files share a `source` and a `summary`, because that usually means one entry was copied instead of shared.
+
+When an existing copy is merged away, delete its file and add a `301` line to `public/_redirects` from its old URL to the remaining entry.
+
 ## Field values
 
 ### status
@@ -269,6 +285,7 @@ Accepted values: `MIT`, `BSD-2-Clause`, `BSD-3-Clause`, `ISC`, `Apache-2.0`, `GP
 - [ ] `license` matches the source repository's license file
 - [ ] Versions are newest first, with no duplicates, and dates appear only where confirmed
 - [ ] No binary files are added
+- [ ] A project that targets several devices with the same build is one entry with `also_devices`, not a copy per device
 - [ ] One device or one firmware per PR when possible
 
 ## Licensing of contributions
