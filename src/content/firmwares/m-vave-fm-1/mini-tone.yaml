@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: Mini-Tone
+summary: >-
+  Felucca 1.5 fork with six tracks, SID, Braids, TB-303 and Elektron-style engines, a ping-pong delay, a new
+  reverb and sequences of any length from 1 to 64 steps.
+description: >-
+  Extends Felucca with six tracks that share the same eight voices, shown four at a time on the panel, and
+  stores tracks 5 and 6 in an extension of each project slot. The new engines are a SID (MOS 6581 and 8580, after
+  reSID), Mutable Instruments' 48 Braids models, a TB-303 and engines modelled on Elektron's SY CHIP, SY DUAL VCO,
+  Analog Four and Digitone 2 (swarmer, FM, wavetable and FM drum); the README states the Digitone 2 FM drum's
+  algorithms, waves and samples are not Elektron's. Eleven of Felucca's engines (ANALOG, PHASE, LOFI, SAMPLE,
+  VOICE, TRIO, WHEEL, GRAIN, PHYS, NOISE, SLICE) and the user sample slots are removed. It also adds a ping-pong
+  delay with note-value or millisecond times, an Elektron-style reverb, per-track sequence lengths of 1 to 64
+  steps for polyrhythms, display colour themes and MIDI-in channel blocks for the six tracks. The rest of
+  Felucca's features carry over, and the repository README is largely Felucca's own.
+status: active
+authors:
+- name: Stéphane Schmitz (eldontyrellcorp)
+  url: https://github.com/eldontyrellcorp
+source: https://github.com/eldontyrellcorp/Mini-Tone
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README, LICENSE and LICENSING.md, as for Felucca. The SID engine and its tables are
+  GPL-2.0-or-later (reSID), the Braids port is MIT, and the DaisySP and Rings ports are MIT. msfa is Apache-2.0.
+  The Hügelton Sample Pack is GPL-3.0-only, not CC0, and the fonts are SIL OFL 1.1.
+homepage: https://github.com/eldontyrellcorp/Mini-Tone
+distribution: download
+install_notes: >-
+  Download minitone-X.Y.Z.fwsc from the release and write it over USB with tools/fm1_install.py from the
+  repository (needs mido and python-rtmidi); the README does not name a required starting firmware. Felucca's web
+  installer installs Felucca itself, not this fork. It replaces Felucca's sounds and project storage, so back up
+  first. If an update is cut off and the unit stays black, the README points to the FM-1 Transporter hardware
+  route and writing M-VAVE's FM-1.fwsc back.
+brick_risk: true
+tags: [synth-engine, sequencer, fx, chiptune, fm, oscillator, physical-modeling, midi, emulator, fork]
+versions:
+- version: minitone-1.0.1
+  date: 2026-10-21
+  url: https://github.com/eldontyrellcorp/Mini-Tone/releases/tag/minitone-1.0.1
+  notes: Reworked SID engine, self-resonance for the Elektron-style filters, dotted delay times and 1-step length changes.
+- version: minitone-1.0.0
+  date: 2026-10-18
+  url: https://github.com/eldontyrellcorp/Mini-Tone/releases/tag/minitone-1.0.0
+  notes: Initial release with seven new engines, five of them modelled on Elektron machines.

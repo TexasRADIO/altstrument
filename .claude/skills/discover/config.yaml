@@ -733,3 +733,15 @@ ignore:
   - url: https://github.com/tracelistener/rd6-scatter
     reason: commits Behringer's stock RD-6 firmware (RD-6_V1.0.5.syx, RD-6_V1.0.6.syx); redistributed stock firmware
     date: 2026-10-21
+  - url: https://github.com/elvicw89/Meloaudio-MIDI-Commander-Firmware-Mod
+    reason: commits the stock MIDI Commander firmware (ORIGINAL MIDI COMMANDER FIRMWARE.zip) plus build objects, no source; redistributed stock firmware
+    date: 2026-10-22
+  - url: https://github.com/miccio-dk/nanoloop2-cheatsheet
+    reason: printable cheatsheet condensed from the official nanoloop 2 manual; documentation for closed software, not firmware or a tool
+    date: 2026-10-22
+  - url: https://github.com/laidick/retro-cartoon-tetris
+    reason: desktop Tetris demo with chiptune audio; not music hardware
+    date: 2026-10-22
+  - url: https://github.com/ThrowingSnow/PadBridge
+    reason: desktop gamepad-to-MIDI software for Linux and macOS; not music hardware
+    date: 2026-10-22

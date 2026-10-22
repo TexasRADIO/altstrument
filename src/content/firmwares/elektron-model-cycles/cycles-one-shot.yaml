@@ -1,0 +1,56 @@
+device: elektron-model-cycles
+name: Cycles One-Shot
+summary: Adds SAMPLE as a seventh machine on Model:Cycles OS 1.13 that plays one-shot samples from the +Drive, with Start, Length and a Model:Samples-style filter, plus a browser page that uploads samples over USB.
+description: >-
+  SAMPLE sits on the MACHINES page next to the six stock machines and takes
+  its sample from the OS's own PRESET browser, so the choice is saved with the
+  sound, kit and project. Playback uses 6-tap interpolation at twice the
+  output rate followed by the Cycles' own 2:1 decimator, with short fades at
+  the edges of a trig. A one-knob lowpass and highpass with resonance follows
+  measured Model:Samples behaviour and is built from scratch. A waveform view
+  replaces the main screen on SAMPLE tracks. Looping and reverse playback are
+  listed as still to come. The author states the build was tested on a
+  Model:Cycles and in the digiemu emulator. The same SAMPLE machine is
+  offered in the model27 web flasher; this entry covers the command-line
+  build. The build needs a clone of Modded Cycles, and SAMPLE
+  cannot yet be combined with other machine-adding tweaks or with Model-TG.
+  The included upload page puts audio files on the +Drive from Chrome or Edge
+  and works with the official OS as well.
+status: active
+authors:
+  - name: durchgemacht
+    url: https://github.com/durchgemacht
+source: https://github.com/durchgemacht/cycles-one-shot
+source_status: open
+license: MIT
+license_notes: >-
+  No Elektron firmware is included; the build starts from your own copy of the
+  official OS file. Protocol facts for the upload page come from ModdedTransfer
+  (WTFPL) and Model-TG (MIT), and the machine-adding tools are Modded Cycles'
+  (MIT).
+distribution: patch-your-own
+requires_stock: "1.13"
+install_notes: >-
+  Needs Python 3, the m68k-elf toolchain and a clone of Modded Cycles at a
+  release with the mod picker (1.53 to 1.56). Run machine/build.py with your
+  official model-cycles_OS1.13.syx and the path to that clone, then install the
+  resulting .syx over USB the way an official update is installed. Before
+  returning to stock, set every SAMPLE track to one of the six stock machines,
+  since a project naming a machine the official OS lacks can freeze the
+  MACHINES page. Back up projects and samples with Elektron Transfer first.
+  For new samples open uploader/index.html in Chrome or Edge and close
+  Elektron Transfer, which would otherwise hold the MIDI port.
+tags: [machines, sampler, filter, samples, web]
+versions:
+  - version: v0.8
+    date: 2026-10-21
+    url: https://github.com/durchgemacht/cycles-one-shot/tree/v0.8
+    notes: Git tag; no GitHub release page. Machine 0.8 builds with model27's composer.
+  - version: v0.7
+    date: 2026-10-21
+    url: https://github.com/durchgemacht/cycles-one-shot/tree/v0.7
+    notes: Git tag; no GitHub release page. Registers through the Modded Cycles registrar for added machines.
+  - version: v0.5
+    date: 2026-10-18
+    url: https://github.com/durchgemacht/cycles-one-shot/tree/v0.5
+    notes: Git tag; no GitHub release page. Adds the Model:Samples-style filter.

@@ -1,0 +1,46 @@
+device: polyend-tracker-plus
+name: Modular-Trackular
+summary: Patches for Tracker+ firmware 1.2.0 built on your own .ptf file, adding colored Song blocks, Humanize, CC and macro ramps, per-project master reverb and delay, global swing, a pad visualizer and conditional trigs, with a browser patcher.
+description: >-
+  Reverse-engineering notes, an emulator and a set of mods for the Tracker+.
+  Each mod can be applied alone or combined into one firmware. colorsong colors
+  the Song screen's track blocks by their content. Humanize adds small random
+  micro-move and volume changes to the selected notes. interpolate ramps CC and
+  macro values between steps. masterfx picks the master reverb and delay per
+  project from several alternatives, including Freeverb, plate, spring, shimmer,
+  tape, BBD and gated types. swing sets a global swing per project. The
+  visualizer shows animation on the pads during playback. condtrig turns Chance
+  FX values above 100 into conditions on the pass count, such as first pass or
+  the A-th pass of every B; the idea comes from Psygoo's CT6. The patcher checks
+  the stock file's hash and original bytes at every patched address, and the
+  repository contains no Polyend code. The README reports each mod and the
+  all-in-one build tested on one unit, and a web patcher produces the same files
+  as the Python tool.
+status: active
+authors:
+  - name: FatRodzianko
+    url: https://github.com/FatRodzianko
+source: https://github.com/FatRodzianko/Modular-Trackular
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the repository's code and notes only. The README says it does not cover
+  Polyend's firmware, which is not included.
+homepage: https://fatrodzianko.github.io/Modular-Trackular/
+distribution: patch-your-own
+requires_stock: "1.2.0"
+install_notes: >-
+  Download Polyend's TrackerPlus_1.2.0.ptf yourself and check its SHA-256 against
+  docs/PATCHING.md. Pick the mods in the web patcher, or run tools/patch_ptf.py
+  with Python 3 on that file; both refuse any other firmware. Name the result
+  TrackerPlus<anything>.ptf, keep the name short, copy it to /Firmware on the SD
+  card and install it from Config, Firmware. Install the stock file the same way
+  to return, and read the repository's notes on the emergency reflash before
+  flashing. Do not share patched files.
+brick_risk: true
+tags: [patch, fx, sequencer, emulator, research, web, ui]
+versions:
+  - version: main @ a30b280
+    date: 2026-10-22
+    url: https://github.com/FatRodzianko/Modular-Trackular/commit/a30b280
+    notes: No tagged releases; this is the latest commit.

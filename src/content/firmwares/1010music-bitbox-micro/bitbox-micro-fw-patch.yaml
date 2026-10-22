@@ -20,7 +20,8 @@ source_status: open
 license: MIT
 license_notes: >-
   Covers patch_micro.py and the documentation only. 1010music's firmware is not
-  included and no rights over it are granted.
+  included and no rights over it are granted. The LICENSE file also carries the
+  MIT notice for the Airwindows effects (Chris Johnson) that 2.3.9-mod ports.
 homepage: https://modularpatcher.github.io/bitbox-micro-fw-patch/
 distribution: patch-your-own
 requires_stock: 2.3.4

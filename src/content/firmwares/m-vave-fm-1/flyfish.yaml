@@ -1,0 +1,44 @@
+device: m-vave-fm-1
+name: Flyfish
+summary: >-
+  Single-piece firmware that plays Chopin's Etude Op. 10 No. 1 on a sampled Steinway D, with rubato, practice
+  tools, transposition and tuning options. Built on Tuna and Felucca.
+description: >-
+  Plays all 79 bars of the etude, looping or once, from a note list of 1,337 pitches and rhythms whose dynamics,
+  pedalling and rubato are the author's own reading of the score's markings. Performance controls cover rubato, touch,
+  accent and pedal. Practice tools include speed down to 25 percent, loops, a ramp, a click, hand-out play-along
+  modes in which the music follows or waits for your keys, and rhythm and chord drills with a per-bar progress
+  chart. The notes can be moved to another key or mode and the bass changed, and styles, soft pedal and historical
+  temperaments and pitches adjust the piano. Nine sounds run on Felucca's engines, and a MIDI out sends the hands
+  and pedals on separate channels. The Steinway samples are 13 notes cut and encoded for the unit. A browser version
+  runs the firmware. Settings and the practice chart are kept in Felucca's first two song slots.
+status: active
+authors:
+- name: delirioux
+  url: https://github.com/delirioux
+source: https://github.com/delirioux/flyfish
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and LICENSING.md, as for Tuna and Felucca. The piano samples are from the bitKlavier Grand
+  Sample Library by Daniel Trueman (Princeton University, CC BY 4.0, credited in the package); the notes are public
+  domain. Felucca's bundled parts keep their own licences (LICENSES/).
+homepage: https://delirioux.github.io/flyfish/
+distribution: browser-installer
+install_notes: >-
+  Web installer on the project site in Chrome or Edge over USB. It uses Felucca's first two song slots for its
+  settings, so back up anything made in Felucca first. The README says Felucca's or Tuna's installer, or M-VAVE's
+  official V15, takes the unit back. It is described as built for one piece, with no warranty.
+brick_risk: true
+tags: [sampler, synth-engine, sequencer, midi, scales, emulator, fork]
+image:
+  url: https://raw.githubusercontent.com/delirioux/flyfish/HEAD/docs/screens/score.png
+  alt: "Flyfish home screen showing a bar of the etude as a score with treble and bass staves, above the rubato, touch, accent and pedal knob cards"
+  credit: delirioux
+  source_url: https://github.com/delirioux/flyfish
+  first_party: true
+versions:
+- version: dev @ 4e5efb8
+  date: 2026-10-19
+  url: https://github.com/delirioux/flyfish/commit/4e5efb8a7623cfb19a55fdc08cb12e8cfdfce578
+  notes: No tagged releases; this is the latest commit, which main matches and which the project site installs.

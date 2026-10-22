@@ -1,0 +1,28 @@
+device: m-vave-fm-1
+name: FM1 Librarian
+kind: tool
+summary: >-
+  Closed web app that loads DX7 SysEx bank and voice files or whole folders of them into a searchable tree with
+  favourites and categories, and sends a chosen voice to the FM-1's edit buffer over Web MIDI.
+description: >-
+  Runs in a browser with Web MIDI and SysEx permission. Files and folders can be dragged in or opened from a picker;
+  the page reads 32-voice bank dumps and single-voice dumps, shows each file as a branch of the tree, and keeps
+  the library and its favourites and categories in the browser between visits, so nothing is uploaded. Selecting a voice can send it to the unit
+  automatically. The page says sends go to the current edit buffer only and advises keeping backups of the source
+  files. FM-1 Utility links this page as its dedicated librarian, and both pages carry the same Buy Me a Coffee link.
+  No author name or source repository is given; there is a feedback form.
+status: active
+authors:
+- name: Unknown
+  url: https://fm1-librarian.pages.dev/
+source_status: closed
+license: unspecified
+license_notes: >-
+  A hosted bundle with no source repository, no license text and no author credit.
+homepage: https://fm1-librarian.pages.dev/
+distribution: browser-installer
+install_notes: >-
+  Needs Chrome or Edge on a computer with Web MIDI; open the page, pick the FM-1's MIDI output and allow SysEx. It
+  does not flash firmware. Without SysEx permission the page connects but disables sending.
+brick_risk: false
+tags: [librarian, sysex, midi, web, utility]

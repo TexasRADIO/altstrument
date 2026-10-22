@@ -1,0 +1,44 @@
+device: m-vave-fm-1
+name: BRUTAL FM
+summary: >-
+  Experimental FM synth for industrial techno, noise and dark ambient: a four-operator FM/PM core with a 4x4 modulation matrix,
+  wavefolder, morphing between two sounds and a COMPLEX ARP that builds a fixed loop from the keys you hold.
+description: >-
+  Built on Felucca's hardware layer, update loader and drivers, with its own sound engine, arpeggiator, presets and
+  screens. The FM core has four modes (METAL, GROWL, CHAOS, NOISE), self-feedback, a sine wavefolder and optional
+  double oversampling, and MORPH moves every parameter, routing included, between sound A and sound B. COMPLEX ARP
+  writes an 8- or 16-step pattern once from the held notes and then plays it unchanged, with hold, freeze, rhythm,
+  pitch and timbre locks, regenerate and undo. Everything is controlled from the unit, with 40 factory and 32 user
+  presets, USB MIDI and TRS MIDI, and a browser emulator. The README, written in Japanese, reports that boot, panel, LEDs, sound,
+  the arpeggiator and USB MIDI work on a real FM-1, and that saving presets, MIDI clock, TRS MIDI and long-run
+  stability are not yet verified. Felucca's own engines, samples and sequencer are not used.
+status: active
+authors:
+- name: Hiro Ikezawa
+  url: https://github.com/hiroikezawa
+source: https://github.com/hiroikezawa/brutal-fm
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSE and LICENSING.md. Files taken from Felucca v1.6.1 keep Leo Kuroshita's notices. The Inter Tight font is
+  SIL OFL 1.1, and the package holds three JieLi AC79 SDK files under Apache-2.0. The USB vendor and product IDs are still pid.codes
+  test values.
+homepage: https://github.com/hiroikezawa/brutal-fm
+distribution: download
+requires_stock: M-VAVE stock firmware or Felucca
+install_notes: >-
+  Install the .fwsc from the release with tools/fm1_install.py over USB (needs mido and python-rtmidi); this works from M-VAVE's firmware or
+  Felucca, and M-VAVE's FM-1.fwsc goes back the same way. A unit running v0.1.0 cannot be updated over MIDI and needs
+  the UBOOT recovery scripts in tools/uboot (OCT- and OCT+ held for five seconds; run from Windows, where the README says the
+  Mac fell back to normal start). Installing is at your own risk.
+brick_risk: true
+tags: [fm, synth-engine, arpeggiator, oscillator, fx, midi, emulator, performance]
+versions:
+- version: v0.1.5
+  date: 2026-10-22
+  url: https://github.com/hiroikezawa/brutal-fm/releases/tag/v0.1.5
+  notes: MORPH no longer changes pitch in the factory presets, and the four PERFORM knobs act in every preset.
+- version: v0.1.4
+  date: 2026-10-22
+  url: https://github.com/hiroikezawa/brutal-fm/releases/tag/v0.1.4
+  notes: Fixes USB MIDI sending, adds always-on key lighting, 40 rougher factory presets and the UBOOT recovery scripts.

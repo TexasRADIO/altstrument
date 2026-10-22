@@ -1,0 +1,33 @@
+name: A6 Andromeda
+manufacturer: Alesis
+category: synth
+tagline: 16-voice analog polysynth with a digitally controlled signal path
+description: >-
+  The A6 Andromeda is a 61-key analog polyphonic synthesizer from Alesis, sold from 2000
+  and now discontinued. It has 16 voices and 16 multitimbral parts, two analog oscillators
+  and two analog filters per voice, and a Motorola ColdFire processor that handles voice
+  control, patch storage and the effects.
+
+  The last official operating system, V1.40.12, dates from 2002 and is installed over MIDI
+  from a computer.
+platform: Motorola ColdFire controlling an analog voice path
+stock_firmware: 1.40.12
+links:
+  manufacturer: https://www.alesis.com/products/view/a6-andromeda
+  community:
+    - label: A6 Andromeda on Wikipedia
+      url: https://en.wikipedia.org/wiki/Alesis_Andromeda_A6
+notes: >-
+  Alesis has not released an OS update since 2002. The only custom firmware recorded here
+  is an unreleased community build.
+related: []
+image:
+  src: /images/devices/alesis-andromeda-a6.webp
+  style: photo
+  alt: "Angled view of the Alesis A6 Andromeda: a 61-key synthesizer with a silver and dark blue panel, many black knobs, a green LCD and a pitch and mod wheel pair at the left end"
+  width: 1200
+  height: 750
+  credit: Alesis
+  license: manufacturer product image
+  source_url: https://www.alesis.com/products/view/a6-andromeda
+  original_url: https://www.alesis.com/rscdn/1571/images/a6andromeda_angle_lg.jpg

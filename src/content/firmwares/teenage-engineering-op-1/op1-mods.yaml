@@ -1,0 +1,52 @@
+device: teenage-engineering-op-1
+name: OP-1 Mods
+summary: Patch for the official OP-1 R246 firmware that adds a KEYS electric-piano engine, chord mode and scales, six effects, a TIDE LFO, a piano-roll TRACK sequencer, a Shift latch and MIDI CC control of most knobs.
+description: >-
+  The download is a binary patch plus a small Python script, apply.py, that
+  checks your official op1_246.op1 against a stored SHA-256 and writes a modded
+  .op1 file. The patch is described as holding none of Teenage Engineering's
+  code. New effects are CRUSH (bitcrusher), BELL (ring mod into tuned strings),
+  MOON (phaser and vibe), MIMIC (tempo-synced echo), LINGER (plate reverb with
+  freeze) and SPIN CYCLE (rotary speaker), each with its own screen. KEYS
+  models tine, reed and clav sounds without samples, six voices. TIDE adds
+  seven waveforms and four sync modes, and the TRACK sequencer is a seventh
+  sequencer with a piano roll. The scale feature started from the OP-1 note
+  quantization patch by stfj, moved in memory and with corrected scale tables.
+  The author states it has run on two OP-1 units and works on the original
+  OP-1 only. TAPE, a tape-damage and chorus effect, is listed as planned. The
+  project is unofficial and not affiliated with Teenage Engineering.
+status: active
+authors:
+  - name: j3threejay
+    url: https://justinjoe.com/
+source_status: patcher-only
+license: unspecified
+license_notes: >-
+  No license is stated; the project page says the mod is free. Only the patch
+  file and apply.py are published, not the source of the changes.
+homepage: https://justinjoe.com/op1-mod
+distribution: patch-your-own
+requires_stock: R246
+install_notes: >-
+  Back up the OP-1 in disk mode first. Download the patch and apply.py from the
+  project's download page (the page also offers a PDF manual), then run apply.py
+  with your official op1_246.op1 and the patch; nothing is written if the
+  checksum differs. Copy the result to the OP-1 in upload mode (hold COM at
+  power-on, press 1, plug in USB) and press COM. The bootloader stays stock.
+  Before returning to stock, switch every sound that uses KEYS, ITER, FILTER,
+  the new effects or the TIDE LFO to stock options, or the stock firmware stops
+  at boot with an "Invalid synth patch" message; flashing the mod again clears
+  that. The author warns that bursts of hundreds of MIDI CCs can make the unit
+  ignore USB MIDI until the cable is replugged.
+brick_risk: false
+tags: [synth-engine, fx, chords, sequencer, lfo, usb-midi, python]
+video:
+  url: https://www.youtube.com/watch?v=OytN1z0QtyQ
+  title: The Original OP-1 Just Got a New Synth Engine, Chords and 6 New Effects and More (Free Firmware Mod)
+  credit: Justin Joe
+  first_party: true
+  found_via: https://justinjoe.com/op1-mod
+versions:
+  - version: "1.0"
+    url: https://justinjoe.com/op1-mod-download
+    notes: Build 1.0; the page gives no release date.

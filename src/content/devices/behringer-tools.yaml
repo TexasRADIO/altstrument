@@ -1,0 +1,17 @@
+name: Behringer cross-device tools
+manufacturer: Behringer
+category: tools
+tagline: Editors and utilities that cover many Behringer synths and drum machines
+description: >-
+  This entry groups host-side software that works with more than one Behringer
+  instrument, rather than a single device. It currently lists a browser editor
+  and sequencer that talks to dozens of Behringer models over WebUSB and Web
+  MIDI SysEx. Tools for one Behringer instrument are on that instrument's own
+  page.
+links:
+  manufacturer: https://www.behringer.com/
+notes: >-
+  No replacement firmware is listed here. The tools exchange settings and
+  sequences with the stock operating system over MIDI SysEx. Tools for one
+  instrument are on that device's page.
+related: [behringer-model-d, behringer-neutron]

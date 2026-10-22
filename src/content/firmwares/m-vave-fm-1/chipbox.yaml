@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: Chipbox
+summary: >-
+  Chiptune groovebox with replicas of the NES, Game Boy and Master System sound chips, a 16-step rack, a per-channel
+  chip editor and a song view that chains pages.
+description: >-
+  Three views make up the workflow: RACK holds the 16 steps of the current page, CHIP sets up each channel by
+  picking a console and then one of its voices (pulse, triangle, wave and so on), and SONG chains pages into
+  a song. Channels are added one at a time, and a channel can be given an arpeggio shape. The source also
+  lists PC Engine, Atari TIA, Konami VRC6, AY-3-8910 and Mega Drive FM chip types and per-console drum kits, which
+  the README does not describe. A browser version runs the firmware, and the project site has a manual. The
+  README says it does not read other firmwares' projects or samples and that it was tested on a few real FM-1
+  units. It builds on Dinghy and Felucca's platform layer.
+status: active
+authors:
+- name: Pasquale Barilla (pbarilla)
+  url: https://github.com/pbarilla
+source: https://github.com/pbarilla/chipbox
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README, LICENSE and LICENSING.md. The platform code is Felucca by Leo Kuroshita with SLOOP's
+  changes, and the wiring and docs come from Dinghy by zvenson. The font is SIL OFL 1.1, and no JieLi SDK files
+  are in the tree.
+homepage: https://ihavenocluewhatimdoing.com/chipbox/
+distribution: browser-installer
+install_notes: >-
+  Installer page on the project site in Chrome or Edge over USB, using Felucca's installer code. The README
+  gives no notes on returning to stock or on recovery. Installing is at your own risk.
+brick_risk: true
+tags: [chiptune, sequencer, synth-engine, groovebox, emulator, fork]
+image:
+  url: https://raw.githubusercontent.com/pbarilla/chipbox/main/site/img/rack.png
+  alt: "Chipbox RACK view: four channels of 16 steps in red, yellow-green and blue, a Game Boy icon, tempo 144 and RACK, CHIP and SONG tabs"
+  credit: pbarilla
+  source_url: https://github.com/pbarilla/chipbox
+  first_party: true
+versions:
+- version: v1.1.0
+  date: 2026-10-22
+  url: https://github.com/pbarilla/chipbox/releases/tag/v1.1.0
+  notes: Adds drum support; the release page has no notes beyond the changelog link.
+- version: v1.0.1
+  date: 2026-10-22
+  url: https://github.com/pbarilla/chipbox/releases/tag/v1.0.1
+- version: v1.0.0
+  date: 2026-10-22
+  url: https://github.com/pbarilla/chipbox/releases/tag/v1.0.0

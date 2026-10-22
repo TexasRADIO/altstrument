@@ -1,0 +1,48 @@
+device: teenage-engineering-op-z
+name: opz-firmware-notes
+kind: tool
+summary: Reverse-engineering notes and Python tooling for the OP-Z OS 1.2.45 update container, console, file transfer and engine format, including an interpreter and a generator for custom synth engine modules.
+description: >-
+  Rights warning: the research files describe pulling factory sample packs and
+  engines off units and link a third-party archive copy of Teenage
+  Engineering's iOS app in the hunt for factory audio. The repository itself
+  commits no firmware, engine or sample binaries, and its gitignore excludes
+  them.
+
+  The repository records an attempt to read the encrypted update archive of
+  OP-Z OS 1.2.45 through the update-mode console, without having the key, and
+  documents the bootloader, serial commands, SysEx, engine module format and
+  the lighting and companion processors. Scripts cover USB and BLE file pulls,
+  update-payload staging, a small Blackfin interpreter, and an engine builder
+  that compiles a short declaration of partials into a loadable module. The
+  author reports installing a self-written engine on a real unit through the
+  updater's write path. The README says the unit used for the work was bricked
+  by a console command and later recovered, and that some factory engines still
+  do not play correctly in the simulator. It is an AI-assisted working
+  repository with large status and hand-over files.
+status: active
+authors:
+  - name: ioma8
+    url: https://github.com/ioma8
+source: https://github.com/ioma8/opz-firmware-notes
+source_status: open
+license: unspecified
+license_notes: >-
+  No license file or license statement at the repository root. A vendored copy
+  of op-z-sysex under refs/ carries its own MIT license.
+distribution: source-only
+requires_stock: 1.2.45
+install_notes: >-
+  Scripts are run by hand from a clone and several expect device captures that
+  are not in the repository. The README warns that sending console command 0x15
+  in update mode formats the internal NAND and leaves the unit booting only
+  into update mode, and that reflashing does not recover it. It also says never
+  to enumerate unknown console command types. opz-sudo-install.sh installs a
+  passwordless sudo rule, so read it before running.
+brick_risk: true
+tags: [research, sdk, emulator]
+versions:
+  - version: master @ 22d6076
+    date: 2026-10-19
+    url: https://github.com/ioma8/opz-firmware-notes/commit/22d6076
+    notes: No tagged releases; this is the latest commit.

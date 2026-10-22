@@ -1,0 +1,31 @@
+device: alesis-andromeda-a6
+name: A6Plus
+summary: >-
+  Unreleased community build of the 2002 Andromeda OS with fixes for jumpy pots and envelopes
+  and new vintage and stereo spread controls. Shown in a video demo; no download or source yet.
+description: >-
+  Rights warning: this is derived from Alesis's closed 2002 firmware, and no licence or
+  release terms have been stated.
+
+  The author describes a modified build of the 2002 A6 OS that addresses jumpy potentiometers,
+  makes envelopes faster, lowers oscillator levels so they clip less at maximum, and adds a
+  vintage control and a Matrix-12 style stereo voice spread, both on a new A6Plus page of the
+  Global tab. Work on the effects engine is planned. They say the bootloader is left untouched
+  as a fallback, that the code was written with Claude assisting in decoding the original
+  firmware, and that they are hesitant to release it because it is experimental.
+status: announced
+authors:
+  - name: Gordotuomi
+source_status: closed
+license: unspecified
+license_notes: >-
+  No source or licence published. Built from Alesis's closed A6 OS, which Alesis has not
+  licensed for modification or redistribution.
+homepage: https://gearspace.com/threads/after-24-long-years-a-new-2026-alesis-andromeda-firmware-update.1470083/
+requires_stock: 1.40.12
+install_notes: >-
+  Nothing is downloadable yet. The author states it runs on their own Andromeda and carries
+  a risk of bricking, so wait for a release and its notes before trying it.
+brick_risk: true
+tags: [research, ai-assisted, synth-engine]
+versions: []

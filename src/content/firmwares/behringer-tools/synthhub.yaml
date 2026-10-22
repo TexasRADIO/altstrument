@@ -1,0 +1,39 @@
+device: behringer-tools
+name: SynthHUB
+kind: tool
+summary: Browser app that edits settings, runs a step sequencer and checks firmware versions on 71 Behringer synths and drum machines over WebUSB and Web MIDI SysEx.
+description: >-
+  Rights warning: the repository bundles Behringer product photos and a manifest of links to Behringer manuals, and
+  its firmware panel reads release lists and download links from Behringer's cloud service through server-side
+  client credentials that are kept outside the repository. SynthHUB is an installable offline web app that stands in
+  for Behringer's SynthTribe and Control Tribe editors. It finds devices by USB vendor id and sends SysEx to read and
+  change per-device settings, with a step sequencer (ratchets, per-step velocity, gate and probability, live MIDI
+  recording), patch and pattern libraries, MIDI file import, poly-chain setup and CV calibration references. It
+  also imports and exports Control Tribe project files for the Swing. The firmware panel reads the device's version
+  and compares it with Behringer's latest; it never flashes, and it lists Behringer's own download links for
+  reference. The parameter tables were recovered for interoperability. It needs a Chromium-based browser.
+status: active
+authors:
+  - name: Vladimir Tasic (utajum)
+    url: https://github.com/utajum
+source: https://github.com/utajum/SynthHUB
+source_status: open
+license: MIT
+license_notes: >-
+  The repository has no LICENSE file; MIT is stated in the README and in CITATION.cff and covers the project's own
+  code. Behringer product images and manual links bundled in it are Behringer's, and Behringer trademarks belong to
+  their owners.
+homepage: https://synth-hub.elevatech.xyz/
+distribution: browser-installer
+install_notes: >-
+  Open the hosted page in Chrome, Edge, Brave or Opera and click CONNECT USB, then pick the synth, or run the Astro
+  app locally from the app folder with npm install and npm run dev. WebUSB and Web MIDI need HTTPS or localhost. The
+  firmware panel only reports versions and never writes firmware, so updates still go through Behringer's own
+  SynthTribe.
+brick_risk: false
+tags: [editor, sysex, sequencer, midi, web, usb-midi]
+versions:
+  - version: master @ 63a2468
+    date: 2026-10-22
+    url: https://github.com/utajum/SynthHUB/commit/63a246830e75de10479167cf0b5c93a6fdeb04d0
+    notes: No tagged releases; this is the latest commit. Adds Behringer QT32 settings.

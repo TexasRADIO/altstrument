@@ -17,6 +17,7 @@ notes: >-
   firmware work here targets older releases, such as RETracker on 1.5.0. Polyend
   also publishes an open library for the instrument, pattern and project files,
   and a community browser tool builds sliced instruments.
+related: [polyend-tracker-plus]
 image:
   src: /images/devices/polyend-tracker.png
   style: photo

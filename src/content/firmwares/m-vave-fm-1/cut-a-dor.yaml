@@ -1,0 +1,50 @@
+device: m-vave-fm-1
+name: Cut-A-Dor
+summary: >-
+  Drum and break firmware with eight lanes of 32 editable steps, six styles, A/B parts, a recordable FX tape and
+  76 factory sounds, plus a browser editor with sound-bank assembly.
+description: >-
+  Eight drum lanes carry 32 editable steps with velocity and timing nudges, lane levels and per-lane generation
+  locks. Six styles and sixteen rhythm families set the pattern, with swing, humanised timing, evolving variation,
+  A/B parts, intro, drop, outro and fills. The performance effects (roll, stutter, reverse, brake, filter, echo,
+  crush, gate) can be recorded and overdubbed as a one- to eight-bar FX tape. The 76 factory sounds are 64 drum
+  one-shots and 12 break arrangements, and three separate 80 KiB banks add 48 more hits. USB MIDI clock goes out
+  with start, stop and continue, and USB or jack MIDI comes in. The browser editor runs the same engine for step
+  editing, mixing, project files and WAV bounce, and its Sound Crate converts WAV files into sample banks that
+  USB sends to the unit. Browser patterns cannot be sent live to the FM-1. The author describes it as tested on
+  one unit, with the recovery paths not yet exercised on hardware.
+status: active
+authors:
+- name: Kid Bunka (kidbee85-beep)
+  url: https://github.com/kidbee85-beep
+source: https://github.com/kidbee85-beep/cut-a-dor-release
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and LICENSE. Samples are CC0 (Sonic Pi, Karoryfer Gogodze Phu and Virtuosity Drums,
+  Versilian VCSL), each listed with its source URL, and fonts are SIL OFL. The platform code and installer come
+  from Felucca by Leo Kuroshita via X0X and AMB-1, GPL-3.0-only (UPSTREAM-LICENSING.md). The repository and
+  recovery kit include a copy of M-VAVE's FM-1 V15 image, which matches the file M-VAVE licenses for
+  redistribution (blob ce49cc1, 699,956 bytes); it is not GPL code. The JieLi SDK is fetched separately to build.
+homepage: https://cut-a-dor.sugarypixie10.chatgpt.site/
+distribution: browser-installer
+requires_stock: M-VAVE V15
+install_notes: >-
+  Browser installer in desktop Chrome or Edge over USB, starting from M-VAVE V15 with no intermediate firmware.
+  It checks the package fingerprint before writing and expects the identity FM-1_7010201 afterwards. The page
+  returns the unit to V15, and the Recovery Kit adds a Mac rescue script for a unit that no longer answers over
+  MIDI. Switching firmware can overwrite the project and user-bank storage, so export projects and keep your
+  own sound banks first. The README says the unit has been tested by its author on one FM-1.
+brick_risk: true
+tags: [drums, sequencer, sampler, performance, fx, editor, midi, emulator, open-source]
+video:
+  url: https://www.youtube.com/watch?v=qQ7PwIBg9Fg
+  title: "Cut-A-Dor — Finish the Silence! | Free M-VAVE FM-1 Beat Dojo"
+  credit: Kid Bunka
+  first_party: true
+  found_via: https://cut-a-dor.sugarypixie10.chatgpt.site/
+versions:
+- version: v1.2.1
+  date: 2026-10-18
+  url: https://github.com/kidbee85-beep/cut-a-dor-release/releases/tag/v1.2.1
+  notes: Identity FM-1_7010201. Adds a SETUP page for key lights and idle glow, on-device help cards and a PUNCH control.

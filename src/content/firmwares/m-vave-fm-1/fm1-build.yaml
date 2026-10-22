@@ -1,0 +1,34 @@
+device: m-vave-fm-1
+name: fm1-build
+kind: tool
+summary: >-
+  Reusable GitHub Actions workflow that builds an FM-1 or SMK-37 firmware from its own repository, signs a build
+  attestation for the packages and publishes them as the release of a tag.
+description: >-
+  A firmware repository calls the workflow from its own release workflow on a version tag. The workflow checks out
+  the repository, installs Python with Pillow and JieLi's Linux toolchain, optionally clones the JieLi AC79 SDK at
+  a fixed tag, runs the repository's own build command and optional tests, attests the resulting .fwsc packages
+  with GitHub's build-provenance action and creates the release. Anyone can then check a downloaded package against
+  its commit with the GitHub CLI's attestation verify command. The README says the attestation shows which commit
+  and build produced a file and does not mean the firmware is safe. Changes ship as new tags rather than moved ones,
+  and v1 is the only tag so far. It was first tested with Shine On.
+status: active
+authors:
+- name: Sven Trogus (zvenson)
+  url: https://github.com/zvenson
+source: https://github.com/zvenson/fm1-build
+source_status: open
+license: MIT
+homepage: https://github.com/zvenson/fm1-build
+distribution: source-only
+install_notes: >-
+  Add a workflow file to a firmware repository that calls zvenson/fm1-build/.github/workflows/build.yml@v1 with
+  the build command and package glob, and push a version tag; the README gives the full example and the inputs.
+  It flashes nothing and needs no device.
+brick_risk: false
+tags: [sdk, utility, platform, open-source]
+versions:
+- version: v1
+  date: 2026-10-18
+  url: https://github.com/zvenson/fm1-build/tree/v1
+  notes: Git tag; no GitHub release page.

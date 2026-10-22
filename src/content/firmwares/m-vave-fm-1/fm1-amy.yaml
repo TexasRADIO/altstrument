@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: fm1-amy
+summary: >-
+  Six-voice synth that plays AMY's emulations of the 128 Roland Juno-60 factory patches, with filter, envelope, oscillator
+  and LFO pages on the four knobs. Experimental; no MIDI input or patch saving yet.
+description: >-
+  Runs AMY, the portable synthesizer library by Brian Whitman and Dan Ellis, inside the audio interrupt of a firmware
+  built on X0X and Felucca. It keeps their hardware layer, USB, update loader, installer and safe mode, and replaces the
+  instrument and screen. The PRESETS knob picks a patch from A11 to B88, SELECT chooses the VCF, ENV, OSC or LFO page, and
+  choosing a patch puts the knobs where that patch has them. AMY's DX7 patches and built-in drum samples are left out to fit the
+  flash, and AMY itself is not modified. The README lists what is missing: saving edited patches, MIDI
+  and velocity input, and a load meter. It says the firmware has been built, installed and played on one FM-1. The repository
+  also builds a host simulator and a browser emulator, and still carries X0X's groovebox sources.
+status: active
+authors:
+- name: Dan Ellis (dpwe)
+  url: https://github.com/dpwe
+source: https://github.com/dpwe/fm1-amy
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README states GPL-3.0-only, the licence of X0X and Felucca; LICENSING.md lists where each part comes from. AMY is MIT and is
+  compiled in from your own checkout, not kept in this tree. The tree still carries X0X's groovebox sources and
+  assets under their own terms. The tests include two small flash-store fixture files (.bin) that are test data, not firmware.
+homepage: https://github.com/dpwe/fm1-amy
+distribution: source-only
+requires_stock: M-VAVE V15 or X0X
+install_notes: >-
+  There is no prebuilt firmware file yet. Build x0x-amy.fwsc with X0X_AMY=1 and an unmodified AMY checkout (needs Docker
+  or an x86-64 Linux host, JieLi's toolchain and three AC79 SDK files), then install it with tools/fm1_install.py over
+  USB. The firmware reports itself as FM-1_900 afterwards. X0X's safe mode and update mode still work, and X0X's web installer can
+  put M-VAVE's firmware back. Installing is at your own risk.
+brick_risk: true
+tags: [synth-engine, oscillator, filter, lfo, emulator]
+image:
+  url: https://raw.githubusercontent.com/dpwe/fm1-amy/main/docs/img/fm1-amy.jpg
+  alt: FM-1 at an angle showing the ENV page of patch A12 Brass Swell on its screen, with attack, decay, sustain and release bars
+  credit: Dan Ellis
+  source_url: https://github.com/dpwe/fm1-amy
+  first_party: true
+versions:
+- version: main @ 5244e5e
+  date: 2026-10-22
+  url: https://github.com/dpwe/fm1-amy/commit/5244e5ef51da8f93d18650054031a5732068258a
+  notes: No tagged releases; this is the latest commit.

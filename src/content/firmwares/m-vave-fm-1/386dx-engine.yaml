@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: 386 DX Engine
+kind: tool
+summary: >-
+  C library for singing text: given a line of English, a syllable number and MIDI notes, it sings that syllable at those pitches
+  for an exact length. The voice inside 386DX KaraokeBot, built on eSpeak NG's Klatt synthesizer.
+description: >-
+  Extracted from the KaraokeBot firmware so the voice can be reused. eSpeak NG's English front end turns the words into
+  phonemes and syllables, and its Klatt synthesizer makes the sound; a singing layer places each syllable on its notes,
+  holds and glides vowels, keeps consonants at natural length and shapes the voice with four settings, body, breath, edge and
+  glide. The engine needs no files and no allocation once started, with the English data compiled in. A caller supplies a
+  dx_speech_idle hook, which the FM-1 build uses to feed the watchdog while the second core does the work. It outputs 11025 Hz 16-bit
+  mono, and an example program writes a WAV file on a computer. The KaraokeBot web page runs the same engine compiled to
+  WebAssembly.
+status: active
+authors:
+- name: Chris Farrell (seajaysec)
+  url: https://github.com/seajaysec
+source: https://github.com/seajaysec/386-DX-ENGINE
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSE and LICENSING.md. eSpeak NG 1.52.0 (GPL-3.0-or-later) is not in the repository; the build fetches it into vendor/ and
+  patches a copy. fastmath.h comes from Charles Vestal's X0X (GPL-3.0).
+homepage: https://386dx.linecross.ing
+distribution: source-only
+install_notes: >-
+  A library, not a flashable image. To try it on a computer, clone eSpeak NG 1.52.0 into vendor/, run tools/build.py and then
+  build/sing, which writes build/sing.wav. The FM-1 firmware that uses it is 386DX KaraokeBot.
+brick_risk: false
+tags: [voice, synth-engine, sdk, open-source]
+versions:
+- version: main @ bc4c678
+  date: 2026-10-18
+  url: https://github.com/seajaysec/386-DX-ENGINE/commit/bc4c678d4ebd16b270eea20ba49ba74cab7e08dd
+  notes: No tagged releases; this is the latest commit.

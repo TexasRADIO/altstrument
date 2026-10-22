@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: WitchBox
+summary: >-
+  Six-track groovebox for Burial-style 2-step and melodic dubstep: ghost-vocal chop sampler, sub, pads, FM keys and
+  drums run through a dust, tape, echo and plate chain, with pattern generators and one-button song writing.
+description: >-
+  Tracks are GHOST (a three-second tape sliced into 16 chops, plus a formant singer), SUB, PADS, KEYS (4-operator FM),
+  DRUMS (an eight-lane 2-step kit) and WEATHER (rain, crackle and a drone). Each track and drum lane drifts slowly, and
+  a 2-step swing template, late-snare control and hand-placed micro timing keep the drums off the grid while the first-beat kick stays
+  anchored for MIDI clock. A FEEL switch moves between 2-step and half-time. The fixed master chain runs
+  dust, tape, echo, plate reverb, kick-keyed ducking and glue compression. Generators write patterns per
+  track (a chord walk, Markov vocal phrases, a Turing machine, Euclidean hits, mutation), a 6x6 grid lets a firing
+  track trigger or mute others, and SUMMON writes a whole piece in a chosen mood. The README says it builds,
+  renders audio on a host simulator and builds in CI, but has not yet been run on an FM-1. It uses Dinghy's platform
+  layer, which is Felucca and SLOOP based.
+status: active
+authors:
+- name: David Ryan (davidpryan)
+  url: https://github.com/davidpryan
+source: https://github.com/davidpryan/witchbox
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README states GPL-3.0-only. The platform layer is Leo Kuroshita's Felucca with SLOOP's changes by isod89, wired up by
+  Dinghy (zvenson); LICENSING.md lists the parts.
+homepage: https://github.com/davidpryan/witchbox
+distribution: source-only
+install_notes: >-
+  No release yet; a version tag vX.Y makes the CI publish one with the .fwsc attached. To build, run ./build.sh with JieLi's toolchain (Docker on
+  macOS and Windows) and three AC79 SDK files fetched by the tools, then install with tools/fm1_install.py over USB, which asks before writing.
+  The README tells you to read docs/PLATFORM-RULES.md first and says flashing is at your own risk.
+brick_risk: true
+tags: [groovebox, drums, sequencer, sampler, synth-engine, generative, fx, delay, reverb, voice, emulator]
+versions:
+- version: main @ 4c58958
+  date: 2026-10-22
+  url: https://github.com/davidpryan/witchbox/commit/4c58958716c882389c5a0374175df33c88dd7775
+  notes: No tagged releases; this is the latest commit.

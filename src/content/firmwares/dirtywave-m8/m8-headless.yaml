@@ -18,7 +18,10 @@ license: proprietary
 license_notes: >-
   Distributed under the Dirtywave EULA in the repository (EULA.txt): use on
   your own devices and archival copies only. No modification, derivative
-  works, reverse engineering or redistribution.
+  works, reverse engineering or redistribution. The EULA was changed on
+  2026-10-20 to also forbid running the firmware in an emulator, simulator or
+  other software implementation of the target hardware without Dirtywave's
+  written permission.
 homepage: https://github.com/Dirtywave/M8Docs/blob/main/docs/M8HeadlessSetup.md
 distribution: download
 install_notes: >-
@@ -31,6 +34,10 @@ video:
   credit: Floyd Steinberg
   first_party: false
 versions:
+  - version: 6.6.3F
+    date: 2026-10-20
+    url: https://github.com/Dirtywave/M8HeadlessFirmware/blob/main/changelog.txt
+    notes: Fixes a Table RTO command changing an unrelated effect setting. The .hex was replaced under the same version on 2026-10-22 (commit 69bff25).
   - version: 6.6.3E
     date: 2026-10-05
     url: https://github.com/Dirtywave/M8HeadlessFirmware/blob/main/changelog.txt

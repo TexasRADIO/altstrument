@@ -22,7 +22,10 @@ notes: >-
   Covers the headless build only: the M8 firmware running on a Teensy 4.1
   with the display and keys handled by a host computer over USB. The
   firmware is published by Dirtywave itself, so this is the vendor's own
-  build, not a third-party mod.
+  build, not a third-party mod. Dirtywave's EULA forbids modifying,
+  reverse engineering or redistributing it, and since 2026-10-20 also
+  forbids running it in an emulator, simulator or other software
+  implementation of the hardware without written permission.
 image:
   src: /images/devices/dirtywave-m8.jpg
   style: photo

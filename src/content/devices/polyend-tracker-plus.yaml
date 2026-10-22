@@ -1,0 +1,31 @@
+name: Tracker+
+manufacturer: Polyend
+category: groovebox
+tagline: Standalone tracker with synth engines, drums and USB audio
+description: >-
+  The Tracker+ is the 2024 successor to the original Polyend Tracker, a
+  standalone sampler, synthesizer and sequencer built around a tracker-style
+  pattern editor. It adds eight tracks for MIDI or synth playback, several synth
+  engines and a drum machine, stereo sampling, more memory and audio over USB,
+  alongside MIDI in and out and a microSD card for projects. Like the original,
+  it has a grid of backlit pads and a large jog wheel.
+platform: NXP i.MX RT10xx (Cortex-M7)
+stock_firmware: 1.2.0
+links:
+  manufacturer: https://polyend.com/tracker-plus/
+notes: >-
+  Both entries here target stock firmware 1.2.0 and patch a copy you download
+  from Polyend. They are separate from the original Tracker, which has a
+  different processor and firmware line. Polyend's tracker-lib reads and writes
+  the Tracker+ file formats, and is listed under the original Tracker.
+related: [polyend-tracker]
+image:
+  src: /images/devices/polyend-tracker-plus.webp
+  style: photo
+  alt: Top-down view of the Polyend Tracker+, a black unit with a synth patch screen at the top left, square buttons, a grid of pads at the bottom and a large round jog wheel
+  width: 1200
+  height: 883
+  credit: Polyend
+  license: manufacturer product image
+  source_url: https://polyend.com/tracker-plus/
+  original_url: https://polyend.com/wp-content/themes/polyend/blocks/tracker-plus/tracker-plus-overview/assets/tracker-plus__overview--lg.png

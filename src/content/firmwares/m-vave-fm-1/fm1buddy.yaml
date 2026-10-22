@@ -2,16 +2,16 @@ device: m-vave-fm-1
 name: fm1buddy
 kind: tool
 summary: >-
-  Firmware for a small USB-host box built from an Adafruit Feather RP2040, optionally with an OLED or an ESP32
-  touch screen, that connects USB MIDI controllers to the FM-1 and installs firmware packages from an SD card
-  or the Feather's drive.
+  Firmware for a Freenove ESP32-S3 2.8-inch touch screen board that installs FM-1 firmware packages from its SD
+  card or the FM-1 Firmware Hub, and connects USB and Bluetooth MIDI controllers to the FM-1 without a
+  computer.
 description: >-
-  The Feather acts as a USB host with a hub, so the FM-1 and controllers exchange MIDI without a computer. The
-  OLED or touch-screen versions list .fwsc packages, check them for the FM-1 and run the update protocol,
-  resuming a cut-off install. A rules file maps MIDI messages between devices, for example a CC from a
-  controller to another CC or note, and can be edited on the box or on a computer. A Raspberry Pi script gives a
-  host without the switcher. The repository also holds OpenSCAD cases and a browser installer page. No FM-1
-  firmware is bundled; you copy packages onto the box yourself. Four releases appeared on 2026-10-16.
+  The board lists the .fwsc packages on its SD card and in the FM-1 Firmware Hub's catalogue, downloads them
+  over Wi-Fi after checking size and SHA-256, and installs them on the FM-1 through a USB hub. Its USB-C port
+  acts as a USB host for up to four MIDI devices, which all hear each other, and Bluetooth MIDI devices can
+  join; Bluetooth is off while Wi-Fi is on. Version 0.1.0 rebuilt the project around this board and dropped the
+  earlier Feather RP2040, OLED and CYD variants. The repository also holds a printable case and a browser
+  installer page. No FM-1 firmware is bundled.
 status: active
 authors:
 - name: David Konsumer (konsumer)
@@ -20,25 +20,50 @@ source: https://github.com/konsumer/fm1buddy
 source_status: open
 license: GPL-3.0-only
 license_notes: >-
-  LICENSING.md names GPL-3.0-only; the FM-1 update code is a port of Leo Kuroshita's, and Pico-PIO-USB (MIT) is
-  included.
+  LICENSING.md names GPL-3.0-only; the FM-1 update code is a port of Leo Kuroshita's from foma. Third-party
+  libraries fetched at build time (LVGL, TFT_eSPI, Arduino-ESP32, ArduinoJson) keep their own licenses.
 homepage: https://konsumer.js.org/fm1buddy/
 distribution: download
 install_notes: >-
-  Download the UF2 for the Feather or the .bin for the touch screen from the releases page, or use the
-  installer page. The README warns that installing firmware onto the FM-1 is at your own risk, and that
-  holding OCT- while switching on starts its USB rescue mode.
+  Flash the board from the installer page in Chrome or Edge, or write the release .bin with esptool. The board
+  then needs a USB-C OTG adapter that passes charging and data, a small hub and a charger. The installer page
+  warns that installing firmware on the FM-1 is at your own risk, and that holding OCT- while switching on
+  starts its USB rescue mode.
 brick_risk: true
 tags: [flasher, usb-midi, midi, utility]
 image:
-  url: https://raw.githubusercontent.com/konsumer/fm1buddy/main/site/case/cyd.png
+  url: https://raw.githubusercontent.com/konsumer/fm1buddy/main/site/case/s3.png
   alt: >-
-    Render of a green 3D-printed case with an orange lid floating above it, over a flat black screen module,
-    with POWER and SD labels on the front
+    Render of the CYD-S3 case: a green 3D-printed tray holding a black screen module, with an orange frame
+    lid floating above it
   credit: konsumer
   source_url: https://konsumer.js.org/fm1buddy/
   first_party: true
 versions:
+- version: 0.1.2
+  date: 2026-10-22
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.2
+  notes: Drops the battery case.
+- version: 0.1.1
+  date: 2026-10-22
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.1
+  notes: USB host moved to TinyUSB, supporting more devices.
+- version: 0.1.0
+  date: 2026-10-22
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.0
+  notes: Rebuilt around the Freenove ESP32-S3 (CYD-S3) touch screen; other boards dropped.
+- version: 0.0.6
+  date: 2026-10-20
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.0.6
+  notes: Adds the CYD-S3 all-in-one variant.
+- version: 0.0.5
+  date: 2026-10-20
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.0.5
+  notes: Bluetooth MIDI on the CYD.
+- version: 0.0.4
+  date: 2026-10-19
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.0.4
+  notes: Adds an ultra-light model and over-the-air install from the hub.
 - version: 0.0.3
   date: 2026-10-16
   url: https://github.com/konsumer/fm1buddy/releases/tag/v0.0.3
