@@ -23,9 +23,16 @@ pnpm discover:candidates --since-days 14
 - First run in a while, or the catalog looks stale: use `--since-days 30`.
 - `$ARGUMENTS` is a URL: skip the script. That URL is the only candidate. If it is already in the catalog (grep `src/content` for the repository and the project name), treat it as an update check on that entry rather than a new one.
 - `$ARGUMENTS` is a device slug or a topic word: run the script with `--filter "<argument>"`, and also treat the argument itself as a research lead (search the web for `"<device name>" custom firmware`).
-- A full run takes a few minutes: the reddit feeds allow about one request a minute, and the per-device GitHub searches take another seven or so (consoles and handhelds run several music-term searches each; see `category_query_templates` and `device_search_names` in config.yaml). Pass `--no-device-queries` for a quicker pass; the generic searches catch most new projects.
+- A full run takes a few minutes: the reddit feeds allow about one request a minute, and the per-device GitHub searches take another seven or so (consoles and handhelds run several music-term searches each; see `category_query_templates` and `device_search_names` in config.yaml). Pass `--no-device-queries` for a quicker pass; the generic searches catch most new projects. The release sweep (below) adds about two minutes; `--no-release-sweep` skips it.
 
 The script prints a markdown report and writes `discover-candidates.json`. It already drops repositories that the catalog links to and anything under `ignore` in `.claude/skills/discover/config.yaml`. News items are not dropped when they mention a catalog entry; the "Mentions catalog" column tells you which one.
+
+The report also has a "Catalogued entries with newer releases" section, the release sweep. For every entry whose `source` is a GitHub repo, except archived ones, it lists:
+- releases published after the entry's top version that the file does not mention yet;
+- a newer head commit, for entries that track `<branch> @ <sha>`;
+- tags the file does not mention, for repos without releases.
+
+Its "Problems" lines also name entries whose `<branch> @` label is not a branch the repo has, and repos that have gone (404). Fix those too.
 
 ## 2. Triage
 
@@ -42,6 +49,16 @@ Reject when any of these hold. Record the reason.
 - A GitHub search hit that is a fork, a template, an archived toy, or clearly unrelated to the device named in the query.
 
 A news item that mentions a catalog entry is usually a new version of that entry. Open the firmware file, check `versions[]`, and if the release is real and confirmed, add the version at the top of the list following the existing style. That counts as an update, not a new entry.
+
+Every row of the release sweep is also an update candidate. Work through each one before researching new entries:
+- Confirm the release belongs to this entry. Monorepos publish releases for several components. The sweep marks a tag prefix that no existing version uses as `other component?`, for example `smk-` builds in an FM-1 repo, or `desktop-` and `plugin-` builds. Add only the ones for this entry's build.
+- Skip data, model, CI and test releases, and pre-releases or dated snapshots the entry deliberately leaves out. Follow what the existing `versions[]` already include.
+- Add each confirmed release at the top of `versions[]`, newest first, in the entry's existing style. Use the release date and URL, and a short `notes:` line in your own words when the release notes say something concrete.
+- For a moved branch, replace the `<branch> @ <sha>` version's sha, URL and date. Once real releases exist, replace the commit version with them.
+- Fix prose the release makes untrue: a new device build, a feature the summary denies, or a `distribution` that is no longer `source-only`.
+- When the project was renamed, rename the file to the new slug and add a 301 line to `public/_redirects`.
+
+With many rows, batch them about 20 entries at a time by device directory to parallel agents. Each agent owns its own files.
 
 ## 3. Research each kept candidate
 
@@ -98,7 +115,7 @@ Use the repository URL for GitHub candidates and the article or project URL othe
 End with a short report:
 
 - Files written, each as a clickable path, one line each saying what the entry is and the evidence link for its version.
-- Updates to existing entries, with the file path and the version added.
+- Updates to existing entries, with the file path and the version added (from news items and the release sweep), plus sweep rows skipped and why.
 - For each new device, the image source used (and which tier from section 4), or why it has no image.
 - Rejected candidates with their one-line reasons.
 - Open questions the maintainer must settle, for example an unclear license, a device that might belong to an existing family, or a video whose first-party status is uncertain.

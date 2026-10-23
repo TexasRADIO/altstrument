@@ -2,7 +2,8 @@
  * Standalone catalog validator.
  *
  * Runs before `astro build` (see package.json) and in CI. It re-parses every
- * YAML file with the same Zod schemas Astro uses, then applies cross-file rules
+ * YAML file the way Astro does and checks it against the same Zod schemas, then
+ * applies cross-file rules
  * Zod cannot express on its own:
  *
  *   - firmware directory name must equal the `device` field
@@ -20,7 +21,7 @@
  */
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, basename, relative } from 'node:path';
-import { parse } from 'yaml';
+import { parse, type ParseOptions, type SchemaOptions } from 'yaml';
 import { deviceSchema, firmwareBaseSchema, manufacturerSchema, refineFirmware } from '../src/content/schema';
 import { slugify } from '../src/lib/slug';
 import { youtubeOembedUrl } from '../src/lib/media';
@@ -67,9 +68,16 @@ function listYaml(dir: string): string[] {
     .sort();
 }
 
+/**
+ * Same options as Astro's content loader (@astrojs/internal-helpers/yaml), so an
+ * unquoted `version: 2026-04-08` reaches the schema as a Date here too instead
+ * of passing as a string and only failing in `astro build`.
+ */
+const ASTRO_YAML: ParseOptions & SchemaOptions = { customTags: ['timestamp'], merge: true, schema: 'core' };
+
 function loadYaml(file: string): unknown {
   try {
-    return parse(readFileSync(file, 'utf8'));
+    return parse(readFileSync(file, 'utf8'), ASTRO_YAML);
   } catch (e) {
     fail(file, `YAML parse error: ${(e as Error).message}`);
     return undefined;

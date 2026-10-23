@@ -11,6 +11,8 @@
  *   - GitHub: repository searches (generic queries plus one per catalog device),
  *     minus every repo the catalog already links to or the maintainer ignored
  *   - prior art: recent commits to other firmware lists (awesome-lists etc.)
+ *   - release sweep: GitHub releases, branch heads or tags of catalogued entries
+ *     that are newer than the entry's top version (updates, not new entries)
  *
  * GitHub is reached through the `gh` CLI, so there is no token plumbing; it
  * must be installed and authenticated. Search is rate limited to 30 requests a
@@ -23,10 +25,10 @@
  * Exit code 0 on success even with problems; 1 on a config error or when every
  * network source failed; 2 on bad command-line usage.
  */
-import { execFileSync } from 'node:child_process';
+import { execFile, execFileSync } from 'node:child_process';
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { basename, join, relative, resolve } from 'node:path';
-import { parseArgs } from 'node:util';
+import { parseArgs, promisify } from 'node:util';
 import { XMLParser } from 'fast-xml-parser';
 import { parse } from 'yaml';
 import { z } from 'astro/zod';
@@ -46,6 +48,11 @@ const MAX_RATE_WAIT_S = 60;
 const SEARCH_DELAY_MS = 2100;
 const SUMMARY_MAX = 400;
 const DESCRIPTION_MAX = 120;
+const SWEEP_CONCURRENCY = 8;
+/** Newer releases listed per entry; the rest are counted. */
+const SWEEP_HITS_MAX = 5;
+/** Repos whose releases cover many unrelated entries (PortMaster-New ships every port at once). */
+const SWEEP_SKIP_REPOS = new Set(['portsmaster/portmaster-new']);
 
 // ---- types -----------------------------------------------------------------
 
@@ -86,6 +93,29 @@ interface CommitCandidate {
   url: string;
 }
 
+interface ReleaseHit {
+  kind: 'release' | 'commit' | 'tag';
+  /** Tag name, or `<branch> @ <sha7>` for a moved branch. */
+  ref: string;
+  date?: string;
+  url: string;
+  prerelease?: boolean;
+  /** Tag prefix (e.g. "smk") that none of the entry's versions use: maybe another component's release. */
+  otherComponent?: string;
+}
+
+interface StaleEntry {
+  /** Repo-relative path of the firmware file. */
+  file: string;
+  name: string;
+  device: string;
+  repo: string;
+  top?: { version: string; date?: string };
+  hits: ReleaseHit[];
+  /** Newer releases beyond the ones listed in `hits`. */
+  more: number;
+}
+
 interface Report {
   generatedAt: string;
   sinceDays: number;
@@ -93,6 +123,7 @@ interface Report {
   news: NewsCandidate[];
   github: RepoCandidate[];
   priorArt: CommitCandidate[];
+  stale: StaleEntry[];
   problems: string[];
   stats: {
     feedsChecked: number;
@@ -101,9 +132,10 @@ interface Report {
     reposSeen: number;
     reposKnown: number;
     reposIgnored: number;
+    entriesSwept: number;
   };
   /** Rows dropped by --limit, per section (all zero without --limit). */
-  omitted: { news: number; github: number; priorArt: number };
+  omitted: { news: number; github: number; priorArt: number; stale: number };
 }
 
 // ---- config ----------------------------------------------------------------
@@ -645,22 +677,35 @@ async function gatherNews(
 
 type GhResult = { ok: true; json: unknown } | { ok: false; status?: number; message: string };
 
+const GH_OPTIONS = { encoding: 'utf8', maxBuffer: 32 * 1024 * 1024, timeout: 60_000 } as const;
+
+function ghError(e: unknown): GhResult {
+  const err = e as NodeJS.ErrnoException & { stderr?: string; stdout?: string };
+  if (err.code === 'ENOENT') return { ok: false, message: 'gh CLI not found; install it and run `gh auth login`' };
+  const detail = `${err.stderr ?? ''}\n${err.stdout ?? ''}`;
+  const status = /HTTP (\d{3})/.exec(detail)?.[1];
+  const message = (err.stderr || err.message).split('\n').find((l) => l.trim()) ?? 'gh api failed';
+  return { ok: false, status: status ? Number(status) : undefined, message: message.trim() };
+}
+
 function gh(args: string[]): GhResult {
   try {
-    const out = execFileSync('gh', ['api', ...args], {
-      encoding: 'utf8',
-      stdio: ['ignore', 'pipe', 'pipe'],
-      maxBuffer: 32 * 1024 * 1024,
-      timeout: 60_000,
-    });
+    const out = execFileSync('gh', ['api', ...args], { ...GH_OPTIONS, stdio: ['ignore', 'pipe', 'pipe'] });
     return { ok: true, json: JSON.parse(out) as unknown };
   } catch (e) {
-    const err = e as NodeJS.ErrnoException & { stderr?: string; stdout?: string };
-    if (err.code === 'ENOENT') return { ok: false, message: 'gh CLI not found; install it and run `gh auth login`' };
-    const detail = `${err.stderr ?? ''}\n${err.stdout ?? ''}`;
-    const status = /HTTP (\d{3})/.exec(detail)?.[1];
-    const message = (err.stderr || err.message).split('\n').find((l) => l.trim()) ?? 'gh api failed';
-    return { ok: false, status: status ? Number(status) : undefined, message: message.trim() };
+    return ghError(e);
+  }
+}
+
+const execFileAsync = promisify(execFile);
+
+/** Like gh(), but does not block, so pool() can run several at once. */
+async function ghAsync(args: string[]): Promise<GhResult> {
+  try {
+    const { stdout } = await execFileAsync('gh', ['api', ...args], GH_OPTIONS);
+    return { ok: true, json: JSON.parse(stdout) as unknown };
+  } catch (e) {
+    return ghError(e);
   }
 }
 
@@ -745,6 +790,218 @@ function gatherPriorArt(repos: string[], since: Date, problems: string[]): { com
   return { commits, ok };
 }
 
+// ---- release sweep ----------------------------------------------------------------------------
+
+interface SweepTarget {
+  file: string;
+  name: string;
+  device: string;
+  repo: string;
+  /** Branch and subfolder of a `/tree/<branch>/<path>` source URL. */
+  branch?: string;
+  path?: string;
+  versions: { version: string; date?: string }[];
+  /** Lowercased file text, to tell whether a tag is already mentioned. */
+  text: string;
+}
+
+/** `main @ 1a2b3c4` style versions, which track the latest commit of a branch. */
+const COMMIT_VERSION = /^(\S+) @ ([0-9a-f]{7,40})$/i;
+const GITHUB_SOURCE = /^https:\/\/github\.com\/([\w.-]+)\/([\w.-]+?)(?:\.git)?(?:\/tree\/([^/\s]+)(?:\/(\S+?))?)?\/?$/;
+
+/** `smk-pad-lights-953` → "smk", `kit v0.5.0` → "kit"; plain versions such as `v1.2` have none. */
+function versionPrefix(v: string): string | undefined {
+  if (/^v?\d/i.test(v)) return undefined;
+  return /^([a-z][a-z0-9]*)[-_ ]/i.exec(v)?.[1].toLowerCase();
+}
+
+/** True when the tag, with or without its leading v, already appears in the file as a whole version. */
+function mentions(text: string, tag: string): boolean {
+  const forms = new Set([tag.toLowerCase(), tag.toLowerCase().replace(/^v(?=\d)/, '')]);
+  return [...forms].some((f) => new RegExp(`(?<![\\w.-])${escapeRe(f)}(?![\\w-]|\\.\\d)`).test(text));
+}
+
+/** Every firmware entry whose `source` is a GitHub repo, except archived ones and SWEEP_SKIP_REPOS. */
+function buildSweepTargets(): SweepTarget[] {
+  const targets: SweepTarget[] = [];
+  for (const dir of listDirs(CATALOG_DIRS[1])) {
+    for (const file of listYaml(dir)) {
+      let raw: string;
+      let fw: Obj | undefined;
+      try {
+        raw = readFileSync(file, 'utf8');
+        fw = asObj(parse(raw));
+      } catch {
+        continue; // buildCatalog already reported it
+      }
+      if (!fw || str(fw.status) === 'archived') continue;
+      const m = GITHUB_SOURCE.exec(str(fw.source));
+      if (!m) continue;
+      const repo = `${m[1]}/${m[2]}`;
+      if (SWEEP_SKIP_REPOS.has(repo.toLowerCase())) continue;
+      const versions = arr(fw.versions)
+        .map(asObj)
+        .filter((v): v is Obj => !!v)
+        .map((v) => ({ version: str(v.version), date: str(v.date) || undefined }))
+        .filter((v) => v.version);
+      targets.push({
+        file: relative(ROOT, file),
+        name: str(fw.name) || basename(file),
+        device: basename(dir),
+        repo,
+        branch: m[3],
+        path: m[4],
+        versions,
+        text: raw.toLowerCase(),
+      });
+    }
+  }
+  return targets;
+}
+
+type GhCall = (args: string[]) => Promise<GhResult>;
+
+/**
+ * Releases newer than the entry's top version and not mentioned in the file; for
+ * `<branch> @ <sha>` entries also a moved branch head; for repos without releases,
+ * tags the file does not mention.
+ */
+async function sweepEntry(t: SweepTarget, call: GhCall, report: (msg: string) => void): Promise<StaleEntry | undefined> {
+  const top = t.versions[0];
+  const commitTop = top ? COMMIT_VERSION.exec(top.version) : null;
+  const known = new Set(t.versions.map((v) => versionPrefix(v.version)).filter(Boolean));
+  const ownName = `${t.repo.split('/')[1]} ${t.name}`.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const otherComponent = (tag: string) => {
+    const prefix = versionPrefix(tag);
+    return prefix && !known.has(prefix) && !ownName.includes(prefix) ? prefix : undefined;
+  };
+  const hits: ReleaseHit[] = [];
+
+  const rel = await call([`repos/${t.repo}/releases?per_page=20`]);
+  if (rel.ok === false) {
+    report(`release sweep ${t.repo} (${t.file}): ${rel.message}`);
+    return undefined;
+  }
+  const releases = arr(rel.json)
+    .map(asObj)
+    .filter((o): o is Obj => !!o && o.draft !== true);
+  for (const r of releases) {
+    const tag = str(r.tag_name);
+    const date = isoDay(str(r.published_at) || str(r.created_at));
+    if (!tag || (top?.date && date <= top.date) || mentions(t.text, tag)) continue;
+    hits.push({
+      kind: 'release',
+      ref: tag,
+      date,
+      url: str(r.html_url) || `https://github.com/${t.repo}/releases/tag/${encodeURIComponent(tag)}`,
+      prerelease: r.prerelease === true || undefined,
+      otherComponent: otherComponent(tag),
+    });
+  }
+
+  if (commitTop) {
+    const [, named, sha] = commitTop;
+    let branch = named;
+    const head = (b: string) => {
+      const path = t.branch === b ? t.path : undefined;
+      return call([`repos/${t.repo}/commits?sha=${encodeURIComponent(b)}&per_page=1${path ? `&path=${encodeURIComponent(path)}` : ''}`]);
+    };
+    let res = await head(branch);
+    if (res.ok === false && (res.status === 404 || res.status === 422)) {
+      // CONTRIBUTING wants the label to name the default branch; say so and compare against that one.
+      const info = await call([`repos/${t.repo}`]);
+      const fallback = info.ok ? str(asObj(info.json)?.default_branch) : '';
+      if (fallback && fallback !== named) {
+        report(`release sweep ${t.file}: version "${top.version}" names branch "${named}", which ${t.repo} does not have; its default branch is "${fallback}"`);
+        branch = fallback;
+        res = await head(branch);
+      }
+    }
+    if (res.ok === false) report(`release sweep ${t.repo} (${t.file}): branch ${branch}: ${res.message}`);
+    else {
+      const head = asObj(arr(res.json)[0]);
+      const headSha = str(head?.sha);
+      const headDate = isoDay(str(asObj(asObj(head?.commit)?.committer)?.date)) || undefined;
+      // A source pointing at a subfolder can name a repo-wide commit newer than the folder's last change.
+      const newer = !top.date || !headDate || headDate >= top.date;
+      if (headSha && newer && !headSha.toLowerCase().startsWith(sha.toLowerCase())) {
+        hits.unshift({
+          kind: 'commit',
+          ref: `${branch} @ ${headSha.slice(0, 7)}`,
+          date: headDate,
+          url: str(head?.html_url) || `https://github.com/${t.repo}/commit/${headSha}`,
+        });
+      }
+    }
+  } else if (releases.length === 0) {
+    const res = await call([`repos/${t.repo}/tags?per_page=10`]);
+    if (res.ok === false) report(`release sweep ${t.repo} (${t.file}): tags: ${res.message}`);
+    else {
+      for (const o of arr(res.json).map(asObj)) {
+        const name = str(o?.name);
+        if (!name) continue;
+        if (mentions(t.text, name)) break;
+        hits.push({
+          kind: 'tag',
+          ref: name,
+          url: `https://github.com/${t.repo}/tree/${encodeURIComponent(name)}`,
+          otherComponent: otherComponent(name),
+        });
+      }
+    }
+  }
+
+  if (!hits.length) return undefined;
+  return {
+    file: t.file,
+    name: t.name,
+    device: t.device,
+    repo: t.repo,
+    top: top && { version: top.version, date: top.date },
+    hits: hits.slice(0, SWEEP_HITS_MAX),
+    more: Math.max(0, hits.length - SWEEP_HITS_MAX),
+  };
+}
+
+async function runReleaseSweep(
+  targets: SweepTarget[],
+  problems: string[],
+): Promise<{ stale: StaleEntry[]; calls: number; ok: number }> {
+  // Monorepos back several entries; ask GitHub once per URL.
+  const cache = new Map<string, Promise<GhResult>>();
+  let calls = 0;
+  let ok = 0;
+  let limited = false;
+  const call: GhCall = (args) => {
+    const key = args.join(' ');
+    let p = cache.get(key);
+    if (!p) {
+      if (limited) return Promise.resolve({ ok: false, message: 'skipped after the rate limit' });
+      calls++;
+      p = ghAsync(args).then((r) => {
+        if (r.ok) ok++;
+        else if (r.status === 429 || /rate limit/i.test(r.message)) limited = true;
+        return r;
+      });
+      cache.set(key, p);
+    }
+    return p;
+  };
+  const reported = new Set<string>();
+  let done = 0;
+  const results = await pool(targets, SWEEP_CONCURRENCY, async (t) => {
+    const entry = await sweepEntry(t, call, (msg) => {
+      if (limited || reported.has(t.repo)) return;
+      reported.add(t.repo);
+      problems.push(msg);
+    });
+    if (++done % 100 === 0) progress(`  swept ${done}/${targets.length}`);
+    return entry;
+  });
+  if (limited) problems.push('release sweep: GitHub rate limit hit; results are partial');
+  return { stale: results.filter((r): r is StaleEntry => !!r), calls, ok };
+}
+
 // ---- output -----------------------------------------------------------------------------------
 
 const cell = (s: string) => s.replace(/\|/g, '\\|').replace(/\s+/g, ' ').trim();
@@ -756,7 +1013,9 @@ function renderMarkdown(r: Report, outPath: string): string {
     `Discover candidates, last ${r.sinceDays} days (since ${isoDay(r.since)}): ${r.news.length + r.omitted.news} news item(s) from ${r.stats.feedsChecked} feed(s) ` +
       `(${r.stats.feedItemsSeen} items seen), ${r.github.length + r.omitted.github} GitHub repo(s) not in the catalog ` +
       `(${r.stats.reposSeen} seen, ${r.stats.reposKnown} already known, ${r.stats.reposIgnored} ignored, ${r.stats.searchQueries} searches), ` +
-      `${r.priorArt.length + r.omitted.priorArt} prior-art commit(s), ${r.problems.length} problem(s).`,
+      `${r.priorArt.length + r.omitted.priorArt} prior-art commit(s), ` +
+      `${r.stale.length + r.omitted.stale} catalogued entr${r.stale.length + r.omitted.stale === 1 ? 'y' : 'ies'} with newer releases (${r.stats.entriesSwept} checked), ` +
+      `${r.problems.length} problem(s).`,
   );
   const more = (n: number) => (n > 0 ? [``, `… and ${n} more (raise --limit to see them)`] : []);
 
@@ -792,6 +1051,23 @@ function renderMarkdown(r: Report, outPath: string): string {
     L.push(...more(r.omitted.priorArt));
   } else L.push('None.');
 
+  L.push('', `## Catalogued entries with newer releases (${r.stale.length + r.omitted.stale})`, '');
+  if (r.stale.length) {
+    L.push('| Entry | Repo | Current top | Newer |', '| --- | --- | --- | --- |');
+    for (const s of r.stale) {
+      const hits = s.hits.map((h) => {
+        const flags = [h.kind === 'tag' && 'tag', h.prerelease && 'pre', h.otherComponent && `other component? "${h.otherComponent}"`]
+          .filter(Boolean)
+          .join(', ');
+        return `[${linkText(h.ref)}](${h.url})${h.date ? ` ${h.date}` : ''}${flags ? ` (${flags})` : ''}`;
+      });
+      if (s.more) hits.push(`+${s.more} more`);
+      const top = s.top ? `${s.top.version}${s.top.date ? ` (${s.top.date})` : ''}` : 'no versions';
+      L.push(`| ${cell(s.file)} | ${cell(s.repo)} | ${cell(top)} | ${cell(hits.join(' · '))} |`);
+    }
+    L.push(...more(r.omitted.stale));
+  } else L.push('None.');
+
   if (r.problems.length) {
     L.push('', '## Problems', '');
     for (const p of r.problems) L.push(`- ${p}`);
@@ -809,15 +1085,18 @@ function displayPath(p: string): string {
 const HELP = `Usage: pnpm discover:candidates [options]
 
 Gathers firmware candidates (news, GitHub repos, prior-art list commits) that
-are not yet in the catalog. Settings live in .claude/skills/discover/config.yaml.
+are not yet in the catalog, and catalogued entries whose GitHub repo has releases
+newer than the entry's top version. Settings live in
+.claude/skills/discover/config.yaml.
 
 Options:
   --since-days N       Lookback window in days (default: config since_days)
   --limit N            Max rows per section (default: unlimited)
   --filter <text>      Keep only candidates whose title/description/url contain the text
   --no-feeds           Skip the news feeds
-  --no-github          Skip all GitHub calls (searches and prior-art commits)
+  --no-github          Skip all GitHub calls (searches, prior-art commits, release sweep)
   --no-device-queries  Skip the per-device GitHub searches (about 2 s each)
+  --no-release-sweep   Skip checking catalogued entries for newer releases (about a minute)
   --out <file>         JSON output path (default: discover-candidates.json in the repo root)
   --json               Print JSON to stdout instead of a markdown report
   --config <path>      Config file (default: config.yaml next to this script)
@@ -847,6 +1126,7 @@ async function main() {
         limit: { type: 'string' },
         filter: { type: 'string' },
         'no-device-queries': { type: 'boolean' },
+        'no-release-sweep': { type: 'boolean' },
         'no-feeds': { type: 'boolean' },
         'no-github': { type: 'boolean' },
         out: { type: 'string' },
@@ -885,7 +1165,15 @@ async function main() {
   // Network sources that were attempted / that answered at least once.
   let attempted = 0;
   let succeeded = 0;
-  const stats: Report['stats'] = { feedsChecked: 0, feedItemsSeen: 0, searchQueries: 0, reposSeen: 0, reposKnown: 0, reposIgnored: 0 };
+  const stats: Report['stats'] = {
+    feedsChecked: 0,
+    feedItemsSeen: 0,
+    searchQueries: 0,
+    reposSeen: 0,
+    reposKnown: 0,
+    reposIgnored: 0,
+    entriesSwept: 0,
+  };
 
   // News.
   let news: NewsCandidate[] = [];
@@ -914,6 +1202,7 @@ async function main() {
   // GitHub.
   let github: RepoCandidate[] = [];
   let priorArt: CommitCandidate[] = [];
+  let stale: StaleEntry[] = [];
   if (!values['no-github']) {
     const queries = [...config.github_queries];
     if (!values['no-device-queries']) {
@@ -966,6 +1255,17 @@ async function main() {
       priorArt = pa.commits.filter((c) => !isIgnored(c.url));
       priorArt.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
     }
+
+    if (!values['no-release-sweep']) {
+      const targets = buildSweepTargets();
+      progress(`Checking ${targets.length} catalogued GitHub sources for newer releases...`);
+      const sweep = await runReleaseSweep(targets, problems);
+      if (sweep.calls > 0) attempted++;
+      if (sweep.ok > 0) succeeded++;
+      stats.entriesSwept = targets.length;
+      // By file path, so one device's entries sit together for batching.
+      stale = sweep.stale.sort((a, b) => a.file.localeCompare(b.file));
+    }
   }
 
   // --filter, then --limit.
@@ -974,15 +1274,18 @@ async function main() {
     news = news.filter((n) => has(n.title, n.summary, n.link));
     github = github.filter((g) => has(g.repo, g.description, g.url));
     priorArt = priorArt.filter((c) => has(c.subject, c.repo, c.url));
+    stale = stale.filter((s) => has(s.name, s.repo, s.file));
   }
-  const omitted = { news: 0, github: 0, priorArt: 0 };
+  const omitted = { news: 0, github: 0, priorArt: 0, stale: 0 };
   if (limit !== undefined) {
     omitted.news = Math.max(0, news.length - limit);
     omitted.github = Math.max(0, github.length - limit);
     omitted.priorArt = Math.max(0, priorArt.length - limit);
+    omitted.stale = Math.max(0, stale.length - limit);
     news = news.slice(0, limit);
     github = github.slice(0, limit);
     priorArt = priorArt.slice(0, limit);
+    stale = stale.slice(0, limit);
   }
 
   const report: Report = {
@@ -992,6 +1295,7 @@ async function main() {
     news,
     github,
     priorArt,
+    stale,
     problems,
     stats,
     omitted,
