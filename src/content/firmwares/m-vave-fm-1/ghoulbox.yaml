@@ -25,6 +25,22 @@ video:
   first_party: true
   found_via: https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth
 versions:
+- version: 2.3.2
+  date: 2026-10-17
+  url: https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth/releases/tag/ghoulbox-v2.3.2
+  notes: Fixes muted hurdy-gurdy tracks keeping their drones sounding when RING is on.
+- version: 2.3.1
+  date: 2026-10-17
+  url: https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth/releases/tag/ghoulbox-v2.3.1
+  notes: Fixes DREAM after loading a project; the web editor groups its controls again.
+- version: '2.3'
+  date: 2026-10-17
+  url: https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth/releases/tag/ghoulbox-v2.3
+  notes: Adds DREAM, which composes a slow piece for the four tracks, and RING, which keeps hurdy-gurdy drones sounding through rests.
+- version: '2.2'
+  date: 2026-10-17
+  url: https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth/releases/tag/ghoulbox-v2.2
+  notes: Frees firmware space with no change to sound or screen.
 - version: '2.1'
   date: 2026-10-12
   url: https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth/releases/tag/ghoulbox-v2.1

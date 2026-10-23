@@ -36,7 +36,7 @@ video:
   first_party: true
   found_via: https://hericdk.github.io/nomanskyFM/
 versions:
-- version: main @ 4304597
-  date: 2026-10-16
-  url: https://github.com/hericdk/nomanskyFM/commit/4304597
-  notes: No tagged releases; this is the latest commit. The README and the package name it v0.4.
+- version: main @ 32e7f4c
+  date: 2026-10-20
+  url: https://github.com/hericdk/nomanskyFM/commit/32e7f4c
+  notes: No tagged releases; this is the latest commit. The README and the package name it v0.5.

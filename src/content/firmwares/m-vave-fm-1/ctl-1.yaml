@@ -2,19 +2,22 @@ device: m-vave-fm-1
 name: CTL-1
 summary: >-
   Turns the FM-1 into a MIDI master controller: 4 CC banks on the knobs, program change, scale keys with
-  chords, arpeggiator and a 4-track Euclidean drum sequencer, plus General MIDI sounds of its own.
+  chords, arpeggiator and a 4-track Euclidean drum sequencer, plus General MIDI sounds of its own and Bluetooth MIDI.
 description: >-
-  The released build is USB-only (USB MIDI plus TRS MIDI in). A Bluetooth build exists in the repository
-  but is withheld from distribution: JieLi's Bluetooth libraries are binary-only and cannot be shipped
-  with a GPL-3.0 firmware until a section 7 permission is granted (asked of Felucca's copyright holders).
-  Anyone can build the Bluetooth version themselves.
+  Release 1.0 adds Bluetooth MIDI: the FM-1 shows up as "FM-1" to a computer or tablet and can connect to
+  Bluetooth MIDI devices, with everything played going out over USB and Bluetooth at once. The release carries a
+  second, USB-only package without Bluetooth. Earlier releases were USB-only (USB MIDI plus TRS MIDI in) because
+  JieLi's binary-only Bluetooth libraries could not ship with a GPL-3.0 firmware; 1.0 moved to the MPL-2.0 fm1-base,
+  which the release notes say allows it.
 status: active
 authors:
 - name: Charles Vestal
   url: https://github.com/charlesvestal
 source: https://github.com/charlesvestal/fm1-ctl
 source_status: open
-license: GPL-3.0-only
+license: MPL-2.0
+license_notes: >-
+  Release 1.0 moved to the MPL-2.0 on fm1-base; earlier releases were under the GPL-3.0.
 homepage: https://charlesvestal.github.io/fm1-ctl/install/
 distribution: browser-installer
 install_notes: >-
@@ -29,6 +32,18 @@ image:
   source_url: https://github.com/charlesvestal/fm1-ctl
   first_party: true
 versions:
+- version: '1.0'
+  date: 2026-10-17
+  url: https://github.com/charlesvestal/fm1-ctl/releases/tag/v1.0
+  notes: Adds Bluetooth MIDI and moves to the MPL-2.0; a USB-only package is also attached.
+- version: 0.9.2
+  date: 2026-10-15
+  url: https://github.com/charlesvestal/fm1-ctl/releases/tag/v0.9.2
+  notes: The screen reader no longer reads out played notes and chords.
+- version: 0.9.1
+  date: 2026-10-15
+  url: https://github.com/charlesvestal/fm1-ctl/releases/tag/v0.9.1
+  notes: Adds velocity, aftertouch and screen-reader support.
 - version: '0.9'
   date: 2026-10-10
   url: https://github.com/charlesvestal/fm1-ctl/releases/tag/v0.9

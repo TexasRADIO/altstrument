@@ -28,6 +28,10 @@ install_notes: >-
 brick_risk: false
 tags: [emulator, sequencer, drums, synth-engine, midi]
 versions:
+- version: 1.1.0
+  date: 2026-10-19
+  url: https://github.com/dspaudio/mc-1-web/releases/tag/v1.1.0
+  notes: Matches MC-1 1.1.0, with four shared FX banks, melodic analog variance and white 6x9 text; saves use format v8.
 - version: 1.0.1
   date: 2026-10-16
   url: https://github.com/dspaudio/mc-1-web/releases/tag/v1.0.1

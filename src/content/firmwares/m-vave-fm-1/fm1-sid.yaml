@@ -10,8 +10,9 @@ description: >-
   and reverb sit on top. In player mode it runs PSID tunes on an emulated 6502 and draws the voices, sync, ring
   modulation and filter on the screen; RSID tunes are not supported. Tunes are appended after the firmware
   image as a pack. The same code runs as a web page that plays tunes from the HVSC archive, and the FM-1
-  emulator entry names it as one of the firmwares it runs. The README says it has run in the emulator only and
-  has not been tried on a real FM-1.
+  emulator entry names it as one of the firmwares it runs. The README now says people have installed it on real FM-1s
+  and that it starts and plays, and that it can be built to run from fm1-harbor's boot slot. Your own tunes can be
+  packed into the update package.
 status: active
 authors:
 - name: Joakim Eriksson (joakimeriksson)
@@ -27,15 +28,16 @@ homepage: https://joakimeriksson.github.io/fm1-emu/fm1-sid/
 distribution: download
 install_notes: >-
   The repository carries a ready-made update package, fm1-sid/web/sidplayer.fwsc, and build scripts that need
-  JieLi's Linux toolchain and fetch their GPL dependencies on demand. The README gives no install procedure for a
-  real unit and says it has not been run on one. It uses Felucca's update loader. Hold OCT- and OCT+ for three
-  seconds to enter its USB update mode.
+  JieLi's Linux toolchain and fetch their GPL dependencies on demand. The README gives no step-by-step install procedure for a
+  real unit. It uses Felucca's update loader, and a running unit is not visible over USB: hold OCT- and OCT+ for
+  three seconds to enter its USB update mode first.
 brick_risk: true
 tags: [synth-engine, sequencer, fx, emulator, research]
 versions:
-- version: master @ 687ce7d
-  date: 2026-10-13
-  url: https://github.com/joakimeriksson/fm1-emu/commit/687ce7d7425ddbcc9d2fb3888b92200e4eb58936
+- version: master @ eae852c
+  date: 2026-10-23
+  url: https://github.com/joakimeriksson/fm1-emu/commit/eae852c46a557f9856bd5b0d1eb8e3e68aa90ecb
   notes: >-
-    No tagged releases; this is the latest commit touching fm1-sid/. The emulator's firmware list labels the
+    No release of this firmware (the repository's releases are for the emulator and plugin); this is the latest
+    commit touching fm1-sid/. The emulator's firmware list labels the
     package 0.1.

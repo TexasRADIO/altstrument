@@ -17,7 +17,7 @@ source_status: open
 license: GPL-3.0-only
 license_notes: >-
   Third-party parts (Sonivox EAS, Groove MIDI Dataset drum performances under CC BY 4.0) are credited in
-  LICENSING.md.
+  LICENSING.md. The shared fm1-base platform and felucca-bsp that Polly runs on from 0.5 are MPL-2.0.
 homepage: https://charlesvestal.github.io/fm1-polly/
 distribution: browser-installer
 install_notes: >-
@@ -32,6 +32,14 @@ image:
   source_url: https://charlesvestal.github.io/fm1-polly/
   first_party: true
 versions:
+- version: '0.5'
+  date: 2026-10-17
+  url: https://github.com/charlesvestal/fm1-polly/releases/tag/v0.5
+  notes: Moves Polly onto the shared fm1-base platform; songs and settings carry over from 0.4.
+- version: 0.4.3
+  date: 2026-10-15
+  url: https://github.com/charlesvestal/fm1-polly/releases/tag/v0.4.3
+  notes: Works with the FM-1 Screen Reader, which speaks what the screen shows.
 - version: 0.4.2
   date: 2026-10-14
   url: https://github.com/charlesvestal/fm1-polly/releases/tag/v0.4.2

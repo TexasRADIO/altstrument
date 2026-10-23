@@ -27,7 +27,7 @@ install_notes: >-
   6.1.0-53.
 tags: [cli, python, editor, librarian, presets, sysex, flasher]
 versions:
-  - version: main @ beae95b
-    date: 2026-10-20
-    url: https://github.com/keyandcableco/minictl/commit/beae95beab87c060deadc7bcce97ef0f34a12c8e
-    notes: No tagged releases; this is the latest commit, synced to the fork's firmware 99 parameters.
+  - version: main @ 323b85d
+    date: 2026-10-23
+    url: https://github.com/keyandcableco/minictl/commit/323b85d1d258376b7133f6835badc793b460424c
+    notes: No tagged releases; this is the latest commit, synced to the fork's firmware 114 parameters.

@@ -1,0 +1,32 @@
+device: elektron-digitone
+name: DigiPrism
+summary: Effects pedal for the Digitone mk1's audio inputs, with four modules of reorderable effects, a mixer, two LFOs and p-locks, as an elekloader mod built on fxkit. Pre-release; renamed from DigiChroma.
+status: active
+authors:
+  - name: irpina
+    url: https://github.com/irpina
+source: https://github.com/irpina/digiprism
+source_status: open
+license: GPL-2.0-or-later
+distribution: patch-your-own
+requires_stock: 1.43 / 1.44
+tags: [fx]
+image:
+  url: https://raw.githubusercontent.com/irpina/digiprism/main/docs/page1.png
+  alt: "DigiPrism page 1 of 3 with TILT, RATE, TIME and MIX knobs above DRIV, DUBL, SPAC and FILT"
+  credit: irpina
+  source_url: https://github.com/irpina/digiprism
+  first_party: true
+versions:
+  - version: v0.2
+    date: 2026-10-18
+    url: https://github.com/irpina/digiprism/releases/tag/v0.2
+    notes: Pre-release. Adds a mixer, two LFOs and p-locks stored in the pattern, and drops presets.
+  - version: v0.1.1
+    date: 2026-10-18
+    url: https://github.com/irpina/digiprism/releases/tag/v0.1.1
+    notes: Pre-release. Same code as v0.1 under the new DigiPrism name.
+  - version: v0.1
+    date: 2026-10-09
+    url: https://github.com/irpina/digichroma/releases/tag/v0.1
+    notes: Pre-release.

@@ -18,7 +18,7 @@ license_notes: No license file in the repository; listed programs have their own
 homepage: https://mstratman.github.io/fv1-programs/
 tags: [fx, research, platform]
 versions:
-  - version: main @ 6feb327
+  - version: master @ 6feb327
     date: 2025-06-03
     url: https://github.com/mstratman/fv1-programs/commit/6feb327
     notes: No tagged releases; this is the latest commit.

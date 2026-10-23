@@ -7,8 +7,9 @@ description: >-
   plucked string, reed piano and tonewheel organ voices, a drum machine with patterns and accompaniment styles, a
   tanpura drone, a looper started with a double tap, playing notes received over MIDI, MPE output, voice leading,
   temperaments including 19- and 31-note divisions, preset names and settings that stay locked across presets. A
-  phone deck mode follows a song sent to the minichord over USB audio. Releases 95 and 96 add calibrations and hover
-  sensing for the harp plates that Key & Cable sells. The firmware reports version numbers from 10 up, which
+  phone deck mode follows a song sent to the minichord over USB audio. Releases from 95 on add calibrations, hover
+  sensing and automatic detection for the harp plates that Key & Cable sells, and
+  release 114 adds a drum kit made from your own sound files. The firmware reports version numbers from 10 up, which
   minictl and the Key & Cable minicontrol use to tell it from the stock firmware. The release notes describe it as
   unofficial and experimental and not endorsed by Benjamin Poilvé, and pull requests from the fork have been
   merged upstream.
@@ -30,6 +31,26 @@ install_notes: >-
 brick_risk: false
 tags: [fork, synth-engine, sampler, drum-machine, looper, mpe, microtonal, chords, midi, open-source, teensy]
 versions:
+  - version: firmware-114
+    date: 2026-10-23
+    url: https://github.com/keyandcableco/minichord/releases/tag/firmware-114
+    notes: Reads the Piano Glide harp plate and adds a drum kit built from your own sound files, sent from minicontrol or minictl. Also covers firmware 113, which had no release.
+  - version: firmware-102
+    date: 2026-10-23
+    url: https://github.com/keyandcableco/minichord/releases/tag/firmware-102
+    notes: With harp drums on, the harp volume knob sets how loud the drum hits are.
+  - version: firmware-101
+    date: 2026-10-23
+    url: https://github.com/keyandcableco/minichord/releases/tag/firmware-101
+    notes: Plays the drum pads harp plate (plate 13).
+  - version: firmware-100
+    date: 2026-10-21
+    url: https://github.com/keyandcableco/minichord/releases/tag/firmware-100
+    notes: Changing chords strikes the new chord once, and a slash chord no longer slips in on a fast change.
+  - version: firmware-99
+    date: 2026-10-21
+    url: https://github.com/keyandcableco/minichord/releases/tag/firmware-99
+    notes: Adds plate detect, which learns each harp plate, support for the zipper 24 and arcade wheel plates, and restores the classic chord button timing.
   - version: firmware-96
     date: 2026-10-16
     url: https://github.com/keyandcableco/minichord/releases/tag/firmware-96

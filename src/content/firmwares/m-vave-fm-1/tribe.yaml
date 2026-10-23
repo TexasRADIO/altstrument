@@ -4,9 +4,9 @@ summary: >-
   X0X fork with ten tracks where any engine plays on any track: two kicks, 909 and 808 drum voices and a 303,
   sixteen clips per track, scatter effects and two master effects.
 description: >-
-  Replaces X0X's five fixed parts with ten tracks, each assigned one of 25 engines. Every track holds sixteen
-  clips with their own length (16, 32 or 64 steps), rate, direction and swing, launched at the end of the
-  pattern or at once. Scatter effects on the keys act on a track or the whole mix, and two master effects
+  Replaces X0X's five fixed parts with ten tracks, each assigned one of 28 engines. Every track holds up to 64
+  clips in four banks of sixteen, each with its own length (16, 32 or 64 steps), rate, direction and swing, launched at
+  the end of the pattern or at once. A song mode plays a track's clips one after another. Scatter effects on the keys act on a track or the whole mix, and two master effects
   take per-track sends. Four master knobs can be assigned to volume, a DJ filter, effect amounts or tempo.
   The site has a browser emulator, a manual and release notes. If it crashes twice at start it enters a
   safe mode that the web installer can reach, and a rescue script exists for a unit in the chip's boot mode.
@@ -33,6 +33,14 @@ image:
   source_url: https://github.com/apiel/fm1-tribe
   first_party: true
 versions:
+- version: 0.3 beta
+  date: 2026-10-22
+  url: https://github.com/apiel/fm1-tribe/releases/tag/v0.3-beta
+  notes: Adds 64 clips per track in four banks, a clip copy and empty menu, song mode, and capture of played notes into a clip.
+- version: 0.2 beta
+  date: 2026-10-20
+  url: https://github.com/apiel/fm1-tribe/releases/tag/v0.2-beta
+  notes: Adds the ACID, LEAD, FM4, NOISE and TRIBE synth engines, improves scatter and CPU use, and updates the clip-store format; old saves still load.
 - version: 0.1 beta
   url: https://apiel.github.io/fm1-tribe/new/
   notes: First public version. The release notes carry no date; no GitHub release or tag.

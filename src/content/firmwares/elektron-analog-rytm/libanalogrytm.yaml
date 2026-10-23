@@ -18,7 +18,7 @@ license: MIT
 distribution: source-only
 tags: [sysex, sdk, editor]
 versions:
-  - version: main @ a0a19f6
+  - version: master @ a0a19f6
     date: 2023-12-21
     url: https://github.com/bsp2/libanalogrytm/commit/a0a19f69fcfd44968f05ab7f0af8195633cb83f3
     notes: No tagged releases; this is the latest commit.

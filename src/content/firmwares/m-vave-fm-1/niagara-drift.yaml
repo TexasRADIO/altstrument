@@ -30,6 +30,10 @@ image:
   source_url: https://github.com/evanyerburgh/niagara-drift
   first_party: true
 versions:
+- version: '0.2'
+  date: 2026-10-21
+  url: https://github.com/evanyerburgh/niagara-drift/releases/tag/v0.2
+  notes: Slow movement by default, twelve fixed presets, gestures, scenes in banks with a pressure crossfade, new effects and backup options in the installer script.
 - version: 0.1-beta
   date: 2026-10-14
   url: https://github.com/evanyerburgh/niagara-drift/releases/tag/v0.1-beta

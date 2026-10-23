@@ -12,7 +12,8 @@ description: >-
   external synth on the USB-A port. A browser editor on port 7700 mirrors the screen and holds the manual,
   and projects can be exported to an Ableton Live set or as MIDI files. The README names it the successor to
   dAVEBOx, which is now frozen as dAVEBOx Legacy, and says the two projects are kept separate and do not
-  open each other's files. Releases so far are marked as test builds.
+  open each other's files. Version 1.0.0 is the first full release; earlier
+  releases were marked as test builds.
 status: active
 authors:
   - name: legsmechanical
@@ -26,9 +27,9 @@ license_notes: >-
   GPL-2.0-or-later. THIRD_PARTY_LICENSES.md in the repository lists each one.
 homepage: https://legsmechanical.github.io/dbxhost/
 distribution: download
-requires_stock: Schwung 1.3.0 or later installed on the Move
+requires_stock: Schwung 1.7.3 or later installed on the Move
 install_notes: >-
-  Needs Schwung 1.3.0 or later. Download davebox-sa-module.tar.gz from the newest release, install it in
+  Needs Schwung 1.7.3 or later. Download davebox-sa-module.tar.gz from the newest release, install it in
   Schwung Manager at move.local:7700 under Modules, Install Custom Module, From Tarball, then choose dAVEBOx SA
   from the Tools menu. The first launch finishes the install. The README says a reboot returns the Move to
   stock unless dAVEBOx is made the boot default, and a separate uninstall tarball is attached to each release.
@@ -41,6 +42,10 @@ video:
   first_party: true
   found_via: https://github.com/legsmechanical/dbxhost#readme
 versions:
+  - version: v1.0.0
+    date: 2026-10-20
+    url: https://github.com/legsmechanical/dbxhost/releases/tag/v1.0.0
+    notes: First full release. Runs on its own Schwung host build (Schwung 1.7.3 or newer), can be picked at power-on, and adds project templates, step recording, chord layouts and per-track groove.
   - version: v0.0.21
     date: 2026-10-19
     url: https://github.com/legsmechanical/dbxhost/releases/tag/v0.0.21

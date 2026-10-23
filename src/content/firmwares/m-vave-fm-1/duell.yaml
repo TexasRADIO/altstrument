@@ -19,6 +19,18 @@ install_notes: Installer page at oscillr.github.io/DUELL/install/ and docs/INSTA
 brick_risk: true
 tags: [synth-engine, performance, fx, midi]
 versions:
+- version: '1.0'
+  date: 2026-10-22
+  url: https://github.com/oscillr/DUELL/releases/tag/v1.0
+  notes: First release after the betas; 128 factory patches, two filters on every engine and a MIDI CC map.
+- version: 0.2.20 beta
+  date: 2026-10-15
+  url: https://github.com/oscillr/DUELL/releases/tag/v0.2.20-beta
+  notes: Beta; adds a web editor, user wavetables and a 128-patch bank.
+- version: 0.2.13 beta
+  date: 2026-10-14
+  url: https://github.com/oscillr/DUELL/releases/tag/v0.2.13-beta
+  notes: Beta; adds the WAVE engine, PERFORM mode and a multimode filter on every engine.
 - version: 0.2.4 beta
   date: 2026-10-12
   url: https://github.com/oscillr/DUELL/releases/tag/v0.2.4-beta

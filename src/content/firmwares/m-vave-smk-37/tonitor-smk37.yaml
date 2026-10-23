@@ -1,0 +1,41 @@
+device: m-vave-smk-37
+name: Tonitor SMK-37
+summary: >-
+  Tonitor ported to the SMK-37 Pro: six tracks on seven engines, loopers, a physics sequencer and tracks that
+  play along with what you play, for electroacoustic and live ambient music. Large high-contrast screen.
+description: >-
+  Separate firmware that shares its core with Tonitor for the FM-1 and began from Tonitor 0.53. The six tracks
+  each take one of seven engines (FM, ANIMA, CALIGULA, RUSSOLO, DRUID, BAYAREA and HIVE), with sounds generated
+  from a seed and steered toward an ambient or experimental path. All 37 keys follow the chosen scale. It has
+  loopers with up to eight overdubs per track, BALLSY (a physics sequencer), BRICKLAYER (a note-by-note step
+  sequencer), chords and latched notes, and REACT, SHADOW and ARP modes in which chosen tracks answer the
+  one being played. Sessions and presets, USB and TRS MIDI and USB audio are included. The screen uses very
+  large type for low vision. The project numbers its builds and marks itself a work in progress; the
+  repository's notes give per-engine processor costs and a flash backup procedure for the keyboard.
+status: active
+authors:
+- name: Nuno Zimas
+  url: https://github.com/nzimas
+source: https://github.com/nzimas/tonitor-smk37
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The firmware and the browser installer are GPL-3.0-only. The website, logo and documentation written for the
+  project are MIT; bundled third-party parts (msfa, LIRA-8, Rings, fonts) keep their own licences, listed in
+  LICENSING.md.
+homepage: https://nzimas.github.io/tonitor-smk37/
+distribution: browser-installer
+install_notes: >-
+  Browser installer in desktop Chrome, Edge or Opera over USB. It installs over M-VAVE's firmware, SLOOP,
+  Felucca or an earlier Tonitor, and refuses a package made for the FM-1. Back up the keyboard's flash first;
+  the backup tool runs from a Mac (docs/smk37/backup.md), and parts of the flash such as pairing data and
+  calibration are unique to each unit. To go back, install M-VAVE's own SMK-37 Pro firmware file with the same
+  installer. Saving sessions overwrites data other firmwares keep in the same flash area. Unofficial; may void
+  the warranty.
+brick_risk: true
+tags: [synth-engine, looper, granular, fx, reverb, fm, performance, ui]
+versions:
+- version: main @ de5fbc6
+  date: 2026-10-23
+  url: https://github.com/nzimas/tonitor-smk37/commit/de5fbc64f6c60d9ebd29b6544ae0e3b7c5b197fa
+  notes: No tagged releases; this is the latest commit. The changelog lists BUILD 32 as the newest build.

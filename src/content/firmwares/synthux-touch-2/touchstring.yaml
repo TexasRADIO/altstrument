@@ -37,6 +37,10 @@ video:
   first_party: true
   found_via: https://www.synthux.academy/news
 versions:
+  - version: v2.0.1
+    date: 2026-10-20
+    url: https://github.com/Synthux-Academy/TouchString/releases/tag/v2.0.1
+    notes: MIDI sync toggles with TO+P3, knobs no longer override MIDI CC, the internal clock is improved, and it appears in hosts as a TouchString MIDI device.
   - version: v2.0.0
     date: 2026-10-05
     url: https://github.com/Synthux-Academy/TouchString/releases/tag/v2.0.0

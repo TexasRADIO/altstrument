@@ -1,0 +1,39 @@
+name: LXR-02
+manufacturer: Erica Synths
+category: drum-machine
+tagline: Six-voice digital drum synthesizer made with Sonic Potions
+description: >-
+  The LXR-02 is a digital drum synthesizer that Erica Synths released in 2021
+  together with Sonic Potions, whose earlier DIY LXR drum synth it follows. It
+  has six drum voices with over 30 parameters each, voice volume faders, an
+  insert effects section, a 64-step sequencer with a performance mode, four
+  assignable outputs, full-size MIDI in and out and an SD card for projects and
+  updates. In October 2026 Erica Synths published the firmware and bootloader
+  source under the GPL.
+platform: STM32F765 (Cortex-M7, 216 MHz)
+stock_firmware: 1.71 (2025-05-23)
+links:
+  manufacturer: https://www.ericasynths.lv/drum-synthesizer-lxr-02-1132/
+  community:
+    - label: LXR-02 open-source announcement
+      url: https://www.ericasynths.lv/news/post/lxropen/
+    - label: LXR-02 firmware source
+      url: https://github.com/erica-synths/lxr-desktop-app
+notes: >-
+  Firmware updates are LXR*.img files copied to the top folder of a FAT32 SD
+  card and installed by holding the encoder button while switching the unit
+  on. The bootloader is never changed by an update, so a failed update can be
+  repeated the same way; only replacing the bootloader itself needs an ST-Link
+  debug probe. Erica Synths offers no support for self-built or modified
+  firmware.
+image:
+  src: /images/devices/erica-synths-lxr-02.webp
+  style: photo
+  alt: The black LXR-02 seen from the front left, with a red text display, four knobs, a data encoder, seven vertical faders and two rows of buttons, several lit red
+  width: 1200
+  height: 1200
+  credit: Erica Synths
+  license: manufacturer product image
+  source_url: https://www.ericasynths.lv/drum-synthesizer-lxr-02-1132/
+  original_url: https://www.ericasynths.lv/media/catalog/product/D/r/Drum_Synthesizer_LXR-02-1_3.png
+pinned: [lxr-02-firmware]

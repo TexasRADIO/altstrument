@@ -16,8 +16,8 @@ description: >-
 status: active
 authors:
   - name: ZUHcYa
-    url: https://github.com/ZUHcYa
-source: https://github.com/ZUHcYa/FrizZ
+    url: https://github.com/PUMPWERKER
+source: https://github.com/PUMPWERKER/FRIZZ
 source_status: open
 license: MIT
 license_notes: The CHOMPI name and marks are not covered; see TRADEMARKS.md in the repository.
@@ -29,29 +29,33 @@ install_notes: >-
   returns to stock the same way.
 tags: [looper, fx, midi, sdk, performance]
 versions:
+  - version: v1.5.0-beta.5
+    date: 2026-10-17
+    url: https://github.com/PUMPWERKER/FRIZZ/releases/tag/v1.5.0-beta.5
+    notes: Pre-release. Effects latch with SHIFT in either order, the finalizer's Width widens a mono source, and the play page shows your loops.
   - version: v1.5.0-beta.2
     date: 2026-10-15
-    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v1.5.0-beta.2
+    url: https://github.com/PUMPWERKER/FRIZZ/releases/tag/v1.5.0-beta.2
     notes: Pre-release. Replaces the master compressor with a multiband finalizer and adds a frequency shifter as the phaser's second mode.
   - version: v1.5.0-beta.1
     date: 2026-10-14
-    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v1.5.0-beta.1
+    url: https://github.com/PUMPWERKER/FRIZZ/releases/tag/v1.5.0-beta.1
     notes: Pre-release. Adds loops loaded from the SD card, USB audio and a web companion for loading loops.
   - version: v1.0.1
     date: 2026-10-13
-    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v1.0.1
+    url: https://github.com/PUMPWERKER/FRIZZ/releases/tag/v1.0.1
     notes: Documentation update; the firmware image is identical to v1.0.0.
   - version: v1.0.0
     date: 2026-10-13
-    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v1.0.0
+    url: https://github.com/PUMPWERKER/FRIZZ/releases/tag/v1.0.0
     notes: First stable release; the controls, MIDI map and scene format are fixed from here.
   - version: v0.11
     date: 2026-10-10
-    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v0.11
+    url: https://github.com/PUMPWERKER/FRIZZ/releases/tag/v0.11
   - version: v0.10
     date: 2026-10-08
-    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v0.10
+    url: https://github.com/PUMPWERKER/FRIZZ/releases/tag/v0.10
   - version: v0.9
     date: 2026-10-06
-    url: https://github.com/ZUHcYa/FrizZ/releases/tag/v0.9
+    url: https://github.com/PUMPWERKER/FRIZZ/releases/tag/v0.9
     notes: First public release.

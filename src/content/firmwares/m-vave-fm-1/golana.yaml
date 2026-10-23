@@ -9,8 +9,9 @@ description: >-
   filter offers 24 and 12 dB low-pass, band-pass, high-pass and a screaming MS-20-style mode. Two LFOs and four
   patch routings, a 16-step sequencer and an arpeggiator are saved with each of 32 programs. Modulation FX,
   delay and reverb can be reordered. The pages draw the wave, filter curve, envelopes and LFOs from the
-  current values, and it has a USB rescue mode entered by holding OCT- at power-on. There is a
-  browser build but no hosted page; the firmware builds like Felucca.
+  current values, and it has a USB rescue mode entered by holding OCT- at power-on. Release 1.1 added four
+  arpeggiator types and 1.2 added a sub oscillator, a drift control and eight more factory sounds. A browser
+  emulator and installer are hosted on the project site.
 status: active
 authors:
 - name: Gadlele
@@ -20,16 +21,24 @@ source_status: open
 license: GPL-3.0-only
 license_notes: >-
   Inherited from Felucca (LICENSING.md); ported DSP and fonts keep their own licences listed there.
-distribution: source-only
+homepage: https://gadlele.github.io/Golana/
+distribution: browser-installer
 install_notes: >-
-  Build with ./build.sh as for Felucca (JieLi toolchain and AC79 SDK, see BUILDING.md); the package is still
-  named felucca.fwsc and installs with Felucca's tools. Hold OCT- alone at power-on for USB rescue.
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with a Golana .fwsc from the releases page.
+  The README says the installer can restore the official M-VAVE firmware. Hold OCT- alone at power-on for USB
+  rescue. To build from source, use ./build.sh as for Felucca (JieLi toolchain and AC79 SDK, see BUILDING.md).
 brick_risk: true
 tags: [synth-engine, sequencer, fx, ui]
 versions:
+- version: '1.2'
+  date: 2026-10-20
+  url: https://github.com/Gadlele/Golana/releases/tag/golana-v1.2
+  notes: Adds a sub oscillator, a drift control for analog-style detuning and eight factory sounds in programs 17-24.
+- version: '1.1'
+  date: 2026-10-19
+  url: https://github.com/Gadlele/Golana/releases/tag/golana-v1.1
+  notes: Adds four arpeggiator types (order, converge, pedal, double).
 - version: '1.0'
-  date: 2026-10-14
-  url: https://github.com/Gadlele/Golana/commit/f7da6782384f37853e785daa757e943cd73a9e40
-  notes: >-
-    Commit titled GOLANA 1.0 on the golana-1.0 branch, ahead of main; no releases. The v1.5.x tags in the
-    repository belong to Felucca.
+  date: 2026-10-16
+  url: https://github.com/Gadlele/Golana/releases/tag/golana-v1.0
+  notes: First release.

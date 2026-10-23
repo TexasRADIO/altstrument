@@ -20,6 +20,14 @@ homepage: https://irpina.github.io/elekloader/
 distribution: browser-installer
 tags: [loader, flasher, sdk]
 versions:
+  - version: kit v0.7.0
+    date: 2026-10-22
+    url: https://github.com/irpina/elekloader/releases/tag/kit-v0.7.0
+    notes: Pre-release of the website builder kit. Adds mod storage on the Analog Rytm MKII and engine support for the Analog Four MKII.
+  - version: kit v0.6.0
+    date: 2026-10-19
+    url: https://github.com/irpina/elekloader/releases/tag/kit-v0.6.0
+    notes: Pre-release of the website builder kit. Builds use the newest core whose RAM fits the mods, and the engine adds Model:Cycles, Model:Samples and Analog Rytm MKII.
   - version: v0.4.0
     date: 2026-10-02
     url: https://github.com/irpina/elekloader/releases/tag/v0.4.0

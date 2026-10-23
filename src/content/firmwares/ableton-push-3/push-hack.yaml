@@ -38,6 +38,9 @@ video:
   first_party: true
   found_via: https://github.com/federico-pepe/ableton-push-hack#readme
 versions:
+  - version: v0.1.15-alpha
+    date: 2026-10-20
+    url: https://github.com/federico-pepe/ableton-push-hack/releases/tag/v0.1.15-alpha
   - version: v0.1.14-alpha
     date: 2026-10-19
     url: https://github.com/federico-pepe/ableton-push-hack/tree/v0.1.14-alpha

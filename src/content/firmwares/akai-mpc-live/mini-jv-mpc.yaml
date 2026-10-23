@@ -34,6 +34,10 @@ install_notes: >-
   unit.
 tags: [synth-engine, sampler, emulator, platform]
 versions:
+  - version: v1.0.8
+    date: 2026-10-21
+    url: https://github.com/sd88me/mpc-vst-jv880/releases/tag/v1.0.8
+    notes: Q-Links work on the track edit automation screen, and the macro knob values on the play page are no longer partly hidden.
   - version: v1.0.7
     date: 2026-10-12
     url: https://github.com/sd88me/mpc-vst-jv880/releases/tag/v1.0.7

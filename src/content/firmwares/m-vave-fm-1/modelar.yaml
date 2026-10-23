@@ -1,0 +1,44 @@
+device: m-vave-fm-1
+name: MODELAR
+summary: >-
+  Semi-modular drone synth played like a Kaoss Pad: four always-sounding oscillators modulate each other, and
+  the keys move a cursor on an XY pad instead of playing notes.
+description: >-
+  Each oscillator has 12 waves and the four can be routed through 8 patterns of mixing and cross-modulation.
+  The 16 white keys form a 4 by 4 grid of pad points, and holding several puts the cursor between them. The 11
+  black keys start gestures such as circles, sweeps and random walks. It has a stereo effects chain, a clock
+  set in Hz, an arpeggiator over the held points, a sequencer with polymetric lanes, eight generative
+  environments, two LFOs and 16 patch slots. Marked beta. Built on fm1-base and felucca-bsp. Patches live in the
+  FM-1's data flash area, so installing it can overwrite what other firmwares stored there.
+status: active
+authors:
+- name: hirakos999
+  url: https://github.com/hirakos999
+source: https://github.com/hirakos999/MODELAR
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  Built on fm1-base by Charles Vestal (MPL-2.0) and felucca-bsp from Felucca by Leo Kuroshita. Fonts and the
+  JieLi SDK files keep their own licences, listed in fm1-base's LICENSING.md.
+distribution: download
+install_notes: >-
+  Download the .fwsc from the release and install it with the web installer on The Firmware Hub in Chrome or
+  Edge, or with fm1_install.py from fm1-base. Install any other firmware the same way, official V15 included, to
+  leave it; holding OCT- and OCT+ for 5 seconds starts update mode. The README reports an install over V15 and
+  over Felucca and a return to both on one real FM-1. Back up first, since patches, calibration and settings
+  share flash areas with other firmwares.
+brick_risk: true
+tags: [synth-engine, oscillator, generative, performance, sequencer, fx, arpeggiator]
+image:
+  url: https://raw.githubusercontent.com/hirakos999/MODELAR/main/docs/img/kaos-pad.png
+  alt: >-
+    MODELAR's KAOS PAD screen on a black background: 2.00 Hz and NEBBIA at the top, a pink cursor with two
+    cyan markers on a grid of dots, and X CUTOFF 4.7K and Y XMOD 53% at the bottom
+  credit: hirakos999
+  source_url: https://github.com/hirakos999/MODELAR
+  first_party: true
+versions:
+- version: v0.3
+  date: 2026-10-22
+  url: https://github.com/hirakos999/MODELAR/releases/tag/v0.3
+  notes: Beta release with a prebuilt modelar-0.3.fwsc.

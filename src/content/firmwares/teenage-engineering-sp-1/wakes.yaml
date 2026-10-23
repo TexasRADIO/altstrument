@@ -27,6 +27,10 @@ install_notes: >-
 brick_risk: false
 tags: [synth-engine, performance, midi, usb-audio]
 versions:
+  - version: v0.8.2
+    date: 2026-10-16
+    url: https://github.com/Worldwave/Wakes/releases/tag/v0.8.2
+    notes: Adds configuration through .cnfg text files in the SP-1's onboard storage for engines, MIDI, audio and logs.
   - version: v0.8.0
     date: 2026-10-09
     url: https://github.com/Worldwave/Wakes/releases/tag/v0.8.0

@@ -1,0 +1,41 @@
+device: erica-synths-lxr-02
+name: LXR-02 firmware (official source)
+summary: Erica Synths' own LXR-02 firmware, published as source under the GPL in October 2026; it builds the SD card update image from the drum voices, effects, sequencer, MIDI and interface code.
+description: >-
+  Erica Synths opened the LXR-02 firmware so that owners can study it and write
+  their own updates, and announced it as a platform for experiments, including
+  AI-assisted changes. The repository holds the drum voice DSP, the effects bus,
+  the step sequencer with its Euclidean generator, MIDI over DIN and USB, preset
+  storage on the SD card and the display and button interface for the
+  STM32F765. The build turns it into an LXR_V2_V<version>.img update file; the
+  source sets version 1.7, while the newest download on the product page is
+  1.71. Erica Synths gives no support for self-built or modified firmware, and
+  the Erica Synths and LXR names may not be used on modified versions.
+status: active
+authors:
+  - name: Erica Synths
+    url: https://github.com/erica-synths
+source: https://github.com/erica-synths/lxr-desktop-app
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  NOTICE.md adds GPL-3.0 section 7 terms: permission to combine the code with
+  STMicroelectronics libraries under ST's own licence, and no rights to the
+  Erica Synths, LXR and LXR-02 names or logos. Third-party components keep their
+  own licences.
+homepage: https://www.ericasynths.lv/news/post/lxropen/
+distribution: source-only
+install_notes: >-
+  Build with CMake, Ninja, Python 3 and the Arm GNU Toolchain, copy the .img to
+  the top folder of a FAT32 SD card (removing older LXR*.img files), then hold
+  the encoder button while switching on until LXR Updater appears. The
+  bootloader is left alone, so an interrupted update can be repeated. Only the
+  flash_full target, which also writes the bootloader through a debug probe,
+  can leave the unit unable to update from the card.
+brick_risk: false
+tags: [official, drums, sequencer, open-source]
+versions:
+  - version: main @ a43cd4f
+    date: 2026-10-23
+    url: https://github.com/erica-synths/lxr-desktop-app/commit/a43cd4fcda23ec3d577dc425261c3eb28bd5abff
+    notes: No tagged releases; this is the latest commit. The source was published on 2026-10-23 and builds firmware version 1.7.

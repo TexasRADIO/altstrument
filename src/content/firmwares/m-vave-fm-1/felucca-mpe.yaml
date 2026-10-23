@@ -32,7 +32,7 @@ install_notes: >-
 brick_risk: true
 tags: [midi, synth-engine, fm, sequencer, performance]
 versions:
-- version: mpe @ 7cebd0a
-  date: 2026-10-21
-  url: https://github.com/monch1962/mvave-fm1-mpe/commit/7cebd0a8b474c559d0a129d54c8b802e83212e63
+- version: mpe @ 2aaeae3
+  date: 2026-10-23
+  url: https://github.com/monch1962/mvave-fm1-mpe/commit/2aaeae37eef590dacdac609e76d84fc821c5c698
   notes: No releases; the one tag, baseline, marks the Felucca starting point. This is the latest commit on mpe, the only branch.

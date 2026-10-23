@@ -33,7 +33,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, fm, performance]
 versions:
-- version: nightly @ 8b54e89
-  date: 2026-10-16
-  url: https://github.com/jazzfolderPARLA/VintageS/commit/8b54e89a0f7dc426853dd09302bc3a71549aadd5
-  notes: No tagged releases; this is the latest commit on the nightly branch (main is at a01ea55, 2026-10-15).
+- version: nightly @ 7270523
+  date: 2026-10-22
+  url: https://github.com/jazzfolderPARLA/VintageS/commit/7270523d6a24a28be0f8405178cedc5a55201187
+  notes: No tagged releases; this is the latest commit on the nightly branch (main is at bb37ebe, 2026-10-21).

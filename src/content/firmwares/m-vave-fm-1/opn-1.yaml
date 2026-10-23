@@ -7,7 +7,7 @@ description: >-
   references in tests. Six-voice poly, single chip channels, the drum kit and noise can be played from the keys,
   with pages for operators, envelopes, LFO, vibrato, detune, an arpeggiator and saved sounds. The companion web
   page (Chrome or Edge) reads VGM or VGZ files you supply, extracts the FM instruments, drums and noise sounds,
-  and sends them to the FM-1, which keeps the last set in flash. It can also stream a VGM song to the device and
+  and sends them to the FM-1, which keeps a library of 128 patches in four banks in flash. The page can also import and export VOPM .opm patch files and edit patches. It can also stream a VGM song to the device and
   show every channel's note, level and instrument on the screen. MIDI over USB or TRS follows GenMDM's layout.
   No game music is included. The README says every feature has been tested on a real FM-1 and that much of the
   code was written with Claude. It builds on Dinghy and the Felucca platform layer.
@@ -37,6 +37,10 @@ image:
   source_url: https://github.com/putchdev/opn-1
   first_party: true
 versions:
+- version: 2.0.0
+  date: 2026-10-17
+  url: https://github.com/putchdev/opn-1/releases/tag/v2.0.0
+  notes: Adds a library of 128 FM patches in four banks with VOPM .opm import and export, Single, Layer and Split modes, and a web patch editor.
 - version: 1.0.0
   date: 2026-10-16
   url: https://github.com/putchdev/opn-1/releases/tag/v1.0.0

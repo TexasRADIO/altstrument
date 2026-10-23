@@ -7,8 +7,8 @@ description: >-
   Rights warning: the repository bundles the 64 Casio CZ-1 factory tones and the 200 Sequential Prophet-5/10 factory
   programs (v1.03) as SysEx sound data, inherited from Melodee. Its licensing file states the rights stay with Casio and
   Sequential and that no licence is granted.
-  The project site lists seven characters, each tied to an engine: Prophet-5 style, FM, noise, formant voice,
-  TR-808 drums, chiptune and phase distortion. Four knobs have plain labels, and holding EDIT shows the real
+  The project site lists 24 characters, each tied to an engine: Prophet-5 style, FM, analog, noise, formant voice,
+  TR-808 drums, chiptune, CZ-1 and phase distortion among them. Four knobs have plain labels, and holding EDIT shows the real
   parameter names. A codex of three pages per character gives a story, the engine's history and something to try.
   Play modes cover a solo voice, a strum, chords under a melody, an ear trainer and fourteen public-domain tunes
   with lit keys. Holding HOME and SAVE opens the full Melodee firmware. It is the older sibling of Rainbow mode, the
@@ -40,7 +40,7 @@ image:
   source_url: https://joshbartlettband-web.github.io/Double-Rainbow/
   first_party: true
 versions:
-- version: main @ 1f40e81
-  date: 2026-10-16
-  url: https://github.com/joshbartlettband-web/Double-Rainbow/commit/1f40e816478e2c208c7ba05f9935fdbf52ecd090
+- version: main @ 12296be
+  date: 2026-10-23
+  url: https://github.com/joshbartlettband-web/Double-Rainbow/commit/12296be143858931cde35e110be55b7385b52000
   notes: No tagged releases; this is the latest commit.

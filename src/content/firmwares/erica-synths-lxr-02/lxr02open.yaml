@@ -1,0 +1,42 @@
+device: erica-synths-lxr-02
+name: LXR02Open
+summary: Community port of the open-source Sonic Potions LXR firmware 0.37 to the LXR-02 hardware, keeping the original LXR's kit and pattern formats, with sample loading into flash and 24-bit output.
+description: >-
+  Brendan Clarke wrote it before Erica Synths published its own LXR-02 source,
+  by tracing the hardware and moving the original LXR code, which ran on an
+  8-bit Atmega644 and a Cortex-M4, onto the LXR-02's single Cortex-M7. It
+  behaves as close to Sonic Potions LXR 0.37 as the hardware allows and reads
+  that version's kits, patterns and performances, so it is a different
+  firmware from the LXR-02's stock one. The voice faders work, the LOAD button
+  acts as the LXR's step mode, the bar buttons trigger the selected voice, and
+  up to 120 samples and loops from the SD card load into 1.5 MB of flash. The
+  global menu adds oscillator interpolation and a CPU monitor. Hardware access
+  and SD card use run on background queues. The repository keeps session logs
+  and notes meant for further work with LLM tools.
+status: active
+authors:
+  - name: Brendan Clarke
+    url: https://github.com/brendanclarke
+source: https://github.com/brendanclarke/LXR02Open
+source_status: open
+license: proprietary
+license_notes: >-
+  The LICENSE file is the author's own terms: redistribution and modification
+  are allowed, modified binaries must come with their complete source, and the
+  code "may not be sold, nor may it be used in a commercial product or
+  activity". The original Sonic Potions LXR source is kept read-only in
+  knowledge_files/LXR-master with its own licence.
+distribution: download
+install_notes: >-
+  Copy build/LXRV2_lxr02.img from the repository to the root of an MBR FAT32
+  SD card and hold the encoder button while switching on, so the LXR-02's own
+  bootloader installs it. FAT12 and exFAT cards are refused. The original
+  0.37 kits and SD card files come from Sonic Potions' site. Installing an
+  official LXR-02 update the same way returns to stock.
+brick_risk: false
+tags: [drums, sequencer, port, sampler]
+versions:
+  - version: prime @ c896bfd
+    date: 2026-05-25
+    url: https://github.com/brendanclarke/LXR02Open/commit/c896bfd
+    notes: No tagged releases; this is the latest commit on the prime branch, which carries the built image.

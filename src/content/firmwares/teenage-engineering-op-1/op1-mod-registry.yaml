@@ -1,0 +1,27 @@
+device: teenage-engineering-op-1
+name: OP-1 mod registry
+kind: tool
+summary: Public list of the effect, engine, LFO and sequencer names and database rows that each R246 OP-1 mod uses, with a checker, so mods and the sounds saved with them do not clash.
+description: >-
+  A registry.json file and README tables recording which names and rows each project adds to the OP-1's factory
+  content database: effects, synth engines, LFO and sequencer types, plus other resources a mod claims. Saved sounds
+  store these names, and stock R246 stops at boot on a name it does not know, so two mods reusing one name would
+  play each other's sounds wrongly. Mod authors add or correct entries through an issue form, and a Python script
+  validates the file in CI. It lists stock R246, op1r and the in-development Opus. The data is dedicated to the
+  public domain.
+status: active
+authors:
+  - name: LizardMan
+    url: https://github.com/LizardMan245
+source: https://github.com/LizardMan245/op1-mod-registry
+source_status: open
+license: CC0-1.0
+requires_stock: R246
+install_notes: Reference data and a checker script for mod authors; nothing is installed on the OP-1.
+brick_risk: false
+tags: [research, python]
+versions:
+  - version: main @ dd618b1
+    date: 2026-10-15
+    url: https://github.com/LizardMan245/op1-mod-registry/commit/dd618b14d8eeca6bf656236c6d88043f86e120f4
+    notes: No tagged releases; this is the latest commit.

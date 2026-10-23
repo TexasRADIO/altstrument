@@ -28,7 +28,7 @@ install_notes: >-
   through the startup menu (hold FUNC at power-on).
 tags: [research, os, flasher, boot-splash]
 versions:
-  - version: main @ 2f7f0c4
+  - version: master @ 2f7f0c4
     date: 2026-10-13
     url: https://github.com/ethernet8023/rytm-fw-re/commit/2f7f0c4c01da3433e6386774416ea33f6c3753af
     notes: No tagged releases; this is the latest commit.

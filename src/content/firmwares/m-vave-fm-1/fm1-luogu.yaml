@@ -1,0 +1,58 @@
+device: m-vave-fm-1
+name: LUOGU
+summary: >-
+  Peking opera percussion and jinghu accompaniment: 64 luogujing patterns, 18 banshi with guomen and five whole arias,
+  with play-along scoring; menus in Chinese.
+description: >-
+  Rights warning: the five arias come from the Jingju Music Scores Collection under CC BY-NC-ND 4.0, so the firmware
+  that contains them may be shared but not sold or used commercially, and a hidden easter egg carries two sung words
+  from a recording of a comedy performance whose rights belong to others.
+
+
+  The firmware plays luogujing percussion patterns with their syllables lighting as they sound, and plays the jinghu,
+  jingerhu and yueqin parts for eighteen banshi, so a user can sing with a band. In practice mode the user plays a
+  chosen instrument on the keys or a MIDI pad and each stroke is scored as on time, early or late, and a follow-along
+  mode makes the music wait for each stroke. The keys can also play the percussion or the string instruments in a
+  chosen key. The sounds are recorded strokes from the Beijing Opera Percussion Instrument dataset, a synthesized
+  large gong and filtered sawtooth strings. The author estimates the audio load at 35 percent of one core at most and
+  has not measured it on the chip.
+status: active
+authors:
+- name: Reytian
+  url: https://github.com/Reytian
+source: https://github.com/Reytian/fm1-luogu
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  The firmware code is MPL-2.0. app/dsp/tq_data.h, the arias, is CC BY-NC-ND 4.0 (non-commercial, no derivatives).
+  Recorded strokes are CC BY 4.0 and fonts are SIL OFL 1.1 (LICENSES/, CREDITS.md). The two words in app/dsp/guo_snd.h
+  come from a recording by Guo Degang and Yu Qian (Deyun Society) and are not under the project's licence.
+homepage: https://github.com/Reytian/fm1-luogu
+distribution: download
+install_notes: >-
+  Download luogu-1.0.1.fwsc from the releases page and run base/tools/fm1_install.py on it from a recursive clone of
+  the repository, with mido and python-rtmidi installed. The release notes say M-VAVE's own firmware can be put back
+  the same way. The README says installing is at your own risk.
+brick_risk: true
+tags: [percussion, sampler, sequencer, synth-engine, ui]
+image:
+  url: https://raw.githubusercontent.com/Reytian/fm1-luogu/main/app/docs/img/screen-guomen.png
+  alt: >-
+    LUOGU screen on the 唱腔 page showing the banshi 西皮原板 and the 大过门 label, a red 板 box and a grey 眼 box, a line of
+    numbered notation and a bottom row of tempo 84, key 1=E and keys set to percussion
+  credit: Reytian
+  source_url: https://github.com/Reytian/fm1-luogu
+  first_party: true
+versions:
+- version: 1.0.1
+  date: 2026-10-23
+  url: https://github.com/Reytian/fm1-luogu/releases/tag/v1.0.1
+  notes: Moves the key-played note readout off the guomen notation on the banshi page.
+- version: '1.0'
+  date: 2026-10-22
+  url: https://github.com/Reytian/fm1-luogu/releases/tag/v1.0
+  notes: Adds the five whole arias, one job per knob and an easter egg.
+- version: '0.1'
+  date: 2026-10-22
+  url: https://github.com/Reytian/fm1-luogu/releases/tag/v0.1
+  notes: First release, without the arias.

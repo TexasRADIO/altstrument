@@ -10,8 +10,10 @@ description: >-
   resource monitor, tape markers, USB MIDI CC control, 6-channel USB audio out
   and a hidden OP-Z controller mode. The patcher checks the input image against
   the SHA-256 of the original R246 file and refuses anything else. A browser
-  version of the patcher is available. The repository was created on 2026-10-09
-  and has been releasing several numbered builds a day.
+  version of the patcher is available. Since op1r 34 and 35 the synths, effects
+  and sequencers are plugin files chosen in the patcher, and since op1r 31 a
+  running op1r can be updated over USB MIDI SysEx. The repository was created on
+  2026-10-09 and has been releasing several numbered builds a day.
 status: active
 authors:
   - name: pcppcp
@@ -40,6 +42,42 @@ image:
   source_url: https://github.com/pcppcp/op1r
   first_party: true
 versions:
+  - version: op1r 45
+    date: 2026-10-22
+    url: https://github.com/pcppcp/op1r/blob/main/CHANGELOG.md
+    notes: Fixes USB disk mode not ending on eject, stuck notes in scale mode and key handling in grids and dddd.
+  - version: op1r 44
+    date: 2026-10-21
+    url: https://github.com/pcppcp/op1r/blob/main/CHANGELOG.md
+    notes: Adds the dddd noise synth, FX2 routing to the instrument or an aux bus with per-track sends, and a scale mode for the keyboard and stock sequencers.
+  - version: op1r 43
+    date: 2026-10-20
+    url: https://github.com/pcppcp/op1r/blob/main/CHANGELOG.md
+    notes: Adds a Mutable Instruments Grids sequencer port and the brassophone synth.
+  - version: op1r 41
+    date: 2026-10-19
+    url: https://github.com/pcppcp/op1r/blob/main/CHANGELOG.md
+    notes: Adds a chord sequencer mode and a sample browser for the granular synth.
+  - version: op1r 38
+    date: 2026-10-17
+    url: https://github.com/pcppcp/op1r/blob/main/CHANGELOG.md
+    notes: Adds the sampler+ synth type and tool plugins, starting with a randomiser.
+  - version: op1r 35
+    date: 2026-10-16
+    url: https://github.com/pcppcp/op1r/blob/main/CHANGELOG.md
+    notes: Adds an opt-in four-track MIDI sequencer, MIDI CC automation of the current synth and turns the sequencers into plugin files.
+  - version: op1r 34
+    date: 2026-10-15
+    url: https://github.com/pcppcp/op1r/blob/main/CHANGELOG.md
+    notes: Synths and effects become plugin files that the patcher can include or leave out.
+  - version: op1r 31
+    date: 2026-10-14
+    url: https://github.com/pcppcp/op1r/blob/main/CHANGELOG.md
+    notes: Adds ultralazr's mixtur, arc, palme, oracle and peal modules and firmware updates over USB MIDI SysEx.
+  - version: op1r 27
+    date: 2026-10-13
+    url: https://github.com/pcppcp/op1r/blob/main/CHANGELOG.md
+    notes: Publishes the source as op1r-src under GPL-3.0-or-later.
   - version: op1r 26
     date: 2026-10-13
     url: https://github.com/pcppcp/op1r/blob/main/CHANGELOG.md

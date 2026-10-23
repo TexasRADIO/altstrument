@@ -1,0 +1,49 @@
+device: m-vave-fm-1
+name: Scintilla
+summary: >-
+  Elka Synthex port in integer C: the 80 factory sounds, two layers of eight voices, chorus and reverb, USB and DIN
+  MIDI, as a firmware of its own on Dinghy.
+description: >-
+  The engine is a fixed-point C port of the Synthex model in the author's synthex-web browser synth, with two
+  band-limited oscillators, noise, a five-mode filter, two envelopes, two LFOs, glide, sync, ring and cross
+  modulation per voice. Rendered output is compared sample by sample against the browser original, and the same
+  code runs on a computer and in the author's FM-1 emulator. The firmware offers single, split and double layers,
+  poly, mono and unison modes, a chorus, an algorithmic reverb, pages for each part of the voice and a joystick
+  page. It takes notes, bend, a few CCs and program changes over USB and the DIN jack. The delay and saving
+  edited sounds are not in yet, and the author says it was installed and played on a real FM-1 on 2026-10-23.
+status: active
+authors:
+- name: Joakim Eriksson (joakimeriksson)
+  url: https://github.com/joakimeriksson
+source: https://github.com/joakimeriksson/scintilla-fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The engine ports synthex-web (BSD-2-Clause, same author); the platform layer is Dinghy, Felucca and SLOOP code
+  under GPL-3.0-only. Terminus font is SIL OFL 1.1. The project is not affiliated with the owners of the Elka or
+  Synthex names.
+homepage: https://github.com/joakimeriksson/scintilla-fm1
+distribution: download
+install_notes: >-
+  Download the .fwsc from the releases page and install it with the FM-1 Firmware Hub or with
+  firmware/tools/fm1_install.py over USB MIDI. Holding OCT- while switching on opens the USB rescue, and the hub
+  can return the unit to the official firmware. Release builds report the identity FM-1_963 plus the version.
+brick_risk: true
+tags: [synth-engine, fx, reverb, midi, usb-midi, port, performance]
+image:
+  url: https://raw.githubusercontent.com/joakimeriksson/scintilla-fm1/main/docs/scintilla.png
+  alt: >-
+    Scintilla title banner with green laser beams above the emulated FM-1 panel, whose screen shows preset 46
+    Ring mod. with cutoff, resonance, envelope and release values and a keyboard
+  credit: Joakim Eriksson
+  source_url: https://github.com/joakimeriksson/scintilla-fm1
+  first_party: true
+versions:
+- version: 0.1.1
+  date: 2026-10-23
+  url: https://github.com/joakimeriksson/scintilla-fm1/releases/tag/v0.1.1
+  notes: Same code as 0.1 with its own package identity, FM-1_96300101.
+- version: '0.1'
+  date: 2026-10-23
+  url: https://github.com/joakimeriksson/scintilla-fm1/releases/tag/v0.1
+  notes: First release; reports the identity FM-1_960, which another firmware also uses.

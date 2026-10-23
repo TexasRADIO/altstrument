@@ -30,7 +30,7 @@ install_notes: >-
 brick_risk: false
 tags: [tracker, chiptune, homebrew, nro, lgpt]
 versions:
-  - version: main @ 7f7bd82
+  - version: master @ 7f7bd82
     date: 2026-08-17
     url: https://github.com/emartinez-dev/LittleGPTracker-switch/commit/7f7bd82
     notes: Latest commit; no tagged release contains a Switch build.

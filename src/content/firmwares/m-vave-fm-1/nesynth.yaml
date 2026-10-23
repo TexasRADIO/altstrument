@@ -1,15 +1,18 @@
 device: m-vave-fm-1
 name: NESynth
 summary: >-
-  NES emulator for the FM-1: runs one cartridge you embed, with the keys as the controller and the audio on a
-  second CPU core. Browser site with a player, firmware builder and installer. Also builds for the SMK-37.
+  NES emulator for the FM-1: the keys are the controller, the audio runs on a second CPU core, and games are added
+  to an on-device library over USB or Bluetooth. Browser site with a player, game uploader and installer.
 description: >-
   Built on InfoNES and the Felucca hardware layer. Supports NTSC cartridges with mappers 0, 1, 2, 3, 4, 9 and
-  11 and one controller. The site plays a dropped .nes or ZIP file in the browser and prepares a firmware with
-  that cartridge embedded, so each install holds one game. Three licensed homebrew games and an original
-  diagnostic cartridge are included and no commercial ROMs are. The author reports about 60 emulated frames
-  a second on the FM-1 in one game, with a lower screen refresh rate, and calls other games experimental.
-  The browser simulator has FM-1 and SMK-37 layouts and a CRT television view. Its SMK-37 builds are not catalogued, because their installer downloads M-VAVE's SMK-37 stock package from a third-party mirror.
+  11 and one controller. The site plays a dropped .nes or ZIP file in the browser. The installed core starts with
+  an empty library and games are then sent from the site's Add games tab; the README's size limit is 256 KiB per
+  cartridge. Three licensed homebrew games and an original diagnostic cartridge are included and no commercial
+  ROMs are. The author reports about 60 emulated frames a second on the FM-1 in one game, with a lower screen
+  refresh rate, and calls other games experimental. The browser simulator has FM-1 and SMK-37 layouts and a CRT
+  television view. The repository also builds for the SMK-37 Pro and Elite, with their own releases. Those builds
+  are not listed under the SMK-37, because their installer downloads M-VAVE's SMK-37 stock package from a
+  third-party mirror.
 status: active
 authors:
 - name: Chance Roth (ChanceTheMaker)
@@ -28,13 +31,14 @@ homepage: https://chancethemaker.github.io/NESynth-FM1-SMK/
 distribution: browser-installer
 requires_stock: M-VAVE FM-1 V15
 install_notes: >-
-  Chrome or Edge over USB. The page prepares and checks the package locally, installs it and expects the new
-  firmware identity after the restart. A Return to the original M-VAVE synth option reinstalls V15. The
-  author tested the FM-1 build on hardware and lists some mapper support as untested there.
+  Chrome or Edge over USB. In the Install firmware tab choose FM-1 and install; the page prepares and checks the
+  package locally and expects the new firmware identity after the restart. Then use the Add games tab to send a
+  cartridge over USB or Bluetooth. A Return to the original M-VAVE synth option reinstalls V15. The author tested
+  the FM-1 build on hardware and lists some mapper support as untested there.
 brick_risk: true
 tags: [game, emulator]
 versions:
-- version: main @ f231955
-  date: 2026-10-16
-  url: https://github.com/ChanceTheMaker/NESynth-FM1-SMK/commit/f231955abf793cd3814f031f33c56a10ef482d5e
-  notes: No tagged releases; this is the latest commit.
+- version: main @ 25c7b7e
+  date: 2026-10-22
+  url: https://github.com/ChanceTheMaker/NESynth-FM1-SMK/commit/25c7b7ed6da15384a248814ffbbb19eede337354
+  notes: Latest commit. The GitHub releases are pre-releases of the SMK-37 builds (smk-pad-lights-971). The README names the FM-1 release v2.0.

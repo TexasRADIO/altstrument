@@ -41,7 +41,7 @@ image:
   source_url: https://charlesvestal.github.io/fm1-base/
   first_party: true
 versions:
-- version: main @ a505d2c
-  date: 2026-10-17
-  url: https://github.com/charlesvestal/fm1-base/commit/a505d2c
+- version: main @ 6c0b47e
+  date: 2026-10-23
+  url: https://github.com/charlesvestal/fm1-base/commit/6c0b47e
   notes: No tagged releases; this is the latest commit. The project site offers template 0.1.

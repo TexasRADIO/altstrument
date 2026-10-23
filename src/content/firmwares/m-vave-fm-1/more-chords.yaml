@@ -29,7 +29,7 @@ install_notes: >-
 brick_risk: true
 tags: [chords, synth-engine, sequencer, performance, velocity, midi]
 versions:
-- version: main @ fbcf823
-  date: 2026-10-18
-  url: https://github.com/rosen-wav/more-chords-M-VAVE-FM-1-Custom-Firmware/commit/fbcf823b962cfcc4daa0d2c526f3735320f39723
+- version: main @ d4de765
+  date: 2026-10-21
+  url: https://github.com/rosen-wav/more-chords-M-VAVE-FM-1-Custom-Firmware/commit/d4de765d4022b9e9214594bf2451ae22dfe5b454
   notes: No tagged releases; this is the latest commit.

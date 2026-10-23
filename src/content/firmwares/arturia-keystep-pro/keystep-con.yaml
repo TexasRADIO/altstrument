@@ -1,0 +1,45 @@
+device: arturia-keystep-pro
+name: KeyStep Con
+summary: Patch for the KeyStep Pro's 2.5.20 firmware that adds a bass generator, drum and chord pads, root chords and project names, plus a browser project editor and playable manual.
+description: >-
+  KSCON (KeyStep Con) modifies Arturia's 2.5.20 firmware with hand-written Thumb-2 hooks. The patched firmware, which
+  reports itself as 2.5.99, adds a Make bass button combination with five styles, drum lanes and scale chords played from the step
+  buttons, a root-chord mode, key lights for pad notes, 16-character project names and a changed startup screen. A
+  single HTML page edits the 16 projects over Web MIDI SysEx in place of MIDI Control Center, with piano-roll and
+  drum-grid editors, MIDI file import and export, backups, 158 global settings and a simulated, playable KeyStep Pro
+  that serves as a manual. A separate browser installer applies the patch to the user's own copy of Arturia's update
+  file and checks the result against a known build; it carries only the changed bytes, not Arturia's firmware. The
+  repository also holds notes on the SysEx protocol and storage layout and a list of bugs found in 2.5.20.
+status: active
+authors:
+  - name: canadianblaken
+    url: https://github.com/canadianblaken
+source: https://github.com/canadianblaken/keystep-con
+source_status: open
+license: MIT
+license_notes: >-
+  The project's own code and notes are MIT. The Synth CC catalogue in the page comes from the MIDI Guide and is
+  CC BY-SA 4.0. Arturia's firmware is not included; the build needs the user's copy of the official 2.5.20 update.
+homepage: https://canadianblaken.github.io/keystep-con/
+distribution: patch-your-own
+requires_stock: 2.5.20
+install_notes: >-
+  Back up the 16 projects first. Open the installer page, choose Arturia's keystep-pro_Firmware_Update_2.5.20.0.kspf
+  (MIDI Control Center keeps a copy on the computer), and download the patched KSCON .kspf the page produces after
+  checking that the input is the official 2.5.20 file. Flash it with MIDI Control Center like an official update, which
+  may flag it as a downgrade from 2.5.99. To go back, flash Arturia's 2.5.20 file again. The editor page works in
+  Chrome or Edge and also runs against a simulated device. The author lists each feature as checked on a real
+  KeyStep Pro and says to use it at your own risk.
+brick_risk: false
+tags: [patch, editor, sysex, sequencer, chords, emulator, web]
+image:
+  url: https://raw.githubusercontent.com/canadianblaken/keystep-con/main/docs/screenshots/installer.png
+  alt: KeyStep Con installer page in dark theme, listing what the patch adds, what is needed, and the first two install steps for backing up projects and choosing Arturia's 2.5.20 file
+  credit: canadianblaken
+  source_url: https://github.com/canadianblaken/keystep-con
+  first_party: true
+versions:
+  - version: main @ 5d1906d
+    date: 2026-10-22
+    url: https://github.com/canadianblaken/keystep-con/commit/5d1906d891ac34aef4e3bbd60b215cf3556b75ba
+    notes: No tagged releases; this is the latest commit.

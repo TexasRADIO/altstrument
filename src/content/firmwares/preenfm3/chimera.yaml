@@ -1,0 +1,44 @@
+device: preenfm3
+name: Chimera
+summary: Alpha replacement firmware for the preenFM3 with six parts, new sound engines, filters and effects, and a ring sequencer, distributed as binaries only.
+description: >-
+  Chimera replaces the preenFM3 firmware with a six-part design, each part with
+  its own MIDI channel, a mixer, shared chorus, delay and reverb, and a master
+  compressor. Its sound engines are a six-operator phase-modulation engine, modal
+  resonators, a variable-wave virtual analog engine and a tape engine that plays
+  sources from the SD card, with a selection of filters, a low-pass gate and
+  the ORBIT ring sequencer. A set of factory sounds and demo projects comes as a
+  separate download. It is pre-release software, the author lists unfinished
+  features and known issues, and the original firmware can be flashed back. The
+  repository only carries releases, documentation and an issue tracker.
+status: active
+authors:
+  - name: Joe Giralt
+    url: https://github.com/joegiralt
+homepage: https://github.com/joegiralt/chimera-releases
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  Source is not public. The binaries are under a tester license that allows
+  personal use and testing on PreenFM3 hardware you own and forbids
+  redistribution and reverse engineering.
+distribution: download
+requires_stock: PreenFM3 bootloader 1.09 (from the official v1.03 release)
+install_notes: >-
+  Hold MENU while powering on to check that the bootloader reads 1.09; older
+  bootloaders must be updated first, and a failed bootloader update can stop the
+  unit from starting. Chimera itself leaves the bootloader alone. Copy
+  CHIMERA.BIN, CHIMERA.BK2 and the factory set to the SD card through the
+  bootloader's SD card access, then flash CHIMERA.BIN. On first start it installs
+  CHIMERA.BK2 and should not be powered off meanwhile. A dfu-util install
+  is also documented. The original firmware can be reinstalled the same way.
+tags: [fm, synth-engine, physical-modeling, filter, sequencer, delay, reverb]
+versions:
+  - version: 0.2.0
+    date: 2026-10-22
+    url: https://github.com/joegiralt/chimera-releases/releases/tag/v0.2.0
+    notes: Alpha; adds the TAPE engine and a required CHIMERA.BK2 file.
+  - version: 0.1.0
+    date: 2026-10-14
+    url: https://github.com/joegiralt/chimera-releases/releases/tag/v0.1.0
+    notes: First alpha release.

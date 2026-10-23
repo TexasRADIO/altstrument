@@ -2,12 +2,13 @@ device: m-vave-fm-1
 name: CoralFlower
 summary: >-
   Chord instrument for the FM-1, a fork of ChoralRoot FM-1 with its own chord keys, bass part, arpeggiator,
-  looper, six effects, about 60 sounds and a pixel plant that grows from the chords you play.
+  eight-pattern sequencer, six effects, about 60 sounds and a pixel plant that grows from the chords you play.
 description: >-
   Upper keys turn each scale note into a chord (major, minor, sus, 6, 7, add9 and combinations), in a Top or a
   Side key layout that each have a Lock mode, over 27 scales. A bass part with an octaver, a nine-pattern arpeggiator
-  that follows the metronome or MIDI clock, a loop recorder for chord progressions and an ordered chain of
-  filter, drive, chorus, phaser, delay and reverb sit on top of virtual-analogue and FM engines. The home screen
+  that follows the metronome or MIDI clock, a sequencer for chords, bass, layer and drums with a song mode, REC
+  that records into a new pattern, and an ordered chain of filter, drive, chorus, phaser, delay and reverb sit on
+  top of virtual-analogue and FM engines. The home screen
   draws a flower or a coral whose parts follow the notes played. The author says it is inspired by the
   Telepathic Instruments Orchid. It keeps ChoralRoot's and Felucca's hardware layer and update loader, and
   the web page also runs the firmware in a browser emulator.
@@ -30,7 +31,7 @@ install_notes: >-
   the stock firmware's sounds cannot be backed up. The README says to get FM-1 V15 from M-VAVE and install it
   from the same page to go back to stock.
 brick_risk: true
-tags: [chords, synth-engine, performance, looper, fx, fm, midi]
+tags: [chords, synth-engine, performance, sequencer, fx, fm, midi]
 image:
   url: https://raw.githubusercontent.com/FicusFicusov/CoralFlower/main/docs/images/home.png
   alt: "CoralFlower home screen showing the chord name Dmaj9 above a pink flower and a row of chord keys"
@@ -38,6 +39,34 @@ image:
   source_url: https://github.com/FicusFicusov/CoralFlower
   first_party: true
 versions:
+- version: '0.5'
+  date: 2026-10-22
+  url: https://github.com/FicusFicusov/CoralFlower/releases/tag/v0.5
+  notes: Each pattern can carry its own sounds; adds a HOLD key and play of the FM-1 keys from a MIDI keyboard.
+- version: 0.4.2
+  date: 2026-10-21
+  url: https://github.com/FicusFicusov/CoralFlower/releases/tag/v0.4.2
+  notes: Settings, sound edits and the last-picked pattern are kept across power-off.
+- version: 0.4.1
+  date: 2026-10-20
+  url: https://github.com/FicusFicusov/CoralFlower/releases/tag/v0.4.1
+  notes: Chords can be written and moved while a pattern plays.
+- version: '0.4'
+  date: 2026-10-20
+  url: https://github.com/FicusFicusov/CoralFlower/releases/tag/v0.4
+  notes: Replaces the looper with REC into a new sequencer pattern.
+- version: 0.3.1
+  date: 2026-10-19
+  url: https://github.com/FicusFicusov/CoralFlower/releases/tag/v0.3.1
+  notes: Adds the sequencer patterns and song to the backup.
+- version: '0.3'
+  date: 2026-10-19
+  url: https://github.com/FicusFicusov/CoralFlower/releases/tag/v0.3
+  notes: Adds a sequencer with eight patterns and a song, with chords, bass, layer and drum tracks.
+- version: '0.2'
+  date: 2026-10-15
+  url: https://github.com/FicusFicusov/CoralFlower/releases/tag/v0.2
+  notes: Adds a RETRIG chord setting and fixes glide on VA sounds.
 - version: '0.1'
   date: 2026-10-15
   url: https://github.com/FicusFicusov/CoralFlower/releases/tag/v0.1

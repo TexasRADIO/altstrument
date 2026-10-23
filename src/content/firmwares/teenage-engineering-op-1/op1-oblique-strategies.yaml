@@ -1,0 +1,41 @@
+device: teenage-engineering-op-1
+name: OP-1 Oblique Strategies
+summary: Patch for the original OP-1's R246 firmware that shows a random Oblique Strategies card over any screen when Shift is held and the orange encoder is pressed; any key closes it.
+description: >-
+  Rights warning: the card texts are Brian Eno and Peter Schmidt's Oblique Strategies, which the repository's
+  MIT license explicitly does not cover. The mod is a small block of C code, about 150 lines, inserted into the R246
+  image, with hooks on the key handler and the end of the GUI frame so the card draws over the active screen in the
+  OP-1's own stroke font. The patcher adds the block to the user's op1_246.op1, checks the input hash and verifies
+  the output by unpacking it, and it can also chain onto an op1r build. A MODDING.md in the repository records the
+  toolchain, memory map and calling conventions for writing other OP-1 mods. The firmware is not included. The
+  README links to Teenage Engineering's own download page for the stock image.
+status: active
+authors:
+  - name: ultralazr
+    url: https://github.com/ultralazr
+source: https://github.com/ultralazr/op1-oblique-strategies
+source_status: open
+license: MIT
+license_notes: >-
+  MIT for the code. The Oblique Strategies card texts (cards.txt) are by Brian Eno and Peter Schmidt and are
+  stated in the README as not covered by that license.
+distribution: patch-your-own
+requires_stock: R246
+install_notes: >-
+  Build the code with Blackfin binutils and GCC, then run patch_oblique.py on your own official op1_246.op1; the
+  patcher refuses other inputs, or an op1r build when given --allow-modded. Install by holding COM at power-on,
+  choosing firmware update and copying the .op1 file over. To go back, flash the original op1_246.op1 the same way.
+  The bootloader is not modified.
+brick_risk: false
+tags: [ui, patch, python]
+image:
+  url: https://raw.githubusercontent.com/ultralazr/op1-oblique-strategies/main/preview.png
+  alt: Four rendered OP-1 screens on black, each with a red OBLIQUE STRATEGIES heading above a white stroke-font card text, from Accept advice to a long parenthetical card
+  credit: ultralazr
+  source_url: https://github.com/ultralazr/op1-oblique-strategies
+  first_party: true
+versions:
+  - version: main @ 1a2f2fe
+    date: 2026-10-12
+    url: https://github.com/ultralazr/op1-oblique-strategies/commit/1a2f2fe60fea59673d3bed691c386f18119d168f
+    notes: No tagged releases; this is the latest commit.

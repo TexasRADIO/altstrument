@@ -31,9 +31,9 @@ install_notes: >-
 brick_risk: true
 tags: [ambient, generative, performance, synth-engine, emulator]
 versions:
-- version: drift @ bf3a4f7
-  date: 2026-10-18
-  url: https://github.com/thebrodi/fm1-haave/commit/bf3a4f73d4366dc3d039f5ecaff1fe726a07f06e
+- version: drift @ 24e75c8
+  date: 2026-10-20
+  url: https://github.com/thebrodi/fm1-haave/commit/24e75c83e52c203df542e9e7b14703fee8bbd971
   notes: No tagged releases; this is the latest commit on the default branch.
 - version: drift @ fc1c499
   date: 2026-10-17

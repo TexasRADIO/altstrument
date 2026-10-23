@@ -35,6 +35,14 @@ image:
   source_url: https://github.com/devrvega/LCD-4
   first_party: true
 versions:
+- version: 0.1.2
+  date: 2026-10-16
+  url: https://github.com/devrvega/LCD-4/releases/tag/v0.1.2
+  notes: Safe mode can be reached over USB again after a crash.
+- version: 0.1.1
+  date: 2026-10-16
+  url: https://github.com/devrvega/LCD-4/releases/tag/v0.1.1
+  notes: Redraws the panel when a track is muted or another track is picked.
 - version: 0.1.0
   date: 2026-10-15
   url: https://github.com/devrvega/LCD-4/releases/tag/v0.1.0

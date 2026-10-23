@@ -36,7 +36,7 @@ image:
   source_url: https://github.com/delirioux/tuna
   first_party: true
 versions:
-- version: main @ b77b159
-  date: 2026-10-16
-  url: https://github.com/delirioux/tuna/commit/b77b15917f3d5075de4ded494fa7a1189e34bf33
-  notes: No tagged releases; this is the latest commit, titled Tuna 1.0, which the project site installs.
+- version: main @ fbc56d3
+  date: 2026-10-17
+  url: https://github.com/delirioux/tuna/commit/fbc56d3f523aa5b781004e034da407faff37e1e5
+  notes: No tagged releases; this is the latest commit, a build-workflow change that follows the commit titled Tuna 1.0.

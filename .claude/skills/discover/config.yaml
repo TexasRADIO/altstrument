@@ -745,3 +745,9 @@ ignore:
   - url: https://github.com/ThrowingSnow/PadBridge
     reason: desktop gamepad-to-MIDI software for Linux and macOS; not music hardware
     date: 2026-10-22
+  - url: https://github.com/jwag789/duty-cycle
+    reason: multiplayer NES-style chiptune tracker that runs in the browser; not music hardware
+    date: 2026-10-23
+  - url: https://github.com/ducdinh-codehub/8bit-game
+    reason: terminal arcade game tributes with 8-bit sound; not music hardware
+    date: 2026-10-23

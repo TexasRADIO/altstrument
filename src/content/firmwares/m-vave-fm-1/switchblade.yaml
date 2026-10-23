@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: Switch Blade
+summary: >-
+  Felucca fork that runs four synth machines, one per track, over eight shared voices: OB-Z poly, WAVE
+  wavetable, NANO (a 303 plus a subtractive poly) and JUNO with a chorus. No drums, aimed at use as an expander.
+description: >-
+  Each track picks one of the four machines, each with 32 presets, and each track has a drive, insert effects
+  and shared chorus, delay and reverb. The home screen puts a cutoff, a resonance, an envelope and one
+  machine-specific parameter on knobs 1 to 4. There is no drum engine, because the firmware is meant to sit
+  beside a drum machine, for example with an Elektron Syntakt sending on MIDI channels 1 to 4. The project
+  site has a browser version of the firmware with a demo song. WAVE reuses the voice of the author's Void Wave
+  plugin; NANO's 303 follows Open303 by way of X0X, and JUNO's voice follows the Ultramaster KR-106.
+status: active
+authors:
+- name: OllieNicklinUK
+  url: https://github.com/OllieNicklinUK
+source: https://github.com/OllieNicklinUK/switchblade
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Same terms as Felucca. Ported parts keep their own licences, listed in LICENSING.md and CREDITS.md: Open303 and
+  DaisySP (MIT), the KR-106 DSP (GPL-3.0), msfa (Apache-2.0) and the fonts (SIL OFL 1.1).
+homepage: https://ollienicklin.com/switchblade/
+distribution: browser-installer
+install_notes: >-
+  Installs from the project site in desktop Chrome or Edge over USB. The page also has a return-to-stock option
+  that asks you to pick your own copy of M-VAVE's unmodified V15 FM-1.fwsc and refuses any other file. The
+  site marks the firmware as a beta, installed at your own risk. Build instructions are in BUILDING.md.
+brick_risk: true
+tags: [synth-engine, oscillator, wavetable, fx, platform]
+video:
+  url: https://www.youtube.com/watch?v=Z30qUZpcpkQ
+  title: SwitchBlade Presets
+  credit: Crappa-T
+  first_party: true
+  found_via: https://ollienicklin.com/switchblade/
+versions:
+- version: main @ 9d07527
+  date: 2026-10-22
+  url: https://github.com/OllieNicklinUK/switchblade/commit/9d0752714a93c0b905c8d8e7425b9ca67dae082d
+  notes: No tagged releases; this is the latest commit. The project site offers 0.2-beta.

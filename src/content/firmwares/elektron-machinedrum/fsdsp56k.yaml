@@ -1,0 +1,38 @@
+device: elektron-machinedrum
+name: fsdsp56k
+kind: tool
+summary: F# toolchain for the DSP56300 that prototypes, auditions and renders Machinedrum machines on an emulated DSP, then packs them as MDS packages for MDX X.20.
+description: >-
+  You write a machine as three functions (init, trig, render) in F# over
+  fixed-point types that behave like the DSP's arithmetic. The same code runs on
+  .NET, and through Fable as JavaScript or Rust, and compiles to DSP56300
+  assembly that is checked word for word against the prototype on an emulator,
+  with each call's cycle count measured against the track's limit. A command
+  line also assembles, checks, disassembles, packs and converts hand-written
+  machines (MDS packages and SysEx dumps) and renders them to WAV. A browser
+  playground plays the shipped kernels and public MDS machines and opens your own
+  .mds files or SysEx banks locally. It is a prototype and does not touch the
+  Machinedrum itself; the packed machines are sent with MDX's Machine Manager.
+status: active
+authors:
+  - name: smoothdeveloper
+    url: https://github.com/smoothdeveloper
+source: https://github.com/smoothdeveloper/fsdsp56k
+source_status: open
+license: AGPL-3.0-or-later
+license_notes: Ported machines keep their own licenses, listed in THIRD-PARTY-NOTICES.md; several of them have no published license.
+homepage: https://smoothdeveloper.github.io/fsdsp56k/
+distribution: source-only
+requires_stock: MDX X.20 for running packed machines on hardware
+install_notes: >-
+  Needs the .NET SDK and a Rust toolchain. Run dotnet tool restore and dotnet
+  paket install, build the native part with cargo build --release in native/,
+  then call the fsdsp56k command line through dotnet run. The browser playground
+  works without a Machinedrum. Machine code runs on the unit's DSP, so only
+  install machines from developers you trust.
+tags: [machines, sdk, emulator, converter, web, research]
+versions:
+  - version: main @ 81d9253
+    date: 2026-10-23
+    url: https://github.com/smoothdeveloper/fsdsp56k/commit/81d92538acc0bec1bb8b6160cc15b090bf3029cf
+    notes: No tagged releases; this is the latest commit.

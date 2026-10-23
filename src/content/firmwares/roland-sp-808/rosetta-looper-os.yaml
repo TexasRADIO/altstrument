@@ -1,16 +1,19 @@
 device: roland-sp-808
 name: SP-808 Rosetta Looper OS
-summary: Reverse-engineered patches for the SP-808 OS that add an MPC-style pad sampling mode and an eight-voice pitched keyboard sampler running on the effects DSP, with a guitar looper built but not yet flashed.
+summary: Reverse-engineered patches for the SP-808 OS that add an MPC-style pad sampling mode and an eight-voice pitched keyboard sampler running on the effects DSP, with a guitar looper still awaiting a hardware test.
 description: >-
   Build scripts patch your own decoded copy of Roland's 1.05 update and write an
   SP808.PRG that the unit installs from its Zip disk or from a ZuluIDE SD card
   emulating one. The result adds a boot animation, a new home menu, an MPC mode
   where a pad is selected and then sampled into, and a keyboard mode that plays
   one sample pitched across the pads and a MIDI keyboard with eight extra voices
-  plus the four stock ones. The looper mode (pad layers, overdub, undo and
-  clear) has only been tested in an emulator. The repository also holds a
-  homemade H8S disassembler, assembler and emulator, and a DSP decoder. The
-  author calls it a parked preview from October 2026. The builds are based on
+  plus the four stock ones, with saw, pulse and triangle oscillators that can be
+  layered on each voice. The looper mode (pad layers, overdub, undo and clear)
+  is on the card but its hardware test is still pending, and the README lists
+  newer menus and effect pages as emulator-tested. The repository also holds a
+  homemade H8S disassembler, assembler and emulator, and a DSP decoder, and
+  its releases include a Windows patcher. The author calls it a preview and
+  work in progress from October 2026. The builds are based on
   the SP-808 OS, so installing one on an SP-808EX turns it into a non-EX.
 status: active
 authors:
@@ -23,8 +26,9 @@ license_notes: Covers the repository only; no Roland code is included.
 distribution: patch-your-own
 requires_stock: "1.05"
 install_notes: >-
-  Needs Roland's official SP808v1050.zip, which you supply. Run the decode and
-  build scripts, add the resulting SP808.PRG to your Zip or ZuluIDE disk image,
+  Needs Roland's official SP808v1050.zip, which you supply. Run the Windows
+  patcher from the release, or the decode and build scripts, and add the
+  resulting SP808.PRG to your Zip or ZuluIDE disk image,
   then power on with the disk in and answer YES to the update prompt. Back up
   the disk image first. The boot ROM has a MIDI recovery mode that the OS
   cannot overwrite. Built images should not be shared.
@@ -36,7 +40,7 @@ image:
   source_url: https://github.com/yuyoi/Sp-808-rosetta-looper-OS-#readme
   first_party: true
 versions:
-  - version: main @ 90ab838
-    date: 2026-10-14
-    url: https://github.com/yuyoi/Sp-808-rosetta-looper-OS-/commit/90ab838746d5a102d6d798ccdd31554f65435062
-    notes: No tagged releases; this is the latest commit.
+  - version: v1.99
+    date: 2026-10-22
+    url: https://github.com/yuyoi/Sp-808-rosetta-looper-OS-/releases/tag/v1.99
+    notes: Adds Rosetta-style menus, chorus, flanger and phaser as modulation modes, MIDI remote keys and a Windows patcher.

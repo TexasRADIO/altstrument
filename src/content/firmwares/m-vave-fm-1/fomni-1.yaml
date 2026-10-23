@@ -24,6 +24,10 @@ video:
   first_party: true
   found_via: https://github.com/charlesvestal/fm1-fomni
 versions:
+- version: '0.4'
+  date: 2026-10-15
+  url: https://github.com/charlesvestal/fm1-fomni/releases/tag/v0.4
+  notes: Sends what the screen shows to the FM-1 Screen Reader over USB; the installer can restore M-VAVE's own firmware.
 - version: 0.3.2
   date: 2026-10-08
   url: https://github.com/charlesvestal/fm1-fomni/releases/tag/v0.3.2

@@ -1,0 +1,37 @@
+device: m-vave-fm-1
+name: VNL-1
+summary: >-
+  Generative lo-fi hip hop radio: plans whole songs of two to three and a half minutes, then a pause and a new
+  song, on placeholder voices; built on fm1-base.
+description: >-
+  Each song has a chord loop, groove, bass, melody and a map of layers entering and leaving in four and
+  eight-bar blocks, and the next song is meant to differ in key, tempo and texture. Controls are minimal: PLAY
+  stops and starts, K1 to K4 set key, tempo, motion and mood, each taking effect at the next four-bar boundary.
+  It has no MIDI or Bluetooth. The author's status note says the voices are placeholders, the firmware passes in the
+  host simulator and the browser emulator, and it has not yet been installed on a real FM-1. The repository
+  includes the design spec and the lo-fi music research behind the rules.
+status: active
+authors:
+- name: pianomansam
+  url: https://github.com/pianomansam
+source: https://github.com/pianomansam/fm1-vnl
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  Inherited from fm1-base, which is a git submodule; the app's own files may use any licence and carry the repository's
+  MPL-2.0. Building needs JieLi's AC79 SDK, which is not in the repository.
+homepage: https://github.com/pianomansam/fm1-vnl
+distribution: source-only
+install_notes: >-
+  No prebuilt package is published. Clone with submodules, then ./build.sh (JieLi toolchain in Docker, AC79 SDK
+  and a Python venv with Pillow, mido and python-rtmidi) writes app/build/vnl.fwsc, installed with
+  base/tools/fm1_install.py. Holding OCT- and OCT+ for 5 s enters update mode, and base/bsp/tools/fm1_rescue.sh
+  restores stock firmware on a unit that shows up as 4C4A:8057 on USB. The README says installing is at your own
+  risk.
+brick_risk: true
+tags: [generative, sequencer, chords, drums, synth-engine, emulator]
+versions:
+- version: main @ 559bee1
+  date: 2026-10-23
+  url: https://github.com/pianomansam/fm1-vnl/commit/559bee12171ca7360b5a8c07fa9f6b9975ab22bd
+  notes: No tagged releases; this is the latest commit.

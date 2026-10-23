@@ -11,7 +11,7 @@ description: >-
   gets a modulation matrix, a third LFO, a looping second envelope, a four-lane modulation sequencer, per-voice
   stereo spread, hall and shimmer reverbs and a tape delay. Tunings include just, meantone, maqam and Scala
   files, and the browser editor edits patches live, loads DX7 banks and your own wavetables and backs up the
-  whole FM-1. The README calls 1.0 experimental and says it has run very little on real hardware.
+  whole FM-1. The README and releases call it experimental and says it has run very little on real hardware.
 status: active
 authors:
 - name: isod89
@@ -33,6 +33,10 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, oscillator, wavetable, fm, filter, lfo, fx, reverb, delay, arpeggiator, sequencer, scales, midi, usb-audio, editor, physical-modeling]
 versions:
+- version: 1.1-experimental
+  date: 2026-10-20
+  url: https://github.com/isod89/clipper-fm1/releases/tag/v1.1-experimental
+  notes: Pre-release; fixes reverb crackle and adds MIDI program change, bank select and breath control plus the SLOOP 2.7.2 sequencer.
 - version: 1.0-experimental
   date: 2026-10-19
   url: https://github.com/isod89/clipper-fm1/releases/tag/v1.0-experimental

@@ -2,15 +2,17 @@ device: m-vave-fm-1
 name: FM1VST
 kind: tool
 summary: >-
-  Work-in-progress VST3, AU and standalone plugin that runs the firmware source of ChoralRoot, Felucca and
-  Melodee against a host-side FM-1 model, with the panel as its editor.
+  VST3, AU and standalone plugin for macOS on Apple silicon that plays community FM-1 firmware: about twenty are built
+  from their own source as loadable cores, and any other .fwsc package runs in an emulator. The FM-1 panel is the editor.
 description: >-
-  Each firmware is compiled from its own unmodified source into a loadable core module, and a plugin switches
-  between them. The eight physical knobs and the panel's 41 buttons and keys are exposed as host parameters,
-  with settings for how a controller's buttons and clicking encoders are interpreted, MIDI in and out, and
-  presets per firmware. The editor draws the FM-1 panel with colour themes. The README gives the status as
-  phase 4 of a plan and builds only on macOS so far; there are no releases, so it is built from source with
-  CMake.
+  Each native firmware is compiled from its unmodified source into a core module and the plugin switches between them,
+  ChoralRoot, Felucca, Melodee, PIGEON, FMini-1 and others. An emulated core based on fm1-emu runs any firmware package
+  from The Firmware Hub, or a .fwsc you load yourself. The eight physical knobs and the panel's 41 buttons and keys are
+  exposed as host parameters, with settings for how a controller's buttons and clicking encoders are interpreted, MIDI in
+  and out, and presets per firmware. The editor draws the FM-1 panel with colour themes. A virtual MIDI port lets a
+  firmware's own web editor talk to the plugin, and the standalone app can record the screen and sound as a video. A
+  Remote FM-1 mode connects to a unit running the RemoteFM1 firmware. The releases are unsigned and not notarised, and are
+  built for macOS 11 or later on Apple silicon only.
 status: active
 authors:
 - name: Quixotic7
@@ -20,14 +22,32 @@ source_status: open
 license: GPL-3.0-only
 license_notes: >-
   Required by the firmware cores it builds; those are GPL-3.0-only under their own authors' copyrights.
-distribution: source-only
+distribution: download
 install_notes: >-
-  Clone with submodules and build with CMake 3.22 or newer and clang; JUCE is fetched at configure time. The
-  build installs the VST3 and AU into the user's plug-in folders.
+  Download the .pkg installer or the .zip from a release (macOS 11 or later, Apple silicon). Neither is signed with
+  a Developer ID or notarised, so macOS asks you to allow them in Privacy & Security; the zip's INSTALL.txt has the
+  steps and how to rescan in Live and Logic. To build from source, clone with submodules and use CMake 3.22 or newer
+  and clang; JUCE is fetched at configure time.
 brick_risk: false
 tags: [emulator, synth-engine, vst]
 versions:
-- version: main @ ebecb98
-  date: 2026-10-08
-  url: https://github.com/Quixotic7/FM1VST/commit/ebecb9836173978041f90b0054827aec396411f6
-  notes: No tagged releases; this is the latest commit.
+- version: 0.6.1
+  date: 2026-10-23
+  url: https://github.com/Quixotic7/FM1VST/releases/tag/v0.6.1
+  notes: Standalone video takes can include the large LCD above the panel; keyboard shortcut labels can be hidden.
+- version: 0.6.0
+  date: 2026-10-23
+  url: https://github.com/Quixotic7/FM1VST/releases/tag/v0.6.0
+  notes: Adds video recording in the standalone app.
+- version: 0.5.1
+  date: 2026-10-20
+  url: https://github.com/Quixotic7/FM1VST/releases/tag/v0.5.1
+  notes: Adds copying or saving the firmware's screen as an image.
+- version: 0.5.0
+  date: 2026-10-19
+  url: https://github.com/Quixotic7/FM1VST/releases/tag/v0.5.0
+  notes: Adds a virtual MIDI port so a firmware's web editor can reach the plugin.
+- version: 0.4.0
+  date: 2026-10-19
+  url: https://github.com/Quixotic7/FM1VST/releases/tag/v0.4.0
+  notes: Adds an emulated core that runs any Firmware Hub package, and makes ChoralRoot the default firmware.

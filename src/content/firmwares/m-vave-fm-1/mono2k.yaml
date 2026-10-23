@@ -2,15 +2,15 @@ device: m-vave-fm-1
 name: MONO2K
 summary: >-
   Prototype Monomachine-style firmware core: six tracks each with one mono machine, a 64-step sequencer with
-  parameter locks and a lofi effects bus, on a 1-bit screen; no FM-1 build yet, runs in the browser.
+  parameter locks and a lofi effects bus, on a 1-bit screen; runs in the browser, and an FM-1 build exists but is untested on hardware.
 description: >-
   Each track has one of nine machines (sine and noise, 8-bit SID-style, two FM, two wave, a digital wave machine and
   a vocal machine) written without floating point, with amplitude, filter, effects, distortion and
   three LFOs per track. The sequencer has 64 steps per track with accents, slides, parameter locks, trig
   conditions, ratchets, swing and live recording. The bus adds a reverb, beat repeat, tape wobble and ADPCM
   crunch, and MIDI uses Monomachine-style channels and CC numbers. The README says the core runs in a browser
-  emulator and in a desktop test harness, that the FM-1 build around Felucca's platform layer is the next step,
-  and that nothing has been flashed yet.
+  emulator and in a desktop test harness, and that an FM-1 build on the open FM-1 platform produces an installable
+  package that has not been tried on an FM-1 yet.
 status: active
 authors:
 - name: InigoHernandez
@@ -23,12 +23,13 @@ license_notes: >-
 homepage: https://inigohernandez.github.io/mono2k/
 distribution: source-only
 install_notes: >-
-  Nothing to install on an FM-1 yet: the repository holds the sound and sequencer core, a browser emulator
-  (build it with web/build.sh) and a host harness, but no package for the FM-1.
+  No package is published yet. The repository holds the sound and sequencer core, a browser emulator
+  (build it with web/build.sh), a host harness and an FM-1 build (firmware/fm1) whose first package is untested
+  on hardware; the site's installer takes a .fwsc you build yourself.
 brick_risk: false
 tags: [sequencer, synth-engine, fx, lfo, emulator, midi]
 versions:
-- version: main @ 8db4f7c
-  date: 2026-10-16
-  url: https://github.com/InigoHernandez/mono2k/commit/8db4f7c913f715b4604436731df8c3a07e6c9640
-  notes: No tagged releases; this is the latest commit, titled MONO2K 0.1.
+- version: main @ 7fb0779
+  date: 2026-10-23
+  url: https://github.com/InigoHernandez/mono2k/commit/7fb0779045ceaaab5be4de1da21a5f16e354a0bd
+  notes: No tagged releases; this is the latest commit. The README calls it version 0.1.

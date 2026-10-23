@@ -1,18 +1,18 @@
 device: elektron-syntakt
 name: SyntHack OS
-summary: Set of patches for Syntakt OS 1.41, built from your own official file, that add a master compressor, beat repeat, a third send effect, dual-mono external input levels and parameter values in real units.
+summary: Set of patches for Syntakt OS 1.41, built from your own official file, that add a compressor, performance effects (repeat, reverse, half speed), a third send effect, dual-mono external input levels and parameter values in real units.
 description: >-
   Each mod is a separate patch with a recorded hash of the original bytes it
   replaces, and a build script combines the chosen mods with your own stock
-  1.41 file into a .syx. The master compressor works on the analog master
-  through its VCAs and has threshold, attack, release, ratio and make-up
-  controls plus a gain-reduction meter on the FX track. Beat repeat stutters
-  all tracks from the FX track's retrig keys. A third send, SND3, feeds a
-  chorus, flanger, phaser or crusher. Other mods give the external inputs
+  1.41 file into a .syx. The compressor works on the FX track bus and has threshold,
+  attack, release, ratio and make-up controls plus a gain-reduction meter on
+  the FX track. Performance FX play repeat, reverse or half speed on all
+  tracks from keys 13 to 16 and replace the earlier beat repeat. A third send,
+  SND3, feeds a chorus, flanger, phaser or crusher. Other mods give the external inputs
   independent left and right levels, show filter, envelope, level and effect
   values in Hz, dB, ms and percent, and add a boot splash. A ColdFire emulator
   tests every mod against the original code before it goes on hardware. The
-  author reports seven mods running on a real unit. Versions up to 0.8.0 could
+  author reports nine mods running on a real unit. Versions up to 0.8.0 could
   crash at boot with projects that use samples; 0.8.1 fixes this. The
   repository holds no Elektron firmware and a pre-commit hook rejects it, and
   the author asks that built files not be shared.
@@ -41,6 +41,10 @@ install_notes: >-
 brick_risk: true
 tags: [fx, compressor, sequencer, ui, emulator, patch]
 versions:
+  - version: v0.9.0
+    date: 2026-10-19
+    url: https://github.com/Angelo-politek/Synthack-OS/tree/v0.9.0
+    notes: Git tag; no GitHub release page. Adds performance FX on all tracks in place of beat repeat, quantized retrig and a separate IN R page for the dual-mono input.
   - version: v0.8.1
     date: 2026-10-16
     url: https://github.com/Angelo-politek/Synthack-OS/tree/v0.8.1

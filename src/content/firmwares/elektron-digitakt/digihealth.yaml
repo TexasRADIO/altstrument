@@ -4,7 +4,7 @@ summary: Performance and diagnostics mod for the Digitakt mk1. FAST AUDIO runs t
 description: >-
   The author measured the audio render at 537 to 480 microseconds per block and
   DSP load from 80.5 to 72.0 percent on a unit. Version 1.0 is the Digitakt build
-  and 1.1 adds the Digitone build.
+  1.1 adds the Digitone build, and 1.1.1 adds it for OS 1.44.
 status: active
 authors:
   - name: irpina
@@ -16,6 +16,10 @@ distribution: patch-your-own
 requires_stock: 1.53 / 1.54
 tags: [ui]
 versions:
+  - version: v1.1.1
+    date: 2026-10-14
+    url: https://github.com/irpina/digihealth/releases/tag/v1.1.1
+    notes: Adds the Digitone build for OS 1.44; the Digitakt files are rebuilt from the same code.
   - version: v1.1
     date: 2026-10-02
     url: https://github.com/irpina/digihealth/releases/tag/v1.1

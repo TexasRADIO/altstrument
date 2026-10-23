@@ -4,7 +4,7 @@ kind: tool
 summary: Official Expert Sleepers C++ API and examples for writing plugin algorithms for the disting NT. Plugins are compiled .o files loaded from the SD card.
 description: >-
   The API shipped with disting NT firmware 1.7.0, and each API release is
-  tagged to the firmware version it matches (v1.18.0 requires API version 13).
+  tagged to the firmware version it matches (v1.19.0 requires API version 14).
   Plugins add algorithms to the stock firmware; they do not replace it. Help
   is on the module's Discord, linked from the repository README.
 status: active
@@ -18,6 +18,10 @@ homepage: https://www.expert-sleepers.co.uk/distingNT.html
 distribution: source-only
 tags: [sdk]
 versions:
+  - version: v1.19.0
+    date: 2026-10-16
+    url: https://github.com/expertsleepersltd/distingNT_API/releases/tag/v1.19.0
+    notes: Matches firmware 1.19.0 and requires API version 14.
   - version: v1.18.0
     date: 2026-09-04
     url: https://github.com/expertsleepersltd/distingNT_API/releases/tag/v1.18.0

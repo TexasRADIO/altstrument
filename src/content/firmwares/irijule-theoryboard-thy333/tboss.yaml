@@ -3,12 +3,12 @@ name: TBOSS
 summary: Open-source replacement firmware for the TheoryBoard THY333 with chords by scale degree, strum, hold, an arpeggiator, chord names on the display, presets, custom scales and MIDI control, installed from the browser.
 description: >-
   TheoryBoard Open Source Software plays chords from the left pads and a melody from the right, in any key and
-  scale, with per-pad chord edits such as added sevenths or suspended chords, up to three custom scales drawn on
+  scale, with per-pad chord edits such as added sevenths or suspended chords, 86 built-in scales and up to 12 custom scales drawn on
   a piano keyboard in a web editor, and separate MIDI channels for chords and melody. Pad pressure can be sent as
   aftertouch or as a controller such as mod wheel or filter. The editor also backs up settings and makes a
-  verified copy of the board's 16 MB memory chip. Version 0.4.0 adds TRS MIDI out and a sustain pedal input, which
-  the author has not yet confirmed on a board. The firmware is labelled alpha and has been tested on one board.
-  The original firmware's sequencer, drum mode and more than three user scales are not implemented yet. The
+  verified copy of the board's 16 MB memory chip. Later versions add recordable chord progressions, user-typed chord sets and
+  a chord grid. TRS MIDI out is confirmed on a board; the sustain pedal input, scale lock and progressions started
+  from a DAW are not yet. The firmware is labelled beta and has been tested on one board. The
   author is not affiliated with the board's makers.
 status: active
 authors:
@@ -32,6 +32,46 @@ install_notes: >-
 brick_risk: false
 tags: [controller-mode, chords, scales, arpeggiator, midi, editor]
 versions:
+  - version: 1.3.0-beta.1
+    date: 2026-10-22
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v1.3.0-beta.1
+    notes: Adds two optional chord pad layouts, a chord-type grid and the original firmware's full chord layout.
+  - version: 1.0.0-beta.1
+    date: 2026-10-22
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v1.0.0-beta.1
+    notes: Adds editable chord sets, theory hints, assignable center buttons with a Shift button, and scale lock.
+  - version: 0.11.0
+    date: 2026-10-19
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v0.11.0
+    notes: Adds recordable chord progressions, separate chord and melody velocity curves, and a pedal target setting.
+  - version: 0.10.0
+    date: 2026-10-19
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v0.10.0
+    notes: Adds pad sensitivity settings.
+  - version: 0.9.1
+    date: 2026-10-18
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v0.9.1
+    notes: Adds a pad test and reliability fixes.
+  - version: 0.9.0
+    date: 2026-10-18
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v0.9.0
+    notes: Adds live notes, voice leading, note repeat and fold.
+  - version: 0.7.0
+    date: 2026-10-17
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v0.7.0
+    notes: Adds a scale library with families and favourites, strum feel and capo.
+  - version: 0.6.3
+    date: 2026-10-17
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v0.6.3
+    notes: Brighter navigation buttons; TRS MIDI out confirmed on a board.
+  - version: 0.6.2
+    date: 2026-10-17
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v0.6.2
+    notes: Adds the original chord panel layout, drums, more scales, and strum and arpeggiator extras.
+  - version: 0.5.1
+    date: 2026-10-17
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v0.5.1
+    notes: Adds rainbow pad lights and aftertouch per half; pads always start.
   - version: 0.4.0
     date: 2026-10-17
     url: https://github.com/armandhammer/TBOSS/releases/tag/v0.4.0

@@ -24,6 +24,10 @@ install_notes: >-
 brick_risk: false
 tags: [tracker, lsdj-style, ym2612, psg, midi]
 versions:
+  - version: v0.25
+    date: 2026-10-20
+    url: https://github.com/little-scale/genmddj/releases/tag/v0.25
+    notes: Adds FM group modes (chord, unison, octave, power), a reworked FM and percussion frequency sweep, and safer song handover.
   - version: v0.24
     date: 2026-10-09
     url: https://github.com/little-scale/genmddj/releases/tag/v0.24

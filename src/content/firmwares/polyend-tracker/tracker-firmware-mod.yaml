@@ -1,6 +1,6 @@
 device: polyend-tracker
 name: Tracker Firmware Mod
-summary: Patches for Tracker firmware 1.9.2 built on your own .ptf file, adding a software master EQ, a DJ filter on Shift + Master + jog, and Braids synth instruments, plus an emulator and notes on the audio engine.
+summary: Patches for Tracker firmware 1.9.2 built on your own .ptf file, adding a software master EQ, a DJ filter on Shift + Master + jog, Braids synth instruments, and experimental plate reverb, tape delay and conditional trigs, plus an emulator and notes on the audio engine.
 description: >-
   Three parts share the repository. Reverse-engineering notes and a Unicorn-based
   emulator run only the 1.9.2 audio engine on a computer, so patches can be tested
@@ -14,6 +14,10 @@ description: >-
   reports hardware tests of the filter, EQ and Braids builds on one unit on
   2026-10-13, and lists WAV export, CPU stress and the percussion models at 96 kHz
   as untested on hardware. Earlier builds with a gap in the file hung at boot.
+  Two further patches are marked experimental in the README: a swappable master
+  reverb and delay that offers a plate reverb and a tape delay, selected with
+  Shift + Master and another button, and conditional trigs on the Chance effect
+  (ratios 1:2 to 4:4 past 100 percent).
 status: active
 authors:
   - name: mranthropology
@@ -37,7 +41,7 @@ install_notes: >-
 brick_risk: true
 tags: [fx, filter, synth-engine, emulator, research, patch]
 versions:
-  - version: main @ f5908e8
-    date: 2026-10-14
-    url: https://github.com/mranthropology/Tracker-Firmware-Mod/commit/f5908e8
+  - version: main @ ecabc67
+    date: 2026-10-21
+    url: https://github.com/mranthropology/Tracker-Firmware-Mod/commit/ecabc67
     notes: No tagged releases; this is the latest commit.

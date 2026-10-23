@@ -1,6 +1,6 @@
 device: elektron-digitakt
 name: DigiFilter
-summary: Extra per-track filter modes (BP, BP2, COMB, TRASH) for the Digitakt mk1, as an elekloader mod for OS 1.53 only.
+summary: Extra per-track filter modes (BP, BP2, COMB, TRASH, OB4, OB2) for the Digitakt mk1, as an elekloader mod for OS 1.53 and 1.54.
 status: active
 authors:
   - name: DigiAlchemydsp
@@ -9,8 +9,8 @@ source: https://github.com/DigiAlchemydsp/DigiFilter
 source_status: open
 license: GPL-2.0-or-later
 distribution: patch-your-own
-requires_stock: "1.53"
-install_notes: Format-2 elekloader mod. No OS 1.54 build yet; digi1_mods ports its copy for testing.
+requires_stock: 1.53 / 1.54
+install_notes: Format-2 elekloader mod. Release 1.1a ships separate builds for OS 1.53 and OS 1.54; each needs the matching stock OS .syx.
 tags: [filter, fx]
 image:
   url: https://raw.githubusercontent.com/DigiAlchemydsp/DigiFilter/master/docs/img/fltr-types.png
@@ -19,6 +19,14 @@ image:
   source_url: https://github.com/DigiAlchemydsp/DigiFilter
   first_party: true
 versions:
+  - version: v1.1b
+    date: 2026-10-18
+    url: https://github.com/DigiAlchemydsp/DigiFilter/releases/tag/v1.1b
+    notes: Cuts the per-voice processing cost of the BP, BP2, COMB and TRASH modes further.
+  - version: v1.1a
+    date: 2026-10-16
+    url: https://github.com/DigiAlchemydsp/DigiFilter/releases/tag/v1.1a
+    notes: Adds the OB4 and OB2 ladder modes and OS 1.54 support, and makes BP and BP2 cheaper to run. Includes 1.1, which had no release of its own.
   - version: v1.0k
     date: 2026-10-06
     url: https://github.com/DigiAlchemydsp/DigiFilter/releases/tag/v1.0k

@@ -10,7 +10,9 @@ description: >-
   live and step recording and automation, where each track hosts its own module chain and the tracks are
   arranged in four groups of four. The README calls it an early, experimental prototype that works on real
   hardware but has rough edges, and says it only drives Schwung modules, not Move's native instruments. It
-  credits dAVEBOx for the sequencer approach.
+  credits dAVEBOx for the sequencer approach. Since 0.36.0 it runs as a standalone
+  Schwung tool that takes over the whole device while open, can be chosen in the
+  boot picker and keeps its own Sets.
 status: active
 authors:
   - name: megadake
@@ -28,6 +30,14 @@ install_notes: >-
 brick_risk: false
 tags: [sequencer, ui, performance, midi]
 versions:
+  - version: v0.37.0
+    date: 2026-10-19
+    url: https://github.com/DimaDake/schwung-movy/releases/tag/v0.37.0
+    notes: Adds a mixer and note views, USB-A MIDI keyboard input, and a web mirror page that shows every LED and records audio.
+  - version: v0.36.0
+    date: 2026-10-17
+    url: https://github.com/DimaDake/schwung-movy/releases/tag/v0.36.0
+    notes: Movy runs as a standalone Schwung tool that owns the whole device, can be the boot target and keeps its own Sets.
   - version: v0.35.0
     date: 2026-10-09
     url: https://github.com/DimaDake/schwung-movy/releases/tag/v0.35.0

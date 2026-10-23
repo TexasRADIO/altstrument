@@ -29,6 +29,14 @@ video:
   first_party: true
   found_via: https://genkigenki.github.io/smk37/
 versions:
+- version: 2.7.2
+  date: 2026-10-22
+  url: https://github.com/genkigenki/sloop-fm1/releases/tag/v2.7.2
+  notes: Adds a PAD LIGHT setting (100, 75, 50 or 25 %) to the LIGHTS menu.
+- version: 2.7.0
+  date: 2026-10-16
+  url: https://github.com/genkigenki/sloop-fm1/releases/tag/v2.7.0
+  notes: Based on SLOOP 2.7; adds KNOB ACCEL, USB RATE and 2ND CORE settings and sound on both of the chip's cores.
 - version: 2.6.1
   date: 2026-10-13
   url: https://github.com/genkigenki/sloop-fm1/releases/tag/v2.6.1

@@ -29,7 +29,7 @@ install_notes: >-
   the project's notes.
 tags: [sequencer, generative, platform, open-source]
 versions:
-  - version: main @ 5a7191f
-    date: 2026-10-19
-    url: https://github.com/tronstoner/O_C-TronSphere/commit/5a7191f
+  - version: main @ 0872edc
+    date: 2026-10-20
+    url: https://github.com/tronstoner/O_C-TronSphere/commit/0872edc
     notes: No tagged releases; this is the latest commit.

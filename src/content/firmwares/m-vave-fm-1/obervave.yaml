@@ -33,6 +33,38 @@ image:
   source_url: https://github.com/zvenson/obervave
   first_party: true
 versions:
+- version: 1.5.3
+  date: 2026-10-19
+  url: https://github.com/zvenson/obervave/releases/tag/v1.5.3
+  notes: The update loader screen shows its state, with a progress bar while writing and an update-failed message.
+- version: 1.5.2
+  date: 2026-10-19
+  url: https://github.com/zvenson/obervave/releases/tag/v1.5.2
+  notes: The FM-1's TRS MIDI input plays the synth and the keys send on the set MIDI channel. Packages and docs renamed.
+- version: 1.5.1
+  date: 2026-10-18
+  url: https://github.com/zvenson/obervave/releases/tag/v1.5.1
+  notes: First release built by the repository's GitHub CI, a rebuild of 1.5.
+- version: '1.5'
+  date: 2026-10-16
+  url: https://github.com/zvenson/obervave/tree/v1.5
+  notes: Git tag; no GitHub release page. 99 programs, with 32 new factory sounds and saving into any slot.
+- version: 1.4.3
+  date: 2026-10-16
+  url: https://github.com/zvenson/obervave/tree/v1.4.3
+  notes: Git tag; no GitHub release page. The arpeggiator hold latches separately for each sound.
+- version: 1.4.2
+  date: 2026-10-16
+  url: https://github.com/zvenson/obervave/tree/v1.4.2
+  notes: Git tag; no GitHub release page. Notes stay in time while the screen redraws.
+- version: 1.4.1
+  date: 2026-10-16
+  url: https://github.com/zvenson/obervave/tree/v1.4.1
+  notes: Git tag; no GitHub release page. Each sound has its own arpeggiator.
+- version: '1.4'
+  date: 2026-10-16
+  url: https://github.com/zvenson/obervave/tree/v1.4
+  notes: Git tag; no GitHub release page. Track B plays its own sound, and the sequencer opens on a tracks view.
 - version: 1.3.1
   date: 2026-10-15
   url: https://github.com/zvenson/obervave/tree/v1.3.1

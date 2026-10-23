@@ -37,6 +37,26 @@ image:
   source_url: https://github.com/ocean/estampie
   first_party: true
 versions:
+- version: 0.3.5
+  date: 2026-10-23
+  url: https://github.com/ocean/estampie/releases/tag/v0.3.5
+  notes: MENU INFO shows ESTAMPIE own version instead of Felucca.
+- version: 0.3.4
+  date: 2026-10-22
+  url: https://github.com/ocean/estampie/releases/tag/v0.3.4
+  notes: The FM-1 appears as FM-1 ESTAMPIE over USB.
+- version: 0.3.3
+  date: 2026-10-21
+  url: https://github.com/ocean/estampie/releases/tag/v0.3.3
+  notes: Website updates; the firmware is unchanged apart from its version number.
+- version: 0.3.2
+  date: 2026-10-21
+  url: https://github.com/ocean/estampie/releases/tag/v0.3.2
+  notes: Website tidy-up and a security update to a build tool.
+- version: 0.3.1
+  date: 2026-10-20
+  url: https://github.com/ocean/estampie/releases/tag/v0.3.1
+  notes: First release built and signed on GitHub.
 - version: 0.3.0
   date: 2026-10-20
   url: https://github.com/ocean/estampie/releases/tag/v0.3.0

@@ -30,7 +30,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, patch, web, plaits]
 versions:
-  - version: main @ 75a9ab7
-    date: 2026-10-10
-    url: https://github.com/doriamxyz/FreakSwap/commit/75a9ab7e7183e371982e53a8136ee6cc5663d4f1
+  - version: main @ 8705fc3
+    date: 2026-10-23
+    url: https://github.com/doriamxyz/FreakSwap/commit/8705fc3f95d4d7ff8d74c2c4db97ffaa3891b5e5
     notes: No tagged releases; this is the latest commit.

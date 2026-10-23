@@ -1,13 +1,13 @@
 device: m-vave-fm-1
 name: Fart Machine One
 summary: >-
-  Novelty sample instrument: eleven fart sounds across all 27 keys, a one-bar 16-step loop recorder, reverb and
+  Novelty sample instrument: ten fart sounds across all 27 keys, a one-bar 16-step loop recorder, reverb and
   delay, with an animated cartoon on the screen.
 description: >-
   A derivative of FoMni. Keys play one-shot samples; REC records and overdubs one pattern that is kept in RAM
   only and lost at power-off. Tempo, reverb and delay have knobs, and MIDI channel 1 notes 53-79 play the keys.
-  The author reports the eleven recordings come from Pixabay and says their individual redistribution terms
-  are not independently verified.
+  The ten recordings are published by their creators under CC0 1.0, according to the README; the 1.0.0 release
+  used eleven recordings from Pixabay whose redistribution terms the author had not verified.
 status: active
 authors:
 - name: adamcharleswilsonmusic-code
@@ -16,8 +16,9 @@ source: https://github.com/adamcharleswilsonmusic-code/Fart-Machine-One
 source_status: open
 license: GPL-3.0-only
 license_notes: >-
-  Covers the code and original artwork. The recordings have separate, unverified terms (samples/ATTRIBUTION.md),
-  and the code licence does not relicense them.
+  Covers the code and original artwork. Since 1.1.0 the recordings are CC0 1.0 per the README, with creator links
+  and hashes in samples/ATTRIBUTION.md; the code licence is separate from them. The 1.0.0 recordings had unverified
+  terms.
 distribution: download
 install_notes: >-
   Download fart-machine-one.fwsc and the source zip from the release, then run tools/fm1_install.py (Python 3 with
@@ -32,6 +33,10 @@ image:
   source_url: https://github.com/adamcharleswilsonmusic-code/Fart-Machine-One
   first_party: true
 versions:
+- version: 1.1.0
+  date: 2026-10-23
+  url: https://github.com/adamcharleswilsonmusic-code/Fart-Machine-One/releases/tag/V1.1.0
+  notes: Replaces the samples with ten CC0 recordings.
 - version: 1.0.0
   date: 2026-10-12
   url: https://github.com/adamcharleswilsonmusic-code/Fart-Machine-One/releases/tag/V1.0.0

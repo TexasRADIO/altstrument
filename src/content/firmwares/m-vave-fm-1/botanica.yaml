@@ -1,0 +1,47 @@
+device: m-vave-fm-1
+name: BOTANICA
+summary: >-
+  Edition of NoteSorcery for botanica-style music: felt piano, plucked droplets and foley sounds, four
+  colour-coded macro knobs, tempo drops and a garden-themed screen. Has its own build and installer.
+description: >-
+  Runs on NoteSorcery's eight-track platform, which is built on SLOOP and Felucca, with its own engines,
+  presets, drum kits and screens. The six synth tracks start as a felt piano, a kalimba of droplet echoes,
+  a sub bass, a pad, leaf-crunch foley and a breath voice. Four macros sit on the pink, green, blue and yellow
+  knobs (BLOOM, DROPS, FOLEY, GLITCH, plus a second page for weather, breeze and drift), and there are petal
+  chords, BREAK and DROP tempo moves and a pixel-art garden home screen. It is built with build.sh --edition
+  botanica and installs from its own page under the NoteSorcery site. It does not read NoteSorcery or SLOOP
+  projects, and they do not read its. The releases also carry a debug APK of BOTANICA Garden, an Android
+  companion app, and demo audio renders. Marked early and pre-release; little tested on hardware so far.
+status: active
+authors:
+- name: catacombius
+  url: https://github.com/catacombius
+source: https://github.com/catacombius/NoteSorcery
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Same terms as NoteSorcery, SLOOP and Felucca; LICENSING.md lists the parts that keep their own licences, such
+  as msfa (Apache-2.0) and Open303 (MIT).
+homepage: https://catacombius.github.io/NoteSorcery/botanica/
+distribution: browser-installer
+install_notes: >-
+  Open the BOTANICA page under the NoteSorcery site in Chrome or Edge, connect the FM-1 with a data cable, and
+  press Install. Going back to NoteSorcery or to official V15 uses their own installer pages. The ROM
+  bootloader recovers an interrupted update. Back up first, since saved data is not shared with other
+  editions or with SLOOP. A package can also be built with build.sh --edition botanica and installed with
+  tools/fm1_install.py.
+brick_risk: true
+tags: [synth-engine, sequencer, sampler, ambient, fx, chords, ui]
+versions:
+- version: botanica-v0.3
+  date: 2026-10-20
+  url: https://github.com/catacombius/NoteSorcery/releases/tag/botanica-v0.3
+  notes: Pre-release. Pixel-art garden look.
+- version: botanica-v0.2
+  date: 2026-10-19
+  url: https://github.com/catacombius/NoteSorcery/releases/tag/botanica-v0.2
+  notes: Pre-release.
+- version: botanica-v0.1
+  date: 2026-10-19
+  url: https://github.com/catacombius/NoteSorcery/releases/tag/botanica-v0.1
+  notes: Pre-release.

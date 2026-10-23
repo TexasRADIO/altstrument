@@ -24,3 +24,12 @@ video:
   title: Critter & Guitari - ETC Image Modes
   credit: Critter & Guitari
   first_party: true
+versions:
+  - version: v1.1
+    date: 2017-03-23
+    url: https://github.com/critterandguitari/ETC_Modes/tree/v1.1
+    notes: Git tag; no GitHub release page.
+  - version: v1.0
+    date: 2017-03-22
+    url: https://github.com/critterandguitari/ETC_Modes/tree/v1.0
+    notes: Git tag; no GitHub release page.

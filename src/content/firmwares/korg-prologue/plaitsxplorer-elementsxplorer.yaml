@@ -32,6 +32,10 @@ image:
   source_url: https://github.com/john-k-walton/Prologue-Oscillators
   first_party: true
 versions:
+  - version: PlaitsXplorer RC5
+    date: 2026-10-20
+    url: https://github.com/john-k-walton/Prologue-Oscillators/releases/tag/PlaitsXplorerRC5
+    notes: Quick-start pre-release with a cheat sheet, issued while the manual is finished.
   - version: ElementsXplorer Final
     date: 2025-11-10
     url: https://github.com/john-k-walton/Prologue-Oscillators/releases/tag/ElementsXplorer

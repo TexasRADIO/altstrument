@@ -28,7 +28,7 @@ homepage: https://chancethemaker.github.io/doom-fm1-smk/
 distribution: browser-installer
 requires_stock: M-VAVE FM-1 V15, or a firmware with a compatible USB updater
 install_notes: >-
-  Chrome or Edge over USB. The installer builds the package in the browser and checks for the Release 16
+  Chrome or Edge over USB. The installer builds the package in the browser and checks the release
   identity after the restart. Releases 06 and earlier have no USB updater and need the recovery adapter once.
   The author warns that power loss or a defect can need hardware recovery. The restore page reinstalls
   M-VAVE's V15.
@@ -41,7 +41,7 @@ image:
   source_url: https://chancethemaker.github.io/doom-fm1-smk/
   first_party: true
 versions:
-- version: main @ 25c1965
-  date: 2026-10-13
-  url: https://github.com/ChanceTheMaker/doom-fm1-smk/commit/25c19658fbdbb6d0c1992e4876cefab73736b5c7
-  notes: No tagged releases; this is the latest commit. Carries Release 16 of the game.
+- version: '26'
+  date: 2026-10-22
+  url: https://github.com/ChanceTheMaker/doom-fm1-smk/releases/tag/fm1-controls-26
+  notes: Marked pre-release; FM-1 build with GameDude-style controls and faster key scanning.

@@ -25,6 +25,18 @@ image:
   source_url: https://github.com/PatttF/fm-106
   first_party: true
 versions:
+- version: Beta5
+  date: 2026-10-16
+  url: https://github.com/PatttF/fm-106/releases/tag/Beta5
+  notes: Audio fixes and a web simulator.
+- version: Beta4
+  date: 2026-10-15
+  url: https://github.com/PatttF/fm-106/releases/tag/Beta4
+  notes: Sequencer and LFO/DCO fixes; adds program change in and a local note input option.
+- version: beta3
+  date: 2026-10-14
+  url: https://github.com/PatttF/fm-106/releases/tag/beta3
+  notes: Adds a tape effect, a sequencer and MIDI mapping.
 - version: Beta2
   date: 2026-10-12
   url: https://github.com/PatttF/fm-106/releases/tag/Beta2

@@ -5,7 +5,8 @@ summary: >-
   visual sequencer, live USB sampling, Ableton export from the browser and Android controller integration.
 description: >-
   Marked in development (0.1) and tested on the host, not yet on a device. It does not read SLOOP projects
-  and has smaller sample slots.
+  and has smaller sample slots. An alternate edition with its own sounds and build, BOTANICA,
+  has a separate entry.
 status: active
 authors:
 - name: catacombius

@@ -23,6 +23,14 @@ image:
   source_url: https://github.com/cartesive/fumi-1
   first_party: true
 versions:
+- version: 1.1.0
+  date: 2026-10-23
+  url: https://github.com/cartesive/fumi-1/releases/tag/fumi-1.1.0
+  notes: Loop ruler extended to 20-240 BPM and up to 256 beats; a stopped loop is saved to flash and returns after power-off.
+- version: 1.0.8
+  date: 2026-10-22
+  url: https://github.com/cartesive/fumi-1/releases/tag/fumi-1.0.8
+  notes: Adds seven voices from community banks, for twenty-one instruments, and redraws the on-screen keys to match the panel.
 - version: 1.0.7
   date: 2026-10-11
   url: https://github.com/cartesive/fumi-1/releases/tag/fumi-1.0.7

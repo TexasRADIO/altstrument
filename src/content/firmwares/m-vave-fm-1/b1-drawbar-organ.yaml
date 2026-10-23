@@ -36,6 +36,15 @@ image:
   source_url: https://github.com/SikkenWorks/B1-Drawbar-Organ
   first_party: true
 versions:
+- version: V4.9beta
+  date: 2026-10-23
+  url: https://github.com/SikkenWorks/B1-Drawbar-Organ/releases/tag/V4.9beta
+- version: V4.7beta
+  date: 2026-10-22
+  url: https://github.com/SikkenWorks/B1-Drawbar-Organ/releases/tag/V4.7beta
+- version: V4.6beta
+  date: 2026-10-22
+  url: https://github.com/SikkenWorks/B1-Drawbar-Organ/releases/tag/V4.6beta
 - version: V4.4beta
   date: 2026-10-19
   url: https://github.com/SikkenWorks/B1-Drawbar-Organ/releases/tag/V4.4beta

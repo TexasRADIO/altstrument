@@ -1,0 +1,44 @@
+device: preenfm3
+name: preenFM3 firmware (official)
+summary: The preenFM3's own firmware and bootloader, published with source by its designer Xavier Hosxe; six-operator FM over 32 algorithms, a mixer for up to six instruments, a step sequencer and effects.
+description: >-
+  This is the firmware every preenFM3 ships with, released with its source in
+  the same repository as the bootloader, the hardware files and the 3D-printed
+  case. The synth plays up to six instruments at once from a mixer, each with
+  its own MIDI channel and output, and its engine runs six operators over 32
+  algorithms, with filters, effects and a step sequencer. Releases
+  from 1.00 on merge effects and engine work by Toltekradiation (Patrice
+  Vigouroux): paraphonic chorus, flanger and ping-pong effects, two granular
+  effects and four VOSIM algorithms. The wiki in the repository is the manual.
+status: dormant
+authors:
+  - name: Xavier Hosxe
+    url: https://github.com/Ixox
+source: https://github.com/Ixox/preenfm3
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  The repository has no LICENSE file; the source files carry GPL version 3 or
+  later notices from Xavier Hosxe.
+homepage: https://ixox.fr/preenfm2/
+distribution: download
+install_notes: >-
+  Hold MENU while powering on to start the bootloader, then copy the .bin from a
+  release to the SD card and flash it, or flash it over USB with dfu-util. The
+  bootloader itself only needs replacing when a release asks for a newer one,
+  and a failed bootloader update can leave the unit unable to start.
+brick_risk: false
+tags: [official, fm, synth-engine, sequencer, open-source]
+versions:
+  - version: v1.03
+    date: 2024-03-17
+    url: https://github.com/Ixox/preenfm3/releases/tag/v1.03
+    notes: Adds four VOSIM algorithms (32 in all), a MIDI CC for the paraphonic filter and adjusts two filters.
+  - version: v1.02
+    date: 2023-10-27
+    url: https://github.com/Ixox/preenfm3/releases/tag/v1.02
+    notes: Two granular effects, reworked flanger, chorus and dimension effects with their own LFOs, and a mixer shortcut to change all instruments on one output.
+  - version: v1.00
+    date: 2023-05-28
+    url: https://github.com/Ixox/preenfm3/releases/tag/v1.00
+    notes: Paraphonic effects in a new effect slot, per-step envelope curves, a noise LFO and note creation in the sequencer.

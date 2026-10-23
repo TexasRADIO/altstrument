@@ -33,6 +33,18 @@ image:
   source_url: https://github.com/sbegueria/fm1-dub
   first_party: true
 versions:
+- version: 1.3.0
+  date: 2026-10-23
+  url: https://github.com/sbegueria/fm1-dub/releases/tag/v1.3.0
+  notes: Shows the next eight chords on the Chords page, adds lockable drum and bass phrases and a noise voice.
+- version: 1.2.0
+  date: 2026-10-19
+  url: https://github.com/sbegueria/fm1-dub/releases/tag/v1.2.0
+  notes: Adds a DJ filter on the main page and turns the PERFORM knobs into master actions.
+- version: 1.1.0
+  date: 2026-10-17
+  url: https://github.com/sbegueria/fm1-dub/releases/tag/v1.1.0
+  notes: Reworks PERFORM with solos and audible Drop, Open and Shut.
 - version: 1.0.0
   date: 2026-10-16
   url: https://github.com/sbegueria/fm1-dub/releases/tag/v1.0.0

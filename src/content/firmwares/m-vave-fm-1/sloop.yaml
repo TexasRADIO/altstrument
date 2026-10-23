@@ -21,9 +21,9 @@ license_notes: >-
 homepage: https://isod89.github.io/sloop-fm1/
 distribution: browser-installer
 install_notes: >-
-  Web installer in Chrome or Edge over USB. Roll back to M-VAVE stock V15 with M-UPGRADE or the installer.
-  If SLOOP or a derivative will not start, hold OCT- alone while powering on to enter USB rescue (per
-  fm1-editor.com).
+  Web installer in Chrome or Edge over USB. Roll back to M-VAVE stock V15 with M-UPGRADE (the browser
+  installer's return-to-stock option was removed in 2.8). If SLOOP or a derivative will not start, hold OCT-
+  alone while powering on to enter USB rescue (per fm1-editor.com).
 brick_risk: true
 tags: [sequencer, synth-engine, drums, sampler, fx, performance, usb-audio, midi, fm, physical-modeling,
   editor]
@@ -33,6 +33,14 @@ video:
   credit: "Darren Lock Music"
   first_party: false
 versions:
+- version: 2.8.1
+  date: 2026-10-23
+  url: https://github.com/isod89/sloop-fm1/releases/tag/v2.8.1
+  notes: The per-step sheet now opens as a strip along the bottom so the piano roll and drum grid stay visible, plus a fix on the PUNCH page.
+- version: '2.8'
+  date: 2026-10-21
+  url: https://github.com/isod89/sloop-fm1/releases/tag/v2.8
+  notes: Adds a piano-roll note editor, a per-step sheet for synth and drum steps, filter resonance, MIDI Bank Select and a settable punch-in fade; USB rescue now opens reliably.
 - version: 2.7.1
   date: 2026-10-16
   url: https://github.com/isod89/sloop-fm1/releases/tag/v2.7.1

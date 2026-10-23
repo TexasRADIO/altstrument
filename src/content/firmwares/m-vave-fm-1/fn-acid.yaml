@@ -9,7 +9,7 @@ description: >-
   formula, through a four-pole ladder filter by default (the two-pole filter stays as an option). Eight patterns
   each carry a line and its sound, and holding FX with a key gives punch-in effects, some of which operate on the
   curve itself, such as shifting it, mirroring it or halving its rate. Turning the cutoff, resonance, envelope or
-  decay knobs while recording writes four bars of motion that plays back smoothly. Versions step by 0.01 and the
+  decay knobs while recording writes four bars of motion that plays back smoothly. Later test builds add a 909 drum machine on track 3 and USB-MIDI clock and note output. Versions step by 0.01 and the
   FM-1 shows the number at power-on. Built on Dinghy, SLOOP and Felucca, using a copy of SLOOP's web installer.
 status: active
 authors:
@@ -30,7 +30,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, sequencer, fx, delay, filter, generative]
 versions:
-- version: main @ 3b8ac66
-  date: 2026-10-19
-  url: https://github.com/Electro-Dig/function-acid-fw/commit/3b8ac66
-  notes: No tagged releases; this is the latest commit, test build 0.32.
+- version: main @ ffc9fa6
+  date: 2026-10-20
+  url: https://github.com/Electro-Dig/function-acid-fw/commit/ffc9fa6
+  notes: No tagged releases; this is the latest commit, test build 0.37.

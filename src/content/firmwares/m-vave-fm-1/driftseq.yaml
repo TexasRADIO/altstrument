@@ -26,7 +26,7 @@ install_notes: >-
 brick_risk: false
 tags: [sequencer, midi, generative, emulator]
 versions:
-- version: main @ dc4523c
-  date: 2026-10-16
-  url: https://github.com/johnskiller/driftseq/commit/dc4523c5001da6fb27112248aad232cebab5fdbe
+- version: main @ 1ce9267
+  date: 2026-10-23
+  url: https://github.com/johnskiller/driftseq/commit/1ce92672be15d1f670db69a6869ffeb34c27ba23
   notes: No tagged releases; this is the latest commit.

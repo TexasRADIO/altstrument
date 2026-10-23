@@ -25,7 +25,7 @@ install_notes: >-
 brick_risk: false
 tags: [tracker, fork, emulator, web-ui, synth-engine, sid, open-source]
 versions:
-  - version: master @ 0031279
-    date: 2026-10-14
-    url: https://github.com/iaalm/picoTracker/commit/003127932e97e509f39d23a364560fc5b860275e
+  - version: master @ d7a2b9c
+    date: 2026-10-18
+    url: https://github.com/iaalm/picoTracker/commit/d7a2b9c0c3a1be20253926e1986a282153f2c17c
     notes: No tagged releases; this is the latest commit.

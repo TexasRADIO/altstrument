@@ -1,14 +1,19 @@
 device: m-vave-fm-1
+also_devices: [m-vave-smk-37]
 name: Skiff
 summary: >-
-  Six-track groovebox forked from Felucca: 14 synth and drum engines, 64-step sequencer with trig conditions and
-  parameter locks, pattern pool and songs, performance layer, FM6 editing on the unit and a browser editor.
+  Six-track groovebox forked from Felucca for the FM-1 and, since 1.4, the SMK-37 Pro: 14 synth and drum engines,
+  64-step sequencer with trig conditions and parameter locks, pattern pool and songs, FM6 editing on the unit and a
+  browser editor.
 description: >-
   Fork of Felucca 1.1.5 that keeps its engines, sounds and file formats, so Felucca sounds and projects load.
   Each page draws what its knobs do, and holding HOME shows every control's job. Version 1.1 adds editing of
-  every FM6 operator value on the FM-1 and a graph of the operator envelopes. Version 1.3 adds an optional
-  second processor core for 12 voices and MIDI learn. It has a web editor, a browser emulator and a stereo USB
-  audio input for recording the master on a computer.
+  every FM6 operator value and a graph of the operator envelopes. Version 1.3 adds an optional second processor
+  core for 12 voices and MIDI learn. It has a web editor, a browser emulator and a stereo USB audio input for
+  recording the master on a computer. Version 1.4 adds builds for M-VAVE's SMK-37 Pro keyboard from the same
+  source, with the same tracks, engines and screens. On that keyboard the pads act as a step grid, the faders as
+  a mixer, and the 37 keys and wheels add controls the FM-1 lacks. The SMK-37 build has been tried on one SMK-37
+  Pro; the Elite and MKE-P37 packages are made the same way and have not been tried on a keyboard.
 status: active
 authors:
 - name: illuminus5
@@ -23,8 +28,14 @@ homepage: https://illuminus5.github.io/skiff/
 distribution: browser-installer
 install_notes: >-
   Browser installer in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc from the releases page.
-  The installer page can return the FM-1 to official V15 after saving a backup. An FM-1 stuck in boot mode
-  (WL80UBOOT) can be recovered with tools/fm1_install.py or FM-1 Transporter.
+  The installer detects the connected device and picks its build. It can return the FM-1 to official V15 after
+  saving a backup. An FM-1 stuck in boot mode (WL80UBOOT) can be recovered with tools/fm1_install.py or FM-1
+  Transporter. SMK-37 Pro: the keyboard must already run M-VAVE's V016, which the installers enforce, and
+  a backup of its flash should be made first, because the flash holds the keyboard's key and pad calibration and
+  its Bluetooth pairings (SMK37.md in the repository gives the steps, using jl-uboot-tool on Windows or Linux).
+  Use skiff-1.4-smk37.fwsc for the Pro; the -elite and -mke packages are for those models. Returning to
+  M-VAVE's firmware takes your own unmodified SMK-37_Pro_016.fwsc. If an install is cut off, the keyboard waits in
+  update mode and the installer resumes the write.
 brick_risk: true
 tags: [synth-engine, sequencer, drums, fm, fx, performance, editor, emulator, usb-audio, midi]
 image:
@@ -34,6 +45,14 @@ image:
   source_url: https://github.com/illuminus5/skiff
   first_party: true
 versions:
+- version: '1.4'
+  date: 2026-10-20
+  url: https://github.com/illuminus5/skiff/releases/tag/v1.4
+  notes: Adds SMK-37 Pro builds, REST entries in songs, custom theme colours, a level and sends for each user sample, and an installer that resumes after an interrupted install.
+- version: 1.3.3
+  date: 2026-10-19
+  url: https://github.com/illuminus5/skiff/releases/tag/v1.3.3
+  notes: Names the sound on HOME in every view, shows a message when PLAY waits for an external clock, and gives clearer installer messages.
 - version: 1.3.2
   date: 2026-10-18
   url: https://github.com/illuminus5/skiff/releases/tag/v1.3.2

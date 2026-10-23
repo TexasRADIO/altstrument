@@ -6,8 +6,8 @@ summary: >-
 description: >-
   Plays 18 sampled notes of the Salamander Grand Piano V3 in three velocity layers, stored as block ADPCM in
   about 380 KB, with a decay measured per key, damper noise and no dampers on the top keys. Four voices (concert,
-  studio, vintage, jazz) are on pads 1 to 4 and twelve user presets on pads 5 to 16. The pedal jack, the SEQ REC
-  button and the mod wheel all act as sustain, the CHORD and SCALE buttons are sostenuto and una corda, and the
+  studio, vintage, jazz) are on pads 1 to 4 and twelve user presets on pads 5 to 16. The pedal jack and the SEQ REC
+  button act as sustain, the mod wheel can be set to, the CHORD and SCALE buttons are sostenuto and una corda, and the
   pitch wheel bends by two semitones. An eight-line reverb gives chamber, hall and church rooms. USB MIDI sends
   keys, pedals and bend and plays the piano from incoming notes. The README says it was played on an SMK-37 Pro
   and that the FM-1 package, for the FM-1's 27 keys, has not been tried on a unit. It is its own firmware on
@@ -39,7 +39,7 @@ video:
   first_party: true
   found_via: https://github.com/genkigenki/erik37#readme
 versions:
-- version: main @ f442519
-  date: 2026-10-18
-  url: https://github.com/genkigenki/erik37/commit/f442519c82c6c605d30d09ad4216f4221dee7c41
-  notes: No tagged releases; this is the latest commit, which the README calls 1.1.
+- version: '1.2'
+  date: 2026-10-22
+  url: https://github.com/genkigenki/erik37/releases/tag/v1.2
+  notes: Adds a release noise level and pad light setting, makes only the pedal hold notes by default and cuts stray pitch bend and echoed notes over USB.

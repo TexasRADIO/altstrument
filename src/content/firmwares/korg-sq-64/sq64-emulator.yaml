@@ -24,6 +24,6 @@ homepage: https://sq64.alephvoid.com
 distribution: browser-installer
 tags: [emulator, flasher, backup, web-midi]
 versions:
-  - version: main @ f8c3c14
-    date: 2026-10-13
-    url: https://github.com/aleph-void/Korg-SQ-64-Emulator/commit/f8c3c14
+  - version: main @ ab2e7bc
+    date: 2026-10-20
+    url: https://github.com/aleph-void/Korg-SQ-64-Emulator/commit/ab2e7bc

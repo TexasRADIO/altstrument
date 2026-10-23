@@ -19,6 +19,10 @@ install_notes: Flash tab in the web app (WebMIDI, USB).
 brick_risk: true
 tags: [synth-engine, editor, sequencer, patch]
 versions:
+- version: 1.0.3
+  date: 2026-10-14
+  url: https://github.com/WiggisModular/Modular-1/releases/tag/v1.0.3
+  notes: Four voices.
 - version: 1.0.2
   date: 2026-10-13
   url: https://github.com/WiggisModular/Modular-1/tree/v1.0.2

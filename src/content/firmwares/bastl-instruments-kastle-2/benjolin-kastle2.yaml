@@ -31,7 +31,7 @@ install_notes: >-
 brick_risk: false
 tags: [synth-engine, oscillator, filter, fx, emulator, generative]
 versions:
-  - version: main @ 0683682
-    date: 2026-10-19
-    url: https://github.com/mranthropology/benjolin-kastle2/commit/0683682
+  - version: main @ b6f5236
+    date: 2026-10-20
+    url: https://github.com/mranthropology/benjolin-kastle2/commit/b6f52369b682e172343da2674611f6d7a3620b74
     notes: No tagged releases; this is the latest commit.

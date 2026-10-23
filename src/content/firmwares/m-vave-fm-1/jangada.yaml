@@ -24,6 +24,14 @@ image:
   source_url: https://github.com/zednaked/jangada
   first_party: true
 versions:
+- version: 1.0.1
+  date: 2026-10-16
+  url: https://github.com/zednaked/jangada/releases/tag/v1.0.1
+  notes: Lets a DAW or mixer save and restore a track's whole sound over the editor protocol; no change to how the FM-1 plays.
+- version: '1.0'
+  date: 2026-10-13
+  url: https://github.com/zednaked/jangada/releases/tag/v1.0
+  notes: Adds 49 factory beats, each with its own fill.
 - version: 0.9.9
   date: 2026-10-12
   url: https://github.com/zednaked/jangada/releases/tag/v0.9.9

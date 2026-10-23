@@ -9,7 +9,9 @@ authors:
   url: https://github.com/charlesvestal
 source: https://github.com/charlesvestal/fm1-amb
 source_status: open
-license: GPL-3.0-only
+license: MPL-2.0
+license_notes: >-
+  Release 1.3 moved to the MPL-2.0 on fm1-base; the 1.3 release notes say 1.2 and earlier stay under the GPL-3.0.
 homepage: https://charlesvestal.github.io/fm1-amb/
 distribution: browser-installer
 install_notes: >-
@@ -23,6 +25,14 @@ image:
   source_url: https://github.com/charlesvestal/fm1-amb
   first_party: true
 versions:
+- version: '1.3'
+  date: 2026-10-17
+  url: https://github.com/charlesvestal/fm1-amb/releases/tag/v1.3
+  notes: Relicensed under the MPL-2.0; the install page can read a crash report over USB.
+- version: '1.2'
+  date: 2026-10-15
+  url: https://github.com/charlesvestal/fm1-amb/releases/tag/v1.2
+  notes: Adds screen-reader support through the FM-1 Screen Reader page.
 - version: '1.1'
   date: 2026-10-10
   url: https://github.com/charlesvestal/fm1-amb/releases/tag/v1.1

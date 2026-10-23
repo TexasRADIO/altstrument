@@ -1,7 +1,7 @@
 device: korg-radias
 name: Rustias
 kind: tool
-summary: Rust reimplementation of the RADIAS that runs as a browser synthesizer without firmware, with desktop and headless modes that can also run an original system image you supply.
+summary: Rust reimplementation of the RADIAS that runs as a browser synthesizer without firmware, as a native AU, VST3 or CLAP plug-in, and in desktop and headless modes that can also run an original system image you supply.
 description: >-
   The browser build compiles the synthesis engine to WebAssembly and plays it
   through an AudioWorklet, with oscillators, filters, envelopes, LFOs, virtual
@@ -20,16 +20,34 @@ source_status: open
 license: unspecified
 license_notes: No LICENSE file or license statement in the repository. The bundled TR-909 drum set keeps its own terms, which allow free copying but not modification or distribution for profit.
 homepage: https://fushugaku.github.io/Rustias/
-distribution: source-only
+distribution: download
 install_notes: >-
   The hosted browser instrument needs no firmware. Desktop and interpreter
   modes need firmware, a program bank and DSP data from your own RADIAS (bring
-  your own firmware); none is included. Build with Cargo, and scripts/build-web.sh
-  for the WebAssembly version.
+  your own firmware); none is included. The plug-in installers (macOS .pkg,
+  Windows .exe, Linux .run and .deb) are on the GitHub releases page.
+  Otherwise build with Cargo, and scripts/build-web.sh for the WebAssembly
+  version.
 brick_risk: false
 tags: [emulator, synth-engine, research]
 versions:
-  - version: main @ ed4cfa8
-    date: 2026-10-13
-    url: https://github.com/fushugaku/Rustias/commit/ed4cfa8
-    notes: No tagged releases; this is the latest commit.
+  - version: v0.2.6
+    date: 2026-10-20
+    url: https://github.com/fushugaku/Rustias/releases/tag/v0.2.6
+    notes: Adds a selectable envelope type per EG, with Q-style modes beside the RADIAS one.
+  - version: v0.2.5
+    date: 2026-10-19
+    url: https://github.com/fushugaku/Rustias/releases/tag/v0.2.5
+    notes: Lowers CPU use in the native plug-in by removing JSON round trips from MIDI, display and telemetry data.
+  - version: v0.2.4
+    date: 2026-10-19
+    url: https://github.com/fushugaku/Rustias/releases/tag/v0.2.4
+    notes: Takes the script VM out of the DAW audio path to cut render spikes.
+  - version: v0.2.3
+    date: 2026-10-18
+    url: https://github.com/fushugaku/Rustias/releases/tag/v0.2.3
+    notes: Removes pre-render queues that caused CPU bursts with several plug-in instances.
+  - version: v0.2.2
+    date: 2026-10-18
+    url: https://github.com/fushugaku/Rustias/releases/tag/v0.2.2
+    notes: Speeds up the expanded filters; the release ships macOS, Windows and Linux plug-in installers.

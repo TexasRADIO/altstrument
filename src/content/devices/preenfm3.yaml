@@ -1,0 +1,38 @@
+name: preenFM3
+manufacturer: preenfm project
+category: synth
+tagline: Open-source DIY FM synth module from Xavier Hosxe
+description: >-
+  The preenFM3 is a digital FM synthesizer designed by Xavier Hosxe as an
+  open-source DIY project, built from a PCB set and a case you assemble. It has
+  a small color screen, six encoders, a row of buttons, an SD card slot and USB
+  and MIDI connections. It is the successor to the preenFM2 and runs a
+  six-operator FM engine with a mixer and a step sequencer.
+platform: ARM Cortex-M7 (STM32H753)
+stock_firmware: "1.03"
+links:
+  manufacturer: https://ixox.fr/preenfm2/
+  community:
+    - label: preenFM3 firmware and bootloader source
+      url: https://github.com/Ixox/preenfm3
+    - label: preenFM3 wiki
+      url: https://github.com/Ixox/preenfm3/wiki
+notes: >-
+  The stock firmware and bootloader are open source and published with their
+  source in the Ixox/preenfm3 repository, which has no license file; the source
+  files carry GPL-3.0-or-later notices.
+  Firmware is flashed from the bootloader, which you enter by holding MENU
+  while powering on, either by copying a .bin file to the SD card or over USB
+  with dfu-util. The bootloader should not be rewritten except when a project
+  requires a newer version.
+image:
+  src: /images/devices/preenfm3.webp
+  style: photo
+  alt: A preenFM3 in a white 3D-printed case, seen from above at an angle, with a small color screen, six blue encoders, a red menu button and rows of black and blue buttons
+  width: 1024
+  height: 688
+  credit: preenfm project
+  license: project photo, published in the official preenfm3 repository
+  source_url: https://github.com/Ixox/preenfm3/tree/master/hardware/3DCaseB
+  original_url: https://raw.githubusercontent.com/Ixox/preenfm3/master/hardware/3DCaseB/pfm3_in_enclosure.jpg
+pinned: [preenfm3-firmware]

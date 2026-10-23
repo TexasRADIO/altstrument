@@ -1,0 +1,35 @@
+device: elektron-digitone
+name: DigiSwarm
+summary: Effects engine for the Digitone mk1's audio inputs with grain and micro-loop engines and a looper, as an elekloader mod built on fxkit, with a mixer, two LFOs and p-locks. Pre-release; renamed from DigiCosm.
+status: active
+authors:
+  - name: irpina
+    url: https://github.com/irpina
+source: https://github.com/irpina/digiswarm
+source_status: open
+license: GPL-2.0-or-later
+distribution: patch-your-own
+requires_stock: 1.43 / 1.44
+tags: [fx]
+video:
+  url: https://www.youtube.com/watch?v=uTnWqPjG6G4
+  title: "DigiCosm - a Hologram Microcosm Inspired Mod for the Digitone 1"
+  credit: pspsps
+  first_party: false
+versions:
+  - version: v0.2
+    date: 2026-10-18
+    url: https://github.com/irpina/digiswarm/releases/tag/v0.2
+    notes: Pre-release. Adds a mixer, two LFOs and p-locks stored in the pattern, and drops presets.
+  - version: v0.1.2
+    date: 2026-10-18
+    url: https://github.com/irpina/digiswarm/releases/tag/v0.1.2
+    notes: Pre-release. Same code as v0.1 under the new DigiSwarm name.
+  - version: v0.1.1
+    date: 2026-10-14
+    url: https://github.com/irpina/digiswarm/releases/tag/v0.1.1
+    notes: Pre-release. A mono input now comes out of both sides.
+  - version: v0.1
+    date: 2026-10-09
+    url: https://github.com/irpina/digicosm/releases/tag/v0.1
+    notes: Pre-release.

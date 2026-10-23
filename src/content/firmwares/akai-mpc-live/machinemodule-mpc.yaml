@@ -1,6 +1,6 @@
 device: akai-mpc-live
 name: Machinemodule for MPC OS
-summary: Native VST2 instrument that runs the Elektron Machinedrum sound engine on MPC and Force, with all 16 tracks in one plugin, a touchscreen skin and Q-Link control; you build it from your own Machinedrum OS file.
+summary: Native VST2 instrument that runs the Elektron Machinedrum sound engine on MPC and Force, with all 16 tracks in one plugin, a touchscreen skin and Q-Link control; it needs your own Machinedrum OS file, and Gen2 MPCs have a ready-made download.
 description: >-
   Plays the Machinedrum SPS-1 UW voices by running the unit's own DSP code in
   a DSP56300 emulator that is recompiled ahead of time for 32-bit ARM, with
@@ -14,7 +14,8 @@ description: >-
   factory kits, a flash image from your own unit. Developed on a Force and
   tested on MPC OS 3.9.1. The same engine is also released as a desktop
   VST3 / AU plugin from this repository. The plugin was called Machinedrum
-  until v0.3.6.
+  until v0.3.6. The Gen2 download runs the voice DSP on a JIT compiler
+  instead of the ahead-of-time ARM build.
 status: active
 authors:
   - name: sd88me
@@ -23,17 +24,25 @@ source: https://github.com/sd88me/mpc-vst-machinedrum
 source_status: open
 license: AGPL-3.0-only
 license_notes: The README states AGPL-3.0-only. The bundled dsp56300 emulator is GPL-3.0.
-distribution: source-only
+distribution: download
 requires_stock: MPC OS 3.x
 install_notes: >-
-  There is no prebuilt plugin for the MPC. Run the release script on a computer
-  with Docker, using your own Machinedrum OS 1.63 .syx and optionally a full
-  flash image, and copy the resulting installer zip to the device over root
-  SSH. The build takes about 25 minutes. Expect around six simultaneous voices
+  Gen2 MPCs (64-bit, such as the MPC Live III) can install the prebuilt
+  aarch64 zip from the release, then put your own Machinedrum OS 1.63 .syx in
+  the plugin's machinedrum folder; it has no ROM machines or factory kits and
+  the author had not yet tried it on a Gen2 unit. For other models, or to get
+  the ROM machines and kits, run the release script on a computer with Docker,
+  using your own OS file and optionally a full flash image, and copy the
+  resulting installer zip to the device over root SSH. The build takes about 25
+  minutes. Expect around six simultaneous voices
   on a first-generation unit. Installing plugins this way is unofficial and
   needs a modded unit.
 tags: [synth-engine, drums, emulator, platform]
 versions:
+  - version: v0.4.1
+    date: 2026-10-21
+    url: https://github.com/sd88me/mpc-vst-machinedrum/releases/tag/v0.4.1
+    notes: First ready-made download, for Gen2 MPCs, and Q-Links move parameters on the automation screen.
   - version: v0.3.6
     date: 2026-10-02
     url: https://github.com/sd88me/mpc-vst-machinedrum/releases/tag/v0.3.6

@@ -40,6 +40,34 @@ image:
   source_url: https://konsumer.js.org/fm1buddy/
   first_party: true
 versions:
+- version: 0.1.9
+  date: 2026-10-23
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.9
+  notes: Smarter Wi-Fi handling with MIDI routing.
+- version: 0.1.8
+  date: 2026-10-23
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.8
+  notes: Adds MIDI routing options and better Wi-Fi management.
+- version: 0.1.7
+  date: 2026-10-23
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.7
+  notes: Shows information for known firmwares by their SHA-256.
+- version: 0.1.6
+  date: 2026-10-23
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.6
+  notes: Adds a USB disk mode.
+- version: 0.1.5
+  date: 2026-10-22
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.5
+  notes: Adds a full FM-1 backup for recovery.
+- version: 0.1.4
+  date: 2026-10-22
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.4
+  notes: More complete save and load support.
+- version: 0.1.3
+  date: 2026-10-22
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.3
+  notes: Safer FM-1 installs and a sounds page.
 - version: 0.1.2
   date: 2026-10-22
   url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.2

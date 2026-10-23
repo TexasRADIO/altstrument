@@ -5,8 +5,9 @@ summary: >-
   256 SysEx voices, on-device voice editing, programmable FM drums and patterns up to 128 steps.
 description: >-
   Replaces SLOOP's engines with one DX7 engine (32 algorithms, 99% sample-identical to Dexed per the author),
-  adds an OMNI chord-harp mode and per-effect pages. zp12 and FM-1 Doom build on its platform. The README
-  calls 3.5 a usable beta with an open CPU check for all 14 DX7 voices at once.
+  adds an OMNI chord-harp mode and per-effect pages. zp12 and FM-1 Doom build on its platform. Version 4.0
+  computes the sound on both processor cores and brings in SLOOP 2.6 and 2.7's MIDI features. The README
+  calls 4.0 a beta that has not yet run on a device; it reports 3.5 as played on a real FM-1.
 status: active
 authors:
 - name: Sven Trogus (zvenson)
@@ -29,6 +30,10 @@ video:
   first_party: true
   found_via: https://github.com/zvenson/dxsloop
 versions:
+- version: '4.0'
+  date: 2026-10-18
+  url: https://github.com/zvenson/dxsloop/releases/tag/v4.0
+  notes: Beta. Runs the sound on both processor cores and adds SLOOP 2.6 and 2.7's MIDI, arp modes and punch-in effects.
 - version: '3.5'
   date: 2026-10-10
   url: https://github.com/zvenson/dxsloop

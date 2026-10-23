@@ -31,6 +31,10 @@ image:
   source_url: https://github.com/alexain/iterum-versio
   first_party: true
 versions:
+  - version: v1.1
+    date: 2026-10-21
+    url: https://github.com/alexain/iterum-versio/releases/tag/v1.1
+    notes: Smooths TIME and SKEW against pot noise, averages external clock jitter, adds octave shifts of clocked ratios and LED brightness, and softens the limiter.
   - version: v1.0.0
     date: 2026-10-14
     url: https://github.com/alexain/iterum-versio/releases/tag/v1.0.0

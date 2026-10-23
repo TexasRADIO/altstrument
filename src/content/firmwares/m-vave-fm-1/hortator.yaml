@@ -20,6 +20,18 @@ install_notes: >-
 brick_risk: true
 tags: [drums, sequencer, sampler, fx, performance]
 versions:
+- version: 0.23.2
+  date: 2026-10-22
+  url: https://github.com/DeadActive/hortator/releases/tag/drum-v0.23.2
+  notes: REC arms tracks instead of starting playback; a REC tap off the TRACKS page arms every track for live finger-drumming.
+- version: 0.23.1
+  date: 2026-10-22
+  url: https://github.com/DeadActive/hortator/releases/tag/drum-v0.23.1
+  notes: Firmware unchanged from 0.23.0; the project site adds an anonymous install counter.
+- version: 0.23.0
+  date: 2026-10-22
+  url: https://github.com/DeadActive/hortator/releases/tag/drum-v0.23.0
+  notes: First release since 0.16.0; adds a Machinedrum-style voice bank, 151 factory presets, a four-slot LFO routing and a redrawn screen.
 - version: 0.16.0
   date: 2026-10-11
   url: https://github.com/DeadActive/hortator/releases/tag/drum-v0.16.0

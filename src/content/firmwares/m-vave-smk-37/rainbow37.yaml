@@ -26,6 +26,10 @@ image:
   source_url: https://genkigenki.github.io/smk37/
   first_party: true
 versions:
+- version: '0.2'
+  date: 2026-10-13
+  url: https://github.com/genkigenki/RAINBOW37/releases/tag/v0.2
+  notes: The ten outer keys now show their note letter too.
 - version: '0.1'
   date: 2026-10-12
   url: https://github.com/genkigenki/RAINBOW37/releases/tag/v0.1

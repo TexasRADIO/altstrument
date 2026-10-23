@@ -36,6 +36,10 @@ install_notes: >-
   skin in the older format. A plugin crash takes MPC down with it.
 tags: [sdk, platform, loader, web]
 versions:
+  - version: desktop-v0.6.1
+    date: 2026-10-22
+    url: https://github.com/sd88me/mpc-vst-plugins/releases/tag/desktop-v0.6.1
+    notes: Installer app release. Adds Gen2 support, tested on an MPC Live III, and no longer hangs on a stalled SSH connection.
   - version: desktop-v0.5.5
     date: 2026-10-14
     url: https://github.com/sd88me/mpc-vst-plugins/releases/tag/desktop-v0.5.5

@@ -1,0 +1,67 @@
+device: ornament-and-crime
+name: squares-and-circles
+summary: Alternate firmware for the Ornament & Crime on a Teensy 4.0 (and the Teensy 4.1 board) that runs four configurable engines for drums, synths, effects, filters, sequencers and CV, with a web flasher.
+description: >-
+  Licence note: only the engine sources are open (MIT headers); the firmware core is closed, the README
+  limits the firmware as a whole to personal use, and an end user licence agreement forbids redistribution.
+  Replaces the stock o_C applications with a machine-style layout: four tracks, each loaded with one engine
+  and patched to the module's trigger, CV and DAC ports or to another engine through an I/O page. Engines
+  cover drum voices, oscillators and synths ported from Mutable Instruments code and other open DSP projects,
+  reverbs, delays, filters, speech, noise, MIDI tools and sequencers, and the module can take MIDI over
+  USB or a TR1 expander. Engines are small separately compiled apps whose sources are in the repository.
+  The TR707 and RZ-1 drum engines read ROM dumps that the user supplies and the project
+  does not ship them. The module needs its Teensy 3.2 swapped for a Teensy 4.0, a drop-in change, or
+  the Teensy 4.1 based O_C T41 board.
+status: active
+authors:
+  - name: E.Heidt
+    url: https://github.com/eh2k
+source: https://github.com/eh2k/squares-and-circles
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  No top-level license file. The README says the engine code and third-party sources are under permissive
+  licenses (the engine sources checked carry MIT headers; each lib/ folder has its own) but "the firmware as
+  a whole is for personal use only", and commercial distribution with hardware needs the author's agreement.
+  .github/workflows/LICENSE.txt holds an end user license agreement that forbids redistributing the software
+  or devices carrying it and forbids reverse engineering. The firmware core is distributed only as a build,
+  so the firmware is treated as proprietary and only the engine sources are open.
+homepage: https://eh2k.github.io/□●/
+distribution: browser-installer
+install_notes: >-
+  Flash from the web flasher (WebUSB; separate links for the O_C with Teensy 4.0 and the O_C T4.1). Swap the Teensy 3.2
+  for a Teensy 4.0 first; the wiki warns to cover the underside of the Teensy if its pogo pin is soldered and to avoid
+  powering the module from the Eurorack bus and USB together. Hold the left button at power-on to reach the setup
+  pages for display, encoders and DAC/ADC calibration. The optional DAC range mod to about -5V..+5V is described
+  in the wiki.
+brick_risk: false
+tags: [platform, synth-engine, drums, fx, sequencer, filter, midi, web]
+video:
+  url: https://www.youtube.com/watch?v=WQj3YqGpxRU
+  title: O_C squares-and-circles | drums
+  credit: eh2k
+  first_party: true
+  found_via: https://github.com/eh2k/squares-and-circles#readme
+versions:
+  - version: main @ 410eddc
+    date: 2026-05-04
+    url: https://github.com/eh2k/squares-and-circles/commit/410eddc485f8017be145283893ab2afe70bb337d
+    notes: Latest commit, newer than the last release; the changelog adds the DRUMS/RZ-1 engine for it.
+  - version: '2026-04-08'
+    date: 2026-04-14
+    url: https://github.com/eh2k/squares-and-circles/releases/tag/2026-04-08
+    notes: Calibration page, O_C T4.1 aux input and TR707 pitch fixes; sequencer engines stop when length is 0.
+  - version: '2026-02-24'
+    date: 2026-02-27
+    url: https://github.com/eh2k/squares-and-circles/releases/tag/2026-02-24
+    notes: Merges the TR-909 ride into the hi-hat engine and fixes DxFM stereo and a MIDI CC crash.
+  - version: '2026-02-21'
+    date: 2026-02-20
+    url: https://github.com/eh2k/squares-and-circles/releases/tag/2026-02-21
+    notes: Marked pre-release on GitHub; adds the 303-Patterns sequencer engine.
+  - version: '2026-01-05'
+    date: 2026-01-05
+    url: https://github.com/eh2k/squares-and-circles/releases/tag/2026-01-05
+  - version: '2025-11-29'
+    date: 2025-11-29
+    url: https://github.com/eh2k/squares-and-circles/releases/tag/2025-11-29

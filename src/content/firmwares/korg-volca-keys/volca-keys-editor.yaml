@@ -26,7 +26,7 @@ install_notes: >-
   keys. Nothing is written to the instrument's firmware.
 tags: [editor, midi, web, patch-library]
 versions:
-  - version: main @ db79c16
+  - version: master @ db79c16
     date: 2016-12-27
     url: https://github.com/rolodato/volca-keys-editor/commit/db79c162935cbc1a2b27da27c8331fe0c73109c0
     notes: No tagged releases; this is the latest commit.

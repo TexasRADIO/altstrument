@@ -1,14 +1,14 @@
 device: m-vave-fm-1
 name: FMEL-1
 summary: >-
-  Mellotron-style keyboard built on Dinghy: four Mellotron M400S tapes (flute, choir, cello, vibraphone) that can
-  be layered, with tape-style lo-fi effects, FX, an arpeggiator and a 16-step sequencer.
+  Mellotron-style keyboard built on Dinghy: four Mellotron M400S tapes (flute, choir, cello, vibraphone) and a piano,
+  two of which can be layered, with tape-style lo-fi effects, FX, an arpeggiator and a 16-step sequencer.
 description: >-
   Every key plays its own tape, packed as short ADPCM samples. The LOFI page has wow, flutter, drive, hiss, age,
-  dropout, drift and crush, and there are vibrato, Leslie, tape echo and reverb effects, EQ, hold and half
-  speed. The screen shows drawn animals playing along. The tape samples are Bernie Kornowicz's (Taijiguy), used
+  dropout, drift and crush, and there are vibrato or chorus, echo and reverb (hall or plate) effects, EQ, hold and half
+  speed. Version 1.0 adds a piano taken from SLOOP's LOFI KEYS. The screen shows drawn animals playing along. The tape samples are Bernie Kornowicz's (Taijiguy), used
   under the sample author's terms that they are free but not for commercial use, so they are not GPL and the firmware should not
-  be sold. The first release says it has not been tried on an FM-1, and that it runs in the host mode and in the
+  be sold. The 0.1 release notes say it had not been tried on an FM-1 and ran only in the host mode and in the
   browser.
 status: active
 authors:
@@ -25,13 +25,17 @@ homepage: https://antonioaltea.github.io/fmel-1/
 distribution: browser-installer
 requires_stock: M-VAVE V15
 install_notes: >-
-  Web installer in Chrome or Edge, or tools/fm1_install.py with mel-0.1.fwsc from the release. The release notes
+  Web installer in Chrome or Edge, or tools/fm1_install.py with mel-1.0.fwsc from the release. The release notes
   say to install over M-VAVE's V15 and to go back to V15 first from another custom firmware, since the installer
   refuses otherwise. If it does not start, the FM-1 falls back to USB rescue after two tries (or hold OCT-).
   Browser simulator on the project site.
 brick_risk: true
 tags: [synth-engine, sampler, fx, sequencer, emulator]
 versions:
+- version: '1.0'
+  date: 2026-10-19
+  url: https://github.com/AntonioAltea/fmel-1/releases/tag/v1.0
+  notes: Adds a fifth sound, a piano from SLOOP's LOFI KEYS. First release not marked pre-release.
 - version: '0.1'
   date: 2026-10-12
   url: https://github.com/AntonioAltea/fmel-1/releases/tag/v0.1

@@ -1,0 +1,58 @@
+device: teenage-engineering-op-1
+name: hundekraft
+summary: Browser workshop that builds a custom firmware for the original OP-1 from the user's R246 image, with selectable synths, effects, tape and sequencer tools, and a plugin system for adding more.
+description: >-
+  The OP-1 Workshop is a web page that takes the user's own R246 update file and builds a firmware image in the
+  browser, with the chosen parts applied. The base is a plugin runtime called kennel, derived from op1r, which loads
+  synths, effects and tools from separate plugin files and keeps 300 user synth presets. The catalogue
+  includes wavetable, phase-distortion, organ, mbira, polysynth, SID-style and choir synths, a granular sampler,
+  Clouds, Beads and reverb effects, a stutter and tape echo, a C64-style arpeggiator, a MIDI tape recorder, sampler
+  and tape tools, drum synthesis (Gin) and a resource monitor, plus ports of work by op1r, Maiko Pruett and others
+  credited in the manual. Later updates can be sent over USB MIDI from the same page. A source and plugin SDK
+  archive is published with each release. The page and README state it does not target the OP-1 Field, and the
+  release data marks the build as experimental.
+status: active
+authors:
+  - name: Hundekraft
+    url: https://github.com/Hundekraft
+source: https://github.com/Hundekraft/op1-workshop
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  GPL-3.0-or-later with the GPL section 7 additional permission from op1r, which allows combining with the
+  Teenage Engineering firmware and conveying the result if the combined parts stay under the GPL. The OP-1 firmware
+  itself, the original bytes in the patch data used to verify and patch the user's image, and the Oblique Strategies
+  card texts are not covered. The repository has no firmware image; the base folder holds compiled code
+  inserted into the image and the byte-level patch data. Third-party ports keep their own licenses (for example
+  MIT for the Mutable Instruments Clouds and Elements ports).
+homepage: https://hundekraft.github.io/op1-workshop/
+distribution: patch-your-own
+requires_stock: R246
+install_notes: >-
+  Open the workshop, choose the parts to include, and supply the official R246 image (op1_246.op1); the build runs
+  locally and nothing is uploaded. Install the result through the OP-1's boot menu (upload mode). After one such
+  install, later updates can go over USB MIDI from the workshop, which checks the installed core first and prepares a
+  full update from the original image if it differs. The README says a normal update does not need a drive format,
+  a factory reset clears user data, and to back up before any recovery step. The same page manages imported .knl and
+  .op1p plugin files.
+brick_risk: false
+tags: [platform, synth-engine, fx, sequencer, sampler, drums, granular, reverb, usb-midi, usb-audio, web, sdk]
+image:
+  url: https://raw.githubusercontent.com/Hundekraft/op1-workshop/main/manual/img/synth-wavetable-play.png
+  alt: The OP-1 screen for the Wavetable engine, drawn as a factory with a hopper, a conveyor belt of wave shapes, a press and a red spring, with five numbered callouts
+  credit: Hundekraft
+  source_url: https://hundekraft.github.io/op1-workshop/manual.html
+  first_party: true
+versions:
+  - version: v3.0.3
+    date: 2026-10-21
+    url: https://github.com/Hundekraft/op1-workshop/releases/tag/v3.0.3
+    notes: Oxbow control names and C64 arpeggiator hold mode.
+  - version: v3.0.2
+    date: 2026-10-19
+    url: https://github.com/Hundekraft/op1-workshop/releases/tag/v3.0.2
+    notes: Lower processing load for Clouds and the C64 arpeggiator.
+  - version: v3.0.1
+    date: 2026-10-19
+    url: https://github.com/Hundekraft/op1-workshop/releases/tag/v3.0.1
+    notes: Adds the Amp live-input engine.

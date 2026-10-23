@@ -34,6 +34,14 @@ image:
   source_url: https://github.com/leonardoMirabal/frodhes
   first_party: true
 versions:
+- version: 0.9.4
+  date: 2026-10-20
+  url: https://github.com/leonardoMirabal/frodhes/releases/tag/v0.9.4
+  notes: Adds a concert marimba type, a display page for screen colour, brightness and key lights, and keys that light for incoming MIDI notes.
+- version: 0.9.3
+  date: 2026-10-19
+  url: https://github.com/leonardoMirabal/frodhes/releases/tag/v0.9.3
+  notes: Adds a vibraphone type with a motor, a filter with its own LFO, a battery indicator and MIDI clock sync.
 - version: 0.9.2
   date: 2026-10-16
   url: https://github.com/leonardoMirabal/frodhes/releases/tag/v0.9.2

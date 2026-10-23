@@ -1,0 +1,35 @@
+device: erica-synths-lxr-02
+name: LXR-02 bootloader (official source)
+summary: Source for the LXR-02's SD card updater, published by Erica Synths with the firmware; it checks and installs LXR*.img update files and is only rewritten with a debug probe.
+description: >-
+  The bootloader sits in the first 32 KB flash sector and starts the firmware
+  on a normal boot. With the encoder button held at power-on it reads an
+  LXR*.img file from the SD card, checks its header and checksum, writes it
+  after the bootloader and restarts. It write-protects its own sector on every
+  boot. The firmware build can merge it with the application into a full flash
+  image for blank units or repairs.
+status: active
+authors:
+  - name: Erica Synths
+    url: https://github.com/erica-synths
+source: https://github.com/erica-synths/lxr-desktop-bootloader
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Same NOTICE.md terms as the firmware: permission to combine with
+  STMicroelectronics libraries, and no rights to the Erica Synths and LXR
+  names.
+homepage: https://www.ericasynths.lv/news/post/lxropen/
+distribution: source-only
+install_notes: >-
+  Not needed for firmware updates. Programming it needs an ST-Link probe on the
+  debug header and OpenOCD (the flash_bootloader target, which asks for
+  confirmation first). If that is interrupted the unit can no longer update
+  from the SD card until it is reprogrammed with the probe.
+brick_risk: true
+tags: [official, bootloader, open-source]
+versions:
+  - version: main @ 47ed4a4
+    date: 2026-10-23
+    url: https://github.com/erica-synths/lxr-desktop-bootloader/commit/47ed4a437a1b808581447ee01ae24b4af26c8937
+    notes: No tagged releases; this is the latest commit.

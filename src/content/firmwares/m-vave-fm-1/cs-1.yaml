@@ -35,7 +35,15 @@ image:
   source_url: https://twochannels.github.io/CS-1/
   first_party: true
 versions:
-- version: main @ 1d1225c
-  date: 2026-10-15
-  url: https://github.com/twochannels/CS-1/commit/1d1225c9f04c71d86a02a881ee522059b7d5ba38
-  notes: No tagged releases; this is the latest commit.
+- version: 0.3.2
+  date: 2026-10-22
+  url: https://github.com/twochannels/CS-1/releases/tag/v0.3.2
+  notes: Installing another firmware over CS-1 works again on units with an older flash head.
+- version: 0.3.1
+  date: 2026-10-17
+  url: https://github.com/twochannels/CS-1/releases/tag/v0.3.1
+  notes: Fixes a pop after each key on sounds with a deep chorus.
+- version: 0.3.0
+  date: 2026-10-17
+  url: https://github.com/twochannels/CS-1/releases/tag/v0.3.0
+  notes: Fixes seven sounds that played an octave low, voice stealing, portamento, reverb hiss and tape delay ticks.

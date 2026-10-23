@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: FM-1 Swap
+kind: tool
+summary: >-
+  Android app that installs and swaps FM-1 firmware from a phone over USB MIDI, with a bundled copy of official
+  V15, backups before a flash and an emulator that plays a firmware before it is written.
+description: >-
+  Android port of the idea behind ocean's FM-SWITCH, written in Kotlin with Jetpack Compose. Its firmware
+  list ships inside the app and is built from The Firmware Hub, fm1-editor.com and RedtailWorks' pack; Refresh
+  pulls a newer copy. Packages are downloaded, checked against SHA-256 and kept on the phone for offline
+  flashing. Before a flash it saves a backup when the running firmware can provide one (FM-1+VA, Felucca and
+  SLOOP), and an interrupted write can be resumed. The TRY screen boots a package on the fm1-emu emulator so
+  it can be heard first. A PATCHES screen sends DX7 patches to a connected FM-1. The app bundles M-VAVE's
+  official V15 package unmodified, under the Apache-2.0 notice from fm1_open, so there is always a way back
+  to stock. It also lists M-VAVE's Official Open V14, fetched from the fm1_open release page.
+status: active
+authors:
+- name: HyruleanHero1988
+  url: https://github.com/HyruleanHero1988
+source: https://github.com/HyruleanHero1988/FM-1-Swap
+source_status: open
+license: MIT
+license_notes: >-
+  The app and its fm1kit protocol library are MIT. The bundled FM-1_015.fwsc is M-VAVE's V15, Apache-2.0,
+  unmodified from fm1_open (blob ce49cc1595b67347c68a3ac7463017f9fa8c19dd). fm1-emu is MIT and the fonts are
+  SIL OFL 1.1.
+homepage: https://hyruleanhero1988.github.io/FM-1-Swap/
+distribution: download
+install_notes: >-
+  Sideload FM-1-Swap.apk from the 0.2.0 release on an Android phone with a USB-C OTG connection to the FM-1;
+  USB MIDI does not work on an Android emulator. Install only the file from that release, since the signing key
+  is committed to the repository. The README says a firmware without a USB recovery mode cannot be rescued
+  from the phone, and a chip that shows up as WL80UBOOT needs a computer.
+brick_risk: true
+tags: [flasher, loader, utility, emulator, midi, usb-midi]
+image:
+  url: https://raw.githubusercontent.com/HyruleanHero1988/FM-1-Swap/main/docs/images/firmware-list.jpg
+  alt: >-
+    Phone screenshot of FM-1 Swap's FIRMWARE page in green pixel type on a dark background, with sort and
+    favourites controls, a search box and list rows for 386DX, AMB-1, AMBWAVE and April OS
+  credit: HyruleanHero1988
+  source_url: https://hyruleanhero1988.github.io/FM-1-Swap/
+  first_party: true
+versions:
+- version: 0.2.0
+  date: 2026-10-22
+  url: https://github.com/HyruleanHero1988/FM-1-Swap/releases/tag/v0.2.0
+  notes: Release build of FM-1-Swap.apk; a debug build is published separately on a moving android-debug tag.

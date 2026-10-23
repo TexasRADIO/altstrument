@@ -1,11 +1,12 @@
 device: poly-effects-hector
 name: Polyscope
-summary: Four-channel oscilloscope module for Hector with its own full-screen UI, an LV2 capture plugin and a checksum-checked USB installer.
+summary: Four-channel oscilloscope and tuner module for Hector with its own full-screen UI, an LV2 capture plugin and a checksum-checked USB installer.
 description: >-
   Polyscope adds a scope module that shows the four inputs as stacked traces,
   an overlay or an X/Y plot, with timebase and voltage scale controls, AC or
   DC coupling per channel, several trigger modes including a free-running
-  roll mode, holdoff, persistence, cursors and per-channel readouts. The
+  roll mode, holdoff, persistence, cursors and per-channel readouts. A full-screen
+  tuner page shows note name and cents for all four channels. The
   capture runs in a new LV2 plugin, and the frequency readout is measured
   there from the full-rate signal. The release replaces a handful of Poly
   Effects firmware 407 UI files (module list, widget and Ingen wrapper
@@ -30,8 +31,8 @@ license_notes: >-
 distribution: download
 requires_stock: "407"
 install_notes: >-
-  Unzip the installer from the release, copy the contents of its
-  hector-scope-usb-v2 folder to the root of a FAT32 USB stick and insert it in
+  Unzip the installer from the release, copy its contents (the
+  debug.sh file and hector-scope-patch folder) to the root of a FAT32 USB stick and insert it in
   a running Hector on firmware 407. The installer runs by itself, replaces
   files only if their checksums match the 407 baseline, backs up the
   originals on the unit and on the stick, and reboots. Remove the stick when
@@ -46,6 +47,10 @@ install_notes: >-
 brick_risk: false
 tags: [oscilloscope, utility, ui, lv2, installer]
 versions:
+  - version: v2.1.0
+    date: 2026-10-22
+    url: https://github.com/nutellatomato/polyscope/releases/tag/v2.1.0
+    notes: Adds a four-channel tuner page, more precise frequency detection and stronger checks in the USB installer and recovery.
   - version: v2.0.0
     date: 2026-07-17
     url: https://github.com/nutellatomato/polyscope/releases/tag/v2.0.0

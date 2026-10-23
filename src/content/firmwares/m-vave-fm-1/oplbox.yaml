@@ -1,0 +1,79 @@
+device: m-vave-fm-1
+name: OPLBOX
+summary: >-
+  Turns the FM-1 into an AdLib: OPL2 emulation playing 18 built-in SoundFX Macs Opera songs, with a tracker, scope
+  screen and editor that save .CMF files to flash.
+description: >-
+  Rights warning: the 18 built-in songs are game soundtracks by Thomas Detert (Stone Age, Eclipse, 1992) and Michael
+  Tschögl (LINEL, 1990 to 1992), kept in songs.h as game data and still under the composers' and publishers'
+  copyright.
+
+
+  The firmware emulates one OPL2 chip with DOSBox's dbopl core reduced to integer maths and plays the songs through
+  a player that follows the SoundFX Macs Opera driver, checked register for register against DOSBox captures. Screens
+  show a jukebox, a scrolling tracker, and a scope with one trace per channel, whose first nine white keys mute
+  channels. Edit mode adds an order-list screen and an instrument screen, and nine flash slots hold songs as plain .CMF
+  files. Getting slot files over USB is not yet implemented. It is built on Dinghy, Felucca and SLOOP, and the author
+  reports 0.2 and 0.3 running at about 20 percent CPU on a real FM-1.
+status: active
+authors:
+- name: LXXero
+  url: https://github.com/LXXero
+source: https://github.com/LXXero/oplbox
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Platform code is Dinghy, Felucca and SLOOP (GPL-3.0-only). The OPL core is derived from DOSBox (GPL-2.0-or-later),
+  the Macs Opera player follows AdPlug (LGPL-2.1), and an optional Nuked-OPL3 core is LGPL-2.1. The 18 songs are not
+  under the GPL and stay the composers' and publishers' copyright (LICENSING.md). The logo is all rights reserved
+  by its maker.
+homepage: https://github.com/LXXero/oplbox
+distribution: download
+install_notes: >-
+  Download the .fwsc from the releases page and install it with fm1_install.py (needs mido and python-rtmidi) or the
+  FM-1 Firmware Hub, from stock V14 or V15 or any firmware that has the update path. Holding OCT- before switching on
+  opens a USB rescue, and a firmware that crashes twice at boot goes there by itself. Return to stock through the hub or
+  M-VAVE's updater; the package identity is FM-1_96 plus the minor version.
+brick_risk: true
+tags: [tracker, chiptune, sequencer, synth-engine, emulator, editor]
+image:
+  url: https://raw.githubusercontent.com/LXXero/oplbox/master/screenshots/emulator_editor_tracker.png
+  alt: >-
+    OPLBOX tracker in the emulator: a pattern grid with columns 1 to 6 and BD SD TM TC HH, note cells, one
+    highlighted row, and a status line reading PLAY, 01/14, OCT3 STEP1 and CPU 16%
+  credit: LXXero
+  source_url: https://github.com/LXXero/oplbox
+  first_party: true
+versions:
+- version: 0.4.1
+  date: 2026-10-20
+  url: https://github.com/LXXero/oplbox/releases/tag/v0.4.1
+  notes: Sets up the screen pins before the OCT- check so the USB rescue opens on boards where no key reads at power-up.
+- version: '0.4'
+  date: 2026-10-17
+  url: https://github.com/LXXero/oplbox/releases/tag/v0.4
+  notes: Adds the editor, song and instrument screens and nine flash slots holding .CMF files.
+- version: 0.3.4
+  date: 2026-10-16
+  url: https://github.com/LXXero/oplbox/releases/tag/v0.3.4
+  notes: Keeps channel mutes after a restart.
+- version: 0.3.3
+  date: 2026-10-16
+  url: https://github.com/LXXero/oplbox/releases/tag/v0.3.3
+  notes: White keys mute channels on the scope screen.
+- version: 0.3.2
+  date: 2026-10-16
+  url: https://github.com/LXXero/oplbox/releases/tag/v0.3.2
+  notes: Scope labels show the instrument number first.
+- version: 0.3.1
+  date: 2026-10-16
+  url: https://github.com/LXXero/oplbox/releases/tag/v0.3.1
+  notes: Adds the scope screen.
+- version: '0.2'
+  date: 2026-10-16
+  url: https://github.com/LXXero/oplbox/releases/tag/v0.2
+  notes: Switches to the DOSBox dbopl core, adds an overload guard and fixes unread MIDI input.
+- version: '0.1'
+  date: 2026-10-16
+  url: https://github.com/LXXero/oplbox/releases/tag/v0.1
+  notes: First release; its audio load went over budget on real hardware.

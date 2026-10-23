@@ -1,0 +1,46 @@
+device: m-vave-fm-1
+name: Eight Bells
+kind: tool
+summary: >-
+  Pattern generator for the FM-1 and its custom firmwares: 28 rhythm engines and 126 genres produce tracks that
+  play on the FM-1 over USB MIDI, from a web page or a Windows and Mac app.
+description: >-
+  Builds a pattern for every track from Euclidean rhythms and other engines (world timelines, cellular
+  automata, fractals, number sequences, Markov chains and more), with melody and chord progressions in a chosen
+  key and scale. It sends notes with the channels and drum notes of the selected firmware, has a song builder
+  and an Auto song mode that keeps locked tracks, can listen to the FM-1 and capture a loop, exports .mid
+  files and shares patterns as text codes. Firmware presets cover SLOOP, X0X, Felucca, JIANT, FM-1+VA and
+  M-VAVE's official firmware, and a panel triggers SLOOP's punch-in effects. The FM-1's tempo has to be set by hand
+  to match. It does not contain any firmware and does not change what runs on the FM-1.
+status: active
+authors:
+- name: Discodave-Glitch
+  url: https://github.com/Discodave-Glitch
+source: https://github.com/Discodave-Glitch/eight-bells
+source_status: open
+license: MIT
+homepage: https://discodave-glitch.github.io/eight-bells/
+distribution: download
+install_notes: >-
+  Runs in Chrome or Edge from the project page with no install, or as a Windows portable or installer build and
+  macOS .dmg (Intel and Apple silicon) from the releases page. The desktop apps are not code-signed, and the Mac
+  build is marked as not tested on a real Mac. Close any other program that holds the FM-1's MIDI port, such as
+  Slipway or a firmware's web editor. iPhone and iPad are not supported.
+tags: [generative, euclidean, midi, usb-midi, sequencer, web, desktop]
+image:
+  url: https://raw.githubusercontent.com/Discodave-Glitch/eight-bells/main/docs/screenshot-top.png
+  alt: >-
+    Eight Bells web page in a dark theme: a bell logo, collapsed Before you start and Play on the FM-1 panels, and a
+    grid of rhythm engine buttons with World cycles selected
+  credit: Discodave-Glitch
+  source_url: https://github.com/Discodave-Glitch/eight-bells
+  first_party: true
+versions:
+- version: 2.0.0
+  date: 2026-10-22
+  url: https://github.com/Discodave-Glitch/eight-bells/releases/tag/v2.0.0
+  notes: Adds 28 engines, 126 genres, a song builder and an Auto song mode that keeps locked tracks.
+- version: 1.0.0
+  date: 2026-10-22
+  url: https://github.com/Discodave-Glitch/eight-bells/releases/tag/v1.0.0
+  notes: First release.

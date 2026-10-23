@@ -24,6 +24,10 @@ image:
   source_url: https://github.com/okumurari2/maku
   first_party: true
 versions:
+- version: '1.0'
+  date: 2026-10-16
+  url: https://github.com/okumurari2/maku/releases/tag/maku-v1.0
+  notes: Slower tempos stretch bars into long breaths, DRIFT swaps in new sounds over time, each world gets a quiet ambient bed and 20 new sounds are added.
 - version: '0.1'
   date: 2026-10-11
   url: https://github.com/okumurari2/maku/releases/tag/v0.1

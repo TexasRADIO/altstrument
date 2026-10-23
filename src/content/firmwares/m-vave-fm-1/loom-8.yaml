@@ -24,12 +24,13 @@ license_notes: >-
   LICENSING.md states GPL-3.0 only for LOOM-8's own code. The fm1-base and felucca-bsp submodule files stay
   MPL-2.0 file by file. The Braids engine ports, the PlayStation reverb port and the supersaw bank are MIT, the
   fonts are SIL OFL 1.1, and the package uses three Apache-2.0 JieLi AC79 SDK files at build time.
-distribution: source-only
+homepage: https://charlesvestal.github.io/fm1-loom/
+distribution: browser-installer
 install_notes: >-
-  The README links a firmware download and a web installer, but the repository has no releases or tags, and on
-  2026-10-19 the project site's pages were behind a password. Clone with git submodules and build with
-  ./build.sh (BUILDING.md; the JieLi toolchain runs in Docker on a Mac). The README says the web installer can put
-  M-VAVE's firmware back and that a firmware which keeps crashing starts in a safe mode.
+  Web installer in Chrome or Edge with the FM-1 on USB, or download the .fwsc from the releases page. The README
+  says the web installer can put M-VAVE's firmware back and that a firmware which keeps crashing starts in a safe
+  mode. To build it yourself, clone with git submodules and run ./build.sh (BUILDING.md; the JieLi toolchain runs
+  in Docker on a Mac).
 brick_risk: true
 tags: [groovebox, sequencer, sampler, synth-engine, drums, chords, fx, arpeggiator, emulator, midi]
 image:
@@ -39,7 +40,23 @@ image:
   source_url: https://github.com/charlesvestal/fm1-loom/blob/main/docs/MANUAL.md
   first_party: true
 versions:
-- version: main @ bd8852d
+- version: 0.6.1
+  date: 2026-10-22
+  url: https://github.com/charlesvestal/fm1-loom/releases/tag/v0.6.1
+  notes: Adds chord entry on the Steps page and a black-and-white theme, plus fixes to mute-key lighting and a drum pad that stayed lit.
+- version: 0.6-beta
+  date: 2026-10-21
+  url: https://github.com/charlesvestal/fm1-loom/releases/tag/v0.6-beta
+  notes: Adds 32 scenes, a shared LFO and fixed MIDI channels per track; projects saved by 0.6 do not open in older versions.
+- version: 0.5.4-beta
+  date: 2026-10-20
+  url: https://github.com/charlesvestal/fm1-loom/releases/tag/v0.5.4-beta
+  notes: Undo and redo now cover sound edits, the song, scenes and record takes as well as pattern edits.
+- version: 0.5.3-beta
   date: 2026-10-19
-  url: https://github.com/charlesvestal/fm1-loom/commit/bd8852d
-  notes: No tagged releases; this is the latest commit.
+  url: https://github.com/charlesvestal/fm1-loom/releases/tag/v0.5.3-beta
+  notes: Holding REC while turning a knob during playback records the knob motion onto the steps.
+- version: 0.5.2-beta
+  date: 2026-10-19
+  url: https://github.com/charlesvestal/fm1-loom/releases/tag/v0.5.2-beta
+  notes: New kits start drier, with only the clap and the fm key sending to the reverb.

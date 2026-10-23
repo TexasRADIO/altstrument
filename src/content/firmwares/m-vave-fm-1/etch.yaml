@@ -22,6 +22,25 @@ image:
   source_url: https://github.com/SikkenWorks/ETCH
   first_party: true
 versions:
+- version: '1.61'
+  date: 2026-10-22
+  url: https://github.com/SikkenWorks/ETCH/releases/tag/V1.61
+- version: '1.60'
+  date: 2026-10-22
+  url: https://github.com/SikkenWorks/ETCH/releases/tag/V1.60
+- version: '1.50'
+  date: 2026-10-19
+  url: https://github.com/SikkenWorks/ETCH/releases/tag/V1.50
+- version: '1.49'
+  date: 2026-10-19
+  url: https://github.com/SikkenWorks/ETCH/releases/tag/V1.49
+- version: 1.48.5
+  date: 2026-10-19
+  url: https://github.com/SikkenWorks/ETCH/releases/tag/V1.48.5
+- version: '1.38'
+  date: 2026-10-14
+  url: https://github.com/SikkenWorks/ETCH/releases/tag/ETCH-Update
+  notes: Release tag is ETCH-Update; fixes an update bug that blocked installing other firmware or restoring stock.
 - version: 1.20 RC
   date: 2026-10-12
   url: https://github.com/SikkenWorks/ETCH/releases/tag/fm1-firmware

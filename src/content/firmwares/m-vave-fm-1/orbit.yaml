@@ -30,6 +30,10 @@ image:
   source_url: https://github.com/dspaudio/orbit
   first_party: true
 versions:
+- version: 0.7.1
+  date: 2026-10-15
+  url: https://github.com/dspaudio/orbit/releases/tag/v0.7.1
+  notes: Drum grid shows sixteen instrument rows by sixteen steps, and sound knobs write parameter locks while recording.
 - version: 0.7.0
   date: 2026-10-12
   url: https://github.com/dspaudio/orbit/releases/tag/v0.7.0

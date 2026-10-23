@@ -27,6 +27,30 @@ video:
   credit: "zvenson"
   first_party: true
 versions:
+- version: 2.4.4
+  date: 2026-10-19
+  url: https://github.com/zvenson/zp12/commit/15fd913
+  notes: The update loader shows its progress on screen. Date is the commit message "2.4.4 released"; no tag or GitHub release.
+- version: 2.4.3
+  date: 2026-10-19
+  url: https://github.com/zvenson/zp12/tree/v2.4.3
+  notes: Git tag; no GitHub release page. The TRS MIDI input plays the pads and picks loops.
+- version: 2.4.2
+  date: 2026-10-14
+  url: https://github.com/zvenson/zp12/commit/a4023ce
+  notes: Fixes the start screen's text running past its buffer. Date is the commit message "2.4.2 released"; no tag or GitHub release.
+- version: 2.4.1
+  date: 2026-10-14
+  url: https://github.com/zvenson/zp12/commit/77396f2
+  notes: Eight CHOP groups. Date is the commit message "2.4.1 released"; no tag or GitHub release.
+- version: '2.4'
+  date: 2026-10-14
+  url: https://github.com/zvenson/zp12/commit/73047da
+  notes: Adds CHOP groups. Date is the commit message "2.4 released"; no tag or GitHub release.
+- version: '2.3'
+  date: 2026-10-11
+  url: https://github.com/zvenson/zp12/commit/70b7387
+  notes: Reverb and echo throws with FX held plus OCT- or OCT+. Date is the commit message "2.3 released"; no tag or GitHub release.
 - version: '2.2'
   date: 2026-10-10
   url: https://github.com/zvenson/zp12

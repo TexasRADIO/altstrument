@@ -9,8 +9,9 @@ description: >-
   chains up to 128 entries. It has USB MIDI, TRS MIDI in and stereo USB audio out. Hardware support is
   copied from ORBIT. The 1.0.1 release notes record an over-the-air install, reboot and identification on an
   FM-1, plus timing and USB recording captures with no missed deadlines and a worst-case headroom of 2.8
-  percent; analog listening and power-loss recovery are listed as unverified. The same C core runs in the
-  separate MC-1 web emulator.
+  percent; analog listening and power-loss recovery are listed as unverified. Since 1.1.0 it runs on both FM-1
+  CPU cores, and 1.2.0 replaced the LA sounds with recorded attacks and synthesized sustain. The same C core runs
+  in the separate MC-1 web emulator.
 status: active
 authors:
 - name: dspaudio
@@ -19,9 +20,9 @@ source: https://github.com/dspaudio/mc-1
 source_status: open
 license: GPL-3.0-only
 license_notes: >-
-  Code and generated assets are GPL-3.0-only; the 16 instrument recordings (VSCO 2 Community Edition) and
-  their converted PCM data are CC0-1.0 (NOTICE.md). The package carries JieLi SDK boot files under Apache-2.0.
-  Restricted upstream artwork and sample packs are excluded.
+  Code and generated assets are GPL-3.0-only; the instrument recordings (Meta Open Sound piano and nylon guitar,
+  and 15 families from VSCO 2 Community Edition) and their converted PCM data are CC0-1.0 (NOTICE.md). The package
+  carries JieLi SDK boot files under Apache-2.0. Restricted upstream artwork and sample packs are excluded.
 homepage: https://dspaudio.github.io/mc-1/
 distribution: browser-installer
 install_notes: >-
@@ -39,6 +40,18 @@ image:
   source_url: https://github.com/dspaudio/mc-1
   first_party: true
 versions:
+- version: 1.2.0
+  date: 2026-10-20
+  url: https://github.com/dspaudio/mc-1/releases/tag/v1.2.0
+  notes: Rebuilds the LA engine around recorded attacks with synthesized sustain and replaces all 112 LA sounds.
+- version: 1.1.0
+  date: 2026-10-19
+  url: https://github.com/dspaudio/mc-1/releases/tag/v1.1.0
+  notes: Uses both FM-1 CPU cores; adds four shared FX banks with four sends per part and a melodic analog-variance control.
+- version: 1.0.2
+  date: 2026-10-18
+  url: https://github.com/dspaudio/mc-1/releases/tag/v1.0.2
+  notes: The installer can restore M-VAVE V15 from a file you supply; the device package is identical to 1.0.1.
 - version: 1.0.1
   date: 2026-10-16
   url: https://github.com/dspaudio/mc-1/releases/tag/v1.0.1

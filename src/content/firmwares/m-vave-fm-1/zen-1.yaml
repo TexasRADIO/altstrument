@@ -37,6 +37,10 @@ image:
   source_url: https://github.com/aceyprime/zen-1
   first_party: true
 versions:
+- version: '1.2'
+  date: 2026-10-21
+  url: https://github.com/aceyprime/zen-1/releases/tag/v1.2
+  notes: Adds a setting for the panel lights and a Key page for key, scale, chord and drift.
 - version: '1.1'
   date: 2026-10-19
   url: https://github.com/aceyprime/zen-1/releases/tag/v1.1

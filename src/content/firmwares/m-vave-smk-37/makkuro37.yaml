@@ -26,6 +26,10 @@ video:
   first_party: true
   found_via: https://genkigenki.github.io/smk37/
 versions:
+- version: '0.3'
+  date: 2026-10-17
+  url: https://github.com/genkigenki/Makkuro37/releases/tag/v0.3
+  notes: Sets the drones' root from the lowest keys with glide, and adds VOICE, BOWED and GLASS sounds.
 - version: '0.1'
   date: 2026-10-11
   url: https://github.com/genkigenki/Makkuro37/releases/tag/v0.1

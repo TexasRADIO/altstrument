@@ -1,14 +1,16 @@
 device: m-vave-fm-1
 name: Bubba Machine
 summary: >-
-  Six-track live groovebox written from scratch in C99: TR-style drum machine, 8-slice sampler, wavetable
-  bass and three assignable synth/kit/MIDI tracks, with polymeter, p-locks and crash-resilient flash saves.
+  Six-channel live groovebox written from scratch in C99: TR-style drum machine, 16-pad sampler and four tracks
+  that each load a bass, mono, FM, wavetable or polyphonic synth machine, with polymeter, p-locks, scenes and
+  crash-resilient flash saves.
 description: >-
-  No code from other FM-1 firmware; only hardware facts from public reverse engineering. The README says
-  to install only once a tested version exists: it runs in a desktop simulation and a WebAssembly emulator,
-  and a hardware flasher is on the roadmap. The GitHub releases carry no firmware assets. Documentation
-  is mostly Spanish.
-status: announced
+  No code from other FM-1 firmware; only hardware facts from public reverse engineering. It runs on the FM-1
+  and installs from a web page, and also runs in a desktop simulation and a WebAssembly emulator. The README
+  calls the current build a beta tested on a single FM-1, says it still changes a lot, and warns that an update
+  may erase saved patterns, songs, settings and takes until version 1. Documentation is mostly Spanish, with an
+  English site and some English docs.
+status: active
 authors:
 - name: Erbubar23
   url: https://github.com/Erbubar23
@@ -16,7 +18,12 @@ source: https://github.com/Erbubar23/bubba-machine
 source_status: open
 license: GPL-3.0-or-later
 homepage: https://erbubar23.github.io/bubba-machine/
-distribution: source-only
+distribution: browser-installer
+install_notes: >-
+  Web installer page in Chrome or Edge over USB, which reads the FM-1 and can also install the factory firmware
+  again. The docs say each beta was tested on one FM-1, and that an update may erase saved patterns, songs, settings
+  and takes. Each release also carries the .fwsc package and a no-sound diagnostic build.
+brick_risk: true
 tags: [drums, sampler, sequencer, synth-engine, wavetable, emulator]
 image:
   url: https://raw.githubusercontent.com/Erbubar23/bubba-machine/main/assets/screens/37-pads.png
@@ -25,7 +32,31 @@ image:
   source_url: https://github.com/Erbubar23/bubba-machine
   first_party: true
 versions:
+- version: 0.9.0-beta
+  date: 2026-10-18
+  url: https://github.com/Erbubar23/bubba-machine/releases/tag/v0.9.0-beta
+  notes: Marked pre-release; adds the HOME console with ten patterns, scenes and CUE, and the FM-1 stock power rails; patterns 11-16 are dropped.
+- version: 0.8.0-beta
+  date: 2026-10-17
+  url: https://github.com/Erbubar23/bubba-machine/releases/tag/v0.8.0-beta
+  notes: Marked pre-release; tracks 3-6 each pick their machine; changes the pattern format and erases saved patterns.
+- version: 0.7.0-beta
+  date: 2026-10-16
+  url: https://github.com/Erbubar23/bubba-machine/releases/tag/v0.7.0-beta
+  notes: Marked pre-release; entering a track gives that machine the whole panel.
+- version: 0.6.2-beta
+  date: 2026-10-15
+  url: https://github.com/Erbubar23/bubba-machine/releases/tag/v0.6.2-beta
+  notes: Marked pre-release; sheds the quietest voice when an audio block runs over 85 percent of its time.
+- version: 0.6.1-beta
+  date: 2026-10-15
+  url: https://github.com/Erbubar23/bubba-machine/releases/tag/v0.6.1-beta
+  notes: Marked pre-release; replaces 0.6.0-beta, which left too little RAM for the FM-1 system.
+- version: 0.6.0-beta
+  date: 2026-10-14
+  url: https://github.com/Erbubar23/bubba-machine/releases/tag/v0.6.0-beta
+  notes: Marked pre-release; six fixed machines in place of selectable engines and erases saved patterns; the author says not to install it.
 - version: 0.5.0-beta
   date: 2026-10-12
   url: https://github.com/Erbubar23/bubba-machine/releases/tag/v0.5.0-beta
-  notes: Marked pre-release; no firmware attached.
+  notes: Marked pre-release.

@@ -35,6 +35,34 @@ image:
   source_url: https://github.com/Quixotic7/ChoralRootFM1
   first_party: true
 versions:
+- version: 0.26.1
+  date: 2026-10-20
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.26.1
+  notes: Same firmware as 0.26, built and signed on GitHub from the tag.
+- version: '0.26'
+  date: 2026-10-20
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.26
+  notes: Shares dense VA and FM6 chords between the two cores.
+- version: 0.25.1
+  date: 2026-10-17
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.25.1
+  notes: The FM-1 chord-key layout becomes the default.
+- version: '0.25'
+  date: 2026-10-17
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.25
+  notes: GRAIN morph blends its two sources into one sound.
+- version: '0.24'
+  date: 2026-10-17
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.24
+  notes: Adds the GRAIN engine, an FM-1 chord-key layout and velocity on all keys with poly aftertouch out.
+- version: '0.23'
+  date: 2026-10-16
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.23
+  notes: Brings FM TONE to the level of the other engines and adds a velocity curve for the FM-1 keys.
+- version: '0.22'
+  date: 2026-10-16
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.22
+  notes: Adds a P5 engine, 128 shared sound slots, favorites and a filter on the whole sound.
 - version: '0.21'
   date: 2026-10-13
   url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.21

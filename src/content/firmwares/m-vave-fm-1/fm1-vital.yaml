@@ -1,0 +1,37 @@
+device: m-vave-fm-1
+name: FM1 VITAL
+summary: >-
+  Mono wavetable synth in the Vital style, with three oscillators of up to 16 unison voices, two filters, envelopes,
+  LFOs and a 32-slot mod matrix, built on foma.
+description: >-
+  Each oscillator reads a wavetable with sync or FM warps. The engine adds a noise layer, two stereo filters, three
+  envelopes, four LFOs, four macros and a 32-slot modulation matrix, and six factory patches are included. Keys
+  play one note at a time with legato and glide set per patch, the four knobs control the patch's macros, and
+  notes, mod wheel and bend arrive over USB and TRS MIDI, with LFO sync following incoming clock. The top line of
+  the screen shows how much of the audio interrupt's time the engine uses. The target sound is midtempo and
+  cyberpunk bass and lead, based on a count-only survey of 80 public Vital presets, and the presets themselves are
+  not in the repository.
+status: active
+authors:
+- name: CausticCatastrophe
+  url: https://github.com/CausticCatastrophe
+source: https://github.com/CausticCatastrophe/fm1-vital
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Platform code comes from foma and, through it, Felucca, SLOOP and Dinghy (LICENSING.md); the engine and patches
+  are the author's. Terminus font is SIL OFL 1.1. platform/sdk holds three small files from JieLi's AC79 SDK
+  (uboot.boot, cfg_tool.bin, eq_cfg_hw.bin, Apache-2.0).
+homepage: https://causticcatastrophe.github.io/fm1-vital/
+distribution: browser-installer
+install_notes: >-
+  The project page has an emulator and an installer for Chrome or Edge over USB. Building needs only Docker (./fm1
+  build writes a .fwsc). Holding OCT- while switching on starts the USB rescue, from which the installer can write
+  a firmware again. The README warns that installing is at your own risk.
+brick_risk: true
+tags: [wavetable, synth-engine, filter, lfo, envelopes, midi, usb-midi, emulator]
+versions:
+- version: main @ 98e00e9
+  date: 2026-10-23
+  url: https://github.com/CausticCatastrophe/fm1-vital/commit/98e00e9ed2f41479f5a3511867de2b80a0f86bee
+  notes: No tagged releases; this is the latest commit.

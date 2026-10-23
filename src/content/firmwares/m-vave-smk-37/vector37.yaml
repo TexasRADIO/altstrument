@@ -4,7 +4,7 @@ summary: >-
   Orbiting overtone synth written for the SMK-37 Pro: a sun runs along a path and a moon circles it, and the
   moon's position mixes four planets, each a pair of overtone generators with a filter.
 description: >-
-  Inspired by the Beetlecrab Vector. It has one orbit screen with eight sounds on the < and > keys. The pads
+  Inspired by the Beetlecrab Vector. It has one orbit screen, a sound list with two factory banks and a USER bank for your own sounds, switched with the < and > keys. The pads
   and knobs act as the four planets, and the four faders set the path's family, size, speed and morph.
   The 3.5 mm jack sends the keys and wheels as MIDI out. The board layer comes from SLOOP, which is based
   on Felucca, and the master stage follows Melodee. The project site has a browser simulator, and an FM-1 build
@@ -33,7 +33,15 @@ image:
   source_url: https://github.com/genkigenki/Vector37
   first_party: true
 versions:
-- version: main @ aaf2d7a
-  date: 2026-10-14
-  url: https://github.com/genkigenki/Vector37/commit/aaf2d7a
-  notes: No tagged releases; this is the latest commit.
+- version: v0.3.2
+  date: 2026-10-23
+  url: https://github.com/genkigenki/Vector37/releases/tag/v0.3.2
+  notes: Adds a four-step PAD LIGHT setting, pale empty USER slots and smoother fade-out of soft notes and reverb tails.
+- version: v0.3.1
+  date: 2026-10-17
+  url: https://github.com/genkigenki/Vector37/releases/tag/v0.3.1
+  notes: The moon's trail follows the path as one connected curve at any speed.
+- version: v0.3
+  date: 2026-10-17
+  url: https://github.com/genkigenki/Vector37/releases/tag/v0.3
+  notes: Adds 32 factory sounds, a USER bank, a SETUP page, about 60 fps drawing and an experimental FM-1 build.

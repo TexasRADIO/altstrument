@@ -35,6 +35,14 @@ video:
   first_party: true
   found_via: https://mdmm.dev
 versions:
+  - version: mdmm-v0.8.0
+    date: 2026-10-20
+    url: https://github.com/radekdymacz/mdmm/releases/tag/mdmm-v0.8.0
+    notes: Adds MIDI Learn for nearly every value, DAW notes played through the machine's key map, a MIDI monitor with a loop warning, and many Monomachine fixes.
+  - version: mdmm-v0.7.0
+    date: 2026-10-15
+    url: https://github.com/radekdymacz/mdmm/releases/tag/mdmm-v0.7.0
+    notes: Adds a per-track pattern generator dialog, shape tools for the lock lane, and a redesigned Monomachine Perform page.
   - version: mdmm-v0.6.0
     date: 2026-10-14
     url: https://github.com/radekdymacz/mdmm/releases/tag/mdmm-v0.6.0

@@ -1,16 +1,16 @@
 device: m-vave-fm-1
 name: SIDOU
 summary: >-
-  Commodore 64 SID instrument for the FM-1 with its own SID emulation, a live-play mode and MIDI input, and a
-  step sequencer and .sid playback planned. Tested in an emulator only.
+  Commodore 64 SID instrument and GoatTracker 2 compatible tracker for the FM-1 with its own two-chip SID emulation,
+  a step sequencer, live play and MIDI input. Tested on one real FM-1.
 description: >-
-  Plays the SID's three voices with a 6581 or 8580 model, four presets, filter and pulse-width knobs and MIDI
-  over TRS and USB, and adds three stereo effect slots after the chip. The SID core is the author's own C code
-  and the repository carries reference tests against libresidfp. A tracker, a step sequencer, .sid playback and
-  GoatTracker and SID-Wizard importers are described in the design document but are not in the current code.
-  It is built on Felucca's hardware layer, USB stack and update loader and is checked in the fm1-emu emulator.
-  The README says no FM-1 has run it yet and that it is not ready to be installed on hardware. It is a separate
-  project from FM-1 SID.
+  Plays the SID's three voices on two chips with a 6581 or 8580 model, four presets, filter and pulse-width knobs
+  and MIDI over TRS and USB, and adds three stereo effect slots after the chip. Songs are written on the panel with
+  a step view and a tracker, can record notes from the keys, and are saved to the FM-1's flash as GoatTracker 2 files.
+  The SID core is the author's own C code and the repository carries reference tests against libresidfp. .sid
+  playback is still planned. It is built on Felucca's hardware layer, USB stack and update loader, and is also checked
+  in the fm1-emu emulator. The release notes say version 0.2.0 has run on one real FM-1, and that the earlier
+  0.2.0-m2-preview could not be updated over USB. It is a separate project from FM-1 SID.
 status: active
 authors:
 - name: Denis Sablic (dsablic)
@@ -23,15 +23,16 @@ license_notes: >-
   and USB stack, so the image as a whole is GPL-3.0-only. It also carries data derived from reSID 0.16 and
   libresidfp (GPL-2.0-or-later), an MIT port of the Rings reverb, and three unmodified JieLi AC79 SDK files
   (Apache-2.0) in each package (LICENSING.md).
-distribution: source-only
+distribution: download
 install_notes: >-
-  The author says to build it yourself (BUILDING.md) and not to flash it yet: it has not run on a real unit.
-  The planned route is Felucca's installer with a sidou.fwsc package, after the hardware checklist in
-  docs/hardware-test.md and with recovery tools and the official FM-1 firmware at hand.
+  Install the .fwsc from the releases page with Felucca's installer (fm1_install.py sidou-0.2.0.fwsc); the README
+  says to read docs/flash-day.md first and keep the way back ready. To return to stock, install M-VAVE's official
+  FM-1.fwsc the same way. If the unit does not boot, hold OCT- at power-on for the chip's ROM boot mode and restore
+  with the unbricker. The author plans a wider test before v0.3.0, which is meant to be the first release for everyone.
 brick_risk: true
 tags: [synth-engine, fx, midi, emulator, research]
 versions:
-- version: main @ 394a872
-  date: 2026-10-15
-  url: https://github.com/dsablic/sidou/commit/394a87225994469e503a36dc14f0ceb87840179a
-  notes: No tagged releases; this is the latest commit.
+- version: 0.2.0
+  date: 2026-10-22
+  url: https://github.com/dsablic/sidou/releases/tag/v0.2.0
+  notes: Adds on-device song writing with a step view and tracker, key recording, a second SID chip, MIDI clock and SysEx, and fixes USB-MIDI output so the unit installs and updates over USB.

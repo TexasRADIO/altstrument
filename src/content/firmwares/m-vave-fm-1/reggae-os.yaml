@@ -1,13 +1,13 @@
 device: m-vave-fm-1
 name: REGGAE-OS
 summary: >-
-  Early Felucca 1.6.1 derivative that adds four reggae sounds (organ and bass), four-knob editing and an
-  animated organ and sound-system home screen. Untested on hardware.
+  Early Felucca 1.6.1 derivative that adds a bank of 15 reggae presets (organ, bass, melodica, piano, trumpet, sirens, drums), four-knob editing and
+  animated instrument screens. Untested on hardware.
 description: >-
-  Adds the Roots Organ, Rocksteady, Deep Roots and Digital Bass presets on top of Felucca's unchanged engines,
-  with a home screen that edits four parameters per sound and animates an organ or a sound system. Felucca's
-  other engines, effects, sequencing, MIDI and user presets are kept. The changes over Felucca are two new C
-  files and small edits to the UI and engine tables. The README calls it a prototype and the hardware notes
+  Adds a sound bank of 15 presets, including Roots Organ, Rocksteady, Deep Roots and Digital Bass, a reed melodica,
+  electric piano, a sampled trumpet, three sirens and a drum kit, on top of Felucca's unchanged engines,
+  with a home screen that edits four parameters per sound and animates the selected instrument. Felucca's
+  other engines, effects, sequencing, MIDI and user presets are kept. The README calls it a prototype and the hardware notes
   say no physical FM-1 has been used. A browser build of the emulator is hosted on GitHub Pages; the public
   Felucca installer does not install this firmware.
 status: active
@@ -29,7 +29,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, performance, ui, emulator, research]
 versions:
-- version: main @ b687e1a
-  date: 2026-10-15
-  url: https://github.com/KemstheSage/reggae-os/commit/b687e1ab3dbe8f85dd08422834073c5d78c0a37e
+- version: main @ 89f0c8c
+  date: 2026-10-21
+  url: https://github.com/KemstheSage/reggae-os/commit/89f0c8c0e8586a4cadbb22dc656d90a671b315d1
   notes: No tagged releases; this is the latest commit.

@@ -43,6 +43,10 @@ image:
   source_url: https://github.com/jbschooley/Virtual-FM-1
   first_party: true
 versions:
+- version: 0.10.0
+  date: 2026-10-18
+  url: https://github.com/jbschooley/Virtual-FM-1/releases/tag/v0.10.0
+  notes: Felucca 1.6.1 is now built in, with step conditions, MIDI input per track and new drum kits.
 - version: 0.9.1
   date: 2026-10-14
   url: https://github.com/jbschooley/Virtual-FM-1/releases/tag/v0.9.1

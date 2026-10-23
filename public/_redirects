@@ -2,10 +2,16 @@
 # @astrojs/sitemap writes sitemap-index.xml; crawlers and agents look for /sitemap.xml first.
 /sitemap.xml /sitemap-index.xml 301
 /firmware/m-vave-fm-1/fm1-bootloader /firmware/m-vave-fm-1/m-bootloader 301
+/firmware/elektron-digitone/digichroma /firmware/elektron-digitone/digiprism 301
+/firmware/elektron-digitone/digicosm /firmware/elektron-digitone/digiswarm 301
+/firmware/m-vave-fm-1/melodee-tess /firmware/m-vave-fm-1/tessera 301
 # Per-device copies merged into one entry with also_devices.
+/firmware/critter-and-guitari-organelle/orac /firmware/critter-and-guitari-organelle-1/orac 301
 /firmware/elektron-model-samples/1-bit-editor /firmware/elektron-model-cycles/1-bit-editor 301
 /firmware/polyend-tracker-plus/tracker-lib /firmware/polyend-tracker/tracker-lib 301
 /firmware/203-systems-mystrix-pro/matrix-os /firmware/203-systems-mystrix/matrix-os 301
 /firmware/203-systems-mystrix-pro/matrix-bootloader /firmware/203-systems-mystrix/matrix-bootloader 301
 /firmware/203-systems-mystrix-pro/matrix-os-control-map-editor /firmware/203-systems-mystrix/matrix-os-control-map-editor 301
 /firmware/poly-effects-hector/poly-effects-firmware /firmware/poly-effects-beebo/poly-effects-firmware 301
+# Removed entries, sent to their device page.
+/firmware/xiphonics-picotracker-advance/picotracker-experimental /devices/xiphonics-picotracker-advance 301

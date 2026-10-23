@@ -1,0 +1,42 @@
+device: teenage-engineering-op-1
+name: Opus
+summary: Mod suite for the original OP-1's R246 firmware, built in a browser patcher from the user's own image, with new synth engines and effects, scales and chords, tape undo, a menu, themes and 100 sampler presets.
+description: >-
+  Opus 1 adds a dimension synth engine and a guitar amp engine with a tuner, bitcrush, chorus, plate reverb and
+  overdrive effects, pitch bend, scale and chord modes, undo and redo on tape, preset renaming and overwrite saving, user
+  colours, themes and a start-up picture, and a menu with a CPU meter, diagnostics and a MIDI monitor. A cleaner in the
+  menu prepares saved sounds for stock firmware or another mod and keeps a copy of what it changes. Opus 2 is planned as a
+  plugin manager that loads mods as files from the OP-1's disk. The patcher runs in the browser and checks the input
+  and output hashes. The GitHub repository holds documentation and the design for Opus 2, and the update file and the
+  patcher's data are not published as source. The project is hobby work, independent of Teenage Engineering.
+status: active
+authors:
+  - name: LizardMan
+    url: https://github.com/LizardMan245
+source: https://github.com/LizardMan245/opus
+source_status: patcher-only
+license: proprietary
+license_notes: >-
+  The repository (documentation, with the plugin interface and template to follow) is GPL-3.0. The Opus 1 firmware
+  update and the patcher's data are stated to be copyright LizardMan, all rights reserved for now, with a request not to
+  share them and to link to the site instead.
+homepage: https://opus-op1.pages.dev/
+distribution: patch-your-own
+requires_stock: R246
+install_notes: >-
+  Make the update in the browser patcher from your own official op1_246.op1; nothing is uploaded. Switch the OP-1 off,
+  hold COM while switching on, press 1 in the TE-BOOT menu, then copy op1_246_opus.op1 onto the OP-1 disk and eject. The
+  bootloader is not changed, so flashing the stock image restores the original. Run the menu's cleaner before going
+  back to stock or another mod, because stock stops on a sound that names an unknown effect. The known issues list says
+  a custom start-up picture only shows on one of the three screen types.
+brick_risk: false
+tags: [platform, synth-engine, fx, ui, chords, scales, tape, web]
+versions:
+  - version: "1.0.1"
+    date: 2026-10-14
+    url: https://opus-op1.pages.dev/changelog/
+    notes: Fixes missing Opus screens on OP-1s with two of the three display types.
+  - version: "1.0"
+    date: 2026-10-13
+    url: https://opus-op1.pages.dev/changelog/
+    notes: First release.

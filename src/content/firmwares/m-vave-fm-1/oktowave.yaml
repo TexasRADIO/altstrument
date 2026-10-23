@@ -1,8 +1,8 @@
 device: m-vave-fm-1
 name: OKTOWAVE
 summary: >-
-  Felucca 1.6.1 with one added engine, WAVELET, a fixed-point port of the subtractive engine of the author's own
-  Wavelet Synthesizer plug-in, with 69 of its presets. The author says 0.1 has not been run on an FM-1.
+  Felucca 1.6.1 with one added engine, WAVELET, a fixed-point port of the subtractive and additive engines of the author's own
+  Wavelet Synthesizer plug-in, with 108 of its presets. The author says 0.1 has not been run on an FM-1.
 description: >-
   WAVELET splits one cycle of a source wave with a discrete wavelet transform (Haar, Daubechies 2 to 20, a
   symlet and a coiflet) into nine bands of atoms. The smallest atoms can be dropped with a sparsity setting, and
@@ -34,7 +34,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, wavetable, oscillator, filter, sequencer, emulator]
 versions:
-- version: main @ 85d45e6
-  date: 2026-10-18
-  url: https://github.com/PierreArnaudGUYOT/FM1-Oktowave-Firmware/commit/85d45e680d9b138c9971f518f6409515e12b5d3e
+- version: main @ 60619db
+  date: 2026-10-19
+  url: https://github.com/PierreArnaudGUYOT/FM1-Oktowave-Firmware/commit/60619dbb28e57e953b9cb0c929612a1a3d01c168
   notes: No tagged releases; this is the latest commit. The README calls the version 0.1.

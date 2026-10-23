@@ -30,7 +30,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, drums, fx, distortion, performance, emulator]
 versions:
-- version: main @ 73c5a7a
-  date: 2026-10-13
-  url: https://github.com/erikdevos/glitchbox/commit/73c5a7a9934b51093b442a5a8680c75c10eab5ea
+- version: main @ 9028685
+  date: 2026-10-16
+  url: https://github.com/erikdevos/glitchbox/commit/902868510b307e1ed31c43eedd29991e16e42700
   notes: No tagged releases; this is the latest commit, a work in progress on a bass engine.

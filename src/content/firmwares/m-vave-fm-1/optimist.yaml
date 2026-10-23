@@ -14,10 +14,12 @@ authors:
 source: https://github.com/w0ts/optimist
 source_status: open
 license: GPL-3.0-only
-distribution: source-only
+distribution: browser-installer
 install_notes: >-
-  Build with make builder (CLI or Docker toolchain). Back up everything first; the README lists the recovery
-  paths and their limits.
+  The Install tab of the project's web app (Chrome or Edge, USB) installs a release flavour, a cloud build or a
+  .fwsc file, offers a backup first and can put V15 back from a file you supply. The releases page carries the
+  ready-made .fwsc files; you can also build with make builder (CLI or Docker toolchain). The README lists the
+  recovery paths and their limits.
 brick_risk: true
 tags: [platform, sdk, synth-engine, sequencer, editor]
 image:
@@ -26,3 +28,8 @@ image:
   credit: "w0ts"
   source_url: https://github.com/w0ts/optimist
   first_party: true
+versions:
+- version: '0.1'
+  date: 2026-10-18
+  url: https://github.com/w0ts/optimist/releases/tag/v0.1
+  notes: First release, with six ready-made firmware flavours and a matching web editor package for each.

@@ -30,7 +30,7 @@ install_notes: >-
   emulation only.
 tags: [machines, synth-engine, editor, sampler]
 versions:
-  - version: main @ 10420ec
-    date: 2026-10-14
-    url: https://github.com/etcetc000/kitbasher/commit/10420ec
+  - version: main @ d965da3
+    date: 2026-10-19
+    url: https://github.com/etcetc000/kitbasher/commit/d965da3
     notes: No tagged releases; this is the latest commit.

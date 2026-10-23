@@ -36,6 +36,10 @@ image:
   source_url: https://github.com/paiheulevrai/Choochootracker
   first_party: true
 versions:
+  - version: v1.0.19-alpha
+    date: 2026-10-19
+    url: https://github.com/paiheulevrai/Choochootracker/releases/tag/v1.0.19-alpha
+    notes: Adds SoundFont instruments, the MonkSynth vocal synth, random-note and random-slice generators and new insert and send effects.
   - version: v1.0.16-alpha
     date: 2026-10-14
     url: https://github.com/paiheulevrai/Choochootracker/releases/tag/v1.0.16-alpha

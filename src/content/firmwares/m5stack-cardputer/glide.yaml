@@ -38,6 +38,10 @@ video:
   first_party: true
   found_via: https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV#readme
 versions:
+  - version: v3.8
+    date: 2026-10-21
+    url: https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV/releases/tag/v3.8
+    notes: Adds ten sound families to Randomize with a roll-family setting, oscillator colour options and even loudness across sounds.
   - version: v3.7
     date: 2026-10-07
     url: https://github.com/CHARL3X/GLIDE-Synth-Cardputer-ADV/releases/tag/v3.7

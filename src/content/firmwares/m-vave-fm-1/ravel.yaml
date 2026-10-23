@@ -4,8 +4,8 @@ summary: >-
   Eight-track sound-design groovebox with synth, strike and tape tracks that share a capture tape, an influence grid
   where tracks modulate each other, a step and graph sequencer, and a browser emulator. Not yet run on an FM-1.
 description: >-
-  Tracks 1 to 4 are synths with twelve engines (virtual analog, a Casio CZ model, FM, physical models, formant, particle,
-  chip, an Ensoniq SQ-80 style voice, wavetable, a function-block voice, a pipe organ and a mono horn-style voice),
+  Tracks 1 to 4 are synths with fourteen engines (virtual analog, a Casio CZ model, FM, physical models, formant, particle,
+  chip, an Ensoniq SQ-80 style voice, wavetable, a function-block voice, a pipe organ, a mono horn-style voice, a bowed or reed resin voice and struck tine bars),
   tracks 5 and 6 excite resonant bodies, and tracks 7 and 8 have no oscillator and play back a shared capture tape as
   looping playheads, grain clouds (a fixed-point port of Mutable Instruments Beads) or slices. Any track can instead be a
   PERC kit of 33 drum machines after the Elektron Machinedrum's synthesis families. Any track can modulate, trigger or
@@ -42,6 +42,53 @@ image:
   source_url: https://github.com/De-Pattern/Ravel_FM1
   first_party: true
 versions:
+- version: 0.8.4
+  date: 2026-10-23
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.8.4
+  notes: A step's note can hold for up to 64 steps.
+- version: 0.8.3
+  date: 2026-10-23
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.8.3
+  notes: Adds an overload guard and a stress test, and effects start off.
+- version: 0.8.2
+  date: 2026-10-23
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.8.2
+  notes: Adds a CPU page showing where the render time goes.
+- version: 0.8.1
+  date: 2026-10-23
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.8.1
+  notes: Lighter audio load, skipping idle buses and chains.
+- version: 0.8.0
+  date: 2026-10-22
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.8.0
+  notes: The tape track becomes a sampler and the delay becomes a granular tape delay.
+- version: 0.7.1
+  date: 2026-10-21
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.7.1
+  notes: Adds BLACKHOLE and 12-BIT modes to the space reverb.
+- version: 0.7.0
+  date: 2026-10-21
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.7.0
+  notes: New look, RESIN and TINE engines, chords recorded onto steps, and projects and sounds sent to and from an FM-1 as .ravel files.
+- version: 0.6.1
+  date: 2026-10-20
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.6.1
+  notes: More envelope shapes.
+- version: 0.6.0
+  date: 2026-10-20
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.6.0
+  notes: Sound banks A to D hold 128 sounds.
+- version: 0.5.0
+  date: 2026-10-20
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.5.0
+  notes: Adds a sound bank that keeps 32 named sounds.
+- version: 0.4.1
+  date: 2026-10-20
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.4.1
+- version: 0.4.0
+  date: 2026-10-20
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.4.0
+  notes: Adds SQ, WAVE, LOGIC, ORGAN and MONO engines, PERC drum-machine tracks and several new filters.
 - version: 0.3.1
   date: 2026-10-19
   url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.3.1

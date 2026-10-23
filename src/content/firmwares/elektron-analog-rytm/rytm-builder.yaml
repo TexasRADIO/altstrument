@@ -26,7 +26,7 @@ install_notes: >-
   with right-click then Open. The default branch is cursor/rytm-mac-app-0afb.
 tags: [sysex, editor, librarian]
 versions:
-  - version: main @ 90af848
+  - version: cursor/rytm-mac-app-0afb @ 90af848
     date: 2026-10-14
     url: https://github.com/stampman3000-jpg/rytm-builder/commit/90af848d80e2d412a3b5ad38ee68ee37998a9cf8
     notes: No tagged releases; this is the latest commit.

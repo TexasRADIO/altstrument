@@ -8,9 +8,9 @@ description: >-
   Game Boy Color. Seven logical tracks share the four hardware sound channels, and the sample drums share the wave
   channel. It has a piano roll with note length and velocity, pattern pads, a mixer with pan and mute/solo, and
   drum kits with ten PCM rows and two noise voices. An Arduinoboy in mGB mode can play it from external MIDI gear.
-  The author's page runs the ROM in a browser emulator with a tutorial. The README says it is a work in progress
-  and that testing on physical hardware and audio is still going on, and the repository's notes list live
-  pattern-launch timing that does not yet meet the author's target. The build needs GBDK 4.5.0 and audio inputs
+  The author's page runs the ROM in a browser emulator with a tutorial. The README calls version 1.0 stable and
+  says pattern-launch playback has been tested on physical hardware, while its development notes still list current
+  limitations, including timing measurements. The build needs GBDK 4.5.0 and audio inputs
   that are not in the repository. The GitHub owner is EvatechLTD and the README credits dpjpandone.
 status: active
 authors:
@@ -22,7 +22,7 @@ license: unspecified
 license_notes: >-
   The README says there is currently no project-wide license granting reuse of the code or artwork. The bundled
   SameBoy browser player is MIT and keeps its own license file.
-homepage: https://buttholechopper.com/gayboy/
+homepage: https://y2kcrisis.com/gayboy
 distribution: download
 install_notes: >-
   Download GAYBOY.gb from the project's site and load it on an emulator or an MBC5 flash cartridge with battery
@@ -37,7 +37,7 @@ image:
   source_url: https://github.com/EvatechLTD/GAYBOY
   first_party: true
 versions:
-  - version: main @ 3789c42
-    date: 2026-10-18
-    url: https://github.com/EvatechLTD/GAYBOY/commit/3789c4261ec06d09a292ca029e9e0c371def7cf4
-    notes: No tagged releases; this is the latest commit.
+  - version: v1.0
+    date: 2026-10-22
+    url: https://github.com/EvatechLTD/GAYBOY/releases/tag/v1.0
+    notes: Stable release; buffered quantized pattern launches, held-A retriggers on mixer pads and a fix for gated PCM restarts.
