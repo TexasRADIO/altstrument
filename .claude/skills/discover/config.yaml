@@ -754,3 +754,9 @@ ignore:
   - url: https://github.com/ajxs/yamaha_dx7_rom_disassembly
     reason: annotated disassembly of Yamaha's DX7 v1.8 ROM that reassembles to the stock image byte for byte; redistributed stock firmware, and decompilations are skipped
     date: 2026-10-24
+  - url: https://github.com/audiofab/asfv1
+    reason: fork of whbeers/asfv1 (FV-1 assembler) with no changes; Audiofab's tools are catalogued separately
+    date: 2026-10-24
+  - url: https://github.com/audiofab/disfv1
+    reason: fork of ndf-zz/disfv1 (FV-1 disassembler) with no changes
+    date: 2026-10-24

@@ -1,0 +1,34 @@
+device: audiofab-easy-spin
+name: FV-1 Programmer
+kind: tool
+summary: >-
+  Audiofab's earlier terminal tool for the Easy Spin: assembles or disassembles FV-1 programs and writes
+  all eight program slots to the pedal over the USB programmer. Superseded by the VS Code extension.
+description: >-
+  A Python application with a text-mode interface built on Textual. It uses the asfv1 assembler and
+  disfv1 disassembler, and files can be dropped onto the program tabs. The README says it is no longer
+  developed and points to the VS Code extension instead.
+status: archived
+authors:
+  - name: Audiofab
+    url: https://github.com/audiofab
+source: https://github.com/audiofab/fv1_programmer
+source_status: open
+license: MIT
+homepage: https://audiofab.com/products/easy-spin
+distribution: download
+install_notes: >-
+  Install with pip or pipx (fv1-programmer, Python 3.8 or later), or download a prebuilt binary for
+  Windows, macOS or Ubuntu from the releases page. Linux needs libusb and a udev rule for the MCP2221
+  USB bridge.
+tags: [official, flasher, utility, python]
+versions:
+  - version: v0.5.2
+    date: 2024-04-10
+    url: https://github.com/audiofab/fv1_programmer/releases/tag/v0.5.2
+  - version: v0.5.1
+    date: 2024-04-05
+    url: https://github.com/audiofab/fv1_programmer/releases/tag/v0.5.1
+  - version: v0.5.0
+    date: 2024-04-05
+    url: https://github.com/audiofab/fv1_programmer/releases/tag/v0.5.0

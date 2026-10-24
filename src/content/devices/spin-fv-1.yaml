@@ -15,6 +15,7 @@ links:
   community:
     - label: FV-1 program directory
       url: https://mstratman.github.io/fv1-programs/
+related: [audiofab-easy-spin]
 notes: >-
   The FV-1 runs programs stored in an external EEPROM, so custom programs are
   burned to or loaded into that memory rather than flashed as a firmware image.

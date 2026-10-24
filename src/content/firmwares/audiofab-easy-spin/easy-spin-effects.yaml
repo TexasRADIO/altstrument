@@ -1,0 +1,32 @@
+device: audiofab-easy-spin
+name: Easy Spin Effects
+summary: >-
+  Audiofab's open library of 27 FV-1 effect programs (delay, reverb, pitch and chorus, modulation) for
+  the Easy Spin, each with a metadata file naming its controls. The Easy Spin web programmer loads it.
+description: >-
+  Each effect is FV-1 assembly, a pre-assembled hex file or a block diagram from Audiofab's VS Code
+  extension, next to a JSON file with its name, category, author and the role of each of the three pots.
+  An index is rebuilt by a GitHub Action on every push, and the Easy Spin web tool reads it to browse,
+  simulate and program effects. Most programs are by Audiofab; a few adapt work by other FV-1 authors.
+  Contributions come by pull request or through an issue form.
+status: active
+authors:
+  - name: Audiofab
+    url: https://github.com/audiofab
+source: https://github.com/audiofab/easy-spin-effects
+source_status: open
+license: MIT
+license_notes: >-
+  MIT for the repository. Individual effects can carry their own terms in their metadata; at least one
+  is marked "Not for commercial use".
+homepage: https://easy-spin.audiofab.com/
+distribution: browser-installer
+install_notes: >-
+  Pick effects in the Easy Spin web tool and write them to the pedal through the Audiofab USB
+  Programmer, or open the source files in the VS Code extension and program from there.
+tags: [official, fx, delay, reverb, open-source]
+versions:
+  - version: main @ 0681b66
+    date: 2026-09-08
+    url: https://github.com/audiofab/easy-spin-effects/commit/0681b66792c8729646b94a5032bf155c435470a1
+    notes: No tagged releases; this is the latest commit.

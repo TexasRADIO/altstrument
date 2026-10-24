@@ -1,0 +1,37 @@
+name: Easy Spin
+manufacturer: Audiofab
+category: pedal
+tagline: Programmable FV-1 effects pedal for guitar and bass
+description: >-
+  The Easy Spin is a programmable effects pedal from Audiofab, a Canadian
+  company, built around the Spin Semiconductor FV-1 DSP chip. It holds eight
+  effect programs, chosen with an eight-position rotary switch, and has three
+  parameter knobs, a true-bypass footswitch and an LED in a 1590B aluminium
+  enclosure. It runs from a 9 V battery or an external 9 V supply. A
+  programming jack on the side connects to the Audiofab USB Programmer, which
+  is included with the pedal.
+platform: Spin FV-1 DSP
+links:
+  manufacturer: https://audiofab.com/products/easy-spin
+  community:
+    - label: Easy Spin web programmer
+      url: https://easy-spin.audiofab.com/
+    - label: FV-1 VS Code extension docs
+      url: https://audiofab.github.io/fv1-vscode/
+related: [spin-fv-1]
+pinned: [easy-spin-effects]
+notes: >-
+  Programs are written to the pedal's FV-1 program memory over the USB
+  programmer, the same way as on other FV-1 pedals, so there is no firmware
+  image to replace. Audiofab publishes the programming tools and an effects
+  library as open source under the MIT licence.
+image:
+  src: /images/devices/audiofab-easy-spin.webp
+  style: photo
+  alt: "Audiofab Easy Spin pedal, top view: black enclosure with three white knobs labelled Pot 0, Pot 1 and Pot 2, a Program Select switch numbered 1 to 8, an LED, a footswitch and a large Easy Spin logo"
+  width: 1200
+  height: 1200
+  credit: Audiofab
+  license: manufacturer product image
+  source_url: https://audiofab.com/store/easy-spin-pedal
+  original_url: https://images.squarespace-cdn.com/content/v1/50591569c4aa7e7ffccb9263/1776955986415-JYGIJNL24BQ7YPLI0TLH/Easy-Spin-front-new_processed.webp

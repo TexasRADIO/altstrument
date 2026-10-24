@@ -1,0 +1,45 @@
+device: audiofab-easy-spin
+also_devices: [spin-fv-1]
+name: Audiofab FV-1 VS Code extension
+kind: tool
+summary: >-
+  Visual Studio Code extension for FV-1 development: assembly editing with diagnostics, a block-diagram
+  editor that compiles to assembly, a simulator with an oscilloscope and step debugger, and one-click
+  programming of the Easy Spin.
+description: >-
+  Published by Audiofab on the Visual Studio Marketplace. Block diagrams are compiled with register
+  pruning and constant folding to fit the FV-1's 128-instruction limit. The simulator plays audio and
+  steps through code, and the extension writes programs to the pedal through the Audiofab USB
+  Programmer. It replaces Audiofab's earlier terminal programmer and can start new diagrams from
+  templates in the Easy Spin effects library. Its documentation credits SpinCAD Designer as the
+  inspiration.
+status: active
+authors:
+  - name: Audiofab
+    url: https://github.com/audiofab
+source: https://github.com/audiofab/fv1-vscode
+source_status: open
+license: MIT
+homepage: https://audiofab.github.io/fv1-vscode/
+distribution: download
+install_notes: >-
+  Install "Audiofab FV-1" from the Extensions view in VS Code. Programming the pedal needs the Audiofab
+  USB Programmer; other FV-1 boards can use the assembler and simulator.
+tags: [official, editor, emulator, vscode, sdk, fx]
+versions:
+  - version: v1_8_6
+    date: 2026-09-09
+    url: https://github.com/audiofab/fv1-vscode/releases/tag/v1_8_6
+    notes: New diagrams from effects-library templates, automatic pot labels in the simulator, Allpass and Chirp blocks, chorus and pitch-shift fixes.
+  - version: v1_8_5
+    date: 2026-09-01
+    url: https://github.com/audiofab/fv1-vscode/releases/tag/v1_8_5
+  - version: v1_8_4
+    date: 2026-08-25
+    url: https://github.com/audiofab/fv1-vscode/releases/tag/v1_8_4
+  - version: v1_8_3
+    date: 2026-08-22
+    url: https://github.com/audiofab/fv1-vscode/releases/tag/v1_8_3
+  - version: v1_8_2
+    date: 2026-08-20
+    url: https://github.com/audiofab/fv1-vscode/releases/tag/v1_8_2
