@@ -42,7 +42,12 @@ In scope (README "Scope"): firmware that replaces or modifies what runs on a mus
 
 Reject when any of these hold. Record the reason.
 - Closed official manufacturer firmware (stock OS releases). Open-source firmware published by the manufacturer itself IS in scope: list it with the `official` tag (e.g. MatrixOS, FM1 Open, Poly Effects digit_ui, Glitch Boy). Closed official firmware only where the device's existing entries already catalog it the same way (Noise Engineering Legio and Versio do this; follow the device directory's precedent).
-- Redistributed or mirrored stock firmware, or anything that links to it. Exception: a file the manufacturer licenses for redistribution, matched by hash. Today that is only M-VAVE's FM-1 V15 image (`sdk/firmware/FM-1_015.fwsc` in `m-vave/fm1_open`, Apache-2.0, git blob `ce49cc1595b67347c68a3ac7463017f9fa8c19dd`, 699,956 bytes). Compare a bundled copy's blob SHA from the repo tree API. SMK-37 stock packages and any other M-VAVE file are not covered.
+- Redistributed or mirrored stock firmware, or anything that links to it. Exception: a file the manufacturer itself publishes with an explicit licence to redistribute it, matched by hash, as long as the entry says so in `license_notes`. Today that covers:
+  - M-VAVE's FM-1 V15 image: `sdk/firmware/FM-1_015.fwsc` in `m-vave/fm1_open`, Apache-2.0, git blob `ce49cc1595b67347c68a3ac7463017f9fa8c19dd`, 699,956 bytes.
+  - M-VAVE's SMK-37 Pro and Elite V16 images: `sdk/firmware/SMK37-Pro-V16.fwsc` (blob `ad5ff6aa3888fa07408304e9af026e5e1eb85fe7`, 705,252 bytes) and `sdk/firmware/SMK37-Elite-V16.fwsc` (blob `821236a1292a8be5fc7aabfc6b4505b178e1d250`, 705,236 bytes) in `m-vave/smk37_open`. Its THIRD_PARTY.md permits binary redistribution for SMK-37 Pro and Elite devices.
+  - Stock firmware a manufacturer releases as open source, such as Super Synthesis' CC0 2OPFM images.
+
+  Compare a bundled or linked copy's blob SHA from the repo tree API, or its byte size and hash for a download. Any other stock file, including FM-1 V16 and older SMK-37 packages, is not covered.
 - No working source repository and no working homepage.
 - Not music hardware: desktop software, plugins, single-board computers, general MCU projects, keyboards in the computer sense, lighting. Game consoles and similar handhelds ARE in scope when the project is music software for them (trackers, sequencers, synths, MIDI tools): list them under category `handheld`.
 - Pure news about a stock OS update with no third-party code.
