@@ -44,6 +44,15 @@ export default defineConfig({
   output: 'static',
   site: process.env.SITE_URL,
   trailingSlash: 'never',
+  // Takumi renders OG cards off the main thread, so several at once roughly halves page generation.
+  build: { concurrency: 4 },
+  experimental: {
+    // Reuse last build's output for paths whose getStaticPaths cacheKey and route code are
+    // unchanged (src/lib/cache-key.ts). The cache lives in node_modules/.astro, which
+    // Cloudflare's build cache and the CI cache step keep between builds.
+    incrementalBuild: true,
+    // parallelPrerender was tried and left off: it made cold and warm builds ~3s slower.
+  },
   // Writes sitemap-index.xml + sitemap-0.xml; public/_redirects sends /sitemap.xml to the index.
   integrations: [sitemap({ filter: (page) => !hiddenPaths.has(new URL(page).pathname.replace(/\/$/, '')) })],
   vite: {

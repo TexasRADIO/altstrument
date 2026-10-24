@@ -12,6 +12,7 @@ import Prose from '@/components/Prose.astro';
 import FirmwareMedia from '@/components/FirmwareMedia.astro';
 import DevicePhoto from '@/components/DevicePhoto.astro';
 import { KIND_LABELS, DISTRIBUTION_LABELS } from '@/lib/labels';
+import { cacheKeyOf } from '@/lib/cache-key';
 import { getDevicesWithFirmwares, githubEditUrl, hostOf, listNames, plural, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
 
 export async function getStaticPaths() {
@@ -20,10 +21,19 @@ export async function getStaticPaths() {
   // One page per entry, under its primary device; devices that list it through
   // also_devices link here. Entries hidden as stale still get a page so
   // existing links keep working.
-  const page = (device: DeviceItem, hidden: boolean) => (firmware: FirmwareItem) => ({
-    params: { device: device.id, fw: firmware.slug },
-    props: { device, firmware, hidden, targets: firmware.deviceIds.map((id) => byId.get(id)!) },
-  });
+  const page = (device: DeviceItem, hidden: boolean) => (firmware: FirmwareItem) => {
+    const props = { device, firmware, hidden, targets: firmware.deviceIds.map((id) => byId.get(id)!) };
+    // Keyed on the fields the page renders, not the whole device: hashing every sibling
+    // firmware once per page cost more than re-rendering. Reading another device or
+    // target field below means adding it here.
+    const cacheKey = cacheKeyOf(
+      { url: device.url, data: device.data },
+      firmware,
+      hidden,
+      props.targets.map((t) => ({ url: t.url, manufacturerSlug: t.manufacturerSlug, data: t.data })),
+    );
+    return { params: { device: device.id, fw: firmware.slug }, props, cacheKey };
+  };
   return devices.flatMap((device) => [
     ...device.firmwares.filter((f) => f.deviceId === device.id).map(page(device, false)),
     ...device.hiddenFirmwares.filter((f) => f.deviceId === device.id).map(page(device, true)),

@@ -2,15 +2,16 @@
 import Base from '@/layouts/Base.astro';
 import Breadcrumb from '@/components/Breadcrumb.astro';
 import DeviceCard from '@/components/DeviceCard.astro';
+import { cacheKeyOf } from '@/lib/cache-key';
 import { getDevicesWithFirmwares, getManufacturerEntries, groupByManufacturer, hostOf, plural, type Manufacturer } from '@/lib/catalog';
 
 export async function getStaticPaths() {
   const [devices, entries] = await Promise.all([getDevicesWithFirmwares(), getManufacturerEntries()]);
   const manufacturers = groupByManufacturer(devices, entries);
-  return manufacturers.map((manufacturer) => ({
-    params: { slug: manufacturer.slug },
-    props: { manufacturer, hasFile: entries.has(manufacturer.slug) },
-  }));
+  return manufacturers.map((manufacturer) => {
+    const props = { manufacturer, hasFile: entries.has(manufacturer.slug) };
+    return { params: { slug: manufacturer.slug }, props, cacheKey: cacheKeyOf(props) };
+  });
 }
 
 interface Props { manufacturer: Manufacturer; hasFile: boolean }

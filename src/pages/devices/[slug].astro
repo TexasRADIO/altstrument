@@ -7,14 +7,15 @@ import Prose from '@/components/Prose.astro';
 import DevicePhoto from '@/components/DevicePhoto.astro';
 import { CATEGORY_LABELS } from '@/content/schema';
 import { compareFirmwaresByUpdated, firmwareUpdated, getDevicesWithFirmwares, hostOf, isoDate, plural, type DeviceItem, type FirmwareItem } from '@/lib/catalog';
+import { cacheKeyOf } from '@/lib/cache-key';
 import { logoCreditLabel, looksLikeSpdx, spdxUrl } from '@/lib/labels';
 
 export async function getStaticPaths() {
   const devices = await getDevicesWithFirmwares();
-  return devices.map((device) => ({
-    params: { slug: device.id },
-    props: { device, related: devices.filter((o) => device.data.related.includes(o.id)) },
-  }));
+  return devices.map((device) => {
+    const props = { device, related: devices.filter((o) => device.data.related.includes(o.id)) };
+    return { params: { slug: device.id }, props, cacheKey: cacheKeyOf(props) };
+  });
 }
 
 interface Props { device: DeviceItem; related: DeviceItem[] }

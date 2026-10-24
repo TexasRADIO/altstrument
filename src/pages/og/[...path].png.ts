@@ -1,6 +1,7 @@
 import type { APIContext } from 'astro';
 import { KIND_LABELS } from '@/lib/labels';
 import { renderCard, type CardInput } from '@/lib/og';
+import { cacheKeyOf, publicFileHash } from '@/lib/cache-key';
 import { getDevicesWithFirmwares, getManufacturerEntries, groupByManufacturer, listNames, plural, siteStats, type DeviceItem } from '@/lib/catalog';
 
 // One card per HTML page, at /og/<page path>.png (the home page is /og/index.png).
@@ -8,7 +9,12 @@ import { getDevicesWithFirmwares, getManufacturerEntries, groupByManufacturer, l
 export async function getStaticPaths() {
   const [devices, entries] = await Promise.all([getDevicesWithFirmwares(), getManufacturerEntries()]);
   const stats = siteStats(devices);
-  const card = (path: string, props: CardInput) => ({ params: { path }, props });
+  // The visual is read from public/ by renderCard, so its bytes are part of the key.
+  const card = (path: string, props: CardInput) => ({
+    params: { path },
+    props,
+    cacheKey: cacheKeyOf(props, props.visual ? publicFileHash(props.visual) : ''),
+  });
   const visualOf = (d: DeviceItem) => d.data.image?.src ?? d.logo?.src;
   const byId = new Map(devices.map((d) => [d.id, d]));
   const counts = (d: DeviceItem) => {

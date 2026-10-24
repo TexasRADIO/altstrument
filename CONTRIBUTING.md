@@ -26,6 +26,10 @@ Some entries are not files in this repository. They are fetched from an upstream
 - To change how fields are mapped (status, license, tags), edit the loader in `src/loaders/workshop-computer.ts`.
 - Builds need network access for these entries. The loader caches on the directory listing's ETag, so an unchanged upstream costs one request. Set `GITHUB_TOKEN` to raise the GitHub API rate limit, or `ALTSTRUMENT_SKIP_REMOTE=1` to build offline from the cached data store.
 
+## Build cache
+
+Builds reuse the previous output for OG cards and catalog pages whose inputs have not changed. The cache lives in `node_modules/.astro`, and Cloudflare's build cache and the GitHub CI cache keep it between builds. A page's cached output is invalidated by its props (`cacheKey`), by any device photo or logo its OG card shows, by changes to the route's code or to the components and packages it imports, and by changes to `astro.config.mjs` or `pnpm-lock.yaml`. A page that renders something not in its props or code, such as a file read from disk, must include that input in its cacheKey via `src/lib/cache-key.ts`. To force a full rebuild, run `rm -rf node_modules/.astro` locally, or clear the build cache in the Cloudflare dashboard under Settings → Build → Build cache. `pnpm build:timings` prints a per-phase timing report.
+
 ## Finding new entries
 
 The repository ships a Claude Code skill, `/discover`, that looks for custom firmware projects and devices missing from the catalog. Run it in a Claude Code session opened at the repository root. It:

@@ -23,6 +23,15 @@ jobs:
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
+
+      # Astro incremental build cache and content data store (node_modules/.astro).
+      - name: Restore Astro build cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.astro
+          key: astro-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-${{ github.sha }}
+          restore-keys: astro-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
+
       - run: pnpm validate
       - run: pnpm check
         env:
