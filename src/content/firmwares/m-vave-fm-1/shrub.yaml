@@ -1,0 +1,21 @@
+device: m-vave-fm-1
+name: SHRUB
+summary: >-
+  Wavetable synth firmware for the FM-1 by Steve Duda of Xfer Records, described as a reduced Serum:
+  wavetable oscillator, Serum 2-derived filter, arpeggiator and motion sequencer. Announced as free; in
+  private testing.
+description: >-
+  Synth Anatomy reported on 2026-10-24 that SHRUB is synth-only, with no groovebox features. The
+  announced engine has a wavetable oscillator, a filter taken from Serum 2, two ADSR envelopes, two
+  LFOs, a multi-effects section, an arpeggiator, an eight-lane motion sequencer and built-in scales.
+  Filters are not per voice, and the author says the sound quality is below Serum's. Testers were
+  recruited in the r/MVaveFM1 subreddit. No download, source or release date has been published.
+status: announced
+authors:
+  - name: Steve Duda (Xfer Records)
+    url: https://xferrecords.com/
+source_status: closed
+license: unspecified
+license_notes: Announced as a free download; no licence terms or source have been published.
+homepage: https://www.reddit.com/r/MVaveFM1/comments/1xdyrwa/shrub_firmware_testers/
+tags: [synth-engine, wavetable, arpeggiator, sequencer, fx]
