@@ -20,6 +20,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          # The runner image can lag behind the newest 22.x; Astro 7.4 needs >=22.23.4.
+          check-latest: true
           cache: pnpm
 
       - run: pnpm install --frozen-lockfile
