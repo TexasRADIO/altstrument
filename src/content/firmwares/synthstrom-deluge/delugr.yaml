@@ -16,12 +16,6 @@ source_status: open
 license: MIT
 homepage: https://delugr.haila.fi/
 tags: [file-manager, librarian, samples, web]
-image:
-  url: https://forums.synthstrom.com/uploads/editor/vy/u9euk5n4mbic.png
-  alt: Delugr start page in Chrome asking for the Deluge memory card root folder
-  credit: Teemu Haila
-  source_url: https://forums.synthstrom.com/discussion/4547/delugr-a-wip-deluge-file-browser-in-the-browser
-  first_party: true
 versions:
   - version: main @ 3389c07
     date: 2026-10-04
