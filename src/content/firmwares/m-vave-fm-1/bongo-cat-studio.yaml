@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: Bongo Cat's Tiny Studio
+summary: >-
+  Felucca-based FM-1 firmware with four animated cat bandmates (lead, keys, bass, drums), a looper, a generated
+  backing band and all 13 Felucca engines on each part.
+description: >-
+  A custom build of Felucca 1.6.1. The player's part is recordable in 1, 2 or 4 bars with replace or overdub and
+  quantised or as-played timing; the keys, bass and drum parts follow a chosen key and one of four chord
+  progressions with swing, band energy and room reverb. Each part picks its own engine, preset, envelope and
+  effects, with an A/B sound swap, and there are per-part mute and solo and tap tempo that follows external MIDI
+  clock. Screens show cat animations, coats, hats and three hidden scenes triggered by note phrases; a calm mode
+  freezes the motion. The release bundle includes a browser preview that runs the same engine as WebAssembly. The
+  author describes the build as AI-assisted and reports testing of the 0.3.0 to 0.4.0-rc1 upgrade on one FM-1
+  only, with no long hardware soak. The package identity is FM-1_980 and USB MIDI and audio still appear as
+  Felucca.
+status: active
+authors:
+- name: Impossible Knot
+  url: https://github.com/ImpossibleKnot
+source: https://github.com/ImpossibleKnot/bongo-cat-studio
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The cat layer, procedural artwork and tools are GPL-3.0-only. Felucca's MIT engines, ported DaisySP, Rings and
+  msfa code, fonts and CC0 samples keep their own licences (LICENSING.md, LICENSES/). The cat drawings are
+  original procedural art with no meme sprites bundled, and the project says it is not affiliated with the Bongo
+  Cat meme. The repository's promotional GIF and the release's MP4 contain an M-VAVE product photograph that stays
+  under M-VAVE's copyright and is outside the GPL; it is not in the firmware.
+homepage: https://github.com/ImpossibleKnot/bongo-cat-studio#readme
+distribution: download
+install_notes: >-
+  Download the release ZIP, take a verified backup with tools/capture_felucca_backup.py, then install the .fwsc
+  with the bundled Felucca updater (tools/felucca-1.6.1/fm1_install.py) over USB. The only tested route is Tiny
+  Studio 0.3.0 to 0.4.0-rc1; from any other firmware use that firmware's own way back first. A Felucca backup
+  restores Felucca, not a Bongo jam. The Felucca update loader and its OCT- plus OCT+ recovery path are kept.
+brick_risk: true
+tags: [synth-engine, sequencer, looper, chords, performance, fork]
+image:
+  url: https://raw.githubusercontent.com/ImpossibleKnot/bongo-cat-studio/main/docs/media/studio.gif
+  alt: "Pixel-art cat with headphones playing a keyboard on the FM-1 screen, with tempo, patch name and KEYS, BASS and DRUMS cat icons"
+  credit: Impossible Knot
+  source_url: https://github.com/ImpossibleKnot/bongo-cat-studio
+  first_party: true
+versions:
+- version: 0.4.0-rc1
+  date: 2026-10-23
+  url: https://github.com/ImpossibleKnot/bongo-cat-studio/releases/tag/v0.4.0-rc1
+  notes: First public release candidate; pre-release.

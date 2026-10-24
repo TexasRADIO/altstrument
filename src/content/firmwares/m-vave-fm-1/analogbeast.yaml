@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: analogBEAST
+summary: >-
+  Golana-based synth and sequencer firmware with MIKROKORG and BRUTE signal routings, 128 patterns across eight
+  banks, and on-device SONG and ALBUM modes; comes with a web editor, emulator and installer.
+description: >-
+  Built on Golana, itself a Felucca fork. The two routings share one engine: MIKROKORG is a two-oscillator
+  virtual-analog layout with sync and ring modulation, BRUTE adds saw, pulse, wavefolded and sub oscillators, a
+  feedback control and a nonlinear low-, band- and high-pass filter described as Steiner-Parker-inspired. There
+  are 32 sound programs and eight pattern banks of 16 patterns, with up to 64 steps in banks A to D and 16 in E to
+  H. SONG mode chains patterns and commands (pattern, tempo, preset, arp, repeat, jump, transpose, octave) over 32
+  songs, and ALBUM mode plays up to 32 songs from each of four albums. Version 1.1 added live bank and pattern
+  switching on the keys and six more song commands. The package identity stays FM-1_901 for updater
+  compatibility. The README calls the .fwsc hardware tested; the web apps are deployed separately from the
+  repository.
+status: active
+authors:
+- name: dzwerg
+  url: https://github.com/dzwerg
+source: https://github.com/dzwerg/analogBEAST
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca (LICENSING.md); ported DSP code, fonts and samples keep their own licences (LICENSES/).
+  The README credits Gadlele's Golana as the base.
+homepage: https://dzwerg.github.io/analogBEAST/
+distribution: browser-installer
+install_notes: >-
+  Use the web installer in Chrome or Edge over USB (MIDI and SysEx permission), or flash the .fwsc from the
+  releases page. The README tells you to back up personal presets, patterns, songs and projects first and to
+  confirm that the device is detected before writing. Do not rename the FM-1_901 package identity or the
+  Felucca Update loader name.
+brick_risk: true
+tags: [synth-engine, sequencer, filter, arpeggiator, editor, emulator, fork]
+versions:
+- version: '1.1'
+  date: 2026-10-23
+  url: https://github.com/dzwerg/analogBEAST/releases/tag/v1.1
+  notes: Adds live bank and pattern switching, queued next pattern and six SONG commands (OCTAVE, TRANSPOSE, REPEAT, JUMP, ENDSTEP, BEGIN).
+- version: '1.0'
+  date: 2026-10-22
+  url: https://github.com/dzwerg/analogBEAST/releases/tag/v1.0
+  notes: First release.

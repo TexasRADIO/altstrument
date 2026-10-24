@@ -1,0 +1,42 @@
+device: 4ms-dual-looping-delay
+name: DLD-varispeed
+summary: Fork of the 4ms DLD firmware where a delay-time change moves the read head at up to half or double speed to the new position, bending pitch, instead of crossfading. Adds a send/return loop insert and a reverb octave switch.
+description: >-
+  When the delay time changes, the read head speeds up or slows down, between
+  half and double speed, until it reaches the new position, so the pitch glides
+  instead of the audio crossfading. A per-channel inertia setting, held with
+  the Ping button while turning a Time knob, sets how fast the speed changes,
+  and is saved to flash. In the clock-quantized time modes the glide waits
+  for the next clock tick and ends on the clock grid.
+
+  A later commit moves the send/return insert inside the delay loop, so the
+  return replaces what the read head plays for both feedback and wet output,
+  with a bipolar mix control. The right time switch selects a reverb octave
+  (up, off or down) in place of its stock range function, and the left time
+  switch sets the range for both channels. The repository includes a host test
+  harness for the audio code.
+status: active
+authors:
+  - name: Chris Nicholls
+    url: https://github.com/Chris-Nicholls
+source: https://github.com/Chris-Nicholls/DLD-varispeed
+source_status: open
+license: MIT
+license_notes: >-
+  The software is MIT, copyright Dan Green. The hardware files in the
+  upstream repository are CC BY-NC-SA 4.0, and the licence file asks that
+  derivative works do not use the 4ms name or logo.
+distribution: source-only
+install_notes: >-
+  Build with the GCC ARM toolchain and the stmlib and stm-audio-bootloader
+  repositories next to the project. Run make wav and play the file into the
+  module's audio input to use the built-in bootloader (up to about five
+  minutes), or flash main.bin at 0x08008000 over the SWD header with an
+  ST-Link or J-Link. Keep the official 4ms firmware to go back.
+brick_risk: false
+tags: [delay, looper, fx, reverb, fork, utility]
+versions:
+  - version: main @ b924d6c
+    date: 2026-09-27
+    url: https://github.com/Chris-Nicholls/DLD-varispeed/commit/b924d6c4b08364d1f6b804983140374e76ccbc44
+    notes: No tagged releases; this is the latest commit.

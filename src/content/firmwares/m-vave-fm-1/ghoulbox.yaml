@@ -25,6 +25,10 @@ video:
   first_party: true
   found_via: https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth
 versions:
+- version: '2.4'
+  date: 2026-10-24
+  url: https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth/releases/tag/ghoulbox-v2.4
+  notes: Adds SCENES to switch the music live, a sleep timer, FREEZE to keep a DREAM pass and SEQ OUT to send the sequencer over USB MIDI; removes USB SERIAL. The notes say it has not been tested on an FM-1 yet.
 - version: 2.3.2
   date: 2026-10-17
   url: https://github.com/jasonpersinger/ghoulbox-fm1-dungeon-synth/releases/tag/ghoulbox-v2.3.2

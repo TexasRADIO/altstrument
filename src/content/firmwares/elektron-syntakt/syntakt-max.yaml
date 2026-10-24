@@ -1,0 +1,56 @@
+device: elektron-syntakt
+name: Syntakt MAX
+summary: Fork of SyntHack OS with a Windows builder that combines its mods with the Deja Vu LFO, a 31-wave SY CHORD bank and optionally the SY FM4 engine, patched into your own Syntakt OS 1.41 file.
+description: >-
+  Syntakt MAX collects community mods for Syntakt OS 1.41 behind an offline
+  Windows program. It takes the SyntHack master compressor, third send effect,
+  beat repeat, dual mono input and readable parameter values, and adds the
+  Deja Vu random-loop LFO shapes and 31 SY CHORD waves from the Syntakt
+  Firmware Workbench. The modular builder releases also offer the four-operator
+  SY FM4 engine and let any combination of the eight feature groups be chosen,
+  with dependencies added automatically.
+
+  The program accepts only the stock 1.41 file with a recorded checksum,
+  checks each patch against the original bytes and verifies the result, and it
+  never connects to the instrument. The author reports that the original MAX
+  1.0 and the full set with FM4 booted and worked on one Syntakt; other
+  selections are build-checked only. Replaced SY CHORD waves change how
+  existing sounds play. The repository holds no Elektron firmware, and the
+  default branch of the fork still shows the upstream SyntHack readme, so the
+  release pages carry the documentation.
+status: active
+authors:
+  - name: Kári Garðarsson
+    url: https://github.com/karigardarsson
+source: https://github.com/karigardarsson/Synthack-OS/tree/syntakt-max-modular-builder-rc2
+source_status: open
+license: MIT
+license_notes: >-
+  Inherited from SyntHack OS (MIT). The Windows builder bundles runtime
+  libraries and a container tool with their own notices, shipped in the
+  release ZIP. No rights over Elektron's firmware are granted.
+homepage: https://github.com/karigardarsson/Synthack-OS/releases/tag/syntakt-max-modular-builder-rc2
+distribution: patch-your-own
+requires_stock: "1.41"
+install_notes: >-
+  Download Syntakt OS 1.41 from Elektron yourself, run the builder from the
+  release ZIP on Windows 10 or 11 (64-bit) and pick that file; it rejects any
+  other version. Back up projects first, flash the output with Elektron
+  Transfer, and keep the stock file to go back. If the OS fails to start, the
+  recovery guide describes holding FUNC at power-on and sending the stock OS
+  over MIDI DIN. The executable is unsigned.
+brick_risk: true
+tags: [fx, compressor, sequencer, ui, patch, fm, lfo, fork]
+versions:
+  - version: Modular Builder RC2
+    date: 2026-10-20
+    url: https://github.com/karigardarsson/Synthack-OS/releases/tag/syntakt-max-modular-builder-rc2
+    notes: Pre-release. Restores native MIDI parameter ownership for the third send, compressor and beat repeat.
+  - version: Modular Builder RC1
+    date: 2026-10-19
+    url: https://github.com/karigardarsson/Synthack-OS/releases/tag/syntakt-max-modular-builder-rc1
+    notes: Pre-release. Adds SY FM4 and per-feature selection.
+  - version: MAX 1.0
+    date: 2026-10-17
+    url: https://github.com/karigardarsson/Synthack-OS/releases/tag/syntakt-max-v1.0
+    notes: Pre-release. Fixed seven-feature bundle with the Windows builder.

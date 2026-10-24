@@ -44,7 +44,7 @@ image:
   source_url: https://github.com/benbadio/hera-fm1
   first_party: true
 versions:
-- version: main @ a24d034
+- version: main @ 76b7ee8
   date: 2026-10-21
-  url: https://github.com/benbadio/hera-fm1/commit/a24d034b4cccd73e7a05c6be9ee1feef27b3610c
+  url: https://github.com/benbadio/hera-fm1/commit/76b7ee8484d24163587cfbca759f7b19f7457105
   notes: No tagged releases; this is the latest commit. The README names this version 0.1, a preview before 1.0.

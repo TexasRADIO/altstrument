@@ -4,9 +4,9 @@ summary: >-
   SMK-37 packages for the Pro, Elite and MKE-P37 in the Shine On releases: the string-machine firmware built for the
   keyboard's board layer. The licensing file says it is untested on an SMK-37.
 description: >-
-  The same string ensemble, register filters, phaser, delay, reverb, arpeggiator and two-track sequencer as the FM-1
+  The same string ensemble, register filters, phaser, delay, reverb, arpeggiator and sequencer (four sounds with a mixer from 3.0) as the FM-1
   version, built from the same repository with the SMK-37 board layer that OberVave took from genkigenki's reference port.
-  Releases 1.2.1 to 1.2.3 each carry three packages that differ only in the model name they report, one for the SMK-37 Pro,
+  Releases from 1.2.1 on each carry three packages that differ only in the model name they report, one for the SMK-37 Pro,
   one for the Elite and one for the MKE-P37, so that M-VAVE's updater still accepts that model's factory package. The
   repository's README and install text cover only the FM-1, and the SMK-37 layer is marked in LICENSING.md as untested on an SMK-37 in
   this firmware, so treat these as unverified builds. OberVave's SMK-37 page describes the same layer and its flash-safety rules.
@@ -33,6 +33,14 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, fx, reverb, delay, sequencer, arpeggiator, midi, usb-midi]
 versions:
+- version: v3.0.1
+  date: 2026-10-23
+  url: https://github.com/zvenson/shineon/releases/tag/v3.0.1
+  notes: Reports its own firmware identity so the Firmware Hub can tell it from other builds that shared 3.0's.
+- version: v3.0
+  date: 2026-10-23
+  url: https://github.com/zvenson/shineon/releases/tag/v3.0
+  notes: Four sounds with their own ensemble and phaser, a mixer with delay, reverb and drive sends and a master section, and patterns that keep their sounds and mix; 1.x settings and patterns carry over.
 - version: v1.2.3
   date: 2026-10-19
   url: https://github.com/zvenson/shineon/releases/tag/v1.2.3

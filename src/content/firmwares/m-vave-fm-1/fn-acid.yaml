@@ -30,7 +30,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, sequencer, fx, delay, filter, generative]
 versions:
-- version: main @ ffc9fa6
-  date: 2026-10-20
-  url: https://github.com/Electro-Dig/function-acid-fw/commit/ffc9fa6
-  notes: No tagged releases; this is the latest commit, test build 0.37.
+- version: main @ 96333e3
+  date: 2026-10-24
+  url: https://github.com/Electro-Dig/function-acid-fw/commit/96333e3
+  notes: No tagged releases; this is the latest commit, test build 0.49.

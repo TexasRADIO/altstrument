@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: DRIFT
+summary: >-
+  Felucca-based ambient synth with a single generative Euclidean sequencer track and eight voices, plus a
+  browser player, installer and sample uploader.
+description: >-
+  Fork of Felucca that narrows the instrument to classic synth sounds. It has two oscillators with
+  classic waveforms and three user sample slots, an ADSR envelope, a resonant filter, an assignable LFO,
+  three delay modes and six reverb types. The sequencer repeats Euclidean patterns with bars, note count,
+  duration, probability, direction, interval, chaos and timing settings, and keeps running while you edit.
+  Root, scale and note range can be set, with optional scale LEDs and a scale-only keyboard. Patches are
+  kept in a six-row list with favourites. The author notes that the 0.8 package still needed testing on
+  a physical FM-1 before submission to the Firmware Hub. This is a different project from DriftSeq and
+  from Haave.
+status: active
+authors:
+- name: FBNFRTG
+  url: https://github.com/FBNFRTG
+source: https://github.com/FBNFRTG/drift-fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherits Felucca's licensing: ported DSP files keep their own licences (DaisySP and Rings under MIT,
+  msfa under Apache-2.0), and five engines come from the MIT-licensed Felucca-Engines submodule. See
+  LICENSING.md and CREDITS.md in the repository.
+homepage: https://www.fbnfrtg.de/tools/fm1/drift/
+distribution: browser-installer
+install_notes: >-
+  Flash the .fwsc from the GitHub release, or use the website installer in desktop Chrome or Edge over
+  HTTPS, with power and USB connected. The firmware keeps the identity FM-1_983 across versions. Back up
+  patches and samples first, since other firmwares' projects and samples may not load. The installer links
+  to Felucca's recovery path back to the official firmware.
+brick_risk: true
+tags: [synth-engine, sequencer, generative, euclidean, fx, sampler, editor]
+image:
+  url: https://raw.githubusercontent.com/FBNFRTG/drift-fm1/main/web/site/assets/drift-sequence.png
+  alt: "DRIFT sequence page on the 240x240 screen: white text on black showing direction, interval, chaos and time settings above a step grid with short note bars"
+  credit: FBNFRTG
+  source_url: https://github.com/FBNFRTG/drift-fm1
+  first_party: true
+versions:
+- version: '0.8'
+  date: 2026-10-23
+  url: https://github.com/FBNFRTG/drift-fm1/releases/tag/v0.8
+  notes: First tagged release on GitHub; ships drift-fm1-0.8.fwsc and a source zip.

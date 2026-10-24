@@ -1,0 +1,39 @@
+name: Dual Looping Delay
+manufacturer: 4ms Company
+category: eurorack
+tagline: Two-channel clock-syncable looping delay module
+description: >-
+  The Dual Looping Delay (DLD) is a Eurorack module from 4ms Company, designed
+  with Gary Hall. It holds two independent delay and loop channels, each with
+  time, feedback, reverse and infinite-hold controls and its own send and
+  return jacks, and can lock its delay times to an external clock through a
+  ping input.
+
+  The module records into SDRAM and runs on an STM32F427 with two CS4271 audio
+  codecs. 4ms publishes the firmware source under the MIT license and updates
+  the module by playing an audio file into its input through a built-in
+  bootloader.
+platform: STM32F427 (ARM Cortex-M4F, 180 MHz)
+stock_firmware: "5"
+links:
+  manufacturer: https://4mscompany.com/dld.php
+  community:
+    - label: DLD firmware repository
+      url: https://github.com/4ms/DLD
+    - label: Dual Looping Delay thread on Mod Wiggler
+      url: https://www.modwiggler.com/forum/viewtopic.php?t=136537
+notes: >-
+  Community builds start from 4ms's open firmware source, which targets the
+  STM32F427 board. Check your module's hardware revision against the
+  project's notes before flashing.
+image:
+  src: /images/devices/4ms-dual-looping-delay.webp
+  style: photo
+  alt: Front panel of the 4ms Dual Looping Delay with two sets of time, feedback, mix and delay-feed knobs, a central ping button and clock outputs, and the jacks along the lower half
+  width: 900
+  height: 1107
+  credit: 4ms Company
+  license: manufacturer product image
+  source_url: https://4mscompany.com/dld.php
+  original_url: https://4mscompany.com/DLD/dld_front09.jpg
+pinned: [dld-firmware]

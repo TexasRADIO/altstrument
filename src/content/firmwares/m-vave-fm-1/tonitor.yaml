@@ -31,7 +31,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, looper, granular, fx, reverb, fm, performance, ui]
 versions:
-- version: main @ 01f23b1
+- version: main @ f51bd68
   date: 2026-10-23
-  url: https://github.com/nzimas/tonitor/commit/01f23b123a1e06d8a99b7723b91c6960e5589fe3
-  notes: No tagged releases; this is the latest commit. The changelog lists 0.55 as the newest version.
+  url: https://github.com/nzimas/tonitor/commit/f51bd68313f09a113b69ed0740a7866d912de8ba
+  notes: No tagged releases; this is the latest commit. The changelog lists 0.56 as the newest version.

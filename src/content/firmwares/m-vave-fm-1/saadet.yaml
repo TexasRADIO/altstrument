@@ -1,0 +1,50 @@
+device: m-vave-fm-1
+name: Saadet
+summary: >-
+  Single-part synth firmware forked from Melodee: Prophet, FM6, CZ-1 and JUNO-106 engines (one at a time), 384
+  shared user sound slots, arpeggiator, Bluetooth MIDI and native 24-bit audio.
+description: >-
+  Rights warning: the repository bundles Roland's 128 Juno-106 factory patches, Casio's 64 CZ-1 factory tones and
+  Sequential's 200 Prophet-5/10 factory programs (v1.03) as SysEx sound data used for the factory presets, and its
+  licensing file says the rights stay with those vendors and that no licence is granted.
+  A dedicated one-part instrument: sequencing, multitrack recording and shared insert effects were left out.
+  It adds HOLD, chords, strum, scales, microtonal tuning, favourites, automatic recall of the last sound and SysEx
+  import and export, plus a web editor with full backups. Input is USB MIDI, TRS MIDI and Bluetooth MIDI, and the
+  firmware remembers and retries the last outgoing Bluetooth device. USB audio is stereo at 44.1 kHz in 16 or 24
+  bit with a synth-master capture. The author labels 0.1.0 experimental and lists final audio, timing and
+  Bluetooth acceptance on hardware as still to be recorded. Installing it over Melodee can replace Melodee's
+  project A data, and Melodee backups cannot be restored as Saadet backups.
+status: active
+authors:
+- name: keremimo
+  url: https://github.com/keremimo
+source: https://github.com/keremimo/saadet
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  The firmware files in the fm1-base build are MPL-2.0 file by file (FM6 files with msfa portions are MPL-2.0 AND
+  Apache-2.0); the web editor, build tools and tests, and the retained source of the retired platform, are
+  GPL-3.0-only. Fonts, DaisySP, Rings and the uPD933 model keep their own licences (LICENSING.md, LICENSES/). The
+  bundled Casio, Sequential and Roland factory sound data is under the vendors' rights, with no licence granted.
+  The repository also holds JieLi's unmodified wl82loader.bin RAM recovery helper (Apache-2.0) and no M-VAVE
+  firmware.
+homepage: https://keremimo.github.io/saadet/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer (Chrome or Edge, USB). Back up sounds first; the optional m-bootloader 1.2 recovery
+  is off by default and is written after the application. A power loss during the bootloader write can still
+  need the RP2040 USB_KEY recovery. Switching between Saadet and Melodee needs backups of both, since their
+  data layouts differ.
+brick_risk: true
+tags: [synth-engine, fm, arpeggiator, midi, usb-audio, editor, fork]
+image:
+  url: https://raw.githubusercontent.com/keremimo/saadet/main/assets/readme/introducing-saadet.png
+  alt: "Saadet title card on a dark background naming four engines, Prophet, FM6, CZ-1 and JUNO-106, with their waveforms, and the figures 384 user slots, 24-bit audio and BLE MIDI"
+  credit: keremimo
+  source_url: https://github.com/keremimo/saadet
+  first_party: true
+versions:
+- version: 0.1.0
+  date: 2026-10-23
+  url: https://github.com/keremimo/saadet/releases/tag/v0.1.0
+  notes: First public release; experimental.

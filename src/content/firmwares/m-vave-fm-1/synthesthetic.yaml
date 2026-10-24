@@ -2,7 +2,7 @@ device: m-vave-fm-1
 name: Synthesthetic
 summary: >-
   SLOOP-based firmware that adds 30 audio-reactive visualiser modes drawn from the sound on the FM-1's screen and sent over USB as a
-  320x180 webcam, in the manner of the Critter & Guitari EYESY, beside the groovebox, MIDI and USB audio. 0.1 beta.
+  320x240 webcam, in the manner of the Critter & Guitari EYESY, beside the groovebox, MIDI and USB audio. 0.2 beta.
 description: >-
   The instrument side is SLOOP 2.7.1 with four tracks, twelve synth engines and a drum machine, and the visuals are new code.
   The chip's second core draws scopes, spectra, geometric figures, drum shapes and feedback-warp effects from the audio, with
@@ -29,7 +29,7 @@ license_notes: >-
 homepage: https://michaeljsmalley.github.io/synthesthetic/
 distribution: browser-installer
 install_notes: >-
-  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with the 0.1 package, from a unit running V15, Dinghy or
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with the 0.2 package, from a unit running V15, Dinghy or
   SLOOP. From any other firmware, go back to V15 with M-UPGRADE first. Holding OCT- while switching on opens a USB rescue
   updater, which two boot crashes also open. The handbook calls it a beta to use at your own risk.
 brick_risk: true
@@ -41,7 +41,11 @@ image:
   source_url: https://github.com/michaeljsmalley/synthesthetic/blob/main/HANDBOOK.md
   first_party: true
 versions:
-- version: main @ dc3016b
+- version: 0.2-beta
+  date: 2026-10-24
+  url: https://github.com/michaeljsmalley/synthesthetic/releases/tag/v0.2-beta
+  notes: SCREEN mode sends the display pixel for pixel, so the USB video is now 320x240; fixes audio blips while recording video and a repeated moment of sound when a setting changes during a recording.
+- version: 0.1-beta
   date: 2026-10-21
-  url: https://github.com/michaeljsmalley/synthesthetic/commit/dc3016bdbda0f7a7bc3e98fb8d6c9940fc8863e1
-  notes: No tagged releases; this is the latest commit. The repository holds the 0.1 beta package in docs/firmware.
+  url: https://github.com/michaeljsmalley/synthesthetic/releases/tag/v0.1-beta
+  notes: First release, a beta tested on one FM-1 with macOS only.

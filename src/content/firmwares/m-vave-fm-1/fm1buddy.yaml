@@ -40,6 +40,12 @@ image:
   source_url: https://konsumer.js.org/fm1buddy/
   first_party: true
 versions:
+- version: 0.1.11
+  date: 2026-10-24
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.11
+- version: 0.1.10
+  date: 2026-10-23
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.10
 - version: 0.1.9
   date: 2026-10-23
   url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.9

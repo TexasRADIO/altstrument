@@ -1,0 +1,61 @@
+device: m-vave-fm-1
+name: Del Rio
+summary: >-
+  Hand-percussion rhythm box built on fm1-base: djembe, cajon, udu, clapsticks, maracas and triangle, 31
+  rhythms, a berimbau with capoeira toques, and tanpura and shruti-box drones.
+description: >-
+  Made for accompanying singing in a circle. The black keys play the instruments' individual strokes with
+  velocity, and the white keys are a step sequencer for the selected instrument, with bars of 2 to 8 beats.
+  PLAY loops the rhythm and REC records strokes onto the nearest step. The berimbau, the tanpura and the
+  shruti box are each played alone from the FX page; the two drones are synthesised, not sampled. The
+  rhythms and toques are taken from published sources listed in the README. The project reuses Felucca's
+  update loader, ships its own sample kit under mixed licences, and does not read other firmwares' projects
+  or samples. It starts with a pixel-art animation of a maned wolf.
+status: active
+authors:
+- name: jsopdebeeck
+  url: https://github.com/jsopdebeeck
+source: https://github.com/jsopdebeeck/fm1-delrio
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  The code is MPL-2.0, as fm1-base is. The drum and percussion samples keep their own licences: CC0 1.0
+  (VCSL, one Freesound caxixi), CC BY 3.0 and CC BY 4.0 (Freesound udu and berimbau recordings), so
+  redistributing a build needs the credits in app/kit/CREDITS.txt. The opening artwork is the author's.
+distribution: download
+install_notes: >-
+  Flash the .fwsc from a GitHub release with fm1-base's web installer in Chrome or Edge (Web MIDI), or take
+  it from The Firmware Hub. Each release page lists a SHA-256. The firmware keeps its own settings and
+  rhythms in a separate flash area. Builds inherit fm1-base's brick risk, so back up the device first.
+brick_risk: true
+tags: [drums, percussion, sequencer, synth-engine]
+image:
+  url: https://raw.githubusercontent.com/jsopdebeeck/fm1-delrio/main/docs/img/screens.png
+  alt: "Four Del Rio screens: djembe step grid in orange, clapsticks in green, maracas in pink, and a yellow cajon sound page with sliders"
+  credit: jsopdebeeck
+  source_url: https://github.com/jsopdebeeck/fm1-delrio
+  first_party: true
+versions:
+- version: '0.7'
+  date: 2026-10-23
+  url: https://github.com/jsopdebeeck/fm1-delrio/releases/tag/v0.7
+  notes: Adds the opening animation of the maned wolf at dusk.
+- version: '0.6'
+  date: 2026-10-23
+  url: https://github.com/jsopdebeeck/fm1-delrio/releases/tag/v0.6
+  notes: Redraws the opening picture in 80x80 pixels and keeps LFO's preset list open while browsing.
+- version: '0.5'
+  date: 2026-10-23
+  url: https://github.com/jsopdebeeck/fm1-delrio/releases/tag/v0.5
+  notes: Shruti box can be played note by note or as chords.
+- version: '0.4'
+  date: 2026-10-23
+  url: https://github.com/jsopdebeeck/fm1-delrio/releases/tag/v0.4
+  notes: Tanpura characters, and samples stored in 8 bits to roughly halve their flash use.
+- version: '0.3'
+  date: 2026-10-23
+  url: https://github.com/jsopdebeeck/fm1-delrio/releases/tag/v0.3
+  notes: Opening animation and faster berimbau toques.
+- version: '0.2'
+  date: 2026-10-23
+  url: https://github.com/jsopdebeeck/fm1-delrio/releases/tag/v0.2

@@ -1,12 +1,14 @@
 device: m-vave-fm-1
 name: OberVave
 summary: >-
-  Single-engine 8-voice analog-style polysynth with two oscillators per voice, a morphing 12/24 dB filter,
-  chorus, delay, plate reverb, an arpeggiator and a two-track step sequencer.
+  Four-track polysynth sharing 8 analog-style voices, with two oscillators per voice, a morphing 12/24 dB filter,
+  a mixer with sends and a master section, an arpeggiator and a step sequencer.
 description: >-
   Modelled on late-1970s and early-1980s American 8-voice polysynths. Each voice has two oscillators with hard
   sync and cross-modulation, per-voice drift, and four voice modes. There are 32 programs, 8 patterns in flash,
-  USB MIDI in and out, and a browser simulator that compiles the firmware's own C sources. It is built on
+  USB MIDI in and out, and a browser simulator that compiles the firmware's own C sources. Version 3.0 replaced the
+  two sequencer tracks with four that share the eight voices, added a mixer with four sends and a master section
+  (DJ filter, drive, compressor, limiter), and made each pattern keep its own sounds and mix. It is built on
   Dinghy and uses sloopDX-style panel layers. The same repository carries SMK-37 beta builds (see OberVave SMK-37).
 status: active
 authors:
@@ -33,6 +35,14 @@ image:
   source_url: https://github.com/zvenson/obervave
   first_party: true
 versions:
+- version: 3.0.1
+  date: 2026-10-23
+  url: https://github.com/zvenson/obervave/releases/tag/v3.0.1
+  notes: Gets its own package identity, FM-1_9530, so the Firmware Hub can tell it from other firmwares.
+- version: '3.0'
+  date: 2026-10-23
+  url: https://github.com/zvenson/obervave/releases/tag/v3.0
+  notes: Four tracks on eight shared voices with a mixer, sends and a master section; each pattern keeps its sounds and mix.
 - version: 1.5.3
   date: 2026-10-19
   url: https://github.com/zvenson/obervave/releases/tag/v1.5.3

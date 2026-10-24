@@ -1,0 +1,33 @@
+device: super-synthesis-2opfm
+name: 2OPFM firmware (official source)
+summary: The 2OPFM's own firmware, published by Super Synthesis as CC0 source with a prebuilt image for each board revision, alongside the module's schematic and panel files.
+description: >-
+  Super Synthesis keeps the firmware for its production modules in a public
+  repository together with schematics, panels and PCB files. For the 2OPFM it
+  holds the STM32CubeIDE project for the current STM32G431 board (2OPFM_G431),
+  an older 2020 project, and ready-built .elf images named after the hardware
+  revision. The author describes the code as shared as it really is rather than
+  tidied up. The 2OPFM alt project is built from this code and includes it
+  unchanged as one of its firmwares.
+status: maintained
+authors:
+  - name: Chris McDowell (Super Synthesis)
+    url: https://github.com/supersynthesis
+source: https://github.com/supersynthesis/eurorack/tree/main/Production%20Modules/2OPFM/firmware
+source_status: open
+license: CC0-1.0
+license_notes: The repository README places everything in it in the public domain under CC0.
+homepage: https://www.supersynthesis.com/products/2opfm
+distribution: download
+install_notes: >-
+  Flash the .elf that matches your board (REV4 or REV5) with STM32CubeProgrammer
+  through the SWD header and an ST-Link. To change the code, import the project
+  into STM32CubeIDE and build with optimisation set for speed, as the firmware
+  README describes.
+brick_risk: false
+tags: [official, fm, synth-engine, open-source]
+versions:
+  - version: main @ f4f0ad9
+    date: 2024-12-06
+    url: https://github.com/supersynthesis/eurorack/commit/f4f0ad9041914a4c7009e2939176a792bd454370
+    notes: No tagged releases; this is the latest commit touching the 2OPFM firmware folder, which carries 2OPFM_REV5_2024.elf.

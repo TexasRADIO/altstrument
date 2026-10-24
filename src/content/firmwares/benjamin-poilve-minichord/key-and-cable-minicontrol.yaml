@@ -24,7 +24,7 @@ install_notes: >-
   plugged in so it is on, and allow the MIDI permission prompt.
 tags: [editor, librarian, presets, sysex, looper, web-ui]
 versions:
-  - version: main @ 643a413
-    date: 2026-10-23
-    url: https://github.com/keyandcableco/minicontrol/commit/643a41379bd7e001d3d6dcffa902742a56dba020
+  - version: main @ 85a8bcd
+    date: 2026-10-24
+    url: https://github.com/keyandcableco/minicontrol/commit/85a8bcd28f88c70a5d328dab07b28145fcc8a371
     notes: No tagged releases; this is the latest commit.

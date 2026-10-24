@@ -1,0 +1,39 @@
+device: super-synthesis-2opfm
+name: 2OPFM alt
+summary: >-
+  Five alternative firmwares for the 2OPFM (2OPFM+, Drum, CZ, Formant, Bell) plus the unchanged stock firmware,
+  in one all-in-one image or as single images. Untested on hardware.
+description: >-
+  Ports of voices first built for a VCV Rack version of the module, running at 170 MHz and 48 kHz. 2OPFM+ adds
+  pitch tracking and integer-sticky ratios, Drum models membrane-to-bar strikes, CZ offers phase-distortion style
+  waveforms, Formant sweeps vowels, and Bell goes from bells to bars. Firmware 1 is the stock code. The all-in-one
+  image chooses the active firmware with a knob gesture at power-up and saves the choice to the last flash page.
+  The repository has an OpenOCD flash script, a browser flasher using WebUSB and an ST-Link, a Makefile, and a
+  host build of the DSP that was compared sample for sample against the VCV version. The author states that none
+  of it has run on a module yet, and the commit message credits an AI assistant as co-author. The repository
+  holds the stock REV5 2024 .elf, byte-identical to the one in the manufacturer's CC0 repository, for restoring the module.
+status: active
+authors:
+  - name: Stuart Frederich-Smith
+    url: https://github.com/stuart78
+source: https://github.com/stuart78/2opfm-alt
+source_status: open
+license: CC0-1.0
+license_notes: >-
+  The repository has no LICENSE file. The README says the stock firmware and project are CC0 (Super Synthesis) and
+  that the new code is offered on the same terms. The ST HAL and CMSIS keep their own licenses. The bundled
+  factory/2OPFM_REV5_2024.elf has the same git blob (0595512f64a845001ee0003291842208a0db8f93) as the file in
+  supersynthesis/eurorack, whose README puts the repository under CC0.
+distribution: source-only
+requires_stock: 2OPFM REV5 (STM32G431) and an ST-Link on the J3 SWD header
+install_notes: >-
+  Build with make and the Arm GNU toolchain, then flash with an ST-Link through flash.command (OpenOCD) or the web
+  flasher in the repository. The README has a script option to put the factory image back, and advises running
+  the factory image through the flasher first on a module that can also be reflashed with OpenOCD.
+brick_risk: false
+tags: [synth-engine, fm, oscillator, flasher, open-source]
+versions:
+  - version: main @ 4120426
+    date: 2026-10-23
+    url: https://github.com/stuart78/2opfm-alt/commit/4120426fe278de7dc526c988a06ae4ef4f62d2fc
+    notes: No tagged releases; this is the latest commit.

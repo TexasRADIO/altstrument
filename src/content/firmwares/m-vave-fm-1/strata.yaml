@@ -1,0 +1,46 @@
+device: m-vave-fm-1
+name: Strata
+summary: >-
+  Felucca fork that makes the FM-1 a wavetable synth with an 8-track looper and a drum machine: 54 wavetables,
+  eight voices, an effects chain, scene clips and seven drum models.
+description: >-
+  Forked from Felucca 1.6.1 and rebuilt around its own engine and screens. The synth has two wavetable
+  oscillators, a sub, noise, a filter, envelopes and drawable LFOs, with a chain of up to eight effects. For
+  playing there are scales, chords on every key, strum, a 16-step arpeggiator, macros and tap tempo. The looper
+  records synth, MIDI and drum tracks into clips across eight scenes, with overdubs, recorded knob moves and
+  four projects. The drum section has seven drum models, 64 presets, six kits, a step grid and Euclidean fills.
+  Strata keeps its presets, projects and drum library in the flash area Felucca uses for projects and samples,
+  so saving in Strata can overwrite Felucca's data. The README describes it as a pre-release and says it was
+  written with Claude.
+status: active
+authors:
+- name: u4ia-dev
+  url: https://github.com/u4ia-dev
+source: https://github.com/u4ia-dev/strata
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherits Felucca's licensing, including ported DSP files under MIT or Apache-2.0 and the MIT Felucca-Engines
+  submodule. Strata adds the Space Mono font (SIL OFL 1.1). See NOTICE.md and LICENSING.md.
+homepage: https://u4ia-dev.github.io/strata/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge on a computer. Take a full flash backup first: Strata can overwrite
+  Felucca's projects and samples, and going back does not restore them. To return to stock, the installer's
+  Return to official V15 asks you to supply your own unmodified M-VAVE FM-1.fwsc, which it checks by hash;
+  Felucca's installer also works. Inherits Felucca's brick risk.
+brick_risk: true
+tags: [synth-engine, wavetable, looper, drums, sequencer, fx, performance]
+image:
+  url: https://raw.githubusercontent.com/u4ia-dev/strata/main/docs/media/screen-home.png
+  alt: "Strata HOME screen rendered by its emulator: patch name INIT, wavetable BASIC MORPH 1.0, a dotted ring display and four macro knobs at 0%"
+  credit: u4ia-dev
+  source_url: https://github.com/u4ia-dev/strata
+  first_party: true
+versions:
+- version: '0.875'
+  date: 2026-10-24
+  url: https://github.com/u4ia-dev/strata/releases/tag/v0.875
+- version: '0.87'
+  date: 2026-10-23
+  url: https://github.com/u4ia-dev/strata/releases/tag/v0.87

@@ -27,7 +27,7 @@ license_notes: >-
 homepage: https://hyruleanhero1988.github.io/FM-1-Swap/
 distribution: download
 install_notes: >-
-  Sideload FM-1-Swap.apk from the 0.2.0 release on an Android phone with a USB-C OTG connection to the FM-1;
+  Sideload FM-1-Swap.apk from the latest release on an Android phone with a USB-C OTG connection to the FM-1;
   USB MIDI does not work on an Android emulator. Install only the file from that release, since the signing key
   is committed to the repository. The README says a firmware without a USB recovery mode cannot be rescued
   from the phone, and a chip that shows up as WL80UBOOT needs a computer.
@@ -42,6 +42,18 @@ image:
   source_url: https://hyruleanhero1988.github.io/FM-1-Swap/
   first_party: true
 versions:
+- version: 0.5.0
+  date: 2026-10-23
+  url: https://github.com/HyruleanHero1988/FM-1-Swap/releases/tag/v0.5.0
+  notes: Adds an in-app update prompt, USB keyboard play in TRY on channel 2 and the Firmware Hub's firmware groups.
+- version: 0.4.0
+  date: 2026-10-23
+  url: https://github.com/HyruleanHero1988/FM-1-Swap/releases/tag/v0.4.0
+  notes: Makes the first-run notice scrollable so its OK button can be reached on short phones.
+- version: 0.3.0
+  date: 2026-10-23
+  url: https://github.com/HyruleanHero1988/FM-1-Swap/releases/tag/v0.3.0
+  notes: PATCHES sends a hosted DX7 patch or a bank of 32 to a connected FM-1; TRY takes notes from a USB MIDI keyboard.
 - version: 0.2.0
   date: 2026-10-22
   url: https://github.com/HyruleanHero1988/FM-1-Swap/releases/tag/v0.2.0

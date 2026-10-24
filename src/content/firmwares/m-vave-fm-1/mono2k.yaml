@@ -29,7 +29,7 @@ install_notes: >-
 brick_risk: false
 tags: [sequencer, synth-engine, fx, lfo, emulator, midi]
 versions:
-- version: main @ 7fb0779
-  date: 2026-10-23
-  url: https://github.com/InigoHernandez/mono2k/commit/7fb0779045ceaaab5be4de1da21a5f16e354a0bd
+- version: main @ 3e4884f
+  date: 2026-10-24
+  url: https://github.com/InigoHernandez/mono2k/commit/3e4884ff5add43e005c3ead3f784b6b9a43a2f57
   notes: No tagged releases; this is the latest commit. The README calls it version 0.1.

@@ -32,6 +32,14 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, fx, midi, emulator, research]
 versions:
+- version: 0.3.1
+  date: 2026-10-23
+  url: https://github.com/dsablic/sidou/releases/tag/v0.3.1
+  notes: An install over another firmware now boots straight into SIDOU instead of stalling on the chip's USB boot screen.
+- version: 0.3.0
+  date: 2026-10-23
+  url: https://github.com/dsablic/sidou/releases/tag/v0.3.0
+  notes: Redraws the song views in larger text, speeds up SysEx transfers, steadies the MIDI clock and adds a soft limiter after the effects.
 - version: 0.2.0
   date: 2026-10-22
   url: https://github.com/dsablic/sidou/releases/tag/v0.2.0

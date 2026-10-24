@@ -1,0 +1,40 @@
+device: nintendo-nes
+name: Gamebody
+summary: >-
+  NES ROM that turns the controller into an eight-note pentatonic instrument with square, triangle and drum
+  sounds and a two-part looper.
+description: >-
+  Gamebody is written in 6502 assembly for the cc65 toolchain and builds a 24,592-byte NROM cartridge image with
+  no battery RAM, mapper or expansion audio. The D-pad plays notes from a C-major pentatonic scale, A shifts them
+  up and B plays repeating bursts. A+B cycles the square, triangle and drum voices, Select changes octave, and
+  Start records a phrase, loops it and adds a second part, all held in the console's 2 KiB of RAM. The repository
+  also has a JSNES-based browser preview, a script that renders a demo from the ROM, and automated ROM and audio
+  tests. The author has so far only tested it in JSNES, not on a real console, a flash cartridge or a USB
+  controller, and it is tuned for NTSC. Loops are lost on reset, and there is no save, export or MIDI.
+status: active
+authors:
+  - name: Jonathan Mann
+    url: https://github.com/songadaymann
+source: https://github.com/songadaymann/musical-nes-gamebody
+source_status: open
+license: MIT
+license_notes: >-
+  Code is MIT, copyright Jonathan Mann. The original art and demo audio are CC BY 4.0 (ASSETS.md). The JSNES
+  emulator used by the browser preview keeps its Apache-2.0 license.
+distribution: download
+requires_stock: NES or Famicom with a flash cartridge, or an NTSC emulator
+install_notes: >-
+  Each release has gamebody.nes, a zip with the ROM, license and docs, and a demo WAV. Load the ROM in an NTSC
+  NES emulator or, untested by the author, on a flash cartridge. Building needs Node.js 20, Python 3.9 and cc65;
+  npm run build makes build/gamebody.nes and npm start serves the browser preview locally.
+brick_risk: false
+tags: [chiptune, looper, performance, open-source]
+versions:
+  - version: v0.2.0
+    date: 2026-10-24
+    url: https://github.com/songadaymann/musical-nes-gamebody/releases/tag/v0.2.0
+    notes: Adds triangle and drum sounds, four octaves on Select, and a two-part loop.
+  - version: v0.1.0
+    date: 2026-10-24
+    url: https://github.com/songadaymann/musical-nes-gamebody/releases/tag/v0.1.0
+    notes: First playable prototype with eight notes and repeating bursts.

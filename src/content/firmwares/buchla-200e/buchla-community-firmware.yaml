@@ -1,0 +1,88 @@
+device: buchla-200e
+name: Buchla Community Firmware
+summary: Patched builds of Buchla's own firmware for twelve 200e modules (259e, 272e, 251e and others) that fix hangs, knob-reading and bus bugs, shipped as card images for the USB firmware card.
+description: >-
+  Rights warning: each image is Buchla's published firmware for the module
+  with changes patched in, and the repository distributes it as binaries
+  without source or a licence from Buchla.
+
+  Every release is Buchla's firmware at a recorded base version with a short
+  list of fixes; everything else is stated to be unchanged byte for byte. The
+  fixes cover freezes when the system bus stalls, skipped or wrongly counted
+  knob steps, and similar problems. The 259e build also adds a power-up choice
+  between the Twisted wavetables and the original 259 tables. The build
+  version reports as Buchla's number plus C and a revision, such as 31.2C3,
+  and the author says the builds were made with Claude. Most candidates are
+  marked as not yet run on hardware.
+status: active
+authors:
+  - name: Oren Levy
+    url: https://github.com/auxren
+source: https://github.com/auxren/Buchla_Community_FW_Releases
+source_status: binary-only
+license: unspecified
+license_notes: >-
+  Rights warning: no license file. The images are modified copies of Buchla's
+  firmware, and the repository grants no rights beyond what Buchla allows for
+  the original files. The repository holds releases only, with no source.
+distribution: download
+requires_stock: Buchla version 30 or later firmware, with the base version named in each release
+install_notes: >-
+  Load the .hex onto Buchla's USB Firmware Card with Buchla's firmware utility
+  (the file name keeps Buchla's pattern so the tool reads the module), or write
+  the .card.bin to a device that stands in for the card. Insert the card, power
+  the system up while holding the module's Remote Enable button and wait one to
+  two minutes. Keep Buchla's own version for the module to reflash. Do not
+  program the chips with a debug adapter: the flash is locked at the factory
+  and getting past the lock erases the bootloader, calibration and presets.
+brick_risk: true
+tags: [bugfixes, patch, os]
+versions:
+  - version: 251e 30.7C2
+    date: 2026-10-23
+    url: https://github.com/auxren/Buchla_Community_FW_Releases/tree/main/251e/30.7C2
+    notes: Quad Sequential Voltage Source, second candidate; replaces a first build that misread worn knobs. Not yet run on hardware.
+  - version: 259e 31.2C3
+    date: 2026-10-21
+    url: https://github.com/auxren/Buchla_Community_FW_Releases/tree/main/259e/31.2C3
+    notes: Twisted Waveform Generator; adds a power-up choice between the Twisted and original wavetables, remembered across power cycles. Run on one module.
+  - version: 227e 30.1C1
+    date: 2026-10-21
+    url: https://github.com/auxren/Buchla_Community_FW_Releases/tree/main/227e/30.1C1
+    notes: System Interface. Flashed on one module.
+  - version: 272e 31.0C1
+    date: 2026-10-21
+    url: https://github.com/auxren/Buchla_Community_FW_Releases/tree/main/272e/31.0C1
+    notes: Polyphonic Tuner; fixes lag and lock-up cases. Run on one module.
+  - version: 291e 30.1C1
+    date: 2026-10-21
+    url: https://github.com/auxren/Buchla_Community_FW_Releases/tree/main/291e/30.1C1
+    notes: Triple Morphing Filter. Not yet run on hardware.
+  - version: 260e 30.1C1
+    date: 2026-10-21
+    url: https://github.com/auxren/Buchla_Community_FW_Releases/tree/main/260e/30.1C1
+    notes: Duophonic Pitch Class Generator. Not yet run on hardware.
+  - version: 252e 30.2C1
+    date: 2026-10-21
+    url: https://github.com/auxren/Buchla_Community_FW_Releases/tree/main/252e/30.2C1
+    notes: Polyphonic Rhythm Generator. Not yet run on hardware.
+  - version: 250e 30.6C1
+    date: 2026-10-21
+    url: https://github.com/auxren/Buchla_Community_FW_Releases/tree/main/250e/30.6C1
+    notes: Dual Arbitrary Function Generator. Not yet run on hardware.
+  - version: 226h 30.1C1
+    date: 2026-10-21
+    url: https://github.com/auxren/Buchla_Community_FW_Releases/tree/main/226h/30.1C1
+    notes: Control Voltage Processor. Not yet run on hardware.
+  - version: 225s 32.3C1
+    date: 2026-10-21
+    url: https://github.com/auxren/Buchla_Community_FW_Releases/tree/main/225s/32.3C1
+    notes: MIDI Decoder / Preset Manager, storage processor. Not yet run on hardware.
+  - version: 225e 30.9C1
+    date: 2026-10-21
+    url: https://github.com/auxren/Buchla_Community_FW_Releases/tree/main/225e/30.9C1
+    notes: MIDI Decoder / Preset Manager, MIDI processor. Not yet run on hardware.
+  - version: 210e 30.5AC1
+    date: 2026-10-21
+    url: https://github.com/auxren/Buchla_Community_FW_Releases/tree/main/210e/30.5AC1
+    notes: Control & Signal Router. Not yet run on hardware.

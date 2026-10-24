@@ -1,13 +1,16 @@
 device: polyend-tracker
 name: OpenTracker
-summary: Clean-room replacement firmware for the original Polyend Tracker that follows the stock 1.9.2 screens and file formats, with fixes to MOD and IT import and export, an NES game player and a simulator.
+summary: Clean-room replacement firmware for the original Polyend Tracker; the 2.x line brings Tracker Mini features to it, with 16 tracks, the Mini's five synth models, stereo samples, live resampling and Mini-compatible projects.
 description: >-
   Written from the author's own specifications of the stock firmware, without
   Polyend code, and built for the Tracker's MK66 processor. It reads and writes
   Tracker projects and adds changes to the stock behaviour: MOD and IT import
-  and export are rewritten, MIDI CC handling and several performance-mode edge
-  cases are fixed, and a File menu games page plays NES ROMs through an
-  emulator written for the project. Fonts and icons are open substitutes for
+  and export are rewritten and MIDI CC handling and several performance-mode edge
+  cases are fixed. From 2.0 it saves projects in the Tracker Mini format with
+  16-track patterns, three synth slots and the Mini's .patch files, and 2.1 and
+  2.2 complete the Mini's ACD, VAP, PERC, FAT and WTFM synth models and add live
+  resampling and stereo samples. An NES game player written for the project is
+  no longer built in by default. Fonts and icons are open substitutes for
   Polyend's. Every built image is checked for the stock flash-security bytes and
   file name length, and the boot code looks for /Firmware/ot_restore.txt first
   so the stock image can be put back from the SD card. A desktop SDL simulator
@@ -41,6 +44,10 @@ image:
   source_url: https://github.com/sandlbn/polyend-tracker-re
   first_party: true
 versions:
+  - version: "2.2.1"
+    date: 2026-10-24
+    url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/2.2.1
+    notes: Adds the WTFM two-operator FM synth engine with 30 presets, envelope-style sample waveforms with a preview playhead, and a fix for a crack in the headphones at power-on.
   - version: "2.1.2"
     date: 2026-10-23
     url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/2.1.2

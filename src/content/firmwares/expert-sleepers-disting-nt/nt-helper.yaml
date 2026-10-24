@@ -14,6 +14,10 @@ homepage: https://github.com/No-Such-Device/nt_helper/releases
 distribution: download
 tags: [editor]
 versions:
+  - version: v2.60.0
+    date: 2026-10-23
+    url: https://github.com/No-Such-Device/nt_helper/releases/tag/v2.60.0
+    notes: Adds MCP tools to install a plugin and smoke-test it with rollback, pins routing bus labels and collapses unused ports, and adds macOS startup migration and recovery.
   - version: v2.59.0
     date: 2026-10-17
     url: https://github.com/No-Such-Device/nt_helper/releases/tag/v2.59.0

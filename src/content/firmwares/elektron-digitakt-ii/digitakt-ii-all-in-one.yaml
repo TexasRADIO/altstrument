@@ -1,0 +1,59 @@
+device: elektron-digitakt-ii
+name: Digitakt II All-in-One
+summary: Offline Windows builder that patches your own Digitakt II OS 1.17 file with 25 Plaits models, four DX7 banks, a Deja Vu random-loop LFO, musical WAVE tables and a one-shot waveform zoom.
+description: >-
+  The v0.3 beta builds one image from the official 1.17 file. It adds 25
+  optimised Plaits model selections and four DX7 patch banks, with a
+  graphical interface for them, along with the Deja Vu LFO shapes, reworked
+  WAVE values and a zoom and pan view on the one-shot waveform page. The
+  v0.1 and v0.2 betas were smaller builders: the Deja Vu LFO first, then the
+  zoom, for OS 1.16 and 1.17.
+
+  The builder includes tooling and source from digikit, so v0.3 is AGPL-3.0
+  or later, and the complete corresponding source is a named release asset
+  rather than the repository archive. The author states that a recurring
+  trigger click on the Plaits models remains, that the exact v0.3 image was
+  not tested on hardware (the previous build was), and that no support is
+  promised. The builder creates a file and never connects to the instrument.
+status: active
+authors:
+  - name: Kári Garðarsson
+    url: https://github.com/karigardarsson
+source: https://github.com/karigardarsson/digitakt-ii-research
+source_status: open
+license: AGPL-3.0-or-later
+license_notes: >-
+  The v0.3.0 All-in-One builder is AGPL-3.0-or-later with the digikit NOTICE
+  and per-file MIT notices. The repository's root LICENSE is MIT and, per the
+  readme, covers earlier releases and separately written material only. The
+  full corresponding source of v0.3.0 is the named release asset, not GitHub's
+  generated archive.
+homepage: https://github.com/karigardarsson/digitakt-ii-research/releases/tag/v0.3.0-beta
+distribution: patch-your-own
+requires_stock: "1.17"
+install_notes: >-
+  Download Digitakt II OS 1.17 from Elektron yourself, run the builder from
+  the release ZIP on Windows and choose that file; modified or other-version
+  files are rejected. Install the output through Elektron Transfer after
+  reading the installation and recovery pages. The author notes that earlier
+  Plaits builds failed normal Transfer updates, so keep the stock OS and a
+  MIDI DIN interface for startup recovery ready. The executable is unsigned.
+brick_risk: true
+tags: [synth-engine, machines, lfo, ui, patch, fm, wavetable]
+versions:
+  - version: 0.3.0-beta
+    date: 2026-10-23
+    url: https://github.com/karigardarsson/digitakt-ii-research/releases/tag/v0.3.0-beta
+    notes: Pre-release. All-in-One build for OS 1.17 with Plaits, DX7 banks, Deja Vu, WAVE and zoom.
+  - version: 0.2.0-beta
+    date: 2026-10-18
+    url: https://github.com/karigardarsson/digitakt-ii-research/releases/tag/v0.2.0-beta
+    notes: Pre-release. Deja Vu LFO and one-shot zoom builder for OS 1.16 and 1.17.
+  - version: 0.1.1-beta
+    date: 2026-10-17
+    url: https://github.com/karigardarsson/digitakt-ii-research/releases/tag/v0.1.1-beta
+    notes: Pre-release. Adds OS 1.17 support to the Deja Vu builder.
+  - version: 0.1.0-beta
+    date: 2026-10-16
+    url: https://github.com/karigardarsson/digitakt-ii-research/releases/tag/v0.1.0-beta
+    notes: Pre-release. First Deja Vu LFO builder.

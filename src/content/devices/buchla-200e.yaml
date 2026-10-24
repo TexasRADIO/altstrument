@@ -1,0 +1,35 @@
+name: 200e Series
+manufacturer: Buchla
+category: synth
+tagline: Buchla modular system whose digital modules load firmware from a USB card
+description: >-
+  The 200e series is Buchla's current modular synthesizer system, a revival of
+  the 1970 Series 200 Electric Music Box introduced in 2004. Modules such as
+  the 259e Twisted Waveform Generator, 251e Quad Sequential Voltage Source and
+  272e Polyphonic Tuner combine analog signal paths with microcontrollers, and
+  they exchange presets and control messages over the system's internal bus.
+
+  Version 30 and later firmware is loaded per module from a USB firmware card,
+  using Buchla's firmware utility on a Mac and the Remote Enable button at
+  power-up.
+platform: Silicon Labs C8051 (8-bit and 32-bit modules)
+links:
+  manufacturer: https://buchla.com/modules/
+  community:
+    - label: Buchla firmware downloads
+      url: https://buchla.com/download/
+notes: >-
+  Buchla locks the module microcontrollers at the factory. The community
+  firmware notes warn against programming them directly with a debug adapter,
+  because getting past the lock erases the whole chip, including the
+  bootloader, calibration and presets. Use the firmware card route.
+image:
+  src: /images/devices/buchla-200e.webp
+  style: photo
+  alt: Front panel of the Buchla 259e Twisted Waveform Generator, one module of the 200e series, with blue knobs, memory bank LEDs and two oscillator sections
+  width: 430
+  height: 680
+  credit: Buchla
+  license: manufacturer product image
+  source_url: https://buchla.com/product/259e/
+  original_url: https://buchla.com/wp-content/uploads/2015/05/200e_259.jpg

@@ -2,13 +2,15 @@ device: m-vave-fm-1
 name: Shine On
 summary: >-
   String ensemble in the style of 1970s string machines, with sixteen keyers, six register filters, a
-  three-line ensemble, phaser, delay and plate reverb, an arpeggiator and a two-track sequencer. Built from OberVave.
+  three-line ensemble, phaser, delay and plate reverb, an arpeggiator and a four-track sequencer with a mixer. Built from
+  OberVave.
 description: >-
   Each key has its own keyer, and the tone comes from phase-locked 16', 8' and 4' sawtooth and 8' square footages
   run through fixed register filters (contrabass, cello, viola, violin, trumpet, horn) on the sum. Three
   bucket-brigade delay lines swayed by two LFOs 120 degrees apart make the ensemble sound. There are 32 factory
-  programs in 99 slots, an arpeggiator for each sound and two sequencer tracks, where track B can have a sound of
-  its own. The panel, sequencer, delay and reverb come from OberVave, and the platform from Dinghy, Felucca and
+  programs in 99 slots, an arpeggiator for each sound and, since 3.0, four tracks with four sounds that share the
+  sixteen keyers, each with its own registers, ensemble and phaser, mixed through delay, reverb and drive sends and a
+  master section. The panel, sequencer, delay and reverb come from OberVave, and the platform from Dinghy, Felucca and
   SLOOP. Version 1.2.2 opened the FM-1's TRS MIDI IN jack, and 1.2.3 gave the update loader a progress screen.
   The browser simulator compiles the firmware's own C code. The same releases carry SMK-37 builds, which are not
   catalogued here and which the licensing notes say are untested on an SMK-37.
@@ -38,6 +40,14 @@ image:
   source_url: https://github.com/zvenson/shineon
   first_party: true
 versions:
+- version: v3.0.1
+  date: 2026-10-23
+  url: https://github.com/zvenson/shineon/releases/tag/v3.0.1
+  notes: Gets its own package identity, FM-1_9630, so the Firmware Hub can tell it from other firmwares.
+- version: v3.0
+  date: 2026-10-23
+  url: https://github.com/zvenson/shineon/releases/tag/v3.0
+  notes: Four tracks with four sounds sharing the keyers, a mixer with sends and a master section.
 - version: v1.2.3
   date: 2026-10-19
   url: https://github.com/zvenson/shineon/releases/tag/v1.2.3

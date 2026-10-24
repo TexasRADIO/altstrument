@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: FM1 Cofrade
+summary: >-
+  Replaces the 16 factory projects of M-VAVE's FM1 Open firmware with 16 Semana Santa marches, for brass band,
+  drums and bells. README and screens are in Spanish.
+description: >-
+  Built on the FM1 Open V14 SDK with only the factory presets and boot text changed. The 16 projects have
+  melody, bass and percussion on 3 to 5 tracks, using the FM-1's factory FM voices and 808 drum kit; the first
+  four are teaching pieces (bugle call, drum rudiments, an Andalusian cadence and a saeta) and the rest are
+  processional, fast and funeral marches. The author states that all marches are original compositions in the
+  style of the genre and not transcriptions of existing pieces. The marches are stored compressed because the
+  image uses almost all of the SDK's flash budget (25 bytes spare). The repository includes a browser
+  simulator and installer page, a Python flasher, and a copy of the unmodified FM1 Open SDK, whose V15
+  recovery image is the one M-VAVE licenses for redistribution. The author reports installing it on a
+  physical FM-1 but not yet auditioning the sounds.
+status: active
+authors:
+- name: cotrino
+  url: https://github.com/cotrino
+source: https://github.com/cotrino/fm1-cofrade
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Follows the FM1 Open SDK: GPL-3.0-only with an additional permission to link the proprietary engine library.
+  The GitHub licence detector reports NOASSERTION because LICENSE.md combines the GPL text with that
+  exception. The vendored SDK binaries (engine library, boot files and the V15 recovery image) carry
+  M-VAVE's own terms in THIRD_PARTY.md, which allow redistribution for FM-1 devices.
+homepage: https://cotrino.github.io/fm1-cofrade/
+distribution: browser-installer
+requires_stock: V15 or FM1 Open
+install_notes: >-
+  Open dist/FM1_COFRADE_Instalador.html (a copy of the official workbench with this firmware built in) in
+  Chrome or Edge over USB, served locally, and use Device update, or run tools/fm1_flash.py. A unit running a
+  third-party firmware such as Felucca or SLOOP must be returned to official V15 first, because their updater
+  rejects SDK-based packages. Back up projects and settings; the factory projects are replaced but user
+  slots are not. Hashes are in dist/SHA256SUMS.txt.
+brick_risk: true
+tags: [sequencer, sdk, fm]
+versions:
+- version: main @ a508afa
+  date: 2026-10-24
+  url: https://github.com/cotrino/fm1-cofrade/commit/a508afafacfb3c6c5a914b3e708590d02531d437
+  notes: No tagged releases; this is the latest commit.

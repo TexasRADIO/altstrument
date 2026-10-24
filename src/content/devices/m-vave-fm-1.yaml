@@ -8,7 +8,7 @@ description: >-
   knobs, a colour TFT screen and a 16-step sequencer. It has a built-in speaker, a 3.5 mm stereo output,
   and MIDI over USB, Bluetooth LE and a 3.5 mm TRS input, with the engine running on a JieLi AC791N SoC.
 platform: JieLi AC791N (WL82), dual-core pi32v2
-stock_firmware: V15 (2026-07-30)
+stock_firmware: V16 (2026-10-21)
 links:
   manufacturer: https://www.cuvave.com/product?id=fm-1
   community:
@@ -35,7 +35,9 @@ notes: >-
   firmware rather than flashing one over another. Installs are done from browser WebMIDI installers (Chrome
   or Edge, USB) or a Python script; most return to V15 through M-VAVE's M-UPGRADE or the installer's own
   restore. Entries that patch the stock image (macropad patch, czietz patcher) are patch-your-own and
-  need your own V15 (or V14) file; never share the patched result. Stock firmware is V15, released 2026-07-30.
+  need your own V15 (or V14) file; never share the patched result. The current stock firmware is V16 (2026-10-21),
+  which makes the FM-1 eight-part multitimbral with 20 voices; the custom firmware tools, their return-to-stock
+  steps and M-VAVE's licensed recovery image are still built around V15 (2026-07-30).
   Hubs: aroum/fm1-custom-fw (curated directory plus REVERSE_ENGINEERING.md), fm1-editor.com/firmware,
   cicloid/awesome-fm-1, AL-255/FM-1-RE (WTFPL). The same JieLi AC791N (WL82) chip runs the SMK-37 Pro / Elite keyboards.
 related: [m-vave-smk-37, m-vave-chocolate]

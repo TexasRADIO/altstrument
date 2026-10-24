@@ -2,14 +2,14 @@ device: m-vave-fm-1
 name: Eight Bells
 kind: tool
 summary: >-
-  Pattern generator for the FM-1 and its custom firmwares: 28 rhythm engines and 126 genres produce tracks that
+  Pattern generator for the FM-1 and its custom firmwares: 28 rhythm engines and 187 genres produce tracks that
   play on the FM-1 over USB MIDI, from a web page or a Windows and Mac app.
 description: >-
   Builds a pattern for every track from Euclidean rhythms and other engines (world timelines, cellular
   automata, fractals, number sequences, Markov chains and more), with melody and chord progressions in a chosen
   key and scale. It sends notes with the channels and drum notes of the selected firmware, has a song builder
   and an Auto song mode that keeps locked tracks, can listen to the FM-1 and capture a loop, exports .mid
-  files and shares patterns as text codes. Firmware presets cover SLOOP, X0X, Felucca, JIANT, FM-1+VA and
+  files and shares patterns as text codes. There are 53 firmware profiles, among them SLOOP, X0X, Felucca, JIANT, FM-1+VA and
   M-VAVE's official firmware, and a panel triggers SLOOP's punch-in effects. The FM-1's tempo has to be set by hand
   to match. It does not contain any firmware and does not change what runs on the FM-1.
 status: active
@@ -25,7 +25,7 @@ install_notes: >-
   Runs in Chrome or Edge from the project page with no install, or as a Windows portable or installer build and
   macOS .dmg (Intel and Apple silicon) from the releases page. The desktop apps are not code-signed, and the Mac
   build is marked as not tested on a real Mac. Close any other program that holds the FM-1's MIDI port, such as
-  Slipway or a firmware's web editor. iPhone and iPad are not supported.
+  Slipway or a firmware's web editor. On iPhone and iPad the page runs in Safari without an FM-1; sending to an FM-1 needs a Web MIDI browser app.
 tags: [generative, euclidean, midi, usb-midi, sequencer, web, desktop]
 image:
   url: https://raw.githubusercontent.com/Discodave-Glitch/eight-bells/main/docs/screenshot-top.png
@@ -36,6 +36,10 @@ image:
   source_url: https://github.com/Discodave-Glitch/eight-bells
   first_party: true
 versions:
+- version: 3.0.0
+  date: 2026-10-24
+  url: https://github.com/Discodave-Glitch/eight-bells/releases/tag/v3.0.0
+  notes: Grows to 187 genres and 53 firmware profiles, adds Half-time and Outro patterns to the song builder, and fixes steps not registering on iPhone and iPad.
 - version: 2.0.0
   date: 2026-10-22
   url: https://github.com/Discodave-Glitch/eight-bells/releases/tag/v2.0.0

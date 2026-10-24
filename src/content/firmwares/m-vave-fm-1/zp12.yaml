@@ -6,7 +6,7 @@ summary: >-
 description: >-
   A SLOOP fork on sloopDX's platform that saves beside sloopDX's banks without touching them. User samples
   are dropped onto pads from a browser editor and sent over WebMIDI. The fm1-editor.com directory lists
-  it as a test build.
+  it as a test build. Version 2.5 can sample on the machine over USB, with the FM-1 acting as the computer's speaker.
 status: active
 authors:
 - name: Sven Trogus (zvenson)
@@ -27,6 +27,10 @@ video:
   credit: "zvenson"
   first_party: true
 versions:
+- version: '2.5'
+  date: 2026-10-24
+  url: https://github.com/zvenson/zp12/tree/v2.5
+  notes: Git tag; no GitHub release page. Adds sampling on the machine over USB, a WAVE delete command and the USB name zp12 FM-1.
 - version: 2.4.4
   date: 2026-10-19
   url: https://github.com/zvenson/zp12/commit/15fd913

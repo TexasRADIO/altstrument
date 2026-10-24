@@ -1,0 +1,31 @@
+device: 4ms-dual-looping-delay
+name: DLD firmware (official source)
+summary: 4ms Company's own Dual Looping Delay firmware, published as MIT source by its author Dan Green, with the audio bootloader that installs updates from a sound file.
+description: >-
+  The repository holds the complete module firmware for the STM32F427 board:
+  the looping delay engine, SDRAM handling, the two codec drivers, calibration,
+  system settings and the audio bootloader. Its README presents the DLD as a
+  platform for other audio projects and lists the hardware a developer can use.
+  The last change, in May 2017, merged Thomas Kielbus' option to place the send
+  and return before the loop. The DLD varispeed project is a fork of this code.
+status: dormant
+authors:
+  - name: Dan Green (4ms Company)
+    url: https://github.com/4ms
+source: https://github.com/4ms/DLD
+source_status: open
+license: MIT
+license_notes: The LICENSE file covers the software under MIT (Dan Green, 2016) and lists the hardware design separately.
+homepage: https://4mscompany.com/dld.php
+distribution: source-only
+install_notes: >-
+  4ms distributes firmware updates as audio files for the module's bootloader:
+  enter update mode and play the file into the input. Building from source needs
+  the GCC ARM toolchain; the README covers flashing over SWD with an ST-Link.
+brick_risk: false
+tags: [official, delay, looper, open-source]
+versions:
+  - version: master @ dfc4295
+    date: 2017-05-22
+    url: https://github.com/4ms/DLD/commit/dfc4295fc9ca71be6243217ab544c2ef71705e3b
+    notes: No releases; this is the latest commit, which merges the send/return-before-loop option.

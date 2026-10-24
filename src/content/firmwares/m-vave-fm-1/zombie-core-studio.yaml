@@ -1,0 +1,34 @@
+device: m-vave-fm-1
+name: Zombie Core Web Studio
+kind: tool
+summary: >-
+  Browser editor, in-browser synth preview and USB MIDI installer for the Zombie Core FM-1 firmwares, in Russian and
+  English, with FL Studio and Ableton Live profiles.
+description: >-
+  Serves the Groovebox and Sampler editors and an installer page that checks a package's size, SHA-256 and identity
+  before writing and confirms the identity after the restart. The editors run the firmware's synth as WebAssembly, so
+  sounds can be tried without a unit. Older Groovebox and Core builds stay selectable on the installer page, which
+  can be used for rollback. The same repository holds the Python control-surface profiles for FL Studio and Ableton
+  Live, the firmware packages and the matching source archives. The installer's transport code is adapted from
+  Charles Vestal's fm1-base.
+status: active
+authors:
+- name: Joolo09
+  url: https://github.com/Joolo09
+source: https://github.com/Joolo09/zombie-fm1-web
+source_status: open
+license: MIT
+license_notes: >-
+  MIT, with MPL-2.0 for the platform and update transport (fm1ota.js and fm1pkg.js derive from fm1-base). The
+  Sampler's Minecraft sound effects belong to Mojang/Microsoft; see the Zombie Sampler entry.
+homepage: https://joolo09.github.io/zombie-fm1-web/
+distribution: browser-installer
+install_notes: >-
+  Use Chrome or Edge with MIDI SysEx permission, close DAWs and other MIDI tabs, then follow the installer page.
+  It writes only the package you select and never starts a flash by itself.
+tags: [editor, emulator, flasher, web, midi, usb-midi]
+versions:
+- version: Web 1.1
+  date: 2026-10-24
+  url: https://github.com/Joolo09/zombie-fm1-web/commit/a7fde4e
+  notes: No tagged releases; this is the latest commit.

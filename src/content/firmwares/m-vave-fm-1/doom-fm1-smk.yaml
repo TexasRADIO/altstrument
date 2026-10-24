@@ -10,7 +10,7 @@ description: >-
   package and prepares the install in the browser, a browser simulator with FM-1 and SMK-37 control layouts,
   and a separate restore page. The game replaces the synth application and keeps no saves. Releases from
   07 on can be replaced again over normal USB. Separate from the FM-1 Doom and FM-1 Doom E1M1 entries, which
-  are other people's ports. Its SMK-37 builds are not catalogued, because their installer downloads M-VAVE's SMK-37 stock package from a third-party mirror.
+  are other people's ports. Its SMK-37 Pro and Elite builds have their own release line (smk-pads) and are not listed here.
 status: active
 authors:
 - name: Chance Roth (ChanceTheMaker)

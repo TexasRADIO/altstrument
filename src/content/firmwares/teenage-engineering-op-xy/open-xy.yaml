@@ -1,0 +1,46 @@
+device: teenage-engineering-op-xy
+name: Open-XY
+summary: C++ SDK and browser builder that compile extra synth, effect and sample machines (2-op FM, a Braids port, ring mod, timestretch) into a modified copy of your own OP-XY OS 1.2.0 file.
+description: >-
+  Machines are folders of C++ for a sound engine, display code and a JSON
+  definition, built once to WebAssembly for browser previews and once for the
+  device's Blackfin processor. The builder at open-xy.com takes the stock
+  os.ldr, lets the player choose from the bundled machines and produces the
+  files to copy to the device. The OS is linked statically with a fixed
+  collection, so there is no loading of arbitrary engines, and the firmware
+  reserves about 2 MiB of heap shared by the selected machines.
+
+  The SDK and most machines are MIT. The timestretch machine is AGPL-3.0, so
+  builds that include it, as the default collection does, are distributed
+  under the AGPL. The authors call the project experimental and say native
+  code is not sandboxed and recovery from a faulty image is not guaranteed.
+status: active
+authors:
+  - name: etcetc000
+    url: https://github.com/etcetc000
+source: https://github.com/etcetc000/open-xy
+source_status: open
+license: MIT
+license_notes: >-
+  The SDK and most machines are MIT. The Braids port carries Mutable
+  Instruments' notices, and the timestretch machine is AGPL-3.0, which applies
+  to firmware and builder kits that include it. Stock firmware and artwork are
+  never included.
+homepage: https://open-xy.com
+distribution: browser-installer
+requires_stock: "1.2.0"
+install_notes: >-
+  Needs the decrypted stock os.ldr from OS 1.2.0, read from the device in
+  file-transfer mode, and the OP-XY dev menu enabled. The builder, in desktop
+  Chrome, Edge or Opera, reads the file, builds in the browser and, on a Mac
+  with WebUSB, sends the files; on Windows it downloads a ZIP to copy by hand.
+  The OS write step on the device is manual. Firmware builds from the command
+  line need Windows x86_64 or Apple-silicon macOS and the project's compiler
+  toolchain. Back up device content first and keep the stock OS for recovery.
+brick_risk: true
+tags: [machines, synth-engine, sdk, web, fx, sampler, patch]
+versions:
+  - version: staging @ 0162a7a
+    date: 2026-10-24
+    url: https://github.com/etcetc000/open-xy/commit/0162a7ad166d32e2c43e3e189263498fb9a6eb6f
+    notes: No tagged firmware releases; this is the latest commit on the default branch. The only release, toolchain-1, is the compiler toolchain.

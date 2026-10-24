@@ -1,19 +1,20 @@
 device: m-vave-fm-1
+also_devices: [m-vave-smk-37]
 name: GameDude
 summary: >-
-  Game Boy emulator for the FM-1: the keys are the d-pad and buttons, and games are added to an on-device library
-  over USB or Bluetooth. Browser site with a player, game uploader and installer.
+  Game Boy emulator for the FM-1 and the SMK-37 Pro and Elite: the keys are the d-pad and buttons, and games are
+  added to an on-device library over USB or Bluetooth. Browser site with a player, game uploader and installer.
 description: >-
   Built on Peanut-GB and the Felucca hardware layer, with the second CPU core scaling the picture. The site
   plays a dropped .gb file or ZIP in the browser. Release 2.0 changed the FM-1 firmware from one embedded
   cartridge to a library: the core is installed once and games of up to 256 KiB each are then sent from the
-  site's Add games tab, with 360 KiB of library space on the FM-1. Games stay across power cycles, can be picked
+  site's Add games tab, with 360 KiB of library space on the FM-1 and 392 KiB on the SMK-37. Games stay across power cycles, can be picked
   and deleted on the device, and installing the firmware again clears the library. Nine licensed homebrew games
   and an original diagnostic cartridge are bundled; no commercial ROMs or Nintendo boot ROM are. Game Boy (DMG)
   cartridges only. The author tested earlier FM-1 builds on hardware, and the current package has host and
-  simulated-flash tests. The repository also builds for the SMK-37 Pro and Elite, and the simulator shows their
-  layouts. That entry is not listed under the SMK-37, because its installer downloads M-VAVE's SMK-37 stock
-  package from a third-party mirror.
+  simulated-flash tests. The same release builds for the SMK-37 Pro and Elite, where Fader 1 sets the volume and
+  Fader 2 the pad brightness; the SMK pad-light build 953 was checked on an SMK-37 Pro. The simulator shows all
+  three layouts.
 status: active
 authors:
 - name: Chance Roth (ChanceTheMaker)
@@ -27,13 +28,16 @@ license_notes: >-
   Tobu Girl's assets); NOTICE.txt lists them. Includes M-VAVE's FM-1 V15 image (FM-1_015.fwsc), which M-VAVE
   licenses under Apache-2.0 in m-vave/fm1_open; the copy at web/firmware/fm1-original.fwsc has the matching git
   blob ce49cc1. The README says the file keeps its own ownership and is not GPL; the repository does not carry
-  an Apache-2.0 notice for it.
+  an Apache-2.0 notice for it. For the SMK-37 the installer downloads M-VAVE's Pro and Elite V16 packages (SMK-37_Pro_016.fwsc,
+  SMK-37_Elite_016.fwsc) from the jonathaslacerda/smk-37-pro-docs mirror; both match the git blobs of the copies
+  M-VAVE licenses for redistribution on SMK-37 Pro and Elite devices in m-vave/smk37_open (ad5ff6a, 821236a).
 homepage: https://chancethemaker.github.io/gamedude-fm1-smk/
 distribution: browser-installer
-requires_stock: M-VAVE FM-1 V15, or a firmware with a compatible USB updater
+requires_stock: M-VAVE FM-1 V15 (or a firmware with a compatible USB updater); SMK-37 Pro or Elite 016
 install_notes: >-
-  Chrome or Edge over USB. In the Install firmware tab choose FM-1 and install; the page checks the restart
-  identity afterwards. Then use the Add games tab to send a cartridge over USB or Bluetooth. A Restore M-VAVE
+  Chrome or Edge over USB. In the Install firmware tab choose FM-1 or the exact SMK-37 model and install; the
+  page checks the restart identity afterwards. On Windows, SMK-37 Pro installs go through the project's local USB
+  helper, because Chrome's MIDI backend can hang when the SMK reappears as its updater. Then use the Add games tab to send a cartridge over USB or Bluetooth. A Restore M-VAVE
   firmware button reinstalls V15. Without a working USB updater on the device you need the recovery adapter.
   Cartridge save RAM on the device is lost at restart.
 brick_risk: true
@@ -42,4 +46,4 @@ versions:
 - version: main @ 09fe97f
   date: 2026-10-22
   url: https://github.com/ChanceTheMaker/gamedude-fm1-smk/commit/09fe97f82cf70a15b14300bd699aa955095e36bb
-  notes: Latest commit. The GitHub releases are pre-releases of the SMK-37 builds (smk-pad-lights-953), which leave the FM-1 binaries unchanged. The README names the FM-1 release v2.0.
+  notes: Latest commit. The GitHub releases are pre-releases of the SMK-37 builds (smk-pad-lights-953), which leave the FM-1 binaries unchanged. The README names the release v2.0.

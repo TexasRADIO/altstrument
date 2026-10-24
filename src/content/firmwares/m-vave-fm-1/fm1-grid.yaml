@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: FM-1 Grid
+kind: tool
+summary: >-
+  Desktop app (Rust) that runs up to four emulated FM-1s side by side with any community firmware, shares a MIDI
+  clock and keyboard between them, and also detects and flashes real FM-1 units over USB.
+description: >-
+  Each pane runs the fm1-emu CPU and display model with its own firmware and screen, mixes the four audio streams
+  into one output, and shows a clickable FM-1 front panel that follows the selected pane. A MIDI graph routes system
+  ports, running panes and connected units, and a metronome sends 24 PPQN clock with start and stop to every pane.
+  The build embeds a list of firmwares taken from The FM-1 Firmware Hub's catalogue (SLOOP, Felucca, ChoralRoot, Melodee and
+  others) plus M-VAVE's V15 image; the .fwsc files are git-ignored and not in the repository, so you add them
+  yourself. For live units, the app probes FM-1-named MIDI ports with the M-UPGRADE handshake, shows which firmware
+  is running, switches their clock and flashes a chosen package. The emulated panes accept MIDI in only. The author
+  calls it a local tool, not a distributed binary.
+status: active
+authors:
+- name: jasonbot
+  url: https://github.com/jasonbot
+source: https://github.com/jasonbot/fm1-grid
+source_status: open
+license: MIT
+license_notes: >-
+  The repository has no LICENSE file; Cargo.toml declares MIT and the README says the application code is MIT. The
+  emulator crates are MIT; the firmware packages keep their authors' licences (GPL-3.0, and Apache-2.0 for M-VAVE's
+  V15 image), recorded in firmware/README.md.
+distribution: source-only
+install_notes: >-
+  Build with Rust 1.91 or newer using cargo run --release; Linux needs ALSA and X11 or Wayland development
+  packages. The firmware packages must be placed in firmware/ and listed with scripts/firmware.sh before the
+  build. Flashing a connected unit uses the same update path as other installers, so back up first and follow the
+  brick-risk notes on the FM-1 device page.
+brick_risk: false
+tags: [emulator, midi, flasher, utility]
+image:
+  url: https://raw.githubusercontent.com/jasonbot/fm1-grid/main/screenshot/screen.png
+  alt: "FM-1 Grid window: a 2 by 2 grid of emulated FM-1 screens, a sidebar for Device 3 showing Fart Machine One, a USB devices strip, an on-screen FM-1 panel and a MIDI clock control"
+  credit: jasonbot
+  source_url: https://github.com/jasonbot/fm1-grid
+  first_party: true
+versions:
+- version: main @ e80ef8c
+  date: 2026-10-24
+  url: https://github.com/jasonbot/fm1-grid/commit/e80ef8c
+  notes: No tagged releases; this is the latest commit.

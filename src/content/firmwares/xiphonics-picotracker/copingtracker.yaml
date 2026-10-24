@@ -24,7 +24,7 @@ install_notes: >-
 brick_risk: false
 tags: [tracker, fork, sequencer, synth-engine, chiptune, eq, delay, open-source]
 versions:
-  - version: main @ 2986c72
-    date: 2026-10-20
-    url: https://github.com/n1LS/copingTracker/commit/2986c7248c3fbccca33c01ec861c024c24aa97bc
+  - version: main @ 8c44a58
+    date: 2026-10-23
+    url: https://github.com/n1LS/copingTracker/commit/8c44a583afc7c62da4fd17ea0d534a4e9bbfe719
     notes: No tagged releases; this is the latest commit.

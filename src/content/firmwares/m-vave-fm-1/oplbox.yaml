@@ -45,6 +45,10 @@ image:
   source_url: https://github.com/LXXero/oplbox
   first_party: true
 versions:
+- version: 0.4.2
+  date: 2026-10-24
+  url: https://github.com/LXXero/oplbox/releases/tag/v0.4.2
+  notes: Fixes a SysEx from the computer dropping the FM-1 off USB, so installs over a running OPLBOX no longer need the USB rescue.
 - version: 0.4.1
   date: 2026-10-20
   url: https://github.com/LXXero/oplbox/releases/tag/v0.4.1

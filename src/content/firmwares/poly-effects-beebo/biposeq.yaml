@@ -34,7 +34,7 @@ install_notes: >-
   make.
 tags: [sequencer, cv, ui, lv2]
 versions:
-  - version: master @ cd9f38f
+  - version: master @ e02621a
     date: 2026-10-13
-    url: https://github.com/PedalEffected/Beebo/commit/cd9f38f
+    url: https://github.com/PedalEffected/Beebo/commit/e02621a
     notes: No tagged releases; this is the latest commit.

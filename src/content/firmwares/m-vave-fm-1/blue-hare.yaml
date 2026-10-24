@@ -11,17 +11,17 @@ description: >-
   many more are archived in the tree. ARP is an arpeggiator with settings for each track. The README still
   describes an earlier four-track build with a generative ensemble on ARP. The tree also holds a browser sound
   design studio, a browser emulator, a desktop build and an archived plugin. The repository's default branch is an unchanged copy of Felucca 1.4.1;
-  the work is on the tracker branch. The README names AI coding agents as part of the development. It does not
+  the work is on the blue-hare branch (formerly called tracker). The README names AI coding agents as part of the development. It does not
   state that the firmware has been run on an FM-1, and it publishes no release or installable package.
 status: active
 authors:
 - name: Tristano Suriani
   url: https://github.com/TristanoSuriani
-source: https://github.com/TristanoSuriani/fel-tracker/tree/tracker
+source: https://github.com/TristanoSuriani/fel-tracker/tree/blue-hare
 source_status: open
 license: GPL-3.0-only
 license_notes: >-
-  Same licence as Felucca (LICENSING.md on the tracker branch). The Felucca-derived files keep Leo Kuroshita's
+  Same licence as Felucca (LICENSING.md on the blue-hare branch). The Felucca-derived files keep Leo Kuroshita's
   copyright; Fukiai and DotGothic16 fonts and a ported DaisySP file keep their own licences.
 distribution: source-only
 install_notes: >-
@@ -32,8 +32,8 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, fx, emulator, editor, midi]
 versions:
-- version: tracker @ 7e7717b
-  date: 2026-10-23
-  url: https://github.com/TristanoSuriani/fel-tracker/commit/7e7717b6c13c676bc32aa3c78ad7192e8c52a162
+- version: blue-hare @ eab937e
+  date: 2026-10-24
+  url: https://github.com/TristanoSuriani/fel-tracker/commit/eab937ef526c153c3c8954790a996c13465b1ff1
   notes: >-
-    No tagged releases; this is the latest commit on the tracker branch. The README gives the version as 0.10.0.
+    No tagged releases; this is the latest commit on the blue-hare branch. The README gives the version as 0.10.0.

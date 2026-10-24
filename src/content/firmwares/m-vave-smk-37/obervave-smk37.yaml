@@ -1,8 +1,8 @@
 device: m-vave-smk-37
 name: OberVave SMK-37
 summary: >-
-  Build of zvenson's OberVave 8-voice polysynth for the SMK-37 Pro, Elite and MKE-P37, with the pads as
-  the step sequencer and the faders on filter and effects.
+  Build of zvenson's OberVave polysynth (four tracks on eight shared voices from 3.0) for the SMK-37 Pro, Elite
+  and MKE-P37, with the pads as the step sequencer and the faders on filter and effects.
 description: >-
   The same synth, programs and screens as the FM-1 version, with the SMK-37's controls put to work: velocity
   from the unit's factory curves, wheels for bend and vibrato, and two fader banks. The SMK-37 layer comes
@@ -32,6 +32,14 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, sequencer, fx, reverb, delay, midi, usb-midi, performance]
 versions:
+- version: 3.0.1
+  date: 2026-10-23
+  url: https://github.com/zvenson/obervave/releases/tag/v3.0.1
+  notes: Reports its own firmware identity so the Firmware Hub can tell it from other builds that shared 3.0's.
+- version: '3.0'
+  date: 2026-10-23
+  url: https://github.com/zvenson/obervave/releases/tag/v3.0
+  notes: Four tracks on eight shared voices, a mixer with sends and master section, and tracks that start and stop on the bar; 1.5 patterns and settings carry over.
 - version: 1.5.3
   date: 2026-10-19
   url: https://github.com/zvenson/obervave/releases/tag/v1.5.3

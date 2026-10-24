@@ -1,0 +1,30 @@
+device: m-vave-fm-1
+name: Pin Head
+summary: >-
+  Planned FM-1 synth firmware modelled on the EMS Synthi AKS: a 16x16 pin matrix that patches oscillators, noise,
+  filter, ring modulator and effects, with a joystick control. Source sketches only; not yet bootable.
+description: >-
+  The repository holds C sketches for a 16x16 matrix with white, red and green pins (full, precise and attenuated
+  connections), band-limited oscillators, noise, a state-variable filter, a ring modulator, a trapezoid envelope,
+  matrix-addressable spring reverb and tape delay, global reverb and delay, X/Y joystick controls and factory
+  presets including one based on the Pink Floyd track On the Run. The firmware README says these are working sketches
+  and not a bootable firmware yet. The sound engine file (engine.c) was not in the repository when it was
+  checked; a note in its place says it will be added once the platform hooks are settled. The integration notes
+  plan to build on charlesvestal's fm1-base and test in the fm1-emu emulator. No release or installable package
+  exists. The project page has a browser mock-up of the panel and matrix.
+status: announced
+authors:
+- name: TruBitTech
+  url: https://github.com/TruBitTech
+source: https://github.com/TruBitTech/pinhead
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no LICENSE file and the source files carry no licence header.
+homepage: https://pinhead.trubittech.com/
+tags: [synth-engine, oscillator, filter, reverb, delay, fx]
+versions:
+- version: main @ 1f45325
+  date: 2026-10-24
+  url: https://github.com/TruBitTech/pinhead/commit/1f45325
+  notes: No tagged releases; this is the latest commit.

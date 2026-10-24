@@ -751,3 +751,6 @@ ignore:
   - url: https://github.com/ducdinh-codehub/8bit-game
     reason: terminal arcade game tributes with 8-bit sound; not music hardware
     date: 2026-10-23
+  - url: https://github.com/ajxs/yamaha_dx7_rom_disassembly
+    reason: annotated disassembly of Yamaha's DX7 v1.8 ROM that reassembles to the stock image byte for byte; redistributed stock firmware, and decompilations are skipped
+    date: 2026-10-24

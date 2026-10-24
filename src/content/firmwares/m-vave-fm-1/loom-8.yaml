@@ -40,6 +40,10 @@ image:
   source_url: https://github.com/charlesvestal/fm1-loom/blob/main/docs/MANUAL.md
   first_party: true
 versions:
+- version: '0.7'
+  date: 2026-10-24
+  url: https://github.com/charlesvestal/fm1-loom/releases/tag/v0.7
+  notes: Adds ten drum models, nine factory kits and eight user kits; the four factory breaks are no longer built in and are added back from the samples page.
 - version: 0.6.1
   date: 2026-10-22
   url: https://github.com/charlesvestal/fm1-loom/releases/tag/v0.6.1

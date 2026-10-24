@@ -1,0 +1,35 @@
+device: m-vave-fm-1
+name: ACID FM
+summary: >-
+  Early fork of JIANT FM aimed at IDM and braindance: version 0.1 is JIANT FM 0.9.18 renamed, with chopped
+  breaks, tape effects and a song generator planned.
+description: >-
+  Fork of JIANT FM, which is itself a Felucca fork using SLOOP's song system, so it keeps JIANT's engines,
+  sequencer, browser installer, editor and emulator. The first release is JIANT FM under a new name with
+  ACID FM branding on the installer and web pages. The README lists the planned steps: trimming the engines,
+  an acid-coloured screen theme, loading and chopping your own breakbeats from the web page, tape and 303-style
+  accent and slide effects, and a generator for whole songs in several styles. The manual still describes JIANT
+  FM's features until those land. The repository includes a browser emulator and a manual site.
+status: active
+authors:
+- name: NorfolkHacker
+  url: https://github.com/NorfolkHacker
+source: https://github.com/NorfolkHacker/acid-fm
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Same licence as the parent JIANT FM and Felucca. Felucca's bundled third-party parts keep their own
+  licences, listed in LICENSING.md.
+homepage: https://norfolkhacker.github.io/acid-fm/
+distribution: browser-installer
+install_notes: >-
+  Browser WebMIDI installer in Chrome or Edge over USB. The README asks you to back up the full flash first,
+  for example with MvaveFM1Unbricker, and notes that the ROM bootloader cannot be overwritten, so a failed
+  install can be recovered. Inherits JIANT FM's brick risk.
+brick_risk: true
+tags: [synth-engine, sequencer, fx, fm, editor, emulator]
+versions:
+- version: main @ 7f1dd30
+  date: 2026-10-24
+  url: https://github.com/NorfolkHacker/acid-fm/commit/7f1dd308ab225429fca5741a6b635e03e2823c9f
+  notes: No tagged releases; this is the latest commit.

@@ -27,7 +27,7 @@ install_notes: >-
 brick_risk: true
 tags: [controller-mode, midi, usb-midi, emulator, platform]
 versions:
-- version: main @ 0e6612b
-  date: 2026-10-23
-  url: https://github.com/johnskiller/fm1-ctrl/commit/0e6612b
+- version: main @ c69b0c1
+  date: 2026-10-24
+  url: https://github.com/johnskiller/fm1-ctrl/commit/c69b0c1
   notes: No tagged releases; this is the latest commit.
