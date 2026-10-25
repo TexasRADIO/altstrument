@@ -12,7 +12,9 @@ description: >-
   is on the card but its hardware test is still pending, and the README lists
   newer menus and effect pages as emulator-tested. The repository also holds a
   homemade H8S disassembler, assembler and emulator, and a DSP decoder, and
-  its releases include a Windows patcher. The author calls it a preview and
+  its releases include a Windows patcher. The v2.00 beta release adds an option
+  to run a plain CF card on an IDE adapter instead of the Zip, which the author
+  reports working on hardware with Roland's stock OS. The author calls it a preview and
   work in progress from October 2026. The builds are based on
   the SP-808 OS, so installing one on an SP-808EX turns it into a non-EX.
 status: active
@@ -40,6 +42,10 @@ image:
   source_url: https://github.com/yuyoi/Sp-808-rosetta-looper-OS-#readme
   first_party: true
 versions:
+  - version: v2.00-cf-beta
+    date: 2026-10-24
+    url: https://github.com/yuyoi/Sp-808-rosetta-looper-OS-/releases/tag/v2.00-cf-beta
+    notes: Pre-release. Adds a voice engine with vocoder routing and a beta option to run a plain CF card on an IDE adapter instead of the Zip; Rosetta v2.00 itself is not hardware-tested yet.
   - version: v1.99
     date: 2026-10-22
     url: https://github.com/yuyoi/Sp-808-rosetta-looper-OS-/releases/tag/v1.99

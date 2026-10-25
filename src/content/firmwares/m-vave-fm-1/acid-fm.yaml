@@ -29,7 +29,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, sequencer, fx, fm, editor, emulator]
 versions:
-- version: main @ 7f1dd30
-  date: 2026-10-24
-  url: https://github.com/NorfolkHacker/acid-fm/commit/7f1dd308ab225429fca5741a6b635e03e2823c9f
+- version: main @ f1edf14
+  date: 2026-10-25
+  url: https://github.com/NorfolkHacker/acid-fm/commit/f1edf149aafb9404e3756c7db8918ad621fad72b
   notes: No tagged releases; this is the latest commit.

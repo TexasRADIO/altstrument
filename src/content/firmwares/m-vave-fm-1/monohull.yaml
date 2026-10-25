@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: Monohull
+summary: >-
+  Monosynth firmware for the FM-1: one voice with morphing oscillators, five modelled filters, unison, chorus, delay
+  and reverb, with a scheduler that spends spare CPU time on the effects.
+description: >-
+  The oscillators are band-limited and morph between saw, pulse, triangle and sine, with sync and a sub oscillator.
+  The five filters are a transistor ladder, a diode ladder, an OTA cascade, a Sallen-Key and a state-variable
+  design. The reverb is a port of the one in Mutable Instruments Rings, and there is a Juno-style BBD chorus and a
+  ping-pong delay. It ships with factory presets, shows up as a class-compliant USB-MIDI device and keeps nothing
+  in flash, so it does not read or erase another firmware's projects or samples. The DSP also builds for a desktop
+  host for tests and demo renders. The README says it runs in fm1-emu and in Harbor but has not been run on a real
+  FM-1.
+status: active
+authors:
+- name: markterm
+  url: https://github.com/markterm
+source: https://github.com/markterm/monohull
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  GPL-3.0 as stated in the README, following Felucca's hardware layer; the LICENSE file is the GPL version 3 text with
+  no "or later" clause. Borrowed designs keep their own licences (Mutable Instruments' reverb and Open303, both MIT).
+distribution: download
+install_notes: >-
+  Download monohull.fwsc from a release and install it with Felucca's tools/fm1_install.py (the repository carries
+  Felucca as a submodule), or with the web installers and the Firmware Hub that already work over Felucca. If an
+  install fails, hold OCT- and OCT+ for 3 seconds for the FM-1's USB update mode. Not yet run on a real FM-1.
+brick_risk: true
+tags: [synth-engine, oscillator, filter, chorus, delay, reverb, midi]
+versions:
+- version: 0.2.0
+  date: 2026-10-25
+  url: https://github.com/markterm/monohull/releases/tag/v0.2.0
+  notes: Appears as a USB-MIDI device and can be replaced by other firmware through the usual installers. Adds a PWM PAD preset.
+- version: 0.1.1
+  date: 2026-10-25
+  url: https://github.com/markterm/monohull/releases/tag/v0.1.1
+  notes: Same firmware as 0.1.0 with its own package identity.
+- version: 0.1.0
+  date: 2026-10-25
+  url: https://github.com/markterm/monohull/releases/tag/v0.1.0
+  notes: First release.

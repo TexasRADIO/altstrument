@@ -1,0 +1,46 @@
+device: m-vave-fm-1
+name: NOCT FM
+summary: >-
+  MIDI controller firmware for the FM-1 with a pixel night-sky screen and mapped profiles for FL Studio and Ableton
+  Live, switched from the PRESETS knob, with DAW scripts for both.
+description: >-
+  Modifies CTL-1. Four banks of four knobs send fixed CCs on MIDI channel 16 for mixer, send and device or macro
+  control, while notes go out on a chosen keyboard channel, with transport, record, panic, sustain, modulation,
+  aftertouch and an optional built-in General MIDI voice. Feedback from the DAW updates the knob values on
+  screen. The repository holds an FL Studio MIDI script and an Ableton Live remote script, a browser installer that
+  checks the package size, SHA-256 and identity before writing, and a Windows simulator. The README is in Russian and
+  calls the build an engineering alpha: the USB package builds in GitHub Actions, but nothing has been tested on a
+  real FM-1 or inside the DAWs, and the Bluetooth build is unverified. It cannot import FM-1 factory projects.
+status: active
+authors:
+- name: Joolo09
+  url: https://github.com/Joolo09
+source: https://github.com/Joolo09/noct-fm
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  MPL-2.0 for the application, integrations and modifications. The upstream CTL-1, fm1-base and felucca-bsp
+  sources keep their notices in upstream/. The Sonivox EAS synth code is Apache-2.0 and the Terminus font is
+  SIL OFL 1.1. The pixel DAW logos are redrawn for profile recognition; their names and trademarks belong to
+  their owners.
+homepage: https://joolo09.github.io/noct-fm/
+distribution: browser-installer
+install_notes: >-
+  Web MIDI installer in Chrome or Edge over USB, offering the package from the latest successful CI build; the
+  same page has the DAW scripts. Or build on Linux x86-64 with JieLi's toolchain and the AC79 SDK (sh build.sh
+  --no-ble for the USB build). The package uses CTL-1's storage layout, so other firmware's data is not kept. The
+  author asks you to save your data and check the recovery steps for your stock version before installing, and
+  has not flashed a unit.
+brick_risk: true
+tags: [controller-mode, midi, usb-midi, daw]
+image:
+  url: https://raw.githubusercontent.com/Joolo09/noct-fm/main/preview/noct-fm.gif
+  alt: "NOCT FM home screen in FL Studio mode: pixel carrot logo, amber SESSION 01 label, four Mixer knob tiles for level, pan, width and channel volume over a dark perspective grid"
+  credit: Joolo09
+  source_url: https://github.com/Joolo09/noct-fm
+  first_party: true
+versions:
+- version: main @ cd05da6
+  date: 2026-10-25
+  url: https://github.com/Joolo09/noct-fm/commit/cd05da6
+  notes: No tagged releases; this is the latest commit.

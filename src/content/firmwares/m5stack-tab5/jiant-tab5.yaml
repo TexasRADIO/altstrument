@@ -1,0 +1,42 @@
+device: m5stack-tab5
+name: JIANT Tab5
+summary: >-
+  Port of the FM-1 firmware JIANT FM to the Tab5, with the FM-1's panel drawn on the touchscreen, USB MIDI host
+  input and MIDI learn.
+description: >-
+  JIANT FM is juanjiant-bit's Felucca-based groovebox for the M-VAVE FM-1. This port targets JIANT 0.9.18 and
+  leaves its source untouched, adding a Tab5 platform layer under tab5/ that replaces the FM-1's hardware access
+  with ESP32-P4 code, a touchscreen panel with 14 buttons, 7 encoders and 27 keys, multitouch, a USB MIDI host
+  driver for the USB-A port, and audio through the ES8388 codec. One of the repository's setup notes says the build
+  had not yet been tested on a real Tab5, while later commits mention fixed audio and display, so check the
+  release notes before relying on it.
+status: active
+authors:
+  - name: zircothc
+    url: https://github.com/zircothc
+  - name: juanjiant-bit
+    url: https://github.com/juanjiant-bit
+source: https://github.com/zircothc/jiant-tab5
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README states GPL-3.0-only, matching JIANT and Felucca, but the repository has no LICENSE file.
+distribution: download
+install_notes: >-
+  The v0.1 release has a prebuilt .bin that the release notes flash at address 0x0 with esptool for the esp32p4
+  chip. Alternatively, clone juanjiant-bit/JIANT, copy this repository's tab5 folder into it and build tab5/idf
+  with ESP-IDF v6.1. Flashing replaces the Tab5's factory firmware, which M5Stack documents restoring with
+  M5Burner. The step-by-step guide is in Spanish.
+brick_risk: false
+tags: [groovebox, sequencer, synth-engine, fx, fm, midi, usb-midi, performance, fork, open-source]
+image:
+  url: https://raw.githubusercontent.com/zircothc/jiant-tab5/main/docs/panel.png
+  alt: JIANT FM 0.9.18 panel on the Tab5 with outlined creature drawings on the left screen, eight knobs, two rows of buttons and a two-row piano keyboard
+  credit: zircothc
+  source_url: https://github.com/zircothc/jiant-tab5
+  first_party: true
+versions:
+  - version: v0.1
+    date: 2026-10-24
+    url: https://github.com/zircothc/jiant-tab5/releases/tag/v0.1
+    notes: First release, with a prebuilt Tab5 binary.

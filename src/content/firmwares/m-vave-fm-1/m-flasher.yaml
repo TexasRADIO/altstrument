@@ -40,6 +40,10 @@ image:
   source_url: https://github.com/jvitkauskas/m-flasher
   first_party: true
 versions:
+- version: 0.6.0
+  date: 2026-10-24
+  url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.6.0
+  notes: Supports M-VAVE's FM-1 firmware 016, including its new data layout, handles its larger stock bootloader, and adds a run-ram command for developers.
 - version: 0.5.1
   date: 2026-10-20
   url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.5.1

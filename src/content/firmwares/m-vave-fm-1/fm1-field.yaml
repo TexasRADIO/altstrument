@@ -1,0 +1,47 @@
+device: m-vave-fm-1
+name: FM1 Field
+summary: >-
+  Field-recording radio for the FM-1 built on fm1-radio: joins WiFi, streams Radio Aporee recordings picked by
+  country or state and keeps a one-clip sampler with slicing and a filter on top.
+description: >-
+  Browses a built-in catalogue of 162 countries and 1,560 states and provinces that have recordings, and plays a
+  random recording from the chosen region, from near a saved spot or from anywhere. Location batches are cached in
+  flash so later boots skip the first index scan, which takes about three minutes. Favourites, a mono ADPCM sampler
+  (2.7 to 21.8 seconds depending on rate) with one-shot, loop and slice modes, and an LFO filter are included, and
+  a web page mirrors the 240 x 240 screen over USB. The author calls the firmware experimental alpha and says the
+  longer sampler of the latest build still needs testing on hardware. The device and USB name is FIELD. Releases
+  are numbered 0.1.x-alpha on the project site; the repository has no tags or release pages.
+status: active
+authors:
+- name: A.V.
+  url: https://github.com/AveyCole
+source: https://github.com/AveyCole/FM1-Field
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  MPL-2.0 for the modified and new application files; the platform is vendored from fm1-radio, fm1-base and
+  felucca-bsp with their notices kept (LICENSING.md, PROVENANCE.md). JieLi's AC79 SDK files, Apache-2.0, are not in
+  the repository. The recordings stay with their contributors under their own licences, and none is distributed
+  here; the region catalogue uses Aporee location IDs and public-domain Natural Earth boundaries. The repository
+  carries the m-bootloader recovery package fm1-uboot-1.2, MIT, in web/m-bootloader/ and no stock FM-1 image.
+homepage: https://aveycole.github.io/FM1-Field/
+distribution: browser-installer
+install_notes: >-
+  Browser installer in Chrome or Edge over USB; it works from FIELD running normally, or from a loader already on
+  screen, and discovery can take up to 45 seconds. Its Back to the stock firmware option takes an M-VAVE package that
+  you download yourself. To build it you need JieLi's PI32v2 toolchain, the AC79 SDK and Linux x86-64, using
+  base/tools/build.py. Back up projects first. A saved clip and favourites sit in flash that other firmware or
+  restoring stock can overwrite.
+brick_risk: true
+tags: [wifi, sampler, filter, usb-audio, performance]
+image:
+  url: https://raw.githubusercontent.com/AveyCole/FM1-Field/main/docs/images/field-expanded.png
+  alt: "FIELD sampler page: a Sample saved message, a status line, a green hill landscape under an orange sun and knob readouts for start, end, pitch and level"
+  credit: A.V.
+  source_url: https://github.com/AveyCole/FM1-Field
+  first_party: true
+versions:
+- version: main @ ef90aef
+  date: 2026-10-25
+  url: https://github.com/AveyCole/FM1-Field/commit/ef90aef
+  notes: No tagged releases; this is the latest commit. The project site offers 0.1.17-alpha.

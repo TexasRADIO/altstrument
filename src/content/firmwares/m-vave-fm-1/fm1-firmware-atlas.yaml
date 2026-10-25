@@ -1,0 +1,29 @@
+device: m-vave-fm-1
+name: FM-1 Firmware Atlas
+kind: tool
+summary: >-
+  Single-page directory of 67 FM-1 firmwares with their purpose, engines, MIDI behaviour and a project-health rating taken
+  from GitHub activity, plus a six-step guide for new owners.
+description: >-
+  The data lives in a JSON file with one object per firmware, and a build script generates the page and a Markdown copy
+  of the tables from it; a second script refreshes last-push dates and stars. Health is rated from the repository's last
+  push, or marked removed when the repository returns 404. The README says it was seeded from aroum/fm1-custom-fw. It
+  links to other directories and does not host firmware files.
+status: active
+authors:
+- name: wero1414
+  url: https://github.com/wero1414
+source: https://github.com/wero1414/atlas-fm-1
+source_status: open
+license: CC0-1.0
+license_notes: >-
+  No LICENSE file; the README states that the repository's own files are CC0 and that firmware names and descriptions
+  belong to their authors.
+homepage: https://wero1414.github.io/atlas-fm-1/
+distribution: source-only
+tags: [research, directory]
+versions:
+- version: main @ 8cec848
+  date: 2026-10-14
+  url: https://github.com/wero1414/atlas-fm-1/commit/8cec848
+  notes: No tagged releases; this is the latest commit.

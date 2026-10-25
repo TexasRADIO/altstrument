@@ -14,6 +14,10 @@ homepage: https://github.com/No-Such-Device/nt_helper/releases
 distribution: download
 tags: [editor]
 versions:
+  - version: v2.60.1
+    date: 2026-10-24
+    url: https://github.com/No-Such-Device/nt_helper/releases/tag/v2.60.1
+    notes: Fixes the MCP plug-in install check to wait for the algorithm library before checking plug-in GUIDs.
   - version: v2.60.0
     date: 2026-10-23
     url: https://github.com/No-Such-Device/nt_helper/releases/tag/v2.60.0

@@ -42,6 +42,18 @@ install_notes: >-
 brick_risk: true
 tags: [game, emulator]
 versions:
+- version: '12822759'
+  date: 2026-10-24
+  url: https://github.com/acidsound/picovave/releases/tag/12822759
+  notes: Closes four ways the panel could freeze with the second core running, including a stale mailbox surviving a reset.
+- version: 9b87fd08
+  date: 2026-10-23
+  url: https://github.com/acidsound/picovave/releases/tag/9b87fd08
+  notes: Fixes a boot freeze on the FM-1 and reports the build tag in the FM-1's identity reply.
+- version: c924d336
+  date: 2026-10-23
+  url: https://github.com/acidsound/picovave/releases/tag/c924d336
+  notes: Lights the pads and keys that play PICO-8 controls, brighter when pressed.
 - version: da881124
   date: 2026-10-23
   url: https://github.com/acidsound/picovave/releases/tag/da881124

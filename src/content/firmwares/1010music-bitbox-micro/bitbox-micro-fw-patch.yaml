@@ -9,7 +9,10 @@ description: >-
   Flip UI for upside-down mounting, Clk Loss to hold the last tempo when a clock
   stops, and a ProgChange option that ignores repeats of the loaded preset. The
   2.3.9-mod release adds four effect slots across the master mix, with sixteen
-  effects ported from Airwindows plugins. The author states it is unofficial and that 1010music neither wrote nor endorses
+  effects ported from Airwindows plugins. The 2.3.10-mod release adds a jungle
+  toolkit for Clip pads, with loops locked to the clock, 24 Live Flip modes and
+  turntable-style hold buttons, plus three Airwindows compressors and screen
+  themes. The author states it is unofficial and that 1010music neither wrote nor endorses
   it, and asks that support requests not go to 1010music.
 status: active
 authors:
@@ -33,6 +36,10 @@ install_notes: >-
   advised.
 tags: [midi, fx, lfo, ui, performance]
 versions:
+  - version: 2.3.10-mod
+    date: 2026-10-25
+    url: https://github.com/modularpatcher/bitbox-micro-fw-patch/commit/f82b857
+    notes: Adds clock-locked Clip pad modes (vinyl, jungle, key lock), 24 Live Flip modes, hold buttons such as brake and roll, three Airwindows compressors and screen themes. Date is the commit date.
   - version: 2.3.9-mod
     date: 2026-10-16
     url: https://github.com/modularpatcher/bitbox-micro-fw-patch/commit/883a551

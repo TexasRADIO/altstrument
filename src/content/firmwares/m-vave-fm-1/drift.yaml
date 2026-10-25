@@ -9,7 +9,7 @@ description: >-
   three delay modes and six reverb types. The sequencer repeats Euclidean patterns with bars, note count,
   duration, probability, direction, interval, chaos and timing settings, and keeps running while you edit.
   Root, scale and note range can be set, with optional scale LEDs and a scale-only keyboard. Patches are
-  kept in a six-row list with favourites. The author notes that the 0.8 package still needed testing on
+  kept in a six-row list with favourites. The author notes that the 0.9.1 package still needed testing on
   a physical FM-1 before submission to the Firmware Hub. This is a different project from DriftSeq and
   from Haave.
 status: active
@@ -39,6 +39,14 @@ image:
   source_url: https://github.com/FBNFRTG/drift-fm1
   first_party: true
 versions:
+- version: 0.9.1
+  date: 2026-10-25
+  url: https://github.com/FBNFRTG/drift-fm1/releases/tag/v0.9.1
+  notes: Fixes the order of the delay time values and the key layout of the browser player; audio and patch storage are unchanged from 0.9.
+- version: '0.9'
+  date: 2026-10-24
+  url: https://github.com/FBNFRTG/drift-fm1/releases/tag/v0.9
+  notes: Reorganises the effects into delay, reverb and misc pages and adds more sequence variations.
 - version: '0.8'
   date: 2026-10-23
   url: https://github.com/FBNFRTG/drift-fm1/releases/tag/v0.8

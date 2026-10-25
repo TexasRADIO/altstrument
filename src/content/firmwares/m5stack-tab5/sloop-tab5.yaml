@@ -1,0 +1,46 @@
+device: m5stack-tab5
+name: SLOOP Tab5
+summary: >-
+  Port of the FM-1 groovebox firmware SLOOP to the Tab5, with the FM-1's panel drawn on the touchscreen, USB MIDI
+  host input and MIDI learn.
+description: >-
+  SLOOP is isod89's performance groovebox for the M-VAVE FM-1, built on Felucca. This port leaves the SLOOP source
+  untouched and adds a Tab5 platform layer under tab5/: it replaces the FM-1's hardware access with ESP32-P4 code,
+  renders the 240 by 240 FM-1 screen at double size, and lays out the 14 buttons, 8 knobs and 27 keys as a
+  multitouch panel with latching buttons. Audio goes to the ES8388 codec, with the speaker muted and the level
+  lowered when headphones are plugged in. Class-compliant USB MIDI devices on the USB-A port can play notes or be
+  assigned to controls through MIDI learn, which the README marks as untested. The build is pinned to SLOOP commit
+  d315ad8 (v2.6), and the repository carries the generated headers for it.
+status: active
+authors:
+  - name: zircothc
+    url: https://github.com/zircothc
+  - name: isod89
+    url: https://github.com/isod89
+source: https://github.com/zircothc/sloop-tab5
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file is the GPL-3.0 text and the README states GPL-3.0-only, matching SLOOP. The upstream SLOOP
+  entry notes that its icon atlas and panel image are separate assets, and the generated headers in this repository
+  are derived from SLOOP's.
+distribution: download
+install_notes: >-
+  The v0.1 release has a prebuilt .bin that the release notes flash at address 0x0 with esptool for the esp32p4
+  chip. Alternatively, clone isod89/sloop-fm1, check out the pinned commit, copy this repository's tab5 folder into
+  it and build tab5/idf with ESP-IDF v6.1. Flashing replaces the Tab5's factory firmware; the guide in the
+  repository points to M5Stack's M5Burner restore procedure. The guide is in Spanish. The bass of the default
+  808 track sits below what the Tab5's speaker plays, so use headphones to hear it.
+brick_risk: false
+tags: [groovebox, sequencer, synth-engine, drums, sampler, fx, midi, usb-midi, performance, fork, open-source]
+image:
+  url: https://raw.githubusercontent.com/zircothc/sloop-tab5/main/docs/panel.png
+  alt: SLOOP panel on the Tab5 with four track rows, knob readouts for swing, level, steps and pan, eight knobs, two rows of buttons and a two-row piano keyboard
+  credit: zircothc
+  source_url: https://github.com/zircothc/sloop-tab5
+  first_party: true
+versions:
+  - version: v0.1
+    date: 2026-10-24
+    url: https://github.com/zircothc/sloop-tab5/releases/tag/v0.1
+    notes: First release, with a prebuilt Tab5 binary.

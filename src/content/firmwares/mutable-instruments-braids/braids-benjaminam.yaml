@@ -1,0 +1,46 @@
+device: mutable-instruments-braids
+name: Braids BenjaminAM
+summary: Braids firmware build from a fork of the boourns eurorack repository that adds a separate Settings menu, a configurable menu timeout, quick octave adjustment from the WAVE menu and longer AD envelope controls.
+description: >-
+  The builds change the Braids user interface more than the sound engine. A
+  separate Settings menu splits global options from the main menu, a menu
+  timeout (MTO) can be off, on, or on with a save of the global settings when it
+  expires, and the timeout length is chosen from 5, 10, 15 or 20 seconds.
+  Holding the encoder in the WAVE menu while turning it changes the octave
+  (OCTV), and a long press returns to WAVE. The AD attack and decay controls
+  have 20 steps with a revised curve, and a display brightness initialisation
+  bug is fixed. Each release carries a HEX file for ST-Link programming and a
+  WAV file for the Braids audio bootloader. The author keeps the source in a
+  fork of boourns/eurorack, which holds a Python 3 build workflow for the
+  legacy firmware, and uses the BenjaminAM repository as a releases pointer.
+status: active
+authors:
+  - name: Benjamin AM
+    url: https://github.com/mulkeybe
+source: https://github.com/mulkeybe/eurorack
+source_status: open
+license: MIT
+license_notes: >-
+  The fork has no license file of its own; its README, inherited from the
+  upstream eurorack repository, states that the STM32F code is MIT.
+homepage: https://github.com/mulkeybe/BenjaminAM
+distribution: download
+install_notes: >-
+  Download the WAV or HEX file from the release page. The WAV goes through the
+  Braids audio bootloader like an official update; the HEX is for programming
+  with an ST-Link. The author's release notes say the WAV was generated with
+  the STM audio bootloader process and checked as mono, 16-bit, 48 kHz.
+brick_risk: false
+tags: [synth-engine, ui, fork]
+versions:
+  - version: 2.01a
+    date: 2026-10-24
+    url: https://github.com/mulkeybe/eurorack/releases/tag/2.01a
+    notes: Separate Settings menu, OCTV restored to the main menu, long-press shortcut back to WAVE, 20-step AD attack and decay.
+  - version: "2.01"
+    date: 2026-08-28
+    url: https://github.com/mulkeybe/eurorack/releases/tag/2.01
+    notes: Quick OCTV adjustment, configurable menu timeout, display brightness initialisation fix.
+  - version: "2.0"
+    date: 2026-08-28
+    url: https://github.com/mulkeybe/eurorack/releases/tag/2.0

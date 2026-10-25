@@ -36,6 +36,10 @@ install_notes: >-
   skin in the older format. A plugin crash takes MPC down with it.
 tags: [sdk, platform, loader, web]
 versions:
+  - version: desktop-v1.0.0
+    date: 2026-10-24
+    url: https://github.com/sd88me/mpc-vst-plugins/releases/tag/desktop-v1.0.0
+    notes: Installer app pre-release. Adds a USB-stick setup that installs plugins without SSH or a network connection, plus optional SSH access on the same stick.
   - version: desktop-v0.6.1
     date: 2026-10-22
     url: https://github.com/sd88me/mpc-vst-plugins/releases/tag/desktop-v0.6.1

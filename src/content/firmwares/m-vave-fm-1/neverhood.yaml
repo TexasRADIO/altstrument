@@ -1,0 +1,44 @@
+device: m-vave-fm-1
+name: Neverhood
+summary: >-
+  Clay-themed instrument for the FM-1 with 22 presets, a four-track sequencer and a battery indicator, built on fm1-base
+  and styled after the 1996 adventure game The Neverhood.
+description: >-
+  Rights warning: the build extracts sprites and sounds from the game's demo archive, downloaded from ScummVM, and
+  prepares musical samples from recordings on Terry Scott Taylor's Bandcamp page, and the firmware package that the
+  project site offers is built from them. The repository says it does not store the source recordings or the extracted
+  sprites, and nothing in the repository or on the site shows that the rights holders have licensed their use. The
+  firmware itself has clay-style screens, a character animation, an effects kit with game-derived sounds and a music
+  bank. The site also has a browser emulator and an installer.
+status: active
+authors:
+- name: snpwball
+  url: https://github.com/snpwball
+source: https://github.com/snpwball/fm1-neverhood
+source_status: open
+license: MIT
+license_notes: >-
+  MIT for the repository's own code (LICENSE, "FM-1 Hello World contributors"). The platform layer comes from fm1-base
+  (MPL-2.0), the fonts are SIL OFL 1.1 and Apache-2.0, and the installer on the site is MPL-2.0. The game sprites and sounds
+  and the Bandcamp recordings are third-party works with no licence stated by the project. The project site's
+  FM-1-V15.fwsc is the git blob ce49cc1595b67347c68a3ac7463017f9fa8c19dd, the V15 image M-VAVE licenses for redistribution
+  under Apache-2.0 in m-vave/fm1_open.
+homepage: https://snpwball.github.io/fm1/neverhood/
+distribution: browser-installer
+install_notes: >-
+  Install from the project site in Chrome or Edge over USB; the page also has the neverhood.fwsc download and a Return to
+  V15 button that uses the V15 file hosted next to it. To build it yourself you need FFmpeg and the repository's
+  setup.sh, setup-audio.sh and run.sh, which fetch the game demo and prepare the samples. Back up first.
+brick_risk: true
+tags: [synth-engine, sequencer, game, theme, emulator]
+image:
+  url: https://snpwball.github.io/fm1/neverhood/site-assets/cover.png
+  alt: "Cover art in a clay style: the game's title lettering on a cream banner above a clay xylophone with a cymbal, two horns and pipes, on an orange wall"
+  credit: snpwball
+  source_url: https://github.com/snpwball/fm1-neverhood
+  first_party: true
+versions:
+- version: main @ cb88bab
+  date: 2026-10-22
+  url: https://github.com/snpwball/fm1-neverhood/commit/cb88bab
+  notes: No tagged releases; this is the latest commit.

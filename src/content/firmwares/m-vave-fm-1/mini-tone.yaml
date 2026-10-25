@@ -35,6 +35,14 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, sequencer, fx, chiptune, fm, oscillator, physical-modeling, midi, emulator, fork]
 versions:
+- version: minitone-1.0.4
+  date: 2026-10-25
+  url: https://github.com/eldontyrellcorp/Mini-Tone/releases/tag/minitone-1.0.4
+  notes: Adds a second EUCLID page that combines two rhythms with AND, OR, XOR or SUB, and explains each DUALVCO configuration on screen.
+- version: minitone-1.0.3
+  date: 2026-10-24
+  url: https://github.com/eldontyrellcorp/Mini-Tone/releases/tag/minitone-1.0.3
+  notes: Adds a TR-808 drum engine and an Euclidean rhythm mode, and brings the web editor back in line with the firmware.
 - version: minitone-1.0.2
   date: 2026-10-23
   url: https://github.com/eldontyrellcorp/Mini-Tone/releases/tag/minitone-1.0.2

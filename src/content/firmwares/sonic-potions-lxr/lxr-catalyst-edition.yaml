@@ -1,0 +1,42 @@
+device: sonic-potions-lxr
+name: LXR Catalyst Edition
+summary: Large extension of the original LXR 0.37 firmware that adds per-voice morph, one-shot LFO shapes, MIDI CC control of every voice parameter, rolls, a looper, track transposition, sample import and many editing shortcuts.
+description: >-
+  Brendan Clarke's fork keeps the core sound of the LXR and widens its
+  control. Each voice gets its own morph value, reachable from the PERF page,
+  step automation, velocity and LFO modulation, and the mod wheel controls
+  global or per-voice morph. New LFO shapes include one-shot waves and an
+  exponential triangle. Voices have direct CC mappings without NRPN, and MIDI
+  input can be switched off per voice. The sequencer gains step and track copy,
+  automation-only steps, per-track pattern assignment and timing scale, an
+  instant pattern switch option, roll recording in three modes and a looper on
+  the step buttons. Samples placed in SAMPLES and LOOPS folders on the SD card
+  are imported as one-shots or loops. The repository includes a rewritten
+  manual and notes for working with LLM coding tools. The README documents the
+  encoder acceleration for four-phase encoders only.
+status: active
+authors:
+  - name: Brendan Clarke
+    url: https://github.com/brendanclarke
+source: https://github.com/brendanclarke/LXR
+source_status: open
+license: proprietary
+license_notes: >-
+  Same LICENSE.txt as the original Sonic Potions source: redistribution and
+  modification are allowed, but the code may not be sold or used in a commercial
+  product or activity, and modified redistributions must include their complete
+  source.
+homepage: https://github.com/brendanclarke/LXR#readme
+distribution: download
+install_notes: >-
+  Copy firmware image/FIRMWARE.BIN to the root of the SD card and switch the
+  LXR on while holding the main encoder button. The repository also builds the
+  image with make firmware, which needs arm-none-eabi-gcc, avr-gcc and a host
+  C++ compiler.
+brick_risk: false
+tags: [drums, sequencer, midi, sampler, fork]
+versions:
+  - version: master @ 54f3356
+    date: 2026-10-16
+    url: https://github.com/brendanclarke/LXR/commit/54f3356
+    notes: No tagged releases; this is the latest commit. The README names it Catalyst Edition 1.03.

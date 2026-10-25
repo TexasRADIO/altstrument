@@ -21,7 +21,7 @@ homepage: https://blablack.github.io/patch-press/
 distribution: source-only
 tags: [converter, multisample, python, cli]
 versions:
-  - version: main @ 0344043
-    date: 2026-10-13
-    url: https://github.com/blablack/patch-press/commit/0344043
+  - version: main @ 706b77f
+    date: 2026-10-24
+    url: https://github.com/blablack/patch-press/commit/706b77f
     notes: No tagged releases; this is the latest commit.

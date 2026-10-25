@@ -35,6 +35,10 @@ image:
   source_url: https://github.com/fvalente/GammaWave-FM1
   first_party: true
 versions:
+- version: v1.1-GW
+  date: 2026-10-24
+  url: https://github.com/fvalente/GammaWave-FM1/releases/tag/v1.1-GW
+  notes: Adds trap genres to the song generator, a TAKES reel for building songs, SET playback and trap snare and clap models.
 - version: v1.0-GW
   date: 2026-10-15
   url: https://github.com/fvalente/GammaWave-FM1/releases/tag/v1.0-GW

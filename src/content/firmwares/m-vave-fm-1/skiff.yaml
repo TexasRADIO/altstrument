@@ -45,6 +45,14 @@ image:
   source_url: https://github.com/illuminus5/skiff
   first_party: true
 versions:
+- version: 2.0.1
+  date: 2026-10-25
+  url: https://github.com/illuminus5/skiff/releases/tag/v2.0.1
+  notes: Fixes crackling in FM6 sounds from DX7 banks and the web editor not finding the unit on some Macs; OCT+ in the EDIT layer turns every drum lane on.
+- version: '2.0'
+  date: 2026-10-24
+  url: https://github.com/illuminus5/skiff/releases/tag/v2.0
+  notes: New sequencer pages, songs that chain, play once and change sounds, panned drum lanes and drum kits of your own, with new save formats and a converter for 1.x data.
 - version: '1.4'
   date: 2026-10-20
   url: https://github.com/illuminus5/skiff/releases/tag/v1.4

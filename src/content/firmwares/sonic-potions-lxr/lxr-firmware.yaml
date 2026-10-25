@@ -1,0 +1,40 @@
+device: sonic-potions-lxr
+name: LXR firmware (official source)
+summary: Sonic Potions' own firmware source for the LXR drum synthesizer, with the AVR front-panel code, the STM32F4 audio code and the tool that builds the FIRMWARE.BIN update image; version 0.37 is the last release.
+description: >-
+  Julian Schmidt published the firmware for the original LXR in 2013. The
+  repository holds the ATmega644 front-panel code, the STM32F4 mainboard code
+  with the drum voices, effects, sequencer and MIDI handling, and an image
+  builder that merges the two into a single file for the SD card bootloader.
+  Makefiles for Linux and an Eclipse project setup for Windows are included, and
+  the repository also carries a built FIRMWARE.BIN for 0.37. The newest
+  changelog entry fixes a scrambled display after a front-panel CPU reset. Later
+  community firmwares for the LXR and the LXR-02 start from this code.
+status: dormant
+authors:
+  - name: Julian Schmidt
+    url: https://github.com/SonicPotions
+source: https://github.com/SonicPotions/LXR
+source_status: open
+license: proprietary
+license_notes: >-
+  LICENSE.txt is the author's own terms: redistribution and modification are
+  allowed, the code "may not be sold, nor may it be used in a commercial product
+  or activity", modified redistributions must include their complete source, and
+  the copyright notice must be kept. The ST and ARM libraries in the tree keep
+  their own licences. Erica Synths' 2026 GPL-3.0-only release (erica-synths/lxr-desktop-app) covers its own
+  LXR-02 firmware tree, not this repository, which still carries the 2013 terms.
+homepage: http://www.sonic-potions.com/lxr
+distribution: download
+install_notes: >-
+  Copy FIRMWARE.BIN to the root of the SD card and switch the LXR on while
+  holding the main encoder button, as the community builds describe. To build it
+  yourself, install the ARM and AVR GCC toolchains and run make firmware, which
+  writes the image into the firmware image folder.
+brick_risk: false
+tags: [official, drums, sequencer, open-source]
+versions:
+  - version: "0.37"
+    date: 2015-10-23
+    url: https://github.com/SonicPotions/LXR/commit/dee4968
+    notes: Commit that adds the 0.37 firmware image; the repository's last code release.

@@ -1,0 +1,61 @@
+device: m-vave-fm-1
+name: fm1-dock
+summary: >-
+  One firmware for the FM-1 that is installed once and then hosts synths as modules in flash, switched from a
+  picker on the FM-1 and deployed over USB MIDI without reflashing.
+description: >-
+  A fork of Dinghy that keeps its update path and USB rescue and adds a host that loads modules from flash. A
+  module is a table of functions (render, note, ui, draw and others) at the start of its image, linked against
+  nothing of the host's; the host checks the header, ABI version and CRC before running it. HOME opens a picker
+  on the FM-1's screen, and the host starts whichever module played last. A module that crashes twice in a row
+  is skipped at boot, and one that renders slower than real time is stopped in favour of the built-in sine, so
+  USB and the updater stay available. Holding OCT+ at power-on starts the sine only, and holding OCT- starts the
+  USB rescue. The 0.4 package ships CS-1 (twochannels), Scintilla (the author's Elka Synthex port) and OberVave
+  (zvenson), plus Dinghy's four-voice sine as the built-in module. FM-1 SID, the author's Commodore 64 SID
+  firmware catalogued separately, is deployed into the dock as a further module. Your own modules are built with
+  the repository's Python tools and deployed from the command line or by dropping a .dock file on the project's
+  web console, which also shows the log, crash records and render load over WebMIDI and runs small probe programs
+  on the chip. The same package runs in the author's fm1-emu emulator. The project was called harbor until
+  2026-10-25 (not the Android app of that name). It is built on Dinghy and on the platform code of Felucca as
+  carried by SLOOP, and its repository says it is not affiliated with M-VAVE.
+status: active
+authors:
+- name: Joakim Eriksson (joakimeriksson)
+  url: https://github.com/joakimeriksson
+source: https://github.com/joakimeriksson/fm1-dock
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSE and LICENSING.md in the repository. The platform code (HAL, loader, USB, updater, recovery and tools) is
+  Leo Kuroshita's Felucca code with SLOOP's changes, the base app and wiring are zvenson's Dinghy, and the key
+  force sensing comes from Velo by way of CS-1; the module wrappers and host are the author's. Modules keep their
+  own authors' terms inside the GPL-3.0-only whole, and the bundled reSID 0.16 is GPL-2.0-or-later. The logo is
+  excluded from the GPL (copyright designburg, all rights reserved). The release package is built from this
+  source with JieLi's uboot.boot, cfg_tool.bin and eq_cfg_hw.bin read from the SDK checkout at build time
+  (Apache-2.0). It is a new GPL build of 610,110 bytes, not M-VAVE's stock image, so the licensed FM-1 V15
+  file (699,956 bytes) is not involved.
+homepage: https://joakimeriksson.github.io/fm1-dock/
+distribution: download
+install_notes: >-
+  Download the fm1-dock .fwsc package from the releases page and install it over USB with the repository's
+  tools/fm1_install.py (needs Python with mido and python-rtmidi); it asks before it writes and then restarts
+  into fm1-dock. The README says the package also answers the FM-1 Firmware Hub's updater, which is the way
+  back to any other firmware or to the official one, and that installing a newer fm1-dock keeps deployed
+  modules, settings and presets. The author states that installing firmware is at your own risk. OCT- held at
+  power-on starts the USB rescue. Building needs Linux x86-64 (or Docker or WSL), the JieLi toolchain and files
+  from the JieLi AC79 SDK. The README says the build fails on what would brick the FM-1.
+brick_risk: true
+tags: [platform, sdk, synth-engine, usb-midi, usb-audio, emulator]
+image:
+  url: https://raw.githubusercontent.com/joakimeriksson/fm1-dock/main/docs/media/fm1-on-device.jpg
+  alt: "Top-left part of an FM-1 whose screen shows the fm1-dock module list: SINE, CS-1, Scintilla, OberVave (highlighted) and FM-1 SID"
+  credit: Joakim Eriksson
+  source_url: https://github.com/joakimeriksson/fm1-dock
+  first_party: true
+versions:
+- version: '0.4'
+  date: 2026-10-25
+  url: https://github.com/joakimeriksson/fm1-dock/releases/tag/v0.4
+  notes: >-
+    First release under the fm1-dock name, adding OberVave as a module, module banks by index and code that runs
+    from RAM and from deployed modules. The default branch already lists a 0.5 package that has no release page.

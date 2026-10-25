@@ -26,6 +26,10 @@ install_notes: >-
 brick_risk: false
 tags: [tracker, lsdj-style, psg, ym2413, midi-sync]
 versions:
+  - version: v0.48
+    date: 2026-10-24
+    url: https://github.com/little-scale/smsggdj/releases/tag/v0.48
+    notes: KIT samples use the PSG tone channel where the note is placed, song rows resolve blank track cells to the nearest block above, and LIVE mode steps through every chain in the triggered block.
   - version: v0.47
     date: 2026-09-18
     url: https://github.com/little-scale/smsggdj/releases/tag/v0.47

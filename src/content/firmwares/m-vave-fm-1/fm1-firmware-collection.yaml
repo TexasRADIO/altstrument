@@ -34,10 +34,14 @@ install_notes: >-
 brick_risk: true
 tags: [flasher, utility, research]
 versions:
+- version: builds-20261025-17
+  date: 2026-10-25
+  url: https://github.com/2bbb/fm1-firmware-collection/releases/tag/builds-20261025-17
+  notes: Latest build run; the release holds the packages built in that run.
 - version: builds-20261024-16
   date: 2026-10-24
   url: https://github.com/2bbb/fm1-firmware-collection/releases/tag/builds-20261024-16
-  notes: Latest build run; the release holds the packages built in that run.
+  notes: Build run; the release holds the packages built in that run.
 - version: builds-20261023-15
   date: 2026-10-23
   url: https://github.com/2bbb/fm1-firmware-collection/releases/tag/builds-20261023-15

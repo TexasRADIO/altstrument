@@ -3,7 +3,7 @@ name: Organelle OS 4.0 (original Organelle)
 summary: Last official OS image for the original Organelle, a Linux disk image with the Pure Data patch loader, WiFi and the patch manager; OS 5 does not support this model.
 description: >-
   The Organelle_OS repository carried a separate platform folder for the
-  original Organelle up to its v4.0 tag, and Critter & Guitari's manual for
+  original Organelle through its v4 tags, and Critter & Guitari's manual for
   the original unit links the OG1-4.0 disk image as the current release, with
   OG1-3.1 as the previous one. Version 5 of the OS dropped support for this
   model.
@@ -31,6 +31,10 @@ video:
   first_party: true
   found_via: https://www.critterandguitari.com/pages/museum
 versions:
+  - version: v4.1
+    date: 2021-05-13
+    url: https://github.com/critterandguitari/Organelle_OS/releases/tag/v4.1
+    notes: Version bump to 4.1 with updated factory patches; the release has no image attached.
   - version: v4.0
     date: 2020-02-12
     url: https://github.com/critterandguitari/Organelle_OS/tree/v4.0

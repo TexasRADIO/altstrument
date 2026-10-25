@@ -40,6 +40,10 @@ image:
   source_url: https://github.com/Rastapopolix/tessera
   first_party: true
 versions:
+- version: 2.0.2
+  date: 2026-10-25
+  url: https://github.com/Rastapopolix/tessera/releases/tag/v2.0.2
+  notes: Starting a new project while something plays now stops playback first instead of doing nothing.
 - version: 2.0.1
   date: 2026-10-23
   url: https://github.com/Rastapopolix/tessera/releases/tag/v2.0.1

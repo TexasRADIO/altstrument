@@ -35,6 +35,18 @@ image:
   source_url: https://github.com/styvesgoupil/frasil
   first_party: true
 versions:
+- version: 2.0.1
+  date: 2026-10-25
+  url: https://github.com/styvesgoupil/frasil/releases/tag/v2.0.1
+  notes: Fixes bass timing, so PULSE strikes on the beat, and stops a MIDI clock being assumed for half a second after startup.
+- version: '2.0'
+  date: 2026-10-24
+  url: https://github.com/styvesgoupil/frasil/releases/tag/v2.0
+  notes: Major upgrade with a second sequencer for the bass, buttons reworked, scenes with names and tempo, drawn envelopes, an OCTAVE control per voice and a web library for scenes.
+- version: '1.1'
+  date: 2026-10-24
+  url: https://github.com/styvesgoupil/frasil/releases/tag/v1.1
+  notes: Adds a 16-step bass sequencer, PULSE, ADSR envelopes for the bass and GLINT, named scenes and USB backup and restore.
 - version: '1.0'
   date: 2026-10-23
   url: https://github.com/styvesgoupil/frasil/releases/tag/v1.0

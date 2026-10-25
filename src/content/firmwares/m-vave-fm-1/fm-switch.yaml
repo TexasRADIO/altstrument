@@ -28,7 +28,7 @@ install_notes: >-
 brick_risk: true
 tags: [flasher, utility, midi]
 versions:
-- version: main @ b1a7470
-  date: 2026-10-24
-  url: https://github.com/ocean/FM-SWITCH/commit/b1a7470e8732741ca0fd148028330274b2178d14
+- version: main @ e7f28b7
+  date: 2026-10-25
+  url: https://github.com/ocean/FM-SWITCH/commit/e7f28b7371ceb7986fc6e0cb2c38599c7b7e6df5
   notes: No tagged releases; this is the latest commit.

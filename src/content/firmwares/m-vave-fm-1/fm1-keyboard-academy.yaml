@@ -1,0 +1,59 @@
+device: m-vave-fm-1
+name: FM1 Keyboard Academy
+summary: >-
+  Learning firmware built on M-VAVE's FM1 Open: boots into an eight-chapter keyboard course that demonstrates each
+  exercise, lights the keys to play, scores the attempt and includes 30 public-domain melodies.
+description: >-
+  A lesson plays back first, the next key lights up, a wrong note flashes the display red and the lesson repeats
+  below 80 percent accuracy. The four upper knobs choose chapter, lesson, sound and help level, and an options
+  screen turns the demo lights, player lights, metronome and automatic next lesson on or off. The full FM1 Open
+  instrument remains behind the HOME key: 128 DX7 voices, the algorithm editor, the sequencer and project import,
+  and a Standard MIDI File importer turns a melody into a project. The lessons use traditional and classical pieces
+  such as Ode to Joy, Greensleeves and Can Can, and the repository calls them public domain. The author labels all
+  three releases previews. The FM-1 Learn prototype it grew from replaced the 16 factory demo projects with lessons.
+status: active
+authors:
+- name: chmess
+  url: https://github.com/chmess
+source: https://github.com/chmess/fm1-keyboard-academy
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The application is GPL-3.0-only with M-VAVE's section 7 permission to link the FM1 binary SDK, as in
+  m-vave/fm1_open (LICENSE.md, copyright M-VAVE). The proprietary engine library sdk/lib/libfm1_engine.a is in the
+  repository; THIRD_PARTY.md permits redistributing it in binary form for FM-1 devices only. Third-party parts keep
+  their own licences (Open303, DaisySP, emu2149 and SEA are MIT; MSFA is Apache-2.0). The repository holds M-VAVE's
+  FM-1 V15 image (sdk/firmware/FM-1_015.fwsc), which M-VAVE licenses under Apache-2.0 in m-vave/fm1_open; the copy
+  matches the licensed git blob ce49cc1. The release package keeps the first 16 KiB of that stock image, and the
+  128-voice DX7 bank is extracted from it. GitHub reports the licence as NOASSERTION because LICENSE.md combines
+  several texts.
+homepage: https://github.com/chmess/fm1-keyboard-academy
+distribution: download
+requires_stock: M-VAVE FM-1 V15 (the package keeps its startup region)
+install_notes: >-
+  Download FM1_KEYBOARD_ACADEMY_V04.fwsc from the latest release, check it against the SHA-256 in the README,
+  and install it with an FM-1 updater such as M-VAVE's workbench (the README does not name one), keeping power and
+  USB connected during the two-stage update. The README warns that there is no known easy hardware recovery if an
+  unofficial update fails, and that projects, voices and samples should be backed up first. To build it you need
+  JieLi's PI32v2 toolchain (Windows, or Linux through QEMU) and a verified V15 package.
+brick_risk: true
+tags: [lessons, fm, synth-engine, midi]
+image:
+  url: https://raw.githubusercontent.com/chmess/fm1-keyboard-academy/main/docs/images/academy-overview.svg
+  alt: "Drawn preview of three firmware screens: course selection with chapter, lesson, sound and help rows; guided play with one lit key; and a song-complete screen with score and accuracy"
+  credit: chmess
+  source_url: https://github.com/chmess/fm1-keyboard-academy
+  first_party: true
+versions:
+- version: v0.1.2
+  date: 2026-10-24
+  url: https://github.com/chmess/fm1-keyboard-academy/releases/tag/v0.1.2
+  notes: Pre-release. Key LEDs follow each sequencer step during fast demonstration passages.
+- version: v0.1.1
+  date: 2026-10-24
+  url: https://github.com/chmess/fm1-keyboard-academy/releases/tag/v0.1.1
+  notes: Pre-release. Fixes the timing of the first and last notes in each round.
+- version: v0.1.0
+  date: 2026-10-24
+  url: https://github.com/chmess/fm1-keyboard-academy/releases/tag/v0.1.0
+  notes: Pre-release. First public preview.

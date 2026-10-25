@@ -1,0 +1,46 @@
+device: nintendo-game-boy-advance
+name: GBA FM Voice
+summary: >-
+  FM synth voice that runs on a cartridge-less GBA booted over its link cable by a Music Thing Workshop Computer card, with two 2-operator voices or one 4-operator voice, a drum mode and an on-screen editor.
+description: >-
+  Like GBA PSG Voice, the Workshop Computer card firmware uploads a program into the GBA through the BIOS multiboot over
+  the pulse jacks, so no cartridge or modification is needed, and the same cable works for both. The GBA program
+  replaces the console's four Game Boy sound channels with a fixed-point FM engine on Direct Sound, played in stereo
+  through the headphone jack. It offers two 2-operator voices or one 4-operator voice with eight DX21/TX81Z-style
+  algorithms, plus a drum mode in which two audio inputs act as drum triggers. The Workshop's CV, gates and knobs play
+  it, and the GBA sends its notes, gates and button states back to the rack. The editor on the GBA screen has eight
+  pages, including 16 patch slots, envelopes, a mixer, a modulation matrix, button actions, scale quantising and
+  calibration. The author calls it a beta and notes that the 4-operator mode had not been tested on hardware at the
+  last commit.
+
+  The repository's info.yaml is marked as a draft program card for the Workshop Computer library. It is not in the
+  upstream releases folder yet, so no synced card entry exists; the sibling PSG project is catalogued there as card
+  108_GBA.
+status: active
+authors:
+  - name: Andy Jenkinson
+    url: https://github.com/uglifruit
+source: https://github.com/uglifruit/GBA_FM
+source_status: open
+license: MIT
+distribution: download
+requires_stock: Music Thing Workshop Computer with this program card; link cable wired to the pulse jacks
+install_notes: >-
+  Flash UF2/gba_link.uf2 to the Workshop Computer, then connect a GBA link cable with the cartridge slot empty. Wire the
+  cable to the pulse jacks through two 1 kOhm resistors, because the pulse outputs swing to about 6 V and the GBA runs at
+  3.3 V. A Game Boy Color link cable is recommended. Switch on the Workshop first and the GBA second, and power-cycle
+  the GBA after every re-flash of the Workshop. The GBA program is built from the payload folder with an
+  arm-none-eabi toolchain and embedded in the card firmware.
+brick_risk: false
+tags: [synth-voice, fm, drums, link-cable, multiboot, eurorack, cv]
+image:
+  url: https://raw.githubusercontent.com/uglifruit/GBA_FM/main/docs/images/hero.png
+  alt: Line drawing of a Game Boy Advance connected by a cable to the Workshop Computer panel, with the text For the Workshop Computer and Guide and Operation Manual
+  credit: Andy Jenkinson
+  source_url: https://github.com/uglifruit/GBA_FM#readme
+  first_party: true
+versions:
+  - version: main @ 98aad71
+    date: 2026-10-25
+    url: https://github.com/uglifruit/GBA_FM/commit/98aad71
+    notes: No tagged releases; this is the latest commit. The info.yaml names it version 0.3.0.

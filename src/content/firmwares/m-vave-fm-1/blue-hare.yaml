@@ -2,22 +2,24 @@ device: m-vave-fm-1
 name: Blue Hare
 summary: >-
   Synthesizer firmware forked from Felucca: three tracks of synth, drum-kit and voice engines with an effects
-  chain, an arpeggiator on the ARP button, and a browser studio for designing sounds; the sequencer is a placeholder.
+  chain, an arpeggiator on the ARP button, and a browser studio for designing sounds; it has no sequencer of its own.
 description: >-
-  Blue Hare was started as a tracker (the repository is still named fel-tracker) and was renamed on 2026-10-16.
+  Blue Hare was started as a tracker (the repository was called fel-tracker until 2026-10-25) and was renamed on 2026-10-16.
   It keeps Felucca's platform layer and removes its groovebox features, including the step sequencer, slicer
   and sample engines, to become a synthesizer with its own engines. The current distribution has three tracks:
-  synths (VA, SANDSTORM, SID, OBIE), kits (KIT, LINNKIT, WAR) and voices (SPEECH, ONYX, VOCODER, VOSIM, DUBSIREN);
-  many more are archived in the tree. ARP is an arpeggiator with settings for each track. The README still
-  describes an earlier four-track build with a generative ensemble on ARP. The tree also holds a browser sound
+  synths (VA, SANDSTORM, HOOVER, SID, OBIE), drums (KIT, RHYTHM, VAKIT, LINNKIT, WAR) and voices (SPEECH, ONYX,
+  VOCODER, VOSIM, DUBSIREN, RISERS, NOISE); many more are archived in the tree. It is played from an external
+  sequencer or the FM-1's keys, and REC records what the sequencer plays into a loop per track. ARP is an
+  arpeggiator with settings for each track. The tree also holds a browser sound
   design studio, a browser emulator, a desktop build and an archived plugin. The repository's default branch is an unchanged copy of Felucca 1.4.1;
-  the work is on the blue-hare branch (formerly called tracker). The README names AI coding agents as part of the development. It does not
-  state that the firmware has been run on an FM-1, and it publishes no release or installable package.
+  the work is on the blue-hare branch (formerly called tracker). The README names AI coding agents as part of the development. It calls the
+  firmware a beta, says it runs on the FM-1 but has been played on few units, and warns that Felucca songs and
+  sounds do not load. It publishes no GitHub release or installable package.
 status: active
 authors:
 - name: Tristano Suriani
   url: https://github.com/TristanoSuriani
-source: https://github.com/TristanoSuriani/fel-tracker/tree/blue-hare
+source: https://github.com/TristanoSuriani/bluehare/tree/blue-hare
 source_status: open
 license: GPL-3.0-only
 license_notes: >-
@@ -26,14 +28,16 @@ license_notes: >-
 distribution: source-only
 install_notes: >-
   No release or package is published; build build/bluehare.fwsc following BUILDING.md (JieLi toolchain and SDK)
-  and install it with tools/fm1_install.py. The web installer links in the README install official Felucca,
-  not Blue Hare. The README says M-VAVE's updater or an installer's return to the official V15 firmware
+  and install it with tools/fm1_install.py. The first install of 0.40.0 writes a boot protection during which
+  an interrupted transfer cannot be repaired from the FM-1, so the README asks for a direct cable and a charged
+  unit. The README says M-VAVE's updater or an installer's return to the official V15 firmware
   recovers the unit.
 brick_risk: true
 tags: [synth-engine, fx, emulator, editor, midi]
 versions:
-- version: blue-hare @ eab937e
-  date: 2026-10-24
-  url: https://github.com/TristanoSuriani/fel-tracker/commit/eab937ef526c153c3c8954790a996c13465b1ff1
+- version: blue-hare @ 35c7a23
+  date: 2026-10-25
+  url: https://github.com/TristanoSuriani/bluehare/commit/35c7a230b542d1e709c93961a0bff107bbb7c08e
   notes: >-
-    No tagged releases; this is the latest commit on the blue-hare branch. The README gives the version as 0.10.0.
+    The latest commit on the blue-hare branch; the README gives the version as 0.40.0, and the commit makes the
+    second core opt-in, so one core runs by default.

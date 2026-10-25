@@ -1,0 +1,45 @@
+device: m5stack-tab5
+name: X0X Tab5
+summary: >-
+  Port of the FM-1 groovebox firmware X0X to the Tab5, with the FM-1's panel drawn on the touchscreen, USB MIDI
+  host input and MIDI learn.
+description: >-
+  X0X is Charles Vestal's groovebox for the M-VAVE FM-1 with a TR-909, a TR-808, two TB-303s and a break player.
+  This port leaves the X0X source untouched and adds a Tab5 platform layer under tab5/: audio is rendered into the
+  ES8388 codec, the FM-1's second processor core is emulated by a helper thread, and projects are saved to a flash
+  partition with A/B sectors and checksums, as on the FM-1. The FM-1's 240 by 240 screen, 14 buttons, 7 encoders
+  and 27 keys appear on the touchscreen, and USB MIDI devices on the USB-A port can be assigned with MIDI learn.
+  The repository's notes list what the port omits: USB MIDI output, external clock over USB, the web editor, OTA
+  updates, USB backup and user sample slots. The notes name X0X commit 54194c5 (18 October 2026) as the tested base.
+status: active
+authors:
+  - name: zircothc
+    url: https://github.com/zircothc
+  - name: Charles Vestal
+    url: https://github.com/charlesvestal
+source: https://github.com/zircothc/x0x-tab5
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README and the release notes state GPL-3.0-only, matching X0X, but the repository has no LICENSE file. The
+  upstream X0X entry notes that its recorded breaks are not covered by its licence; this port bundles generated
+  headers made from X0X's drum samples and breaks.
+distribution: download
+install_notes: >-
+  The v0.1 release has a prebuilt .bin that the README flashes at address 0x0 with esptool for the esp32p4 chip.
+  Alternatively, clone charlesvestal/fm1-x0x, copy this repository's tab5 folder into it and build tab5/idf with
+  ESP-IDF v6.1. Flashing replaces the Tab5's factory firmware, which M5Stack documents restoring with M5Burner.
+  The step-by-step guide is in Spanish.
+brick_risk: false
+tags: [groovebox, drums, sequencer, synth-engine, fx, midi, usb-midi, performance, fork, open-source]
+image:
+  url: https://raw.githubusercontent.com/zircothc/x0x-tab5/main/docs/panel.png
+  alt: X0X panel on the Tab5 with a 909 drum step grid on the left, four parameter dials below it, eight knobs, two rows of buttons and a two-row piano keyboard
+  credit: zircothc
+  source_url: https://github.com/zircothc/x0x-tab5
+  first_party: true
+versions:
+  - version: v0.1
+    date: 2026-10-24
+    url: https://github.com/zircothc/x0x-tab5/releases/tag/v0.1
+    notes: First release, with a prebuilt Tab5 binary.

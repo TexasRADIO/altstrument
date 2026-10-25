@@ -36,6 +36,18 @@ image:
   source_url: https://github.com/keremimo/melodee
   first_party: true
 versions:
+- version: 1.5.0-rc.3
+  date: 2026-10-25
+  url: https://github.com/keremimo/melodee/releases/tag/v1.5.0-rc.3
+  notes: Pre-release. Frees audio memory and flash, halves the PUNCH history length, and fixes metronome volume and FM6 SysEx reception.
+- version: 1.5.0-rc.2
+  date: 2026-10-24
+  url: https://github.com/keremimo/melodee/releases/tag/v1.5.0-rc.2
+  notes: Pre-release. Adds AUTO and AUTO2 chord modes and MIDI controller profiles for the eight panel controls.
+- version: 1.5.0-rc.1
+  date: 2026-10-24
+  url: https://github.com/keremimo/melodee/releases/tag/v1.5.0-rc.1
+  notes: Pre-release. Adds a MIDI Track engine, four extra MIDI-only tracks, USB Host, a revised master punch and more insert effects.
 - version: 1.4.5
   date: 2026-10-19
   url: https://github.com/keremimo/melodee/releases/tag/v1.4.5

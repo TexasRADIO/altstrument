@@ -1,0 +1,33 @@
+name: M5Stack Tab5
+manufacturer: M5Stack
+category: handheld
+tagline: 5 inch ESP32-P4 touchscreen dev kit that runs groovebox firmware ported from the FM-1
+description: >-
+  The Tab5 is an M5Stack tablet-style development kit built on an ESP32-P4 with 16 MB of flash and 32 MB of PSRAM,
+  plus an ESP32-C6 module for Wi-Fi 6. It has a 5 inch 1280 by 720 multitouch screen, an ES8388 audio codec with a
+  1 W speaker and a 3.5 mm headphone jack, a USB-A host port, a USB-C port and a microSD slot. Its USB host port
+  lets ported firmware use class-compliant USB MIDI controllers. Music software for it includes ports
+  of M-VAVE FM-1 groovebox firmware, which draw the FM-1's panel on the touchscreen.
+platform: ESP32-P4 (RISC-V, dual core) with ESP32-C6
+links:
+  manufacturer: https://docs.m5stack.com/en/core/Tab5
+  community:
+    - label: M5Stack shop page
+      url: https://shop.m5stack.com/products/m5stack-tab5-iot-development-kit-esp32-p4
+notes: >-
+  Firmware is built with ESP-IDF and flashed over USB-C; the factory firmware is replaced and M5Stack documents
+  restoring it with M5Burner. The Tab5 is a general development kit rather than a dedicated instrument, and its
+  small speaker reproduces little bass, so the ports suggest headphones or an external output.
+related:
+  - m5stack-cardputer
+  - m-vave-fm-1
+image:
+  src: /images/devices/m5stack-tab5.webp
+  style: photo
+  alt: M5Stack Tab5 seen from the front, a white-edged tablet with a black bezel, a camera above the screen and a touchscreen showing a labelled hardware diagram
+  width: 1200
+  height: 1200
+  credit: M5Stack
+  license: manufacturer product image
+  source_url: https://docs.m5stack.com/en/core/Tab5
+  original_url: https://m5stack-doc.oss-cn-shenzhen.aliyuncs.com/1132/C145_02.webp

@@ -1,0 +1,56 @@
+device: m-vave-fm-1
+name: FORGE ONE
+summary: >-
+  Felucca 1.6.1 fork that writes melodies, basslines, pads and beats from a seed, with 54 song starters in 16 genres,
+  a four-part Song Mode and live mute, scene and throw controls.
+description: >-
+  Adds the FORGE generator on the SEQ TOOLS F5 key (seed, density, evolve and eight styles, for melodic and drum tracks),
+  a STARTER that fills all four tracks with sounds, tempo and swing for a chosen genre, SONG mode with parts A to D and a
+  chain, a PERFORM layer, favourites, a mixer, tap tempo and a visual click, with each key and knob action named on the
+  screen. Everything else is Felucca 1.6.1, and projects stay compatible with stock Felucca 1.6 and 1.6.1. The work is on
+  the repository's forge branch, while its main branch is an unchanged copy of Felucca. Called Felucca-FORGE before 0.5.1.
+  The project site lists each version as tested on the author's FM-1.
+status: active
+authors:
+- name: Khantipol Kasemsant
+  url: https://github.com/kkasemsa
+source: https://github.com/kkasemsa/FORGE-ONE/tree/forge
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  GPL-3.0-only, as Felucca; the source files are headed with FORGE ONE contributors. Parts keep their own licences: the
+  Hügelton Sample Pack is CC0 1.0, Felucca-Engines is MIT, and fonts and ported DSP carry MIT, Apache-2.0 and SIL OFL
+  texts (LICENSES/).
+homepage: https://forge.kktp.net/one/
+distribution: browser-installer
+install_notes: >-
+  Install page on the project site in Chrome or Edge over USB, where you pick 0.18.1, 0.18, 0.17 or 0.16, or fm1_install.py
+  with a forge-one-X.Y.fwsc download. Its Return to official V15 takes the unmodified FM-1.fwsc that you download from
+  M-VAVE; no stock file is bundled. The README says an interrupted install can leave the FM-1 unable to start and need
+  extra hardware to recover. Back up with the Felucca web editor first, and keep your FM6 .syx file, which that backup
+  leaves out.
+brick_risk: true
+tags: [generative, sequencer, performance, fx, fork]
+image:
+  url: https://forge.kktp.net/img/forge-one-thumb.jpg
+  alt: "FORGE ONE Song Mode screen playing at 120 BPM in C minor, with parts A to D, a bar and step counter and four track rows named bass, lead, pad and drum"
+  credit: Khantipol Kasemsant
+  source_url: https://forge.kktp.net/one/
+  first_party: true
+versions:
+- version: 0.18.1
+  date: 2026-10-25
+  url: https://github.com/kkasemsa/FORGE-ONE/commit/22b7cd85c932547d1b31fb9a4df7e5671de320f7
+  notes: Bug fixes for the Song Mode action box and for fills. Version and date from the project site, built from this commit.
+- version: '0.18'
+  date: 2026-10-25
+  url: https://github.com/kkasemsa/FORGE-ONE/blob/forge/CHANGELOG-FORGE.md#018
+  notes: Song Mode help, K4 steps through every starter, key changes by fifths, auto evolve and three new genres.
+- version: '0.17'
+  date: 2026-10-24
+  url: https://github.com/kkasemsa/FORGE-ONE/blob/forge/CHANGELOG-FORGE.md#017
+  notes: One-press exit from Song Mode, fills, and presets by category.
+- version: '0.16'
+  date: 2026-10-24
+  url: https://github.com/kkasemsa/FORGE-ONE/blob/forge/CHANGELOG-FORGE.md#016
+  notes: Song Mode opened by holding SEQ, with every action shown on screen, UNDO, click and chain.

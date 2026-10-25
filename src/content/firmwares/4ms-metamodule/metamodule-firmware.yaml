@@ -24,6 +24,9 @@ video:
   credit: 4ms Company
   first_party: true
 versions:
+  - version: firmware-v2.4.1-surge001
+    date: 2026-10-25
+    url: https://github.com/4ms/metamodule/releases/tag/firmware-v2.4.1-surge001
   - version: firmware-v2.4.0
     date: 2026-10-02
     url: https://github.com/4ms/metamodule/releases/tag/firmware-v2.4.0

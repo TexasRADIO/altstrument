@@ -1,0 +1,36 @@
+device: sonic-potions-lxr
+name: LXR-OWL
+summary: Fork of LXR firmware 0.37 that adds 72 preset patterns per voice, pattern and sound randomisers, a loop and divide performance effect and eight sample-rate and distortion effects.
+description: >-
+  Stephane Ribas built it on the PLD/Rudeog branch and the official 0.37 code,
+  and took some of its effects from the OWL project. Under the OSC menu of a
+  voice it offers preset pattern selection and randomisation of steps and of
+  sound parameters. In PERF mode, step buttons 9 to 16 set loop ranges in the
+  style of a loop and divide effect, and a second PERF page selects effects
+  including a simple compressor, a bit rotator, a decimator, bit reversal and two
+  wave shapers. The author warns that the effects add heavy overdrive unless
+  the kick track is muted. The last commit rebased it on 0.37 in January 2016.
+status: dormant
+authors:
+  - name: Stephane Ribas
+    url: https://github.com/smaolab
+source: https://github.com/smaolab/LXR-OWL
+source_status: open
+license: proprietary
+license_notes: >-
+  Same LICENSE.txt as the original Sonic Potions source: the code may not be
+  sold or used commercially, and modified redistributions must include their
+  complete source. The add-on credits file calls its own code GPL V2.
+homepage: https://github.com/smaolab/LXR-OWL#readme
+distribution: download
+install_notes: >-
+  Copy the FIRMWARE.BIN from the repository's firmware image folder to the root
+  of the SD card and switch the LXR on while holding the main encoder button.
+  The repository builds with the original Makefile.
+brick_risk: false
+tags: [drums, sequencer, fx, fork]
+versions:
+  - version: master @ c97ad02
+    date: 2016-01-28
+    url: https://github.com/smaolab/LXR-OWL/commit/c97ad02
+    notes: No tagged releases; this is the latest commit, rebased on firmware 0.37.

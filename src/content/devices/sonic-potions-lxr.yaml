@@ -1,0 +1,39 @@
+name: LXR
+manufacturer: Sonic Potions
+category: drum-machine
+tagline: DIY digital drum synthesizer, the original of the LXR-02
+description: >-
+  The LXR is a digital drum synthesizer designed by Julian Schmidt of Sonic
+  Potions and sold as a DIY kit. It has six drum voices with FM, filter, LFO
+  and envelope sections, a 16-step sequencer with sub-steps, MIDI in and out
+  over DIN and USB, and an SD card for sounds, patterns and firmware updates.
+  An STM32F4 microcontroller handles the sound and an ATmega644 runs the
+  front panel. Sonic Potions published the firmware source in 2013, and later
+  community versions and the LXR-02 build on it.
+platform: STM32F407 (Cortex-M4) with ATmega644 front-panel CPU
+stock_firmware: 0.37 (2015-10-23)
+links:
+  manufacturer: http://www.sonic-potions.com/lxr
+  community:
+    - label: Sonic Potions wiki and owner's manual
+      url: http://wiki.sonic-potions.com/index.php/LXR_Owners_Manual
+    - label: LXR firmware source
+      url: https://github.com/SonicPotions/LXR
+notes: >-
+  Firmware is installed as a FIRMWARE.BIN file on the SD card by holding the
+  encoder button while switching on. The firmware source is under a custom
+  licence that forbids commercial use and requires modified redistributions to
+  include their complete source. The LXR-02 is a separate device with its own
+  firmware.
+related: [erica-synths-lxr-02]
+pinned: [lxr-firmware]
+image:
+  src: /images/devices/sonic-potions-lxr.webp
+  style: photo
+  alt: Front view of the black LXR with a green text display, four knobs, a data encoder, a row of mode and edit buttons, six voice buttons on the right and sixteen step buttons along the bottom
+  width: 1024
+  height: 768
+  credit: Sonic Potions
+  license: manufacturer product image
+  source_url: http://www.sonic-potions.com/lxr
+  original_url: http://www.sonic-potions.com/images/lxr/lxr%20frontal.jpg

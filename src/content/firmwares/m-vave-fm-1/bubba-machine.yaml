@@ -32,6 +32,10 @@ image:
   source_url: https://github.com/Erbubar23/bubba-machine
   first_party: true
 versions:
+- version: 0.10.0-beta
+  date: 2026-10-25
+  url: https://github.com/Erbubar23/bubba-machine/releases/tag/v0.10.0-beta
+  notes: Marked pre-release; rebuilds HOME as a six-channel mixer with machines modelled on a TB-303, Minimoog, Juno-6 and Vital, adds a drum step sequencer and a slicer, and erases saved patterns and scenes on first boot.
 - version: 0.9.0-beta
   date: 2026-10-18
   url: https://github.com/Erbubar23/bubba-machine/releases/tag/v0.9.0-beta

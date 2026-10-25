@@ -1,0 +1,33 @@
+device: sonic-potions-lxr
+name: Sonic Potions Editor
+kind: tool
+summary: Standalone JUCE-based MIDI editor for the LXR's sound parameters, with a patch name generator and a genetic pattern generator that have no interface yet.
+description: >-
+  The repository holds a Visual C++ project for a desktop editor for the
+  LXR sound parameters, which talks to the synth over MIDI. The README calls it work in
+  progress, with a basic parameter editor working, and says the layout still
+  needs design. It also contains a Markov-based patch name generator and a
+  genetic pattern generator without a user interface. A Windows executable is
+  checked into the repository; the author says it should compile on Unix and
+  macOS but never set that up.
+status: dormant
+authors:
+  - name: Julian Schmidt
+    url: https://github.com/SonicPotions
+source: https://github.com/SonicPotions/editor
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The repository carries the GPL v3 text as gpl-3.0.txt and no per-file
+  statement. It bundles the JUCE framework, which has its own licence.
+distribution: download
+install_notes: >-
+  Run Bin/SonicPotionsEditor.exe on Windows, or build the Visual C++ project
+  in DrumSynthVst with the bundled JUCE sources.
+brick_risk: false
+tags: [editor, midi, patch]
+versions:
+  - version: master @ ed69ff5
+    date: 2015-02-11
+    url: https://github.com/SonicPotions/editor/commit/ed69ff5
+    notes: No tagged releases; this is the latest commit.

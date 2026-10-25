@@ -24,7 +24,7 @@ license_notes: >-
 homepage: https://pinhead.trubittech.com/
 tags: [synth-engine, oscillator, filter, reverb, delay, fx]
 versions:
-- version: main @ 1f45325
+- version: main @ dfa4100
   date: 2026-10-24
-  url: https://github.com/TruBitTech/pinhead/commit/1f45325
+  url: https://github.com/TruBitTech/pinhead/commit/dfa4100
   notes: No tagged releases; this is the latest commit.

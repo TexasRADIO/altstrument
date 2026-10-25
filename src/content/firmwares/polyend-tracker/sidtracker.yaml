@@ -9,7 +9,9 @@ description: >-
   Songs are stored on the SD card and can be exported to GoatTracker files or to
   .sid files with the project's own player routine for two chips. An extended
   engine outside those exports adds a PCM drum kit, delay, chorus, reverb, LFOs
-  and voice panning. The hardware layer is taken from OpenTracker, the same
+  and voice panning. Release 0.2 adds a player for C64 .sid files, MIDI
+  keyboard input and clock, ASID output to drive real SID chips, undo and redo,
+  and a track mixer. The hardware layer is taken from OpenTracker, the same
   author's clean-room Tracker firmware (see the polyend-tracker-re repository).
   The README says boot, SD card, playback, effects, themes and firmware update
   are confirmed on a unit and points to a hardware test plan for the rest. It
@@ -43,6 +45,10 @@ image:
   source_url: https://github.com/sandlbn/SidTracker
   first_party: true
 versions:
+  - version: "v0.2 (SIDTracker 0.2.0)"
+    date: 2026-10-25
+    url: https://github.com/sandlbn/SidTracker/releases/tag/v0.2
+    notes: Adds a .sid player, MIDI input and clock, ASID output to real SID chips, undo and redo, a track mixer, a randomiser and a 65-instrument library on the card.
   - version: "v0.1 (SIDTracker 0.6.4)"
     date: 2026-10-17
     url: https://github.com/sandlbn/SidTracker/releases/tag/v0.1

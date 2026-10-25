@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: FM1 Betis Mode
+summary: >-
+  Real Betis fan firmware for the FM-1, built on M-VAVE's FM1 Open SDK: a club-themed dashboard with an E Phrygian
+  dominant tuning toggle, football percussion patterns, a scoreboard, song lessons and a penalty minigame.
+description: >-
+  Rights warning: the firmware contains pixel artwork of the Real Betis shield, a mascot and eleven player portraits,
+  and two melody reductions, one of the club's centenary hymn and one of a charanga song, whose use rests on the
+  author's own statement that the rights holders authorized it; the project says the underlying compositions keep
+  their rightsholders' rights and that the club has not endorsed it. The firmware keeps the official engines and eight
+  tracks and adds a green dashboard, four original percussion patterns for track 8, a manual scoreboard, a lineup
+  and club history screens, a step-by-step melody trainer that lights the next key, and a penalty game. A browser
+  emulator, a workbench for updating the unit and a corresponding-source archive are on the project site. The author
+  reports that no physical FM-1 has been flashed or tested with it.
+status: active
+authors:
+- name: cotrino
+  url: https://github.com/cotrino
+source: https://github.com/cotrino/fm1-betis-mode
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Follows the FM1 Open SDK: GPL-3.0-only with an additional permission to link the proprietary engine library. The
+  GitHub licence detector reports NOASSERTION because LICENSE.md combines the GPL text with that exception. The vendored
+  SDK binaries carry M-VAVE's own terms in THIRD_PARTY.md, which allow redistribution for FM-1 devices. The repository's
+  vendor/fm1_open/sdk/firmware/FM-1_015.fwsc is git blob ce49cc1595b67347c68a3ac7463017f9fa8c19dd, the V15 image M-VAVE
+  licenses for redistribution under Apache-2.0 in m-vave/fm1_open. The two song reductions, the club artwork and the player
+  portraits are not covered by the GPL (THIRD_PARTY.md).
+homepage: https://cotrino.github.io/fm1-betis-mode/
+distribution: browser-installer
+requires_stock: V15 or FM1 Open
+install_notes: >-
+  Open the workbench on the project site (a copy of the official workbench with this firmware built in) in Chrome or Edge
+  over USB, or download FM1_BETIS_MODE.fwsc from the same site. A unit running a third-party firmware such as Felucca or
+  SLOOP must be returned to official V15 first, because the official updater rejects SDK-based packages. Back up projects and
+  samples first; the author states it has not been tested on hardware.
+brick_risk: true
+tags: [sequencer, sdk, theme, game, fm, emulator]
+versions:
+- version: main @ 84d6ad4
+  date: 2026-10-18
+  url: https://github.com/cotrino/fm1-betis-mode/commit/84d6ad4e8b6acf88117ec865b1f22725562413ee
+  notes: No tagged releases; this is the latest commit.

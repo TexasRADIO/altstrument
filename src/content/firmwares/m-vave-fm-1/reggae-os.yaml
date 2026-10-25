@@ -29,7 +29,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, performance, ui, emulator, research]
 versions:
-- version: main @ 1ea7019
-  date: 2026-10-24
-  url: https://github.com/KemstheSage/reggae-os/commit/1ea701976c060a8c2fe09151863a9a099e3591de
+- version: main @ dfaa7dc
+  date: 2026-10-25
+  url: https://github.com/KemstheSage/reggae-os/commit/dfaa7dcd16ac05a0bee122c7575610d4335d0901
   notes: No tagged releases; this is the latest commit.

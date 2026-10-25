@@ -1,0 +1,34 @@
+device: teenage-engineering-op-1
+name: Az-OP-1 Firmware Lab
+kind: tool
+summary: Early-stage lab for inspecting, unpacking and repacking original OP-1 .op1 firmware files and for experimenting with Blackfin BF524 emulation; it cannot boot a real firmware or flash a unit.
+description: >-
+  A command-line Python tool and a TypeScript web app, with documentation in
+  French. The tool checks the CRC32 of an .op1 container, reads its
+  LZMA-compressed archive, parses the Blackfin boot loader blocks inside it and
+  repacks the extracted files, refusing unsafe archive paths. The web app's
+  CPU core and block loader are marked experimental, and the README states
+  that full OP-1 emulation, booting the main firmware and flashing over USB
+  are not available. A roadmap describes a path towards a QEMU-based
+  emulator for the ADSP-BF524C2. No firmware files are included, and the
+  author says the project is not affiliated with Teenage Engineering.
+status: active
+authors:
+  - name: Enzo (propann)
+    url: https://github.com/propann
+source: https://github.com/propann/Az-OP-1-firmware-
+source_status: open
+license: unspecified
+license_notes: The repository has no license file and the README states no license.
+distribution: source-only
+install_notes: >-
+  Run tools/op1lab.py with Python 3.10 or newer on a firmware file you supply
+  yourself, or build the web app with Node.js 18 or newer. It does not flash
+  anything to the OP-1.
+brick_risk: false
+tags: [research, emulator, python]
+versions:
+  - version: main @ 6b66f61
+    date: 2026-08-30
+    url: https://github.com/propann/Az-OP-1-firmware-/commit/6b66f61
+    notes: No tagged releases; this is the latest commit.

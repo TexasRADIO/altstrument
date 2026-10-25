@@ -2,42 +2,45 @@ device: m-vave-fm-1
 name: FM-1 SID
 summary: >-
   Turns the FM-1 into a Commodore 64 SID synth with twelve instruments, a three-track step sequencer and stereo
-  effects, and also plays C64 tunes by running their own 6502 code.
+  effects, and also plays C64 tunes and GoatTracker songs by running their own code.
 description: >-
   Built on Felucca's hardware layer, with the SID chip rendered by reSID 0.16 or by the author's own integer
   model and a driver that plays it the way C64 music does. In synth mode the note keys play twelve instruments,
   the knobs set cutoff, resonance, attack and release, and a three-track, 16-step sequencer and a chorus, delay
-  and reverb sit on top. In player mode it runs PSID tunes on an emulated 6502 and draws the voices, sync, ring
-  modulation and filter on the screen; RSID tunes are not supported. Tunes are appended after the firmware
-  image as a pack. The same code runs as a web page that plays tunes from the HVSC archive, and the FM-1
-  emulator entry names it as one of the firmwares it runs. The README now says people have installed it on real FM-1s
-  and that it starts and plays, and that it can be built to run from fm1-harbor's boot slot. Your own tunes can be
-  packed into the update package.
+  and reverb sit on top. In player mode it runs PSID tunes on an emulated 6502 and RSID tunes on a whole emulated
+  C64, plays GoatTracker 2 songs, has a song editor on the FM-1, and draws the voices, sync, ring modulation and
+  filter on the screen. Tunes are appended after the firmware image as a pack. The same code runs as a web page that plays tunes from the HVSC archive, and the FM-1
+  emulator entry names it as one of the firmwares it runs. The README says that on one real FM-1 the standalone package started
+  but its tunes did not play, and recommends running FM-1 SID as a module of the fm1-dock firmware, where it has
+  played on a real FM-1. Your own tunes can be packed into the update package or the module. The project moved
+  out of the fm1-emu repository into a repository of its own on 2026-10-25.
 status: active
 authors:
 - name: Joakim Eriksson (joakimeriksson)
   url: https://github.com/joakimeriksson
-source: https://github.com/joakimeriksson/fm1-emu/tree/master/fm1-sid
+source: https://github.com/joakimeriksson/fm1-sid
 source_status: open
 license: GPL-3.0-only
 license_notes: >-
-  The player firmware and effects are GPL-3.0-only because they build on Felucca's HAL and effects code, and
-  they link reSID 0.16, which is GPL-2.0-or-later. The author's own SID model and synth driver are BSD-2-Clause.
-  It also ships three Apache-2.0 files from JieLi's AC79 SDK. The rest of the fm1-emu repository is MIT.
+  LICENSING.md in the repository: the firmware, the fm1-dock module and the web app are GPL-3.0-only because
+  they build on Felucca's HAL and effects code, and the build fetches reSID 0.16 (GPL-2.0-or-later). The
+  author's own SID model and the PSID/RSID player are BSD-2-Clause, and the GoatTracker 2 player and editor
+  files are GPL-2.0-or-later. A file without a licence line is MIT.
 homepage: https://joakimeriksson.github.io/fm1-emu/fm1-sid/
 distribution: download
 install_notes: >-
-  The repository carries a ready-made update package, fm1-sid/web/sidplayer.fwsc, and build scripts that need
-  JieLi's Linux toolchain and fetch their GPL dependencies on demand. The README gives no step-by-step install procedure for a
-  real unit. It uses Felucca's update loader, and a running unit is not visible over USB: hold OCT- and OCT+ for
-  three seconds to enter its USB update mode first.
+  The README recommends installing fm1-dock first and deploying FM-1 SID into it as a module over USB, then
+  picking it with HOME. The standalone update package, sidplayer.fwsc, is marked as not yet for a real FM-1,
+  because on the one unit tried the tunes did not play and the installers could not reach it; the README asks
+  you to have a way back ready, such as the FM-1's own recovery. Build scripts need JieLi's Linux toolchain and
+  fetch their GPL dependencies on demand. The standalone build has a USB mode (HOME held for five seconds)
+  for running other installers.
 brick_risk: true
 tags: [synth-engine, sequencer, fx, emulator, research]
 versions:
-- version: master @ eae852c
-  date: 2026-10-23
-  url: https://github.com/joakimeriksson/fm1-emu/commit/eae852c46a557f9856bd5b0d1eb8e3e68aa90ecb
+- version: main @ a6be82d
+  date: 2026-10-25
+  url: https://github.com/joakimeriksson/fm1-sid/commit/a6be82dcfdaf5e381c726179271debcb2a85d30f
   notes: >-
-    No release of this firmware (the repository's releases are for the emulator and plugin); this is the latest
-    commit touching fm1-sid/. The emulator's firmware list labels the
-    package 0.1.
+    No release of this firmware (the emulator's releases are for the emulator and plugin); this is the latest
+    commit of the repository split out of fm1-emu. The emulator's firmware list labels the package 0.1.

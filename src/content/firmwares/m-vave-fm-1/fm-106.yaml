@@ -25,6 +25,10 @@ image:
   source_url: https://github.com/PatttF/fm-106
   first_party: true
 versions:
+- version: Beta6
+  date: 2026-10-24
+  url: https://github.com/PatttF/fm-106/releases/tag/Beta6
+  notes: Engine fixes.
 - version: Beta5
   date: 2026-10-16
   url: https://github.com/PatttF/fm-106/releases/tag/Beta5

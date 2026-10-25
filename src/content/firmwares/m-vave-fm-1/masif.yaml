@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: MASIF
+summary: >-
+  Four-track sample tracker and rack sampler for the FM-1, with a browser page for loading, editing and syncing samples
+  and a sampler page that records the computer's audio over USB.
+description: >-
+  A modified zp12, which builds on SLOOP and Felucca, with USB audio taken from Ketch. It has 16 songs, 128
+  instruments with tables, grooves, modulation, a filter, drive and EQ per instrument, sends to chorus, delay
+  and reverb, and 24 sample slots in about 730 KB of memory, which the README puts at roughly 19 seconds at 26 kHz
+  or up to about 108 seconds as 4-bit ADPCM. The web page accepts sound files or live input, trims, loops and
+  processes them, and syncs the selected ones to the FM-1; it can also back up and restore everything MASIF keeps on
+  the unit. An install rewrites the flash area that holds most of the sample time, so the README says to back up and
+  sync samples again after an upgrade. Not affiliated with M-VAVE.
+status: active
+authors:
+- name: thecemeterygates
+  url: https://github.com/thecemeterygates
+source: https://github.com/thecemeterygates/masif-fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  GPL-3.0-only (LICENSING.md), inherited from zp12, SLOOP and Felucca. The firmware ships with no sounds; the CC0
+  recordings in assets/samples-cc0 belong to the upstream zp12 tools and tests and are not in a MASIF package. Web page
+  fonts are SIL OFL 1.1, and the JieLi AC79 SDK boot files (Apache-2.0) are added to the package at build time.
+homepage: https://thecemeterygates.github.io/masif-fm1/
+distribution: browser-installer
+install_notes: >-
+  Install from the web page in Chrome or Edge over USB, or use tools/fm1_install.py with packages/masif-0.1.fwsc from the
+  release zip. To go back, back up, then use INSTALL, FROM FILE with M-VAVE's unmodified FM-1.fwsc (V15) that you
+  download yourself; no stock file is bundled. A cut-off install can leave the FM-1 unable to start and need a
+  hardware flasher.
+brick_risk: true
+tags: [sampler, tracker, sequencer, fx, usb-audio, fork]
+versions:
+- version: '0.1'
+  date: 2026-10-25
+  url: https://github.com/thecemeterygates/masif-fm1/releases/tag/v0.1
+  notes: First public release.
