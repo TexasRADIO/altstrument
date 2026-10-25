@@ -1,0 +1,55 @@
+device: m-vave-fm-1
+name: PERF-1
+summary: >-
+  Live-performance groovebox for the FM-1: ten genres of self-playing pieces you
+  steer in real time, with an auto-DJ, a deep drum sequencer, an acid line that
+  answers itself, effects, a web editor and your own DX7 voices.
+description: >-
+  A fork of RedtailWorks' HYP-1. The pad, drone, acid line, pluck and drums play
+  by themselves from power-on; one button breaks the music down, builds it and drops
+  it, and an auto-DJ can run that whole arc, bring in the next piece and follow the
+  chords. There are ten genres of ten pieces (hypnotic techno, lofi, house, dubstep,
+  jungle, DnB, breaks, garage, electro, trap), each with its own kits, patterns,
+  effects and chord habits, and any piece can be stored. The drum sequencer has
+  Euclidean fills, per-lane chance, lane lengths for polymeter, a density control that
+  thins or fills a lane by importance, a source pattern per lane, held pattern keys
+  and drum drift. The acid line answers itself (octave, fifth, scale third, mirror,
+  reverse, rotate, sparse or accents, up or down, on a bar or loop count or before a
+  drum change). The pluck can be one of 22 built-in DX7-style voices or up to 16 of
+  your own loaded from a .syx file. The home screen shows the chord as a turning
+  sigil with an eye that follows the section. There are four banks of effects
+  and DJ snips, scenes, undo, a mood macro, a JAM page and MIDI clock in. The
+  reverb runs on the second core, with load shedding, and a USB status log.
+  The project site has the installer, a browser emulator with sound, a parameter and
+  DX7 voice editor, and a manual.
+status: active
+authors:
+  - name: deamonSLINKY
+    url: https://github.com/deamonSLINKY
+source: https://github.com/deamonSLINKY/PERF-1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSING.md. The platform layer is Felucca's by way of X0X and FoMni,
+  the sound code is AMB-1's and HYP-1's, the six-operator FM engine is Melodee's
+  (after Dexed and MSFA); the fonts are SIL OFL 1.1.
+homepage: https://deamonslinky.github.io/PERF-1/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc.
+  The installer can write M-VAVE's own V15 back from a file you download yourself,
+  and an FM-1 that fails to start twice comes up in a safe mode the installer can
+  reach. The README says installing is at your own risk.
+brick_risk: true
+tags: [generative, sequencer, drums, synth-engine, fx, performance, emulator, midi, dx7, editor]
+image:
+  url: https://raw.githubusercontent.com/deamonSLINKY/PERF-1/main/docs/img/perf-screen-home.png
+  alt: "PERF-1's home screen on the FM-1: the chord drawn as a turning sigil with an eye, the level bars and drum pattern at the sides"
+  credit: "deamonSLINKY"
+  source_url: https://github.com/deamonSLINKY/PERF-1
+  first_party: true
+versions:
+  - version: 0.13.0
+    date: 2026-10-25
+    url: https://github.com/deamonSLINKY/PERF-1/releases/tag/v0.13.0
+    notes: First public release.
