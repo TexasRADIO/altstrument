@@ -1,0 +1,45 @@
+device: zoom-livetrak-l6
+name: Overdub and stereo AUX firmware
+summary: Patched OS for the original L6, built from your own copy of Zoom's v1.10 firmware, that puts your last four takes on the sound pads for overdubbing, writes a take history, and adds a switchable stereo AUX send.
+description: >-
+  With the overdub chain on (hold EFX + PAN), each take you record goes onto pad
+  1 a few seconds after you stop, and the earlier ones move down to pads 2 to 4.
+  To overdub, play pad 1 while recording the next take. The pads play the takes
+  from where they already are on the card. Every take folder gets a HISTORY.TXT
+  naming the earlier takes and pad sounds it contains. Holding AUX 1 + AUX 2
+  switches between Zoom's two mono sends and one stereo send that follows
+  channel pan, with AUX 1 left and AUX 2 right and one shared output limiter.
+  Tested on one L6; some behaviour is covered in emulation only, as the README
+  lists.
+status: active
+authors:
+  - name: Thade O'Connor
+    url: https://github.com/thade
+source: https://github.com/thade/zoom-l6-firmware
+source_status: open
+license: MIT
+homepage: https://thade.github.io/zoom-l6-firmware/
+distribution: patch-your-own
+requires_stock: "1.10"
+install_notes: >-
+  Download Zoom's L6 v1.10 firmware zip and drop it on the patcher page, which
+  builds L6.BIN in the browser and accepts only Zoom's exact file. In Chrome or
+  Edge the page puts the L6 into File Transfer Mode over USB MIDI and writes
+  the file to the card; in other browsers you download it and copy it to the
+  card yourself. Then switch on while holding PLAY/STOP to update. Zoom's own
+  L6.BIN, installed the same way, goes back to stock. A deliberately broken
+  build was installed and recovered this way, after a full power-off.
+brick_risk: false
+tags: [overdub, looper, recorder, web, patch]
+versions:
+  - version: v0.3.0
+    date: 2026-10-17
+    url: https://github.com/thade/zoom-l6-firmware/releases/tag/v0.3.0
+    notes: The two AUX jacks share one output limiter in stereo.
+  - version: v0.2.0
+    date: 2026-10-16
+    url: https://github.com/thade/zoom-l6-firmware/releases/tag/v0.2.0
+    notes: Adds the browser patcher; only L6.BIN needs installing.
+  - version: v0.1.0
+    date: 2026-10-16
+    url: https://github.com/thade/zoom-l6-firmware/releases/tag/v0.1.0
