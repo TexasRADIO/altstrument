@@ -1,0 +1,33 @@
+device: yamaha-reface-dx
+name: MIDI clock switch firmware
+summary: Patched OS for the reface DX, built from Yamaha's v1.30 updater, that adds a MIDI 2 page to the FUNCTION menu with a CLOCK switch to stop the MIDI clock the DX sends.
+description: >-
+  The stock DX always sends MIDI clock. This firmware adds a sixth FUNCTION
+  page, MIDI 2, with one item, CLOCK. When CLOCK is off the DX sends no clock;
+  notes, Active Sensing, Start, Stop and SysEx are unchanged. The setting is
+  saved when you leave the FUNCTION menu. A second build has the clock always
+  off with no menu change, four bytes different from Yamaha's firmware. Tested
+  on one DX over USB; the DIN MIDI output and the reface CS are untested.
+status: active
+authors:
+  - name: Thade O'Connor
+    url: https://github.com/thade
+source: https://github.com/thade/reface-dx-firmware
+source_status: open
+license: MIT
+homepage: https://thade.github.io/reface-dx-firmware/
+distribution: patch-your-own
+requires_stock: "1.30"
+install_notes: >-
+  Drop Yamaha's reface CS/DX updater v1.30 zip on the patcher page, which builds
+  the firmware in the browser. Put the DX in Update mode (hold F#3, A3 and C#4
+  while switching on), then in Chrome or Edge press Connect and Send; in other
+  browsers send the file with a SysEx tool. The transfer takes about three
+  minutes. If it stops partway, enter Update mode and send again. Yamaha's own
+  updater goes back to stock.
+brick_risk: false
+tags: [midi, midi-clock, ui, web, patch]
+versions:
+  - version: v0.1.0
+    date: 2026-10-20
+    url: https://github.com/thade/reface-dx-firmware/releases/tag/v0.1.0

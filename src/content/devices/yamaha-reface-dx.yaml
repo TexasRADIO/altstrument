@@ -1,0 +1,18 @@
+name: reface DX
+manufacturer: Yamaha
+category: synth
+tagline: Portable four-operator FM synth with 37 mini keys
+description: >-
+  The reface DX is a compact FM synthesizer from Yamaha's reface range,
+  released in 2015, with 37 mini keys, built-in speakers and battery power. It
+  has a four-operator FM engine, a phrase looper, and touch strips for editing
+  sounds. It shares its firmware file with the reface CS.
+platform: Yamaha SSP2 (ARM)
+stock_firmware: "1.30"
+links:
+  manufacturer: https://usa.yamaha.com/products/music_production/synthesizers/reface/reface_dx.html
+notes: >-
+  Firmware is sent over USB MIDI as SysEx in Update mode, entered by holding
+  F#3, A3 and C#4 while switching on. Update mode runs before the main firmware,
+  so Yamaha's updater can restore a main firmware that fails to start.
+related: []
