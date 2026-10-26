@@ -40,7 +40,7 @@ image:
   source_url: https://github.com/zsoltf/gr1-ui#readme
   first_party: true
 versions:
-- version: main @ d98f234
-  date: 2026-10-16
-  url: https://github.com/zsoltf/gr1-ui/commit/d98f234b94431b8aa87394a63959c4befb4d9157
-  notes: No tagged releases; this is the latest commit. RELEASE-NOTES.md calls it 0.1.0.
+- version: main @ f8db7dd
+  date: 2026-10-26
+  url: https://github.com/zsoltf/gr1-ui/commit/f8db7dd8a199d2f9d6af8c567195c5c45043991a
+  notes: No tagged releases; this is the latest commit. RELEASE-NOTES.md calls it 0.1.1.

@@ -1,0 +1,31 @@
+device: mutable-instruments-elements
+name: Elements Live
+summary: Small edit of Elements firmware 1.1 that selects the resonator mode, including the hidden voice mode, by holding GATE and moving the Geometry knob.
+description: >-
+  Stock Elements needs a long sequence to reach the hidden "ominous voice"
+  mode. This build replaces it with a gesture: hold GATE, sweep Geometry from
+  one extreme to the other, then keep holding GATE and set Geometry to choose
+  among the three resonator modes and the voice mode. Releasing GATE keeps the
+  choice. Everything else follows Elements 1.1. The author asks users not to
+  contact Mutable Instruments for support and ships it without warranty.
+status: dormant
+authors:
+  - name: Tom Burns (boourns)
+    url: https://github.com/boourns
+source: https://github.com/boourns/eurorack
+source_status: open
+license: MIT
+license_notes: Inherits from Mutable Instruments; repository README states STM32 code is MIT.
+distribution: download
+requires_stock: "1.1"
+install_notes: >-
+  The release notes point to the firmware update procedure in the official
+  Elements manual. The author warns that any firmware update can leave a
+  module unusable.
+brick_risk: true
+tags: [physical-modeling, modes, performance]
+versions:
+  - version: "1.0"
+    date: 2020-12-23
+    url: https://github.com/boourns/eurorack/releases/tag/elements_live_v1.0
+    notes: The release is titled Elements Live v1.1 (based on Elements 1.1) and its tag is elements_live_v1.0.

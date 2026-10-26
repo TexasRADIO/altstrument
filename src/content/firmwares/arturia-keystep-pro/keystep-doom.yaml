@@ -1,0 +1,48 @@
+device: arturia-keystep-pro
+name: keystep-doom
+summary: >-
+  DOOM engine as the KeyStep Pro's main firmware, looping a recorded E1M1 demo on the OLED, with the step LEDs and
+  touch strips as a HUD and game sounds on the metronome output.
+description: >-
+  Replaces the application on the KeyStep Pro's main STM32 with an engine derived from next-hack's MCU DOOM ports,
+  trimmed to fit 480 KB of flash and 128 KB of RAM. It plays a recorded demo of E1M1 in a loop at about 20 frames per
+  second on the 128 by 64 OLED, with no player input. The 16 step LEDs show health, the mod strip shows ammo and the
+  pitch strip shows armour, and sound effects are played as clicks through the metronome output. The OLED's own
+  microcontroller keeps Arturia's firmware plus a 120-byte patch that accepts raw pixel frames. Arturia's bootloader
+  stays in place. The KeyStep Pro Chroma images are left out. The build needs the user's own copy of the stock update
+  file, an Ultimate DOOM WAD and the demo file, none of which are in the repository. The README says it is not made
+  or endorsed by Arturia.
+status: active
+authors:
+  - name: Ronald Klarenbeek
+    url: https://github.com/yonie
+source: https://github.com/yonie/keystep-doom
+source_status: open
+license: MIT
+license_notes: >-
+  The root LICENSE file is MIT and covers the board code, the UI patch and the tools. The doom/ directory is GPLv2 with
+  its own LICENSE file, which the README says makes a linked firmware image GPLv2 as a whole. The repository contains
+  no stock firmware, WAD data or demo files; docs/stock_init.txt is a text trace of the stock firmware's register
+  writes.
+distribution: patch-your-own
+requires_stock: 2.5.20
+install_notes: >-
+  Build the pieces with the Python scripts and an arm-none-eabi-gcc toolchain, then run tools/make_kspf.py to combine
+  the DOOM image with Arturia's UI firmware from the user's own 2.5.20 .kspf into a new update file. Back up the
+  projects in MIDI Control Center first, power the KeyStep from its own adapter, connect USB without a hub and
+  install the file with the MIDI Control Center firmware update. To go back, turn the unit off, connect Clock In to
+  Reset Out with a cable, turn it on so the bootloader starts in update mode, remove the cable and update with the
+  stock .kspf. The firmware replaces normal operation and the author says flashing is at the user's own risk.
+brick_risk: true
+tags: [game, os, open-source]
+video:
+  url: https://youtu.be/ye-kf7i0vSI
+  title: Running DOOM on an Arturia Keystep Pro
+  credit: WET VST - Open Source and Premium Audio Plugins
+  first_party: true
+  found_via: https://github.com/yonie/keystep-doom#readme
+versions:
+  - version: main @ cb58464
+    date: 2026-10-25
+    url: https://github.com/yonie/keystep-doom/commit/cb584640734bdb8a990827c56c17433dfb888363
+    notes: No tagged releases; this is the latest commit.

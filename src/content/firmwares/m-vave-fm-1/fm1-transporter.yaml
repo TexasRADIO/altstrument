@@ -30,7 +30,7 @@ install_notes: >-
 brick_risk: true
 tags: [flasher, loader, research]
 versions:
-- version: main @ a2fb9ec
-  date: 2026-10-25
-  url: https://github.com/kurogedelic/FM-1-transporter/commit/a2fb9ec2061a03530a9d3b63c128af1120bb1ae9
+- version: main @ a7fb5e8
+  date: 2026-10-26
+  url: https://github.com/kurogedelic/FM-1-transporter/commit/a7fb5e8ac692c528f8ed29e325911a3f4b8111d6
   notes: No tagged releases; this is the latest commit.

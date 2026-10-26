@@ -1,0 +1,41 @@
+device: arturia-microfreak
+name: microfreak-tools
+kind: tool
+summary: >-
+  Python command-line tool that backs up and writes MicroFreak presets, samples, wavetables and settings over MIDI,
+  and patches and flashes the 5.0.0.2084 firmware over USB, with a plugin that replaces the Speech engine's words.
+description: >-
+  The mfreak command reads and writes presets, samples, wavetables and global settings through SysEx, converts
+  presets between firmware versions, reads and writes MIDI Control Center file formats, and can play or record a
+  rendering through an audio interface. Its fw commands unpack, patch, repack and flash a firmware file over USB DFU,
+  using Arturia's own update requests, and refuse any image other than the 5.0.0.2084 build. Two plugins ship in the
+  repository. The speech plugin patches the firmware so that custom words can be uploaded to the Speech engine, at
+  the cost of one factory word, and the peek plugin adds a memory read that dumps the user's own bootloader. No Arturia
+  firmware, presets or bootloader dumps are in the repository; every command takes a file the user supplies. It is
+  the user-facing half of microfreak-emu. The commits are co-authored by Claude.
+status: active
+authors:
+  - name: Greg Bryant
+    url: https://github.com/gbryant
+source: https://github.com/gbryant/microfreak-tools
+source_status: open
+license: Apache-2.0
+license_notes: >-
+  The LICENSE file is Apache-2.0 for the project's own code. NOTICE credits Emilie Gillet's MIT-licensed Plaits speech
+  tables, which the Speech code is derived from. The factory speech word banks are not in the repository.
+distribution: patch-your-own
+requires_stock: 5.0.0.2084
+install_notes: >-
+  Install from PyPI with uv tool install microfreak-tools, adding --with mfreak-speech or --with mfreak-peek for the
+  plugins, or run it from a clone with uv. Needs Python, and ffmpeg for audio files. Run mfreak doctor to check the
+  setup. fw patch needs Arturia's official 5.0.0.2084 .mff, and fw flash writes the result over USB after asking.
+  The bootloader is never written, so a bad flash can be recovered by holding Shift, Arp and Oct/Mod while powering
+  on and flashing again or using Arturia's updater; flashing the stock file restores stock. Back up the presets first
+  with mfreak preset backup.
+brick_risk: true
+tags: [librarian, sysex, patch, flasher, python, research]
+versions:
+  - version: v0.1.0
+    date: 2026-10-25
+    url: https://github.com/gbryant/microfreak-tools/tree/v0.1.0
+    notes: Git tag; no GitHub release page.

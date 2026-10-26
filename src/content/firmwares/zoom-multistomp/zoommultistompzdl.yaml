@@ -41,7 +41,7 @@ video:
   first_party: true
   found_via: https://github.com/themanro/ZoomMultistompZDL#readme
 versions:
-  - version: main @ 0382a0c
-    date: 2026-10-23
-    url: https://github.com/themanro/ZoomMultistompZDL/commit/0382a0c3cd49e36a4fe8ebcb7bd0f75517648138
+  - version: main @ 54ece2e
+    date: 2026-10-26
+    url: https://github.com/themanro/ZoomMultistompZDL/commit/54ece2e857d177de6bff57841474b53b8e7367b4
     notes: No tagged releases; this is the latest commit.

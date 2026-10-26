@@ -1,0 +1,47 @@
+device: m-vave-fm-1
+name: Makohai
+summary: >-
+  Generative groovebox in the style of early-90s PC tracker music: six lanes composed live in ten styles, which you
+  mix instead of programming steps, with tracker effects, an editor for your own parts and a browser version.
+description: >-
+  Formerly called Espada. The six lanes are lead, arp, pad, bass, drums and sfx, and each has its own filter,
+  FM brightness, drive and pan, plus tracker effects such as slide, vibrato, tremolo, gate, retrigger, bit crush
+  and echo. A style can be queued, blended in lane by lane or launched at once, and an optional arc builds the
+  piece up to a drop. The EDIT page takes your own parts of up to 512 bars per lane in scale steps, and the
+  setup screens show scopes and demo-style visuals. Eight sets and USB-MIDI out are included. It is built on
+  Dinghy and carries Felucca's platform layer, and the browser version runs the firmware's own code.
+status: active
+authors:
+- name: delirioux
+  url: https://github.com/delirioux
+source: https://github.com/delirioux/makohai
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSING.md. The platform layer is Leo Kuroshita's Felucca with SLOOP's changes, and Dinghy's wiring is
+  zvenson's. DotGothic16 and Terminus fonts are SIL OFL 1.1, and the JieLi SDK files read at build time are
+  Apache-2.0.
+homepage: https://delirioux.github.io/makohai/
+distribution: browser-installer
+requires_stock: V15
+install_notes: >-
+  Use the web installer on the homepage in Chrome or Edge, the FM-1 Firmware Hub, or tools/fm1_install.py with the
+  release .fwsc. The README says to install over M-VAVE's official firmware and that installing is at your own
+  risk. Holding OCT- while switching on starts the USB rescue, which the installers can still reach.
+brick_risk: true
+tags: [generative, sequencer, drums, synth-engine, fx, chords, arpeggiator, editor, emulator, midi, usb-midi]
+image:
+  url: https://raw.githubusercontent.com/delirioux/makohai/main/docs/screens/main.png
+  alt: "Makohai screen: the word VOLUME, six lanes of notes (lead, arp, pad, bass, drums, sfx) scrolling past a fixed play line, and four knob panels for lead, arp, pad and bass"
+  credit: delirioux
+  source_url: https://github.com/delirioux/makohai
+  first_party: true
+versions:
+- version: '1.1'
+  date: 2026-10-26
+  url: https://github.com/delirioux/makohai/releases/tag/v1.1
+  notes: Adds autopan, a voice budget that prevents crackling, demo-style visuals and lit keys, and a new package identity.
+- version: '1.0'
+  date: 2026-10-25
+  url: https://github.com/delirioux/makohai/releases/tag/v1.0
+  notes: First release under the name Makohai, after the working name Espada.

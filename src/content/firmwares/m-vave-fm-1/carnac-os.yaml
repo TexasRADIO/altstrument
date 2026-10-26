@@ -31,10 +31,13 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, wavetable, sequencer, fx, platform]
 versions:
+- version: 0.9.4
+  date: 2026-10-25
+  url: https://github.com/OwenKirby/carnac-os/releases/tag/v0.9.4
+  notes: Pre-release; reworks AMP DRIVE, keeps GLOBAL settings across power-off and makes MIDI input timing steady.
 - version: 0.9.3
-  date: 2026-10-21
-  url: https://github.com/OwenKirby/carnac-os/tree/v0.9.3
-  notes: Git tag; no GitHub release page.
+  date: 2026-10-25
+  url: https://github.com/OwenKirby/carnac-os/releases/tag/v0.9.3
 - version: 0.9.2
   date: 2026-10-21
   url: https://github.com/OwenKirby/carnac-os/tree/v0.9.2

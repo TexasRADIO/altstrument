@@ -1,0 +1,48 @@
+device: m5stack-cardputer
+name: MIASMORA
+summary: >-
+  Dark ambient drone generator for the Cardputer ADV, with 25 layers synthesised in real time, mood presets shared by
+  seed, microphone-triggered silences, tilt control and WAV loop and stem export to microSD.
+description: >-
+  Plays an endless drone built from 11 drone layers, 13 event layers (creaks, drips, footsteps, scrapes and similar)
+  and a reverb, with no samples. There are 24 mood presets plus random scenes, and a 6-digit seed that reproduces the
+  same scene on another device. A DREAD control moves several parameters at once, Drift and Arc change the sound over
+  10 to 30 minutes by themselves, and Listen uses the microphone's level, without recording, to make the sound fall
+  silent after a sudden noise. The IMU drives a tilt mode and a prank mode that hides the device. Loops of 8 to 64
+  seconds, stems, batches and one-shot sounds can be exported as WAV files to the microSD card, and live output can be
+  recorded. Output is mono through the speaker or the 3.5 mm jack. Only the Cardputer ADV was tested, and the README
+  says the code was written by Claude from the author's descriptions. The author calls it the sister firmware of
+  Enso, a calm ambient generator.
+status: active
+authors:
+  - name: Tokagetchi
+    url: https://github.com/oldtokage-collab
+source: https://github.com/oldtokage-collab/MIASMORA
+source_status: open
+license: CC-BY-NC-SA-4.0
+license_notes: >-
+  The LICENSE file is the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 license, so commercial use is not
+  allowed. GitHub shows the license as "Other", and the README names the same license. The start screen's logo font is
+  UnifrakturMaguntia under the SIL Open Font License 1.1.
+distribution: download
+requires_stock: Cardputer ADV; the original Cardputer is untested
+install_notes: >-
+  Flash it from the M5Burner web page linked in the README, or copy the release's firmware.bin to the root of the SD
+  card and flash it from Launcher. To build from source, use PlatformIO with the m5stack-cardputer-adv environment,
+  which also produces a merged image for M5Burner and similar tools. The app creates a /MIASMORA folder on the
+  microSD card for settings, scenes and exports; without a card, nothing is saved and export is unavailable. Started
+  from Launcher, waking from deep sleep returns to Launcher. Earphones are recommended because the built-in speaker
+  barely reproduces the lowest notes.
+brick_risk: false
+tags: [generative, ambient, synth-engine, drone, open-source]
+image:
+  url: https://raw.githubusercontent.com/oldtokage-collab/MIASMORA/main/docs/MIASMORA_promo_1280x960.png
+  alt: MIASMORA title card with the name in glowing red blackletter type on a near-black background, with the words DARK AMBIENT DRONE GENERATOR beneath it
+  credit: Tokagetchi
+  source_url: https://github.com/oldtokage-collab/MIASMORA
+  first_party: true
+versions:
+  - version: v1.0
+    date: 2026-10-23
+    url: https://github.com/oldtokage-collab/MIASMORA/releases/tag/v1.0
+    notes: First public release.

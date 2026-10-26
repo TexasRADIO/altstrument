@@ -1,0 +1,31 @@
+name: Monsoon
+manufacturer: After Later Audio
+category: eurorack
+tagline: Clouds variant with separate CV and control for each blend parameter
+description: >-
+  Monsoon is a 12HP Eurorack module from After Later Audio, based on the open
+  Mutable Instruments Clouds design. The four blend parameters (wet/dry, pan,
+  feedback and reverb) each have their own knob and CV input, and four sliders
+  take over the position, density, size and texture controls. LEDs on the
+  sliders show incoming control voltage, and a button switches what the
+  LEDs display. It ships with Parasites 2.01.
+platform: STM32F4
+stock_firmware: Parasites 2.01
+links:
+  manufacturer: https://afterlateraudio.com/products/monsoon
+  community: []
+notes: >-
+  Runs Clouds-architecture firmware built for its own control layout. The
+  Mutable Instruments firmware is MIT-licensed (STM32 code) and the hardware
+  is CC-BY-SA-3.0. Firmware for Clouds itself does not run on it unchanged.
+related: [mutable-instruments-clouds]
+image:
+  src: /images/devices/after-later-audio-monsoon.webp
+  style: photo
+  alt: Front panel of the After Later Audio Monsoon Eurorack module with a black and gold panel, showing four sliders, four blend knobs with CV jacks and a row of input jacks
+  width: 940
+  height: 1920
+  credit: After Later Audio
+  license: manufacturer product image
+  source_url: https://afterlateraudio.com/products/monsoon
+  original_url: https://afterlateraudio.com/cdn/shop/products/Monsoon.png?v=1628985797

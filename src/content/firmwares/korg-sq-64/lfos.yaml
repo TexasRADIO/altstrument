@@ -35,7 +35,7 @@ install_notes: >-
 brick_risk: true
 tags: [lfo, modulation, cv-gate, midi, os]
 versions:
-  - version: main @ f480540
-    date: 2026-10-12
-    url: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-LFOs/commit/f480540
-    notes: Commit pinned by the firmware registry.
+  - version: main @ 36218d2
+    date: 2026-10-25
+    url: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-LFOs/commit/36218d2
+    notes: Latest commit, a README change; the firmware registry still pins f480540.

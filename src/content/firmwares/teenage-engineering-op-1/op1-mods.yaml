@@ -19,6 +19,7 @@ status: active
 authors:
   - name: j3threejay
     url: https://justinjoe.com/
+source: https://github.com/j3threejay/op1-mod
 source_status: patcher-only
 license: unspecified
 license_notes: >-

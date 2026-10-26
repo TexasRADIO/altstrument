@@ -1,0 +1,52 @@
+device: m-vave-fm-1
+name: MIDIMON
+summary: >-
+  MIDI monitor that logs USB, TRS and two Bluetooth links, with filters, statistics and a routing matrix that makes
+  the FM-1 a Bluetooth MIDI bridge between ports.
+description: >-
+  Watches notes, controllers, clock, SysEx and system messages from the TRS jack, USB (device or host mode) and
+  Bluetooth in both the peripheral and central roles at once. The log keeps the last 4096 messages in hex or
+  words, with views for held notes, controllers, channel activity and clock and timecode. Each source and route
+  has its own channel and message-type filter. The THRU page routes any source to USB and both Bluetooth links, so
+  a Bluetooth controller can reach a computer over USB or a USB synth with no computer in between. The author says
+  the code was written with AI assistance. It is an app on charlesvestal's fm1-base with a few patches, and the
+  USB host driver is carried from a felucca-bsp pull request.
+status: active
+authors:
+- name: ignis32
+  url: https://github.com/ignis32
+source: https://github.com/ignis32/midimonitor_fm1
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  LICENSING.md covers the app, tools and patches as MPL-2.0, as fm1-base is. The USB MIDI host patch is MPL-2.0
+  by the explicit permission of its two authors, quoted there. Builds with Bluetooth link JieLi's binary
+  libraries (Apache-2.0), fetched from the SDK at build time.
+homepage: https://github.com/ignis32/midimonitor_fm1
+distribution: download
+install_notes: >-
+  Install with the web installer or fm1_install.py and the release .fwsc, over the stock firmware, another custom
+  firmware or an earlier MIDIMON. Releases are built by the Firmware Hub's shared workflow and carry a GitHub
+  attestation. The README warns that it might brick the FM-1 and suggests installing the custom bootloader with
+  m-flasher first if there is no other way to recover.
+brick_risk: true
+tags: [midi, usb-midi, utility, ui]
+image:
+  url: https://raw.githubusercontent.com/ignis32/midimonitor_fm1/main/docs/screen-log.png
+  alt: "MIDIMON LOG screen in green on black: tabs LOG, FILTER, STATS, THRU and GLO above a list of timestamped messages from USB, TRS and BLE-C, such as note on, CC74 CUTOFF and SysEx"
+  credit: ignis32
+  source_url: https://github.com/ignis32/midimonitor_fm1
+  first_party: true
+versions:
+- version: '0.4'
+  date: 2026-10-25
+  url: https://github.com/ignis32/midimonitor_fm1/releases/tag/v0.4
+  notes: Adds a battery readout and moves scanlines to GLO 3/3; the USB name goes back to MIDIMON FM-1 so installers find it.
+- version: '0.2'
+  date: 2026-10-22
+  url: https://github.com/ignis32/midimonitor_fm1/releases/tag/v0.2
+  notes: Adds the KEYS, CC, CHANS and CLOCK views on the LOG tab.
+- version: '0.1'
+  date: 2026-10-21
+  url: https://github.com/ignis32/midimonitor_fm1/releases/tag/v0.1
+  notes: First release.

@@ -32,7 +32,7 @@ install_notes: >-
   install machines from developers you trust.
 tags: [machines, sdk, emulator, converter, web, research]
 versions:
-  - version: main @ 9940106
-    date: 2026-10-25
-    url: https://github.com/smoothdeveloper/fsdsp56k/commit/9940106c35fd6812ea00afd481b9f398e44d5f7a
+  - version: main @ 2ac9d9b
+    date: 2026-10-26
+    url: https://github.com/smoothdeveloper/fsdsp56k/commit/2ac9d9b59306b95265b3bce151b347f8e10bd188
     notes: No tagged releases; this is the latest commit.

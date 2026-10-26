@@ -1,0 +1,28 @@
+name: Stolperbeats
+manufacturer: Making Sound Machines
+category: eurorack
+tagline: Drum trigger sequencer for shuffled, off-grid beats
+description: >-
+  Stolperbeats is a Eurorack drum trigger sequencer from Making Sound Machines.
+  It plays patterns on shuffle and timing tables aimed at the loose groove of
+  sample-based hip hop, with pattern banks, MIDI in and out, and CV inputs for
+  pattern, shuffle and bank. The module is 26HP plus a 3HP expander and takes a
+  firmware update from the manufacturer's browser updater.
+platform: STM32 (Cortex-M7)
+stock_firmware: "163"
+links:
+  manufacturer: https://makingsoundmachines.com/stolperbeats/
+notes: >-
+  Making Sound Machines does not support modified firmware. The community
+  patcher listed here needs your own copy of the official firmware 163 and
+  refuses any other.
+image:
+  src: /images/devices/making-sound-machines-stolperbeats.webp
+  style: photo
+  alt: Front panel of the Stolperbeats, black with gold lettering, lit LED step grids and ten knobs, resting on a wooden surface
+  width: 1000
+  height: 1000
+  credit: Making Sound Machines
+  license: manufacturer product image
+  source_url: https://makingsoundmachines.com/stolperbeats/
+  original_url: https://makingsoundmachines.com/img/Making-Sound-Machines_Stolperbeats_1397_1000px.jpg

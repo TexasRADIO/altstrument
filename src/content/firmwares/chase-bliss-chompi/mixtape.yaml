@@ -1,0 +1,66 @@
+device: chase-bliss-chompi
+name: MIXTAPE
+summary: Fork of CHOMPI Club's TAPE 2.0 that adds loop halving and doubling, step mode, undo, FX baking, mono line-in detection, copy onto the loop and a recording threshold.
+description: >-
+  MIXTAPE keeps TAPE's seven-voice sampler and varispeed looper and changes how
+  the transport wheel and loop keys work. Shift and a click on the wheel
+  switches between speed, length and step modes, where length mode doubles or
+  halves the loop and step mode walks through the sections of a halved loop.
+  Other additions are baking the effects into the loop, undo and redo of the
+  last overdub or bake, detection of mono cables with a choice of left, right
+  or stereo, adding to or replacing the loop from copy mode, and a recording
+  threshold set by the left knob. The README says the firmware is nearly out of
+  SRAM, so further features would need something removed. Recent commits add a
+  page cache for audio files and USB MIDI input at start-up. Downloads and a
+  usage page are at the author's GitHub Pages site. The repository publishes a
+  release for each build, and the tag names carry the date and commit.
+status: active
+authors:
+  - name: lost-tty
+    url: https://github.com/lost-tty
+source: https://github.com/lost-tty/CHOMPI
+source_status: open
+license: MIT
+license_notes: The LICENSE file names CHOMPI Club as copyright holder; the CHOMPI name and marks are not covered, see TRADEMARKS.md.
+homepage: https://lost-tty.github.io/CHOMPI/
+distribution: download
+requires_stock: TAPE 2.0
+install_notes: >-
+  Download the CHOMPI_MIXTAPE .bin from a release and copy it to the SD card
+  root as the only .bin, or add it to the multi-firmware launcher. Keep a copy
+  of the original firmware to go back. The firmware loads like any CHOMPI
+  update and does not touch the bootloader.
+brick_risk: false
+tags: [fork, sampler, looper, performance, midi]
+versions:
+  - version: mixtape-20261016-6a6de0c
+    date: 2026-10-16
+    url: https://github.com/lost-tty/CHOMPI/releases/tag/mixtape-20261016-6a6de0c
+    notes: Latest build at the time of writing; the release notes only give the commit.
+  - version: mixtape-20261015-de43432
+    date: 2026-10-15
+    url: https://github.com/lost-tty/CHOMPI/releases/tag/mixtape-20261015-de43432
+  - version: mixtape-20261015-94a46d1
+    date: 2026-10-15
+    url: https://github.com/lost-tty/CHOMPI/releases/tag/mixtape-20261015-94a46d1
+  - version: mixtape-20261015-8bd1ba4
+    date: 2026-10-15
+    url: https://github.com/lost-tty/CHOMPI/releases/tag/mixtape-20261015-8bd1ba4
+  - version: mixtape-20261013-279f8cf
+    date: 2026-10-13
+    url: https://github.com/lost-tty/CHOMPI/releases/tag/mixtape-20261013-279f8cf
+  - version: mixtape-20261012-ef8552b
+    date: 2026-10-12
+    url: https://github.com/lost-tty/CHOMPI/releases/tag/mixtape-20261012-ef8552b
+  - version: mixtape-20261011-b1bbdea
+    date: 2026-10-11
+    url: https://github.com/lost-tty/CHOMPI/releases/tag/mixtape-20261011-b1bbdea
+  - version: mixtape-20261011-908bafd
+    date: 2026-10-11
+    url: https://github.com/lost-tty/CHOMPI/releases/tag/mixtape-20261011-908bafd
+  - version: mixtape-20261010-b1b9b8c
+    date: 2026-10-10
+    url: https://github.com/lost-tty/CHOMPI/releases/tag/mixtape-20261010-b1b9b8c
+  - version: mixtape-20261010-0ec40b3
+    date: 2026-10-10
+    url: https://github.com/lost-tty/CHOMPI/releases/tag/mixtape-20261010-0ec40b3

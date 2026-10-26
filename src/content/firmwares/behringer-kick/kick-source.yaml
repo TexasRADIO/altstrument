@@ -1,0 +1,40 @@
+device: behringer-kick
+name: KICK source code
+summary: Music Tribe's published source for the Behringer KICK, covering the JUCE application, an audio engine library, the USB protocol to the hardware and the Buildroot Linux image.
+description: >-
+  The repository is published by the Music Tribe Open Source organisation, whose
+  files credit MUSIC Tribe and which holds the Behringer repositories. It has
+  four parts: the Kick application written in C++ with JUCE, the AudIO audio
+  engine library, ComProtocol (the packet protocol between application and
+  hardware) and a Buildroot tree for the i.MX 8M Mini Linux image. Factory audio
+  samples, the Myriad Pro font, a prebuilt SDK and one unlicensed serial-port
+  module were left out, and the code may still refer to them. The Kick
+  README says the build does not work out of the box and that AudIO and
+  ComProtocol are private libraries, although both folders are now in the
+  repository. No build or flash was attempted for this entry. The README gives
+  no install procedure and no release is published.
+status: active
+authors:
+  - name: Music Tribe
+    url: https://github.com/MusicTribeOpenSource
+source: https://github.com/MusicTribeOpenSource/0700-AAM
+source_status: open
+license: AGPL-3.0-or-later
+license_notes: >-
+  Application, AudIO and ComProtocol are AGPL-3.0-or-later per the repository
+  README and the organisation's licensing page; the root LICENSE file is the
+  AGPL-3.0 text. The Buildroot tree is GPL-2.0 and bundled third-party code
+  keeps its own licenses. Behringer and KICK names and logos are excluded.
+distribution: source-only
+install_notes: >-
+  Build from source; the Kick README lists missing pieces to replace or remove
+  and describes building a cross-compilation SDK from the Buildroot tree. No
+  flashing steps are given. The Linux image is a development build with a
+  passwordless root account and SSH enabled.
+brick_risk: false
+tags: [official, open-source, sampler, sequencer, os, fx, platform]
+versions:
+  - version: main @ 2719418
+    date: 2026-10-15
+    url: https://github.com/MusicTribeOpenSource/0700-AAM/commit/2719418
+    notes: No tagged releases; this is the latest commit.

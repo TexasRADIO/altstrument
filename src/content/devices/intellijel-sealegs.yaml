@@ -1,0 +1,29 @@
+name: Sealegs
+manufacturer: Intellijel
+category: eurorack
+tagline: Stereo multi-model delay with reverb in 20HP
+description: >-
+  Sealegs is a 20HP Eurorack stereo delay from Intellijel. It
+  offers three delay models (tape, bucket brigade and crossfading digital),
+  separate left and right delay buffers, a saturating input drive, high-pass and
+  low-pass filters, a reverb with three insert positions and an internal
+  modulator. It has nine CV inputs with attenuverters, a clock input with tap
+  tempo, and 96 kHz 24-bit stereo audio. Firmware updates come from Intellijel's
+  web updater.
+platform: ARM Cortex-M7
+stock_firmware: 1.3.5.0
+links:
+  manufacturer: https://intellijel.com/shop/eurorack/sealegs/
+notes: >-
+  Intellijel does not support modified firmware. The community patcher listed
+  here needs your own copy of the official 1.3.5.0 file and refuses any other.
+image:
+  src: /images/devices/intellijel-sealegs.webp
+  style: photo
+  alt: Front panel of the Sealegs, silver with black knobs and sliders, a row of input jacks along the top, eight sliders in the middle and a large mod knob and four smaller knobs along the bottom
+  width: 1200
+  height: 1519
+  credit: Intellijel
+  license: manufacturer product image
+  source_url: https://intellijel.com/shop/eurorack/sealegs/
+  original_url: https://intellijel.com/wp-content/uploads/2023/04/Sealegs-3U.png

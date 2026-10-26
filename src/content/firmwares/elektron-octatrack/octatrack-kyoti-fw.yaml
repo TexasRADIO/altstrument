@@ -1,13 +1,13 @@
 device: elektron-octatrack
 name: OT Kyoti FW
-summary: Feature and bug-fix builds that keep the stock feel, with mute modes, direct pattern jump, a sidechain compressor with key input, repitch, project reload and batch fixes. Tested on an MKI.
+summary: Feature and bug-fix builds that keep the stock feel, with mute modes, direct pattern jump, a sidechain compressor with key input, tempo-locked varispeed, repitch, project reload and batch fixes. Tested on an MKI.
 description: >-
   Every feature is off by default so a freshly flashed unit behaves like stock;
   bug fixes are always on. Features include MUTE_MODES (OT, OTFX, OTFX-T, DT-T),
   DIRECT_JUMP_KYOTI, SIDECHAIN_COMPRESSOR, RELOAD_FROM_PROJECT, repitch
-  (REPITCH_REPEAT98_KYOTI), live-record quantize toggle and trigless-lock
-  cleanup. Unpromoted builds refuse to run unless KYOTI_ALLOW_WIP=1 is set.
-  KYOTI V1.0 was withdrawn on 2026-10-06 because it could crash; V1.2 broke
+  (REPITCH_REPEAT98_KYOTI), VARISPEED, live-record quantize toggle and trigless-lock
+  cleanup. KYOTI V1.6 is the current combined image. Unpromoted builds refuse to
+  run unless KYOTI_ALLOW_WIP=1 is set. KYOTI V1.0 was withdrawn on 2026-10-06 because it could crash; V1.2 broke
   PLATE REVERB. Hardware testing is on an MKI only.
 status: active
 authors:
@@ -24,9 +24,17 @@ distribution: patch-your-own
 requires_stock: 1.40C
 install_notes: >-
   Build with the repo's tools from your own OS 1.40C; see BUILD_KYOTI.md and
-  FLASHING.md in the repo. The unit's OS version reads KYOTI V1.3 when flashed.
+  FLASHING.md in the repo. The unit's OS version reads KYOTI V1.6 when the combined image is flashed.
 tags: [fx, sequencer, performance, ui, bugfixes]
 versions:
+  - version: KYOTI V1.6
+    date: 2026-10-22
+    url: https://github.com/Zac-Kyoti/octatrack-kyoti-fw/commit/d4d2e7edae08529cbc66e3bd565a0c6379bebd00
+    notes: Combined image, flashed; swaps the light side-chain compressor for the base-width one. Later commits re-pin the image with newer feature builds. A compressor saved with V1.5 or earlier keeps its KEY, so KGN, KBAS, KWID and MON need setting again.
+  - version: KYOTI V1.5
+    date: 2026-10-16
+    url: https://github.com/Zac-Kyoti/octatrack-kyoti-fw/commit/ef20dd66d50356b45be217f9ffc65c8f0a8d2125
+    notes: Combined image promoted to final; adds VARISPEED and the reworked side-chain compressor, with project reload held in DRAM.
   - version: KYOTI V1.3
     date: 2026-10-10
     url: https://github.com/Zac-Kyoti/octatrack-kyoti-fw/commit/8f1c4ca4a4570b83a5f4ba4f59c035554e3d2632

@@ -39,6 +39,9 @@ video:
   first_party: true
   found_via: https://github.com/bonszaimusic/caravel#readme
 versions:
+- version: 0.5.0
+  date: 2026-10-25
+  url: https://github.com/bonszaimusic/caravel/releases/tag/v0.5.0
 - version: 0.3.3
   date: 2026-10-21
   url: https://github.com/bonszaimusic/caravel/releases/tag/v0.3.3

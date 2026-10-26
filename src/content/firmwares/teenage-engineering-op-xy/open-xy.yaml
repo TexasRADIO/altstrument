@@ -40,7 +40,7 @@ install_notes: >-
 brick_risk: true
 tags: [machines, synth-engine, sdk, web, fx, sampler, patch]
 versions:
-  - version: staging @ fdf48e5
-    date: 2026-10-25
-    url: https://github.com/etcetc000/open-xy/commit/fdf48e583ebb19fb5cd191687229bf77107f1aed
+  - version: staging @ 33b8652
+    date: 2026-10-26
+    url: https://github.com/etcetc000/open-xy/commit/33b8652d12be95f7b693ea3b5e2ddb86ed2c4e82
     notes: No tagged firmware releases; this is the latest commit on the default branch. The only release, toolchain-1, is the compiler toolchain.

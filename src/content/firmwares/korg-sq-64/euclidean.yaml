@@ -35,7 +35,7 @@ install_notes: >-
 brick_risk: true
 tags: [sequencer, euclidean, cv-gate, midi, os]
 versions:
-  - version: main @ 1fc6579
-    date: 2026-10-12
-    url: https://github.com/aleph-void/Korg-SQ-64-Euclidean-Firmware/commit/1fc6579
-    notes: Commit pinned by the firmware registry; the image reports version 1.0.
+  - version: main @ 688fd0c
+    date: 2026-10-25
+    url: https://github.com/aleph-void/Korg-SQ-64-Euclidean-Firmware/commit/688fd0c
+    notes: Latest commit, a README change; the firmware registry still pins 1fc6579, whose image reports version 1.0.

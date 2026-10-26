@@ -40,6 +40,14 @@ image:
   source_url: https://github.com/charlesvestal/fm1-loom/blob/main/docs/MANUAL.md
   first_party: true
 versions:
+- version: 0.8.1
+  date: 2026-10-26
+  url: https://github.com/charlesvestal/fm1-loom/releases/tag/v0.8.1
+  notes: Gives each FM-1 its own Bluetooth name so two units can be told apart, and makes the samples page find the unit on Windows and when another app holds a MIDI port.
+- version: '0.8'
+  date: 2026-10-25
+  url: https://github.com/charlesvestal/fm1-loom/releases/tag/v0.8
+  notes: Adds Bluetooth MIDI, USB MIDI host, a MIDI track engine, a flam step trick and a choice of internal, receive or send clock.
 - version: '0.7'
   date: 2026-10-24
   url: https://github.com/charlesvestal/fm1-loom/releases/tag/v0.7

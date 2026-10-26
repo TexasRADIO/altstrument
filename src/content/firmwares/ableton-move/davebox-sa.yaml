@@ -42,6 +42,10 @@ video:
   first_party: true
   found_via: https://github.com/legsmechanical/dbxhost#readme
 versions:
+  - version: v1.1.0
+    date: 2026-10-25
+    url: https://github.com/legsmechanical/dbxhost/releases/tag/v1.1.0
+    notes: Adds a Pad Mode bank with Scale, Chrom, Piano, Chord and Custom layouts and split pad zones, a single automation envelope per lane, project templates with backup and restore, and Save and Power Off. Projects saved in 1.1 lose their automation if opened in 1.0.0.
   - version: v1.0.0
     date: 2026-10-20
     url: https://github.com/legsmechanical/dbxhost/releases/tag/v1.0.0

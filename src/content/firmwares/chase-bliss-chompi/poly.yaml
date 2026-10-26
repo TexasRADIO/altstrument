@@ -1,0 +1,37 @@
+device: chase-bliss-chompi
+name: POLY
+summary: Analog-style synth firmware modelled on the Korg Mono/Poly, with four oscillators per voice, sync and cross-modulation, a ladder filter, an arpeggiator, chorus, delay and reverb.
+description: >-
+  Each voice has four oscillators (saw, pulse with pulse-width modulation and
+  triangle) with hard sync and cross-modulation, feeding a 24 dB resonant
+  ladder filter, two envelopes and an LFO. Chorus, a ping-pong delay, reverb
+  and saturation follow the voices. The toggle switch selects mono mode with
+  unison and glide or six-voice poly. Ten pages edit the sound, and 15 patch
+  slots hold factory and user patches, saved to a POLY folder on the card. The
+  firmware uses CHOMPI's shift-key convention and runs on its own or as one
+  entry on the multi-firmware launcher. The release is marked beta and says it
+  was tested on one CHOMPI.
+status: active
+authors:
+  - name: hiwatts
+    url: https://github.com/sfaber02
+source: https://github.com/sfaber02/chompi-poly
+source_status: open
+license: MIT
+license_notes: >-
+  The author's MIT grant covers the new code. Files taken from CHOMPI Club's
+  firmware stay under its MIT license (LICENSE.chompi-club), and the reverb
+  code is Mutable Instruments code under MIT.
+distribution: download
+install_notes: >-
+  Copy POLY.bin to the SD card root as the only .bin file, or into the
+  launcher's FIRMWARE folder, or send it over USB MIDI from the launcher's
+  web uploader. Factory patches are built in. Back up the card first, as the
+  release asks.
+brick_risk: false
+tags: [synth-engine, oscillator, filter, arpeggiator, fx, delay, reverb, synth]
+versions:
+  - version: beta
+    date: 2026-10-03
+    url: https://github.com/sfaber02/chompi-poly/releases/tag/beta
+    notes: Pre-release, marked beta.

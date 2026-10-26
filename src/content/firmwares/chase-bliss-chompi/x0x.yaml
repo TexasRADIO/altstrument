@@ -1,0 +1,57 @@
+device: chase-bliss-chompi
+name: x0x
+summary: TB-303-style bass line machine with a TR-606-style drum machine, each with a 16-step sequencer, A and B pattern sides, live recording, MIDI sync and MIDI file import and export.
+description: >-
+  Built on CHOMPI Club's TEMPO firmware, keeping its hardware layer. A
+  303-style voice with a filter and envelopes fitted to recordings of a real
+  circuit sits beside seven drum voices (kick, snare, two toms, cymbal and open
+  and closed hat) with per-step accent, an LFO and a filter per voice. Each of
+  the 16 pattern slots holds a bassline and a drum part with their own lengths,
+  and each slot has A and B sides. The toggle switch picks step entry or live
+  play and recording, with quantize, roll and erase on the drums. It sends and
+  receives MIDI over DIN and USB, can lead a DAW's transport, and exports each
+  pattern as a MIDI file and imports files from the card at power-on. Mutes, a
+  write-protect mode and undo of a clear are included. The README says the drum
+  side has had the least time on hardware. Cheat sheets are published as PDF
+  and PNG.
+status: active
+authors:
+  - name: theotherson
+    url: https://github.com/theotherson
+source: https://github.com/theotherson/chompi-x0x
+source_status: open
+license: MIT
+license_notes: The LICENSE file names CHOMPI Club as copyright holder; the CHOMPI name and marks are not covered, see TRADEMARKS.md.
+distribution: download
+install_notes: >-
+  Download the .bin from a release and add it to the FIRMWARE folder of the
+  multi-firmware launcher card, or copy it to the card root as the only .bin.
+  The firmware keeps its files in an X0X folder on the card.
+brick_risk: false
+tags: [synth-engine, drums, sequencer, midi, performance, emulator]
+versions:
+  - version: v1.2.0
+    date: 2026-10-25
+    url: https://github.com/theotherson/chompi-x0x/releases/tag/v1.2.0
+    notes: Adds DAW leading over MIDI clock, two-click stepped controls and a pop-free bass waveform change.
+  - version: v1.1.1
+    date: 2026-10-11
+    url: https://github.com/theotherson/chompi-x0x/releases/tag/v1.1.1
+    notes: Adds undo for an accidental clear and a reworked cheat sheet.
+  - version: v1.0.2
+    date: 2026-10-10
+    url: https://github.com/theotherson/chompi-x0x/releases/tag/v1.0.2
+  - version: v1.0.1
+    date: 2026-10-09
+    url: https://github.com/theotherson/chompi-x0x/releases/tag/v1.0.1
+  - version: v1.0.0
+    date: 2026-10-09
+    url: https://github.com/theotherson/chompi-x0x/releases/tag/v1.0.0
+    notes: Adds the drum machine, a per-voice LFO and filter, and live pitched drum recording.
+  - version: v0.2.0
+    date: 2026-10-09
+    url: https://github.com/theotherson/chompi-x0x/releases/tag/v0.2.0
+  - version: v0.1.0
+    date: 2026-10-08
+    url: https://github.com/theotherson/chompi-x0x/releases/tag/v0.1.0
+    notes: Pre-release.

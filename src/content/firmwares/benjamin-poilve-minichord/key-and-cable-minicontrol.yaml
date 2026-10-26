@@ -9,8 +9,9 @@ description: >-
   plate, touch thresholds and master tuning the same across presets (fork firmware 76 and later). It accepts
   instructions in plain words such as making a sound darker across several banks, includes a looper that runs in
   the browser, a minishop of shared presets, a guided tour and several visual themes, and shows the extra settings
-  of the advanced firmware when that is installed. The official minichord README links it as an alternative
-  control platform.
+  of the advanced firmware when that is installed. From advanced firmware 115 on, its settings page can also install
+  the newest advanced firmware over USB in Chrome or Edge, backing up the banks first, without Teensy Loader. The
+  official minichord README links it as an alternative control platform.
 status: active
 authors:
   - name: Greg Miller (The Key & Cable Company)
@@ -24,7 +25,7 @@ install_notes: >-
   plugged in so it is on, and allow the MIDI permission prompt.
 tags: [editor, librarian, presets, sysex, looper, web-ui]
 versions:
-  - version: main @ 85a8bcd
-    date: 2026-10-24
-    url: https://github.com/keyandcableco/minicontrol/commit/85a8bcd28f88c70a5d328dab07b28145fcc8a371
+  - version: main @ ed4a682
+    date: 2026-10-25
+    url: https://github.com/keyandcableco/minicontrol/commit/ed4a68295389d618c6c0c25cef8e85f7419ca52d
     notes: No tagged releases; this is the latest commit.

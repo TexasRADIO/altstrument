@@ -1,0 +1,46 @@
+device: m-vave-fm-1
+name: Arctic Scream
+summary: >-
+  GR!MM-based drone firmware with Holvut, a feedback-loop voice that grows out of silence into a howl, a DRONE page
+  of slow random walks, 46 arctic-named sounds, a new look, a browser demo and an editor.
+description: >-
+  A modified version of GR!MM, keeping its four tracks, effects, 64-step sequencer, chords, arpeggiator and song
+  mode. Holvut is a string and resonant body in a saturating feedback loop, written from scratch after the Synthux
+  Audrey II design, and each key press sends a burst into the loop. The DRONE page adds drifting filter, shape and
+  reverb movement per track, a tension control and a rise time in bars. Further changes are six presets that hold
+  their notes, a close-interval HORROR scale, delay feedback up to 150 percent, keys an octave lower and an
+  aurora-themed screen. It keeps its own saves separate from GR!MM's. The project site has a browser demo, an
+  editor that works with or without an FM-1, and a cheat sheet.
+status: active
+authors:
+- name: PolarPatch
+  url: https://github.com/PolarPatch
+source: https://github.com/PolarPatch/Arctic-scream-FM-1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0 only for GR!MM and for PolarPatch's changes. GR!MM's msfa file is Apache-2.0 and its
+  DaisySP and Rings files are MIT. The PolarPatch logo is not under the GPL.
+homepage: https://polarpatch.github.io/Arctic-scream-FM-1/
+distribution: download
+install_notes: >-
+  Download the release .fwsc and install it with tools/fm1_install.py over USB. It installs over the stock
+  firmware, GR!MM or any other FM-1 firmware, and releases carry a GitHub attestation from the Firmware Hub's
+  build workflow. Do not unplug the FM-1 while it writes. The README says installing is at your own risk and
+  points to the Rescue page of the FM-1 Firmware Hub for a stuck unit.
+brick_risk: true
+tags: [synth-engine, sequencer, fx, reverb, delay, ambient, chords, arpeggiator, editor, emulator, fork]
+image:
+  url: https://raw.githubusercontent.com/PolarPatch/Arctic-scream-FM-1/main/docs/screens/demo.png
+  alt: "Arctic Scream browser demo showing the FM-1 panel with its screen on the HOME page, track 1 ICE WRAITH, a square-like wave and volume, cutoff, resonance and FX values, above a 16-key keyboard"
+  credit: PolarPatch
+  source_url: https://github.com/PolarPatch/Arctic-scream-FM-1
+  first_party: true
+versions:
+- version: '1.1'
+  date: 2026-10-26
+  url: https://github.com/PolarPatch/Arctic-scream-FM-1/releases/tag/v1.1
+- version: '1.0'
+  date: 2026-10-25
+  url: https://github.com/PolarPatch/Arctic-scream-FM-1/releases/tag/v1.0
+  notes: First release.

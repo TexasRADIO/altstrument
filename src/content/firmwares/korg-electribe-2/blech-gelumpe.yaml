@@ -44,6 +44,10 @@ image:
   source_url: https://github.com/KuhlerBuhler/kuhlers-gelumpe
   first_party: true
 versions:
+  - version: v1.3.3
+    date: 2026-10-26
+    url: https://github.com/KuhlerBuhler/kuhlers-gelumpe/releases/tag/v1.3.3
+    notes: Sync groups keep sounding samples running when one pattern leads into the next, and the patcher no longer mistakes a Hacktribe file with a blue Electribe header for Korg's blue firmware.
   - version: v1.3.0
     date: 2026-10-25
     url: https://github.com/KuhlerBuhler/kuhlers-gelumpe/releases/tag/v1.3.0

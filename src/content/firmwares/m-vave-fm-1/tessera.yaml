@@ -40,6 +40,14 @@ image:
   source_url: https://github.com/Rastapopolix/tessera
   first_party: true
 versions:
+- version: 2.1.1
+  date: 2026-10-26
+  url: https://github.com/Rastapopolix/tessera/releases/tag/v2.1.1
+  notes: Chord names on the CHORD generator's CIRCLE progression now fit their boxes.
+- version: '2.1'
+  date: 2026-10-26
+  url: https://github.com/Rastapopolix/tessera/releases/tag/v2.1
+  notes: Adds a four-channel playable mixer, a HUMAN TIME timing knob, easier-to-read screens and steadier MIDI clock sync.
 - version: 2.0.2
   date: 2026-10-25
   url: https://github.com/Rastapopolix/tessera/releases/tag/v2.0.2

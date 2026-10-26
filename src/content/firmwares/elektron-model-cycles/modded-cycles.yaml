@@ -1,13 +1,17 @@
 device: elektron-model-cycles
 name: Modded Cycles
-summary: "Browser-based mod picker for Model:Cycles OS 1.13: 6-channel USB audio, Syntakt engines, MACRO (Braids) and ACID (Open303) machines, arpeggiator, extra LFOs, per-track filter, 546 BPM, and Samples OS on Cycles and back. Also covers Model:Samples."
+summary: "Single community OS for Model:Cycles OS 1.13, built in a browser flasher from your own official files: Sampler, Syntakt engines, MACRO (Braids) and ACID (Open303) machines, four LFOs, arpeggiator, step record, 546 BPM, 6-channel USB audio. Also covers Model:Samples."
 description: >-
-  The page builds a patched OS in your browser from your own official file and can
-  send it over USB. It bundles Model-TG, Chord Keys and drumkilla's tweaks as
-  options (Chord Keys and Model-TG cannot be combined; LFO 2/3/4 and the
-  per-track filter exclude each other). Cycles OS for Model:Samples and the
-  return trip are marked experimental. Returning from Samples OS on a Cycles
-  needs a MIDI interface.
+  Since release 2.0 the project ships one fixed OS instead of a list of mods to tick, so every user runs the same
+  firmware. The flasher page builds it in your browser from your official Model:Cycles OS file and a Syntakt OS
+  file (1.41 or 1.42), which the Syntakt engines are read from, and can send it over USB. It bundles Model-TG's
+  Sampler as the seventh machine, five Syntakt machines, MACRO, ACID, a latching mute, trig preview and drumkilla's
+  other tweaks. Per-track filter, the optimised OS and Chord Keys are not in 2.0; the README says Chord Keys was
+  removed because of conflicts, and the older mod-picker builds remain buildable from the command line. The
+  project marks the OS as experimental, since the exact 2.0 image had not run on a machine when the README was
+  written. The same OS can be installed on a Model:Samples, and the Samples OS tab marks Cycles OS for
+  Model:Samples and the return trip as experimental. Returning from Samples OS on a Cycles needs a MIDI
+  interface.
 status: active
 authors:
   - name: 18nelli18
@@ -20,14 +24,22 @@ license_notes: Covers the project's original work; third-party components (Braid
 homepage: https://18nelli18.github.io/Modded-Cycles/
 distribution: browser-installer
 requires_stock: "1.13"
-install_notes: Drop your official OS file into the flasher page, pick mods, download and send with Elektron Transfer or flash over USB. Back up first.
-tags: [usb-audio, machines, synth-engine, fx, sequencer, lfo, filter, boot-splash]
+install_notes: Drop your official Model:Cycles OS 1.13 file and a Syntakt OS file (1.41 or 1.42) into the flasher page, then flash over USB or download the .syx and send it with Elektron Transfer. Set any track that uses an added machine back to a stock machine before returning to the official firmware. Back up projects and samples first.
+tags: [usb-audio, machines, sampler, synth-engine, fx, sequencer, lfo, filter, boot-splash]
 video:
   url: https://www.youtube.com/watch?v=TqtP1UYZCqM
   title: 'Third-party Firmware on the Elektron Model:Cycles - New Synths, Sample Playback & More!'
   credit: Matt Greer Music
   first_party: false
 versions:
+  - version: Release 2.0
+    date: 2026-10-19
+    url: https://github.com/18nelli18/Modded-Cycles/pull/99
+    notes: "Replaces the mod picker with one fixed OS, and adds a Mods page in SETTINGS with a 2CH or 6CH USB audio switch, plus step record. Date is the merge of PR #99; flasher releases are not tagged on GitHub."
+  - version: Release 1.55
+    date: 2026-10-18
+    url: https://github.com/18nelli18/Modded-Cycles/pull/94
+    notes: "Adds a short fade-in to ACID notes to remove the click at note start. Date is the merge of PR #94; flasher releases are not tagged on GitHub."
   - version: Release 1.54
     date: 2026-10-12
     url: https://github.com/18nelli18/Modded-Cycles/pull/86

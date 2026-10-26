@@ -45,6 +45,10 @@ image:
   source_url: https://genkigenki.github.io/smk37/
   first_party: true
 versions:
+- version: 0.27-smk37
+  date: 2026-10-26
+  url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.27-smk37
+  notes: Pre-release; the FM-1's 0.27 on the SMK-37, with FX routing.
 - version: 0.26-smk37
   date: 2026-10-20
   url: https://github.com/Quixotic7/ChoralRootFM1/releases/tag/v0.26-smk37

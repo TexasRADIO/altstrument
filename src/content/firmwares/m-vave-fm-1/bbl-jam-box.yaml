@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: BBL JAM BOX
+summary: >-
+  Live-jamming groovebox in the style of Digitone and Model:Cycles: six tracks of 16 steps with parameter locks, an FM
+  engine, 808-style drums and a sampler for your own sounds, built by stripping down Felucca.
+description: >-
+  A beta fork of Felucca 1.6.1 in which most of the parent was removed. Each track runs an FM machine (a four-operator
+  synth plus FM drums), an analogue machine (808-style drums with an AGE control) or a sampler that plays up to 32
+  uploaded sounds, about 11 seconds in total. The sequencer has per-step chance, trig conditions, parameter locks
+  and trigless locks, with an FX lane, an arpeggiator and beat repeats. The master section has a DJ filter, comb
+  filter, delay and a plate reverb with freeze. Sounds and kits are saved in 16 slots per track; patterns are never saved. A browser page uploads the
+  samples and a browser emulator is included. The repository says it was written with AI coding agents.
+status: active
+authors:
+- name: Blair (blairysbeatlab)
+  url: https://github.com/UnkleBlairy
+source: https://github.com/UnkleBlairy/BBL-JAM-BOX
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSING.md, with copyright lines for Leo Kuroshita (Felucca) and for Blair's changes. The power-on
+  logo is all rights reserved and not under the GPL. The engine interface, DSP helpers and icon font from Hügelton
+  Instruments are MIT, and fonts are SIL OFL 1.1. The JieLi SDK files in each package are Apache-2.0. No stock
+  firmware is bundled; the flashing guide has you download M-VAVE's V15 yourself from m-vave/fm1_open.
+homepage: https://unkleblairy.github.io/BBL-JAM-BOX/
+distribution: browser-installer
+install_notes: >-
+  Browser installer in Chrome or Edge over USB, with a flashing guide to read first. Download M-VAVE's V15 package
+  beforehand: the installer's Return to official V15 checks the file you choose. The beta cannot back up its own
+  sounds, kits or samples, and returning to V15 erases them. Coming from Felucca, use Felucca's installer to go back to V15
+  first; that path is untested. Recovering from an interrupted write needs the FM-1-transporter.
+brick_risk: true
+tags: [groovebox, sequencer, parameter-locks, fm, drum-machine, sampler, fx, editor, emulator]
+versions:
+- version: v0.1-beta
+  date: 2026-10-26
+  url: https://github.com/UnkleBlairy/BBL-JAM-BOX/tree/v0.1-beta
+  notes: Git tag; no GitHub release page.

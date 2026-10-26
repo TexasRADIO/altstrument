@@ -1,0 +1,44 @@
+device: making-sound-machines-stolperbeats
+name: STOLPERBEATS ULTRA
+summary: Browser tool that writes a modified Stolperbeats firmware from your own official firmware 163 file, adding alternative swing tables, ratchets, per-step pitch, fill mode and a fill gate on pattern CV 6, and can flash the result over USB.
+description: >-
+  The page patches the official firmware 163 file in the browser, swaps the four
+  Timing buttons' tables for factory or alternative tables (including uploaded
+  timing files), and adds optional code mods: one to four ratchet hits per step,
+  a MIDI note per step, five levels of on-demand fills and a fill gate on
+  pattern CV 6. Ratchet and pitch data are stored in extra pattern files on the
+  SD card. The page refuses input that does not match the SHA-256 of firmware
+  163, checks each build against a listed hash, and after a USB flash reads
+  the contents back and compares them. It does not host or fetch the official
+  firmware. The author says everything was tested on one module, except
+  builds with only some of the mods, which were checked in an emulator. The
+  patch data is published but not the source of the added code, so the source
+  status is patcher-only. The same author's earlier repositories for this
+  module are browser emulators and are not catalogued.
+status: active
+authors:
+  - name: thisisbribery
+    url: https://github.com/thisisbribery
+source: https://github.com/thisisbribery/stolperbeats-ultra-v1
+source_status: patcher-only
+license: unspecified
+license_notes: The repository has no license file.
+homepage: https://thisisbribery.github.io/stolperbeats-ultra-v1/
+distribution: patch-your-own
+requires_stock: "163"
+install_notes: >-
+  Download the official Stolperbeats firmware 163 file (_MSM_stolperbeats_hw_rev4-163.bin)
+  from Making Sound Machines, load it in the page, pick tables and mods, then
+  download the patched file or flash it over USB from the page. The README says
+  the STM32 bootloader is in ROM, so a bad flash can be undone, and the page has
+  a button that flashes the official file back. Ratchet and pitch data need the
+  extra pattern files the module saves to the SD card on Stop. The author gives
+  no warranty and asks that Making Sound Machines not be contacted for help with
+  modified firmware.
+brick_risk: false
+tags: [sequencer, drums, swing, midi, flasher, web]
+versions:
+  - version: main @ f1cf619
+    date: 2026-10-24
+    url: https://github.com/thisisbribery/stolperbeats-ultra-v1/commit/f1cf619
+    notes: No tagged releases; this is the latest commit.

@@ -38,7 +38,7 @@ install_notes: >-
   machines. The README describes recovery from the startup menu through MIDI IN.
 tags: [machines, sampler, fork, flasher, usb-audio]
 versions:
-  - version: main @ ea1f6da
-    date: 2026-10-24
-    url: https://github.com/durchgemacht/model27/commit/ea1f6da
+  - version: main @ eff7b69
+    date: 2026-10-25
+    url: https://github.com/durchgemacht/model27/commit/eff7b69211d30d43c1c1fed15b4fa8e4aee947a6
     notes: No tagged releases; this is the latest commit.

@@ -33,7 +33,7 @@ install_notes: >-
 brick_risk: true
 tags: [sequencer, euclidean, lfo, cv-gate, midi, os]
 versions:
-  - version: main @ 600bcb2
-    date: 2026-10-13
-    url: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-Aleph-Void-Official/commit/600bcb2
-    notes: Commit pinned by the firmware registry.
+  - version: main @ b4b59fc
+    date: 2026-10-25
+    url: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-Aleph-Void-Official/commit/b4b59fc
+    notes: Latest commit, a README change; the firmware registry still pins 600bcb2.

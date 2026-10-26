@@ -31,7 +31,7 @@ install_notes: >-
 brick_risk: true
 tags: [generative, sequencer, chords, drums, synth-engine, emulator]
 versions:
-- version: main @ 559bee1
-  date: 2026-10-23
-  url: https://github.com/pianomansam/fm1-vnl/commit/559bee12171ca7360b5a8c07fa9f6b9975ab22bd
+- version: main @ d015b4f
+  date: 2026-10-26
+  url: https://github.com/pianomansam/fm1-vnl/commit/d015b4fb72600fd23bf0b4f09ffddfc4d4b5b7af
   notes: No tagged releases; this is the latest commit.

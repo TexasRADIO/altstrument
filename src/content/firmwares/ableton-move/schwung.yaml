@@ -47,6 +47,14 @@ video:
   first_party: true
   found_via: https://github.com/charlesvestal/schwung#readme
 versions:
+  - version: v1.8.1
+    date: 2026-10-26
+    url: https://github.com/charlesvestal/schwung/releases/tag/v1.8.1
+    notes: External MIDI notes no longer count as held step buttons, and a refused p-lock now says what is missing.
+  - version: v1.8.0
+    date: 2026-10-26
+    url: https://github.com/charlesvestal/schwung/releases/tag/v1.8.0
+    notes: Adds a My Presets page on the Master FX and Send FX positions, loading of modules into slots from the browser Remote UI, and fifteen new modules in the catalog.
   - version: v1.7.3
     date: 2026-10-04
     url: https://github.com/charlesvestal/schwung/releases/tag/v1.7.3

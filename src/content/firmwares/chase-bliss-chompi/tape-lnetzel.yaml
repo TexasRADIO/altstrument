@@ -1,0 +1,44 @@
+device: chase-bliss-chompi
+name: TAPE (lnetzel)
+summary: Modified TAPE 2.0 with undo for the last overdub, accurate start and end trimming down to about 5 ms, a looper playback volume page, paste-append to the loop and a sample rate reducer effect.
+description: >-
+  The changes keep TAPE's layout. Undo removes the last overdub session after a
+  confirmation press and costs half of the maximum loop length, which drops to
+  about 82 seconds. Trim validation was rewritten to compare frames
+  consistently, so trims to about 5 ms are accepted without clicks, and a host
+  test target covers the arithmetic. A third GAIN encoder page sets looper
+  playback volume. Copying a preset to the looper can append it to the end of
+  the loop, trimmed to its start and end points, and a fourth effects page adds
+  the sample rate reducer from TEMPO. The factory self-test was removed to free
+  SRAM. The author's notes say the trim work had not yet been checked on the
+  device when it was written.
+status: active
+authors:
+  - name: lnetzel
+    url: https://github.com/lnetzel
+source: https://github.com/lnetzel/CHOMPI-lnetzel
+source_status: open
+license: MIT
+license_notes: The LICENSE file names CHOMPI Club as copyright holder; the CHOMPI name and marks are not covered, see TRADEMARKS.md.
+distribution: download
+requires_stock: TAPE 2.0
+install_notes: >-
+  Download the .bin from a release and use it as the only .bin in the SD card
+  root, or add it to the multi-firmware launcher's FIRMWARE folder. The release
+  notes say 1.2 works with launcher 1.1 and later. Keep the original firmware
+  to return to stock.
+brick_risk: false
+tags: [fork, sampler, looper, fx, editor]
+versions:
+  - version: TAPE-lnetzel-1.2
+    date: 2026-10-09
+    url: https://github.com/lnetzel/CHOMPI-lnetzel/releases/tag/TAPE-lnetzel-1.2
+    notes: Pre-release. Adds the sample rate reducer as a fourth effects page.
+  - version: TAPE-lnetzel-1.1
+    date: 2026-10-09
+    url: https://github.com/lnetzel/CHOMPI-lnetzel/releases/tag/TAPE-lnetzel-1.1
+    notes: Adds undo for the last overdub.
+  - version: TAPE-lnetzel-1.0
+    date: 2026-10-06
+    url: https://github.com/lnetzel/CHOMPI-lnetzel/releases/tag/TAPE-lnetzel
+    notes: First release, with the trim fixes; the release tag is TAPE-lnetzel.

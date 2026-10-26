@@ -1,0 +1,40 @@
+device: chase-bliss-chompi
+name: CHOMPI setup page
+kind: tool
+summary: Web page that picks firmwares for the CHOMPI's keys from a community list and writes them, with the launcher and key colours, to the unit over USB MIDI.
+description: >-
+  The page offers each firmware in a registry maintained as one JSON file per
+  firmware. A scheduled job polls the listed GitHub releases (or a version index
+  on an author's own site), downloads each file, checks its size, vector table
+  and entry point, records its SHA-256 and publishes copies for the browser to
+  fetch. A user chooses firmwares for the 15 keys and sends them to the
+  multi-firmware launcher; the page can also update the launcher and set key
+  colours. The registry repository explains how an author adds a firmware by pull
+  request and how an entry can be taken down. The page is served from the docs
+  folder of the author's fork of CHOMPI Club's repository, and the registry and
+  its polling scripts are in a separate repository. Hosted copies of firmware
+  files come from the listed projects.
+status: active
+authors:
+  - name: ugrossek
+    url: https://github.com/ugrossek
+source: https://github.com/ugrossek/CHOMPI/tree/midi-firmware-load
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file names CHOMPI Club as copyright holder. The firmware registry
+  (ugrossek/CHOMPI-firmwares) that feeds the page has no license file, and the
+  firmwares it lists keep their own licenses.
+homepage: https://ugrossek.github.io/CHOMPI/setup/
+distribution: browser-installer
+install_notes: >-
+  Open the page in a browser with Web MIDI support, connect the CHOMPI running
+  the multi-firmware launcher (version 1.1 or later), choose a firmware for each
+  key and write them. The page can also update the launcher from version 1.5.
+brick_risk: false
+tags: [flasher, loader, usb-midi, web, platform]
+versions:
+  - version: midi-firmware-load @ 0501066
+    date: 2026-10-16
+    url: https://github.com/ugrossek/CHOMPI/commit/0501066
+    notes: No tagged releases; this is the latest commit on the branch the page is served from.

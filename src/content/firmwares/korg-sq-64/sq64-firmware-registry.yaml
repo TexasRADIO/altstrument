@@ -21,6 +21,6 @@ homepage: https://sq64-custom-firmware.alephvoid.com/index.json
 distribution: download
 tags: [registry, validation]
 versions:
-  - version: main @ 472dfc2
-    date: 2026-10-13
-    url: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-Repo/commit/472dfc2
+  - version: main @ 1f1eff9
+    date: 2026-10-25
+    url: https://github.com/aleph-void/Korg-SQ-64-Custom-Firmware-Repo/commit/1f1eff9

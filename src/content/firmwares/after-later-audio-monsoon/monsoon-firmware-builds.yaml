@@ -1,0 +1,32 @@
+device: after-later-audio-monsoon
+name: Monsoon firmware builds (Clouds, Parasites, Beat-Repeat)
+summary: Builds of Clouds 1.31, Parasites 2.01 and Kammerl Beat-Repeat 0.42 adapted to the Monsoon's separate blend knobs and CV inputs.
+description: >-
+  Release monsoon_firmwares_v1 of Tom Burns's eurorack fork carries three
+  zipped builds for Monsoon hardware: the Mutable Instruments Clouds 1.31
+  firmware, Parasites 2.01 by Matthias Puech and the Kammerl Beat-Repeat 0.42
+  firmware. The release notes were updated in March 2019, when the hex files in
+  the build_4 zips were changed to include the bootloader. An open issue
+  reports that the feedback range differs from stock Clouds.
+status: dormant
+authors:
+  - name: Tom Burns (boourns)
+    url: https://github.com/boourns
+source: https://github.com/boourns/eurorack
+source_status: open
+license: MIT
+license_notes: >-
+  Inherits from Mutable Instruments; repository README states STM32 code is
+  MIT. The README gives CC-BY-SA 3.0 for hardware.
+distribution: download
+install_notes: >-
+  The release notes say the hex files in the build_4 zips include the
+  bootloader. Parasites and Beat-Repeat document a small risk of bricking on
+  Clouds, and these builds are treated the same way.
+brick_risk: true
+tags: [mutable-instruments-port, granular, fx]
+versions:
+  - version: monsoon_firmwares_v1
+    date: 2018-11-07
+    url: https://github.com/boourns/eurorack/releases/tag/monsoon_firmwares_v1
+    notes: Stock Clouds v1.31, Parasites v2.01 and Jkammerl beat repeat v0.42, each built with Monsoon support.

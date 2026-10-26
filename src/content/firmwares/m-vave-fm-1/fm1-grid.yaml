@@ -39,7 +39,7 @@ image:
   source_url: https://github.com/jasonbot/fm1-grid
   first_party: true
 versions:
-- version: main @ 644c68b
-  date: 2026-10-24
-  url: https://github.com/jasonbot/fm1-grid/commit/644c68b
+- version: main @ 8d7dcbe
+  date: 2026-10-26
+  url: https://github.com/jasonbot/fm1-grid/commit/8d7dcbec4a8a10d2a522fca434f9c42fd11e7e9d
   notes: No tagged releases; this is the latest commit.

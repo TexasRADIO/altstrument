@@ -1,0 +1,35 @@
+name: KICK
+manufacturer: Behringer
+category: groovebox
+tagline: Standalone sampler and sequencer with a 7-inch touchscreen
+description: >-
+  The KICK (BE 0700-AAM) is a standalone music production unit from Behringer
+  with a 7-inch touchscreen, 16 RGB pads in eight banks, a touch strip, a jog
+  wheel and four assignable knobs. According to the manufacturer's repository
+  it has a sampler with sample editing, a step sequencer and looper, more than
+  300 built-in effects and a camera for gesture control. It has MIDI in and out,
+  four CV/gate jacks, USB-C and USB-A ports, stereo audio in and out and an SD
+  card slot.
+platform: NXP i.MX 8M Mini (Arm Cortex-A53), Linux
+links:
+  community:
+    - label: Music Tribe Open Source organisation
+      url: https://github.com/MusicTribeOpenSource
+    - label: KICK source repository
+      url: https://github.com/MusicTribeOpenSource/0700-AAM
+notes: >-
+  This entry rests on Music Tribe's own source repository. No product page on
+  behringer.com was found when it was written, so whether the unit is on sale
+  is not confirmed. The repository's Linux image is a development build whose
+  root account has no password.
+image:
+  src: /images/devices/behringer-kick.webp
+  style: photo
+  alt: Top view of the Behringer KICK, a black unit with a large touchscreen, a four by four grid of backlit pads, a touch strip at left, a jog wheel and buttons at right, and knobs beside the screen
+  width: 1200
+  height: 825
+  credit: Music Tribe
+  license: project photo, published in the official Behringer KICK repository
+  source_url: https://github.com/MusicTribeOpenSource/0700-AAM
+  original_url: https://raw.githubusercontent.com/MusicTribeOpenSource/0700-AAM/main/docs/images/kick-front.webp
+pinned: [kick-source]

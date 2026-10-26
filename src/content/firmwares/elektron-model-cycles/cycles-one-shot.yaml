@@ -42,6 +42,10 @@ install_notes: >-
   Elektron Transfer, which would otherwise hold the MIDI port.
 tags: [machines, sampler, filter, samples, web]
 versions:
+  - version: v0.10
+    date: 2026-10-25
+    url: https://github.com/durchgemacht/cycles-one-shot/tree/v0.10
+    notes: Git tag; no GitHub release page. Adds a column beside the waveform showing the pattern, the track and its level.
   - version: v0.9
     date: 2026-10-24
     url: https://github.com/durchgemacht/cycles-one-shot/tree/v0.9

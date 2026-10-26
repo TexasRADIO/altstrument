@@ -1,0 +1,41 @@
+device: arturia-microfreak
+name: microfreak-emu
+kind: tool
+summary: >-
+  Renode harness that boots the MicroFreak's 5.0.0.2084 firmware on a modelled STM32F4, with models of the QSPI, SAI
+  and USB peripherals, preset rendering to WAV and a front-panel interface, plus detailed firmware documentation.
+description: >-
+  Runs a firmware image the user supplies under Renode, with machine description and C# peripheral models for the
+  STM32F4's QUADSPI, USB OTG, DMA and flash and for the audio codec. It can boot through the user's own bootloader
+  dump, answer the synth's SysEx so that microfreak-tools works against it, run a whole USB firmware update, press
+  front-panel buttons and read the display text, and render presets to WAV with a measured model of the analog
+  filter that follows the DAC. The docs cover the processors, flash layout, preset and parameter formats, the SysEx
+  protocol, the Speech engine, the bootloader and the update protocol, and mark which statements were observed and
+  which were inferred. Ghidra scripts and a symbol file support the analysis. The repository contains no Arturia
+  firmware, and its tests use the user's own image. It is the research half of microfreak-tools. The commits are
+  co-authored by Claude.
+status: active
+authors:
+  - name: Greg Bryant
+    url: https://github.com/gbryant
+source: https://github.com/gbryant/microfreak-emu
+source_status: open
+license: Apache-2.0
+license_notes: >-
+  The LICENSE file is Apache-2.0 for the project's own code. The documentation describes Arturia's firmware by
+  addresses, layouts and behaviour without reproducing it.
+distribution: source-only
+requires_stock: 5.0.0.2084
+install_notes: >-
+  Needs Renode, Python with uv, and a clone of microfreak-tools next to this repository, because the tests use it.
+  Copy Arturia's official 5.0.0.2084 .mff into data/firmware/, then run uv run mfemu check and uv run mfemu boot.
+  Presets, samples and wavetables come from the user's own MIDI Control Center exports or from the instrument. The
+  addresses in the docs fit 5.0.0.2084 and may not fit another build. It runs only on the computer and does not
+  write to the instrument.
+brick_risk: false
+tags: [emulator, research, sysex, python]
+versions:
+  - version: v0.1.0
+    date: 2026-10-25
+    url: https://github.com/gbryant/microfreak-emu/tree/v0.1.0
+    notes: Git tag; no GitHub release page.

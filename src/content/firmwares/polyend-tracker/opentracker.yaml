@@ -44,6 +44,10 @@ image:
   source_url: https://github.com/sandlbn/polyend-tracker-re
   first_party: true
 versions:
+  - version: "2.2.2"
+    date: 2026-10-26
+    url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/2.2.2
+    notes: Opens the instrument under the pattern cursor from the module keys, speeds up Sample Editor effects, exports at 44.1 kHz, and fixes long names in the Sample Loader, the pop at power-on, the power button and a firmware update image that could leave old bytes behind.
   - version: "2.2.1"
     date: 2026-10-24
     url: https://github.com/sandlbn/polyend-tracker-re/releases/tag/2.2.1

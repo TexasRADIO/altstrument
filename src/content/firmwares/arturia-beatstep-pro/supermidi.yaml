@@ -1,0 +1,39 @@
+device: arturia-beatstep-pro
+name: superMIDI
+summary: >-
+  Firmware patch for the BeatStep Pro's 2.0.1.6 firmware that gives each pair of knobs in controller mode four
+  switchable profiles and a Shift layer, with a browser editor and settings saved in the unit.
+description: >-
+  Adds profile bits set by Shift and a step button, so knob n and knob n+8 each get four profiles, and a Shift layer
+  that sends a separate message. For each knob and profile the CC number, MIDI channel, range, absolute or relative
+  mode and acceleration can be overridden, and anything left on stock follows the setup made in MIDI Control Center.
+  Each profile keeps its own value. A single HTML page edits the sets over Web MIDI using Control Change messages on
+  channel 16, without SysEx, and the settings are written to a flash page outside the update image so they survive
+  power-off and firmware updates. The patch is built from Arturia's own 2.0.1.6 update file with the tooling of the
+  separate bstp_firmware_explore project, and the addresses fit only that version. The author checked profile
+  switching, per-profile CC, the Shift layer, the editor and saving on one unit; the other overrides are covered by
+  unit tests with less hands-on testing. The repository has no Arturia material.
+status: active
+authors:
+  - name: superMIDI
+    url: https://github.com/superMIDI
+source: https://github.com/superMIDI/superMIDI
+source_status: open
+license: MIT
+license_notes: The LICENSE file names "the superMIDI contributors" as the copyright holder and covers the repository only.
+distribution: patch-your-own
+requires_stock: 2.0.1.6
+install_notes: >-
+  Back up all projects with MIDI Control Center first and install Arturia's own 2.0.1.6 file once to confirm the way
+  back works. Then use Python 3 and a checkout of the bstp_firmware_explore tooling: install_supermidi.py adds the
+  patch to it, led.py unpacks Arturia's .led update file and build_patch.py writes a patched .led that is installed
+  with MIDI Control Center like any update. To go back, install Arturia's original file the same way. If the unit
+  does not start, hold PLAY, STOP and RECORD while switching it on to reach the updater. The editor page works in
+  Chrome or Edge.
+brick_risk: true
+tags: [patch, controller-mode, midi, editor, web]
+versions:
+  - version: main @ bf66b32
+    date: 2026-10-25
+    url: https://github.com/superMIDI/superMIDI/commit/bf66b32b7a085de57c95b51023821358f6f429d3
+    notes: No tagged releases; this is the latest commit.

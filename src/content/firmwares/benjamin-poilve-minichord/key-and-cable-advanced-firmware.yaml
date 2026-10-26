@@ -27,10 +27,20 @@ install_notes: >-
   Back up all banks to a file in the Key & Cable minicontrol first, because switching between this firmware and the
   stock one formats the preset storage. Then flash minichord-advanced-firmware-<n>.hex from the release page with
   PJRC's Teensy Loader the same way as the stock firmware, pressing the button through the hole in the back with a
-  pin, and restore the backup or reset all banks. To go back, flash the upstream firmware.hex the same way.
+  pin, and restore the backup or reset all banks. From release 115 on, the firmware page in minicontrol's settings
+  can install the newest release instead, without Teensy Loader. To go back, flash the upstream firmware.hex the
+  same way.
 brick_risk: false
 tags: [fork, synth-engine, sampler, drum-machine, looper, mpe, microtonal, chords, midi, open-source, teensy]
 versions:
+  - version: firmware-116
+    date: 2026-10-26
+    url: https://github.com/keyandcableco/minichord/releases/tag/firmware-116
+    notes: Filters a second tine out of the low kalimba recordings and moves the loop points of some kalimba and marimba notes, so chords and held notes stay in tune. No settings change.
+  - version: firmware-115
+    date: 2026-10-25
+    url: https://github.com/keyandcableco/minichord/releases/tag/firmware-115
+    notes: Adds control command 11, which restarts the minichord into Teensy update mode so minicontrol can install firmware without Teensy Loader.
   - version: firmware-114
     date: 2026-10-23
     url: https://github.com/keyandcableco/minichord/releases/tag/firmware-114

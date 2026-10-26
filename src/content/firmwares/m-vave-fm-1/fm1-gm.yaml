@@ -30,6 +30,10 @@ install_notes: >-
 brick_risk: true
 tags: [sampler, sequencer, midi, usb-midi, editor, emulator]
 versions:
+- version: 1.1.0
+  date: 2026-10-25
+  url: https://github.com/jartificer/fm1-gm/releases/tag/v1.1.0
+  notes: Bar view gets a LENGTH knob, a MOVE mode and loop on HOME held; fonts are packed smaller.
 - version: 1.0.3
   date: 2026-10-24
   url: https://github.com/jartificer/fm1-gm/releases/tag/v1.0.3

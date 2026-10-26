@@ -32,6 +32,10 @@ install_notes: >-
 brick_risk: false
 tags: [controller-mode, chords, scales, arpeggiator, midi, editor]
 versions:
+  - version: 1.6.0-beta.1
+    date: 2026-10-25
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v1.6.0-beta.1
+    notes: Adds four optional MIDI effects, harmony, echo, mono melody and chance for the arpeggiator and note repeat.
   - version: 1.5.0-beta.1
     date: 2026-10-24
     url: https://github.com/armandhammer/TBOSS/releases/tag/v1.5.0-beta.1

@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: Norilsk
+summary: >-
+  Generative firmware for dark ambient and noise: three generators drawn at random, each through its own effect lane,
+  with a looper per generator, snapshots with morphing, sessions and no sequencer.
+description: >-
+  Sounds come from a random draw of engine family and seed, and effect chains are drawn from 24 recipes that can be
+  steered toward an abrasive or a dark path. Three generators share four voices, with a DISINTEGRATOR control,
+  latching, 23 scales, a master delay, plate reverb and drive. Each generator has Tonitor's looper. Sixteen
+  snapshots can be morphed over up to 30 seconds, and 64 session slots are kept in flash. Notes can come from the keys or
+  USB MIDI, and the FM-1 is also a USB audio interface. A LOAD page shows how busy each core is. A browser page
+  backs up and restores sessions. It was called Molecular until build 17, reuses code from Tonitor and Bigorna, and
+  is built on Felucca and SLOOP's hardware layer. Releases are numbered builds.
+status: active
+authors:
+- name: Nuno Zimas
+  url: https://github.com/nzimas
+source: https://github.com/nzimas/norilsk
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The firmware and the browser installer and backup scripts are GPL-3.0-only (LICENSING.md). The six-operator FM
+  core is msfa under Apache-2.0, and the website and logo are MIT. Fonts and ported code keep their own licences,
+  which LICENSING.md lists.
+homepage: https://nzimas.github.io/norilsk/
+distribution: browser-installer
+install_notes: >-
+  Browser installer in desktop Chrome, Edge or Opera over USB; it installs over M-VAVE's firmware, Felucca, SLOOP,
+  Tonitor or an earlier Norilsk. Sessions are written only to blank flash or to Norilsk's own retired sessions, but
+  another firmware installed later may erase them, so use the backup page first. Hold OCT- while switching on for
+  rescue mode, then install again; holding OCT- and OCT+ for 5 seconds starts the chip's own updater. To build,
+  run setup.sh and build.sh or install.sh.
+brick_risk: true
+tags: [synth-engine, looper, granular, fx, reverb, fm, generative, usb-audio, performance, ui]
+image:
+  url: https://raw.githubusercontent.com/nzimas/norilsk/main/docs/assets/screens/playing.png
+  alt: "Norilsk main screen: a load percentage and battery at the top, three effect-lane plates and three generator buttons numbered 1 to 3, generator 2 framed in white"
+  credit: Nuno Zimas
+  source_url: https://nzimas.github.io/norilsk/screens.html
+  first_party: true
+versions:
+- version: main @ 9cfe946
+  date: 2026-10-26
+  url: https://github.com/nzimas/norilsk/commit/9cfe946e553b605fc2f08563c2004e23a0f320a6
+  notes: No tagged releases; this is the latest commit. The changelog and installer name build 40 as the newest.

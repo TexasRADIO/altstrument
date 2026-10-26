@@ -1,0 +1,65 @@
+device: chase-bliss-chompi
+name: CHOMPI Multi-Firmware Launcher
+summary: Launcher firmware that keeps several CHOMPI firmwares on one SD card, lights one key per firmware in its own colour, and installs new firmware over USB MIDI; the card image also includes USB storage mode.
+description: >-
+  The launcher is the only .bin in the card root. At power-on it lights a key for
+  each file in the FIRMWARE folder, and pressing a key starts that firmware;
+  switching the unit off and on returns to the picker. To let the stock TAPE,
+  TEMPO and WAVE firmwares share a card, they were patched to keep their samples
+  and settings in their own folders. The card image also carries a USB storage
+  firmware that makes the SD card appear as a drive. Later releases add firmware
+  installation over USB MIDI, a setup page that writes a whole card from a
+  computer, and per-key colours. The README says nothing is written to the
+  processor's internal flash and that the Daisy's ROM DFU mode can recover a
+  unit. The project credits several contributors and is unofficial.
+status: active
+authors:
+  - name: hiwatts
+    url: https://github.com/sfaber02
+  - name: ugrossek
+    url: https://github.com/ugrossek
+  - name: lnetzel
+    url: https://github.com/lnetzel
+  - name: ZUHcYa
+    url: https://github.com/ZUHcYa
+source: https://github.com/sfaber02/CHOMPI-MULTI-FIRMWARE
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file names CHOMPI Club as copyright holder; the CHOMPI name and
+  marks are not covered, see TRADEMARKS.md. The card image includes CHOMPI Club's
+  own TAPE, TEMPO and WAVE builds, which that company publishes under MIT.
+distribution: download
+requires_stock: TAPE 2.0
+install_notes: >-
+  Format a card as FAT32 (32 GB or smaller), copy the contents of the release's
+  card folder to the root and power on; the bootloader installs the launcher on
+  first boot. Units already on launcher 1.1 or later can be updated from the
+  setup page or by copying the new CHOMPI.bin. Back up an existing card first.
+  Putting a stock card back returns the unit to normal. The firmware at the card
+  root must be the only .bin there.
+brick_risk: false
+tags: [launcher, loader, flasher, usb-midi, os, usb-audio, platform]
+versions:
+  - version: launcher-v1.6
+    date: 2026-10-15
+    url: https://github.com/sfaber02/CHOMPI-MULTI-FIRMWARE/releases/tag/launcher-v1.6
+    notes: Adds per-key colours and USB MIDI commands for them.
+  - version: launcher-v1.5
+    date: 2026-10-10
+    url: https://github.com/sfaber02/CHOMPI-MULTI-FIRMWARE/releases/tag/launcher-v1.5
+    notes: Adds whole-card setup from the setup page.
+  - version: launcher-v1.3
+    date: 2026-10-04
+    url: https://github.com/sfaber02/CHOMPI-MULTI-FIRMWARE/releases/tag/launcher-v1.3
+  - version: launcher-v1.2
+    date: 2026-10-04
+    url: https://github.com/sfaber02/CHOMPI-MULTI-FIRMWARE/releases/tag/launcher-v1.2
+  - version: launcher-v1.1
+    date: 2026-10-02
+    url: https://github.com/sfaber02/CHOMPI-MULTI-FIRMWARE/releases/tag/launcher-v1.1
+    notes: Adds USB storage and firmware install over USB MIDI.
+  - version: launcher-v1.0
+    date: 2026-10-01
+    url: https://github.com/sfaber02/CHOMPI-MULTI-FIRMWARE/releases/tag/launcher-v1.0
+    notes: First release, with TAPE, TEMPO and WAVE on one card.

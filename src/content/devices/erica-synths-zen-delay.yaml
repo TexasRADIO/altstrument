@@ -1,0 +1,31 @@
+name: Zen Delay
+manufacturer: Erica Synths
+category: pedal
+tagline: Stereo delay with a multimode filter and valve overdrive, made by Erica Synths with Ninja Tune
+description: >-
+  The Zen Delay is a stereo delay effect that Erica Synths made together with the record label Ninja Tune. It has delay
+  times from 1 to 5000 ms, with divisions of a tapped or MIDI clock tempo from 1/8 to x8, five delay modes, and a
+  multimode filter and a valve overdrive stage after the delay. It takes stereo audio, a control voltage input and a
+  MIDI input, and it is controlled by knobs, a tap button and a bypass switch.
+stock_firmware: 1.1.0 (2020-06-18)
+links:
+  manufacturer: https://www.ericasynths.lv/zen-delay-554/
+  community:
+    - label: Erica Synths support
+      url: https://www.ericasynths.lv/support/
+notes: >-
+  Erica Synths publishes firmware updates as audio files that are played into the left input while the unit is
+  powered on in update mode with the TAP button held, and units ordered from 2020 onwards already run the latest
+  version. The mod listed here patches a copy of Erica Synths' official 1.1.0 update file that the user downloads,
+  and Erica Synths' own file restores the stock firmware. Erica Synths does not support modified firmware.
+related: []
+image:
+  src: /images/devices/erica-synths-zen-delay.webp
+  style: photo
+  alt: Top view of the black Zen Delay, with a valve under a metal bar at the centre, six large knobs, and a tap button, input level knob and lit bypass button along the bottom
+  width: 1200
+  height: 1200
+  credit: Erica Synths
+  license: manufacturer product image
+  source_url: https://www.ericasynths.lv/zen-delay-554/
+  original_url: https://www.ericasynths.lv/media/catalog/product/Z/e/Zen-Delay-1_vZKtwtm_3.png

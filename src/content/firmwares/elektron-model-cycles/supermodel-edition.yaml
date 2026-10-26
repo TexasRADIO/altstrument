@@ -35,7 +35,7 @@ install_notes: >-
   returns to stock.
 tags: [machines, drums, sampler, sequencer, lfo, midi, fx]
 versions:
-  - version: main @ ea8752e
-    date: 2026-10-25
-    url: https://github.com/AveyCole/Modded-Cycles/commit/ea8752e
+  - version: main @ 5c5d08e
+    date: 2026-10-26
+    url: https://github.com/AveyCole/Modded-Cycles/commit/5c5d08e783792aa4fc95af69cc1f0ffb743fa0dd
     notes: No tagged releases; this is the latest commit.

@@ -35,6 +35,14 @@ image:
   source_url: https://github.com/fvalente/GammaWave-FM1
   first_party: true
 versions:
+- version: v1.2-GW
+  date: 2026-10-25
+  url: https://github.com/fvalente/GammaWave-FM1/releases/tag/v1.2-GW
+  notes: Adds 21 pad, string and keys presets and a built-in FM6 bank called GW-1 KEYS.
+- version: v1.1.1-GW
+  date: 2026-10-25
+  url: https://github.com/fvalente/GammaWave-FM1/releases/tag/v1.1.1-GW
+  notes: Shows which knobs carry recorded automation and adds a menu choice for what SELECT does on HOME.
 - version: v1.1-GW
   date: 2026-10-24
   url: https://github.com/fvalente/GammaWave-FM1/releases/tag/v1.1-GW

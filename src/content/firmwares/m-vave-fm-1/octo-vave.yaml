@@ -44,7 +44,7 @@ image:
   source_url: https://github.com/amacias/octo-vave
   first_party: true
 versions:
-- version: main @ 2830808
-  date: 2026-10-25
-  url: https://github.com/amacias/octo-vave/commit/2830808
+- version: main @ 502b8d5
+  date: 2026-10-26
+  url: https://github.com/amacias/octo-vave/commit/502b8d5aae30ca5497e36cadf11f729b0627da40
   notes: No tagged releases; this is the latest commit.

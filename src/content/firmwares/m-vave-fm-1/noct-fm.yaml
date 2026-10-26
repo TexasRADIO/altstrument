@@ -1,16 +1,20 @@
 device: m-vave-fm-1
 name: NOCT FM
 summary: >-
-  MIDI controller firmware for the FM-1 with a pixel night-sky screen and mapped profiles for FL Studio and Ableton
-  Live, switched from the PRESETS knob, with DAW scripts for both.
+  MIDI controller firmware for the FM-1 with an animated pixel-world screen and DAW control for FL Studio and Ableton
+  Live, plus pages for chords, a phrase generator, rhythm, an arpeggiator and clock sync, with DAW scripts for both.
 description: >-
-  Modifies CTL-1. Four banks of four knobs send fixed CCs on MIDI channel 16 for mixer, send and device or macro
-  control, while notes go out on a chosen keyboard channel, with transport, record, panic, sustain, modulation,
-  aftertouch and an optional built-in General MIDI voice. Feedback from the DAW updates the knob values on
-  screen. The repository holds an FL Studio MIDI script and an Ableton Live remote script, a browser installer that
-  checks the package size, SHA-256 and identity before writing, and a Windows simulator. The README is in Russian and
-  calls the build an engineering alpha: the USB package builds in GitHub Actions, but nothing has been tested on a
-  real FM-1 or inside the DAWs, and the Bluetooth build is unverified. It cannot import FM-1 factory projects.
+  Modifies CTL-1. It is one permanent MIDI preset (the README calls the project NOCT / AFTERGLOW 0.6.0). The HOME page
+  sends fixed CCs 20 to 23 on MIDI channel 16 for volume, pan and two further DAW controls, with transport, record, panic,
+  sustain and modulation, and notes go out on channel 1 from a chromatic keyboard. The PRESETS knob steps through pages
+  for chords, a four-bar melody and chord generator, a rhythm generator, an arpeggiator and clock sync (automatic,
+  internal or external). Feedback from the DAW updates knob values and tempo on screen, and the animated scenes react
+  to the notes sent. The synth, USB audio and Bluetooth are off in this build. The repository holds an FL Studio MIDI
+  script and an Ableton Live remote script, a browser installer that checks the package size, SHA-256 and identity before
+  writing, and an emulator that runs the firmware's C code in a browser page served from a local Python script. The README
+  is in Russian and calls the build experimental: the USB package builds in GitHub Actions, and it says the simulator
+  checks do not replace testing USB, flash and DAW audio on a real FM-1, and that the full hardware cycle with two DAWs is
+  unverified. It cannot import FM-1 factory projects.
 status: active
 authors:
 - name: Joolo09
@@ -30,17 +34,17 @@ install_notes: >-
   same page has the DAW scripts. Or build on Linux x86-64 with JieLi's toolchain and the AC79 SDK (sh build.sh
   --no-ble for the USB build). The package uses CTL-1's storage layout, so other firmware's data is not kept. The
   author asks you to save your data and check the recovery steps for your stock version before installing, and
-  has not flashed a unit.
+  says the full hardware cycle is unverified.
 brick_risk: true
-tags: [controller-mode, midi, usb-midi, daw]
+tags: [controller-mode, midi, usb-midi, daw, arpeggiator, generative, emulator]
 image:
   url: https://raw.githubusercontent.com/Joolo09/noct-fm/main/preview/noct-fm.gif
-  alt: "NOCT FM home screen in FL Studio mode: pixel carrot logo, amber SESSION 01 label, four Mixer knob tiles for level, pan, width and channel volume over a dark perspective grid"
+  alt: "NOCT AFTERGLOW DAW page: tabs DAW, CHRD, GEN, ARP and SYNC, a ringed-planet logo, FL STUDIO and LIVE choices, and four knob tiles for volume, pan, CC 22 and CC 23"
   credit: Joolo09
   source_url: https://github.com/Joolo09/noct-fm
   first_party: true
 versions:
-- version: main @ cd05da6
-  date: 2026-10-25
-  url: https://github.com/Joolo09/noct-fm/commit/cd05da6
-  notes: No tagged releases; this is the latest commit.
+- version: main @ ae3facb
+  date: 2026-10-26
+  url: https://github.com/Joolo09/noct-fm/commit/ae3facbf19fdcc24f2d9cefa3ab2e4e34444cc1c
+  notes: No tagged releases; this is the latest commit. The README names version 0.6.0.

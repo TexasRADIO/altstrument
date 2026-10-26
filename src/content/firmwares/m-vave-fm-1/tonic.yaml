@@ -1,0 +1,50 @@
+device: m-vave-fm-1
+name: TONIC
+summary: >-
+  Digitone-style FM groovebox: four tracks of 64 steps with parameter locks, FM, virtual analogue and drum-kit engines on
+  twelve voices, chords, euclidean patterns, song mode, and a browser emulator and installer.
+description: >-
+  Each sound uses a four-operator FM engine with the Digitone's eight algorithms, a two-oscillator virtual analogue
+  engine, or a kit of eight synthesised drums chosen from 31 models. Voices have filters, an insert effect, two LFOs and a
+  modulation envelope, with chorus, delay, reverb, a compressor, a DJ filter and sidechain ducking on the master side. The
+  sequencer has trig conditions, micro timing, ratchets, per-track length and speed, an arpeggiator, 22 chords with
+  scale snapping, a euclidean generator, chains and a 32-row song mode. MIDI covers USB, TRS, clock and MIDI tracks.
+  Projects are saved to flash, with 76 factory sounds. It is built on fm1-base by Charles Vestal and felucca-bsp by Leo Kuroshita, uses a
+  fork of fm1-base with one extra RAM section, and was modelled on Elektron's Digitone without Elektron code. The 0.12
+  release notes said it had not been tested on a physical FM-1; later commits and the install guide say it has been installed and runs,
+  while the validation notes list device CPU headroom and USB behaviour as unmeasured.
+status: active
+authors:
+- name: RahelPuest
+  url: https://github.com/RahelPuest
+source: https://github.com/RahelPuest/tonic-fm1
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  Stated in LICENSING.md and the SPDX headers: MPL-2.0 for the app and documentation. fm1-base and felucca-bsp are
+  MPL-2.0 submodules. The JieLi AC79 SDK files the package needs are Apache-2.0 and are read from your own SDK checkout
+  at build time. The fonts are SIL OFL 1.1. No Elektron material is included. The repository holds no stock firmware image.
+homepage: https://rahelpuest.github.io/tonic-fm1/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or base/tools/fm1_install.py from a terminal; every release is also in
+  release/ with checksums. Take a full flash backup first, because saved projects share the flash area of the stock
+  patches and going back to stock does not restore them. 0.12 saves projects in a new format that older versions
+  cannot read. The installer's back-to-stock option needs M-VAVE's V15 package, which you supply.
+brick_risk: true
+tags: [groovebox, synth-engine, fm, virtual-analog, drum-machine, sequencer, parameter-locks, arpeggiator, chords, euclidean, fx, midi, usb-midi, emulator, editor]
+image:
+  url: https://raw.githubusercontent.com/RahelPuest/tonic-fm1/main/docs/screens.png
+  alt: "Six TONIC screens: home with four tracks, a 909 drum kit, a piano roll, a euclidean kit page, a TRIAD chord page and a ducking curve"
+  credit: RahelPuest
+  source_url: https://github.com/RahelPuest/tonic-fm1
+  first_party: true
+versions:
+- version: 0.12.1
+  date: 2026-10-25
+  url: https://github.com/RahelPuest/tonic-fm1/tree/v0.12.1
+  notes: Git tag; no GitHub release page. Gives each drum pad its own page and the scale its own page, and draws the modulation envelope.
+- version: '0.12'
+  date: 2026-10-25
+  url: https://github.com/RahelPuest/tonic-fm1/releases/tag/v0.12
+  notes: Adds per-pad drum controls, a per-voice insert effect, a modulation envelope and a scale per sound. Saves in a new format.

@@ -1,0 +1,42 @@
+device: noise-engineering-legio
+name: AmpSim for Legio
+summary: >-
+  Guitar amp simulator for Legio that runs a small Neural Amp Modeler capture, with tone and output controls, a stereo
+  chorus with clock and depth CV, and an auto-swell.
+description: >-
+  Runs the NeuralAmpModelerCore engine, adapted for the Legio's STM32H750, on the RiffSmith Clean capture, which is
+  embedded when the firmware is built. The top encoder sets input gain and toggles bypass, the middle knob is tone and
+  the bottom knob is output volume. A three-position toggle selects the chorus, which has its own depth CV and takes a
+  clock pulse at eight per modulation cycle, and another toggle selects an auto-swell of 0.9 or 1.8 seconds. Left input
+  feeds the mono amp model and the chorus makes a stereo output. Only one 48 kHz WaveNet layout, called A2-Lite in the
+  README, is supported, and the repository includes a checker and a guide for building with another capture; models are
+  not loaded at run time. The README says it was built with AI-assisted coding, that its author tested it on one
+  Legio, and that it is independent of Noise Engineering.
+status: active
+authors:
+  - name: adamcharleswilsonmusic-code
+    url: https://github.com/adamcharleswilsonmusic-code
+source: https://github.com/adamcharleswilsonmusic-code/ampsim-for-legio
+source_status: open
+license: MIT
+license_notes: >-
+  GitHub detects no license because the file is named LICENSE.original-contributions.txt. It is an MIT license that
+  covers only the author's own application, control, chorus, swell and metering code, and says it is not a blanket
+  relicense of the whole firmware. Neural Amp Modeler Core, the RiffSmith Clean capture, libDaisy and other
+  dependencies are MIT, Apache-2.0, BSD or MPL-2.0 under their own notices in licenses/ and THIRD_PARTY_NOTICES.txt,
+  and ST's USB component is limited to ST microcontrollers. The repository also holds a built firmware image and a
+  release zip, which contain no Noise Engineering firmware.
+distribution: download
+install_notes: >-
+  Hold BOOT, press and release RESET, then release BOOT to start the STM32 ROM USB loader, and write the application
+  image to internal flash with dfu-util as described in CUSTOM_CAPTURE.md. Keep a copy of the firmware for recovery,
+  never change option bytes or flash protection, and keep monitoring muted and OUTPUT low at first. Leave the left
+  chorus-depth CV jack unplugged at startup for its zero calibration. This path does not use Noise Engineering's
+  firmware swap page.
+brick_risk: false
+tags: [fx, distortion, chorus, amp-sim, open-source]
+versions:
+  - version: main @ bdd21d4
+    date: 2026-10-25
+    url: https://github.com/adamcharleswilsonmusic-code/ampsim-for-legio/commit/bdd21d49bcbaf91d467a4e2584bcc1df2b531231
+    notes: No tagged releases; this is the latest commit.

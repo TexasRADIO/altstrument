@@ -1,15 +1,17 @@
 device: m-vave-fm-1
+also_devices: [m-vave-smk-37]
 name: Frodhes
 summary: >-
-  Physically modelled Fender Rhodes electric piano: hammer, tine, tonebar and pickup computed live, with four instrument types, a compressor-to-reverb effects chain, arpeggiator, chord mode and a pattern recorder.
+  Physically modelled electric piano, vibraphone and marimba computed live with no samples: four Rhodes types, a compressor-to-reverb effects chain, arpeggiator, chord mode and a pattern recorder.
 description: >-
-  Four instrument types (Stage 77, Suitcase, Early Felt, Bell Dyno) are adjustable in tone, bark, bell, hammer,
+  The Rhodes has four types (Stage 77, Suitcase, Early Felt, Bell Dyno), adjustable in tone, bark, bell, hammer,
   decay and noise. The effects are compressor, drive, tremolo or wah, phaser, chorus, delay and reverb, with a
   PERFORM page that puts effect amounts on the four knobs. Also included are tap tempo with MIDI clock sync,
   scales, chord mode, an arpeggiator, a 1 to 16 bar pattern recorder with quantise and overdub, a sustain pedal,
   12 factory and 16 user presets, and MIDI over USB and TRS. The README describes it as built on Dinghy and the Felucca
   platform layer, and the project site has a browser emulator and a manual. Hardware test scripts are
-  in the repository.
+  in the repository. Since 0.9.5 each release also carries experimental builds for the SMK-37 Pro, Elite and MKE
+  from the same code.
 status: active
 authors:
 - name: Leonardo Mirabal
@@ -34,6 +36,10 @@ image:
   source_url: https://github.com/leonardoMirabal/frodhes
   first_party: true
 versions:
+- version: 0.9.5
+  date: 2026-10-25
+  url: https://github.com/leonardoMirabal/frodhes/releases/tag/v0.9.5
+  notes: Ten voices on every instrument, a livelier Rhodes, release velocity, pitch bend, more drive types and a tape delay. The release also attaches experimental SMK-37 packages.
 - version: 0.9.4
   date: 2026-10-20
   url: https://github.com/leonardoMirabal/frodhes/releases/tag/v0.9.4

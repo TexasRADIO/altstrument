@@ -1,0 +1,49 @@
+device: chase-bliss-chompi
+name: SING
+summary: Firmware that plays your voice, from the microphone or line input, on the notes of the keys, with robot, human and toy characters, a freeze, a time wheel and latching chords that follow your pitch.
+description: >-
+  SING began as a harmonizer in which each held key adds a copy of the voice
+  shifted by its distance from middle C, and beta 2 reworked it so the keys play
+  their own notes. Three characters sit on the play button: a vocoder-style
+  robot that works on speech and noise, the real voice moved onto the keys'
+  notes, and a toy voice with a talking-toy grain. The loop key freezes the
+  sound and the big wheel scrubs back through about two seconds. With the toggle
+  switch latched, held chords follow the sung pitch. Effects start off, and
+  only the harmonies are heard, not the dry voice. It builds on the pitch
+  shifter from the same author's TAPE experiment. The release notes say it was
+  written with Claude and tested on one CHOMPI, and recommend headphones and an
+  external microphone because the built-in microphone picks up key clicks.
+status: active
+authors:
+  - name: ugrossek
+    url: https://github.com/ugrossek
+source: https://github.com/ugrossek/CHOMPI/tree/sing
+source_status: open
+license: MIT
+license_notes: The LICENSE file names CHOMPI Club as copyright holder; the CHOMPI name and marks are not covered, see TRADEMARKS.md.
+distribution: download
+requires_stock: TAPE 2.0
+install_notes: >-
+  Send the .bin to a free slot of the multi-firmware launcher from the setup
+  page, or put it in the card root as the only .bin. Use headphones. The
+  releases are marked beta and the release notes say the build was tested on one
+  unit.
+brick_risk: false
+tags: [fork, voice, vocoder, harmonizer, fx, performance, looper]
+versions:
+  - version: sing-beta-3
+    date: 2026-10-15
+    url: https://github.com/ugrossek/CHOMPI/releases/tag/sing-beta-3
+    notes: Pre-release. Takes the left input channel only, which fixes a very quiet voice on line input.
+  - version: sing-beta-2
+    date: 2026-10-06
+    url: https://github.com/ugrossek/CHOMPI/releases/tag/sing-beta-2
+    notes: Pre-release. Adds the robot, human and toy characters, freeze and the time wheel.
+  - version: sing-beta
+    date: 2026-10-03
+    url: https://github.com/ugrossek/CHOMPI/releases/tag/sing-beta
+    notes: Live harmonizer with latching chords.
+  - version: sing-prototype-v1
+    date: 2026-10-03
+    url: https://github.com/ugrossek/CHOMPI/releases/tag/sing-prototype-v1
+    notes: Pre-release. First prototype of the harmonizer.

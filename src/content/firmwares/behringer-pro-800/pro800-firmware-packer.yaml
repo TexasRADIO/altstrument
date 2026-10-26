@@ -1,0 +1,39 @@
+device: behringer-pro-800
+name: PRO800 Firmware Packer
+kind: tool
+summary: Behringer's own command-line tool that packs a binary firmware image into the SysEx update file the PRO-800's fixed bootloader accepts, so custom firmware can be loaded over MIDI.
+description: >-
+  Music Tribe's repository publishes the tool as prebuilt executables for
+  Windows, macOS (arm64) and Linux, with no source. The README gives the
+  memory layout for custom images (STM32F446, reset handler linked at
+  0x08010000, up to 128 kB of flash, 128 kB RAM), the command syntax, two ways
+  to enter update mode and a note on recovering a failed update. The repository
+  also contains the PRO-800 main board schematic. A disclaimer file calls it an
+  official Music Tribe tool. It packs firmware you supply and includes no
+  firmware itself, and no custom firmware for the PRO-800 is listed here yet.
+status: active
+authors:
+  - name: Music Tribe
+    url: https://github.com/MusicTribeOpenSource
+source: https://github.com/MusicTribeOpenSource/PRO800-Firmware-Packer
+source_status: binary-only
+license: proprietary
+license_notes: >-
+  The repository's LICENSE file is the AGPL-3.0 text, but only compiled tools
+  are published, and DISCLAIMER.txt states "All rights reserved" with a
+  no-warranty clause. Recorded as proprietary because the statements conflict.
+distribution: download
+install_notes: >-
+  Run PRO800_update_gen with your binary firmware file, an output name ending in
+  .syx and a three-digit version. Put the unit in update mode by holding buttons
+  0 and 7 at power-up, or by sending a SysEx command, then send the file with a
+  SysEx tool. The README says the bootloader is write-protected and a failed
+  update leaves the unit in update mode, recoverable through SynthTribe. Do not
+  unlock the flash with a JTAG or SWD probe, which erases it and bricks the unit.
+brick_risk: true
+tags: [official, flasher, sysex, platform, midi]
+versions:
+  - version: main @ c845054
+    date: 2026-10-23
+    url: https://github.com/MusicTribeOpenSource/PRO800-Firmware-Packer/commit/c845054
+    notes: No tagged releases; this is the latest commit.

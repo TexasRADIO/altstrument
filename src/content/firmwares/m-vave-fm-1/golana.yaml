@@ -10,7 +10,7 @@ description: >-
   patch routings, a 16-step sequencer and an arpeggiator are saved with each of 32 programs. Modulation FX,
   delay and reverb can be reordered. The pages draw the wave, filter curve, envelopes and LFOs from the
   current values, and it has a USB rescue mode entered by holding OCT- at power-on. Release 1.1 added four
-  arpeggiator types and 1.2 added a sub oscillator, a drift control and eight more factory sounds. A browser
+  arpeggiator types, 1.2 added a sub oscillator, a drift control and eight more factory sounds, and 1.3 added scale lock, a chord mode and mod wheel routing. A browser
   emulator and installer are hosted on the project site.
 status: active
 authors:
@@ -30,6 +30,10 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, sequencer, fx, ui]
 versions:
+- version: '1.3'
+  date: 2026-10-26
+  url: https://github.com/Gadlele/Golana/releases/tag/golana-v1.3
+  notes: Adds scale lock, a chord mode, mod wheel routing, new waves and a SUPERSAW factory sound; the home scope gets a trail.
 - version: '1.2'
   date: 2026-10-20
   url: https://github.com/Gadlele/Golana/releases/tag/golana-v1.2

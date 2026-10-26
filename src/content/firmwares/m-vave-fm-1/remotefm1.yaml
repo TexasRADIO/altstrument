@@ -30,7 +30,7 @@ install_notes: >-
 brick_risk: true
 tags: [platform, emulator, usb-midi, research]
 versions:
-- version: main @ ee7bdc5
-  date: 2026-10-22
-  url: https://github.com/Quixotic7/RemoteFM1/commit/ee7bdc520afd2f23373935e39311f3a1a078dfeb
+- version: main @ 8113af4
+  date: 2026-10-26
+  url: https://github.com/Quixotic7/RemoteFM1/commit/8113af4598caa5da2aa0cfbc9e7c015eba2a33ca
   notes: No tagged releases; this is the latest commit. The repository holds the 0.1.1 package.

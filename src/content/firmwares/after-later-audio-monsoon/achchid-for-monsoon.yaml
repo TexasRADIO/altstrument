@@ -1,4 +1,4 @@
-device: mutable-instruments-clouds
+device: after-later-audio-monsoon
 name: AChChid for Monsoon
 summary: Firmware for the After Later Audio Monsoon, a Clouds clone, that turns it into a TB-303-style voice with the Braids macro oscillator as its sole sound source, run through an Open303 filter and envelope.
 description: >-

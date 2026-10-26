@@ -1,7 +1,7 @@
 device: m-vave-fm-1
 name: Del Rio
 summary: >-
-  Hand-percussion rhythm box built on fm1-base: djembe, cajon, udu, clapsticks, maracas and triangle, 31
+  Hand-percussion rhythm box built on fm1-base: djembe, cajon, udu, clapsticks, maracas and triangle, 39
   rhythms, a berimbau with capoeira toques, and tanpura and shruti-box drones.
 description: >-
   Made for accompanying singing in a circle. The black keys play the instruments' individual strokes with
@@ -36,6 +36,14 @@ image:
   source_url: https://github.com/jsopdebeeck/fm1-delrio
   first_party: true
 versions:
+- version: '0.9'
+  date: 2026-10-25
+  url: https://github.com/jsopdebeeck/fm1-delrio/releases/tag/v0.9
+  notes: Adds a battery indicator, slows the berimbau toques and removes the sitar added in 0.8.
+- version: '0.8'
+  date: 2026-10-25
+  url: https://github.com/jsopdebeeck/fm1-delrio/releases/tag/v0.8
+  notes: Adds a sitar on the FX page, eight more djembe rhythms and four more berimbau toques; saved rhythms and settings from 0.7 reset once.
 - version: '0.7'
   date: 2026-10-23
   url: https://github.com/jsopdebeeck/fm1-delrio/releases/tag/v0.7

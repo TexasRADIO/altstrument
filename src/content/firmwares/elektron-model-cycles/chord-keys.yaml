@@ -15,9 +15,12 @@ source_status: open
 license: unspecified
 license_notes: The author's fork carries no license file. Inside Modded Cycles it is listed in THIRD-PARTY-NOTICES as a contribution of the author; the project license is MIT.
 homepage: https://18nelli18.github.io/Modded-Cycles/
-distribution: browser-installer
+distribution: source-only
 requires_stock: "1.13"
-install_notes: Select Chord Keys in the Modded Cycles flasher with your own OS file.
+install_notes: >-
+  Modded Cycles removed Chord Keys on 2026-10-18 because it conflicted with other changes, and its flasher no
+  longer offers it. The code stays in Modded Cycles' git history and in the author's fork, so it now has to be
+  built from source with your own OS file.
 tags: [chords, scales, performance, ui]
 versions:
   - version: Second version (harmony pads, MIDI chords)

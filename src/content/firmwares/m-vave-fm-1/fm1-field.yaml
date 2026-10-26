@@ -41,7 +41,7 @@ image:
   source_url: https://github.com/AveyCole/FM1-Field
   first_party: true
 versions:
-- version: main @ ef90aef
-  date: 2026-10-25
-  url: https://github.com/AveyCole/FM1-Field/commit/ef90aef
+- version: main @ 475fa10
+  date: 2026-10-26
+  url: https://github.com/AveyCole/FM1-Field/commit/475fa105928491433cfba5a7a9f8ca61cd0b8e25
   notes: No tagged releases; this is the latest commit. The project site offers 0.1.17-alpha.

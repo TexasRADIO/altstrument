@@ -18,7 +18,7 @@ install_notes: >-
   device yet and that device recovery has not been tested on hardware.
 tags: [emulator, research]
 versions:
-  - version: main @ f354932
-    date: 2026-10-25
-    url: https://github.com/ElekLabs/digikit/commit/f354932ebb5302cc52d7d2b70fbc4c4af8925ebb
+  - version: main @ d0a4d76
+    date: 2026-10-26
+    url: https://github.com/ElekLabs/digikit/commit/d0a4d76d533d7181ea5eee548ca68edaa8d49c35
     notes: No tagged releases; this is the latest commit.

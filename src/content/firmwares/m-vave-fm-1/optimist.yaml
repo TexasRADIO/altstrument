@@ -29,6 +29,10 @@ image:
   source_url: https://github.com/w0ts/optimist
   first_party: true
 versions:
+- version: '0.2'
+  date: 2026-10-25
+  url: https://github.com/w0ts/optimist/releases/tag/v0.2
+  notes: Adds Bluetooth audio and Bluetooth MIDI and ten new synth engines, 26 in all; no single flavour holds everything, so the web builder is the way to combine them.
 - version: '0.1'
   date: 2026-10-18
   url: https://github.com/w0ts/optimist/releases/tag/v0.1

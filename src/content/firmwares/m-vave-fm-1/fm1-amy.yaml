@@ -39,7 +39,7 @@ image:
   source_url: https://github.com/dpwe/fm1-amy
   first_party: true
 versions:
-- version: main @ 5244e5e
-  date: 2026-10-22
-  url: https://github.com/dpwe/fm1-amy/commit/5244e5ef51da8f93d18650054031a5732068258a
+- version: main @ 0892a4e
+  date: 2026-10-26
+  url: https://github.com/dpwe/fm1-amy/commit/0892a4e36bf120118fac73458605efdfd4f9bcd5
   notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,46 @@
+device: m-vave-fm-1
+name: TastyWaves
+summary: >-
+  Twelve-voice wavetable synth with two oscillators per voice, a resonant filter, effects chain, arpeggiator and two
+  step sequencers for chords and counterpoint, plus a browser tool for installing and loading your own wavetables.
+description: >-
+  Each voice has two wavetable oscillators with a sub oscillator, noise and a wave-warp control, drawn from 12
+  built-in tables and 8 user slots that take Serum, WaveEdit, Ableton and Surge files. There are two ADSR
+  envelopes, an LFO, a four-slot chain of chorus, flanger, phaser, delay and reverb, and an arpeggiator. The two
+  32-step sequencers share a clock, can play chords per step and have a modulation lane. Eight factory patches and
+  32 user patches are stored on the FM-1, along with both sequences. The FM-1 also appears as a USB audio input.
+  It started as a copy of Dinghy, and the README says it was written with Claude.
+status: active
+authors:
+- name: Mark Weiss
+  url: https://github.com/marksweiss
+source: https://github.com/marksweiss/tastywaves
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in LICENSING.md. The platform is Leo Kuroshita's Felucca with SLOOP's changes, and Dinghy's wiring is
+  zvenson's. The Spleen fonts are BSD-2-Clause, and the JieLi SDK files read at build time are Apache-2.0.
+homepage: https://tastysynth.com
+distribution: browser-installer
+install_notes: >-
+  Install from the web tool at tastysynth.com/tool in Chrome or Edge, or flash the release .fwsc with
+  tools/install_fw.sh. Installing another firmware afterwards erases TastyWaves' patches and user wavetables, and
+  TastyWaves does not read other firmwares' data, so back up first. Holding OCT- while switching on starts the
+  USB rescue.
+brick_risk: true
+tags: [synth-engine, wavetable, oscillator, filter, lfo, fx, arpeggiator, sequencer, chords, editor, emulator, midi, usb-midi, usb-audio]
+image:
+  url: https://raw.githubusercontent.com/marksweiss/tastywaves/main/docs/images/home.png
+  alt: "TastyWaves HOME screen showing cutoff, resonance, attack and release values above a wave drawn as it plays and a bar graph of its harmonics, with patch 001 BRIGHT PAD at the bottom"
+  credit: Mark Weiss
+  source_url: https://github.com/marksweiss/tastywaves
+  first_party: true
+versions:
+- version: 1.0.1
+  date: 2026-10-26
+  url: https://github.com/marksweiss/tastywaves/releases/tag/v1.0.1
+  notes: Gets its own package identity, FM-1_937, which it keeps for every release.
+- version: 1.0.0
+  date: 2026-10-26
+  url: https://github.com/marksweiss/tastywaves/releases/tag/v1.0.0
+  notes: First release.

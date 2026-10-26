@@ -40,6 +40,10 @@ image:
   source_url: https://github.com/jvitkauskas/m-flasher
   first_party: true
 versions:
+- version: 0.6.1
+  date: 2026-10-25
+  url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.6.1
+  notes: Also finds units whose USB MIDI name has no dash, such as FM1_MONITOR, so the DOWNLOAD MODE button works on them.
 - version: 0.6.0
   date: 2026-10-24
   url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.6.0

@@ -1,0 +1,30 @@
+name: PRO-800
+manufacturer: Behringer
+category: eurorack
+tagline: 8-voice analog polysynth in Eurorack format
+description: >-
+  The PRO-800 is an analog eight-voice polyphonic synthesizer from Behringer
+  that follows the Sequential Prophet 600. Each voice has two oscillators and
+  one filter, and the unit adds an arpeggiator, a sequencer, MIDI and memory for
+  400 programs. It is sold in a Eurorack-format housing. Its microcontroller is
+  an STM32F446, and updates reach a fixed bootloader as MIDI SysEx files.
+platform: STM32F446 (Cortex-M4)
+links:
+  manufacturer: https://www.behringer.com/en/products/0718-ABF
+  community:
+    - label: PRO800 Firmware Packer
+      url: https://github.com/MusicTribeOpenSource/PRO800-Firmware-Packer
+notes: >-
+  Behringer's own packer repository warns against unlocking the flash with a
+  JTAG or SWD adapter, which would erase it and brick the unit, and says to use
+  only the SysEx update path. The bootloader is write-protected.
+image:
+  src: /images/devices/behringer-pro-800.webp
+  style: photo
+  alt: Front panel of the Behringer PRO-800, black with wooden end cheeks, with a program display and keypad at left, oscillator, filter, LFO and amplifier knobs across the middle and jacks at right
+  width: 1200
+  height: 430
+  credit: Behringer
+  license: manufacturer product image
+  source_url: https://www.behringer.com/en/products/0718-ABF
+  original_url: https://cdn-media.empowertribe.com/31e7543cce9944248e86a9d12c29f85f/Image_BE_0718-ABF_PRO-800_Top_XL.png

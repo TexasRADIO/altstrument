@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: FM1 Time-Signal Source
+summary: >-
+  Turns the FM-1 into a WWV-style time-signal station for a radio transmitter: second ticks, minute and hour markers,
+  standard tones and a spoken time announcement, with the clock set over USB MIDI.
+description: >-
+  A stripped-down fork of M-VAVE's open firmware (fm1_open) with the instrument, projects, presets and sample
+  bank removed. The station keeps UTC by counting audio frames at a calibrated rate and offsets it to the author's
+  proposed Haida Standard Time, UTC-08:48, for amateur station VA7BFR. Speech comes from a clip bank in 8 kHz ADPCM,
+  uploaded over SysEx, with a collector page for recording clips in another language. The time starts unset at power-on and
+  is set from a computer with tools/station.py or on the panel. The README reports one unit measured against an
+  NTP host and records the audio clock as 7.7 ppm slow. The page's simulator runs the same code in the browser. This is a broadcast
+  utility rather than an instrument, listed because it replaces the firmware of music hardware.
+status: active
+authors:
+- name: rfb
+  url: https://github.com/rfb
+source: https://github.com/rfb/fm1-time-signal-source
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  GitHub detects no licence because the file is LICENSE.md, which is M-VAVE's fm1_open licence unchanged: GPL-3.0-only
+  for the application source with an additional section 7 permission to link the binary FM1 SDK engine, with
+  M-VAVE as the copyright holder. The sdk/ folder carries the same binary SDK parts as fm1_open, under separate
+  terms in THIRD_PARTY.md. The repository's sdk/firmware/FM-1_015.fwsc is M-VAVE's licensed V15 image (blob
+  ce49cc1595b67347c68a3ac7463017f9fa8c19dd, Apache-2.0), and the update page embeds that same image as recovery firmware.
+homepage: https://rfb.github.io/fm1-time-signal-source/
+distribution: browser-installer
+install_notes: >-
+  Open the GitHub Pages update page in Chrome or Edge and flash the build embedded there, or build it on Linux with
+  tools/build_linux.py and the JieLi toolchain (the Windows build is untried). After flashing, sync the clock with
+  tools/station.py. The README advises backing up device data first, and the update page can return the unit to the
+  stock V15 image.
+brick_risk: true
+tags: [time-signal, radio, sequencer, tone, usb-midi, emulator]
+versions:
+- version: tone-source @ 1f9cad0
+  date: 2026-10-25
+  url: https://github.com/rfb/fm1-time-signal-source/commit/1f9cad0d9356768cd5cbbf3765c3b5938d299311
+  notes: No tagged releases; this is the latest commit on the default branch.

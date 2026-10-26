@@ -40,6 +40,14 @@ image:
   source_url: https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox
   first_party: true
 versions:
+  - version: v3.4.0
+    date: 2026-10-26
+    url: https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox/releases/tag/v3.4.0
+    notes: Switches every channel to an equal-power pan law, adds a master soft limiter and dB peak meters, and puts Master Vol and Bypass Vol on the Mixer knobs. Existing performances play about 3 dB louder.
+  - version: v3.3.0
+    date: 2026-10-25
+    url: https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox/releases/tag/v3.3.0
+    notes: Adds a Gain control and sixteen factory presets to the string ensemble, and moves every filter to a trapezoidal state-variable design that cuts CPU use. Built-in Ensemble and Dexed presets load without an SD card.
   - version: v3.2.0
     date: 2026-10-25
     url: https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox/releases/tag/v3.2.0

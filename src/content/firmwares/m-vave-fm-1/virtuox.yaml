@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: VirtuoX
+summary: >-
+  Browser piano coach and DX7-compatible FM synth laid out like the FM-1 panel, with a step sequencer and Web MIDI input;
+  the native FM-1 firmware is planned and not released.
+description: >-
+  The working part is a web app: falling-note piano lessons with scoring, MIDI file import, a six-operator FM player
+  built on the Dexed core with the 128 factory voices of M-VAVE's open V15 release and DX7 SysEx import, six subtractive
+  presets, a 16 to 64 step sequencer and effects. Its panel code comes from JIANT, which is built on Felucca. The
+  README and the site's firmware page say that no flashable package exists, that a native port still needs a C
+  implementation and measurements on a real FM-1, and that the browser's patch-transfer paths for stock V16 and
+  JIANT or Felucca are not yet checked on hardware. The factory voices are adjusted in 12 parameters to fit the browser engine.
+status: announced
+authors:
+- name: telespial
+  url: https://github.com/telespial
+source: https://github.com/telespial/virtuox-mvave-fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The coach, interface and panel code are GPL-3.0-only (README and THIRD_PARTY.md). The DX7 engine is Apache-2.0
+  and the M-VAVE factory voice data, taken from fm1_open, keeps its Apache-2.0 attribution. The 28 study exercises
+  are CC0-1.0, and the ten bundled Mutopia MIDI editions are public domain or CC-BY-SA-3.0 file by file. No stock
+  firmware image is in the repository.
+homepage: https://telespial.github.io/virtuox-mvave-fm1/
+distribution: source-only
+install_notes: >-
+  Nothing to install on the FM-1 yet. Open the browser demo in desktop Chrome or Edge for Web MIDI. The site's firmware
+  page only identifies and hashes a local .fwsc file and does not write to the device.
+tags: [piano-coach, synth-engine, fm, dx7, sequencer, fx, midi, emulator, ui]
+image:
+  url: https://raw.githubusercontent.com/telespial/virtuox-mvave-fm1/main/docs/assets/fm1-pianox.svg
+  alt: "Illustration of the FM-1 panel with knobs, function buttons and two rows of keys, its screen showing coloured falling notes for Twinkle, Twinkle with a score and combo"
+  credit: telespial
+  source_url: https://github.com/telespial/virtuox-mvave-fm1
+  first_party: true
+versions:
+- version: main @ 755c78f
+  date: 2026-10-26
+  url: https://github.com/telespial/virtuox-mvave-fm1/commit/755c78f2ec86cf87c4dc257f246a690ce833324f
+  notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,45 @@
+device: chase-bliss-chompi
+name: TEHP
+summary: TAPE 2.0 with a pitch shifter, so changing pitch no longer changes speed, plus a length control that stretches samples and the loop without changing pitch.
+description: >-
+  In stock TAPE a higher pitch plays a sample faster, like a tape. In TEHP each
+  voice streams at normal speed and a delay-line pitch shifter with
+  cross-correlation splice search changes the pitch, so notes keep their length
+  and a pitched loop keeps its tempo. Looper overdubs record what is heard, and
+  scrubbing, wow and flutter and delay changes behave as in TAPE. Alpha 2 adds a
+  length control from half to four times the length. The author lists limits:
+  about 30 to 45 ms of onset latency when shifting up, rougher splices when
+  many voices play at high ratios, and a first boot that hung once. The code
+  uses about 4 KB less flash than stock TAPE because the double-speed sample
+  files are no longer used. It was tested on one unit. The same author's SING
+  firmware builds on this work.
+status: active
+authors:
+  - name: ugrossek
+    url: https://github.com/ugrossek
+source: https://github.com/ugrossek/CHOMPI/tree/tehp
+source_status: open
+license: MIT
+license_notes: The LICENSE file names CHOMPI Club as copyright holder; the CHOMPI name and marks are not covered, see TRADEMARKS.md.
+distribution: download
+requires_stock: TAPE 2.0
+install_notes: >-
+  Send TEHP.bin to a free slot of the multi-firmware launcher from the setup
+  page, or put it in the card root as the only .bin. It shares TAPE's samples,
+  options.json and presets.json. Keep the original firmware; the author notes
+  that the Daisy's USB DFU mode can recover a unit that will not boot.
+brick_risk: false
+tags: [fork, sampler, looper, pitch-shift, performance]
+versions:
+  - version: tehp-alpha-2
+    date: 2026-10-15
+    url: https://github.com/ugrossek/CHOMPI/tree/tehp-alpha-2
+    notes: Git tag; no GitHub release page. Adds the length control.
+  - version: tehp-alpha
+    date: 2026-10-08
+    url: https://github.com/ugrossek/CHOMPI/releases/tag/tehp-alpha
+    notes: Pre-release. Named TEHP; keeps pitch changes from changing speed.
+  - version: tape-pitchshift-v1
+    date: 2026-10-02
+    url: https://github.com/ugrossek/CHOMPI/releases/tag/tape-pitchshift-v1
+    notes: Earlier experimental build of the same idea, named CHOMPI_TAPE_pitchshift.

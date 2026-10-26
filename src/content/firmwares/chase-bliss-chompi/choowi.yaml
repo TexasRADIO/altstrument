@@ -1,0 +1,50 @@
+device: chase-bliss-chompi
+name: Choowi
+summary: "TAPE-based firmware from the Forge workshop that adds chord harmony on every key, an arpeggiator and bass player, a synth page, sound mutation, a dream mode, effects and chatbot-assisted sound design."
+description: >-
+  Choowi starts from CHOMPI Club's open-source TAPE and keeps its sampler,
+  recording and looper. On top of it, harmony mode plays a chord in the chosen
+  key from each key, an arpeggiator and bass follow CHOMPI's clock or a DAW's,
+  two knob holds generate a new sound or nudge the current one, and a synth page
+  builds sounds on the panel. After a few minutes of inactivity it plays quietly
+  in the current key. A web page, used over Web MIDI in Chrome or Edge, turns a
+  chatbot's reply to a written sound description into a patch that plays on the
+  unit. The 0.20 release candidate adds an effects page with four modules and a
+  phone-based display. The author credits Claude for helping build it. A set of
+  14 instrument and 14 drum samples comes with the card zip. It is part of the
+  Forge family, which names each firmware separately.
+status: active
+authors:
+  - name: DeeCee
+    url: https://github.com/myth-world
+source: https://github.com/myth-world/Forge
+source_status: open
+license: MIT
+license_notes: >-
+  LICENSE lists CHOMPI Club and DeeCee (Forge changes). The Choowi name and
+  artwork are the author's own; the CHOMPI name is not covered, see
+  TRADEMARKS.md.
+homepage: https://myth-world.github.io/Forge/
+distribution: download
+install_notes: >-
+  Back up the SD card, delete its sample files and every file with .bin in its
+  name, copy the card zip's contents to the card root and switch on. Update by
+  replacing FORGE.bin on the card, or over USB with Forge Bridge on Windows.
+  Restoring the card backup returns to stock TAPE. The README says the
+  bootloader is untouched. The 0.19.2 and 0.20 builds are release candidates,
+  and the README lists some features still being checked on hardware.
+brick_risk: false
+tags: [fork, sampler, looper, chords, arpeggiator, synth-engine, fx, performance, ai, web]
+versions:
+  - version: 0.20.0-rc3
+    date: 2026-10-13
+    url: https://github.com/myth-world/Forge/releases/tag/choowi-0.20.0-rc3
+    notes: Release candidate that adds an FX page with four effect modules and a phone-based display.
+  - version: 0.19.2-rc2
+    date: 2026-10-12
+    url: https://github.com/myth-world/Forge/releases/tag/choowi-0.19.2-rc2
+    notes: Release candidate with the synth page, hidden extras and a sample bank.
+  - version: 0.19.2-rc1
+    date: 2026-10-11
+    url: https://github.com/myth-world/Forge/releases/tag/choowi-0.19.2-rc1
+    notes: Pre-release.

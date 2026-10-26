@@ -6,9 +6,10 @@ summary: >-
 description: >-
   Adds a sound bank of 15 presets, including Roots Organ, Rocksteady, Deep Roots and Digital Bass, a reed melodica,
   electric piano, a sampled trumpet, three sirens and a drum kit, on top of Felucca's unchanged engines,
-  with a home screen that edits four parameters per sound and animates the selected instrument. Felucca's
-  other engines, effects, sequencing, MIDI and user presets are kept. The README calls it a prototype and the hardware notes
-  say no physical FM-1 has been used. A browser build of the emulator is hosted on GitHub Pages; the public
+  with a home screen that edits four parameters per sound and animates the selected instrument. Later builds add
+  loop recording and overdubbing, song arrangement, a four-track mixer, sixteen punch-in pads, a one-key chord garden and
+  an optional CC0 percussion pack. Felucca's other engines, effects, sequencing, MIDI and user presets are kept. The
+  README calls it a prototype and the hardware notes say no physical FM-1 has been used. A browser build of the emulator is hosted on GitHub Pages; the public
   Felucca installer does not install this firmware.
 status: active
 authors:
@@ -29,7 +30,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, performance, ui, emulator, research]
 versions:
-- version: main @ dfaa7dc
-  date: 2026-10-25
-  url: https://github.com/KemstheSage/reggae-os/commit/dfaa7dcd16ac05a0bee122c7575610d4335d0901
+- version: main @ b9d4366
+  date: 2026-10-26
+  url: https://github.com/KemstheSage/reggae-os/commit/b9d43661fa0d9889dd21a10e7c4ee32f163471c9
   notes: No tagged releases; this is the latest commit.

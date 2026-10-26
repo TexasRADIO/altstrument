@@ -36,6 +36,15 @@ image:
   source_url: https://github.com/pbarilla/chipbox
   first_party: true
 versions:
+- version: v1.3.3
+  date: 2026-10-26
+  url: https://github.com/pbarilla/chipbox/releases/tag/v1.3.3
+- version: v1.3.2
+  date: 2026-10-25
+  url: https://github.com/pbarilla/chipbox/releases/tag/v1.3.2
+- version: v1.3.1-stable
+  date: 2026-10-25
+  url: https://github.com/pbarilla/chipbox/releases/tag/v1.3.1-stable
 - version: v1.3.0
   date: 2026-10-25
   url: https://github.com/pbarilla/chipbox/releases/tag/v1.3.0

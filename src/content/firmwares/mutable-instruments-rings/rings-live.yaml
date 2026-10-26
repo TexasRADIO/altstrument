@@ -1,0 +1,30 @@
+device: mutable-instruments-rings
+name: Rings Live
+summary: Small edit of the official Rings firmware that makes the hidden "disastrous peace" mode reachable with a long press of the mode button.
+description: >-
+  In stock Rings the easter egg mode takes an awkward key sequence. Here a
+  five-second press of the mode button, when already in an alternate mode,
+  steps from modal resonator to FM voice to the easter egg mode and back. In
+  the easter egg mode a short press changes the effect on the string synth, and
+  in an alternate mode a short press returns to the three original modes. An
+  open issue reports that the variant effect modes cannot be reached while in
+  the disastrous peace mode.
+status: dormant
+authors:
+  - name: Tom Burns (boourns)
+    url: https://github.com/boourns
+source: https://github.com/boourns/eurorack
+source_status: open
+license: MIT
+license_notes: Inherits from Mutable Instruments; repository README states STM32 code is MIT.
+distribution: download
+install_notes: >-
+  Follow the official Rings firmware update procedure from the manual. The
+  author warns that any firmware update can leave a module unusable.
+brick_risk: true
+tags: [physical-modeling, modes, performance]
+versions:
+  - version: "1.0"
+    date: 2018-11-14
+    url: https://github.com/boourns/eurorack/releases/tag/rings_live_v1.0
+    notes: Initial release.

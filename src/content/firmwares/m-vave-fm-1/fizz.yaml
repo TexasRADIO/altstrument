@@ -1,0 +1,66 @@
+device: m-vave-fm-1
+name: FIZZ
+summary: >-
+  Step-sequencer groovebox around ChoralRoot's FM TONE voice: six tracks on 16 shared voices, p-locks, conditions,
+  ratchets, chords, MIDI FX, a mixer and a browser-based manager, in beta.
+description: >-
+  Six tracks share 16 voices and a pool of 128 sounds, with track defaults that individual steps can override,
+  pages with their own start and end, chance, ratchets and chords of up to six notes. MIDI FX groups per track
+  include an arpeggiator, and releases add recording modes, tools such as stretch and clip, a mixer with mute and
+  solo, a global scale and a routing page that runs the chorus, delay, reverb and filter in parallel or in a chain.
+  A web manager handles presets and edits sounds. The FM TONE voice and effects come from the author's
+  ChoralRoot, while the Felucca-derived code was rewritten. The README still describes an earlier phase that ran on
+  a Mac through FM1VST and RemoteFM1 and an eight-track design, but the releases are FM-1 firmware packages with six
+  tracks, all marked as pre-releases.
+status: active
+authors:
+- name: Quixotic7
+  url: https://github.com/Quixotic7
+source: https://github.com/Quixotic7/FIZZ
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  LICENSING.md states MPL-2.0 for the firmware, relicensed by its author from GPL-3.0-only on 2026-10-23. The site/
+  folder and the test oracles that build ChoralRoot's tree are GPL-3.0-only and are not firmware. plutovg is MIT with
+  FreeType License parts, and the Inter Tight font is SIL OFL 1.1.
+homepage: https://quixotic7.github.io/FIZZ/
+distribution: browser-installer
+install_notes: >-
+  Install from the page at quixotic7.github.io/FIZZ/install/ in Chrome or Edge over USB, which writes the firmware
+  and then FIZZ's data. With the release files instead, install the .fwsc and then push the xdata file with
+  firmware/tools/fizz_xdata.py. Updating between betas keeps projects and presets.
+brick_risk: true
+tags: [sequencer, synth-engine, fm, fx, chords, arpeggiator, performance, editor, midi]
+versions:
+- version: 0.12.0-beta.7
+  date: 2026-10-26
+  url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.12.0-beta.7
+  notes: Reworks FX routing into a signal flow of four blocks with parallel and chain modes.
+- version: 0.12.0-beta.6
+  date: 2026-10-26
+  url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.12.0-beta.6
+  notes: Adds a global scale, a patterns map that stays open and MIDI FX bypass from the ARP key.
+- version: 0.12.0-beta.5
+  date: 2026-10-25
+  url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.12.0-beta.5
+  notes: Adds a TOOLS page, mute and solo in the mixer and finer knob steps.
+- version: 0.12.0-beta.4
+  date: 2026-10-25
+  url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.12.0-beta.4
+  notes: Adds capture, replace and overdub recording, stretch and clip tools, and a sound editor in the manager.
+- version: 0.12.0-beta.3
+  date: 2026-10-25
+  url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.12.0-beta.3
+- version: 0.12.0-beta.2
+  date: 2026-10-25
+  url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.12.0-beta.2
+- version: 0.12.0-beta.1
+  date: 2026-10-24
+  url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.12.0-beta.1
+  notes: Cuts the tracks from eight to six and clears projects saved by earlier betas; presets are kept.
+- version: 0.11.0-beta.2
+  date: 2026-10-24
+  url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.11.0-beta.2
+- version: 0.11.0-beta.1
+  date: 2026-10-24
+  url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.11.0-beta.1

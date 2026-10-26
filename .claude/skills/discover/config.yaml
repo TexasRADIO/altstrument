@@ -760,3 +760,15 @@ ignore:
   - url: https://github.com/audiofab/disfv1
     reason: fork of ndf-zz/disfv1 (FV-1 disassembler) with no changes
     date: 2026-10-24
+  - url: https://github.com/vladislav-n228/8-bit-FORGE
+    reason: desktop chiptune generator in the style of NES and Mega Drive music; no hardware target
+    date: 2026-10-26
+  - url: https://github.com/andrewfader/yanes
+    reason: CLAP plugin for desktop DAWs; not an editor or emulator for a device
+    date: 2026-10-26
+  - url: https://github.com/repeat98/octamad
+    reason: stale contributor fork of sambanks/octabam with the parent README and only experimental branches; the work that matters was merged upstream
+    date: 2026-10-26
+  - url: https://github.com/DanimanX/FreeAPC64
+    reason: redistributes Akai's APC64 stock firmware image and a patched copy of it, with no licence
+    date: 2026-10-26

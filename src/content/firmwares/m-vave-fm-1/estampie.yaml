@@ -37,6 +37,10 @@ image:
   source_url: https://github.com/ocean/estampie
   first_party: true
 versions:
+- version: 0.3.6
+  date: 2026-10-25
+  url: https://github.com/ocean/estampie/releases/tag/v0.3.6
+  notes: Screens, help text and docs call the page key SEL, as printed on the FM-1.
 - version: 0.3.5
   date: 2026-10-23
   url: https://github.com/ocean/estampie/releases/tag/v0.3.5

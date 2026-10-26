@@ -19,7 +19,7 @@ video:
   first_party: true
   found_via: https://github.com/epixjava/op1REpackerGUI
 versions:
-  - version: main @ 59a7e84
-    date: 2026-07-11
-    url: https://github.com/epixjava/op1REpackerGUI/commit/59a7e84
+  - version: main @ 6074b25
+    date: 2026-10-26
+    url: https://github.com/epixjava/op1REpackerGUI/commit/6074b25
     notes: No tagged releases; this is the latest commit.

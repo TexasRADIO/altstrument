@@ -1,0 +1,38 @@
+device: chase-bliss-chompi
+name: HMMM
+summary: Drone firmware with eight voices that frequency-modulate each other in pairs, a self-oscillating two-line delay and a fuzz, modelled on the SOMA Lyra-8.
+description: >-
+  Each of the eight voices is a triangle wave that a sharpness control bends
+  toward a square. Voices are tuned by ear and arranged in four pairs and two
+  groups, and pairs can modulate each other in a ring, take a Hyper LFO as
+  source, or take the instrument's own output as feedback. The sound passes
+  through a modulated delay that can run on its own and then a distortion. Ten
+  pages cover tuning, sharpness, modulation, groups, the LFO, delay,
+  distortion, voice envelope and global tuning, with 15 patch slots. The
+  README states it is an homage and not a clone of the SOMA circuit, and that
+  the hardware layer comes from CHOMPI Club's firmware. Its release says it
+  was tested on one CHOMPI.
+status: active
+authors:
+  - name: hiwatts
+    url: https://github.com/sfaber02
+source: https://github.com/sfaber02/chompi-hmmm
+source_status: open
+license: MIT
+license_notes: >-
+  The author's MIT grant covers the new code. Files taken from CHOMPI Club's
+  firmware stay under its MIT license (LICENSE.chompi-club), and the reverb
+  code is Mutable Instruments code under MIT.
+distribution: download
+install_notes: >-
+  Download HMMM.bin from the release and copy it to the SD card root as the
+  only .bin file, or add it to the multi-firmware launcher's FIRMWARE folder.
+  The release asks you to back up the card first because it was tested on one
+  unit.
+brick_risk: false
+tags: [synth-engine, oscillator, fm, delay, performance, ambient]
+versions:
+  - version: beta
+    date: 2026-10-04
+    url: https://github.com/sfaber02/chompi-hmmm/releases/tag/beta
+    notes: First release, marked beta.

@@ -1,0 +1,42 @@
+device: erica-synths-zen-delay
+name: Zen Delay Guildfordia's Mod
+summary: >-
+  Patcher that turns Erica Synths' 1.1.0 update file into a build with tap tempo and MIDI clock divisions, MIDI CC
+  control on channel 16, an input send, freeze and a TAP LED that shows the clock state.
+description: >-
+  Adds three time modes selected with the TAP button: free time as on stock, a tapped tempo, and sync to incoming MIDI
+  clock. In the tap and sync modes the delay time knob picks one of 13 divisions from /8 to x8, including dotted and
+  triplet values. A double tap or CC 22 freezes the delay contents, CC 21 closes the input so repeats keep running
+  for dub throws, and CC 20 to 26 on channel 16 also set feedback, time, delay mode, tap and time mode. The knobs
+  no longer take over from MIDI values through ADC drift, and the stock serial debug output is removed to make
+  room for the new code. Filter, drive, dry/wet, input level and bypass are analog and cannot be controlled over
+  MIDI. The repository holds the patch bytes, the ARM assembly hooks, a patcher that accepts only the official 1.1.0
+  file, and an encoder and decoder for the update file format. The README says it was developed with an AI assistant
+  and tested on real hardware, and that it has no connection to Erica Synths or Ninja Tune.
+status: active
+authors:
+  - name: guildfordia
+    url: https://github.com/guildfordia
+source: https://github.com/guildfordia/zen-delay-mod
+source_status: open
+license: MIT
+license_notes: >-
+  The MIT license covers only the files in the repository. Erica Synths' firmware is not included and remains theirs;
+  the user downloads the official update file and patches it locally.
+homepage: https://guildfordia.github.io/zen-delay-mod/
+distribution: patch-your-own
+requires_stock: 1.1.0
+install_notes: >-
+  Download ZenDelay_V1.1.0.wav from Erica Synths, run zen_patch.py on it (Python 3 with numpy) to write the modded
+  update file, and play that file unaltered at 48 kHz into the left input with the unit in update mode, which means
+  holding TAP while powering on, IN LEVEL at 12 o'clock and nothing in R IN. The file takes about 89 seconds to
+  play, and a computer's headphone output worked best for the author. A slow TAP blink with the yellow IN LEVEL LED
+  means the update failed; power-cycle into update mode and play it again. The update rewrites only the application,
+  never the bootloader, and playing Erica Synths' own 1.1.0 file restores the stock firmware.
+brick_risk: false
+tags: [patch, delay, fx, midi, open-source]
+versions:
+  - version: main @ d9c827c
+    date: 2026-10-25
+    url: https://github.com/guildfordia/zen-delay-mod/commit/d9c827c0f74aa8c28b6ff2a89edf3a7bbd81e231
+    notes: No tagged releases; this is the latest commit.

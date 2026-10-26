@@ -38,9 +38,9 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, sequencer, fx, emulator, research]
 versions:
-- version: main @ a6be82d
+- version: main @ c2e231f
   date: 2026-10-25
-  url: https://github.com/joakimeriksson/fm1-sid/commit/a6be82dcfdaf5e381c726179271debcb2a85d30f
+  url: https://github.com/joakimeriksson/fm1-sid/commit/c2e231f5a1ac2bbe5799d92db0aa08e94dc36d7f
   notes: >-
     No release of this firmware (the emulator's releases are for the emulator and plugin); this is the latest
     commit of the repository split out of fm1-emu. The emulator's firmware list labels the package 0.1.
