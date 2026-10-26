@@ -19,3 +19,13 @@ notes: >-
   Because the L6 can be powered from either USB port or its batteries, it must
   be fully powered off first; otherwise it can look dead when it is only stuck.
 related: []
+image:
+  src: /images/devices/zoom-livetrak-l6.webp
+  style: photo
+  alt: "Top view of the Zoom LiveTrak L6 mixer: six channel knobs, combo and line inputs, a channel-strip button column, four sound pads, AUX send, master meter and recorder buttons"
+  width: 1129
+  height: 574
+  credit: Zoom
+  license: manufacturer product image
+  source_url: https://zoomcorp.com/en/us/digital-mixer-multi-track-recorders/digital-mixer-recorder/livetrak-l6-final/
+  original_url: https://zoomcorp.com/media/images/L6_List_Image_1.original.original.png

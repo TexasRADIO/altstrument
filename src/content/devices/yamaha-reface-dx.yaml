@@ -16,3 +16,13 @@ notes: >-
   F#3, A3 and C#4 while switching on. Update mode runs before the main firmware,
   so Yamaha's updater can restore a main firmware that fails to start.
 related: []
+image:
+  src: /images/devices/yamaha-reface-dx.webp
+  style: photo
+  alt: "Top-down view of the Yamaha reface DX: dark case with 37 mini keys, a small display, touch-strip data entry arrows, voice select buttons and the DX logo"
+  width: 1200
+  height: 500
+  credit: Yamaha
+  license: manufacturer product image
+  source_url: https://usa.yamaha.com/products/music_production/synthesizers/reface/reface_dx.html
+  original_url: https://usa.yamaha.com/files/main_visual_96d2c2216caab6a8186942cee7e9574a.jpg

@@ -27,6 +27,12 @@ install_notes: >-
   updater goes back to stock.
 brick_risk: false
 tags: [midi, midi-clock, ui, web, patch]
+image:
+  url: https://raw.githubusercontent.com/thade/reface-dx-firmware/master/docs/reface-dx.svg
+  alt: "Drawing of the Yamaha reface DX from above: 37 mini keys, the touch-strip arrows, a purple display and the voice buttons, with the YAMAHA and DX logos"
+  credit: "Thade O'Connor"
+  source_url: https://github.com/thade/reface-dx-firmware
+  first_party: true
 versions:
   - version: v0.1.0
     date: 2026-10-20
