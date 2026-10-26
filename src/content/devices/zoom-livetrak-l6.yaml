@@ -1,0 +1,21 @@
+name: LiveTrak L6
+manufacturer: Zoom
+category: other
+tagline: Compact digital mixer and multitrack recorder with four sound pads
+description: >-
+  The LiveTrak L6 is a small digital mixer from Zoom that records each channel
+  and the stereo mix to a microSD card. It has four sound pads that play WAV
+  files from the card, two AUX sends, built-in effects, and works as a USB audio
+  interface. It runs on AA batteries or USB power. The later L6max is a
+  different model.
+platform: NXP i.MX RT1040 (Arm Cortex-M7)
+stock_firmware: "1.10"
+links:
+  manufacturer: https://zoomcorp.com/en/us/digital-mixer-multi-track-recorders/digital-mixer-recorder/livetrak-l6-final/
+notes: >-
+  Firmware updates are installed from the card by holding PLAY/STOP while
+  switching on. A separate bootloader reads that button before the main firmware
+  starts, so a main firmware that fails to start can be replaced the same way.
+  Because the L6 can be powered from either USB port or its batteries, it must
+  be fully powered off first; otherwise it can look dead when it is only stuck.
+related: []
