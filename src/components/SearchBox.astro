@@ -8,7 +8,7 @@ export interface IndexEntry {
   tagline?: string;
   firmwareCount: number;
   /** Firmware names, so searching "octabam" finds its device. */
-  firmwares: string;
+  firmwares: string[];
 }
 interface Props { index: IndexEntry[]; categories: string[] }
 const { index, categories } = Astro.props;
@@ -121,12 +121,29 @@ const json = JSON.stringify(index).replace(/</g, '\\u003c');
     var sort = document.getElementById('sort');
     var status = document.getElementById('search-status');
     var none = document.getElementById('no-results');
-    var hay = {}, catOf = {};
+    var hay = {}, own = {}, fwNames = {}, catOf = {};
     index.forEach(function (d) {
-      hay[d.id] = [d.name, d.manufacturer, d.tagline || '', d.firmwares || ''].join(' ').toLowerCase();
+      own[d.id] = [d.name, d.manufacturer, d.tagline || ''].join(' ').toLowerCase();
+      fwNames[d.id] = (d.firmwares || []).map(function (n) { return n.toLowerCase(); });
+      hay[d.id] = own[d.id] + ' ' + fwNames[d.id].join(' ');
       catOf[d.id] = d.category;
     });
     var items = Array.prototype.slice.call(document.querySelectorAll('[data-device]'));
+    var links = items.map(function (li) {
+      var a = li.querySelector('a[href]');
+      return a && { id: li.getAttribute('data-device'), a: a, href: a.getAttribute('href') };
+    }).filter(Boolean);
+    // Terms that matched a firmware name rather than the device itself, so the device
+    // page opens filtered to that firmware. Searching "ableton" should not filter Push 3.
+    // Only carried when one firmware matches all of them, so the device page is never empty.
+    function carried(id, terms) {
+      var rest = terms.filter(function (t) { return own[id].indexOf(t) === -1; });
+      if (rest.length === 0) return '';
+      var hit = fwNames[id].some(function (n) {
+        return rest.every(function (t) { return n.indexOf(t) !== -1; });
+      });
+      return hit ? rest.join(' ') : '';
+    }
     var groups = Array.prototype.slice.call(document.querySelectorAll('[data-group]'));
     var jumps = {};
     Array.prototype.forEach.call(document.querySelectorAll('[data-jump]'), function (li) {
@@ -145,6 +162,10 @@ const json = JSON.stringify(index).replace(/</g, '\\u003c');
         if (m) shown++;
       });
       items.forEach(function (li) { li.hidden = !ok[li.getAttribute('data-device')]; });
+      links.forEach(function (l) {
+        var t = ok[l.id] ? carried(l.id, terms) : '';
+        l.a.setAttribute('href', t ? l.href + '?q=' + encodeURIComponent(t) : l.href);
+      });
       groups.forEach(function (g) {
         var all = g.querySelectorAll('[data-device]').length;
         var vis = g.querySelectorAll('[data-device]:not([hidden])').length;

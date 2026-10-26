@@ -31,7 +31,7 @@ const index: IndexEntry[] = devices.map((d) => ({
   category: d.data.category,
   tagline: d.data.tagline,
   firmwareCount: d.firmwares.length,
-  firmwares: d.firmwares.map((f) => f.data.name).join(' '),
+  firmwares: d.firmwares.map((f) => f.data.name),
 }));
 ---
 <Base
