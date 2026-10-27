@@ -15,8 +15,10 @@
  *     that are newer than the entry's top version (updates, not new entries)
  *
  * GitHub is reached through the `gh` CLI, so there is no token plumbing; it
- * must be installed and authenticated. Search is rate limited to 30 requests a
- * minute, so searches are spaced 2.1 s apart.
+ * must be installed and authenticated. Repository searches are batched into GraphQL
+ * requests (REST search is capped at 30 a minute and trips a secondary limit even
+ * below that); a rate limit waits about a minute and retries, and a search GitHub
+ * answers with fewer repositories than it counted is asked again.
  *
  * The full report is always written as JSON to --out (default
  * discover-candidates.json in the repo root, which is gitignored). stdout gets a
@@ -45,10 +47,17 @@ const FEED_CONCURRENCY = 4;
 const FEED_TIMEOUT_MS = 20_000;
 const SAME_HOST_DELAY_MS = 2000;
 const MAX_RATE_WAIT_S = 60;
-const SEARCH_DELAY_MS = 2100;
+const SEARCH_DELAY_MS = 1000;
+const SEARCH_BATCH = 10;
+// Searches go out SEARCH_BATCH at a time in one GraphQL request. If GitHub still answers
+// with a rate limit (it lasts about a minute and gh does not expose retry-after), wait and retry.
+const SEARCH_RATE_WAIT_MS = 70_000;
+const SEARCH_RATE_RETRIES = 4;
+const SEARCH_INCOMPLETE_RETRIES = 3;
+const SWEEP_BATCH = 20;
 const SUMMARY_MAX = 400;
 const DESCRIPTION_MAX = 120;
-const SWEEP_CONCURRENCY = 8;
+const SWEEP_CONCURRENCY = 6;
 /** Newer releases listed per entry; the rest are counted. */
 const SWEEP_HITS_MAX = 5;
 /** Repos whose releases cover many unrelated entries (PortMaster-New ships every port at once). */
@@ -699,63 +708,170 @@ function gh(args: string[]): GhResult {
 
 const execFileAsync = promisify(execFile);
 
-/** Like gh(), but does not block, so pool() can run several at once. */
-async function ghAsync(args: string[]): Promise<GhResult> {
-  try {
-    const { stdout } = await execFileAsync('gh', ['api', ...args], GH_OPTIONS);
-    return { ok: true, json: JSON.parse(stdout) as unknown };
-  } catch (e) {
-    return ghError(e);
-  }
-}
-
 interface SearchOutcome {
   repos: Map<string, RepoCandidate>;
   queriesRun: number;
   queriesOk: number;
 }
 
+const SEARCH_FIELDS =
+  'repositoryCount nodes { ... on Repository { nameWithOwner url description stargazerCount pushedAt licenseInfo { spdxId } repositoryTopics(first: 20) { nodes { topic { name } } } } }';
+
+interface GqlItem {
+  alias: string;
+  /** Becomes GraphQL variables named `<alias>_<key>`; `field` receives a function that names them. */
+  vars: Record<string, string>;
+  field: (v: (key: string) => string) => string;
+}
+
+type GqlResult =
+  | { ok: true; data: Obj; errors: Map<string, string> }
+  | { ok: false; limited: boolean; message: string };
+
+/** One `gh api graphql` request carrying every item as an aliased root field. */
+async function graphqlOnce(items: GqlItem[]): Promise<GqlResult> {
+  const decl: string[] = [];
+  const args: string[] = [];
+  const body = items.map((it) => {
+    for (const [k, val] of Object.entries(it.vars)) {
+      decl.push(`$${it.alias}_${k}: String!`);
+      args.push('-f', `${it.alias}_${k}=${val}`);
+    }
+    return `${it.alias}: ${it.field((k) => `$${it.alias}_${k}`)}`;
+  });
+  args.unshift('graphql', '-f', `query=query(${decl.join(', ')}) {\n${body.join('\n')}\n}`);
+  let out: string;
+  let err = '';
+  try {
+    ({ stdout: out } = await execFileAsync('gh', ['api', ...args], GH_OPTIONS));
+  } catch (e) {
+    // gh exits non-zero for GraphQL errors too, with the response body on stdout.
+    out = (e as { stdout?: string }).stdout ?? '';
+    err = (e as { stderr?: string }).stderr ?? '';
+    if (!out.trim().startsWith('{')) {
+      const r = ghError(e);
+      return { ok: false, limited: r.ok === false && (r.status === 403 || r.status === 429), message: r.ok === false ? r.message : 'gh api failed' };
+    }
+  }
+  const json = asObj(JSON.parse(out));
+  const data = asObj(json?.data);
+  const errors = arr(json?.errors).map((x) => asObj(x));
+  const limited = errors.some((x) => /RATE_LIMITED|rate limit/i.test(`${str(x?.type)} ${str(x?.message)}`)) || /rate limit|HTTP 40[39]/i.test(err);
+  if (!data) {
+    return { ok: false, limited, message: str(errors[0]?.message) || err.split('\n').find((l) => l.trim()) || 'GraphQL request failed' };
+  }
+  // An error whose path starts at an alias (a repository that does not exist) belongs to that alias.
+  const byAlias = new Map<string, string>();
+  for (const x of errors) {
+    const alias = str(arr(x?.path)[0]);
+    if (alias && !byAlias.has(alias)) byAlias.set(alias, str(x?.message) || 'error');
+  }
+  return { ok: true, data, errors: byAlias };
+}
+
+/** graphqlOnce, waiting out GitHub's rate limit (about a minute) between retries. */
+async function graphql(items: GqlItem[]): Promise<GqlResult> {
+  for (let attempt = 0; ; attempt++) {
+    const res = await graphqlOnce(items);
+    if (res.ok || !res.limited || attempt >= SEARCH_RATE_RETRIES) return res;
+    progress(`  GitHub rate limit; waiting ${SEARCH_RATE_WAIT_MS / 1000} s, then retrying (${attempt + 1}/${SEARCH_RATE_RETRIES})`);
+    await sleep(SEARCH_RATE_WAIT_MS);
+  }
+}
+
+type SearchBatch = { ok: true; results: Map<string, unknown> } | { ok: false; limited: boolean; message: string };
+
+/**
+ * Runs several repository searches in one GraphQL request (one aliased `search` each).
+ * The REST search endpoint is capped at 30 requests a minute and trips a secondary
+ * limit even below that; GraphQL search is billed against the 5000 points/hour GraphQL
+ * budget, so one request carries a whole batch.
+ */
+async function searchBatch(qs: string[]): Promise<SearchBatch> {
+  const res = await graphql(
+    qs.map((_, i) => ({
+      alias: `s${i}`,
+      vars: { q: qs[i] },
+      field: (v) => `search(query: ${v('q')}, type: REPOSITORY, first: 30) { ${SEARCH_FIELDS} }`,
+    })),
+  );
+  if (res.ok === false) return res;
+  const results = new Map<string, unknown>();
+  qs.forEach((q, i) => {
+    const r = res.data[`s${i}`];
+    if (r) results.set(q, r);
+  });
+  return { ok: true, results };
+}
+
+/** GraphQL search silently returns fewer nodes than repositoryCount when it times out inside GitHub. */
+function searchIncomplete(r: unknown): boolean {
+  const o = asObj(r);
+  const count = typeof o?.repositoryCount === 'number' ? o.repositoryCount : 0;
+  return arr(o?.nodes).filter((n) => asObj(n)?.nameWithOwner).length < Math.min(count, 30);
+}
+
 async function runSearches(queries: string[], since: Date, problems: string[]): Promise<SearchOutcome> {
   const repos = new Map<string, RepoCandidate>();
   const day = isoDay(since);
+  const full = (base: string) => `${base} fork:false pushed:>${day} sort:updated`;
   let run = 0;
   let ok = 0;
-  for (const base of queries) {
-    if (run > 0) await sleep(SEARCH_DELAY_MS);
-    const q = `${base} fork:false pushed:>${day}`;
-    run++;
-    progress(`  search ${run}/${queries.length}: ${base}`);
-    const res = gh(['-X', 'GET', 'search/repositories', '-f', `q=${q}`, '-f', 'per_page=30', '-f', 'sort=updated']);
-    if (res.ok === false) {
-      if (res.status === 403 || res.status === 429) {
-        problems.push(`GitHub search rate limit hit after ${run - 1} of ${queries.length} queries (${res.message}); results are partial`);
+  let first = true;
+  for (let i = 0; i < queries.length; i += SEARCH_BATCH) {
+    const bases = queries.slice(i, i + SEARCH_BATCH);
+    progress(`  searches ${i + 1}-${i + bases.length}/${queries.length}`);
+    // `pending` shrinks as queries come back complete; incomplete ones are asked again.
+    let pending = bases;
+    const done = new Map<string, unknown>();
+    for (let attempt = 0; pending.length && attempt <= SEARCH_INCOMPLETE_RETRIES; attempt++) {
+      if (!first) await sleep(SEARCH_DELAY_MS);
+      first = false;
+      const res = await searchBatch(pending.map(full));
+      if (res.ok === false) {
+        if (res.limited) {
+          problems.push(`GitHub search rate limit hit after ${run} of ${queries.length} queries and ${SEARCH_RATE_RETRIES} retries (${res.message}); results are partial`);
+          return { repos, queriesRun: run, queriesOk: ok };
+        }
+        problems.push(`GitHub search batch starting "${pending[0]}": ${res.message}`);
         break;
       }
-      problems.push(`GitHub search "${base}": ${res.message}`);
-      continue;
-    }
-    ok++;
-    for (const item of arr(asObj(res.json)?.items)) {
-      const o = asObj(item);
-      const fullName = o && str(o.full_name);
-      if (!o || !fullName) continue;
-      const key = fullName.toLowerCase();
-      const existing = repos.get(key);
-      if (existing) {
-        if (!existing.queries.includes(base)) existing.queries.push(base);
-        continue;
+      const next: string[] = [];
+      for (const base of pending) {
+        const r = res.results.get(full(base));
+        if (r === undefined) problems.push(`GitHub search "${base}": no result returned`);
+        else if (searchIncomplete(r) && attempt < SEARCH_INCOMPLETE_RETRIES) next.push(base);
+        else done.set(base, r);
       }
-      repos.set(key, {
-        repo: fullName,
-        url: str(o.html_url) || `https://github.com/${fullName}`,
-        description: str(o.description),
-        stars: typeof o.stargazers_count === 'number' ? o.stargazers_count : 0,
-        pushed: str(o.pushed_at),
-        license: str(asObj(o.license)?.spdx_id) || undefined,
-        topics: arr(o.topics).map(str).filter(Boolean),
-        queries: [base],
-        deviceGuess: [],
-      });
+      pending = next;
+    }
+    for (const base of bases) {
+      run++;
+      const r = done.get(base);
+      if (r === undefined) continue;
+      ok++;
+      for (const item of arr(asObj(r)?.nodes)) {
+        const o = asObj(item);
+        const fullName = o && str(o.nameWithOwner);
+        if (!o || !fullName) continue;
+        const key = fullName.toLowerCase();
+        const existing = repos.get(key);
+        if (existing) {
+          if (!existing.queries.includes(base)) existing.queries.push(base);
+          continue;
+        }
+        repos.set(key, {
+          repo: fullName,
+          url: str(o.url) || `https://github.com/${fullName}`,
+          description: str(o.description),
+          stars: typeof o.stargazerCount === 'number' ? o.stargazerCount : 0,
+          pushed: str(o.pushedAt),
+          license: str(asObj(o.licenseInfo)?.spdxId) || undefined,
+          topics: arr(asObj(o.repositoryTopics)?.nodes).map((t) => str(asObj(asObj(t)?.topic)?.name)).filter(Boolean),
+          queries: [base],
+          deviceGuess: [],
+        });
+      }
     }
   }
   return { repos, queriesRun: run, queriesOk: ok };
@@ -859,14 +975,34 @@ function buildSweepTargets(): SweepTarget[] {
   return targets;
 }
 
-type GhCall = (args: string[]) => Promise<GhResult>;
+interface RepoSweep {
+  defaultBranch?: string;
+  releases: { tag: string; date: string; url: string; prerelease: boolean }[];
+  /** Newest first. */
+  tags: string[];
+}
+
+interface BranchHead {
+  sha: string;
+  date?: string;
+  url: string;
+}
+
+/** What the batched lookups found: the repo's releases and tags, and branch heads by headKey(). */
+interface SweepData {
+  repos: Map<string, RepoSweep>;
+  /** A key present with `undefined` means the ref exists but has no commit at the path. */
+  heads: Map<string, BranchHead | undefined | null>;
+}
+
+const headKey = (repo: string, branch: string, path?: string) => `${repo.toLowerCase()}\n${branch}\n${path ?? ''}`;
 
 /**
  * Releases newer than the entry's top version and not mentioned in the file; for
  * `<branch> @ <sha>` entries also a moved branch head; for repos without releases,
  * tags the file does not mention.
  */
-async function sweepEntry(t: SweepTarget, call: GhCall, report: (msg: string) => void): Promise<StaleEntry | undefined> {
+function sweepEntry(t: SweepTarget, data: SweepData, report: (msg: string) => void): StaleEntry | undefined {
   const top = t.versions[0];
   const commitTop = top ? COMMIT_VERSION.exec(top.version) : null;
   const known = new Set(t.versions.map((v) => versionPrefix(v.version)).filter(Boolean));
@@ -877,77 +1013,57 @@ async function sweepEntry(t: SweepTarget, call: GhCall, report: (msg: string) =>
   };
   const hits: ReleaseHit[] = [];
 
-  const rel = await call([`repos/${t.repo}/releases?per_page=20`]);
-  if (rel.ok === false) {
-    report(`release sweep ${t.repo} (${t.file}): ${rel.message}`);
-    return undefined;
-  }
-  const releases = arr(rel.json)
-    .map(asObj)
-    .filter((o): o is Obj => !!o && o.draft !== true);
-  for (const r of releases) {
-    const tag = str(r.tag_name);
-    const date = isoDay(str(r.published_at) || str(r.created_at));
-    if (!tag || (top?.date && date <= top.date) || mentions(t.text, tag)) continue;
+  const info = data.repos.get(t.repo.toLowerCase());
+  if (!info) return undefined; // runReleaseSweep reported why
+  for (const r of info.releases) {
+    if (!r.tag || (top?.date && r.date <= top.date) || mentions(t.text, r.tag)) continue;
     hits.push({
       kind: 'release',
-      ref: tag,
-      date,
-      url: str(r.html_url) || `https://github.com/${t.repo}/releases/tag/${encodeURIComponent(tag)}`,
-      prerelease: r.prerelease === true || undefined,
-      otherComponent: otherComponent(tag),
+      ref: r.tag,
+      date: r.date,
+      url: r.url || `https://github.com/${t.repo}/releases/tag/${encodeURIComponent(r.tag)}`,
+      prerelease: r.prerelease || undefined,
+      otherComponent: otherComponent(r.tag),
     });
   }
 
   if (commitTop) {
     const [, named, sha] = commitTop;
     let branch = named;
-    const head = (b: string) => {
-      const path = t.branch === b ? t.path : undefined;
-      return call([`repos/${t.repo}/commits?sha=${encodeURIComponent(b)}&per_page=1${path ? `&path=${encodeURIComponent(path)}` : ''}`]);
-    };
-    let res = await head(branch);
-    if (res.ok === false && (res.status === 404 || res.status === 422)) {
+    const head = (b: string) => data.heads.get(headKey(t.repo, b, t.branch === b ? t.path : undefined));
+    let res = head(branch);
+    if (res === null) {
       // CONTRIBUTING wants the label to name the default branch; say so and compare against that one.
-      const info = await call([`repos/${t.repo}`]);
-      const fallback = info.ok ? str(asObj(info.json)?.default_branch) : '';
+      const fallback = info.defaultBranch ?? '';
       if (fallback && fallback !== named) {
         report(`release sweep ${t.file}: version "${top.version}" names branch "${named}", which ${t.repo} does not have; its default branch is "${fallback}"`);
         branch = fallback;
-        res = await head(branch);
+        res = head(branch);
       }
     }
-    if (res.ok === false) report(`release sweep ${t.repo} (${t.file}): branch ${branch}: ${res.message}`);
-    else {
-      const head = asObj(arr(res.json)[0]);
-      const headSha = str(head?.sha);
-      const headDate = isoDay(str(asObj(asObj(head?.commit)?.committer)?.date)) || undefined;
+    if (res === null) {
+      report(`release sweep ${t.repo} (${t.file}): branch ${branch}: not found`);
+    } else if (res) {
       // A source pointing at a subfolder can name a repo-wide commit newer than the folder's last change.
-      const newer = !top.date || !headDate || headDate >= top.date;
-      if (headSha && newer && !headSha.toLowerCase().startsWith(sha.toLowerCase())) {
+      const newer = !top.date || !res.date || res.date >= top.date;
+      if (res.sha && newer && !res.sha.toLowerCase().startsWith(sha.toLowerCase())) {
         hits.unshift({
           kind: 'commit',
-          ref: `${branch} @ ${headSha.slice(0, 7)}`,
-          date: headDate,
-          url: str(head?.html_url) || `https://github.com/${t.repo}/commit/${headSha}`,
+          ref: `${branch} @ ${res.sha.slice(0, 7)}`,
+          date: res.date,
+          url: res.url || `https://github.com/${t.repo}/commit/${res.sha}`,
         });
       }
     }
-  } else if (releases.length === 0) {
-    const res = await call([`repos/${t.repo}/tags?per_page=10`]);
-    if (res.ok === false) report(`release sweep ${t.repo} (${t.file}): tags: ${res.message}`);
-    else {
-      for (const o of arr(res.json).map(asObj)) {
-        const name = str(o?.name);
-        if (!name) continue;
-        if (mentions(t.text, name)) break;
-        hits.push({
-          kind: 'tag',
-          ref: name,
-          url: `https://github.com/${t.repo}/tree/${encodeURIComponent(name)}`,
-          otherComponent: otherComponent(name),
-        });
-      }
+  } else if (info.releases.length === 0) {
+    for (const name of info.tags) {
+      if (mentions(t.text, name)) break;
+      hits.push({
+        kind: 'tag',
+        ref: name,
+        url: `https://github.com/${t.repo}/tree/${encodeURIComponent(name)}`,
+        otherComponent: otherComponent(name),
+      });
     }
   }
 
@@ -963,41 +1079,127 @@ async function sweepEntry(t: SweepTarget, call: GhCall, report: (msg: string) =>
   };
 }
 
+const REPO_SWEEP_FIELDS =
+  'defaultBranchRef { name } ' +
+  'releases(first: 20, orderBy: {field: CREATED_AT, direction: DESC}) { nodes { tagName isDraft isPrerelease publishedAt createdAt url } } ' +
+  'refs(refPrefix: "refs/tags/", first: 10, orderBy: {field: TAG_COMMIT_DATE, direction: DESC}) { nodes { name } }';
+
+function parseRepoSweep(o: Obj): RepoSweep {
+  return {
+    defaultBranch: str(asObj(o.defaultBranchRef)?.name) || undefined,
+    releases: arr(asObj(o.releases)?.nodes)
+      .map(asObj)
+      .filter((r): r is Obj => !!r && r.isDraft !== true)
+      .map((r) => ({
+        tag: str(r.tagName),
+        date: isoDay(str(r.publishedAt) || str(r.createdAt)),
+        url: str(r.url),
+        prerelease: r.isPrerelease === true,
+      })),
+    tags: arr(asObj(o.refs)?.nodes)
+      .map((n) => str(asObj(n)?.name))
+      .filter(Boolean),
+  };
+}
+
 async function runReleaseSweep(
   targets: SweepTarget[],
   problems: string[],
 ): Promise<{ stale: StaleEntry[]; calls: number; ok: number }> {
-  // Monorepos back several entries; ask GitHub once per URL.
-  const cache = new Map<string, Promise<GhResult>>();
+  // Monorepos back several entries; ask GitHub once per repo and once per branch/path.
+  const repoNames = new Map<string, string>();
+  const repoFiles = new Map<string, string>();
+  for (const t of targets) {
+    repoNames.set(t.repo.toLowerCase(), t.repo);
+    if (!repoFiles.has(t.repo.toLowerCase())) repoFiles.set(t.repo.toLowerCase(), t.file);
+  }
+  const data: SweepData = { repos: new Map(), heads: new Map() };
   let calls = 0;
   let ok = 0;
   let limited = false;
-  const call: GhCall = (args) => {
-    const key = args.join(' ');
-    let p = cache.get(key);
-    if (!p) {
-      if (limited) return Promise.resolve({ ok: false, message: 'skipped after the rate limit' });
-      calls++;
-      p = ghAsync(args).then((r) => {
-        if (r.ok) ok++;
-        else if (r.status === 429 || /rate limit/i.test(r.message)) limited = true;
-        return r;
-      });
-      cache.set(key, p);
-    }
-    return p;
-  };
   const reported = new Set<string>();
+  const report = (repo: string, msg: string) => {
+    if (limited || reported.has(repo.toLowerCase())) return;
+    reported.add(repo.toLowerCase());
+    problems.push(msg);
+  };
+
+  const run = async (items: GqlItem[]): Promise<GqlResult | undefined> => {
+    if (limited) return undefined;
+    calls++;
+    const res = await graphql(items);
+    if (res.ok) ok++;
+    else if (res.limited) limited = true;
+    else problems.push(`release sweep: ${res.message}`);
+    return res;
+  };
+  const batches = <T>(xs: T[]) => Array.from({ length: Math.ceil(xs.length / SWEEP_BATCH) }, (_, i) => xs.slice(i * SWEEP_BATCH, (i + 1) * SWEEP_BATCH));
+  const split = (repo: string) => {
+    const [owner, name] = repo.split('/');
+    return { owner, name };
+  };
+
+  // 1. Releases, tags and the default branch of every repo.
+  const repoKeys = [...repoNames.keys()];
   let done = 0;
-  const results = await pool(targets, SWEEP_CONCURRENCY, async (t) => {
-    const entry = await sweepEntry(t, call, (msg) => {
-      if (limited || reported.has(t.repo)) return;
-      reported.add(t.repo);
-      problems.push(msg);
-    });
-    if (++done % 100 === 0) progress(`  swept ${done}/${targets.length}`);
-    return entry;
+  await pool(batches(repoKeys), SWEEP_CONCURRENCY, async (batch) => {
+    const res = await run(
+      batch.map((key, i) => ({
+        alias: `r${i}`,
+        vars: split(repoNames.get(key)!),
+        field: (v) => `repository(owner: ${v('owner')}, name: ${v('name')}) { ${REPO_SWEEP_FIELDS} }`,
+      })),
+    );
+    if (res?.ok) {
+      batch.forEach((key, i) => {
+        const o = asObj(res.data[`r${i}`]);
+        if (o) data.repos.set(key, parseRepoSweep(o));
+        else report(repoNames.get(key)!, `release sweep ${repoNames.get(key)} (${repoFiles.get(key)}): ${res.errors.get(`r${i}`) ?? 'not found'}`);
+      });
+    }
+    done += batch.length;
+    progress(`  swept ${Math.min(done, repoKeys.length)}/${repoKeys.length} repos`);
   });
+
+  // 2. Branch heads for `<branch> @ <sha>` entries; a branch the repo lacks is retried on its default branch.
+  const headWanted = new Map<string, { repo: string; branch: string; path?: string }>();
+  const want = (repo: string, branch: string, path?: string) => headWanted.set(headKey(repo, branch, path), { repo, branch, path });
+  for (const t of targets) {
+    const m = t.versions[0] && COMMIT_VERSION.exec(t.versions[0].version);
+    if (m && data.repos.has(t.repo.toLowerCase())) want(t.repo, m[1], t.branch === m[1] ? t.path : undefined);
+  }
+  const fetchHeads = async (wanted: { repo: string; branch: string; path?: string }[]) => {
+    await pool(batches(wanted), SWEEP_CONCURRENCY, async (batch) => {
+      const res = await run(
+        batch.map((w, i) => ({
+          alias: `h${i}`,
+          vars: { ...split(w.repo), expr: w.branch, ...(w.path ? { path: w.path } : {}) },
+          field: (v) =>
+            `repository(owner: ${v('owner')}, name: ${v('name')}) { object(expression: ${v('expr')}) { ... on Commit { history(first: 1${w.path ? `, path: ${v('path')}` : ''}) { nodes { oid committedDate url } } } } }`,
+        })),
+      );
+      if (!res?.ok) return;
+      batch.forEach((w, i) => {
+        const key = headKey(w.repo, w.branch, w.path);
+        const obj = asObj(asObj(asObj(res.data[`h${i}`])?.object));
+        const node = asObj(arr(asObj(obj?.history)?.nodes)[0]);
+        if (!obj?.history) data.heads.set(key, null);
+        else data.heads.set(key, node && { sha: str(node.oid), date: isoDay(str(node.committedDate)) || undefined, url: str(node.url) });
+      });
+    });
+  };
+  await fetchHeads([...headWanted.values()]);
+  const fallbacks = new Map<string, { repo: string; branch: string; path?: string }>();
+  for (const t of targets) {
+    const m = t.versions[0] && COMMIT_VERSION.exec(t.versions[0].version);
+    const info = data.repos.get(t.repo.toLowerCase());
+    if (!m || !info?.defaultBranch || data.heads.get(headKey(t.repo, m[1], t.branch === m[1] ? t.path : undefined)) !== null) continue;
+    const b = info.defaultBranch;
+    if (b !== m[1]) fallbacks.set(headKey(t.repo, b, t.branch === b ? t.path : undefined), { repo: t.repo, branch: b, path: t.branch === b ? t.path : undefined });
+  }
+  await fetchHeads([...fallbacks.values()]);
+
+  const results = targets.map((t) => sweepEntry(t, data, (msg) => report(`${t.repo}\n${msg}`, msg)));
   if (limited) problems.push('release sweep: GitHub rate limit hit; results are partial');
   return { stale: results.filter((r): r is StaleEntry => !!r), calls, ok };
 }
@@ -1095,8 +1297,8 @@ Options:
   --filter <text>      Keep only candidates whose title/description/url contain the text
   --no-feeds           Skip the news feeds
   --no-github          Skip all GitHub calls (searches, prior-art commits, release sweep)
-  --no-device-queries  Skip the per-device GitHub searches (about 2 s each)
-  --no-release-sweep   Skip checking catalogued entries for newer releases (about a minute)
+  --no-device-queries  Skip the per-device GitHub searches (batched, about 3 s per 10)
+  --no-release-sweep   Skip checking catalogued entries for newer releases (about half a minute)
   --out <file>         JSON output path (default: discover-candidates.json in the repo root)
   --json               Print JSON to stdout instead of a markdown report
   --config <path>      Config file (default: config.yaml next to this script)
@@ -1224,7 +1426,7 @@ async function main() {
     }
     const unique = [...new Set(queries)];
     if (unique.length) {
-      progress(`Running ${unique.length} GitHub searches (about ${Math.ceil((unique.length * SEARCH_DELAY_MS) / 1000)} s)...`);
+      progress(`Running ${unique.length} GitHub searches (about ${Math.ceil((unique.length / SEARCH_BATCH) * (SEARCH_DELAY_MS / 1000 + 2))} s)...`);
       const found = await runSearches(unique, since, problems);
       attempted += found.queriesRun;
       succeeded += found.queriesOk;
