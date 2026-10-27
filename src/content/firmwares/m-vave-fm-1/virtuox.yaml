@@ -35,7 +35,7 @@ image:
   source_url: https://github.com/telespial/virtuox-mvave-fm1
   first_party: true
 versions:
-- version: main @ 755c78f
+- version: main @ 511e883
   date: 2026-10-26
-  url: https://github.com/telespial/virtuox-mvave-fm1/commit/755c78f2ec86cf87c4dc257f246a690ce833324f
+  url: https://github.com/telespial/virtuox-mvave-fm1/commit/511e883bd1ad295a6bda9f36bd0c5cd211f87d5d
   notes: No tagged releases; this is the latest commit.

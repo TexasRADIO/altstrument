@@ -33,7 +33,7 @@ install_notes: >-
 brick_risk: true
 tags: [patch, controller-mode, midi, editor, web]
 versions:
-  - version: main @ bf66b32
-    date: 2026-10-25
-    url: https://github.com/superMIDI/superMIDI/commit/bf66b32b7a085de57c95b51023821358f6f429d3
+  - version: main @ 3b8cc6f
+    date: 2026-10-26
+    url: https://github.com/superMIDI/superMIDI/commit/3b8cc6f152a6508f65df059ed60f862aecf06d9f
     notes: No tagged releases; this is the latest commit.

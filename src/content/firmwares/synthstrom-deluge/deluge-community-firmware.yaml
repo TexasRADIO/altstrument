@@ -4,8 +4,8 @@ summary: Community-developed Deluge firmware, hosted by Synthstrom Audible. Adds
 description: >-
   Synthstrom Audible open-sourced the Deluge firmware and this repository is
   where development continues. Stable releases are named after composers; the
-  latest is 1.2.1 (Chopin), and a second 1.3.0 release candidate appeared on
-  2026-10-19. Version 1.2.0 added DX7 emulation, a compressor
+  latest is 1.2.1 (Chopin), and a third 1.3.0 release candidate appeared on
+  2026-10-26. Version 1.2.0 added DX7 emulation, a compressor
   blend control, multi-track audio export, velocity automation and a velocity
   view, chord keyboard layouts, custom scales and tempo automation in arranger
   view. Nightly beta builds are published on the repository's beta release
@@ -32,6 +32,10 @@ video:
   credit: "Bay Mud"
   first_party: false
 versions:
+  - version: 1.3.0-rc3
+    date: 2026-10-26
+    url: https://github.com/SynthstromAudible/DelugeFirmware/releases/tag/v1.3.0-rc3
+    notes: Third release candidate for 1.3.0, with fixes for the audio looper, sample recording, shortcut overlays and OLED redraws.
   - version: 1.3.0-rc2
     date: 2026-10-19
     url: https://github.com/SynthstromAudible/DelugeFirmware/releases/tag/v1.3.0-rc2

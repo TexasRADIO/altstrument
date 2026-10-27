@@ -1,0 +1,44 @@
+device: m-vave-fm-1
+name: NIGHTFALL
+summary: >-
+  Independent performance firmware with its own synth, sequencer and effects, a green spectral-terrain display,
+  a browser simulator and studio, a device editor and a browser updater.
+description: >-
+  Written from scratch on top of Felucca's FM-1 startup, hardware layer, USB-MIDI and update code, which the
+  build takes from a Felucca checkout rather than vendoring. The 240 by 240 display shows a spectral terrain
+  from a 20-band analysis, driven over a USB-MIDI protocol the web studio also uses. The simulator needs no
+  hardware, and the editor and updater need desktop Chrome or Edge with Web MIDI SysEx. The README says the
+  FM-1_999 GREEN2 package booted on one FM-1 and passed USB identity, parameter round-trip, MIDI note and
+  terrain protocol tests, and that full audio regression, long-run stability, rollback to the official firmware
+  and recovery without external hardware are not proven. The release is marked a pre-release.
+status: active
+authors:
+- name: SylarPu-X
+  url: https://github.com/SylarPu-X
+source: https://github.com/SylarPu-X/nightfall-fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Source is GPL-3.0-only (LICENSE); the web editor and updater include GPL-3.0-only Felucca Web App code. The
+  optional PIANO_HD sample derives from CC0 VCSL recordings, Inter Tight is SIL OFL and Fukiai icons are MIT
+  (THIRD_PARTY.md).
+homepage: https://sylarpu-x.github.io/nightfall-fm1/
+distribution: browser-installer
+requires_stock: V15 or Felucca
+install_notes: >-
+  Use the browser updater on the project's site (desktop Chrome or Edge, SysEx permission), which checks the
+  package SHA-256 and asks you to confirm the risk, or take the .fwsc from the release. A failed update may need
+  an external recovery tool, and the USB identity is a provisional FM-1_999.
+brick_risk: true
+tags: [synth-engine, sequencer, fx, ui, editor, emulator]
+image:
+  url: https://raw.githubusercontent.com/SylarPu-X/nightfall-fm1/main/docs/terrain-preview.png
+  alt: "NIGHTFALL display preview showing a green wireframe spectrum terrain under a header with RUN and 96 BPM, with DRUM, BASS, CHORD and LEAD tracks along the bottom"
+  credit: SylarPu-X
+  source_url: https://github.com/SylarPu-X/nightfall-fm1
+  first_party: true
+versions:
+- version: 0.1.0-green2-experimental
+  date: 2026-10-21
+  url: https://github.com/SylarPu-X/nightfall-fm1/releases/tag/v0.1.0-green2-experimental
+  notes: Experimental pre-release with the FM-1_999 GREEN2 package and matching source archive.

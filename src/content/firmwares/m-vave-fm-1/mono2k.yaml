@@ -1,16 +1,16 @@
 device: m-vave-fm-1
 name: MONO2K
 summary: >-
-  Prototype Monomachine-style firmware core: six tracks each with one mono machine, a 64-step sequencer with
-  parameter locks and a lofi effects bus, on a 1-bit screen; runs in the browser, and an FM-1 build exists but is untested on hardware.
+  Monomachine-style synth firmware for the FM-1: six tracks each with one mono machine, a 64-step sequencer with
+  parameter locks and a lofi effects bus, on a 1-bit screen; also runs in the browser.
 description: >-
   Each track has one of nine machines (sine and noise, 8-bit SID-style, two FM, two wave, a digital wave machine and
   a vocal machine) written without floating point, with amplitude, filter, effects, distortion and
   three LFOs per track. The sequencer has 64 steps per track with accents, slides, parameter locks, trig
   conditions, ratchets, swing and live recording. The bus adds a reverb, beat repeat, tape wobble and ADPCM
-  crunch, and MIDI uses Monomachine-style channels and CC numbers. The README says the core runs in a browser
-  emulator and in a desktop test harness, and that an FM-1 build on the open FM-1 platform produces an installable
-  package that has not been tried on an FM-1 yet.
+  crunch, and MIDI uses Monomachine-style channels and CC numbers. The core also runs in a browser emulator and in
+  a desktop test harness. The README gives the FM-1 build as released since 1.0, installed from the project's
+  installer page or the FM-1 Firmware Hub, and keeps one project of 64 patterns in its own storage area.
 status: active
 authors:
 - name: InigoHernandez
@@ -23,13 +23,29 @@ license_notes: >-
 homepage: https://inigohernandez.github.io/mono2k/
 distribution: download
 install_notes: >-
-  Download mono2k-0.1.fwsc (identity FM-1_980) from the releases page, or install it from the project's installer
+  Download mono2k-1.1.fwsc (identity FM-1_980) from the releases page, or install it from the project's installer
   page or the FM-1 Firmware Hub over USB in Chrome or Edge. Back up what the FM-1 holds first. Installing another
   firmware replaces it, and holding OCT- while switching on reaches the updater. The repository also holds the
   sound and sequencer core, a browser emulator (web/build.sh) and a host harness.
 brick_risk: true
 tags: [sequencer, synth-engine, fx, lfo, emulator, midi]
 versions:
+- version: '1.1'
+  date: 2026-10-27
+  url: https://github.com/InigoHernandez/mono2k/releases/tag/v1.1
+  notes: Reworks the amp envelope and LFO knob ranges, the glitch and reverb sends and the PERFORM effects, gives each machine a starting sound, and adds a GLO > IN page and a choice of MIDI clock source.
+- version: 1.0.3
+  date: 2026-10-26
+  url: https://github.com/InigoHernandez/mono2k/releases/tag/v1.0.3
+  notes: Adds a GLO + HOME key-mode switch, a workaround for a chip fault that could corrupt values at random, and sturdier MIDI clock handling over USB. Includes the 1.0.2 fixes, which had no release page.
+- version: 1.0.1
+  date: 2026-10-25
+  url: https://github.com/InigoHernandez/mono2k/releases/tag/v1.0.1
+  notes: Each pad in PADS mode plays its track at the root note of that track's pattern.
+- version: '1.0'
+  date: 2026-10-25
+  url: https://github.com/InigoHernandez/mono2k/releases/tag/v1.0
+  notes: The FM-1 appears over USB as MONO2K FM-1 instead of Felucca.
 - version: '0.1'
   date: 2026-10-25
   url: https://github.com/InigoHernandez/mono2k/releases/tag/v0.1

@@ -25,7 +25,9 @@ notes: >-
   on. The bootloader is never changed by an update, so a failed update can be
   repeated the same way; only replacing the bootloader itself needs an ST-Link
   debug probe. Erica Synths offers no support for self-built or modified
-  firmware.
+  firmware. Its sound engine and sequencer have been ported to the M-VAVE FM-1 as
+  Elixir, which is listed under that device.
+related: [m-vave-fm-1]
 image:
   src: /images/devices/erica-synths-lxr-02.webp
   style: photo

@@ -1,0 +1,48 @@
+device: m-vave-smk-37
+name: SMK-37 Pro FL Studio port
+summary: >-
+  Experimental repackaging of the SMK-37 Elite V016 application as a package the Pro accepts, so the Pro can use
+  the Elite's FL Studio display and control integration, with tools for the controller profile.
+description: >-
+  Rights warning: the release package is M-VAVE's Elite V016 application, modified and repackaged, and the
+  repository says M-VAVE's rights remain and its MIT licence does not cover it. The author states it is not an
+  M-VAVE release. The builder takes the official Pro and Elite V016 packages, puts the Elite application into
+  the Pro's outer package and changes two identity strings, so the unit reports as SMK-37 Pro build 916 while
+  keeping the Elite's USB names. The repository also holds a converter for the controller profile, a guarded
+  tool that backs up and restores the profile over MIDI, and patches for the Elite FL Studio script. The
+  author tested it on one Pro with Windows and FL Studio 2025 and lists the knobs, faders, record button, power
+  cycle behaviour and the way back to stock as unchecked. The package is installed with a restricted community
+  loader and an engineering host that the repository does not include; it has no portable flasher.
+status: active
+authors:
+- name: Kriton Georgiou (kritonpc)
+  url: https://github.com/kritonpc
+source: https://github.com/kritonpc/smk37-pro-fl-port
+source_status: patcher-only
+license: MIT
+license_notes: >-
+  MIT covers the author's builder, profile tools and documentation. The firmware package in the releases is a
+  modified M-VAVE Elite application (705,252 bytes, git blob 6425d7c, not one of the V16 files M-VAVE licenses
+  for redistribution in m-vave/smk37_open), and THIRD_PARTY.md says it keeps the manufacturer's rights.
+distribution: download
+requires_stock: SMK-37 Pro V016; the Elite V016 package is also needed to reproduce the build
+install_notes: >-
+  docs/SETUP.md and docs/INSTALLATION.md describe an advanced procedure: back up the unit, install the package
+  with a community loader and then apply the controller profile and FL Studio script. Route MIDI so that the
+  Elite script runs on the second MIDI input only, or toggles fire twice. The author states that returning to
+  Pro firmware has not been tried after the change, and that no full recovery was exercised.
+brick_risk: true
+tags: [patch, controller-mode, scripting, config-tool]
+versions:
+- version: v0.1.2-experimental
+  date: 2026-10-15
+  url: https://github.com/kritonpc/smk37-pro-fl-port/releases/tag/v0.1.2-experimental
+  notes: Fixes knobs jumping to the limits by correcting the profile's encoder value; the firmware stays build 916.
+- version: v0.1.1-experimental
+  date: 2026-10-15
+  url: https://github.com/kritonpc/smk37-pro-fl-port/releases/tag/v0.1.1-experimental
+  notes: Profile and script fixes for keyboard notes, left and right buttons and SEQ PLAY; firmware unchanged.
+- version: v0.1.0-experimental
+  date: 2026-10-15
+  url: https://github.com/kritonpc/smk37-pro-fl-port/releases/tag/v0.1.0-experimental
+  notes: First release, firmware build 916.

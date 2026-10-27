@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: AMARU OS
+summary: >-
+  Four-track generative firmware for hard dance genres on the FM-1, derived from Bunker Evolved: a seeded generator
+  for tekno, acid, hardcore, jungle, drum and bass and psytrance with a choice of synthesis engines per track.
+description: >-
+  A derivative of Bunker Evolved that keeps its pages and adds a GEN page, where genre, seed, energy and form
+  (a loop of one, two or four bars) set a repeatable pattern; the OCT keys step the seed or reset it. The tracks are
+  named AIR, MELODY, ROOT and SPARK, and any engine (analog, phase, grain, FM6, formant, physical, noise, lo-fi or
+  sample) can be placed on any track. The genre rules are modelled on JIANT's generator and some timbres are
+  parameter shapes taken from Carnac OS and Mycelium, with no binaries from either. It has three monochrome
+  palettes and a browser emulator. The README says it was tested on a real FM-1, while the quick-start guide says
+  hardware validation is still pending, and no release or flashable package is published yet.
+status: active
+authors:
+- name: Marco Casanova (MarcoCasanova00)
+  url: https://github.com/MarcoCasanova00
+source: https://github.com/MarcoCasanova00/amaru-os
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and docs/ATTRIBUTION.md, inherited from Bunker Evolved and Felucca. Felucca-Engines is MIT,
+  msfa is Apache-2.0, the samples are CC0 and the fonts are SIL OFL; the logo artwork is by the author.
+homepage: https://marcocasanova00.github.io/amaru-os/
+distribution: source-only
+requires_stock: V15
+install_notes: >-
+  The repository publishes source only, with firmware/BUILDING.md for the build. The project site has an
+  emulator and an install page that checks a package's hash and size before flashing over WebMIDI. Back up V15
+  first. Holding OCT- at power-on opens the update-mode recovery, and docs/RESCUE.md names the rescue tools.
+brick_risk: true
+tags: [generative, sequencer, synth-engine, drums, fork, emulator]
+image:
+  url: https://raw.githubusercontent.com/MarcoCasanova00/amaru-os/main/firmware/web/emu/logos/logo-splash.png
+  alt: "AMARU OS splash logo: the words AMARU OS in a jagged graffiti lettering under a halo"
+  credit: Marco Casanova
+  source_url: https://github.com/MarcoCasanova00/amaru-os
+  first_party: true
+versions:
+- version: main @ 0be50cb
+  date: 2026-10-27
+  url: https://github.com/MarcoCasanova00/amaru-os/commit/0be50cb519c54174f7cf8395c51111f1b0ad0a37
+  notes: No tagged releases; this is the latest commit.

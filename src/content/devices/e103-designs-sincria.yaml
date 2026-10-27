@@ -1,0 +1,29 @@
+name: SINCRIA
+manufacturer: E103-designs
+category: eurorack
+tagline: Eurorack cellular automata sequencer with an 8x8 LED matrix and an Arduino-based controller
+description: >-
+  SINCRIA is a Eurorack module from E103-designs that runs a Conway-style cellular automaton
+  on an 8x8 LED matrix and scans the grid in 64 steps, turning living cells into clock, gate and
+  generation-end events. It has an internal 60 to 200 BPM clock or an external clock input, and
+  buttons to randomise, lock, rotate, spawn and kill cells. The firmware targets an Arduino
+  Nano-style AVR and a MAX7219 display driver.
+platform: ATmega328P (Arduino Nano) with MAX7219 LED driver
+links:
+  manufacturer: https://github.com/E103-designs/SINCRIA
+notes: >-
+  The repository publishes the firmware, a user guide and photos. Its schematics folder says the
+  corrected schematic and editable CAD files are still to be uploaded, and that the published
+  sketch has not been checked against the newest PCB revision, so confirm the board and MCU
+  before uploading.
+related: []
+image:
+  src: /images/devices/e103-designs-sincria.webp
+  style: photo
+  alt: Front panel of the black SINCRIA module on a wooden surface, with an 8x8 LED matrix, a tempo knob, a clock switch and rows of jacks and white buttons for NewGame, Lock, Rotate, Spawn and Kill
+  width: 800
+  height: 1423
+  credit: E103-designs
+  license: project photo, published in the official SINCRIA repository
+  source_url: https://github.com/E103-designs/SINCRIA
+  original_url: https://raw.githubusercontent.com/E103-designs/SINCRIA/main/images/front.jpg

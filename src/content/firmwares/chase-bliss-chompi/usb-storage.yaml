@@ -1,0 +1,50 @@
+device: chase-bliss-chompi
+name: CHOMPI USB Storage
+summary: Utility firmware that makes the CHOMPI's microSD card appear on a computer as a USB drive, so recordings and audio files can be moved without taking the card out.
+description: >-
+  The CHOMPI shows up as a standard USB mass storage device on its USB-C port, named CHOMPI-SD,
+  so Windows and macOS need no driver; the README says it was verified on Windows only. Ejecting
+  the drive restarts the unit, which brings back the Multi-Firmware Launcher picker if that is
+  installed, and the Overdub and Chompi keys offer a confirmed restart as well. At start-up the
+  bottom row of keys lights in blue to show how full the card is. It is not an instrument and does
+  not add USB access to TAPE, TEMPO or WAVE. The same build is bundled in Multi-Firmware Launcher
+  1.1 and later.
+status: active
+authors:
+  - name: lnetzel
+    url: https://github.com/lnetzel
+source: https://github.com/lnetzel/CHOMPI-lnetzel/tree/main/firmware/chompi-usb-storage
+source_status: open
+license: MIT
+license_notes: >-
+  The repository's LICENSE file names CHOMPI Club as copyright holder; the CHOMPI name and marks
+  are not covered, see TRADEMARKS.md.
+homepage: https://github.com/lnetzel/CHOMPI-lnetzel/releases
+distribution: download
+requires_stock: TAPE 2.0
+install_notes: >-
+  Download the .bin from a release and put it on the SD card as the only .bin in the root, then
+  power on; the LEDs turn green when the drive can be connected. Eject the drive on the computer
+  before unplugging. To return to an instrument, put that firmware's .bin on the card, or use the
+  Multi-Firmware Launcher.
+brick_risk: false
+tags: [utility, usb, sd-card]
+video:
+  url: https://www.youtube.com/watch?v=G-hG1segknY
+  title: CHOMPI USB Storage 1.5 firmware
+  credit: Lars Netzel
+  first_party: true
+  found_via: https://github.com/lnetzel/CHOMPI-lnetzel/releases/tag/usb-storage-v1.5
+versions:
+  - version: usb-storage-v1.6
+    date: 2026-10-09
+    url: https://github.com/lnetzel/CHOMPI-lnetzel/releases/tag/usb-storage-v1.6
+    notes: Ejecting the drive on the computer restarts the CHOMPI.
+  - version: usb-storage-v1.5
+    date: 2026-10-04
+    url: https://github.com/lnetzel/CHOMPI-lnetzel/releases/tag/usb-storage-v1.5
+    notes: Adds a confirmed restart from the Overdub key and the blue disk-usage bar at start-up.
+  - version: usb-storage-v1.0
+    date: 2026-10-02
+    url: https://github.com/lnetzel/CHOMPI-lnetzel/tree/usb-storage-v1.0
+    notes: Git tag; no GitHub release page.

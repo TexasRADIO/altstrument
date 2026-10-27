@@ -1,0 +1,38 @@
+device: m-vave-smk-37
+name: SMK-zp12
+summary: >-
+  Port of zvenson's zp12 12-bit sampling drum machine to the SMK-37, with the SMK's keys, pads, encoders and faders
+  wired in, plus scale and chord modes and a MIDI controller mode. Source only, with a CI build.
+description: >-
+  A fork of zp12 2.4.4 that adds an SMK-37 board layer: input handling for the keyboard's keys, pads, encoders, faders
+  and wheels, the SMK's flash map and LCD code, a USB and TRS MIDI path, and changes in the zp12 application itself.
+  Those add a scale quantizer, chord entry and a MIDI mode in the style of the SMK-dee port, with banks
+  for knobs, faders and pads. The README is still zp12's own text for the FM-1 and does not describe the port, so
+  its controls and state are not documented; the repository description calls it an attempt. A GitHub Actions
+  workflow builds the SMK-37 packages (identity SMK-37 Pro_970) and uploads them as workflow artifacts; there
+  are no releases.
+status: active
+authors:
+- name: djStrombo
+  url: https://github.com/djStrombo
+- name: Sven Trogus (zvenson)
+  url: https://github.com/zvenson
+source: https://github.com/djStrombo/smk-zp12
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from zp12 and SLOOP: the licensing notes say GPL-3.0-only for the code, with the assets covered separately
+  in LICENSING.md.
+homepage: https://github.com/djStrombo/smk-zp12
+distribution: source-only
+install_notes: >-
+  Build with tools/build.py --board smk37 (JieLi toolchain and the AC79 SDK tools needed; the workflow shows the
+  steps). The repository has no installer script of its own and no install steps for the SMK-37, so work out the
+  flashing route yourself and take a full flash backup first. Flashing is at your own risk.
+brick_risk: true
+tags: [drums, sampler, sequencer, scales, chords, midi, fork]
+versions:
+- version: main @ 587a831
+  date: 2026-10-20
+  url: https://github.com/djStrombo/smk-zp12/commit/587a8316287ecc2c6f98f3686e201c64d6cfeb07
+  notes: No tagged releases; this is the latest commit.

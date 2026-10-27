@@ -1,0 +1,48 @@
+device: m-vave-smk-37
+name: FMEL-1 SMK-37
+summary: >-
+  AntonioAltea's Mellotron M400 firmware FMEL-1 on the SMK-37: all 37 keys play the tapes with velocity, the pads switch
+  sounds, layers and effects, and the faders and wheels shape the tape.
+description: >-
+  Rights warning: the Mellotron M400S tape samples inside every build are Bernie Kornowicz's (Taijiguy), used under
+  the sample author's terms that they are free to use but not in anything commercial, so they are not GPL and the packages must not be
+  sold.
+
+  Lives on the smk37 branch of the genkigenki/fmel-1 fork. It is FMEL-1 0.1-beta with the FM-1 build unchanged and
+  the SMK-37 code behind a BOARD_SMK37 switch. Pads 1 to 4 pick the sound, pads 5 to 8 the layer, and the others
+  toggle lo-fi, vibrato, Leslie, echo, reverb, half speed and tape length. Two fader banks set mix, tone, wow and
+  flutter, then age, drive, echo and reverb. The pitch wheel runs the tape motor and the mod wheel sets vibrato.
+  The 37 keys cover the M400's 35 notes with the pitch lowered. The TRS jack is not used, so MIDI comes in over USB only.
+status: active
+authors:
+- name: genkigenki
+  url: https://github.com/genkigenki
+- name: AntonioAltea
+  url: https://github.com/AntonioAltea
+source: https://github.com/genkigenki/fmel-1/tree/smk37
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Code is GPL-3.0-only as FMEL-1 (README, LICENSING.md). The tape samples are not GPL: their author's terms are "free
+  to use, but cannot be used in any commercial, for profit software". The sprite drawings are used with their artist's
+  permission.
+homepage: https://genkigenki.github.io/smk37/
+distribution: browser-installer
+install_notes: >-
+  Installs from the browser at genkigenki.github.io/smk37, or with tools/fm1_install.py and the package for your model
+  (build with BOARD=smk37, adding MODEL=elite or MODEL=mke); the installer stops over another custom firmware unless
+  told otherwise. Holding OCTAVE- at power-on gives the USB rescue. Unofficial; install at
+  your own risk.
+brick_risk: true
+tags: [synth-engine, sampler, fx, performance, fork]
+image:
+  url: https://genkigenki.github.io/smk37/assets/shot-fmel.png
+  alt: "FMEL-1 PLAY page on the SMK-37 display: a drawn bird playing a flute above a keyboard strip and four knob values"
+  credit: genkigenki
+  source_url: https://genkigenki.github.io/smk37/
+  first_party: true
+versions:
+- version: smk37 @ 5796e07
+  date: 2026-10-17
+  url: https://github.com/genkigenki/fmel-1/commit/5796e078be4bbbc57c5508de4890f907d8d9c8c9
+  notes: No tagged releases; this is the latest commit on the smk37 branch.

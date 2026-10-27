@@ -1,0 +1,33 @@
+device: m5stack-cardputer
+name: m5-cardputer-midi
+summary: >-
+  ESP-IDF firmware for the Cardputer that is a USB-MIDI keyboard, a four-track six-operator FM synth, a step recorder and
+  sequencer, and a browser-based FM editor served over Wi-Fi.
+description: >-
+  The Cardputer keys play notes and send them as USB-MIDI, and the same events drive an on-board FM synthesizer with
+  four tracks of six operators each, four waveforms, per-operator envelopes and a routing matrix between operators.
+  A sequencer records and plays back each track at 20 to 300 BPM, up to 64 steps. Sound is produced through the ES8311
+  audio codec, and the project's drivers also cover the TCA8418 keyboard controller, the BMI270 motion sensor and the
+  ST7789 display, which are the parts of the Cardputer ADV. The device serves a web page, over its own access point or a
+  joined network, that edits the operators, envelopes and levels live. The README is a short project-layout note and does
+  not describe these features, and the commit messages are in Chinese.
+status: active
+authors:
+- name: OcislyO
+  url: https://github.com/OcislyO
+source: https://github.com/OcislyO/m5-cardputer-midi
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file and the README makes no license statement.
+distribution: source-only
+requires_stock: Probably the Cardputer ADV, judging by the ES8311 and TCA8418 drivers; the README names only the Cardputer
+install_notes: >-
+  Build with ESP-IDF for the esp32s3 target (idf.py set-target esp32s3, idf.py build) and flash over USB with idf.py flash.
+  The build replaces the app on the Cardputer; no prebuilt image is published.
+brick_risk: false
+tags: [synth-engine, fm, sequencer, midi, usb-midi, editor, wifi, open-source]
+versions:
+- version: main @ 9f2fbbe
+  date: 2026-10-27
+  url: https://github.com/OcislyO/m5-cardputer-midi/commit/9f2fbbe2ae25fe5f8fad1d7f3c1e6df9f0583d96
+  notes: No tagged releases; this is the latest commit.

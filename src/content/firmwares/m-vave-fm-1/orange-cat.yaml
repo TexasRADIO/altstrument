@@ -1,0 +1,43 @@
+device: m-vave-fm-1
+name: Orange Cat
+summary: >-
+  Melodee 1.4.5 fork that swaps Melodee's engines for Plaits and Braids ports and replaces its sequencer with a
+  tracker: shared phrase pool, chains, a song grid, and takes frozen to an SD card.
+description: >-
+  Rights warning: the repository still bundles the 64 Casio CZ-1 factory tones and the 200 Sequential
+  Prophet-5/10 factory programs as sound data, as Melodee does; its licensing file says the rights stay with Casio
+  and Sequential and that no licence is granted. Orange Cat takes Skiff's pattern-pool arrangement and works it
+  like the M8 and LSDJ: 64 shared phrases of up to 64 steps, 16-slot chains with repeat counts, and a 64-row
+  song with a chain per track. A tracker page edits a phrase as rows with four note columns, velocity and
+  per-step effects (ratchet, chance, condition, nudge, slide, accent), and a performance page handles scenes and
+  staged mutes. Melodee's engines were removed in stages and replaced by MACRO, fourteen models ported from
+  Plaits, and SHAPES, the 47 shapes of Braids. The FM-1 reads WAV files from a USB card reader or hub on
+  powered USB, so a track can be frozen to a stereo take on the card and played back from a phrase. The spec
+  and build documents call the project early; the default branch has no releases, and effects and the clip
+  browser come from the work on branches such as fx-jiant. Melodee's own README still follows Orange Cat's in
+  the repository.
+status: active
+authors:
+- name: seattleuser0
+  url: https://github.com/seattleuser0
+source: https://github.com/seattleuser0/orangecat
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Melodee and Felucca (LICENSING.md). Plaits, Braids, stmlib, DaisySP and Rings are MIT, the fonts
+  and some ported code keep their own licences (LICENSES/), and the CZ-1 and Prophet-5/10 factory sound data is
+  Casio's and Sequential's, with no licence granted.
+homepage: https://seattleuser0.github.io/OrangeCat/
+distribution: browser-installer
+install_notes: >-
+  The project site has a web installer for the latest build of main, and a web editor. Builds run on GitHub
+  Actions through zvenson's fm1-build. The installer is Melodee's and offers a backup first and a way back to V15,
+  but the README says the firmware is early and installing is at your own risk. The card features need a USB card
+  reader on a powered hub.
+brick_risk: true
+tags: [tracker, sequencer, synth-engine, fork, sampler, editor]
+versions:
+- version: main @ 19271b0
+  date: 2026-10-23
+  url: https://github.com/seattleuser0/orangecat/commit/19271b03707c7a09a8c35ba522ff7456a91dc5b4
+  notes: No tagged releases; this is the latest commit.

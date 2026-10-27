@@ -1,0 +1,33 @@
+device: m-vave-fm-1
+name: SLOOP Editor Desktop
+kind: tool
+summary: >-
+  Unofficial Electron wrapper that runs the SLOOP web editor as a Windows or macOS app with the editor files
+  bundled, so it works offline and connects to an FM-1 over Web MIDI and SysEx.
+description: >-
+  The editor code comes from isod89's SLOOP repository at a pinned commit; the wrapper adds the app window, MIDI
+  permission handling, installer configuration and an icon, and points the editor's firmware installer link at the
+  original project's page, which opens in the default browser. It needs an FM-1 already running SLOOP. The README
+  says the Windows packages are unsigned, the macOS packages are neither signed nor notarised, and a connection to a
+  real FM-1 on macOS has not been tested. The README is in Chinese and English.
+status: active
+authors:
+- name: Catnip233
+  url: https://github.com/Catnip233
+source: https://github.com/Catnip233/sloop-editor-desktop
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from SLOOP; THIRD_PARTY_NOTICES.md and the font licences in app/ cover bundled parts.
+distribution: download
+requires_stock: A SLOOP build on the FM-1
+install_notes: >-
+  Download the Windows installer or portable build, or the macOS arm64 or x64 disk image, from the releases page. The
+  FM-1 connects by USB; click connect in the bottom-left corner of the editor.
+brick_risk: false
+tags: [editor, utility, midi, sysex]
+versions:
+- version: 2.5.0
+  date: 2026-10-10
+  url: https://github.com/Catnip233/sloop-editor-desktop/releases/tag/v2.5.0
+  notes: Windows installer and portable builds plus macOS arm64 and x64 images, wrapping the SLOOP editor.

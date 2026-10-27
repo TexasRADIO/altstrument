@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: FM1 Editor (Alexander Seel)
+kind: tool
+summary: >-
+  React and TypeScript web editor and librarian for the FM-1 and, as a separate mode, a stock Yamaha DX7: DX7 voice editing,
+  bank merging, a patch library, a SysEx monitor, FM-1 effects control and a small sequencer.
+description: >-
+  Rights warning: the repository tracks a ZIP of DX7 SysEx banks and can mirror the banks listed on a Yamaha DX7 patch page,
+  so it carries patches written by third parties whose terms it does not state.
+
+  The target mode is chosen per session and the FM-1 and DX7 operations are kept apart. Voices have a graphical six-operator
+  editor, and imported SysEx is checked with byte-level diagnostics and kept unchanged for download. The FM-1 is documented to
+  take whole 32-voice banks only, so the editor merges the edited voice into a bank you load first, exports the
+  original as a recovery copy and sends the merged bank for you to pick A, B, C or D on the unit. Sending a single voice was
+  disabled after hardware tests left the FM-1 silent. The patch library lives in the browser, and the page also has FM-1 effect
+  CC controls, a virtual keyboard, USB audio recording and a 16-step sequencer. There is no hosted copy; run it with npm.
+  The README says DX7 hardware reception is unverified.
+status: active
+authors:
+- name: Alexander Seel (AlexanderSeel)
+  url: https://github.com/AlexanderSeel
+source: https://github.com/AlexanderSeel/fm1editor
+source_status: open
+license: MIT
+license_notes: >-
+  The MIT licence covers the editor. The tracked sysexFinal.zip and the mirrored DX7 banks are third-party patch data.
+homepage: https://github.com/AlexanderSeel/fm1editor
+distribution: source-only
+install_notes: >-
+  npm install, then npm run dev; Web MIDI and SysEx need Chrome or Edge on localhost or https. It does not flash firmware.
+  Keep a backup bank of the FM-1 before sending, since a send replaces the whole bank.
+brick_risk: false
+tags: [editor, librarian, sysex, midi, web]
+versions:
+- version: main @ 8661fa2
+  date: 2026-08-12
+  url: https://github.com/AlexanderSeel/fm1editor/commit/8661fa21a6af1cefdbe814d1875ba93f28f9d63c
+  notes: No tagged releases; this is the latest commit.

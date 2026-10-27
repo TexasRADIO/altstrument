@@ -1,0 +1,39 @@
+device: arturia-beatstep-pro
+name: BeatStep Pro custom firmware
+summary: Browser patcher and tooling that adds per-step chance and conditions, drum ratchets and chord steps to your own BeatStep Pro 2.0.1.6 update file; the chord build has not run on a device yet.
+description: >-
+  A patch page builds a modified .led update file in the browser from the official 2.0.1.6 file
+  you supply, and only offers a result that is byte for byte a build the author tested. The
+  step chance and conditions mod lets a SEQ1, SEQ2 or DRUM step play with a set chance or on
+  chosen passes, such as every second pass or only the first, saved with the pattern. DRUM steps
+  can ratchet two, four or eight times inside the step. A separate chords mod adds up to four
+  notes per SEQ1 or SEQ2 step and is not yet offered on the page. The author reports that
+  version 1.4.7 of the chance mod runs on one unit and that other behaviours are checked in an
+  emulator only. The repository also holds C patch sources, a .led pack and unpack tool, a
+  Ghidra export helper and a one-off bootloader dump build. It contains no Arturia files. The
+  superMIDI controller-mode patch is built with this tooling.
+status: active
+authors:
+  - name: angellinares
+    url: https://github.com/angellinares
+source: https://github.com/angellinares/bstp_firmware_explore
+source_status: open
+license: unspecified
+license_notes: The repository has no license file and its README states no license.
+homepage: https://angellinares.github.io/bstp_firmware_explore/
+distribution: patch-your-own
+requires_stock: 2.0.1.6
+install_notes: >-
+  Back up all projects with MIDI Control Center first, and install Arturia's own 2.0.1.6 file once
+  to confirm the way back works. Download BeatStepPro_Firmware_Update_2_0_1_6.led from Arturia,
+  load it into the patch page, and install the modified file with MIDI Control Center like any
+  update. If the unit does not start, hold PLAY, STOP and RECORD while switching it on to reach the
+  updater. The author warns that a mod changes how patterns are stored and a fault could damage or
+  erase them.
+brick_risk: true
+tags: [patch, sequencer, web, chords]
+versions:
+  - version: main @ b08fe4a
+    date: 2026-10-17
+    url: https://github.com/angellinares/bstp_firmware_explore/commit/b08fe4a78ae59bf9afc78fb9ce41715edb7dc809
+    notes: No tagged releases; this is the latest commit. The patch page offers step chance and conditions 1.4.7.

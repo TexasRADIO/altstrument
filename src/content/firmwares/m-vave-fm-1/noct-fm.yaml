@@ -4,7 +4,7 @@ summary: >-
   MIDI controller firmware for the FM-1 with an animated pixel-world screen and DAW control for FL Studio and Ableton
   Live, plus pages for chords, a phrase generator, rhythm, an arpeggiator and clock sync, with DAW scripts for both.
 description: >-
-  Modifies CTL-1. It is one permanent MIDI preset (the README calls the project NOCT / AFTERGLOW 0.6.0). The HOME page
+  Modifies CTL-1. It is one permanent MIDI preset (the README calls the project NOCT / AFTERGLOW 0.7.1). The HOME page
   sends fixed CCs 20 to 23 on MIDI channel 16 for volume, pan and two further DAW controls, with transport, record, panic,
   sustain and modulation, and notes go out on channel 1 from a chromatic keyboard. The PRESETS knob steps through pages
   for chords, a four-bar melody and chord generator, a rhythm generator, an arpeggiator and clock sync (automatic,
@@ -44,7 +44,7 @@ image:
   source_url: https://github.com/Joolo09/noct-fm
   first_party: true
 versions:
-- version: main @ ae3facb
+- version: main @ c0858e0
   date: 2026-10-26
-  url: https://github.com/Joolo09/noct-fm/commit/ae3facbf19fdcc24f2d9cefa3ab2e4e34444cc1c
-  notes: No tagged releases; this is the latest commit. The README names version 0.6.0.
+  url: https://github.com/Joolo09/noct-fm/commit/c0858e022b82b71fe15d5ec257676c45286a581f
+  notes: No tagged releases; this is the latest commit. The README names version 0.7.1.

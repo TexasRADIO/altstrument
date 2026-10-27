@@ -1,0 +1,35 @@
+device: m-vave-fm-1
+name: SLOOP Maqam
+summary: >-
+  SLOOP 2.6 fork that adds a 24-note quarter-tone grid with 52 Western, Turkish makam, Arabic maqam and Indian
+  raga scales, per-step pitch bends and a browser installer and emulator.
+description: >-
+  Starts from SLOOP 2.3 and merges upstream 2.6, so the groovebox itself is SLOOP's. The addition is microtonal
+  pitch: hold SEL to open a key layer that picks the scale set, the scale and an equal or traditional tuning, with
+  24 roots, ascending and descending forms, and quarter-tone keys played with OCT- or OCT+ and a key. A step's
+  bend is a lockable CENT parameter, and the web editor reads and writes quarter-tone notes. The repository
+  carries a visual guide to the scale screens, a Maqam splash screen with its own font, a browser emulator of the
+  firmware with Web MIDI input, and a GitHub Pages workflow that builds an installer with this firmware and
+  previews of pull requests. It has not followed SLOOP past 2.6.
+status: active
+authors:
+- name: Vikram Rojo (vikramrojo)
+  url: https://github.com/vikramrojo
+source: https://github.com/vikramrojo/maqam-dev
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from SLOOP and Felucca; the icon atlas and panel image are separate assets and msfa is Apache-2.0
+  (LICENSING.md).
+homepage: https://vikramrojo.github.io/maqam-dev/
+distribution: browser-installer
+install_notes: >-
+  The project site has a browser installer with this firmware, used in Chrome or Edge over USB, and an emulator.
+  SLOOP's own advice applies: holding OCT- alone while powering on enters the USB rescue.
+brick_risk: true
+tags: [scales, midi, fork, emulator, editor]
+versions:
+- version: main @ 8bd7db8
+  date: 2026-10-16
+  url: https://github.com/vikramrojo/maqam-dev/commit/8bd7db8492ccf13b5e9e63d421653894ae9cbbb2
+  notes: No tagged releases; this is the latest commit.

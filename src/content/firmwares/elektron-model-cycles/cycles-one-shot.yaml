@@ -8,11 +8,13 @@ description: >-
   output rate followed by the Cycles' own 2:1 decimator, with short fades at
   the edges of a trig. A one-knob lowpass and highpass with resonance follows
   measured Model:Samples behaviour and is built from scratch. A waveform view
-  replaces the main screen on SAMPLE tracks. Looping and reverse playback are
-  listed as still to come. The author states the build was tested on a
-  Model:Cycles and in the digiemu emulator. The same SAMPLE machine is
-  offered in the model27 web flasher; this entry covers the command-line
-  build. The build needs a clone of Modded Cycles, and SAMPLE
+  replaces the main screen on SAMPLE tracks. Since 0.11 the machine can loop
+  and play in reverse, but only in model27 builds, whose shortcut layer
+  switches them with RETRIG + PUNCH and RETRIG + GATE; this entry's own image
+  has no such layer and still plays one shot, forward. The author states the
+  build was tested on a Model:Cycles and in the digiemu emulator. The same
+  SAMPLE machine is offered in the model27 web flasher; this entry covers the
+  command-line build. The build needs a clone of Modded Cycles, and SAMPLE
   cannot yet be combined with other machine-adding tweaks or with Model-TG.
   The included upload page puts audio files on the +Drive from Chrome or Edge
   and works with the official OS as well.
@@ -42,6 +44,10 @@ install_notes: >-
   Elektron Transfer, which would otherwise hold the MIDI port.
 tags: [machines, sampler, filter, samples, web]
 versions:
+  - version: v0.11
+    date: 2026-10-26
+    url: https://github.com/durchgemacht/cycles-one-shot/tree/v0.11
+    notes: Git tag; no GitHub release page. Adds loop and reverse playback in builds that have the shortcut layer, and a short fade-in when a trig cuts a note that is still sounding.
   - version: v0.10
     date: 2026-10-25
     url: https://github.com/durchgemacht/cycles-one-shot/tree/v0.10

@@ -1,0 +1,49 @@
+device: m-vave-fm-1
+name: FM-1 Emulator (w0ts fork)
+kind: tool
+summary: >-
+  Fork of Simon Johansson's FM-1 emulator that runs Felucca, SLOOP, Melodee, X0X, Optimist and other community
+  firmware in a desktop app with knobs, audio, LEDs, a web-editor bridge and an emulated SD card.
+description: >-
+  Adds CPU instruction forms that current community builds use, a USB-MIDI host with a local bridge to a firmware's own
+  web editor, TRS MIDI input, a USB audio host, an interpreter several times faster than upstream, panel themes, remembered
+  settings, flash kept between runs and an SD card on the LCD's SPI bus for Optimist's SD mod. The README says upstream
+  cannot run several of these firmwares. It also ships headless tools for scripted panel sessions, benchmarks and finding
+  undecoded instructions. The README presents the fork as temporary and lists five upstream pull requests carrying the same
+  work. Desktop builds are published for macOS on Apple silicon, Windows and Linux. No firmware is included; you load a
+  .fwsc, .elf or .bin. The repository moved from hdavid to w0ts.
+status: active
+authors:
+- name: w0ts
+  url: https://github.com/w0ts
+- name: Simon Johansson (simonjohansson)
+  url: https://github.com/simonjohansson
+source: https://github.com/w0ts/fm1-emulator
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The fork's LICENSE and Cargo.toml say GPL-3.0-only. Upstream's LICENSE is GPL-2.0, and LICENSES/ holds the JieLi SDK's
+  Apache-2.0 text.
+distribution: download
+install_notes: >-
+  Download the archive for your system from the releases page, which publishes a build per commit, or build with mise.
+  The macOS app is not signed or notarised. The project does not bundle firmware.
+brick_risk: false
+tags: [emulator, fork, research]
+image:
+  url: https://raw.githubusercontent.com/w0ts/fm1-emulator/feat/upstream-merge/docs/felucca.jpg
+  alt: >-
+    The FM-1 emulator window running felucca.bin, with a drawn dark panel, six rotary knobs, a small screen showing
+    ANALOG ACID parameters, button rows and a two-row key strip.
+  credit: w0ts
+  source_url: https://github.com/w0ts/fm1-emulator#readme
+  first_party: true
+versions:
+- version: commit-14aecb9
+  date: 2026-10-26
+  url: https://github.com/w0ts/fm1-emulator/releases/tag/commit-14aecb91031998cf0742b3cc0a94bcfe868c1698
+  notes: Per-commit build of the feat/upstream-merge branch; adds an SD card on the LCD's SPI bus.
+- version: commit-6ce95ec
+  date: 2026-10-08
+  url: https://github.com/w0ts/fm1-emulator/releases/tag/commit-6ce95ec7b3d24cf49678072b560167686f060f2b
+  notes: Per-commit build.

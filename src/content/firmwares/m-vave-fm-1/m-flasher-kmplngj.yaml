@@ -6,8 +6,7 @@ summary: >-
   read-only FM-1 reader to upstream's backup, restore and flashing through download mode.
 description: >-
   A GitHub fork of jvitkauskas/m-flasher created on 2026-10-21, after the owner renamed the previous repository at this
-  address to m-flasher-legacy (catalogued separately as M-Flasher (Kampling legacy)) and upstream was recreated with a
-  new history. It starts from upstream 0.5.1 and ports the earlier additions: inspect, verify and dry-plan commands that
+  address to m-flasher-legacy (since deleted or made private) and upstream was recreated with a new history. It starts from upstream 0.5.1 and ports the earlier additions: inspect, verify and dry-plan commands that
   check saved dumps and packages without any device attached, an opt-in RAM reader and a raw-backup procedure for the FM-1,
   and the offline test setup. Upstream's m-bootloader builds, download mode over USB MIDI and the SCSI byte-count handling
   are kept. The native MIDI command line for Felucca packages is left out, and Felucca uses its Python updater instead.

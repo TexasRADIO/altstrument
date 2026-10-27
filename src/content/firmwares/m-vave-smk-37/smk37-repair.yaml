@@ -1,0 +1,38 @@
+device: m-vave-smk-37
+name: SMK-37 Repair
+summary: >-
+  Small firmware that repairs M-VAVE's damaged key mapping on the SMK-37 while keeping the keyboard's calibration, wheel
+  values and Bluetooth pairings, driven from a repair page on the genkigenki SMK-37 site.
+description: >-
+  For one case: after going back to M-VAVE's firmware, every key reads C and the synth is silent. M-VAVE's firmware
+  rebuilds a clean mapping when its end marker is missing, but the rebuild erases the calibration, the pairings and the
+  wheel values next to it. This firmware copies those to a free flash area, releases the stock marker, and after M-VAVE's V016
+  has rebuilt the mapping writes them back, verifies them and erases its copy. It writes nothing at start,
+  acts only on a SysEx command from the page (or SEQ PLAY held for 3 seconds), and never touches the boot area, the USR area
+  or the last sector. The page runs the whole sequence, which installs this firmware and M-VAVE's V016 file twice
+  in turn, in about ten minutes; you download V016 from M-VAVE yourself. It builds on fm1-base and felucca-bsp
+  and covers the Pro, Elite and MKE-P37 names.
+status: active
+authors:
+- name: genkigenki
+  url: https://github.com/genkigenki
+source: https://github.com/genkigenki/smk37-repair
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  The LICENSE file is MPL-2.0. The base/ directory carries fm1-base (Charles Vestal) and felucca-bsp (Leo Kuroshita,
+  Hügelton Instruments) with their licences.
+homepage: https://genkigenki.github.io/smk37/help.html
+distribution: browser-installer
+requires_stock: M-VAVE SMK-37 V016 (the page asks you to supply the file)
+install_notes: >-
+  Use the Repair section of the help page in Chrome or Edge with the keyboard on USB; it asks for M-VAVE's V016 file,
+  which it does not host. If it stops, press Repair again and it carries on where it stopped. The README says a power cut
+  at any step leaves a state the page can continue from, tested on a simulated flash. Unofficial; at your own risk.
+brick_risk: true
+tags: [flasher, utility, patch]
+versions:
+- version: main @ 622f71e
+  date: 2026-10-17
+  url: https://github.com/genkigenki/smk37-repair/commit/622f71e
+  notes: No tagged releases; this is the latest commit (SMK-37 Repair 0.1.1).

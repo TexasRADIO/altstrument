@@ -39,7 +39,7 @@ image:
   source_url: https://nzimas.github.io/norilsk/screens.html
   first_party: true
 versions:
-- version: main @ 9cfe946
-  date: 2026-10-26
-  url: https://github.com/nzimas/norilsk/commit/9cfe946e553b605fc2f08563c2004e23a0f320a6
+- version: main @ 4476c4b
+  date: 2026-10-27
+  url: https://github.com/nzimas/norilsk/commit/4476c4ba08556d1ec688f923966ab7046bb0a0f5
   notes: No tagged releases; this is the latest commit. The changelog and installer name build 40 as the newest.

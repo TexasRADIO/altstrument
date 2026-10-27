@@ -1,14 +1,20 @@
 device: arturia-microfreak
 name: FreakSwap
-summary: Browser tool that prepares a modified MicroFreak firmware file in which one of the original synth engines is replaced by an engine adapted from Mutable Instruments Plaits, applied to your own official 5.0.0.2084 file.
+summary: Browser tool that prepares a modified MicroFreak firmware file with a custom engine lineup, in which original synth engines are replaced by engines adapted from Mutable Instruments Plaits or by a 6-operator FM engine, applied to your own official 5.0.0.2084 file.
 description: >-
-  The page offers 11 replacement engines and a choice of which original engine each one takes over,
-  for 38 combinations in all. The patches are small binary deltas published with the page, applied
-  in the browser to the firmware file you supply; the author states the official file is neither included
-  nor uploaded, and that the result is installed with MIDI Control Center. Presets that use the replaced engine
-  will sound different. The notice file says the engines are adapted from Mutable Instruments Plaits and
-  stmlib code under the MIT licence. The patch data is published but no source for the adapted engines was
-  found, so the source status is patcher-only.
+  The page, now labelled FreakSwap 2.0 (a modular prototype), lets you pick which original
+  engines to replace, from 11 replacement engines plus a 6-operator FM engine, with any of the
+  22 engine slots as a target. A position can also be emptied, which makes it silent and frees
+  space for the replacements. The 6-operator FM engine can import a compatible Yamaha DX7 bank
+  in the browser and use selected presets. The page plays short dry digital reference
+  previews of each engine; they are not recordings of the instrument. The engine modules are
+  published with the page and applied in the browser to the firmware file you supply; the
+  author states the official file is neither included nor uploaded, and that the result is
+  installed with MIDI Control Center. Presets that use a replaced engine will sound different.
+  The notice file says the engines are adapted from Mutable Instruments Plaits and stmlib code
+  under the MIT licence, and that a GPL-2.0 Unicorn emulator, used only for checks in the
+  browser, is not inserted into the firmware. The module data is published but no source for the
+  adapted engines was found, so the source status is patcher-only.
 status: active
 authors:
   - name: doriamxyz
@@ -23,7 +29,7 @@ homepage: https://doriamxyz.github.io/FreakSwap/
 distribution: patch-your-own
 requires_stock: 5.0.0.2084
 install_notes: >-
-  Back up your presets first. Choose an engine and the engine to replace, select your official 5.0.0.2084
+  Back up your presets first. Choose which original positions to replace and the engines to use, select your official 5.0.0.2084
   firmware file, download the modified .mff and its guide, and install it with Arturia MIDI Control
   Center. The author states that installing modified firmware carries a risk of bricking the unit and
   gives no guarantee.

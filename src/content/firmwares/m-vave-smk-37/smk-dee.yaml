@@ -1,0 +1,51 @@
+device: m-vave-smk-37
+name: SMK-dee
+summary: >-
+  Melodee port for the SMK-37 Pro and Elite with an on-the-fly SysEx remapper for its buttons, encoders and faders and
+  a standalone MIDI controller mode with four independent MIDI channels.
+description: >-
+  Rights warning: it inherits Melodee's bundled sound data, the Casio CZ-1 factory tones and the Sequential Prophet-5/10
+  factory programs, whose rights stay with Casio and Sequential and for which the project grants no licence. The
+  repository also carries copies of M-VAVE's V16 packages for the Pro and Elite, which are the files M-VAVE licenses
+  for redistribution.
+
+  Based on Melodee 1.4.1, with the SMK-37's keys, 16 pads, eight encoders, four faders and wheels mapped onto its
+  four-track synth and sequencer. Holding PATCH and PARA for 600 ms switches to a controller mode that sends keys,
+  knobs, faders and pads on separate MIDI channels with two banks of each and assignable CC numbers. A browser page flashes the keyboard, and
+  remaps the buttons and MIDI assignments over USB-MIDI SysEx, either into RAM or saved to flash, so no reflash is
+  needed. The release's defaults are four sounds, and with GLOBE held the pads mute and solo tracks.
+status: active
+authors:
+- name: djStrombo
+  url: https://github.com/djStrombo
+- name: keremimo
+  url: https://github.com/keremimo
+source: https://github.com/djStrombo/SMK-dee
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and LICENSING.md, as Melodee. Ported DSP (DaisySP, Rings: MIT; uPD933: BSD-3-Clause; msfa: Apache-2.0)
+  and fonts keep their own licences (LICENSES/). The CZ-1 factory tones (assets/cz1-factory) and the Prophet-5
+  programs (assets/prophet5-factory) are bundled sound data under their owners' rights. The tree holds SMK-37_Pro_016.fwsc and
+  SMK-37_Elite_016.fwsc, which match M-VAVE's licensed V16 Pro and Elite images (git blobs ad5ff6aa3888 and
+  821236a1292a).
+homepage: https://djstrombo.github.io/SMK-dee/
+distribution: browser-installer
+install_notes: >-
+  Open the web studio in Chrome, Edge or Brave, pick the Pro or Elite package, connect the keyboard and allow Web MIDI
+  SysEx. The same page can flash M-VAVE's V016 back. The command line route is tools/fm1_install.py with
+  web/firmware/smk-dee-pro.fwsc or smk-dee-elite.fwsc. The README calls flashing non-destructive and reversible, but
+  as with any firmware it is at your own risk.
+brick_risk: true
+tags: [synth-engine, sequencer, midi, usb-midi, editor, controller-mode, fork]
+image:
+  url: https://raw.githubusercontent.com/djStrombo/SMK-dee/main/docs/assets/smk37_hardware_guide.png
+  alt: "SMK-dee hardware control guide: a line drawing of the SMK-37 above lists of what each button, encoder and fader does, and the MIDI mode shortcuts"
+  credit: djStrombo
+  source_url: https://github.com/djStrombo/SMK-dee
+  first_party: true
+versions:
+- version: 1.4.2-smk-dee-final
+  date: 2026-10-20
+  url: https://github.com/djStrombo/SMK-dee/releases/tag/v1.4.2-smk-dee-final
+  notes: Final release; curated default sounds, mute and solo on the pads with GLOBE held, SysEx remapper and MIDI controller mode.

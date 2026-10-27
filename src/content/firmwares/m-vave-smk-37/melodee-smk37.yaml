@@ -1,0 +1,51 @@
+device: m-vave-smk-37
+name: Melodee SMK-37
+summary: >-
+  keremimo's Melodee synth and sequencer on the SMK-37 Pro, Elite and MKE-P37: the 16 pads as white keys or a step grid,
+  four fader banks, velocity keys, wheels and TRS MIDI out.
+description: >-
+  Rights warning: Melodee bundles the Casio CZ-1 factory tones and the Sequential Prophet-5/10 factory programs as SysEx
+  sound data compiled in as presets, and its licensing files say those rights stay with Casio and Sequential and no
+  licence is granted.
+
+  Lives on the smk37 branch of the genkigenki/melodee fork, whose latest commit is Melodee 1.4.5 with the SMK-37 target,
+  and is offered upstream as keremimo/melodee pull request 63, which is open. The FM-1 build is unchanged and the SMK-37
+  code sits behind a BOARD_SMK37 switch. The 27 middle keys play like the FM-1's, the outer 10 add notes, and the pads
+  light in three colours and show the playing steps while the transport runs. The faders have four banks: track
+  levels, the selected track's filter, its amp envelope and its FX rack. The jack is MIDI out and can be turned off in the
+  HOME menu; there is no TRS MIDI in. Only project slots A and B are stored on the SMK-37.
+status: active
+authors:
+- name: genkigenki
+  url: https://github.com/genkigenki
+- name: keremimo
+  url: https://github.com/keremimo
+source: https://github.com/genkigenki/melodee/tree/smk37
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Same terms as Melodee: GPL-3.0-only (LICENSING.md), with ported DSP and fonts under their own licences. The CZ-1
+  factory tones (assets/cz1-factory) and the Prophet-5 programs (assets/prophet5-factory) are bundled sound data under
+  their owners' rights.
+homepage: https://genkigenki.github.io/smk37/
+distribution: browser-installer
+install_notes: >-
+  Installs from the browser at genkigenki.github.io/smk37, or with tools/fm1_install.py and the package for your model
+  (BOARD=smk37, with MODEL=elite or MODEL=mke). The installers accept only the connected model, and the firmware refuses a
+  package not laid out for the SMK-37. Have the stock package for your model and M-VAVE's updater ready, as the first start
+  clears the stock settings and other firmware's data in Melodee's store. The site notes that the first SMK-37 build on
+  17 October could stop part way through an update; hold OCTAVE- and OCTAVE+ at power-on for update mode. Unofficial;
+  install at your own risk.
+brick_risk: true
+tags: [synth-engine, sequencer, fm, midi, usb-midi, fork]
+image:
+  url: https://genkigenki.github.io/smk37/assets/shot-melodee.png
+  alt: "Melodee stage page on the SMK-37 display: four knob values over a chord readout, with four track rows named 909 KIT, Pickle Pinch, ELEC.PIANO and BRASS SECT"
+  credit: genkigenki
+  source_url: https://genkigenki.github.io/smk37/
+  first_party: true
+versions:
+- version: smk37 @ 18b9f7e
+  date: 2026-10-22
+  url: https://github.com/genkigenki/melodee/commit/18b9f7e8ff615b9f2b5d1f631b2ee2dd55223801
+  notes: No tagged releases; this is the latest commit on the smk37 branch, titled Melodee 1.4.5 with the SMK-37 target.

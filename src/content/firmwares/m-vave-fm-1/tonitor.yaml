@@ -1,14 +1,14 @@
 device: m-vave-fm-1
 name: Tonitor
 summary: >-
-  Non-groovebox firmware for electroacoustic and live ambient playing: six layers drawn from seven engines, among them FM, ANIMA
-  and CALIGULA, a free looper per layer, latched drones, granulator, crusher and reverb. No tempo or step sequencer.
+  Non-groovebox firmware for electroacoustic and live ambient playing: six tracks, each on one of eight engines, among them FM, ANIMA
+  and CALIGULA, a free looper per track, latched drones, play-along, snapshots, granulator, crusher and reverb. No tempo or step sequencer.
 description: >-
-  Each layer has two voices, its own engine, and a looper that holds up to ten overdubs of different lengths.
+  Each track has its own engine, draws voices from a shared pool of twelve, and has a looper that holds up to ten overdubs of different lengths.
   New sounds are drawn by generators, steered toward an ambient or an experimental path, and the four knobs
   can become macros for reshaping the sound live. The screen uses very large type and high contrast for low
-  vision. It has 64 session slots and 64 presets per engine, and a browser installer that reads what the FM-1
-  runs before writing. Built on Felucca and SLOOP; sessions are saved in the area SLOOP uses for projects. A separate port for the
+  vision. It has 64 session slots, 16 snapshots per session that store the whole state of the machine, a play-along mode in which other tracks react to or shadow the one you play, and 64 presets per engine.
+  A browser installer reads what the FM-1 runs before writing. Built on Felucca and SLOOP; sessions are saved in the area SLOOP uses for projects. A separate port for the
   M-VAVE SMK-37 Pro is listed under that device.
 status: active
 authors:
@@ -31,7 +31,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, looper, granular, fx, reverb, fm, performance, ui]
 versions:
-- version: main @ 7b9dcf7
-  date: 2026-10-26
-  url: https://github.com/nzimas/tonitor/commit/7b9dcf703240acafe0ad0696a8e99f8d3242bb4f
-  notes: No tagged releases; this is the latest commit. The changelog lists build 57 as the newest version; builds are numbered, with 0.56 now called build 56.
+- version: main @ 0dccfca
+  date: 2026-10-27
+  url: https://github.com/nzimas/tonitor/commit/0dccfcaed372368dd1519db22f4f4c5a109132d0
+  notes: No tagged releases; this is the latest commit. The changelog lists build 68 as the newest version; builds are numbered, with 0.56 now called build 56.

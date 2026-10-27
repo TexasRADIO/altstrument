@@ -1,0 +1,44 @@
+device: m-vave-fm-1
+name: Crepuscular Homunculus
+summary: >-
+  Dark performance synth and four-track groovebox with 64 factory sounds, six-operator FM, metallic distortion,
+  synthesized drum kits and pads, a reactive purple-and-green display, a piano-roll editor and 64-step tracks with four pattern banks.
+description: >-
+  Called TERKINSTEIN until 0.22.0-dev; the repository was renamed to Crepuscular_Homunculus and the creator is
+  still credited as TERKINSTEIN. Derived from Dinghy with Felucca and SLOOP platform work. Tracks are drum, melody,
+  atmosphere and bass, with live recording, a piano roll, saved song-wide swing, held notes, an arpeggiator, a
+  metronome and MIDI notes, wheels and pedals. The home screen animates in response to playing. Eight voices are
+  shared across the tracks, with at most four of them FM. The release notes say the retained 0.26.19-dev build
+  passed hardware identity, V15 switching and transfer-recovery checks on an FM-1, and that the suffix-free
+  0.26.19 build was not flashed during release preparation.
+status: active
+authors:
+- name: TerkWerX
+  url: https://github.com/TerkWerX
+source: https://github.com/TerkWerX/Crepuscular_Homunculus
+source_status: open
+license: GPL-3.0-only
+license_notes: Credits and third-party terms are in LICENSING.md.
+homepage: https://terkinstein.com/
+distribution: download
+install_notes: >-
+  Download the .fwsc from the releases page and install over USB (docs/INSTALL.md), with the included tools/fm1_install.py. Back up songs and settings
+  first and keep the previous .fwsc; the FM-1's updater cannot read back the installed firmware. Hold OCT- at
+  power-on for USB rescue.
+brick_risk: true
+tags: [synth-engine, sequencer, drums, fm, distortion, ui, performance]
+image:
+  url: https://raw.githubusercontent.com/TerkWerX/Crepuscular_Homunculus/main/assets/hub/home-0.26.19.png
+  alt: "Host-rendered Crepuscular Homunculus HOME screen at version 0.26.19: a green creature with bulging eyes under a purple waveform, with the sound 01 ASH CHOIR above and EDIT: SOUND CONTROLS below"
+  credit: "TerkWerX"
+  source_url: https://github.com/TerkWerX/Crepuscular_Homunculus
+  first_party: true
+versions:
+- version: 0.26.19
+  date: 2026-10-27
+  url: https://github.com/TerkWerX/Crepuscular_Homunculus/releases/tag/v0.26.19
+  notes: Renames the firmware, and adds a piano-roll editor, saved song-wide swing and a confirmation before HOME resets the song.
+- version: 0.22.0-dev
+  date: 2026-10-13
+  url: https://github.com/TerkWerX/Crepuscular_Homunculus/releases/tag/v0.22.0-dev
+  notes: Development preview; marked as a pre-release.

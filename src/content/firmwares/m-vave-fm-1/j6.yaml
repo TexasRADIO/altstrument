@@ -1,0 +1,49 @@
+device: m-vave-fm-1
+name: J6
+summary: >-
+  Six-voice polysynth firmware after the Roland JUNO-60, with a 24 dB resonant filter, stereo chorus, arpeggiator, a
+  16-step recorder, 56 memories and a beta USB-host mode that plays a second FM-1.
+description: >-
+  Each voice has a band-limited saw, pulse with manual or LFO width, a sub square and noise, followed by a self-oscillating
+  low-pass filter and a four-position high-pass, one shared ADSR and an LFO with delay. It has poly, unison and solo
+  modes, portamento, hold, a 16-step recorder that follows the arpeggiator tempo, 16 factory sounds in 56 memories and MIDI
+  program change. Six colour themes include a JUNO blue default. The beta LINK setting turns the FM-1's USB port into a
+  host that sends the arpeggiator and sequencer notes to another FM-1, which needs a powered USB hub. The README
+  describes the sound as an approximation of the JUNO-60 and says levels, chorus and filter values have not been measured
+  on hardware. It is built on fm1-base and felucca-bsp and keeps only its own data in flash, not other firmwares' projects.
+status: active
+authors:
+- name: JackieAlacrity2373
+  url: https://github.com/JackieAlacrity2373
+source: https://github.com/JackieAlacrity2373/fm1-j6
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  Vendored fm1-base and felucca-bsp keep their own MPL-2.0 licences.
+distribution: download
+install_notes: >-
+  Download the .fwsc from the releases page and install it with the FM-1 Firmware Hub or fm1-base's tools/fm1_install.py.
+  The package carries the Felucca update loader, so installing any other FM-1 firmware leaves J6. Flashing is at your
+  own risk.
+brick_risk: true
+tags: [synth-engine, oscillator, filter, arpeggiator, sequencer, usb-midi]
+image:
+  url: https://raw.githubusercontent.com/JackieAlacrity2373/fm1-j6/main/docs/screen.png
+  alt: >-
+    J6's home page on the FM-1 screen: the sound name BRASS 1, page tabs, Cutoff, Res, Attack and Release values, a voice
+    and mode status area and a 16-step pattern strip.
+  credit: JackieAlacrity2373
+  source_url: https://github.com/JackieAlacrity2373/fm1-j6#readme
+  first_party: true
+versions:
+- version: 1.2.0
+  date: 2026-10-27
+  url: https://github.com/JackieAlacrity2373/fm1-j6/releases/tag/v1.2.0
+  notes: Adds the beta LINK mode that drives a second FM-1 over USB.
+- version: 1.1.0
+  date: 2026-10-27
+  url: https://github.com/JackieAlacrity2373/fm1-j6/releases/tag/v1.1.0
+  notes: JUNO blue theme as the default.
+- version: 1.0.0
+  date: 2026-10-27
+  url: https://github.com/JackieAlacrity2373/fm1-j6/releases/tag/v1.0.0

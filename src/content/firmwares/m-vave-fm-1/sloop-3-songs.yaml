@@ -1,0 +1,36 @@
+device: m-vave-fm-1
+name: SLOOP 3 Songs
+summary: >-
+  SLOOP 2.7.1 fork that keeps three songs on the FM-1 instead of one, each with its own A to D sections and order, switched
+  from the SAVE layer.
+description: >-
+  Holding SAVE turns white keys 9, 10 and 11 into song 1, 2 and 3 (playback must be stopped). Switching writes the song you
+  leave to flash, then loads the first section of the other as the current loop. Everything else works inside the current
+  song. The flash was full, so songs 2 and 3 take the USR4 sample slot: USR4 can no longer hold samples, the USR3+4 kit
+  plays only USR3, and anything in USR4 is overwritten once song 2 is saved. Song 1 sits where stock SLOOP keeps its song, and the
+  French notes say to return to song 1 before going back to stock SLOOP. The web editor's backup covers only the current song. The
+  notes (in French) say it was tested only in the host test suite and not on a real FM-1; a build-time switch set to 1 gives plain SLOOP.
+  A GitHub Actions workflow builds the package and publishes an installer page.
+status: active
+authors:
+- name: gonziweb
+  url: https://github.com/gonziweb
+- name: isod89
+  url: https://github.com/isod89
+source: https://github.com/gonziweb/sloop-fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from SLOOP: GPL-3.0-only for the code, with its assets covered separately in LICENSING.md.
+homepage: https://gonziweb.github.io/sloop-fm1/
+distribution: browser-installer
+install_notes: >-
+  Use the installer page from the fork's GitHub Pages, or build it. The author's notes say to make a full backup first and,
+  if the unit will not start, to hold OCT- at power-on for rescue mode and reinstall. Installing is at your own risk.
+brick_risk: true
+tags: [sequencer, performance, fork]
+versions:
+- version: main @ 79dd32b
+  date: 2026-10-17
+  url: https://github.com/gonziweb/sloop-fm1/commit/79dd32bce73fb0bb517992003bc7cb212aac0ea9
+  notes: No tagged releases; this is the latest commit.

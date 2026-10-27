@@ -1,31 +1,51 @@
 device: alesis-andromeda-a6
 name: A6Plus
 summary: >-
-  Unreleased community build of the 2002 Andromeda OS with fixes for jumpy pots and envelopes
-  and new vintage and stereo spread controls. Shown in a video demo; no download or source yet.
+  Community build of the 2002 Andromeda OS, now in public beta, with fixes for jumpy knobs, CV
+  and envelope glitches, plus stereo spread, vintage drift, a patch randomizer and new arp modes.
 description: >-
-  Rights warning: this is derived from Alesis's closed 2002 firmware, and no licence or
-  release terms have been stated.
+  Rights warning: this is derived from Alesis's closed Andromeda firmware. The author says the
+  code is newly written from reverse engineering, that all rights to the original remain with
+  Alesis, and states no licence or release terms for the build.
 
-  The author describes a modified build of the 2002 A6 OS that addresses jumpy potentiometers,
-  makes envelopes faster, lowers oscillator levels so they clip less at maximum, and adds a
-  vintage control and a Matrix-12 style stereo voice spread, both on a new A6Plus page of the
-  Global tab. Work on the effects engine is planned. They say the bootloader is left untouched
-  as a fallback, that the code was written with Claude assisting in decoding the original
-  firmware, and that they are hesitant to release it because it is experimental.
-status: announced
+  The beta adds an A6Plus page and a Settings page under the Global tab. New controls include
+  a stereo spread knob, a vintage knob for per-voice drift, a customisable random patch
+  generator with undo, five more arpeggiator modes, whole-number BPM, and a poly pressure
+  input that is received as mono aftertouch. It also fixes jittery pots, CV-input glitches and
+  envelope smoothing, and changes gain staging so that both oscillators at full level clip less
+  than on stock. Existing patches may sound slightly different, and a Settings option switches
+  between stock and modified envelopes. The author lists known issues: the vintage knob can lag
+  the arpeggiator in chord mode and is disabled in Mix mode. They say the bootloader is left
+  untouched so stock firmware can be reloaded, and that Claude assisted with the coding.
+status: active
 authors:
   - name: Gordotuomi
-source_status: closed
+    url: https://gtsynthware.com
+source_status: binary-only
 license: unspecified
 license_notes: >-
-  No source or licence published. Built from Alesis's closed A6 OS, which Alesis has not
-  licensed for modification or redistribution.
-homepage: https://gearspace.com/threads/after-24-long-years-a-new-2026-alesis-andromeda-firmware-update.1470083/
-requires_stock: 1.40.12
+  No source or licence published. The disclaimer page provides the build as is, with no
+  warranty, and says all rights to the original firmware remain with Alesis.
+homepage: https://gtsynthware.com/
+distribution: download
 install_notes: >-
-  Nothing is downloadable yet. The author states it runs on their own Andromeda and carries
-  a risk of bricking, so wait for a release and its notes before trying it.
+  Put the Andromeda in bootloader mode (hold the seventh grey soft button at power-on), press
+  Store to receive firmware, and send the downloaded SysEx file from a computer over MIDI. The
+  transfer can take up to ten minutes and power must not be lost. When the screen asks, press
+  a button to write to flash, then set the mod wheel to minimum for calibration. Back up your
+  patches first and keep the stock firmware SysEx at hand; if the synth misbehaves, reload
+  stock through the bootloader. The author calls this an experimental beta and asks you to read
+  the disclaimer at https://gtsynthware.com/disclaimer/ before installing.
 brick_risk: true
-tags: [research, ai-assisted, synth-engine]
-versions: []
+tags: [ai-assisted, synth-engine, arpeggiator]
+video:
+  url: https://www.youtube.com/watch?v=0oKZQ_Z7zds
+  title: A6Plus - New Firmware for the Alesis A6 Andromeda - Now Available in Beta 1.0
+  credit: GT Synthware
+  first_party: true
+  found_via: https://gtsynthware.com/2026/10/26/a6plus-beta-1-0-is-now-available/
+versions:
+  - version: Beta 1.0
+    date: 2026-10-26
+    url: https://gtsynthware.com/firmware/
+    notes: First public beta. Adds stereo spread, vintage drift, a random patch generator, five arp modes, whole-number BPM and poly pressure input, and fixes knob jitter, CV glitches and envelope smoothing.

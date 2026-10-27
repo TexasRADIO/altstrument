@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: WaveLoop Melodee
+summary: >-
+  WaveLoop's fork of Melodee 1.4.1 with Arturia MiniLab 3 and Oxygen Pro 61 controller presets, a living set list of songs,
+  four tracks and four mono USB stems by default, and reworked 808 and CR78 drum kits.
+description: >-
+  Rights warning: it inherits Melodee's bundled Casio CZ-1 factory tones and Sequential Prophet-5/10 factory programs, whose
+  rights stay with Casio and Sequential and for which no licence is granted.
+
+  Lives on the waveloop/main branch of the ELI7VH/melodee fork; the fork's own main branch carries no changes of its own. For controllers,
+  channels 1 to 4 play tracks 1 to 4 and channel 16 follows the selected track, an encoder browses sounds and engines, a knob card
+  shows each turn, and a HOME controls page lists every mapped control. On Stage, OCT- and OCT+ step through saved songs, with the song you
+  leave saved first and a held OCT+ copying the current one, up to four. New songs start with four tracks, USB input is four isolated mono
+  tracks, and mono sounds play the last key. The DRUM engine gains eight-lane 808 and CR78 kits whose drums can each be
+  shaped, and the old 808 circuit model stays selectable. The README points to an FM-1 index in WaveLoop's own repository.
+status: active
+authors:
+- name: ELI7VH
+  url: https://github.com/ELI7VH
+- name: keremimo
+  url: https://github.com/keremimo
+source: https://github.com/ELI7VH/melodee/tree/waveloop/main
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Same as Melodee: GPL-3.0-only, with ported DSP and fonts under their own licences (LICENSING.md). The CZ-1 factory tones
+  and Prophet-5 programs are bundled sound data under their owners' rights.
+homepage: https://github.com/ELI7VH/melodee/blob/waveloop/main/controllers/MiniLab-3.md
+distribution: source-only
+install_notes: >-
+  Build the branch (BUILDING.md) and install with the Melodee tools. The fork's GitHub Pages site is a web installer, but the
+  package it offers is a Melodee 1.4.1 file, and the README does not say that it contains this branch. Melodee's
+  boot protection and Return to official V15 route apply. Installing is at your own risk.
+brick_risk: true
+tags: [synth-engine, sequencer, controller-mode, midi, drums, fork]
+versions:
+- version: waveloop/main @ aaaf5e4
+  date: 2026-10-25
+  url: https://github.com/ELI7VH/melodee/commit/aaaf5e4a5f78f2c3dfdcf5d6ae2e44eb99a5ef72
+  notes: No tagged releases; this is the latest commit on that branch.

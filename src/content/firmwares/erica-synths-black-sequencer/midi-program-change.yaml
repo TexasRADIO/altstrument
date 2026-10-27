@@ -1,0 +1,41 @@
+device: erica-synths-black-sequencer
+name: Black Sequencer MIDI Program Change patch
+summary: Python and C patcher that turns your official 1.06 image into a 1.07 build in which MIDI Program Change messages select patterns, with an optional Bank Select, plus three new rows in the MIDI settings menu.
+description: >-
+  Adds one feature to the stock firmware: a Program Change on a chosen MIDI channel loads
+  pattern 1 to 16 of the current bank, so an MPC, Octatrack or other sequencer can switch
+  patterns while clocking the module. Three new rows under the MISC tab of SETUP, MIDI set the
+  channel (off by default), whether the change waits for the end of the master track length or
+  happens at once, and whether CC 0 on that channel selects the bank. Empty slots and requests
+  for the pattern already playing are ignored. The build script checks that the input is the
+  stock 1.06 file by size and CRC32, patches a few locations, appends the new code and writes
+  an updater file labelled 1.07. The README says only the application is changed, never the
+  bootloader, and that the patch has been tested in a CPU emulator but not yet on a physical
+  Black Sequencer. It states that the project is not an official Erica Synths release.
+status: active
+authors:
+  - name: Aleph Void LLC
+    url: https://alephvoid.com
+source: https://github.com/aleph-void/Erica-Synths-Black-Seqeuencer-Custom-MIDI-Program-Change-Firmware
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the scripts, patch sources and documentation. Erica Synths' firmware is not included
+  and no rights over it are granted.
+homepage: https://github.com/aleph-void/Erica-Synths-Black-Seqeuencer-Custom-MIDI-Program-Change-Firmware#readme
+distribution: patch-your-own
+requires_stock: "1.06 (EBSEQ_V1_06_7824E1DD.BIN, CRC32 7824E1DD)"
+install_notes: >-
+  Download the official 1.06 file from Erica Synths yourself and build with make; it needs
+  arm-none-eabi-gcc and Python 3. Back up the PROJECTS folder on the SD card, copy the
+  resulting EBSEQ_V1_07 file to the card's root, power on and answer YES to the bootloader
+  prompt. To return to stock, delete the 1.07 file, put the official 1.06 file on the card
+  (renamed to a higher version number if the bootloader skips it) and start the bootloader
+  from SETUP, INFO. Do not share the generated image.
+brick_risk: false
+tags: [patch, midi, sequencer, program-change]
+versions:
+  - version: main @ ae4f4b3
+    date: 2026-10-26
+    url: https://github.com/aleph-void/Erica-Synths-Black-Seqeuencer-Custom-MIDI-Program-Change-Firmware/commit/ae4f4b33e5c9d8fe07997e07368321134c9d4dd1
+    notes: No tagged releases; this is the latest commit.

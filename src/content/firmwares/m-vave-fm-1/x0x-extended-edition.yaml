@@ -1,0 +1,52 @@
+device: m-vave-fm-1
+name: X0X Extended Edition (Acultur8)
+summary: >-
+  Experimental fork of Charles Vestal's X0X with sequence copy and paste, arrangement blocks, slice playback in a
+  browser emulator, a MIDI CC map and straight-time and triplet rate overrides.
+description: >-
+  The prerelease firmware builds add one-to-32-bar blocks with undo, copy and paste of sequences between drum rows and the
+  two 303s, a RAM query command for inspecting unsaved patterns, a searchable MIDI implementation chart with CC readback,
+  and a global straight-rate policy with per-sound triplet overrides. A browser emulator runs the X0X engine compiled to
+  WebAssembly and plays imported WAV slice banks with marker files at the sequencer tempo without changing pitch. The
+  releases are labelled experimental, each with known-issues and rollback notes; the notes report checks on one unit and
+  list advanced remote-action and Reason clock-sync checks as open. Recorded loops and the optional REX decoder are not
+  distributed. The default branch is acultur8/main.
+status: active
+authors:
+- name: keyboy250
+  url: https://github.com/keyboy250
+source: https://github.com/keyboy250/fm1-x0x-acultur8
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from X0X (LICENSING.md); Open303 and bundled fonts keep their own licences. The README says recorded loops
+  belong to their owners and are not covered.
+homepage: https://keyboy250.github.io/fm1-x0x-acultur8/
+distribution: download
+install_notes: >-
+  Download the .fwsc and installer script from a release and install with fm1_install.py (Python 3, mido, python-rtmidi);
+  the expected identity is FM-1_9000xxx. Back up projects first and keep the prior firmware for rollback; the release notes say
+  saves made with newer builds need compatible firmware.
+brick_risk: true
+tags: [drums, synth-engine, sequencer, midi, emulator, sampler, fork]
+versions:
+- version: 0.1.32-straightbeta
+  date: 2026-10-27
+  url: https://github.com/keyboy250/fm1-x0x-acultur8/releases/tag/v0.1.32-straightbeta
+  notes: Pre-release. Global straight-rate policy with per-sound triplet overrides.
+- version: 0.1.30-calbeta
+  date: 2026-10-26
+  url: https://github.com/keyboy250/fm1-x0x-acultur8/releases/tag/v0.1.30-calbeta
+  notes: Pre-release. MIDI CC control and readback with a searchable MIDI chart.
+- version: 0.1.9-query
+  date: 2026-10-23
+  url: https://github.com/keyboy250/fm1-x0x-acultur8/releases/tag/v0.1.9-query
+  notes: Pre-release. Copy and paste of sequences, and a RAM query for unsaved patterns.
+- version: 0.1.6-beta1
+  date: 2026-10-20
+  url: https://github.com/keyboy250/fm1-x0x-acultur8/releases/tag/v0.1.6-beta1
+  notes: Pre-release. Arrangement blocks of 1 to 32 bars and slice profiles.
+- version: 0.1.5-beta1
+  date: 2026-10-19
+  url: https://github.com/keyboy250/fm1-x0x-acultur8/releases/tag/v0.1.5-beta1
+  notes: Pre-release. First experimental firmware build, with a faster 909 block renderer.

@@ -1,0 +1,39 @@
+device: m-vave-fm-1
+name: PIGEON Sample Loader
+kind: tool
+summary: >-
+  Standalone browser sample editor and USB MIDI bank manager for the PIGEON sampler firmware, served locally by a
+  small Python launcher and usable offline.
+description: >-
+  Prepares the song samples, chops and drum kit for PIGEON on a computer, with waveform editing, trim handles,
+  zoom, undo and redo, chop moving and swapping, and drum pad copying. Each song slot takes several audio files
+  that become sections, and the tool tracks the 496 KiB of storage the two songs and the kit share. It saves .kob
+  banks and .pigeon sessions to a named library and sends banks to the FM-1 over Web MIDI after a backup. It reads
+  PIGEON v0.4 projects and older v0.3 files; firmware older than v0.4 cannot open the new projects. Editing is
+  local and a hosted loader can hand a bank to the PIGEON browser emulator. Launchers are included for macOS,
+  Windows and Linux, and the repository says USB transfers and the Windows and Linux launchers still need
+  hardware validation.
+status: active
+authors:
+- name: The Shrimp Blimp
+  url: https://github.com/TheShrimpBlimp
+source: https://github.com/TheShrimpBlimp/pigeon-tool
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file is GPL-3.0-only and LICENSING.md says inherited code and assets keep their own notices. The
+  bundled lamejs MP3 encoder is LGPL-3.0, and the font is SIL OFL.
+homepage: https://github.com/TheShrimpBlimp/pigeon-tool
+distribution: source-only
+requires_stock: PIGEON firmware (v0.3 and later)
+install_notes: >-
+  Run python3 tools/pigeon_gui.py or the launcher for your system; it serves the web folder on 127.0.0.1 and needs
+  no firmware checkout. Use Chrome or Edge for USB transfers and back up the FM-1 before sending a bank. Node.js 22
+  is needed only for the tests.
+brick_risk: false
+tags: [sampler, editor, librarian]
+versions:
+- version: 2.0.0
+  date: 2026-10-15
+  url: https://github.com/TheShrimpBlimp/pigeon-tool/releases/tag/v2.0.0
+  notes: Waveform editing with trim handles, zoom, undo, a named bank and session library, and chop and pad copying; the firmware version is unchanged.

@@ -1,0 +1,45 @@
+device: m-vave-smk-37
+name: Ketch SMK-37
+summary: >-
+  Adrien Risser-Zhuang's Ketch tracker on the SMK-37: the 16 pads act as an M8-style gamepad, all 37 keys play and
+  record notes with velocity, and the faders set the four channel levels.
+description: >-
+  Lives on the smk37 branch of the genkigenki/fm1-tracker-ketch fork and is offered upstream as pull request 1 on
+  risseraka/fm1-tracker-ketch, which is still open. It is Ketch 0.1, a beta tracker with song, chain and phrase screens and
+  Felucca's sound engines on four channels. The FM-1 build is unchanged and the SMK-37 code sits behind a
+  BOARD_SMK37 switch. K1 to K4 are the four knobs, K5 is master volume, the wheels bend pitch and
+  send the mod wheel, and pad LEDs show three states. The four project slots live in the keyboard's own data areas, and the
+  factory calibration, Bluetooth pairing and stock resources are never written. There is no TRS MIDI input. It
+  is listed as an experimental port on the genkigenki SMK-37 site, which installs it from the browser.
+status: active
+authors:
+- name: genkigenki
+  url: https://github.com/genkigenki
+- name: Adrien Risser-Zhuang (risseraka)
+  url: https://github.com/risseraka
+source: https://github.com/genkigenki/fm1-tracker-ketch/tree/smk37
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Same terms as Ketch, stated in the README and LICENSING.md; the platform and sound layer are Felucca's, the wiring comes
+  from Dinghy, and DaisySP and Rings ports are MIT, msfa is Apache-2.0.
+homepage: https://genkigenki.github.io/smk37/
+distribution: browser-installer
+install_notes: >-
+  Installs from the browser at genkigenki.github.io/smk37, or with tools/fm1_install.py and a package built with
+  BOARD=smk37 (MODEL=elite or MODEL=mke for the other two names). Each model has its own package and the installers accept
+  only the connected model. Take a full flash backup first; the first start clears data other firmware left in the stock
+  settings area. Holding OCTAVE- at power-on starts update mode. Unofficial; install at your own risk.
+brick_risk: true
+tags: [tracker, sequencer, synth-engine, performance, fork]
+image:
+  url: https://genkigenki.github.io/smk37/assets/shot-ketch.png
+  alt: "Ketch song screen on the SMK-37 display: a grid of chain numbers for four channels beside a chain list"
+  credit: genkigenki
+  source_url: https://genkigenki.github.io/smk37/
+  first_party: true
+versions:
+- version: smk37 @ 729fd54
+  date: 2026-10-17
+  url: https://github.com/genkigenki/fm1-tracker-ketch/commit/729fd546a9cad0102ef1d8e30c274a2dbe9ec1b1
+  notes: No tagged releases; this is the latest commit on the smk37 branch.

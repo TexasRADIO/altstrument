@@ -1,0 +1,37 @@
+device: m-vave-fm-1
+name: SLOOP JA
+summary: >-
+  Japanese-language build of SLOOP 2.6: katakana UI strings on the FM-1 screen and a translated web editor and installer,
+  with a hand-picked 75-glyph font that fits the app area.
+description: >-
+  Lives on the codex/ja-localization-sloop-2.6 branch of azsoft-jp's SLOOP fork; the fork's main branch is unmodified
+  SLOOP. The 263 UI strings are kept in a table with their English originals, and a small UTF-8 decoder in the drawing code
+  looks up glyphs from a Noto Sans JP subset of 75 katakana and marks, so ASCII output stays pixel-identical. Protocol
+  names, saved identifiers and SysEx values are unchanged. Kanji, other languages and a language setting are out of scope, and
+  engine, preset and note names stay in English. Its notes record that the build was measured on the host and not
+  installed on a unit, and that it was not offered upstream or distributed publicly. The branch includes a built package
+  for a local update site and a PDF report with screen captures. The 2.6 project format cannot go back to 2.5.
+status: active
+authors:
+- name: azsoft-jp
+  url: https://github.com/azsoft-jp
+- name: isod89
+  url: https://github.com/isod89
+source: https://github.com/azsoft-jp/sloop-fm1/tree/codex/ja-localization-sloop-2.6
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from SLOOP (GPL-3.0-only). The Noto Sans JP glyph subset is SIL OFL 1.1 (assets/fonts/NotoSansJP-OFL.txt).
+homepage: https://github.com/azsoft-jp/sloop-fm1/blob/codex/ja-localization-sloop-2.6/docs/JA_LOCALIZATION.md
+distribution: source-only
+install_notes: >-
+  Build with tools/build_ja_site.sh, which makes the package and a local update site, then serve dist/ja-2.6 and install
+  from Chrome or Edge. Its notes say to save a full project backup from the web editor first and keep an unmodified
+  M-VAVE FM-1.fwsc to go back. Hardware recovery was not tested by the author. Installing is at your own risk.
+brick_risk: true
+tags: [localization, fork, sequencer, performance]
+versions:
+- version: codex/ja-localization-sloop-2.6 @ c9db6be
+  date: 2026-10-12
+  url: https://github.com/azsoft-jp/sloop-fm1/commit/c9db6be41486aeee9fa08ce182c96abe0f2721c3
+  notes: No tagged releases; this is the latest commit on that branch.

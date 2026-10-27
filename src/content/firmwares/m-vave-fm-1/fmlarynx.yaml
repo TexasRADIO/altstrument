@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: FMLarynx
+summary: >-
+  Formant synth firmware with a 16-step 303-style sequencer: a saw wave through a three-formant vowel filter, a
+  resonant low-pass, drive and a ping-pong delay, with a screen that draws a throat opening.
+description: >-
+  A port of the FormantSynth VST3 plugin, built on Dinghy. A Tongue and Jaw plane blends between the vowels i, e, a,
+  o and u, Voice and Size move the formants from adult male to child or giant, and an envelope with accent opens the
+  cutoff and formant size. The sequencer has vowel, accent and slide per step, a randomizer with root and scale, and
+  16 stored patterns; it follows MIDI clock, and notes arrive over USB MIDI. The FM-1 also appears as a stereo USB
+  audio input. It stores patterns and settings in the settings sector that Felucca, SLOOP and Dinghy use, so it
+  starts from defaults after one of them has run and the reverse. Its README credits MouthTowel for the formant
+  filter design.
+status: active
+authors:
+- name: Presethead
+  url: https://github.com/ejtb76
+source: https://github.com/ejtb76/FMLarynx
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md covers the Dinghy and Felucca platform code it builds on. The logo in assets/ is a designburg signet and
+  is not under the GPL.
+homepage: https://github.com/ejtb76/FMLarynx
+distribution: download
+requires_stock: V15
+install_notes: >-
+  Install from the FM-1 Firmware Hub in Chrome or Edge, or flash the .fwsc from the release with tools/fm1_install.py.
+  The release notes report installs from official V15, Dinghy and Unholy Union. Hold OCT- while switching on for USB
+  rescue mode, which the firmware also enters after two crashes at boot.
+brick_risk: true
+tags: [synth-engine, sequencer, voice, fx, usb-audio, usb-midi]
+image:
+  url: https://raw.githubusercontent.com/ejtb76/FMLarynx/formantsynth/docs/screen.png
+  alt: >-
+    FMLarynx's screen: pink rings drawn as a throat with the note G4 in the opening, a step strip with vowel letters, a
+    keyboard with one key lit and the label FMLARYNX v0.1 with octave +0.
+  credit: Presethead
+  source_url: https://github.com/ejtb76/FMLarynx#readme
+  first_party: true
+versions:
+- version: '0.1'
+  date: 2026-10-20
+  url: https://github.com/ejtb76/FMLarynx/releases/tag/v0.1
+  notes: First release; the formant voice, sequencer, effects and screen.

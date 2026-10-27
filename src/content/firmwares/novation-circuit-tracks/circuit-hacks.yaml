@@ -10,9 +10,11 @@ description: >-
   a step-drummer, sample capture, and a changelog of RC and beta versions. RC2
   adds the custom synth engine's sample mode and custom scales, and RC2.02 adds
   a modulation matrix for the built-in synth and a split keyboard across any two
-  note tracks. RC2.04 to RC2.06 are bug-fix releases, and the latest beta
-  adds a four-operator FM oscillator for the MIDI-track synth and has not been
-  tested on hardware. The repository also
+  note tracks. RC2.04 to RC2.10 are bug-fix releases. The betas add a
+  four-operator FM oscillator and polyphony with selectable voice modes for the
+  MIDI-track synth, stereo sample mode, FM starter sounds and stereo drum pairs;
+  the README says Beta 3.35 was tested on the device and the latest beta, 3.37,
+  was not. The repository also
   holds builders, emulators and illustrated manuals in Spanish and English.
   Each release candidate has an "S" variant without features that write to the
   SD card by themselves. The author says the project was developed with Claude.
@@ -20,90 +22,122 @@ status: active
 authors:
   - name: Ghillermo
     url: https://github.com/Ghillermo
-source: https://github.com/Ghillermo/CIRCUITS-HACKS-RC
+source: https://github.com/Ghillermo/CIRCUIT-HACKS-RC
 source_status: open
 license: MIT
 license_notes: >-
   Covers the project's own tools, patches and documentation. It does not cover
   Novation's firmware, which is not included, or third-party dependencies; the
   dsptool patches apply to dsp56300 (GPL-3.0).
-homepage: https://ghillermo.github.io/CIRCUITS-HACKS-RC/en.html
+homepage: https://ghillermo.github.io/CIRCUIT-HACKS-RC/en.html
 distribution: browser-installer
 requires_stock: 1.2.1 build 4486
 install_notes: >-
   Download Novation's official 1.2.1 update yourself, open tools/rc_uploader.html
   in Chrome or Edge, pick the official file and a version, and send it over
   Web MIDI; or build the .syx with tools/patch_official.py. Back up the SD card
-  first. RC2.02S is the variant that never writes to the card by itself, and B3.3
+  first. RC2.10S is the variant that never writes to the card by itself, and B3.37
   is a beta with features not yet tested on hardware. The bootloader is not
   touched: Scales + Preset + Note at power-on returns to the official firmware.
 tags: [sequencer, fx, midi, performance, ui, synth-engine]
 versions:
+  - version: B3.37
+    date: 2026-10-27
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/558cb72
+    notes: Beta; adds FM starter sounds on pad 8, a pad velocity curve and previewing synth patches on the cue output, not yet tested on hardware. Date is from the changelog.
+  - version: B3.35
+    date: 2026-10-26
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/a79ac0c
+    notes: Beta; RC2.10 plus polyphony and voice modes for the MIDI-track synth, improved FM, stereo sample mode and arpeggiator changes. The changelog says it was tested on the device. Date is from the changelog.
+  - version: RC2.10S
+    date: 2026-10-26
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/089a577
+    notes: RC2.10 without the features that write to the SD card by themselves.
+  - version: RC2.10
+    date: 2026-10-26
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/089a577
+    notes: The arpeggiator with the transport stopped follows the project tempo instead of running at about 120 BPM. Date is from the changelog.
+  - version: RC2.09S
+    date: 2026-10-25
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/c79c1ca
+    notes: RC2.09 without the features that write to the SD card by themselves.
+  - version: RC2.09
+    date: 2026-10-25
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/c79c1ca
+    notes: Fixes the drum sample start knob, which reached the end of the sample at a quarter of its travel. Date is from the changelog.
+  - version: RC2.08S
+    date: 2026-10-24
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/76242c2
+    notes: RC2.08 without the features that write to the SD card by themselves.
+  - version: RC2.08
+    date: 2026-10-24
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/76242c2
+    notes: Fixes the fixed-length selector and lets notes from an external keyboard play the MIDI-track synth. RC2.07 was not published on its own. Date is from the changelog.
   - version: B3.17
     date: 2026-10-21
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/395d9e6
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/395d9e6
     notes: Beta; RC2.06 plus a four-operator FM oscillator for the MIDI-track synth and per-project storage of that synth's settings, not yet tested on hardware. Date is from the changelog.
   - version: RC2.06S
     date: 2026-10-21
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/6950c3a
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/6950c3a
     notes: RC2.06 without the features that write to the SD card by themselves.
   - version: RC2.06
     date: 2026-10-21
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/6950c3a
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/6950c3a
     notes: Fixes a note left sounding when two pads of the same note are held at once. Date is from the changelog.
   - version: RC2.05S
     date: 2026-10-21
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/15b7009
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/15b7009
     notes: RC2.05 without the features that write to the SD card by themselves.
   - version: RC2.05
     date: 2026-10-21
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/15b7009
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/15b7009
     notes: Fixes a hang when the custom scale is changed while the transport is running. Date is from the changelog.
   - version: RC2.04S
     date: 2026-10-21
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/3feb586
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/3feb586
     notes: RC2.04 without the features that write to the SD card by themselves.
   - version: RC2.04
     date: 2026-10-21
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/3feb586
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/3feb586
     notes: Count-in follows the project tempo, and recorded notes of 16 steps or more are no longer cut short. Date is from the changelog.
   - version: B3.3
     date: 2026-10-19
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/ec565999808ca219bcf7a6271f3cf8d681db75d1
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/ec565999808ca219bcf7a6271f3cf8d681db75d1
     notes: Beta; RC2.02 plus master filter resonance and bypass on the FX view, not yet tested on hardware. Date is from the changelog.
   - version: RC2.02S
     date: 2026-10-18
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/15eb541
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/15eb541
     notes: RC2.02 without the features that write to the SD card by themselves.
   - version: RC2.02
     date: 2026-10-18
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/15eb541
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/15eb541
     notes: Adds a modulation matrix for the built-in MIDI-track synth, a split keyboard across any two note tracks and smoothed sample-and-hold LFO.
   - version: RC2.01S
     date: 2026-10-18
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/3183f4d
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/3183f4d
     notes: RC2.01 without SD-card writes of its own.
   - version: RC2.01
     date: 2026-10-18
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/3183f4d
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/3183f4d
     notes: Moves the captured Master FX sample ahead of the master filter. Date is from the changelog.
   - version: RC2S
     date: 2026-10-17
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/415e0e1
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/415e0e1
     notes: RC2 with all SD-card and internal-memory writes by the mod refused.
   - version: RC2
     date: 2026-10-17
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/415e0e1
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/415e0e1
     notes: Second release candidate; folds in the 1.x betas, including sample mode for the custom synth, custom scales and drum sidechain from synth tracks.
   - version: B1.3
     date: 2026-10-14
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/3d6d25211a0fee1282df9303be07f27891dce815
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/3d6d25211a0fee1282df9303be07f27891dce815
     notes: Beta; RC0.9 plus features not yet tested on hardware. Date is the commit date.
   - version: RC0.9S
     date: 2026-10-14
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/3d6d25211a0fee1282df9303be07f27891dce815
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/3d6d25211a0fee1282df9303be07f27891dce815
     notes: Safer variant that does not write to the SD card by itself.
   - version: RC0.9
     date: 2026-10-14
-    url: https://github.com/Ghillermo/CIRCUITS-HACKS-RC/commit/3d6d25211a0fee1282df9303be07f27891dce815
+    url: https://github.com/Ghillermo/CIRCUIT-HACKS-RC/commit/3d6d25211a0fee1282df9303be07f27891dce815
     notes: Makes the internal-memory pack read-only to the mod.

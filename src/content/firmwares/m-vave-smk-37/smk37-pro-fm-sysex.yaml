@@ -1,0 +1,30 @@
+device: m-vave-smk-37
+name: SMK-37 Pro FM-SysEx
+kind: tool
+summary: >-
+  Single-page web app that sends and receives DX7 SysEx banks and single voices for the SMK-37 Pro's FM engine over USB
+  Web MIDI or Bluetooth LE MIDI, with a hex monitor.
+description: >-
+  A static HTML page, with its interface in German, that connects through Web MIDI or directly over Bluetooth LE, requests a
+  bank or voice from the keyboard by device number, loads, sends and saves SysEx files, and can send or copy raw hex. It has a
+  monitor pane for traffic. The repository is the one index.html file and a licence; no hosted copy is published, so you open the
+  file yourself in a browser that supports Web MIDI with SysEx.
+status: active
+authors:
+- name: hartaberunfairer-web
+  url: https://github.com/hartaberunfairer-web
+source: https://github.com/hartaberunfairer-web/smk37_pro_midi_sysex
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file is the standard GPL version 3 text; the page carries no notice saying whether later versions apply, so
+  GPL-3.0-only is recorded.
+homepage: https://github.com/hartaberunfairer-web/smk37_pro_midi_sysex
+distribution: source-only
+brick_risk: false
+tags: [sysex, midi, editor, web]
+versions:
+- version: main @ d62a7f7
+  date: 2026-09-29
+  url: https://github.com/hartaberunfairer-web/smk37_pro_midi_sysex/commit/d62a7f7
+  notes: No tagged releases; this is the latest commit.

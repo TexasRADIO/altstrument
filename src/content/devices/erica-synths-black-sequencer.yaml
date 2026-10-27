@@ -1,0 +1,29 @@
+name: Black Sequencer
+manufacturer: Erica Synths
+category: eurorack
+tagline: 42 HP four-track CV/gate sequencer with MIDI and an SD card slot
+description: >-
+  The Black Sequencer is a 42 HP Eurorack sequencer from Erica Synths with four tracks, each
+  with CV, gate and modulation outputs, and sixteen encoders for entering steps. Patterns run
+  up to 64 steps and can be chained into songs, with per-step probability, repeats and
+  ratcheting, per-track time divisions, a built-in quantizer and microtonal tuning. It has MIDI
+  in and out and clock and reset jacks, and uses an SD card for backups and firmware updates.
+platform: STM32F4 (Cortex-M4)
+stock_firmware: "1.06"
+links:
+  manufacturer: https://www.ericasynths.lv/black-sequencer-546/
+notes: >-
+  Firmware updates are EBSEQ_*.BIN files copied to the SD card and installed through the
+  module's bootloader. The only custom firmware recorded here is a patcher that works on
+  your own copy of the official 1.06 file.
+related: []
+image:
+  src: /images/devices/erica-synths-black-sequencer.webp
+  style: photo
+  alt: Front panel of the black Erica Synths Black Sequencer module, with rows of jacks, a small display, an SD card slot, channel and function buttons, and a four by four grid of black encoders
+  width: 1200
+  height: 1200
+  credit: Erica Synths
+  license: manufacturer product image
+  source_url: https://www.ericasynths.lv/black-sequencer-546/
+  original_url: https://www.ericasynths.lv/media/catalog/product/B/l/Black-Sequencer-1500x1500_3.png

@@ -1,0 +1,29 @@
+name: Circuit Mono Station
+manufacturer: Novation
+category: synth
+tagline: Paraphonic analogue synth with three sequencer tracks on a 32-pad grid
+description: >-
+  The Circuit Mono Station is a paraphonic analogue synthesiser from Novation, derived from the Bass Station II. It has
+  two oscillators with a sub-oscillator, ring modulation and noise, a multi-mode filter, three distortion modes and a
+  four-by-eight modulation matrix. Two oscillator sequencers and one modulation sequencer are played and edited on 32
+  velocity-sensitive RGB pads. It has CV, gate and modulation outputs, MIDI In, Out and Thru, an audio input and USB,
+  and stores up to 64 patches on the unit.
+platform: STM32F42x Cortex-M4F
+stock_firmware: "1.2"
+links:
+  manufacturer: https://novationmusic.com/products/circuit-mono-station
+related: [novation-circuit, novation-circuit-tracks, novation-circuit-rhythm]
+notes: >-
+  The custom firmware here is built from Novation's official 1.2 update, which the project does not distribute; its
+  README says to unpack the file from Novation Components yourself. The bootloader is left untouched, so the stock
+  update can be flashed again, or installed through Novation Components.
+image:
+  src: /images/devices/novation-circuit-mono-station.webp
+  style: photo
+  alt: "Novation Circuit Mono Station, top view: black panel with oscillator, mixer, filter, distortion, LFO and envelope sections above a grid of 32 pads lit in purple, magenta and teal"
+  width: 1200
+  height: 1200
+  credit: Novation
+  license: manufacturer product image
+  source_url: https://novationmusic.com/products/circuit-mono-station
+  original_url: https://cdn11.bigcommerce.com/s-itgb7ssiy1/images/stencil/1280x1280/products/231/641/Mono-Station-product-image-front-2400-2400__60888.1702638246.jpg?c=1

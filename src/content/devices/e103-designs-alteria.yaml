@@ -1,0 +1,29 @@
+name: ALTERIA
+manufacturer: E103-designs
+category: eurorack
+tagline: Narrow Eurorack function generator with three knobs, two DAC outputs and swappable Arduino firmware
+description: >-
+  ALTERIA is a narrow Eurorack module from E103-designs with three knobs, a mode button and a
+  manual button, a CV input, an I/O jack and two DAC-driven outputs. Its firmware decides what it
+  is: the ALLROUNDER sketch offers sixteen modes covering envelopes, clock tools, logic, random
+  sources and two drum voices, and the DRUM LAB sketch gives two percussion voices. It is built
+  on an Arduino Nano-style ATmega328P board.
+platform: ATmega328P (Arduino Nano), board REV5-2
+links:
+  manufacturer: https://github.com/E103-designs/ALTERIA
+notes: >-
+  Both published sketches target the REV5-2 hardware with an ATmega328P at 16 MHz; the README
+  says ATmega168P is not supported. The schematics folder says corrected schematics and CAD files
+  are still to be uploaded, so the repository is not yet a complete hardware release. Output
+  calibration is done by hand with a multimeter.
+related: []
+image:
+  src: /images/devices/e103-designs-alteria.webp
+  style: photo
+  alt: Front panel of the narrow black ALTERIA module on a wooden surface, with four LEDs, manual and mode buttons, three white knobs labelled P1 to P3, a CV in jack, an I/O jack and Out1 and Out2 jacks
+  width: 800
+  height: 1423
+  credit: E103-designs
+  license: project photo, published in the official ALTERIA repository
+  source_url: https://github.com/E103-designs/ALTERIA
+  original_url: https://raw.githubusercontent.com/E103-designs/ALTERIA/main/images/front.jpg

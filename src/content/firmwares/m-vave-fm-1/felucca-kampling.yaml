@@ -1,0 +1,39 @@
+device: m-vave-fm-1
+name: Felucca (Kampling fork)
+summary: >-
+  Personal integration fork of Felucca 1.6.1 for combining upstream and other forks' work, with an optional
+  Braids-based MACRO engine, a redrawn UI, MIDI timing fixes, an optional second-core worker and USB diagnostics.
+description: >-
+  The fork tracks upstream Felucca and adds changes it reviews and measures itself: deferred project autosave, bitmap
+  lettering and a single rule-based UI with a graph that follows the knob being turned, fixes to external clock phase,
+  TRS timestamps and invalid tempo, shortcuts for silent effects, and a retained exclusion that keeps the second-core
+  worker off after a failure. An opt-in build profile adds a fourteenth MACRO engine with 48 Braids oscillator
+  models and 51 factory sounds; the normal build and hosted demo leave it out. Developer features include an
+  opt-in screen capture over USB serial, a read-only USB collector, build reports with measured sizes and a
+  firmware-watch ledger of other forks. The author lists listening, loaded-panel and several device checks as still
+  pending, and says development follows the author's own priorities. A GitHub Pages site hosts a demo, an installer
+  and an editor built from main.
+status: active
+authors:
+- name: Jan Kampling (kmplngj)
+  url: https://github.com/kmplngj
+source: https://github.com/kmplngj/Felucca
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca; LICENSING.md lists components that keep their own terms, including the CC0 Hügelton Sample
+  Pack. The five portable engines come from the author's fork of Felucca-Engines (MIT).
+homepage: https://kmplngj.github.io/Felucca/
+distribution: browser-installer
+install_notes: >-
+  Use a .fwsc package from the fork's CI artifacts (its releases page is empty) with the fork's web installer in
+  Chrome or Edge, or build it with the repository's uv-based command (BUILDING.md); the macro profile needs
+  FELUCCA_PROFILE=macro. Felucca's Return to official V15 and M-VAVE's updater go back, and OCT- starts the early
+  USB rescue. The README says installing is at your own risk.
+brick_risk: true
+tags: [synth-engine, fork, ui, midi, platform, emulator, editor]
+versions:
+- version: main @ 6675648
+  date: 2026-10-27
+  url: https://github.com/kmplngj/Felucca/commit/6675648d8a739ee2026cf1a5aa8596f988cf1dab
+  notes: No tagged releases; this is the latest commit.

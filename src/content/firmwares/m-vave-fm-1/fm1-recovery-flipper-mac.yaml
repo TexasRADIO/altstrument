@@ -1,0 +1,47 @@
+device: m-vave-fm-1
+name: FM1 Recovery for Flipper Zero (Mac and Windows guides)
+kind: tool
+summary: >-
+  Documented redistribution of merthsoft's Flipper Zero app that puts a stuck FM-1 into ROM recovery, adding a prebuilt
+  Momentum build, a macOS restore guide that uses M-Flasher and illustrated step-by-step guides.
+description: >-
+  The Flipper app sends the boot key so the FM-1 appears as a WL82 UBOOT device, and a computer then backs up the flash
+  and installs a package; the app itself does not write firmware. The boot-key code, Windows scripts, parser and tests
+  are merthsoft's work at revision df88b86, kept under the Unlicense, and the README says so. This repository adds a
+  guide for backing up and restoring only the application area from a Mac with M-Flasher, a Windows guide, SVG
+  illustrations, host tests and a CI build. The release attaches a build for Momentum mntm-012 (target F7, API 87.1), and
+  the README warns that an app built for one API major may not load on another. The README reports one hardware recovery
+  with this app followed by loading SLOOP 2.8.
+status: active
+authors:
+- name: highdrone
+  url: https://github.com/highdrone
+- name: Shaun McFall (merthsoft)
+  url: https://github.com/merthsoft
+source: https://github.com/highdrone/fm1-flipper-recovery
+source_status: open
+license: Unlicense
+license_notes: >-
+  The recovery code comes from merthsoft/flipper-fm1-recovery under the Unlicense, and the added guides and graphics use
+  the same licence. THIRD-PARTY.md lists the terms of jl-uboot-tool, FM-1 Transporter, the Flipper and Momentum SDKs and
+  M-Flasher, which are not bundled.
+distribution: download
+install_notes: >-
+  Copy fm1_boot_key.fap from the release, or build it with ufbt against the SDK matching your Flipper firmware, to
+  /ext/apps/Tools on the SD card. Follow docs/MACOS.md or docs/WINDOWS.md for the computer side, and keep your own
+  backups private. You supply the firmware package to restore.
+brick_risk: true
+tags: [flasher, loader, utility]
+image:
+  url: https://raw.githubusercontent.com/highdrone/fm1-flipper-recovery/main/docs/images/hero.svg
+  alt: >-
+    Dark illustration of the recovery steps, enter ROM, back up and restore, with a drawn Flipper Zero and a drawn
+    FM-1 keyboard.
+  credit: highdrone
+  source_url: https://github.com/highdrone/fm1-flipper-recovery#readme
+  first_party: true
+versions:
+- version: 0.8.1
+  date: 2026-10-23
+  url: https://github.com/highdrone/fm1-flipper-recovery/releases/tag/v0.8.1
+  notes: Illustrated guides and a build for Momentum API 87.1.

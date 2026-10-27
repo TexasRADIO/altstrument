@@ -20,6 +20,10 @@ install_notes: >-
 brick_risk: true
 tags: [drums, sequencer, sampler, fx, performance]
 versions:
+- version: 0.25.0
+  date: 2026-10-27
+  url: https://github.com/DeadActive/hortator/releases/tag/drum-v0.25.0
+  notes: Adds USB audio with a choice of two channels or ten (master plus the eight tracks on separate channels). The Bluetooth build stays two-channel.
 - version: 0.24.0
   date: 2026-10-25
   url: https://github.com/DeadActive/hortator/releases/tag/drum-v0.24.0

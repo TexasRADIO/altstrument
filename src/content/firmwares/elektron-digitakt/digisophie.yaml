@@ -23,6 +23,10 @@ video:
   credit: Soejrd
   first_party: true
 versions:
+  - version: v1.2.0
+    date: 2026-10-26
+    url: https://github.com/soejrd/digisophie/releases/tag/v1.2.0
+    notes: Adds machine-pages integration and a lighter render with identical output; builds for OS 1.53 and 1.54.
   - version: v1.1.13
     date: 2026-10-02
     url: https://github.com/soejrd/digisophie/releases/tag/v1.1.13

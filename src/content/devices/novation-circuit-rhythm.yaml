@@ -10,7 +10,7 @@ description: >-
 stock_firmware: "5706"
 links:
   manufacturer: https://novationmusic.com/products/circuit-rhythm
-related: [novation-circuit, novation-circuit-tracks]
+related: [novation-circuit, novation-circuit-tracks, novation-circuit-mono-station]
 notes: >-
   The custom firmware here is built from Novation's official 5706 update, either as a patched copy served by an
   installer or patched locally from the user's own file, and is entered through the Rhythm's update mode, which a

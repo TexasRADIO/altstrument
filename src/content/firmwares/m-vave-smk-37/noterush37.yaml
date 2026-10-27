@@ -1,0 +1,43 @@
+device: m-vave-smk-37
+name: NOTE RUSH 37
+summary: >-
+  Note-reading game for the SMK-37 built on Vector37: a note is shown as a letter, on a staff or played, you
+  answer on the keys, and the score goes into a top 5 stored on the keyboard.
+description: >-
+  A fork of Vector37 that keeps its board layer, update path and synth engine and puts a game where the
+  interface was. Three phases show the note name, the staff (C3 to C6) or play the note for you to find by ear,
+  with the notes coming in by octave and a time limit from none to two seconds. A right answer builds a combo
+  with lightning drawn across the screen and the pads, and a wrong key or a time-out ends the run. The keys
+  always sound through nine of Vector37's sounds, and the knobs, faders and wheels shape them, with a PATCH
+  screen and a moving VETOR brightness screen. The screens are in Brazilian Portuguese. It is the firmware
+  version of the author's NOTE RUSH CYBERFUNK web game. The project site runs the firmware in the browser on a
+  simulated SMK-37.
+status: active
+authors:
+- name: ueinegoms
+  url: https://github.com/ueinegoms
+source: https://github.com/ueinegoms/noterush37
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Vector37, whose board layer comes from SLOOP and Felucca; the Terminus font is SIL OFL 1.1.
+homepage: https://ueinegoms.github.io/noterush37/
+distribution: browser-installer
+install_notes: >-
+  The Elite, the Pro and the MKE-P37 each have their own package. Open the project's simulator page in Chrome or Edge with the keyboard on a USB data cable, press CONECTAR to see
+  the model, then INSTALAR for the matching package, or use tools/fm1_install.py with the .fwsc for your model.
+  Installing clears another firmware's stored data, and installing another firmware the same way goes back.
+  Holding OCT- while switching on starts the rescue. The README says installing is at your own risk.
+brick_risk: true
+tags: [game, synth-engine, emulator]
+video:
+  url: https://www.youtube.com/shorts/pjCsZ0zWJfI
+  title: noterush37 what is it like
+  credit: Dream Catcher - games
+  first_party: true
+  found_via: https://github.com/ueinegoms/noterush37#readme
+versions:
+- version: v0.1.0
+  date: 2026-10-20
+  url: https://github.com/ueinegoms/noterush37/releases/tag/v0.1.0
+  notes: First release, with the three question phases, combos, a local top 5 and packages for the Elite, Pro and MKE-P37.

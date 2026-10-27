@@ -1,0 +1,34 @@
+device: m-vave-fm-1
+name: Felucca for tuttidaw
+kind: tool
+summary: >-
+  Plugin for the tuttidaw browser DAW that runs the Felucca firmware in WebAssembly as the instrument, renders
+  its song or incoming MIDI offline to a mix and four part stems, and can play through a connected FM-1.
+description: >-
+  A fork of Felucca whose web/plugin folder wraps the browser emulator as a tuttidaw plugin (protocol
+  tutti-plugin/0). Renders run from the start of the song at the host's tempo, including fractional tempos, and
+  return the mix plus one stem per track at 48 kHz; the firmware's 44.1 kHz output is resampled. A few firmware
+  changes, enabled only in the plugin build, keep the step clocks sample-accurate and split the output into
+  per-part sums. Playing a hardware FM-1 from tuttidaw is supported by a later commit. The plugin page is served
+  at felucca.plugins.tooljams.com, and the hardware firmware build is unchanged by the fork.
+status: active
+authors:
+- name: weavejam
+  url: https://github.com/weavejam
+source: https://github.com/weavejam/Felucca
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The plugin and the changes to Felucca are GPL-3.0-only (LICENSING.md); the engines Felucca bundles keep their
+  MIT licence.
+homepage: https://felucca.plugins.tooljams.com/
+install_notes: >-
+  Add the plugin from tuttidaw, or open the page on its own as an emulator; saves stay in the browser. To build it
+  you need emcc and node (web/plugin/build.sh).
+brick_risk: false
+tags: [emulator, vst, fork]
+versions:
+- version: main @ a4a4a6d
+  date: 2026-10-25
+  url: https://github.com/weavejam/Felucca/commit/a4a4a6d0b77ed7251f7fb475672a8ac8a9ef6b8e
+  notes: No tagged releases; this is the latest commit.

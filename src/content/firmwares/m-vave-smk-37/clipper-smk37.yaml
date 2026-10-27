@@ -1,0 +1,42 @@
+device: m-vave-smk-37
+name: Clipper SMK-37
+summary: >-
+  Unofficial port of isod89's Clipper synth (23 engines, 407 sounds) to the SMK-37 Pro, using the 37 keys, 16 pads,
+  encoders and wheels, with TRS MIDI out and a sound picker on the pads.
+description: >-
+  Built on Clipper 1.1, with the port's changes on the smk37 branch, which is the repository's default branch. The
+  pads show 16 sounds for a few seconds when PRESETS is turned and a pad loads its sound; KNOB BANK keeps them up.
+  The factory sound list is regrouped by engine, so ALGORITHM steps between the 23 engines and PRESETS walks the
+  whole list. The 3.5 mm jack is used as MIDI out, the pitch and mod wheels send pitch bend and CC 1, the pad LEDs
+  light only while a pad is held, and K1 shows a master volume overlay. The four faders are switched off in this build
+  because the author's own unit has a broken fader. Data is kept in a CLIPPER store that other firmwares do not read.
+  The README says it is tested on one unit: keys, pads, wheels, TRS out, flashing and saving. A built package
+  is committed to the repository and also served by a web installer.
+status: active
+authors:
+- name: davidozz0
+  url: https://github.com/davidozz0
+- name: isod89
+  url: https://github.com/isod89
+source: https://github.com/davidozz0/clipper-smk
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and LICENSING.md, as upstream Clipper. msfa is Apache-2.0, the PHYS engine ports DaisySP and
+  Rings (MIT), the font is Terminus (OFL) and the samples are CC0 (ATTRIBUTION.txt, LICENSES/). The JieLi toolchain and SDK
+  are not in the repository.
+homepage: https://davidozz0.github.io/clipper-smk/webapp/installer/
+distribution: browser-installer
+install_notes: >-
+  The web installer (Chrome or Edge, Web Serial) checks the package's SHA-256, writes only the app area and checks
+  the unit reports an SMK-37 Pro identity afterwards; the page can also restore an official package you pick from disk.
+  SMK37.md says to take two identical full flash dumps before writing, and notes that Clipper cannot open the stock
+  presets. A package is also at dist/clipper-smk37.fwsc for the M-VAVE or JieLi updater. The data store is
+  cleared on the first start after another firmware. Flashing is at your own risk.
+brick_risk: true
+tags: [synth-engine, oscillator, wavetable, fm, filter, fx, midi, performance, fork]
+versions:
+- version: smk37 @ 42cb76e
+  date: 2026-10-22
+  url: https://github.com/davidozz0/clipper-smk/commit/42cb76ed6a4942ce3b471cd6cb0801dfa3b3e817
+  notes: No tagged releases; this is the latest commit.

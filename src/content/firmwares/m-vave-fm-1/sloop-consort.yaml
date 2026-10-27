@@ -1,0 +1,60 @@
+device: m-vave-fm-1
+name: Consort
+kind: tool
+summary: >-
+  Android app and web page that works as a companion for an FM-1 running SLOOP 2.7: sampler, punch-in effects,
+  song and backup library, theme sync and an offline renderer.
+description: >-
+  Narrow in scope on purpose, leaving sequencing and sound design to the machine and the SLOOP editor. The sampler
+  records from the phone or imports audio, trims, normalises, sets loop points and root pitch, and sends IMA
+  ADPCM at 22.05 kHz to the four user slots. The FX page holds the 27 punch-in effects as pads. The Songs page
+  backs up the whole project including samples and keeps a phone-side library of .sloopsong files, and themes can
+  be read, saved and written back. An offline renderer built from SLOOP 2.7.1 compiled to WebAssembly turns a
+  song into a WAV. The same page runs as a PWA, where an iPhone needs a Web MIDI browser to reach the FM-1.
+  The APK is signed with a debug key. The README says it was verified on a real FM-1 but not yet smoke-tested
+  on a physical Android phone.
+status: active
+authors:
+- name: zisonzishen0415-stack
+  url: https://github.com/zisonzishen0415-stack
+source: https://github.com/zisonzishen0415-stack/sloop-consort
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Code is GPL-3.0-only, matching the SLOOP editor sources; the embedded sloop.wasm is SLOOP 2.7.1 (GPL-3.0) and
+  the Terminus font is SIL OFL 1.1.
+homepage: https://zisonzishen0415-stack.github.io/sloop-consort/
+distribution: download
+requires_stock: SLOOP 2.7
+install_notes: >-
+  Sideload consort.apk from the latest release (Android 6.0 or later with USB host support; the build is signed
+  with a debug key), or open the web page in a Web MIDI browser. Back up the FM-1 project first; sample writes
+  replace slot contents.
+brick_risk: false
+tags: [editor, sampler, fx, librarian, midi, android]
+image:
+  url: https://raw.githubusercontent.com/zisonzishen0415-stack/sloop-consort/main/docs/screenshots/sampler.jpg
+  alt: "Consort sampler page with four user slot tiles, a recorded waveform with trim handles, a REC button and a send button"
+  credit: zisonzishen0415-stack
+  source_url: https://github.com/zisonzishen0415-stack/sloop-consort
+  first_party: true
+versions:
+- version: 0.9.4-20261019
+  date: 2026-10-19
+  url: https://github.com/zisonzishen0415-stack/sloop-consort/releases/tag/v0.9.4-20261019
+  notes: Adds a web and iOS mode with a browser file library and Web MIDI transport.
+- version: 0.9.3-20261019
+  date: 2026-10-19
+  url: https://github.com/zisonzishen0415-stack/sloop-consort/releases/tag/v0.9.3-20261019
+  notes: Adds management of rendered WAV files.
+- version: 0.9.2-20261019
+  date: 2026-10-19
+  url: https://github.com/zisonzishen0415-stack/sloop-consort/releases/tag/v0.9.2-20261019
+  notes: Adds full-song offline rendering.
+- version: 0.9.1-20261019
+  date: 2026-10-19
+  url: https://github.com/zisonzishen0415-stack/sloop-consort/releases/tag/v0.9.1-20261019
+  notes: Adds offline WAV rendering.
+- version: 0.9.0-20261019
+  date: 2026-10-19
+  url: https://github.com/zisonzishen0415-stack/sloop-consort/releases/tag/v0.9.0-20261019

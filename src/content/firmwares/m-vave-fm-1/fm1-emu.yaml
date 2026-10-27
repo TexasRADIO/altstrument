@@ -3,15 +3,16 @@ name: FM-1 Emulator
 kind: tool
 summary: >-
   Emulates the FM-1's CPU, screen, keys, knobs and audio so community firmwares run unchanged in a browser
-  or in a native window; also ships a SID-chip firmware of its own.
+  or in a native window; also builds a plugin (AU, VST3, CLAP).
 description: >-
   Instruction set recovered from the firmwares themselves, with models of the chip's timers, flash, display,
   key matrix and MIDI UART. The web page fetches each community firmware package from its author's own site
   when you start it, and plays through the computer keyboard, mouse, touch or Web MIDI. The native build
-  (Rust, fm1-live) runs at full clock speed with a JIT on Apple silicon Macs and 64-bit ARM Linux, and
-  interprets on x86-64 Linux. Release 0.2.0 has prebuilt archives of it, and a separate plugin build (AU, VST3,
-  CLAP) is also published. Also contains FM-1 SID, a Commodore 64 SID synth firmware with a sequencer and
-  effects, which has its own page.
+  (Rust, fm1-live) runs at full clock speed with a JIT on Apple silicon Macs, 64-bit ARM Linux and, since 0.3.0,
+  x86-64 Linux. Release 0.3.0 has prebuilt archives of it for those three, and a plugin build (AU, VST3, CLAP) for
+  Apple-silicon Macs; the same release runs M-VAVE's V16 firmware and its FM1 Open. FM-1 SID, a Commodore 64 SID
+  synth firmware with a sequencer and effects, began in this repository and now lives in a repository of its own
+  that is included here as a submodule.
 status: active
 authors:
 - name: Joakim Eriksson (joakimeriksson)
@@ -39,11 +40,11 @@ image:
   source_url: https://github.com/joakimeriksson/fm1-emu
   first_party: true
 versions:
+- version: 0.3.0
+  date: 2026-10-26
+  url: https://github.com/joakimeriksson/fm1-emu/releases/tag/v0.3.0
+  notes: Runs M-VAVE's V16 firmware and FM1 Open, adds the JIT on x86-64 Linux, 120 and 160 MHz plugin clocks and key velocity and pressure from where a key is pressed.
 - version: 0.2.0
   date: 2026-10-19
   url: https://github.com/joakimeriksson/fm1-emu/releases/tag/v0.2.0
   notes: First release of the whole emulator, adding fm1-live for macOS and Linux.
-- version: master @ e52f464
-  date: 2026-10-13
-  url: https://github.com/joakimeriksson/fm1-emu/commit/e52f4640157f490f8c3af778dd044e9d33e989e8
-  notes: Latest commit when first catalogued.

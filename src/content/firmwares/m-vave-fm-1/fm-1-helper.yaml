@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: FM-1 Helper
+kind: tool
+summary: >-
+  Single-page browser tool for assembling DX7-compatible SysEx banks for the FM-1: drop in .syx files, arrange
+  patches into banks A to D, then export the bank or send it over Web MIDI.
+description: >-
+  Reads standard 4104-byte DX7 SysEx files or whole folders into a pool of patches that can be searched and sorted,
+  then drags them into four banks of 32 slots. Empty slots are filled with an initial voice so the bank has no gaps, and
+  Roll and Pack buttons randomize or compact a bank. The active bank can be saved as a .syx file or transmitted to the
+  FM-1 from the page. The page is titled FM-1 SysEx Patch Curator Pro. The repository is a single HTML file with a
+  README, and it states no licence.
+status: active
+authors:
+- name: Grandsummoner
+  url: https://github.com/Grandsummoner
+source: https://github.com/Grandsummoner/fm-1-helper
+source_status: open
+license: unspecified
+license_notes: No LICENSE file and no licence statement in the README or the page.
+homepage: https://grandsummoner.github.io/fm-1-helper/FM-1%20Helper.html
+distribution: browser-installer
+install_notes: >-
+  Open the hosted page in Chrome, Edge or Opera and allow Web MIDI. Close any DAW or librarian that holds the FM-1's
+  MIDI port before sending a bank.
+brick_risk: false
+tags: [editor, librarian, sysex, dx7, midi, web]
+image:
+  url: https://raw.githubusercontent.com/Grandsummoner/fm-1-helper/main/res/FM-1-Helper.png
+  alt: >-
+    FM-1 SysEx Patch Curator Pro with a source importer on the left, a pool of 32 imported patches in the middle and
+    Bank A with its 32 slots on the right, above Export and Send buttons.
+  credit: Grandsummoner
+  source_url: https://github.com/Grandsummoner/fm-1-helper#readme
+  first_party: true
+versions:
+- version: main @ 7a59326
+  date: 2026-07-08
+  url: https://github.com/Grandsummoner/fm-1-helper/commit/7a5932662a92ef8fe0e8f6938325e7dabc6dfa99
+  notes: No tagged releases; this is the latest commit.

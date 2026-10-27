@@ -1,0 +1,47 @@
+device: m-vave-fm-1
+name: Berlinan
+summary: >-
+  Generative Berlin School sequencer as FM-1 firmware: a standalone USB MIDI sequencer whose voices repeat and phase on
+  loops of unequal length, each sent on its own MIDI channel, matching the Berlinan macOS app note for note.
+description: >-
+  The FM-1 makes no sound in this firmware; it connects by USB to a MIDI router and plays other synthesizers. Given the same
+  template and seed, it produces the same notes and controllers as the Berlinan macOS app, and the repository tests this
+  against the unchanged Swift engine. It has seven pages, six save slots, a generative arranger and a delay cheat sheet, and
+  runs as MIDI clock master or follows USB or TRS clock. Projects do not move between the Mac app and the FM-1, and harmony
+  modes, melody, MIDI echo, Link and capture are left out of this first version. The site is in English and Czech and has an
+  installer, a manual and a browser emulator that sends MIDI over Web MIDI. It is built on fm1-base and felucca-bsp and
+  ignores other firmwares' saved data.
+status: active
+authors:
+- name: Jiří Píša
+  url: https://github.com/jiripisa
+source: https://github.com/jiripisa/fm1-berlinan
+source_status: open
+license: GPL-2.0-or-later
+license_notes: >-
+  The LICENSE file names Berlinan for macOS and states GPL-2.0-or-later, chosen to match Ableton Link's licence. The
+  vendored fm1-base (MPL-2.0) and felucca-bsp keep their own licences.
+homepage: https://jiripisa.github.io/fm1-berlinan/
+distribution: browser-installer
+install_notes: >-
+  Install page on the project site in Chrome or Edge over USB, which can also restore M-VAVE's firmware, or install the
+  release .fwsc with fm1-base's tools/fm1_install.py. The package identity is FM-1_23XXYYZZ.
+brick_risk: true
+tags: [sequencer, generative, midi, usb-midi, emulator]
+image:
+  url: https://jiripisa.github.io/fm1-berlinan/img/screen-perform.png
+  alt: >-
+    Berlinan's Perform page on the FM-1 screen: six voice lanes from Pluck 1 to Heartbeat with MIDI channels and loop
+    lengths, and Tempo, Auto, Form and Ambient knob cards.
+  credit: Jiří Píša
+  source_url: https://jiripisa.github.io/fm1-berlinan/
+  first_party: true
+versions:
+- version: 0.5.1
+  date: 2026-10-27
+  url: https://github.com/jiripisa/fm1-berlinan/releases/tag/v0.5.1
+  notes: Gives the package its own identity so it no longer collides with other firmwares on the Firmware Hub; nothing else changed.
+- version: '0.5'
+  date: 2026-10-27
+  url: https://github.com/jiripisa/fm1-berlinan/releases/tag/v0.5
+  notes: First release for the FM-1.

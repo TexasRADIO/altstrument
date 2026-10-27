@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: Reed
+summary: >-
+  Fixed-point Wurlitzer 200A electric piano for the FM-1: a modal reed, pickup, hammer and amplifier model ported from
+  OpenWurli, with a browser emulator and an alpha firmware image.
+description: >-
+  The voice is a physical model with seven reed modes, an electrostatic pickup curve, a hammer and damper model, tremolo,
+  preamp, power amp and speaker stages, written in C99 without floating point so it runs on the FM-1's processor, which has
+  no FPU. It plays eight voices from the 27 keys or USB-MIDI and has five parameters: volume, tremolo, drive, speaker
+  character and tune. Reed's physics tables come from OpenWurli, and the firmware layer is built on felucca-bsp. The README
+  marks the firmware as alpha: it builds a bring-up image that has not been tried on a real FM-1, and no installer or image is
+  published. The browser emulator runs the same engine as WebAssembly.
+status: active
+authors:
+- name: ograndebe
+  url: https://github.com/ograndebe
+source: https://github.com/ograndebe/fm1-reed
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md chooses GPL-3.0-only, since the tables derive from OpenWurli (GPL-3.0-or-later). felucca-bsp is
+  MPL-2.0 and stays under those terms, and the 5x7 font is BSD-3-Clause.
+homepage: https://ograndebe.github.io/fm1-reed/
+distribution: source-only
+requires_stock: V15
+install_notes: >-
+  Source only. The firmware build needs the JieLi toolchain (Docker on macOS arm64), per BUILDING.md. The image has no
+  OTA or installer entry and has not been validated on hardware; the README says not to flash it as a first test. The
+  firmware has a boot guard that falls back to the update mode after two failed starts.
+brick_risk: true
+tags: [synth-engine, physical-modeling, emulator, midi]
+image:
+  url: https://raw.githubusercontent.com/ograndebe/fm1-reed/main/web/assets/emulator.png
+  alt: "Reed browser emulator: a dark panel with a green screen reading C4 vel 100, five sliders for volume, tremolo, drive, speaker and tune, and a row of piano keys with C4 held"
+  credit: ograndebe
+  source_url: https://github.com/ograndebe/fm1-reed
+  first_party: true
+versions:
+- version: v0.1.0
+  date: 2026-10-27
+  url: https://github.com/ograndebe/fm1-reed/tree/v0.1.0
+  notes: Git tag; no GitHub release page.

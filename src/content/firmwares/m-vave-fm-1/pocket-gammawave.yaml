@@ -35,6 +35,10 @@ image:
   source_url: https://github.com/fvalente/GammaWave-FM1
   first_party: true
 versions:
+- version: v1.2.1-GW
+  date: 2026-10-26
+  url: https://github.com/fvalente/GammaWave-FM1/releases/tag/v1.2.1-GW
+  notes: Adds a CLEAR PROJ tool and a smooth random LFO source, and fixes clicks under load and faults in the cloud reverb, the delay and the tempo maths.
 - version: v1.2-GW
   date: 2026-10-25
   url: https://github.com/fvalente/GammaWave-FM1/releases/tag/v1.2-GW

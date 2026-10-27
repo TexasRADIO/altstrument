@@ -772,3 +772,48 @@ ignore:
   - url: https://github.com/DanimanX/FreeAPC64
     reason: redistributes Akai's APC64 stock firmware image and a patched copy of it, with no licence
     date: 2026-10-26
+  - url: https://github.com/Leeman1982/sloop-fm1
+    reason: fork of isod89/sloop-fm1 with no changes
+    date: 2026-10-27
+  - url: https://github.com/mene311/fm1-banks
+    reason: DX7 patch banks of unknown origin redistributed as sound data; not firmware or a tool
+    date: 2026-10-27
+  - url: https://github.com/nokill-pedal-co/pocket-six
+    reason: standalone browser DX7-style synth inspired by the FM-1, not an editor or emulator for it; bundles Yamaha factory ROMs
+    date: 2026-10-27
+  - url: https://github.com/TristanoSuriani/fel-tracker
+    reason: old name of TristanoSuriani/bluehare, catalogued as blue-hare
+    date: 2026-10-27
+  - url: https://github.com/spiffomatic64/circuit-tracks-to-og
+    reason: desktop converter of Circuit Tracks packs to original Circuit packs; content converter, not an editor, emulator or firmware tool
+    date: 2026-10-27
+  - url: https://github.com/repeat98/octamachine
+    reason: renamed Octamod, then Modwerk, which is catalogued as elektron-octatrack/modwerk
+    date: 2026-10-27
+  - url: https://github.com/fabiomassimopasquazzi/dinghy
+    reason: fork of zvenson/dinghy with no changes on main
+    date: 2026-10-27
+  - url: https://github.com/jonathaslacerda/smk-37-pro-docs
+    reason: docs repo that mirrors SMK-37 Pro, Elite, MKE-P37 and Starrykey stock images; only the Pro and Elite 016 files are licensed copies
+    date: 2026-10-27
+  - url: https://github.com/leeman1982/felucca
+    reason: fork of hugelton/Felucca with no changes
+    date: 2026-10-27
+  - url: https://github.com/vrcvs/felucca
+    reason: fork of hugelton/Felucca with no changes
+    date: 2026-10-27
+  - url: https://github.com/shcherbakov7/hypno-1
+    reason: fork of isod89/sloop-fm1 with no changes
+    date: 2026-10-27
+  - url: https://m-vave-fm1-midi-guide.up.railway.app
+    reason: FM-1 MIDI user guide; documentation, not firmware or a tool
+    date: 2026-10-27
+  - url: https://github.com/acidsound/smk37pro-acidsound-mod
+    reason: redistributes an unlicensed stock SMK-37 Pro V15 image (baselines/.../inputs/SMK-37_Pro_015.fwsc) alongside its modified images; no licence
+    date: 2026-10-27
+  - url: https://github.com/dpwe/fm1-x0x
+    reason: fork with no changes on main; its amy-juno work became the catalogued fm1-amy
+    date: 2026-10-27
+  - url: https://github.com/genkigenki/frodhes
+    reason: fork of catalogued Frodhes; upstream now ships the SMK-37 builds
+    date: 2026-10-27

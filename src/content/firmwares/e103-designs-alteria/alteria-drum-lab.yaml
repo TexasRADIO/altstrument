@@ -1,0 +1,40 @@
+device: e103-designs-alteria
+name: ALTERIA DRUM LAB
+summary: Arduino firmware that turns the ALTERIA module into two lo-fi percussion voices, each with eight selectable engines and three effects.
+description: >-
+  DRUM LAB 1.0.0 assigns one of eight engines to each voice: kick, tom, synth percussion, snare,
+  clap, FM metal, closed hat or open hat. CV in triggers voice A to output 1 and the I/O jack
+  triggers voice B to output 2, and the manual button triggers the selected voice. A sound
+  control sets pitch, duration and character, and an effects control adds tone, drive and crush;
+  hat pairs choke each other, and a kit can be saved. Audio runs at 6.4 kHz on purpose and there
+  is no internal sequencer. The author describes it as original AVR synthesis and not an Erica
+  Synths LXR port.
+status: active
+authors:
+  - name: E103-designs
+    url: https://github.com/E103-designs
+source: https://github.com/E103-designs/ALTERIA
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Covers the original source, documentation, photographs and design files in the repository.
+homepage: https://github.com/E103-designs/ALTERIA/tree/main/firmware/ALTERIA_DRUM_LAB#readme
+distribution: source-only
+install_notes: >-
+  Open firmware/ALTERIA_DRUM_LAB/ALTERIA_DRUM_LAB.ino in the Arduino IDE and build for Arduino
+  Nano with an ATmega328P at 16 MHz, choosing the old bootloader only if the board needs it.
+  Upload one of the two ALTERIA sketches at a time. The README says the DRUM LAB audio path still
+  needs listening and bench verification.
+brick_risk: false
+tags: [official, drums, voice, arduino, eurorack]
+image:
+  url: https://raw.githubusercontent.com/E103-designs/ALTERIA/main/images/front.jpg
+  alt: Front panel of the ALTERIA module with four LEDs, two buttons, three white knobs and four jacks
+  credit: E103-designs
+  source_url: https://github.com/E103-designs/ALTERIA#readme
+  first_party: true
+versions:
+  - version: main @ 5bcaad7
+    date: 2026-10-27
+    url: https://github.com/E103-designs/ALTERIA/commit/5bcaad744363a33539e5f5f5ae7ccb88c1bb24c7
+    notes: No tagged releases; this is the latest commit. The README lists DRUM LAB 1.0.0.

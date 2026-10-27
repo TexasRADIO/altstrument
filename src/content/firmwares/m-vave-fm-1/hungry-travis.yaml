@@ -1,0 +1,37 @@
+device: m-vave-fm-1
+name: Hungry Travis
+summary: >-
+  Spoon-feeding balance game for the FM-1: roll and tilt a spoon with the keys to drop a bean into a 3D face's mouth,
+  with recorded character voices and an ambient melody that dips under speech.
+description: >-
+  The keys move the spoon: two white keys roll it left and right, two move it back and forward, and the outer black keys
+  tip it down to pour or back up. GLO loads a bean, and a miss adds to the face's frustration while a hit calms it and
+  every fifth success plays a short transformation. Thirteen voice recordings supplied by the author react to play, and the
+  mouth animates to speech. SEL switches to a face study view. The platform descends from Felucca by way of X0X and FoMni.
+  The repository holds the firmware package FM-1_797, a source archive, a quick-start PDF and checksums, and the source
+  includes a macOS viewer and recorder that follow the live unit. The README says the package was checked on an FM-1 and
+  that the source rebuilds it byte for byte.
+status: active
+authors:
+- name: adamcharleswilsonmusic-code
+  url: https://github.com/adamcharleswilsonmusic-code
+source: https://github.com/adamcharleswilsonmusic-code/Hungry-Travis
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0-only for the game and platform code. The thirteen voice recordings and the character
+  drawing were supplied by the author, who authorized their upload; no separate media licence is declared. Fonts keep
+  their SIL OFL texts, and three JieLi SDK package inputs are Apache-2.0 and are not independently audited.
+distribution: download
+install_notes: >-
+  Download the .fwsc and the source archive from the repository, extract the archive, and install with
+  fm1/tools/fm1_install.py in a Python environment over USB-MIDI. The installer asks before writing and checks the
+  restarted identity (FM-1_797). Installing replaces the running firmware, so keep a package of the one you want to
+  return to, and see the source installer's recovery notes if a transfer is interrupted.
+brick_risk: true
+tags: [game, voice, ui]
+versions:
+- version: main @ dd5d683
+  date: 2026-10-27
+  url: https://github.com/adamcharleswilsonmusic-code/Hungry-Travis/commit/dd5d6836ef0a63bfc73a899ba69951701210ab1b
+  notes: No tagged releases; this is the latest commit, with firmware FM-1_797.

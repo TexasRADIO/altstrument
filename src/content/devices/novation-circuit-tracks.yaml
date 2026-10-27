@@ -16,7 +16,7 @@ links:
   community:
     - label: Matrixsynth write-up
       url: https://www.matrixsynth.com/2026/10/novation-circuit-tracks-hack.html
-related: [novation-circuit, novation-circuit-rhythm]
+related: [novation-circuit, novation-circuit-rhythm, novation-circuit-mono-station]
 notes: >-
   The custom firmware here is built from Novation's official 1.2.1 update file,
   which you download from Novation yourself; the project does not distribute

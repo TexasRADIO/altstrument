@@ -31,4 +31,4 @@ versions:
   - version: lfolength
     date: 2026-10-09
     url: https://github.com/angellinares/dn2_firmware_explore
-    notes: Confirmed on hardware (audio track) on this date; no tagged releases.
+    notes: Confirmed on hardware (audio track) on this date; no GitHub releases, and the repository tags are work snapshots.

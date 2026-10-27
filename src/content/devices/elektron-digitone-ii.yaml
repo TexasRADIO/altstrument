@@ -19,7 +19,7 @@ links:
     - label: Modwerk
       url: https://modwerk.app/
 notes: >-
-  Mods target OS 1.11; dn2-cfw targets 1.12. Projects
+  Mods target OS 1.11; Digiwerk targets 1.12. Projects
   here patch your own stock .syx; none ship Elektron firmware, and the
   bootloader is untouched. Elektron does not permit sharing mod files or links
   on Elektronauts (policy of 2026-09-16); community discussion moved to

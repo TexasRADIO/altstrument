@@ -34,7 +34,8 @@ install_notes: >-
   release. The README gives OpenOCD commands to back up and restore the
   settings and calibration sector and to do an ST-Link recovery flash, and
   warns that holding SEED at power-on resets settings. Turn monophonic grains
-  off before going back to stock firmware.
+  off before going back to stock firmware. A separate one-off recovery image
+  for a module that no longer starts is listed as Drizzlet storage recovery.
 brick_risk: true
 tags: [granular, fx, bugfixes]
 versions:

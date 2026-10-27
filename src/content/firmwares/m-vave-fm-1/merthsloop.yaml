@@ -1,0 +1,46 @@
+device: m-vave-fm-1
+name: MerthSloop
+summary: >-
+  Fork of SLOOP that adds on-device drum grooves, musical sequence starters, note and tie editing, chord and
+  arp tools, extra effects and visualizers, plus an Android companion app.
+description: >-
+  Keeps SLOOP's engines and groovebox structure and builds on it for playing and editing without a phone: 24
+  drum grooves, 27 chord and bass starters with rhythm shaping, per-note ties and sustains, chord voicing and
+  latch, scale lights on the keys, live vibrato, tremolo, wah and pan gestures, extra delay and lo-fi
+  characters, A/B sound morphing, drones and slow drift, and three more visualizers. A companion Android app
+  (MerthSloop Mobile, C# and .NET) does touch performance, a piano roll, FM6 sound editing, sampling and
+  chopping, MIDI file import and an FM-1 song library over USB. The fork tracks upstream SLOOP releases and keeps
+  the upstream song, sample and settings formats as its baseline, so upstream's own installer installs
+  upstream SLOOP, not this build. The project's pages host an installer and editor for the fork. The README
+  calls it a beta.
+status: active
+authors:
+- name: Shaun McFall (merthsoft)
+  url: https://github.com/merthsoft
+source: https://github.com/merthsoft/sloop-fm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Firmware is GPL-3.0-only (LICENSE). The Android app's original code is Unlicense, with GPL and Apache-2.0
+  components keeping their own terms (android/LICENSING.md).
+homepage: https://merthsoft.github.io/sloop-fm1/
+distribution: browser-installer
+requires_stock: M-VAVE FM-1 V15, or a firmware with a compatible USB updater
+install_notes: >-
+  Browser installer on the project's pages (Chrome or Edge, USB data cable), or build from source with
+  build-sloop.ps1. A USB rescue mode starts when OCT- is held at power-on. Back up projects and samples before
+  installing: newer builds save projects in a format earlier SLOOP builds cannot read. The README describes
+  returning to M-VAVE's own firmware through the installer page using the stock file you download yourself.
+brick_risk: true
+tags: [fork, sequencer, synth-engine, drums, chords, performance, fx, editor, sampler, midi, ui]
+image:
+  url: https://raw.githubusercontent.com/merthsoft/sloop-fm1/merthsloop/assets/screens/merthsoft/neon/home.png
+  alt: "MerthSloop four-track overview screen with SWING, LEVEL, STEPS and PAN cards over a striped sun graphic and four step rows"
+  credit: Shaun McFall (merthsoft)
+  source_url: https://github.com/merthsoft/sloop-fm1
+  first_party: true
+versions:
+- version: merthsloop @ d352b67
+  date: 2026-10-27
+  url: https://github.com/merthsoft/sloop-fm1/commit/d352b6715bd95f0a972e733141a6e105f1eaa6dd
+  notes: No tagged releases; this is the latest commit.

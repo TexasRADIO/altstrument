@@ -10,12 +10,17 @@ description: >-
   on the FM-1's screen, and the host starts whichever module played last. A module that crashes twice in a row
   is skipped at boot, and one that renders slower than real time is stopped in favour of the built-in sine, so
   USB and the updater stay available. Holding OCT+ at power-on starts the sine only, and holding OCT- starts the
-  USB rescue. The 0.4 package ships CS-1 (twochannels), Scintilla (the author's Elka Synthex port) and OberVave
+  USB rescue. The 0.6 package ships CS-1 (twochannels), Scintilla (the author's Elka Synthex port) and OberVave
   (zvenson), plus Dinghy's four-voice sine as the built-in module. FM-1 SID, the author's Commodore 64 SID
-  firmware catalogued separately, is deployed into the dock as a further module. Your own modules are built with
-  the repository's Python tools and deployed from the command line or by dropping a .dock file on the project's
-  web console, which also shows the log, crash records and render load over WebMIDI and runs small probe programs
-  on the chip. The same package runs in the author's fm1-emu emulator. The project was called harbor until
+  firmware catalogued separately, and two modules by Charles Vestal, AMB-1 (a generative ambient machine) and
+  FoMni (an Omnichord-style chord harp), are not in the package and are added to the dock from the project's page
+  or the command line. A module that accepts data can be sent a file over USB that is never written to flash, and
+  a solo build can package one module of your own on fm1-dock with its USB, installer and rescue. Since 0.6 the
+  picker's last line turns BLE-MIDI on (off by default), and OCT+ at power-on is a safe start that runs the sine
+  only with the radio off. Your own modules are built with the repository's Python tools and deployed from the
+  command line or by dropping a .dock file on the project's web console, which also shows the log, crash records
+  and render load over WebMIDI and runs small probe programs on the chip. The same package runs in the author's
+  fm1-emu emulator. The project was called harbor until
   2026-10-25 (not the Android app of that name). It is built on Dinghy and on the platform code of Felucca as
   carried by SLOOP, and its repository says it is not affiliated with M-VAVE.
 status: active
@@ -53,9 +58,16 @@ image:
   source_url: https://github.com/joakimeriksson/fm1-dock
   first_party: true
 versions:
+- version: '0.6'
+  date: 2026-10-25
+  url: https://github.com/joakimeriksson/fm1-dock/releases/tag/v0.6
+  notes: >-
+    Adds optional BLE-MIDI, sending a file from the computer to the running module without writing flash, solo
+    builds of a single module, and a safer boot (no boot firmware in a release, key reads at power-on). Installing
+    over 0.4 keeps deployed modules, settings and presets.
 - version: '0.4'
   date: 2026-10-25
   url: https://github.com/joakimeriksson/fm1-dock/releases/tag/v0.4
   notes: >-
     First release under the fm1-dock name, adding OberVave as a module, module banks by index and code that runs
-    from RAM and from deployed modules. The default branch already lists a 0.5 package that has no release page.
+    from RAM and from deployed modules.

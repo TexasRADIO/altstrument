@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: Simorgh
+summary: >-
+  Persian-flavoured fork of Felucca on a branch that adds a santur physical model, santur FM6 presets and a
+  colour boot splash; dastgah scales are planned but not wired in.
+description: >-
+  The santur branch of a Felucca 1.6.1 fork adds a SANTR model to the physical-modelling engine (a main string,
+  two slightly detuned course strings, a sympathetic octave string, mezrab strike types and controls for ring
+  time, velocity, mezrab and damper, with CC 76 to 81 and CC 64), a new default SANTUR preset, three FM6
+  presets and an eight-colour Simorgh boot splash. The FM6 presets shift the OWN and bank slot indexes by three,
+  so saved Felucca projects that point at those slots can land on the wrong patch. The dastgah scale names
+  exist in the source but are not connected yet. The default branch is plain Felucca, the project's installer
+  page serves stock Felucca 1.6.1, and the plan document is in Swedish. Building needs the JieLi toolchain
+  and SDK.
+status: active
+authors:
+- name: Rune Eriksson (runestone74)
+  url: https://github.com/runestone74
+source: https://github.com/runestone74/Simorgh/tree/santur
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca (LICENSING.md); the Vazirmatn font in the banner art is SIL OFL.
+homepage: https://github.com/runestone74/Simorgh
+distribution: source-only
+requires_stock: V15
+install_notes: >-
+  Build from the santur branch (BUILDING.md), then install the .fwsc with Felucca's web installer or
+  tools/fm1_install.py. Back up first; the way back is M-VAVE V15.
+brick_risk: true
+tags: [fork, synth-engine, physical-modeling, fm, ui]
+image:
+  url: https://raw.githubusercontent.com/runestone74/Simorgh/santur/assets/simorgh/simorgh_banner.jpg
+  alt: "Banner showing a Persian carpet design with a winged simorgh bird above a santur and two mallets, and the Persian title in a panel at the top"
+  credit: Rune Eriksson (runestone74)
+  source_url: https://github.com/runestone74/Simorgh/tree/santur
+  first_party: true
+versions:
+- version: santur @ 3e92e89
+  date: 2026-10-14
+  url: https://github.com/runestone74/Simorgh/commit/3e92e899816eabcafb067d1367cf5b23af328cf7
+  notes: No tagged releases; this is the latest commit on the santur branch.

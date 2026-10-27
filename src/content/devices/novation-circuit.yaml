@@ -12,7 +12,7 @@ platform: ARM + DSP56300
 stock_firmware: "1.8"
 links:
   manufacturer: https://novationmusic.com/circuit/circuit
-related: [novation-circuit-tracks, novation-circuit-rhythm]
+related: [novation-circuit-tracks, novation-circuit-rhythm, novation-circuit-mono-station]
 notes: >-
   The custom firmware here targets the official 1.8 update (build 3592) and is
   entered through the Circuit's bootloader, which a custom image does not

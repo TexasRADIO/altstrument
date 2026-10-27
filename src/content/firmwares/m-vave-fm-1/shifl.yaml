@@ -35,7 +35,7 @@ image:
   source_url: https://github.com/schwartzworld/shifl
   first_party: true
 versions:
-- version: main @ 79fe37d
-  date: 2026-10-15
-  url: https://github.com/schwartzworld/shifl/commit/79fe37dff4701a4c920ef14db4effc962e94abc7
+- version: main @ 9e6bbf6
+  date: 2026-10-26
+  url: https://github.com/schwartzworld/shifl/commit/9e6bbf64f95bcdb59d50ae6f70a2a23f72f2d732
   notes: No tagged releases; this is the latest commit. The README status line says 3.0.

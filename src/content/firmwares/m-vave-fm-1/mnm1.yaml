@@ -8,9 +8,10 @@ description: >-
   machines and pages with its own. The synth machines are named SWSAW, SWPLS, SID, FM+, DPRO, GND and VO-6, and the
   FX machines are a pass-through, reverb, chorus, dynamics, ring modulator, phaser and flanger; an FX machine takes
   the previous track or a bus as its input, as an insert or a send and return. Any machine can sit on any track.
-  Includes 55 factory presets and the drum banks, up to 240 parameter locks per project and a web
-  simulator that runs the real firmware compiled to WebAssembly. The author has tested it on one FM-1 and calls it
-  a beta.
+  Audio algorithms and complete sounds are ported from MONO2K as a second set of calibrated machines. The firmware
+  has 330 factory sounds, eight patterns, eight kits and 128 full user sounds after an explicit storage migration,
+  up to 240 parameter locks per project, a song arranger and a web simulator that runs the real firmware compiled
+  to WebAssembly. The author has tested it on one FM-1 and calls it a beta.
 status: active
 authors:
 - name: galfaroth
@@ -21,7 +22,7 @@ license: GPL-3.0-only
 license_notes: >-
   GPL-3.0-only like Hortator and Felucca. LICENSING.md lists the third-party parts: ports of Mutable Instruments
   Plaits, Streams and Grids code (Grids is GPL-3.0-or-later, the others MIT), DaisySP (MIT), CC0 instrument
-  samples, the Terminus and Unifraktur fonts (SIL OFL 1.1) and JieLi SDK files read at build time (Apache-2.0).
+  samples, ports of MONO2K code and sounds (GPL-3.0-only), the Terminus and Unifraktur fonts (SIL OFL 1.1) and JieLi SDK files read at build time (Apache-2.0).
   The LICENSING.md, carried over from Felucca, reserves Felucca's panel image and sample pack as assets outside
   the GPL.
 homepage: https://galfaroth.github.io/mnm1/
@@ -33,6 +34,14 @@ install_notes: >-
 brick_risk: true
 tags: [synth, drums, sequencer, fx, lfo, delay, filter, emulator, fork]
 versions:
+- version: v1.0.0
+  date: 2026-10-26
+  url: https://github.com/galfaroth/mnm1/tree/v1.0.0
+  notes: Git tag; no GitHub release page. Adds song range, mix and flow controls and a reloadable demo arrangement.
+- version: v0.11.0
+  date: 2026-10-26
+  url: https://github.com/galfaroth/mnm1/tree/v0.11.0
+  notes: Git tag; no GitHub release page. Adds chained trigger routing, multi-voice modes with a selectable MIDI channel, and velocity and keytrack destinations.
 - version: v0.6.0
   date: 2026-10-25
   url: https://github.com/galfaroth/mnm1/tree/v0.6.0

@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: fm1-insert-coin
+summary: >-
+  One firmware holding three 1970s and 80s arcade games, Space Invaders, Breakout and Galaga, chosen from a menu
+  on the FM-1's screen, with sound and a high score for each.
+description: >-
+  Rights warning: Galaga's alien flight programs, sound data, colour and waveform tables and sprites are tables
+  extracted from the original Namco ROMs and PROMs, which the repository's LICENSING.md says are Namco's work and
+  not covered by the GPL; it offers to remove the cartridge if a rights holder objects. Space Invaders and
+  Breakout are rebuilt without ROM data. The games are C ports of the author's web versions, checked frame by
+  frame against recorded traces, and run on the Dinghy platform. A menu opens on start-up: SELECT, PRESETS or
+  ALGORITHM choose a game, PLAY enters it and holding PLAY returns. The keys, buttons and encoders are the
+  controls, and each game keeps its high score in flash. The project site has a browser simulator that runs the
+  same C code and a web installer, and the docs/ folder is a step-by-step write-up of how it was made with
+  Claude.
+status: active
+authors:
+- name: Luca (DarkHelmet67)
+  url: https://github.com/DarkHelmet67
+source: https://github.com/DarkHelmet67/fm1-insert-coin
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The GPL covers the author's code; the Galaga ROM-derived tables in games/galaga/src/rom.c and art.c are Namco's
+  and are not under it. The platform is Dinghy by zvenson (on Felucca), and the Terminus font is SIL OFL 1.1.
+homepage: https://darkhelmet67.github.io/fm1-insert-coin/
+distribution: browser-installer
+install_notes: >-
+  Open the installer page in Chrome or Edge, connect the FM-1 by a USB data cable and press Install; it also works
+  from M-VAVE's V15. Alternatively install insert-coin.fwsc with tools/fm1_install.py or the FM-1 Firmware Hub.
+  Holding OCT- while switching on starts the USB rescue, and M-UPGRADE or the Hub's V15 entry returns to stock. The
+  README says installing third-party firmware is at your own risk.
+brick_risk: true
+tags: [game, emulator]
+image:
+  url: https://raw.githubusercontent.com/DarkHelmet67/fm1-insert-coin/main/docs/images/menu-galaga.png
+  alt: "The INSERT COIN menu showing the Galaga attract screen in a blue frame, with the GALAGA title, a hi-score line and arrows to choose another game"
+  credit: DarkHelmet67
+  source_url: https://github.com/DarkHelmet67/fm1-insert-coin
+  first_party: true
+versions:
+- version: main @ 9c8f058
+  date: 2026-10-26
+  url: https://github.com/DarkHelmet67/fm1-insert-coin/commit/9c8f0589194479f7a5ea8276332c6d096e0ee5b1
+  notes: No tagged releases; this is the latest commit.

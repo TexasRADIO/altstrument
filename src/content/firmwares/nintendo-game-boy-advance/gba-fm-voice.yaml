@@ -10,8 +10,8 @@ description: >-
   algorithms, plus a drum mode in which two audio inputs act as drum triggers. The Workshop's CV, gates and knobs play
   it, and the GBA sends its notes, gates and button states back to the rack. The editor on the GBA screen has eight
   pages, including 16 patch slots, envelopes, a mixer, a modulation matrix, button actions, scale quantising and
-  calibration. The author calls it a beta and notes that the 4-operator mode had not been tested on hardware at the
-  last commit.
+  calibration. The 4-operator voice has 32 presets converted from TX81Z and DX11 voice data. The author calls it a beta
+  that runs on hardware with testing still under way.
 
   The repository's info.yaml is marked as a draft program card for the Workshop Computer library. It is not in the
   upstream releases folder yet, so no synced card entry exists; the sibling PSG project is catalogued there as card
@@ -40,7 +40,7 @@ image:
   source_url: https://github.com/uglifruit/GBA_FM#readme
   first_party: true
 versions:
-  - version: main @ 52aced0
-    date: 2026-10-25
-    url: https://github.com/uglifruit/GBA_FM/commit/52aced0
-    notes: No tagged releases; this is the latest commit. The info.yaml names it version 0.3.0.
+  - version: main @ 95dfe65
+    date: 2026-10-26
+    url: https://github.com/uglifruit/GBA_FM/commit/95dfe65
+    notes: No tagged releases; this is the latest commit. The info.yaml names it version 0.4.0.

@@ -1,0 +1,37 @@
+device: m-vave-fm-1
+name: OberVave Multi
+summary: >-
+  OberVave 1.2 fork that makes the polysynth multitimbral: six parts on six MIDI channels sharing the eight voices, with
+  per-part sends into one shared chorus, delay and reverb.
+description: >-
+  Each part is a complete OberVave sound with its own program. In MULTI mode, channels 1 to 6 play parts 1 to 6 and channels
+  7 to 16 play the part the panel is on; a single channel or OMNI works as in 1.2. Parts take voices when they play and
+  give them back, a new note stealing the oldest released voice first. GLO with white keys 9 to 14 picks the panel's part, and a
+  PARTS page sets track assignments and a part volume. The three effects are shared, so each part's mixes are sends and the effect
+  settings come from part 1's program. The reverb runs at half the sample rate and the output has a limiter. Patch editors can
+  send a program name over CC 110 and 111. The notes put the worst-case cost about 17 percent above OberVave 1.2 in a
+  host measurement. The identity is FM-1_96N. Upstream OberVave has since moved to 3.0 with four tracks on shared voices, which
+  is a different design from this one.
+status: active
+authors:
+- name: heymoustache
+  url: https://github.com/heymoustache
+- name: Sven Trogus (zvenson)
+  url: https://github.com/zvenson
+source: https://github.com/heymoustache/obervave-multi
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from OberVave (GPL-3.0-only, LICENSING.md).
+homepage: https://github.com/heymoustache/obervave-multi
+distribution: source-only
+install_notes: >-
+  Build with build.sh (JieLi toolchain and AC79 SDK) or run the repository's manual GitHub Actions workflow, which uploads
+  obervave.fwsc as an artifact, then install with tools/fm1_install.py. Installing is at your own risk.
+brick_risk: true
+tags: [synth-engine, midi, fx, fork]
+versions:
+- version: main @ 3ebcb86
+  date: 2026-10-14
+  url: https://github.com/heymoustache/obervave-multi/commit/3ebcb8698f290295305b44a05d2b5829279a6ed7
+  notes: No tagged releases; this is the latest commit.

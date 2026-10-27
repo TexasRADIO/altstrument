@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: Dock (backing band)
+summary: >-
+  Melodee fork planned as a four-member MIDI backing band (bass, keys, lead, drums) played from an external
+  sequencer. So far it runs only in a browser emulator; there is no FM-1 build yet.
+description: >-
+  Rights warning: the repository bundles the 64 Casio CZ-1 factory tones and the 200 Sequential Prophet-5/10
+  factory programs as sound data, as Melodee does; its licensing file says the rights stay with Casio and
+  Sequential and that no licence is granted. Dock removes Melodee's own sequencer. Each member has its own MIDI
+  channel and voices, Bass and Lead are monophonic and strike every note, and the drummer plays kits only. Five
+  line-ups (Yacht, French, Hot, Mod, Goth) each bring four sounds and a set of effects, and you can save your own
+  version and export it as a .dock file. Four macro knobs, Tone, Bite, Shape and Space, apply to every sound, a
+  common ENV and LFO page sits in front of each engine, and Program Change and Bank Select choose each member's
+  sound. Added engines are a Juno-60-style voice with chorus, a physically modelled electric piano taken from
+  FRodhes, and organ and plucked-string engines brought back from Felucca. The README says the grooves, FX
+  performance layer and looper are still to come and that fit on the FM-1's flash and CPU has not been measured.
+  The default branch is dock.
+status: active
+authors:
+- name: Steven Snasdell
+  url: https://github.com/stevensnasdell-cmd
+source: https://github.com/stevensnasdell-cmd/dock
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Melodee and Felucca. The FRodhes Rhodes model is GPL-3.0-only (Leonardo Mirabal), the fonts are
+  SIL OFL 1.1, and ported DSP keeps its own licences (LICENSING.md, LICENSES/). The bundled CZ-1 and Prophet-5/10
+  factory sound data is Casio's and Sequential's, with no licence granted.
+distribution: source-only
+install_notes: >-
+  Nothing installs on the FM-1 yet. The emulator is built with emu/build.sh web and served locally, then opened
+  in Chrome with a MIDI controller or sequencer connected; saves stay in the browser.
+brick_risk: false
+tags: [synth-engine, midi, emulator, fork, performance]
+image:
+  url: https://raw.githubusercontent.com/stevensnasdell-cmd/dock/dock/docs/design/dock/ref/sheet.png
+  alt: "Four 240 by 240 reference screens for Dock: the HOME screen with the Yacht line-up, a Keys page with a velocity curve, an FX page with pad cells, and a looper page with a recording grid"
+  credit: Steven Snasdell
+  source_url: https://github.com/stevensnasdell-cmd/dock
+  first_party: true
+versions:
+- version: dock @ 11db45a
+  date: 2026-10-18
+  url: https://github.com/stevensnasdell-cmd/dock/commit/11db45adc55bd263df7b5c6f034f06c8dd248cd6
+  notes: No tagged releases; this is the latest commit on the dock branch.

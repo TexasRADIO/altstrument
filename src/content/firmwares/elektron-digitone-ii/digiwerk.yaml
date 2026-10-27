@@ -1,0 +1,41 @@
+device: elektron-digitone-ii
+name: Digiwerk
+summary: "Custom firmware for the Digitone II on OS 1.12 that adds a Déjà vu LFO with looping random waves, a 3-band master compressor and a flanger, built on your Mac from your own OS file by a notarized patcher app."
+description: >-
+  Formerly published as dn2-cfw, a research notebook; version 0.1.0 is the first
+  release under the Digiwerk name. Every build is a base plus one pack. The base
+  adds nine LFO waves after RAND: a looping run of random values, a version that
+  restarts on each trig, and seven that snap the loop to a scale. The first pack,
+  build DJ01, puts a three-band master compressor (CMP3) and a flanger (FLNG)
+  in the chorus slot, and the README lists a spring reverb and a tape echo as
+  later packs. The Digiwerk Patcher macOS app, or the digiwerk-patch command-line
+  tool, checks that your file is Elektron's original OS 1.12 by hash and saves a
+  build only if it matches the tested result; no Elektron firmware is included.
+  tools/brickcheck runs 12 checks that each build must pass, and recovery from the
+  STARTUP menu over DIN MIDI was tested on the author's unit. The Déjà vu LFO
+  follows Kári Garðarsson's design for the Digitakt II. Kits saved on Digiwerk
+  lose the new settings when opened on stock OS 1.12. The README says the project
+  is part of Modwerk and was made with Claude.
+status: active
+authors:
+  - name: naturarum
+    url: https://github.com/naturarum
+source: https://github.com/naturarum/dn2-cfw
+source_status: open
+license: GPL-2.0-or-later
+distribution: patch-your-own
+requires_stock: "1.12"
+install_notes: >-
+  Back up projects and the +Drive with Elektron Transfer first. Download Digiwerk
+  Patcher from the release (macOS 13 or later), drop Elektron's own
+  Digitone_II_OS1.12_dist.zip on it, choose a pack, and send the resulting .syx
+  to the Digitone II with Transfer. Keep the original OS file, since Elektron's
+  page lists only the current version and it is needed to go back. If the unit
+  does not start, hold FUNC at power-on, press TRIG 4 (OS UPGRADE) and send the
+  stock file over DIN MIDI.
+tags: [fx, lfo, compressor, patcher, research]
+versions:
+  - version: v0.1.0
+    date: 2026-10-26
+    url: https://github.com/naturarum/dn2-cfw/releases/tag/v0.1.0
+    notes: First release. Déjà vu LFO waves in the base plus the Compressor + Flanger pack (build DJ01), with the macOS patcher app and command-line tool.

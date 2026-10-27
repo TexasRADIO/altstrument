@@ -1,0 +1,55 @@
+device: m-vave-fm-1
+name: FM1Kit
+kind: tool
+summary: >-
+  Swift package that installs .fwsc firmware on an FM-1 over USB-MIDI from iOS and macOS, plus macOS
+  download-mode flash backup and restore and a command-line probe tool.
+description: >-
+  Reads .fwsc packages and checks them, finds the device, answers the update loader's read requests while it
+  stages and writes the image, and verifies the reported firmware afterwards. It can resume a cut-off update or
+  one begun from USB recovery mode, rewrite V15's factory voices, back up the projects and samples of M-VAVE's
+  open firmware, and install m-bootloader. A second macOS-only library, FM1Rescue, uses the chip's USB download
+  mode (needs root) to back up, restore and write the whole flash. It includes a simulated FM-1 for tests and
+  the iOS Simulator and an fm1probe command-line tool. The author's FM-SWITCH app is built on it. The README
+  says it has been tried on one FM-1 from a Mac. M-VAVE's firmware is not bundled; the package recognises V15
+  and the open firmware V12 by size and checksum.
+status: active
+authors:
+- name: Drew Robinson (ocean)
+  url: https://github.com/ocean
+source: https://github.com/ocean/FM1Kit
+source_status: open
+license: MIT
+distribution: source-only
+requires_stock: V15, or a firmware with a compatible USB updater
+install_notes: >-
+  Add it as a Swift Package Manager dependency (iOS 17 or macOS 14, Swift 6.1), or run fm1probe with swift run.
+  The flash- commands write the whole flash in download mode and need sudo; each write asks you to type YES.
+  Installing custom firmware is at your own risk.
+brick_risk: true
+tags: [sdk, flasher, utility, usb-midi]
+versions:
+- version: 0.4.4
+  date: 2026-10-27
+  url: https://github.com/ocean/FM1Kit/releases/tag/0.4.4
+- version: 0.4.3
+  date: 2026-10-26
+  url: https://github.com/ocean/FM1Kit/releases/tag/0.4.3
+- version: 0.4.2
+  date: 2026-10-25
+  url: https://github.com/ocean/FM1Kit/releases/tag/0.4.2
+- version: 0.4.1
+  date: 2026-10-25
+  url: https://github.com/ocean/FM1Kit/releases/tag/0.4.1
+- version: 0.4.0
+  date: 2026-10-25
+  url: https://github.com/ocean/FM1Kit/releases/tag/0.4.0
+- version: 0.3.0
+  date: 2026-10-23
+  url: https://github.com/ocean/FM1Kit/releases/tag/0.3.0
+- version: 0.2.0
+  date: 2026-10-19
+  url: https://github.com/ocean/FM1Kit/releases/tag/0.2.0
+- version: 0.1.0
+  date: 2026-10-17
+  url: https://github.com/ocean/FM1Kit/releases/tag/0.1.0

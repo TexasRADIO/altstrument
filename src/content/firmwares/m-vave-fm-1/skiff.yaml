@@ -13,7 +13,8 @@ description: >-
   recording the master on a computer. Version 1.4 adds builds for M-VAVE's SMK-37 Pro keyboard from the same
   source, with the same tracks, engines and screens. On that keyboard the pads act as a step grid, the faders as
   a mixer, and the 37 keys and wheels add controls the FM-1 lacks. The SMK-37 build has been tried on one SMK-37
-  Pro; the Elite and MKE-P37 packages are made the same way and have not been tried on a keyboard.
+  Pro; the Elite and MKE-P37 packages are made the same way and have not been tried on a keyboard. Version 2.0 adds a new sequencer with per-note lengths, songs that chain, panned drum
+  lanes and drum kits made from user samples.
 status: active
 authors:
 - name: illuminus5
@@ -28,12 +29,12 @@ homepage: https://illuminus5.github.io/skiff/
 distribution: browser-installer
 install_notes: >-
   Browser installer in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc from the releases page.
-  The installer detects the connected device and picks its build. It can return the FM-1 to official V15 after
-  saving a backup. An FM-1 stuck in boot mode (WL80UBOOT) can be recovered with tools/fm1_install.py or FM-1
+  The installer detects the connected device and picks its build. It can return the FM-1 to M-VAVE's official
+  V15 or V16, whichever its start-up part needs, after saving a backup; the V16 route was tried only in the emulator at 2.0.2. An FM-1 stuck in boot mode (WL80UBOOT) can be recovered with tools/fm1_install.py or FM-1
   Transporter. SMK-37 Pro: the keyboard must already run M-VAVE's V016, which the installers enforce, and
   a backup of its flash should be made first, because the flash holds the keyboard's key and pad calibration and
   its Bluetooth pairings (SMK37.md in the repository gives the steps, using jl-uboot-tool on Windows or Linux).
-  Use skiff-1.4-smk37.fwsc for the Pro; the -elite and -mke packages are for those models. Returning to
+  Use skiff-2.0.2-smk37.fwsc for the Pro; the -elite and -mke packages are for those models. Returning to
   M-VAVE's firmware takes your own unmodified SMK-37_Pro_016.fwsc. If an install is cut off, the keyboard waits in
   update mode and the installer resumes the write.
 brick_risk: true
@@ -45,6 +46,10 @@ image:
   source_url: https://github.com/illuminus5/skiff
   first_party: true
 versions:
+- version: 2.0.2
+  date: 2026-10-27
+  url: https://github.com/illuminus5/skiff/releases/tag/v2.0.2
+  notes: Notes up to 128 steps long, a way back to V16 as well as V15 in the installer, and fixes to a latched FX key, MOD route 8 lighting, held drum steps, ARCADE pitch and the starting length of new notes.
 - version: 2.0.1
   date: 2026-10-25
   url: https://github.com/illuminus5/skiff/releases/tag/v2.0.1

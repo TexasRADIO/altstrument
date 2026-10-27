@@ -1,0 +1,51 @@
+device: m-vave-fm-1
+name: FMER
+summary: >-
+  Firmware with six-operator FM and virtual analog engines, six-voice or four-track playing, two editable
+  64-instrument banks, effects, an arpeggiator and songs, installed through a Windows companion app.
+description: >-
+  Uses Felucca for board support and the MSFA core for FM, with the SLOOP updater as the install path. It plays
+  either as one six-voice synth, a one-voice glide synth, or as four mono parts, and holds 16 projects of 16
+  patterns each, with four song lanes. Effects are a reorderable chain of filter, reverb, delay, chorus, phaser
+  and drive, shared across tracks. The 192 original instruments are grouped into four loadouts that can be put
+  into either bank. FMER Companion is a portable Windows 10/11 x64 program that opens in the browser. It
+  organises instruments, projects and backups, imports and exports DX7 data, and runs a guided firmware
+  installer; it also carries 128 voices taken from M-VAVE's Apache-2.0 V15 data. The project calls its builds
+  pre-1.0 test releases and does not take outside pull requests without permission.
+status: active
+authors:
+- name: Nacsez
+  url: https://github.com/Nacsez
+source: https://github.com/Nacsez/FMER
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Original FMER firmware, Companion and default instruments are GPL-3.0-only (LICENSING.md). Felucca code is
+  GPL-3.0-only, MSFA is Apache-2.0, and the V15 voice catalog keeps its Apache-2.0 terms. Third-party fonts,
+  samples, vendor SDKs and toolchains are not relicensed.
+homepage: https://github.com/Nacsez/FMER/releases
+distribution: download
+requires_stock: V15 (stock V16 migration is not among the qualified install paths)
+install_notes: >-
+  Extract the Companion ZIP from the release on a Windows 10/11 x64 PC, run FMER Companion.exe, connect one
+  FM-1 over USB and use its Firmware page, which checks the memory layout and rejects unknown ones. Export a
+  backup first; installing a profile replaces the sounds in that bank. The .fwsc is also published on its own
+  for other compatible installers, whose handling the project does not qualify. The app is unsigned. Saves from
+  735 do not downgrade to 733 or 734 without a migration.
+brick_risk: true
+tags: [synth-engine, fm, sequencer, arpeggiator, fx, editor, librarian, flasher]
+image:
+  url: https://raw.githubusercontent.com/Nacsez/FMER/main/docs/release/media/fmer735-screen-sheet.png
+  alt: "FMER 735 screen atlas: a grid of 42 green-on-black FM-1 display captures, from the FMER splash and instrument home to operator, effects, sequencer and MIDI pages"
+  credit: Nacsez
+  source_url: https://github.com/Nacsez/FMER
+  first_party: true
+versions:
+- version: '735'
+  date: 2026-10-25
+  url: https://github.com/Nacsez/FMER/releases/tag/build-735-r11
+  notes: Six-voice playing, a reworked 192-instrument library and a more reliable Companion start-up.
+- version: '734'
+  date: 2026-10-21
+  url: https://github.com/Nacsez/FMER/releases/tag/build-734-r5
+  notes: First public release with the Companion app and 64 default instruments.

@@ -1,0 +1,38 @@
+device: novation-circuit-mono-station
+name: Mono Station Mods
+summary: Source-built modifications of Novation's Circuit Mono Station 1.2 firmware, with reverse-engineering tools. The first mod makes Mutate randomise one property of the notes in the Velocity, Gate, Glide and Expand views.
+description: >-
+  The repository holds tools that decode Novation's 1.2 update file, turn it into assembly that rebuilds byte for byte,
+  and let overlays replace stock functions by name with C or assembly, plus a flasher and notes on the bootloader,
+  update protocol, patch and session SysEx formats and sequencer. Novation's code is not included: you unpack the stock
+  update from Novation Components yourself and build locally with arm-none-eabi-gcc. The one finished mod, Randomise,
+  changes Mutate on the Osc 1 and Osc 2 tracks so that in the Velocity, Gate, Glide and Expand views it randomises
+  only that property of steps that already hold a note, leaving the rhythm alone. The Note and Pattern Settings views
+  and the Mod Seq track behave as stock. The build reports itself as version 750, below the stock 800, so that Novation
+  Components should offer to reinstall stock; the README says this has not been tried yet. The README says the work was
+  done with Claude Code.
+status: active
+authors:
+  - name: matozoid
+    url: https://github.com/matozoid
+source: https://github.com/matozoid/novation_circuit_monostation_reverse_engineering
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no LICENSE file and the README makes no license statement.
+homepage: https://github.com/matozoid/novation_circuit_monostation_reverse_engineering#readme
+distribution: source-only
+requires_stock: "1.2 (build 800)"
+install_notes: >-
+  Needs Linux or macOS, Python 3 and arm-none-eabi-gcc. Unpack the stock 1.2 update, monostation-firmware-800.syx, from
+  Novation Components 1.72.5 into firmware/, run the four build commands in the README to produce randomise-750.syx,
+  then run tools/flash.py with the Mono Station off and Scales + Note + Velocity held while switching it on. The
+  bootloader is never touched. To go back, flash the stock file the same way or accept the update in Novation
+  Components. Back up your patches and sessions first.
+brick_risk: false
+tags: [sequencer, generative, flasher, python]
+versions:
+  - version: main @ 72190ff
+    date: 2026-10-26
+    url: https://github.com/matozoid/novation_circuit_monostation_reverse_engineering/commit/72190ff977ef551a41b068868a034d54fc7bc57c
+    notes: No tagged releases; this is the latest commit.

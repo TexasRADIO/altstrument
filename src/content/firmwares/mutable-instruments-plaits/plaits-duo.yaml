@@ -1,0 +1,41 @@
+device: mutable-instruments-plaits
+name: Plaits duo
+summary: Plaits v1.1 firmware with a duo mode that plays two voices of one model, the second pitched by the LEVEL input, mixed in stereo on OUT and AUX or split with one voice per output.
+description: >-
+  Pressing both model buttons together enters or leaves duo mode, which offers eight models in a
+  stereo layout (yellow LED) and the same eight in a split layout (red LED). In the stereo layout
+  each model gets its own stereo treatment, such as detuned saws, an offset wavefolder, a moving
+  allpass diffuser, per-harmonic phase differences, a Juno-style chorus or a string-machine
+  ensemble. LEVEL sets the second voice's pitch at 1 V per octave, and with nothing patched
+  there is a single voice. Holding both buttons for two seconds in duo mode starts a LEVEL
+  calibration against V/OCT. The original firmware is otherwise unchanged and its output
+  matches v1.1; to make room in flash the factory test mode is removed. The settings are
+  compatible with stock, so you can go back to the original firmware. A web page runs the
+  firmware in WebAssembly with a simulated module and offers the update file. The commit
+  history shows that Claude was used in development.
+status: active
+authors:
+  - name: Andreas Jansson
+    url: https://andreasjansson.se
+source: https://github.com/andreasjansson/plaits-duo
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file credits Emilie Gillet for the original Plaits firmware, stmlib and the audio
+  bootloader, and Andreas Jansson for the duo mode, tests and tools. GitHub reports it as
+  NOASSERTION because of the two copyright lines.
+homepage: https://andreasjansson.github.io/plaits-duo/
+distribution: download
+requires_stock: Plaits with the audio bootloader (built on v1.1)
+install_notes: >-
+  Take the firmware update file from the web page, or build it with make wav and the Arm GNU
+  toolchain. Hold the left button while powering the module on and play the WAV file into the
+  MODEL CV input, as for an official update. Calibrating LEVEL against V/OCT is recommended
+  after installing. The README says the original firmware can be reinstalled at any time.
+brick_risk: true
+tags: [ai-assisted, synth-engine, oscillator, stereo, open-source]
+versions:
+  - version: main @ 06194d9
+    date: 2026-10-13
+    url: https://github.com/andreasjansson/plaits-duo/commit/06194d9
+    notes: No tagged releases; this is the latest commit.

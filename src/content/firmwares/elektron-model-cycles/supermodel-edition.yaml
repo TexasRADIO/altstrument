@@ -35,7 +35,7 @@ install_notes: >-
   returns to stock.
 tags: [machines, drums, sampler, sequencer, lfo, midi, fx]
 versions:
-  - version: main @ 5c5d08e
-    date: 2026-10-26
-    url: https://github.com/AveyCole/Modded-Cycles/commit/5c5d08e783792aa4fc95af69cc1f0ffb743fa0dd
+  - version: main @ 71f53d6
+    date: 2026-10-27
+    url: https://github.com/AveyCole/Modded-Cycles/commit/71f53d63491e77f0a3c6657691437f10d417f8d1
     notes: No tagged releases; this is the latest commit.

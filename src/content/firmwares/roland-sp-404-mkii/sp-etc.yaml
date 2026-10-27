@@ -1,0 +1,85 @@
+device: roland-sp-404-mkii
+name: SP-ETC
+summary: Fork of DOOM OS 0.6.1 for the SP-404MKII, built by a browser patcher from your own 5.52 update file. Adds a four-voice Sound Generator, thirteen synthesized drum machine kits, bounce in place, pad envelopes, note repeat and hidden effect settings.
+description: >-
+  Keeps DOOM OS 0.6.1 (build ED5E) as its base, included in the patched file, and
+  adds work by tracelistener on top. The Sound Generator has four live voices, 17
+  added waveforms, nine envelope presets, 34 scales, an arpeggiator and MIDI input
+  on all voices. The kits mode models thirteen drum machines, among them TR-808,
+  TR-909, TR-606, CR-78 and TR-707, as independent synthesized voices rather than
+  recovered Roland data. Other additions include external MIDI control, a BOUNC
+  function that writes a kit into a sample bank, drum recording, bounce in place for
+  a pad's sound with its effects, per-pad envelopes, note repeat, chromatic scales,
+  settings saved with the project, and hidden effect settings reached with VALUE
+  that are not on the stock effect screens. The README warns that some hidden
+  effect settings can make the sound suddenly very loud, and says the Compressor
+  and Super Filter settings that did so in v9.47 and v9.48 were removed; anyone on
+  those two builds is told to patch again. The README says the latest build is
+  checked in an emulator and was only partly tested on hardware, and that CPU
+  headroom under load is unmeasured. The patcher builds a single release, currently
+  v9.52. The repository was previously named doom-os-etc.
+status: active
+authors:
+  - name: tracelistener
+    url: https://github.com/tracelistener
+  - name: Quintus Oostendorp (Klangfeld Labs)
+    url: https://klangfeldlabs.com
+source: https://github.com/tracelistener/SP-ETC
+source_status: open
+license: MIT
+license_notes: >-
+  The repository's LICENSE is the MIT text of Quintus Oostendorp, which applied to
+  DOOM OS up to 0.6.1; upstream DOOM OS moved to a restrictive license at 0.6.2.
+  The Sound Generator and kit additions have no separate license statement. The
+  FX deep edit parameter table comes from DM-404's fxmap.json (Nicholas Petty and
+  the dm-404 contributors), also MIT, per THIRD-PARTY-NOTICES.md. The patcher carries only bytes that differ from Roland's file; no Roland firmware is
+  included.
+homepage: https://tracelistener.github.io/SP-ETC/
+distribution: patch-your-own
+requires_stock: "5.52"
+install_notes: >-
+  Download Roland's 5.52 system update and load the stock SP404MKII_APP1.bin into
+  the browser patcher, which accepts only the official file and checks the result
+  against published checksums. Use the patched file with Roland's unchanged
+  SP404MKII_APP0.bin: hold SHIFT while powering on and press the VALUE knob. Back
+  up first and keep your known-good update, since running Roland's original update
+  restores stock. The repository's own notes call it experimental.
+brick_risk: true
+tags: [synth-engine, drums, sequencer, fx, midi, os]
+versions:
+  - version: Sound Generator + Kits v9.52
+    date: 2026-10-25
+    url: https://github.com/tracelistener/SP-ETC/commit/d8190f53ba22e4905d673e662d50187211c7367d
+    notes: Hold HOLD and press VALUE to switch the hidden effect settings off and on; the settings and their on/off state are saved across power cycles.
+  - version: Sound Generator + Kits v9.51
+    date: 2026-10-25
+    url: https://github.com/tracelistener/SP-ETC/commit/6ba282dc9b1933cbecee4e5df6b01010cb195c55
+    notes: ROLL behaves as on stock on the START/END and PITCH/SPEED screens; EXIT plus a pad stops a single roll.
+  - version: Sound Generator + Kits v9.50
+    date: 2026-10-24
+    url: https://github.com/tracelistener/SP-ETC/commit/942777454011fa0dc8ab710d9a849aa7b4cec2c8
+    notes: Hidden settings for the input FX, opened with VALUE and EXT SOURCE.
+  - version: Sound Generator + Kits v9.49
+    date: 2026-10-23
+    url: https://github.com/tracelistener/SP-ETC/commit/edbf40610fce54c46ad72a259323c2729574f50d
+    notes: Removes the Super Filter hidden settings, one of which could make the sound suddenly very loud.
+  - version: Sound Generator + Kits v9.48
+    date: 2026-10-23
+    url: https://github.com/tracelistener/SP-ETC/commit/3100e55f6a26c0bde85ffeaed097948f8084be64
+    notes: Removes the Compressor hidden MODE setting, which could make the sound suddenly very loud.
+  - version: Sound Generator + Kits v9.47
+    date: 2026-10-22
+    url: https://github.com/tracelistener/SP-ETC/commit/4810c3e64fa64f9989702daa6d1db34e2f333864
+    notes: Adds bounce in place, pad envelopes, note repeat, chromatic scales, settings saved with the project, SUB PAD on the Sound Generator, hidden effect settings and a faster start-up.
+  - version: Sound Generator + Kits v9.46
+    date: 2026-10-13
+    url: https://github.com/tracelistener/SP-ETC/commit/2ff958b289e9ea081721f60626948337998bafc0
+    notes: Adds external MIDI, BOUNC, drum recording to each drum's own length and kits on the RESAMPLE and LOOPER screens.
+  - version: Sound Generator + Kits v9.43
+    date: 2026-10-12
+    url: https://github.com/tracelistener/SP-ETC/commit/8270db73d10b5eaef5c38f65b959b13842223a0f
+    notes: First published kits build.
+  - version: Sound Generator v9.9.3
+    date: 2026-10-07
+    url: https://github.com/tracelistener/SP-ETC/commit/ca79c799328ad5fbfaa1f42f1cfbc045fa4e8113
+    notes: Arpeggiator tempo fix; the Sound Generator now inside the kits build.

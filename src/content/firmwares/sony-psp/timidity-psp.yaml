@@ -1,0 +1,34 @@
+device: sony-psp
+name: TiMidity++ for PSP
+summary: >-
+  2005 PSP port of TiMidity++ 2.11.2, the software MIDI player that renders MIDI files with GUS patches or SoundFont
+  banks and plays them through the console's audio; an archived source tree.
+description: >-
+  The tree is the full TiMidity++ 2.11.2 source with a PSP audio output driver (psp_a.c), a PSP control interface
+  and a PSPSDK makefile that builds an EBOOT.PBP titled "TiMidity++-2.11.2 for PSP ver20". It looks for its
+  configuration and instrument data in a timidity folder under PSP_COMMON on the Memory Stick. The repository
+  description credits the port to Machiyuta in 2005, and its history applies two patch sets (kamiki-ver2 and ver20) on the
+  upstream release. It was uploaded to the PSP-Archive organisation on 2026-10-26, with no release or prebuilt
+  program, and nothing in it says it has been run on current custom firmware or on a Vita.
+status: archived
+authors:
+- name: Machiyuta
+- name: Masanao Izumo
+source: https://github.com/PSP-Archive/TiMidity---for-PSP
+source_status: open
+license: GPL-2.0-or-later
+license_notes: >-
+  The COPYING file is the GPL version 2 text and the source headers and README grant version 2 or any later version.
+  Instrument sets such as GUS patches or SoundFonts are not included and carry their own terms.
+distribution: source-only
+requires_stock: PSP running homebrew; written in 2005 for the firmware of that time
+install_notes: >-
+  Build with the PSPSDK toolchain using the top-level Makefile, which produces EBOOT.PBP, and copy the program and a
+  timidity folder with the configuration and instrument data to the Memory Stick. No prebuilt package is published.
+brick_risk: false
+tags: [midi, soundfont, player, port, open-source]
+versions:
+- version: main @ 82b90db
+  date: 2026-10-26
+  url: https://github.com/PSP-Archive/TiMidity---for-PSP/commit/82b90db4b092f03927ee97943c44b3024b8af673
+  notes: No tagged releases; this is the latest commit, an archive upload of the 2005 port.

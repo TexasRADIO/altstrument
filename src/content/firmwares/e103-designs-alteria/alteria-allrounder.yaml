@@ -1,0 +1,40 @@
+device: e103-designs-alteria
+name: ALTERIA ALLROUNDER
+summary: Arduino firmware for the ALTERIA module with sixteen selectable modes, including envelopes, ducking, burst, acid pitch patterns, tremolo, clock tools, logic, Turing-style CV and a preset manager.
+description: >-
+  ALLROUNDER 2.0.2 runs one mode at a time and steps through them with the mode button. The modes
+  include AD and AR envelopes, dual decay, ducking, burst, an acid pitch generator, tremolo and
+  autopan, Grids-style trigger patterns, triple clock ratios, mutant kick and snare synthesis,
+  XOR logic, a Turing-machine register, humaniser, Bernoulli routing, a trance gate and a
+  preset manager. Output calibration at 0 V, +5 V and -5 V is stored per board in EEPROM. The
+  sources credit an acid-pattern generator by drakh (CC0) as inspiration for one mode. The
+  README says the 2.0.2 sound changes still need listening and bench checks.
+status: active
+authors:
+  - name: E103-designs
+    url: https://github.com/E103-designs
+source: https://github.com/E103-designs/ALTERIA
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Covers the original source, documentation, photographs and design files in the repository.
+homepage: https://github.com/E103-designs/ALTERIA#readme
+distribution: source-only
+install_notes: >-
+  Open firmware/ALTERIA_ALLROUNDER/ALTERIA_ALLROUNDER.ino in the Arduino IDE and build for
+  Arduino Nano with an ATmega328P at 16 MHz, choosing the old bootloader only if the board needs
+  it. Upload one of the two ALTERIA sketches at a time. Calibrate the outputs with a multimeter
+  before use, and disconnect external signals from the I/O jack before entering modes 3 or 10.
+brick_risk: false
+tags: [official, generative, sequencer, drums, envelope, arduino, eurorack]
+image:
+  url: https://raw.githubusercontent.com/E103-designs/ALTERIA/main/images/front.jpg
+  alt: Front panel of the ALTERIA module with four LEDs, two buttons, three white knobs and four jacks
+  credit: E103-designs
+  source_url: https://github.com/E103-designs/ALTERIA#readme
+  first_party: true
+versions:
+  - version: main @ 5bcaad7
+    date: 2026-10-27
+    url: https://github.com/E103-designs/ALTERIA/commit/5bcaad744363a33539e5f5f5ae7ccb88c1bb24c7
+    notes: No tagged releases; this is the latest commit. The README lists ALLROUNDER 2.0.2.

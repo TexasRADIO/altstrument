@@ -1,0 +1,34 @@
+device: m-vave-fm-1
+name: Falua
+kind: tool
+summary: >-
+  VST3, AU and standalone synth plugin that runs the sound engines of the JIANT FM firmware, compiled unmodified
+  from its source; version 0.1 exposes the ANALOG engine with 15 factory presets.
+description: >-
+  The firmware's DSP code is compiled for the computer and wrapped with MIDI input from the host, automatable
+  parameters, presets and sample-rate conversion. The plugin offers one engine, ANALOG; ANALOG, FM6, PHASE, LOFI,
+  VOICE, WHEEL, NOISE and DRUM already work in the core and an engine selector is first on the roadmap. Known
+  limits in 0.1 are a single instance at a time, because the firmware keeps global state, every MIDI channel playing
+  part 1, a generic slider interface and no sequencer. The README, in Portuguese, calls the name provisional and
+  says the project is unofficial. Windows builds need the clang toolchain for Visual Studio.
+status: active
+authors:
+- name: ehn96
+  url: https://github.com/ehn96
+source: https://github.com/ehn96/Falua
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  NOTICE.md lists the bundled JIANT and Felucca sources and the JUCE 8 dependency, which is fetched at build time
+  and used under the AGPL.
+distribution: source-only
+install_notes: >-
+  Build with CMake 3.22 or newer (JUCE 8 is downloaded on first configure), or take the Windows, macOS and Linux
+  artifacts from the repository's GitHub Actions workflow. Nothing is flashed to the FM-1.
+brick_risk: false
+tags: [emulator, vst, synth-engine]
+versions:
+- version: main @ 73fc26c
+  date: 2026-10-10
+  url: https://github.com/ehn96/Falua/commit/73fc26cf0a6c3116decd5c337d83650782db3d7a
+  notes: No tagged releases; this is the latest commit.

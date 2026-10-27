@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: SPIRALFM1
+summary: >-
+  Forest, goa, psytrance, hi-tech and tekk groovebox firmware built on Mycelium, SLOOP and Felucca, with
+  curated grooves, four factory songs, a PSY FX page and a browser Studio.
+description: >-
+  Adds six 32-step factory grooves, four 240-bar songs, a dedicated PSY FX panel (shared bass and kick
+  lowpass, synced echo with reverb, feedback with low-end drive, ring mod and stutter), per-track probability,
+  ARP latch-roll and kick envelopes on top of the Mycelium and SLOOP layers. It carries 21 curated factory
+  presets plus a 16-preset movement-bass pack and three procedurally generated drum kits, with its own mark
+  and icon set. The Studio page runs the firmware's DSP compiled to WebAssembly, playable from a computer
+  keyboard or MIDI keyboard without an FM-1, and a web editor with backup is included. The README calls the
+  build a 1.0 beta and says the device firmware still derives from the Mycelium 1.0 build.
+status: active
+authors:
+- name: Spiralfractalplugins
+  url: https://github.com/Spiralfractalplugins
+source: https://github.com/Spiralfractalplugins/spiralfm1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Code is GPL-3.0-only (LICENSING.md). Hügelton Instruments' sample pack and reference material stay under its
+  own all-rights-reserved terms, with a GPL section 7 additional permission for combining them; the project's
+  own icons, logo and drums are GPL-3.0-only.
+homepage: https://spiralfractalplugins.github.io/spiralfm1/
+distribution: browser-installer
+requires_stock: V15
+install_notes: >-
+  Web installer in Chrome or Edge: put the FM-1 on USB, hold POWER and B1, then press Install. Make a backup
+  with the web editor first. The README says flashing never touches the boot area and that SLOOP or the official
+  firmware can be installed again. fm1_install.py also works from a terminal.
+brick_risk: true
+tags: [synth-engine, sequencer, drums, fx, performance, editor, emulator, fork]
+versions:
+- version: main @ 6e0fd2b
+  date: 2026-10-21
+  url: https://github.com/Spiralfractalplugins/spiralfm1/commit/6e0fd2b824fde7ad3c3673c7b661d79a7bbc840c
+  notes: No tagged releases; this is the latest commit. The changelog dates its 1.0 to 2026-10-20.

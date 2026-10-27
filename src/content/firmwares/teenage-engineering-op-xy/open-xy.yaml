@@ -1,12 +1,14 @@
 device: teenage-engineering-op-xy
 name: Open-XY
-summary: C++ SDK and browser builder that compile extra synth, effect and sample machines (2-op FM, a Braids port, ring mod, timestretch) into a modified copy of your own OP-XY OS 1.2.0 file.
+summary: C++ SDK and browser builder that compile extra synth, effect and sample machines (2-op FM, a Braids port, Karplus, ring mod, ping pong, timestretch) into a modified copy of your own OP-XY OS 1.2.1 file.
 description: >-
   Machines are folders of C++ for a sound engine, display code and a JSON
   definition, built once to WebAssembly for browser previews and once for the
-  device's Blackfin processor. The builder at open-xy.com takes the stock
-  os.ldr, lets the player choose from the bundled machines and produces the
-  files to copy to the device. The OS is linked statically with a fixed
+  device's Blackfin processor. The SDK repository holds a catalog of machines
+  that each live in their own repository, pinned by commit; Open-XY's own
+  machines are in open-xy-core-machines. The builder at open-xy.com takes the
+  stock os.ldr, lets the player choose from the catalog's machines and produces
+  the files to copy to the device. The OS is linked statically with a fixed
   collection, so there is no loading of arbitrary engines, and the firmware
   reserves about 2 MiB of heap shared by the selected machines.
 
@@ -24,23 +26,24 @@ license: MIT
 license_notes: >-
   The SDK and most machines are MIT. The Braids port carries Mutable
   Instruments' notices, and the timestretch machine is AGPL-3.0, which applies
-  to firmware and builder kits that include it. Stock firmware and artwork are
-  never included.
+  to firmware and builder kits that include it. No stock firmware image or
+  artwork is included, but the README says the repository holds one stock file,
+  the instrument catalog op1_factory.json, which the builder also distributes.
 homepage: https://open-xy.com
 distribution: browser-installer
-requires_stock: "1.2.0"
+requires_stock: "1.2.1"
 install_notes: >-
-  Needs the decrypted stock os.ldr from OS 1.2.0, read from the device in
+  Needs the decrypted stock os.ldr from OS 1.2.1, read from the device in
   file-transfer mode, and the OP-XY dev menu enabled. The builder, in desktop
   Chrome, Edge or Opera, reads the file, builds in the browser and, on a Mac
   with WebUSB, sends the files; on Windows it downloads a ZIP to copy by hand.
   The OS write step on the device is manual. Firmware builds from the command
-  line need Windows x86_64 or Apple-silicon macOS and the project's compiler
-  toolchain. Back up device content first and keep the stock OS for recovery.
+  line need Windows x86_64, Apple-silicon macOS or Linux x86_64 and the
+  project's compiler toolchain. Back up device content first and keep the stock OS for recovery.
 brick_risk: true
 tags: [machines, synth-engine, sdk, web, fx, sampler, patch]
 versions:
-  - version: staging @ 33b8652
-    date: 2026-10-26
-    url: https://github.com/etcetc000/open-xy/commit/33b8652d12be95f7b693ea3b5e2ddb86ed2c4e82
+  - version: staging @ c0e5ab6
+    date: 2026-10-27
+    url: https://github.com/etcetc000/open-xy/commit/c0e5ab656c560bbd95b242e5efbc7615c4004fcd
     notes: No tagged firmware releases; this is the latest commit on the default branch. The only release, toolchain-1, is the compiler toolchain.

@@ -10,10 +10,13 @@ description: >-
   and reverb sit on top. In player mode it runs PSID tunes on an emulated 6502 and RSID tunes on a whole emulated
   C64, plays GoatTracker 2 songs, has a song editor on the FM-1, and draws the voices, sync, ring modulation and
   filter on the screen. Tunes are appended after the firmware image as a pack. The same code runs as a web page that plays tunes from the HVSC archive, and the FM-1
-  emulator entry names it as one of the firmwares it runs. The README says that on one real FM-1 the standalone package started
-  but its tunes did not play, and recommends running FM-1 SID as a module of the fm1-dock firmware, where it has
-  played on a real FM-1. Your own tunes can be packed into the update package or the module. The project moved
-  out of the fm1-emu repository into a repository of its own on 2026-10-25.
+  emulator entry names it as one of the firmwares it runs. On a real FM-1 it runs on the fm1-dock firmware, which keeps USB, the installers
+  and the rescue: release 0.3 is a package of fm1-dock with FM-1 SID and a plain sine synth, starting in FM-1 SID, and the same code can be
+  deployed as a module into an fm1-dock that holds other synths. The README reports it playing on a real FM-1 both ways (as a module on
+  2026-10-24, as its own package on 2026-10-25) and says the older standalone builds on Felucca's and Dinghy's update code are not for a real FM-1,
+  because their USB replies never reach a computer. Any .sid file can be sent to the FM-1 over USB from the project page and plays at once without
+  writing flash. Your own tunes can be packed into the package or the module. The project moved out of the fm1-emu repository into a repository
+  of its own on 2026-10-25.
 status: active
 authors:
 - name: Joakim Eriksson (joakimeriksson)
@@ -29,18 +32,18 @@ license_notes: >-
 homepage: https://joakimeriksson.github.io/fm1-emu/fm1-sid/
 distribution: download
 install_notes: >-
-  The README recommends installing fm1-dock first and deploying FM-1 SID into it as a module over USB, then
-  picking it with HOME. The standalone update package, sidplayer.fwsc, is marked as not yet for a real FM-1,
-  because on the one unit tried the tunes did not play and the installers could not reach it; the README asks
-  you to have a way back ready, such as the FM-1's own recovery. Build scripts need JieLi's Linux toolchain and
-  fetch their GPL dependencies on demand. The standalone build has a USB mode (HOME held for five seconds)
-  for running other installers.
+  Install the release package, fm1-sid-0.3.fwsc, over USB with fm1-dock's installer script or from the install page
+  on the fm1-dock site; or install fm1-dock first and deploy FM-1 SID into it as a module, then pick it with HOME.
+  fm1-dock answers other installers and the Firmware Hub, so going back to another firmware is an ordinary install;
+  OCT- held at power-on starts fm1-dock's USB rescue, and the FM-1's own recovery (OCT- and OCT+ held) is the last
+  resort. The release notes say 0.3 was verified on a real FM-1. The older standalone sidplayer.fwsc build is not
+  for a real FM-1. Build scripts need JieLi's Linux toolchain and fetch their GPL dependencies on demand.
 brick_risk: true
 tags: [synth-engine, sequencer, fx, emulator, research]
 versions:
-- version: main @ c2e231f
+- version: '0.3'
   date: 2026-10-25
-  url: https://github.com/joakimeriksson/fm1-sid/commit/c2e231f5a1ac2bbe5799d92db0aa08e94dc36d7f
+  url: https://github.com/joakimeriksson/fm1-sid/releases/tag/v0.3
   notes: >-
-    No release of this firmware (the emulator's releases are for the emulator and plugin); this is the latest
-    commit of the repository split out of fm1-emu. The emulator's firmware list labels the package 0.1.
+    First release of FM-1 SID as its own firmware on fm1-dock. Adds sending a .sid to the FM-1 over USB without an
+    install, the FM-1's keys going out as MIDI notes and GoatTracker 2's example songs preloaded.

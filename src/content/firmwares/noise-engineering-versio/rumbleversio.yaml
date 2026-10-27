@@ -1,0 +1,33 @@
+device: noise-engineering-versio
+name: RumbleVersio
+summary: >-
+  Techno kick rumble effect for Versio on the Daisy Seed: it takes a kick on the input and adds three tap levels, a
+  resonant low-pass filter, saturation, a sub reverb and a freeze wash, clocked from the gate jack.
+description: >-
+  Written for Versio's Daisy Seed. The input kick is processed into a downbeat sub, a second sixteenth-note tap panned left
+  and an offbeat tap panned right, with Tone, Blend and Regen setting the three levels (below about 8 percent each is
+  silent, and all three at minimum mute the output). Speed sets a 24 dB per octave filter cutoff, Index its resonance, Size a
+  sub reverb, Dense the drive, and switch 0 chooses one of three saturation models. Switch 1 shifts timing 12 ms early,
+  on the beat or 18 ms late. Tempo follows clock pulses on the FSU gate jack, and the FSU button holds a long wash. The
+  README is in French and the release notes in English; neither reports a test on a Versio.
+status: active
+authors:
+- name: nikoleterrible
+  url: https://github.com/nikoleterrible
+source: https://github.com/nikoleterrible/xRumbleVersio
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no LICENSE file for RumbleVersio's own code and the README makes no license statement. The vendored
+  libDaisy and DaisySP folders carry their own LICENSE files.
+distribution: download
+install_notes: >-
+  Download RumbleVersio.bin from the release and upload it with the Daisy Web Programmer, or build it with the included
+  build script. Older v1 and v2 binaries are attached to the same release.
+brick_risk: false
+tags: [fx, drums, reverb]
+versions:
+- version: v2.3
+  date: 2026-10-26
+  url: https://github.com/nikoleterrible/xRumbleVersio/releases/tag/v2.3
+  notes: Marked as a stable release; its binary is RumbleVersio.bin, with v1 and v2 binaries attached as archives.

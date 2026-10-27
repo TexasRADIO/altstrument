@@ -12,8 +12,9 @@ description: >-
   seven waveforms and four sync modes, and the TRACK sequencer is a seventh
   sequencer with a piano roll. The scale feature started from the OP-1 note
   quantization patch by stfj, moved in memory and with corrected scale tables.
-  The author states it has run on two OP-1 units and works on the original
-  OP-1 only. TAPE, a tape-damage and chorus effect, is listed as planned. The
+  The README says earlier builds ran on two OP-1 units of different hardware
+  revisions, while the KEYS engine and the MIMIC, LINGER and SPIN CYCLE effects
+  new in 1.0 have run on one unit so far. It works on the original OP-1 only. TAPE, a tape-damage and chorus effect, is listed as planned. The
   project is unofficial and not affiliated with Teenage Engineering.
 status: active
 authors:
@@ -49,5 +50,6 @@ video:
   found_via: https://justinjoe.com/op1-mod
 versions:
   - version: "1.0"
+    date: 2026-10-22
     url: https://justinjoe.com/op1-mod-download
-    notes: Build 1.0; the page gives no release date.
+    notes: Build 1.0. Date is from the repository commit that added the patch, apply.py and manual.

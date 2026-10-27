@@ -1,0 +1,35 @@
+device: m-vave-fm-1
+name: MEOW-1
+summary: >-
+  Felucca 1.4.1 fork that adds MEOW, a synthesized cat-call engine with meow, mew, trill, yowl, purr and hiss modes,
+  and boots with a cat band demo on the four tracks.
+description: >-
+  MEOW is a fourteenth engine with four voices, built from Felucca's VOICE engine (a glottal source with formant
+  resonators) and tuned against measurements of recorded cat sounds; no recordings are part of the firmware. Knobs set the
+  call mode, size, length, pitch bend, vibrato, breath, roughness and randomness, and there are ten presets and four factory
+  patterns. Everything else is Felucca 1.4.1. A project or user preset with a MEOW track plays wrongly on stock Felucca. The
+  work is on the meow branch of the repository; the default branch is unchanged Felucca. The project is not on Felucca's
+  installer, so you build and install it yourself.
+status: active
+authors:
+- name: JB-Interactive
+  url: https://github.com/JB-Interactive
+source: https://github.com/JB-Interactive/Felucca-Meow/tree/meow
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca. The README cites the CatMeows and Cat Sound Classification datasets as references for fitting the
+  engine; none of their recordings are included.
+distribution: source-only
+requires_stock: V15
+install_notes: >-
+  Build build/felucca.fwsc with ./build.sh on the meow branch, then install it with tools/fm1_install.py or a local copy of
+  the web installer. Back up projects first with the web editor. Return to M-VAVE's firmware with its updater or the
+  installer's Return to official V15 option; the README points to FM-1 Transporter for a failed install.
+brick_risk: true
+tags: [synth-engine, voice, fork, drums]
+versions:
+- version: meow @ bd948fa
+  date: 2026-10-09
+  url: https://github.com/JB-Interactive/Felucca-Meow/commit/bd948fa655232c98813347b6f7fd002ffd1b3aa5
+  notes: No tagged releases; this is the latest commit on the meow branch.

@@ -1,0 +1,46 @@
+device: m-vave-fm-1
+name: FM1 MIDI Converter
+kind: tool
+summary: >-
+  Offline single-page converter between standard MIDI files and FM-1 V4 project files: MIDI in, a project built on
+  a template you supply, or the stored step sequences of a project out as MIDI.
+description: >-
+  Writes the first 64 sixteenth-note steps of a MIDI file into a project, mapping General MIDI drum notes onto the
+  808 kit and melody parts onto template tracks whose engine can play them. A V4 project to use as the sound
+  template is required; none is bundled, and the template's presets, effects and arpeggiator settings are kept. The
+  other direction exports the eight 64-step sequences of a project as format 1 MIDI. Files are read in the browser
+  and not uploaded, and the page has English and Simplified Chinese interfaces. The code is extracted from the
+  converter in M-VAVE's FM-1 Open kit. The repository holds no firmware and no flashing code.
+status: active
+authors:
+- name: Balance Chiang
+  url: https://github.com/balancechiang
+- name: M-VAVE
+  url: https://github.com/m-vave
+source: https://github.com/balancechiang/fm1-midi-converter
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  GPL-3.0-only with M-VAVE's section 7 permission to link with the FM-1 binary SDK, the same terms as the
+  upstream FM-1 Open kit (LICENSE.md, copyright M-VAVE). The converter, string table and page styles come from that
+  kit; this repository adds the page shell and build script.
+homepage: https://balancechiang.github.io/fm1-midi-converter/
+distribution: browser-installer
+install_notes: >-
+  Open the hosted page, or download index.html and open it from disk. There is nothing to flash. Back up an
+  existing project before replacing it on the device.
+brick_risk: false
+tags: [midi, sequencer, utility, web]
+image:
+  url: https://raw.githubusercontent.com/balancechiang/fm1-midi-converter/main/docs/screenshot.png
+  alt: >-
+    The MIDI converter page in English with a MIDI file drop box, an FM-1 project template drop box, a project name
+    field and a Convert project button.
+  credit: Balance Chiang
+  source_url: https://github.com/balancechiang/fm1-midi-converter#readme
+  first_party: true
+versions:
+- version: main @ 3cd6c1f
+  date: 2026-10-23
+  url: https://github.com/balancechiang/fm1-midi-converter/commit/3cd6c1fb29b30a4aa9ec992c0f90581eb0d502a5
+  notes: No tagged releases; this is the latest commit.

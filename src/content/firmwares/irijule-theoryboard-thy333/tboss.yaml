@@ -6,9 +6,10 @@ description: >-
   scale, with per-pad chord edits such as added sevenths or suspended chords, 86 built-in scales and up to 12 custom scales drawn on
   a piano keyboard in a web editor, and separate MIDI channels for chords and melody. Pad pressure can be sent as
   aftertouch or as a controller such as mod wheel or filter. The editor also backs up settings and makes a
-  verified copy of the board's 16 MB memory chip. Later versions add recordable chord progressions, user-typed chord sets and
-  a chord grid. TRS MIDI out is confirmed on a board; the sustain pedal input, scale lock and progressions started
-  from a DAW are not yet. The firmware is labelled beta and has been tested on one board. The
+  verified copy of the board's 16 MB memory chip. Later versions add recordable chord progressions, user-typed chord sets,
+  a chord grid, a four-lane step sequencer, four MIDI effects, a bass layout and Program Change in both directions. TRS MIDI out and the
+  sustain pedal are confirmed on a board; the pedal's other modes, scale lock and progressions started from a DAW are not yet, and the
+  author asks for test reports. Releases up to 1.6 carried a beta label, and 1.7 does not. The
   author is not affiliated with the board's makers.
 status: active
 authors:
@@ -32,6 +33,10 @@ install_notes: >-
 brick_risk: false
 tags: [controller-mode, chords, scales, arpeggiator, midi, editor]
 versions:
+  - version: "1.7"
+    date: 2026-10-27
+    url: https://github.com/armandhammer/TBOSS/releases/tag/v1.7
+    notes: Includes 1.6. Adds per-step velocity, gate, tie, chance, ratchet and condition to the step sequencer, a bass layout, Program Change in both directions, and pad calibration that adjusts to each board.
   - version: 1.6.0-beta.1
     date: 2026-10-25
     url: https://github.com/armandhammer/TBOSS/releases/tag/v1.6.0-beta.1

@@ -1,0 +1,42 @@
+device: e103-designs-sincria
+name: SINCRIA firmware
+summary: Arduino sketch for the SINCRIA cellular automata sequencer that runs a Conway-style 8x8 world, scans it as 64 steps and emits clock, live-cell and generation-end events.
+description: >-
+  The published sketch, SINCRIA_Rev2_OK, is dated August 2025 inside the source and carries no
+  version number. It applies the B3/S23 rules with horizontal wrap-around, scans the grid left to
+  right and bottom to top, and lets the world evolve at the end of each scan. The tempo knob sets
+  an internal clock of 60 to 200 BPM in sixteenth notes, or an external clock advances the scan.
+  Buttons randomise the world, lock evolution, rotate it, and add or remove a random cell, with
+  alternate functions behind AltMode. The README states that it adds no MIDI, pitch CV, pattern
+  storage or reset input, and that the sketch is not matched to every PCB revision. It needs the
+  LedControl library.
+status: active
+authors:
+  - name: E103-designs
+    url: https://github.com/E103-designs
+source: https://github.com/E103-designs/SINCRIA
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Covers the original source, documentation, photographs and design files in the repository.
+  Third-party libraries such as LedControl keep their own licences.
+homepage: https://github.com/E103-designs/SINCRIA#readme
+distribution: source-only
+install_notes: >-
+  Install LedControl 1.0.6 from the Arduino Library Manager, open
+  firmware/SINCRIA_Rev2_OK/SINCRIA_Rev2_OK.ino and build for Arduino Nano with an ATmega328P at
+  16 MHz, choosing the old bootloader only if the board needs it. Confirm the installed MCU and
+  the corrected schematic before uploading to a physical module.
+brick_risk: false
+tags: [official, sequencer, generative, arduino, eurorack]
+image:
+  url: https://raw.githubusercontent.com/E103-designs/SINCRIA/main/images/front.jpg
+  alt: Front panel of the SINCRIA module with an 8x8 LED matrix, output jacks, a tempo knob and control buttons
+  credit: E103-designs
+  source_url: https://github.com/E103-designs/SINCRIA#readme
+  first_party: true
+versions:
+  - version: main @ b015f9f
+    date: 2026-10-27
+    url: https://github.com/E103-designs/SINCRIA/commit/b015f9f54795ab00b2fbd5aebc3ba60f40bb0b00
+    notes: No tagged releases; this is the latest commit.

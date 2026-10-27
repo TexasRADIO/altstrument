@@ -1,0 +1,37 @@
+device: m-vave-fm-1
+name: FM1 Cartridge
+summary: >-
+  Experimental battery-powered ESP32-S3 add-on that runs ported Clipper, Felucca and Melodee engines and returns
+  their audio to the FM-1 over USB, driven by a modified SLOOP 2.7.1 build with a CARTRIDGE page.
+description: >-
+  The ESP32-S3 acts as USB host: it receives notes, clock and transport from the FM-1 over USB-MIDI, renders one of
+  three engines and sends stereo audio back over USB audio, which the modified SLOOP mixes into the FM-1's own
+  output. The engines sit in three flash slots on the ESP32, and the CARTRIDGE page on the FM-1 picks the slot and
+  edits engine, preset and parameters. The repository holds the ESP-IDF firmware, the SLOOP patch and package for the
+  FM-1, host-side simulation and tests, and the prototype's hardware notes. The README calls it a bench prototype
+  and lists what has and has not been verified on hardware, including the power path, which is not settled. The
+  prototype uses a lithium cell and a USB link outside the Type-C power policy, so the README warns of damage to
+  the FM-1, the ESP32 board or the cell.
+status: active
+authors:
+- name: Andre Rezemini (andrerezemini)
+  url: https://github.com/andrerezemini
+source: https://github.com/andrerezemini/fm1-cartridge
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Own code is GPL-3.0-only; the pinned subsets of Clipper, Felucca and Melodee under third_party/ keep their own
+  licences, listed in each folder's README.
+distribution: source-only
+install_notes: >-
+  Needs the hardware described in the repository (an ESP32-S3 board on its own LiPo cell, joined to the FM-1 by
+  USB-C) as well as two builds: the ESP32 slots flashed with esptool, and the SLOOP package installed on the FM-1.
+  docs/FLASHING.md backs up both devices first. Do not connect the cartridge to a computer or charger while it is
+  plugged into the FM-1.
+brick_risk: true
+tags: [synth-engine, usb-audio, usb-midi, midi, fork, platform]
+versions:
+- version: main @ d7659e4
+  date: 2026-10-24
+  url: https://github.com/andrerezemini/fm1-cartridge/commit/d7659e4f85357a1d3879b29aa5d5e0f8eaf9cb2a
+  notes: No tagged releases; this is the latest commit.

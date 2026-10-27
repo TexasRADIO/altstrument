@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: Yanfei
+summary: >-
+  Felucca fork with twelve engines and 96 factory presets, including NES, Game Boy, PSG, YM and wavetable engines,
+  and a four-track tracker with phrases, chains and song sections.
+description: >-
+  The engines are ANALOG, NES, DMG, PSG, TRIO, FM6, YM, WAVE, PHASE, STRING, MODAL and DRUM, with eight presets each. The
+  tracker opens in an ALL view of four tracks and switches to a detailed PHRASE view, with sections of up to four bars,
+  shared phrases, chains, per-row instruments and repeat or wait per track. The docs keep the firmware budgets and a
+  waveform review for the engines. A website offers a web editor, a browser emulator, an installer and illustrated
+  guides. The package keeps the FM-1 update identity the installer needs, and the README says the fork was developed
+  with AI coding assistance.
+status: active
+authors:
+- name: izumoe
+  url: https://github.com/izumoe
+source: https://github.com/izumoe/yanfei
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca (LICENSING.md); the engines under firmware/engines come from Felucca-Engines under MIT, and
+  component notices are in LICENSES/.
+homepage: https://izumoe.github.io/yanfei/
+distribution: browser-installer
+install_notes: >-
+  Installer on the project website in Chrome or Edge over USB, or build with ./build-yanfei.sh and install
+  build/yanfei.fwsc. As with Felucca, go back to M-VAVE's firmware with its updater.
+brick_risk: true
+tags: [synth-engine, sequencer, chiptune, editor, emulator, fork]
+image:
+  url: https://raw.githubusercontent.com/izumoe/yanfei/main/docs/images/guide/all.png
+  alt: >-
+    Yanfei's ALL tracker view on the FM-1 screen, with columns for the ANALOG, FM6, NES and DRUM tracks, rows 00 to 0F
+    with notes, and a footer showing channel, rate and velocity.
+  credit: izumoe
+  source_url: https://github.com/izumoe/yanfei/blob/main/docs/VISUAL_GUIDE.md
+  first_party: true
+versions:
+- version: main @ 876d6cb
+  date: 2026-10-21
+  url: https://github.com/izumoe/yanfei/commit/876d6cb4d2d40564da5ea2c4ad50eb0c782419a2
+  notes: No tagged releases; this is the latest commit.

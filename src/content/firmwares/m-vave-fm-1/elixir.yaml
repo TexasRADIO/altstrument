@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: Elixir
+summary: >-
+  Port of the Erica Synths LXR-02 drum machine's sound engine and sequencer to the FM-1, with per-voice sends,
+  Felucca's reverb, Rings and Plaits drum models, and a second-core voice renderer.
+description: >-
+  Six voices on seven tracks, 32 patterns of four bars with parameter locks, flams, rolls, Euclid and other
+  pattern generators, morphing, songs, kits and projects, and MIDI in and out with clock sync. The LXR-02's
+  floating-point DSP is rewritten in fixed point, and a host test renders each voice with both engines to compare
+  them. Additions on top of the LXR-02 are per-voice FX and reverb sends, waveshapers, a bit reducer, tilt EQ,
+  choke groups, cross-modulation, a phaser and flanger on the FX bus, drum voices that can use ports of Rings
+  resonators or Plaits engines, and a kit and sound library in flash. The keys can play a voice as an
+  instrument. It was named Kettle up to version 0.13 and a unit running Kettle updates to Elixir keeping its
+  projects. It is built on Felucca's hardware layer, USB stack and updater, and its flash data area is shared
+  with Felucca, so installing it replaces Felucca's saved data. The project states it is not affiliated with Erica
+  Synths or M-VAVE.
+status: active
+authors:
+- name: dmajka
+  url: https://github.com/dmajka
+source: https://github.com/dmajka/elixir
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Derived from Erica Synths' GPL-3.0 LXR-02 firmware and from Felucca; NOTICE.md lists the other parts, among them
+  Grids (GPL-3.0-or-later, used under GPL-3.0), Rings and Plaits (MIT) and the JieLi boot files (Apache-2.0).
+homepage: https://dmajka.github.io/elixir/
+distribution: browser-installer
+requires_stock: V15
+install_notes: >-
+  The install page (Chrome or Edge, USB) checks the device, offers M-VAVE's official V15 first, then Elixir, and
+  can go back to V15; the package can also be installed with tools/fm1_install.py. The manual says to install
+  official V15 before Elixir.
+brick_risk: true
+tags: [drums, sequencer, synth-engine, fx, performance, generative, emulator]
+image:
+  url: https://dmajka.github.io/elixir/shots/pattern.png
+  alt: >-
+    Elixir's pattern grid on the FM-1 screen, with tracks D1 to OH down the side, step dots across, a bar selector
+    below and Tempo, Shuffle, Length and Volume knob cards.
+  credit: dmajka
+  source_url: https://dmajka.github.io/elixir/
+  first_party: true
+versions:
+- version: '0.15'
+  date: 2026-10-27
+  url: https://github.com/dmajka/elixir/tree/v0.15
+  notes: Git tag; no GitHub release page.

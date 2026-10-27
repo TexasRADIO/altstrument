@@ -37,6 +37,10 @@ image:
   source_url: https://github.com/SikkenWorks/BEETLE
   first_party: true
 versions:
+- version: 1.7.14
+  date: 2026-10-27
+  url: https://github.com/SikkenWorks/BEETLE/releases/tag/V1.7.14
+  notes: Experimental; NEW PROJECT resets the project without restarting the audio output when playback and USB capture are idle.
 - version: '1.5'
   date: 2026-10-25
   url: https://github.com/SikkenWorks/BEETLE/releases/tag/V1.5

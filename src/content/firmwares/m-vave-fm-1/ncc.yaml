@@ -1,0 +1,56 @@
+device: m-vave-fm-1
+name: NCC (Novation Circuit Companion)
+summary: >-
+  Felucca fork that turns the FM-1 into a two-part companion synth for the Novation Circuit Tracks: twelve engines,
+  161 sounds, the Circuit's eight macro knobs mapped on every engine, a clock-locked arp and drone chords.
+description: >-
+  Part L follows the Circuit's MIDI 1 track on channel 3 and part R its MIDI 2 track on channel 4, each with its own
+  sound, and the two come out on the left and right channels. The FM-1 has no sequencer in this build; the Circuit
+  plays the notes and sends the clock. Sounds are picked by role (bass, pad, lead, keys, pluck, beat) and then by
+  engine and preset. Engines are FM6, JUNO with a chorus, PHASE, TRIO, ACID, PHYS, GRAIN, VOICE, LOFI, WHEEL, NOISE
+  and SAMPLE. A Dual mode lets one Circuit track play both parts, and the Drone button stacks or replaces held
+  chords. A web manager edits sounds, DX7 banks, backups and settings over USB, and a browser emulator plays a
+  built-in Circuit. CREDITS.md says development used Claude Code and Codex.
+status: active
+authors:
+- name: Fenderberg
+  url: https://github.com/fenderberg
+source: https://github.com/fenderberg/fm1-nc-companion
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca (LICENSING.md); bundled and ported parts such as the DaisySP, Rings and msfa code and the
+  MIT engines keep their own licences.
+homepage: https://fenderberg.github.io/fm1-nc-companion/
+distribution: browser-installer
+requires_stock: V15
+install_notes: >-
+  Web installer in Chrome or Edge over USB; the same page has Return to official V15. The package identity is
+  FM-1_704. Installing is at your own risk.
+brick_risk: true
+tags: [synth-engine, midi, performance, arpeggiator, editor, emulator, fork]
+image:
+  url: https://raw.githubusercontent.com/fenderberg/fm1-nc-companion/main/docs/ncc-emulator.jpg
+  alt: >-
+    NCC in the browser emulator on a purple FM-1 panel, the screen showing two parts, TINE EP on L channel 3 and SAW
+    LEAD on R channel 4, above four knob cards.
+  credit: Fenderberg
+  source_url: https://github.com/fenderberg/fm1-nc-companion#readme
+  first_party: true
+versions:
+- version: '0.4'
+  date: 2026-10-24
+  url: https://github.com/fenderberg/fm1-nc-companion/releases/tag/v0.4
+  notes: Twelve engines and 161 sounds, a Dual mode and Drone REPLACE.
+- version: '0.3'
+  date: 2026-10-23
+  url: https://github.com/fenderberg/fm1-nc-companion/releases/tag/v0.3
+  notes: Clearer sound picking by category, engine and preset, and an arp locked to the Circuit's bar.
+- version: '0.2'
+  date: 2026-10-23
+  url: https://github.com/fenderberg/fm1-nc-companion/releases/tag/v0.2
+  notes: Sounds by role, 88 sounds, and the NCC Manager web page.
+- version: '0.1'
+  date: 2026-10-21
+  url: https://github.com/fenderberg/fm1-nc-companion/releases/tag/v0.1
+  notes: First release with five engines, split output, arp and drone.

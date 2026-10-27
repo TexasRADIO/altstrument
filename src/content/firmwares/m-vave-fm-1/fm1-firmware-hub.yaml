@@ -1,0 +1,35 @@
+device: m-vave-fm-1
+also_devices: [m-vave-smk-37]
+name: FM-1 Firmware Hub
+kind: tool
+summary: >-
+  Website that lists open-source community firmware for the FM-1 and the SMK-37 and installs a chosen one over
+  USB from the browser, with a one-click way back to M-VAVE's V15 and a rescue script for a stuck unit.
+description: >-
+  Each listed firmware is a package mirrored unchanged from its author's project, shown with its author, licence,
+  version and links to its source and issue tracker. The hub lists only firmware released as free software, and
+  links without hosting the ones that are not, such as Baud Girl and M-VAVE's own FM1 Open. The install runs in
+  Chrome or Edge over Web MIDI. The way back to stock hosts the V15 file that M-VAVE publishes under Apache-2.0
+  in m-vave/fm1_open and checks it byte for byte; newer V16 images are not hosted. The SMK-37 section covers the
+  Pro, Elite and MKE-P37, where firmware installers build from the keyboard's own V16 package. The hub also
+  offers a Linux rescue script that uses the chip's ROM bootloader, a knowledge base, a catalogue file in JSON,
+  a wish list and optional accounts. The site shows Amazon affiliate links, which this catalogue does not link.
+  It is not open source. It also lists firmware for other machines, such as the Elektron Model:Cycles.
+status: active
+authors:
+- name: Sven Trogus (zvenson)
+  url: https://github.com/zvenson
+source_status: closed
+license: unspecified
+license_notes: >-
+  No source or licence for the site is published. The rescue script it serves, fm1_rescue.py, is stated to be
+  GPL-3.0 and the mirrored firmware keeps its authors' licences.
+homepage: https://thefirmwarehub.com/
+distribution: browser-installer
+install_notes: >-
+  Open the site in Chrome or Edge, connect the FM-1 by USB, press Connect FM-1 and then Install on a firmware;
+  installing takes about a minute and needs no account. Back up first. The way back to official V15 is on the
+  same page, and the rescue script (sudo python3 fm1_rescue.py with the firmware name) writes only the firmware area
+  through the ROM bootloader. The site says every firmware is community software that is installed at your own risk.
+brick_risk: true
+tags: [flasher, librarian, utility]

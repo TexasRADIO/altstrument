@@ -32,6 +32,14 @@ install_notes: >-
 brick_risk: true
 tags: [sequencer, synth-engine, fm, fx, chords, arpeggiator, performance, editor, midi]
 versions:
+- version: 0.12.0-beta.9
+  date: 2026-10-27
+  url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.12.0-beta.9
+  notes: Adds a VOICE page (mono or poly, unison, priority), draws the FX page as a cat and the MASTER page as two heads, reads patterns in the background so changing one no longer clicks, and adds HOLD for the live keys.
+- version: 0.12.0-beta.8
+  date: 2026-10-26
+  url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.12.0-beta.8
+  notes: Sequencer clean-up with one knob table in every mode, a SLIDE key replacing P-LOCK, an effects page that opens on the sends, and chain routing as wet and dry in series.
 - version: 0.12.0-beta.7
   date: 2026-10-26
   url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.12.0-beta.7

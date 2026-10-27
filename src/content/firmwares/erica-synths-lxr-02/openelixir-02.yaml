@@ -1,18 +1,23 @@
 device: erica-synths-lxr-02
 name: OpenElixir-02
-summary: Fork of Erica Synths' open LXR-02 firmware that sums voices and effects in 32 bit and limits each output instead of clipping, with a per-build memory report and a CPU load meter option.
+summary: Fork of Erica Synths' open LXR-02 firmware with assignable voice engines, kit loading across projects, a limiter instead of clipping in the mix, lower CPU load and stock bug fixes.
 description: >-
   A community fork of the firmware Erica Synths published as source in October
-  2026, based on stock version 1.7. Release 0.1 replaces the hard clipping in
-  the final mix with a 32-bit sum and a limiter on each DAC output, so loud kits
-  are limited rather than clipped and quieter kits sound as before. It renames
-  the unit on the start-up screen and as the USB-MIDI device, which means DAW
+  2026, based on stock version 1.7. Voices and effects are summed in 32 bit and
+  followed by a limiter on each DAC output, so loud kits are limited rather than
+  clipped; a config menu setting switches the limiter off to get the stock mix.
+  Release 1.0 adds freely assignable voice engines, so each of the six voice
+  slots can run a drum, snare, cymbal or hi-hat engine, and kit management that
+  loads single voices or whole kits from other projects. It also lowers CPU load
+  by about 10 percent, fixes a number of stock bugs in MIDI, the sequencer, SD
+  card handling and memory use, and writes a project save into a new folder so
+  an interrupted save cannot lose the saved project. Since 0.1 it renames the
+  unit on the start-up screen and as the USB-MIDI device, which means DAW
   mappings that use the old port name need to be set up again. Kits, patterns,
-  projects and the MIDI implementation are unchanged. Every build prints a
-  memory usage report per region compared with the stock firmware, and a
-  development build option shows per-voice CPU load on the display. The
-  author lists better oscillator quality, flexible voice engines and sample
-  playback as possible later work. It is not affiliated with Erica Synths.
+  projects and the MIDI implementation stay compatible with the stock firmware,
+  and the stock firmware still loads kits saved with the fork. Every build
+  prints a memory usage report per region compared with the stock firmware. It
+  is not affiliated with Erica Synths.
 status: active
 authors:
   - name: Moritz Waser (tunefish777)
@@ -27,16 +32,25 @@ license_notes: >-
 distribution: download
 requires_stock: LXR-02 with the stock bootloader
 install_notes: >-
-  Copy LXR_OpenElixir-02_V0.1.img from the release to the top folder of the SD
+  Copy LXR_OpenElixir-02_V1.0.img from the release to the top folder of the SD
   card, delete any other LXR*.img files, then hold the encoder button while
   switching the unit on until LXR Updater appears. The bootloader is not
   touched, so an interrupted update can be repeated. Installing an official
-  Erica Synths update the same way returns to stock. The release also carries
-  .hex and .elf files for use with an ST-Link, which a normal update does not
-  need.
+  Erica Synths update the same way returns to stock; kits saved with the fork
+  keep working there, but slots with a different engine play with their stock
+  engine. The release also carries .hex and .elf files for use with an
+  ST-Link, which a normal update does not need.
 brick_risk: false
 tags: [drums, fork, open-source]
 versions:
+  - version: "1.0"
+    date: 2026-10-26
+    url: https://github.com/tunefish777/openelixir-02/releases/tag/v1.0
+    notes: First stable release. Adds assignable voice engines, kit management across projects, a limiter switch, about 10 percent lower CPU load, stock bug fixes and a safer project save.
+  - version: "0.2"
+    date: 2026-10-26
+    url: https://github.com/tunefish777/openelixir-02/releases/tag/v0.2
+    notes: Pre-release on GitHub. Adds assignable voice engines, lowers CPU load and fixes a ping-pong delay memory overwrite.
   - version: "0.1"
     date: 2026-10-24
     url: https://github.com/tunefish777/openelixir-02/releases/tag/v0.1

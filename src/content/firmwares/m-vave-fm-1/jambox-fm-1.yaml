@@ -1,0 +1,42 @@
+device: m-vave-fm-1
+name: Jambox FM-1
+summary: >-
+  Fork of FoMni-1 that adds chord sets, strum layouts, a reggae rhythm, a chord sequencer, melody generation and
+  DX7 voices to the Omnichord-style chord harp, with a browser emulator, editor and firmware switcher.
+description: >-
+  The white keys strum a chord and the black keys pick it, as in FoMni-1. This fork adds eight chord sets that can
+  be edited per key, with inversions and transposition, four strum layouts (triads, linear, fixed and
+  relative to the chord's scale), a reggae rhythm and rhythms drawn in the editor, an eight-track chord
+  sequencer, an auto-generated melody over the chords with a seed, and DX7 bank voices for the strings and
+  chords. MIDI comes in on USB and the TRS jack and goes out over USB. The project site has a browser emulator,
+  a web installer that can put M-VAVE's own firmware back, a chord and rhythm editor, and a switcher that
+  keeps several .fwsc packages in the browser. Rhythm patterns come from the CC0 Chordian OM-84 emulator.
+status: active
+authors:
+- name: RayDNoper
+  url: https://github.com/RayDNoper
+source: https://github.com/RayDNoper/fm1-jambox
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Keeps FoMni-1's and Felucca's licence (LICENSING.md). Rhythm patterns and drum sounds derive from Chordian
+  (CC0-1.0); the Barlow and Terminus fonts are SIL OFL 1.1.
+homepage: https://raydnoper.github.io/fm1-jambox/
+distribution: browser-installer
+requires_stock: V15 or FM1 Open
+install_notes: >-
+  Web installer in Chrome or Edge with the FM-1 on USB, or build/omni.fwsc with tools/fm1_install.py. The
+  installer can write M-VAVE's firmware back, and an FM-1 that keeps crashing starts in a safe mode.
+brick_risk: true
+tags: [chords, synth-engine, performance, fork, editor, emulator, fm]
+image:
+  url: https://raw.githubusercontent.com/RayDNoper/fm1-jambox/main/docs/img/screen-strum.png
+  alt: "Jambox FM-1 play screen showing a C chord, the strum plate strings, chord buttons F C G Dm Am Em G7 E7 D7 Bb A7 and four knob values"
+  credit: RayDNoper
+  source_url: https://github.com/RayDNoper/fm1-jambox
+  first_party: true
+versions:
+- version: main @ 44d6a12
+  date: 2026-10-23
+  url: https://github.com/RayDNoper/fm1-jambox/commit/44d6a1296a05c241ce50b4d7c81b58a34429ea13
+  notes: No tagged releases; this is the latest commit.

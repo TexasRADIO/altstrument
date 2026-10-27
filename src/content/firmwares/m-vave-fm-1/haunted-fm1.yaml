@@ -24,7 +24,7 @@ license_notes: >-
   MIT covers the firmwares and the shared libraries (LICENSE). fm1-base and felucca-bsp are MPL-2.0 submodules, and the JieLi
   SDK files the package needs are Apache-2.0 and fetched at build time. The reverb follows Jon Dattorro's published plate
   design. No M-VAVE firmware file is in the repository; the flasher page links M-VAVE's own download for the way back to V15.
-homepage: https://github.com/davidpryan/haunted-fm1
+homepage: https://davidpryan.github.io/haunted-fm1/
 distribution: browser-installer
 install_notes: >-
   Open the flasher page in Chrome or Edge with the FM-1 on USB, pick a firmware and press Install, or run

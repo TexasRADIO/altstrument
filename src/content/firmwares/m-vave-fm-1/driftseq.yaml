@@ -1,15 +1,17 @@
 device: m-vave-fm-1
 name: DriftSeq
 summary: >-
-  Planned 16-track polymetric MIDI sequencer for the FM-1. So far a design spec, a C engine with host tests and a
-  browser emulator; there is no device build yet.
+  Planned 16-track polymetric MIDI sequencer for the FM-1. So far design specs, a C engine with host tests, a browser
+  emulator and an in-progress firmware source tree; no prebuilt image is published.
 description: >-
   Each of the 16 tracks has its own loop length, so the patterns drift against each other, and the home screen
   is meant to show that phase drift. Steps can be generated with Euclidean rhythms, per-step probability and
   conditional triggers, and the sequencer sends USB MIDI out to an external rig. The plan also includes an
   on-device General MIDI monitor using the Sonivox EAS engine. The repository holds the specs, the
   deterministic engine in C with host tests, and a WebAssembly build that drives a 240x240 emulator page with
-  Web MIDI out. The README lists the port to the FM-1 itself as the next step. Specs are partly in Chinese.
+  Web MIDI out. A firmware directory holds the FM-1 UI and platform code with a package-build script, but the
+  README still lists the port to the FM-1 itself as the next step and no built package is published. Specs are
+  partly in Chinese.
 status: active
 authors:
 - name: johnskiller
@@ -19,10 +21,11 @@ source_status: open
 license: GPL-3.0-or-later
 license_notes: >-
   The LICENSE file grants GPL version 3 or any later version. The planned GM engine, Sonivox EAS, is Apache-2.0.
+homepage: https://johnskiller.github.io/driftseq/
 distribution: source-only
 install_notes: >-
-  Nothing can be installed on the FM-1 yet. The browser emulator runs locally from the web/ directory with
-  a static file server, and host tests run with make test.
+  Nothing can be installed on the FM-1 yet. The emulator is hosted on the project's page, or runs locally from
+  the web/ directory with a static file server, and host tests run with make test.
 brick_risk: false
 tags: [sequencer, midi, generative, emulator]
 versions:

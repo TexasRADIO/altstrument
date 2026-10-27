@@ -1,33 +1,38 @@
 device: m-vave-fm-1
 name: FM-1 Ctrl
 summary: >-
-  Thin controller firmware that sends the FM-1's keys, knobs and buttons out as raw USB MIDI and takes MIDI
-  back to light its LEDs, so the hardware can drive a firmware's browser emulator.
+  Thin controller firmware that sends the FM-1's keys, encoders and buttons out as plain USB and Bluetooth MIDI,
+  with aftertouch from 20 keys, so the hardware can drive a firmware's browser emulator or a DAW.
 description: >-
-  Contains no sound engine, sequencer or storage. Mapping lives on the browser side as a JSON control map, with
-  a convention document and a first map for the Melodee emulator. The panel is reported as 7 encoders and 14
-  buttons on CC 40 to 53, and a later commit adds LED feedback on CC 54 to 67. The repository has a host
-  simulator, a browser panel emulator that shows the MIDI bytes, and a WebAssembly build of the firmware's own
-  code. It builds on the x0x build and the Felucca platform layer. The author's notes mark the on-device flash and
-  LED check as pending, and USB MIDI both ways as verified on a unit.
+  Contains no sound engine, sequencer or storage; the mapping lives in the receiving host. The 27 keys send notes 53
+  to 79 with velocity, 20 of them also poly aftertouch, the seven encoders send relative CC 20 to 26, the 14 buttons
+  CC 40 to 53 and MASTER CC 27 plus the CC 7 and CC 39 pair. The panel's LEDs and screen now show only what is held
+  on this unit; MIDI coming back is counted and ignored, which replaces the earlier LED feedback on CC 54 to 67.
+  The firmware was ported onto Charles Vestal's fm1-base platform, which supplies the hardware layer and Bluetooth
+  MIDI, so the app is a single source file. The repository has a host simulator, a browser panel emulator that shows
+  the MIDI bytes, contract tests that run the real app code on a fake platform, and a shim that drives other
+  firmwares' browser emulators. A commit message says the Bluetooth heap use was measured on an FM-1; the README
+  does not report a full hardware test.
 status: active
 authors:
 - name: johnskiller
   url: https://github.com/johnskiller
 source: https://github.com/johnskiller/fm1-ctrl
 source_status: open
-license: MIT
+license: MPL-2.0
 license_notes: >-
-  The LICENSE file is MIT. The README says GPL-3.0-or-later and the firmware sources carry GPL-3.0-only
-  headers (the Felucca platform code is GPL-3.0-only).
+  LICENSE and LICENSING.md state MPL-2.0 for the app, tools and web files, with an SPDX header in each file. The
+  fm1-base platform and felucca-bsp are MPL-2.0, relicensed from GPL-3.0-only by their authors. Bluetooth builds link
+  JieLi's binary AC79 libraries (Apache-2.0). Earlier commits carried a GPL-3.0 tree.
 distribution: source-only
 install_notes: >-
-  No release yet. tools/build.py needs the JieLi pi32v2 toolchain (JIELI_TOOLCHAIN) and produces
-  build/ctrl.fwsc, which tools/fm1_install.py installs over USB. Back up first and have M-VAVE's updater ready.
+  No release yet. After initialising the fm1-base submodule, platform/tools/build.py app needs the JieLi pi32v2
+  toolchain (and the AC79 SDK for Bluetooth) and produces app/build/ctrl.fwsc, which the platform's
+  fm1_install.py installs over USB. Back up first and have M-VAVE's updater ready.
 brick_risk: true
 tags: [controller-mode, midi, usb-midi, emulator, platform]
 versions:
-- version: main @ 92cc34e
-  date: 2026-10-25
-  url: https://github.com/johnskiller/fm1-ctrl/commit/92cc34e
+- version: main @ 6c4d4d4
+  date: 2026-10-27
+  url: https://github.com/johnskiller/fm1-ctrl/commit/6c4d4d45d73019e6af6bc379d0b7a4b18ed70680
   notes: No tagged releases; this is the latest commit.

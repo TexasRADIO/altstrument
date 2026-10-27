@@ -1,0 +1,51 @@
+device: m-vave-fm-1
+name: setup-fm1-emulator
+kind: tool
+summary: >-
+  GitHub Action and Taskfile that install the fm1-emu emulator, its WebAssembly build and Playwright so FM-1
+  firmware screens can be tested in CI without hardware.
+description: >-
+  Installs a pinned fm1-emu release, the browser build of the emulator and, optionally, Playwright with Chromium and
+  ffmpeg, and exposes their paths as step outputs. It is meant for E2E tests that turn encoders, press buttons, play
+  notes and capture screenshots or GIFs from an FM-1 firmware's UI; the companion fm1-playwright Python package
+  supplies the test helpers. The repository's own CI runs the emulator against Felucca, SLOOP and Melodee. The
+  WebAssembly archive is built from the upstream fm1-emu source and published as a release asset of this
+  repository. The emulator itself is Joakim Eriksson's fm1-emu.
+status: active
+authors:
+- name: DimmKirr
+  url: https://github.com/DimmKirr
+source: https://github.com/DimmKirr/setup-fm1-emulator
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Add `uses: dimmkirr/setup-fm1-emulator@v1` to a workflow, or import the repository's Taskfile.yml for the same
+  setup on a local machine. The `version` input pins an fm1-emu release.
+brick_risk: false
+tags: [emulator, utility, sdk]
+versions:
+- version: 1.3.0
+  date: 2026-10-27
+  url: https://github.com/DimmKirr/setup-fm1-emulator/tree/v1.3.0
+  notes: Git tag; no GitHub release page.
+- version: 1.2.1
+  date: 2026-10-26
+  url: https://github.com/DimmKirr/setup-fm1-emulator/tree/v1.2.1
+  notes: Git tag; no GitHub release page.
+- version: 1.2.0
+  date: 2026-10-26
+  url: https://github.com/DimmKirr/setup-fm1-emulator/tree/v1.2.0
+  notes: Git tag; no GitHub release page.
+- version: 1.1.1
+  date: 2026-10-26
+  url: https://github.com/DimmKirr/setup-fm1-emulator/tree/v1.1.1
+  notes: Git tag; no GitHub release page.
+- version: 1.1.0
+  date: 2026-10-24
+  url: https://github.com/DimmKirr/setup-fm1-emulator/releases/tag/v1.1.0
+  notes: Bundles fm1-emu v0.2.0.
+- version: 1.0.0
+  date: 2026-10-22
+  url: https://github.com/DimmKirr/setup-fm1-emulator/releases/tag/v1.0.0
+  notes: First release, bundling fm1-emu v0.2.0.

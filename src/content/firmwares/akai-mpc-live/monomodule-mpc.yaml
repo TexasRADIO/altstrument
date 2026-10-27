@@ -1,6 +1,6 @@
 device: akai-mpc-live
 name: Monomodule for MPC OS
-summary: Native VST2 instrument and effect that run an emulation of the Elektron Monomachine synth engine on MPC and Force, built from your own Monomachine OS file.
+summary: Native VST2 instrument and effect that run an emulation of the Elektron Monomachine synth engine on MPC and Force, from your own Monomachine OS file; Gen2 MPCs have a ready-made download.
 description: >-
   An MPC OS port of shnolk's Monomodule engine, which emulates the
   Monomachine's DSP56300 chip. A static recompiler turns the DSP code the
@@ -9,8 +9,12 @@ description: >-
   Monomodule FX is the seven effect machines as an insert effect. The
   touchscreen skin is drawn from your own OS file and adds whole-cell touch,
   several layouts and colour presets, a bank selector, randomise buttons and the
-  factory kit bank. There is no download because the recompiled code contains
-  Elektron's DSP program; each user builds the plugin from their own file.
+  factory kit bank. On first-generation hardware there is no download, because
+  the recompiled code contains Elektron's DSP program, so each user builds the
+  plugin from their own file. Gen2 MPCs (64-bit, such as the MPC Live III) run
+  the DSP on a JIT compiler instead, and the release carries ready-made zips
+  with nothing of Elektron's in them; the plugin makes its skin from your OS
+  file on first load.
   The author lists it under the manufacturer name sd88me and states that
   shnolk neither makes nor supports the port.
 status: active
@@ -22,18 +26,24 @@ source_status: open
 license: AGPL-3.0-only
 license_notes: >-
   The README states AGPL-3.0-only. The engine is adapted from
-  schwung-monomodule (AGPLv3). The built plugin embeds Elektron code and is
-  not to be redistributed.
-distribution: source-only
+  schwung-monomodule (AGPLv3). A first-generation build embeds Elektron code
+  and is not to be redistributed; the Gen2 zips do not contain it.
+distribution: download
 requires_stock: MPC OS 3.x
 install_notes: >-
-  Build on a computer with release/release.sh from your own Monomachine OS file,
-  then copy the resulting zip to the device and run its install script over
-  root SSH. On MPC OS 2.x the plugin loads and plays from the Q-Links but its
-  touchscreen page stays empty. Installing plugins this way is unofficial and
-  needs a modded unit.
+  Gen2 MPCs can install the prebuilt aarch64 zips from the release, then put
+  your own Monomachine OS 1.32B file in the plugin's monomodule folder and load
+  the plugin once. For first-generation hardware, build on a computer with
+  release/release.sh from your own Monomachine OS file, then copy the resulting
+  zip to the device and run its install script over root SSH. On MPC OS 2.x
+  the plugin loads and plays from the Q-Links but its touchscreen page stays
+  empty. Installing plugins this way is unofficial and needs a modded unit.
 tags: [synth-engine, fx, emulator, platform]
 versions:
+  - version: v0.11.1
+    date: 2026-10-27
+    url: https://github.com/sd88me/mpc-vst-monomodule/releases/tag/v0.11.1
+    notes: Ready-made zips for Gen2 MPCs; corrects the bundled install instructions. The plugin is unchanged from 0.11.0.
   - version: v0.10.2
     date: 2026-10-02
     url: https://github.com/sd88me/mpc-vst-monomodule/releases/tag/v0.10.2

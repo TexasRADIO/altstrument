@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: Felucca MPE with VLFO and DRIFT
+summary: >-
+  Felucca 1.6.1 fork that plays from an MPE controller with per-note pitch bend, pressure and slide, and adds
+  voice LFO and drift modulation sources that move each note of a chord separately.
+description: >-
+  A separate fork from the other Felucca MPE entry. A new MIDI IN setting called MPE plays the selected
+  track, one voice per finger, each with its own bend (plus or minus 48 semitones by default, up to 96, now on
+  every MIDI IN setting). PRES and TIMB become modulation sources for amplitude, cutoff, shape or pitch. VLFO
+  reads the track's LFO at a different phase for each of the eight voices, and DRIFT gives each voice a slow
+  random wander of about 3 seconds per target; both work from the FM-1's own keys and sequencer, without an MPE
+  controller. The README says it was played in the browser emulator with a ROLI Seaboard RISE 49 and an Embodme
+  Erae Touch, and that neither the repository's prebuilt package nor anything else has run on a real FM-1. The
+  package keeps Felucca's identity FM-1_900, so installers and editors treat it as Felucca.
+status: active
+authors:
+- name: Stanley Gurvich (stanleygurvich)
+  url: https://github.com/stanleygurvich
+source: https://github.com/stanleygurvich/FeluccaMPE
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca; its engines submodule is MIT and the bundled fonts and ported DSP keep their own
+  licences (LICENSING.md).
+homepage: https://www.stanleygurvich.com
+distribution: download
+requires_stock: V15
+install_notes: >-
+  Take prebuilt/felucca-mpe-1.6.1.fwsc from the repository (SHA-256 in the README) and install it with Felucca's
+  web installer or another updater, or build it with build.sh. Untested on hardware; keep a way back to V15.
+  MPE needs the lower zone with 15 member channels, then MENU > MIDI > MIDI IN set to MPE and a POLY track.
+brick_risk: true
+tags: [fork, synth-engine, midi, lfo, performance]
+versions:
+- version: main @ 817f5b8
+  date: 2026-10-18
+  url: https://github.com/stanleygurvich/FeluccaMPE/commit/817f5b8f3fd91f127ff345ae857b9845bd9186e6
+  notes: No tagged releases; this is the latest commit.

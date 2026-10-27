@@ -1,0 +1,40 @@
+device: nintendo-game-boy
+name: GB Tracker
+kind: tool
+summary: >-
+  Browser tracker for Game Boy and Game Boy Color music that plays through a cycle-accurate APU emulation and exports
+  playable .gb and .gbc ROMs, GBS and VGM files, and a GBDK-2020 project.
+description: >-
+  A four-channel tracker (two pulse channels, one wave channel, one noise channel) with an order list, patterns,
+  per-channel instruments with macros, drawable or imported waveforms, samples streamed into wave RAM, and Web MIDI
+  input. Playback runs through an emulation of the Game Boy sound chip, and the song is exported as the register
+  writes a sound driver would make. The exports are a cartridge ROM that loops the song, a GBS file, a VGM file, a C array
+  with a small driver for GBDK-2020, and also XM, MOD, WAV, FLAC, Opus, stems and a video. The README says the ROM boots
+  on real hardware and flash carts, and the repository's tests run the ROM and GBS drivers on an SM83 interpreter and compare
+  their register writes with the reference driver. It runs in a browser, on desktop or phone, and installs as an offline web
+  app, so it is listed here as a tool for the console.
+status: active
+authors:
+- name: Markus F.
+  url: https://github.com/wirehack7
+source: https://github.com/wirehack7/Gameboy-Tracker
+source_status: open
+license: MIT
+license_notes: The LICENSE file names Markus F. as the copyright holder.
+homepage: https://gb.chiptrackr.com/
+install_notes: >-
+  Open the site in a browser, write a song and use the export buttons. Running the ROM on a real Game Boy needs a
+  flash cartridge, which the catalog does not list. Building the site from source needs Node and npm.
+brick_risk: false
+tags: [tracker, chiptune, export, web, emulator]
+image:
+  url: https://raw.githubusercontent.com/wirehack7/Gameboy-Tracker/main/docs/images/layout-desktop-light.png
+  alt: "GB Tracker desktop layout: order and instrument lists on the left, four pattern columns for pulse, pulse, wave and noise, a piano below and a File panel with export buttons"
+  credit: Markus F.
+  source_url: https://gb.chiptrackr.com/manual.html
+  first_party: true
+versions:
+- version: main @ a190219
+  date: 2026-10-27
+  url: https://github.com/wirehack7/Gameboy-Tracker/commit/a190219cd1ae85a09d197048161df0bb47f36114
+  notes: No tagged releases; this is the latest commit.

@@ -1,19 +1,20 @@
 device: m-vave-fm-1
 name: Ravel
 summary: >-
-  Eight-track sound-design groovebox with synth, strike and tape tracks that share a capture tape, an influence grid
-  where tracks modulate each other, a step and graph sequencer, and a browser emulator. Not yet run on an FM-1.
+  Eight-track sound-design groovebox with synth, strike and perc tracks, an influence grid where tracks modulate each
+  other, an arpeggiator, a step and graph sequencer, and a browser emulator. The v0.9.0 release notes call it untested on hardware.
 description: >-
-  Tracks 1 to 4 are synths with fourteen engines (virtual analog, a Casio CZ model, FM, physical models, formant, particle,
-  chip, an Ensoniq SQ-80 style voice, wavetable, a function-block voice, a pipe organ, a mono horn-style voice, a bowed or reed resin voice and struck tine bars),
-  tracks 5 and 6 excite resonant bodies, and tracks 7 and 8 have no oscillator and play back a shared capture tape as
-  looping playheads, grain clouds (a fixed-point port of Mutable Instruments Beads) or slices. Any track can instead be a
-  PERC kit of 33 drum machines after the Elektron Machinedrum's synthesis families. Any track can modulate, trigger or
-  clock another through an eight by eight influence grid. Each track runs either a step sequencer or a graph of cords,
-  and there are two LFOs, a modulation matrix, four macros, delay, reverb, feedback, filter-pair and vocoder buses, scenes,
-  an arrangement and eight project slots. The same C sources build the FM-1 firmware, a desktop simulator and a one-file
-  WebAssembly emulator. The README and the release notes say the firmware builds but has not been run on a real FM-1, and
-  the FM-1 side takes its platform layer from Felucca by way of X0X.
+  Tracks 1 to 4 are synths with thirteen engines (virtual analog, a Casio CZ model, FM, physical models, formant, particle,
+  chip, wavetable, a function-block voice, a pipe organ, a mono horn-style voice, a bowed or reed resin voice and struck tine
+  bars), and tracks 5 and 6 excite resonant bodies. Any track can instead be a PERC kit of 33 drum machines after the
+  Elektron Machinedrum's synthesis families. Any track can modulate, trigger or clock another through an eight by eight
+  influence grid. Each track runs either a step sequencer or a graph of cords, and there is an arpeggiator, two LFOs, a
+  modulation matrix, four macros, a granular tape delay, a 12-bit reverb, a feedback bus, an optional bus compressor on track 8,
+  scenes, an arrangement and project slots. Earlier releases had tape tracks that played back a shared capture tape; version 0.9.0
+  removed them. The same C sources build the FM-1 firmware, a desktop simulator and a one-file WebAssembly emulator. The
+  fuller engine and effect set, including the vocoder, is kept as a browser-only Ravel Software edition. The FM-1 side takes
+  its platform layer from Felucca by way of X0X. The README status line now says it runs on the FM-1, while its FM-1 build
+  section and the v0.9.0 release notes still say it has not been checked on hardware.
 status: active
 authors:
 - name: De-Pattern
@@ -22,9 +23,9 @@ source: https://github.com/De-Pattern/Ravel_FM1
 source_status: open
 license: GPL-3.0-only
 license_notes: >-
-  Stated as GPL-3.0 only in the README and THIRD_PARTY.md. The Beads port in core/beads keeps Mutable Instruments'
-  MIT licence, the screen fonts are SIL OFL 1.1, and the FM-1 platform layer and installer are Felucca's and X0X's
-  (GPL-3.0). A package also carries three JieLi AC79 SDK files (Apache-2.0).
+  Stated as GPL-3.0 only in the README. THIRD_PARTY.md lists the FM-1 platform layer, loader, installer and tools as
+  Felucca's and X0X's (GPL-3.0) and the Casio CZ engine as a port of MAME's uPD933 emulation (BSD-3-Clause). A package also carries three JieLi AC79
+  SDK files (Apache-2.0).
 homepage: https://de-pattern.github.io/Ravel_FM1/
 distribution: browser-installer
 install_notes: >-
@@ -32,16 +33,20 @@ install_notes: >-
   release. The source can also be built with tools/build_fm1.py (JieLi toolchain and three AC79 SDK files fetched by scripts
   in tools/). Holding OCT- and OCT+ for five seconds enters update mode, a firmware that crashes twice at start comes up in a
   safe mode the installer can reach, and the installer can write M-VAVE's own V15 back from a file you download yourself. The
-  release notes and README warn that it is untested on hardware.
+  v0.9.0 release notes say it has not been tested on FM-1 hardware, while the README status line says it runs on the FM-1.
 brick_risk: true
-tags: [synth-engine, sequencer, sampler, granular, drums, fx, vocoder, emulator, generative]
+tags: [synth-engine, sequencer, granular, drums, fx, arpeggiator, emulator, generative]
 image:
   url: https://raw.githubusercontent.com/De-Pattern/Ravel_FM1/main/docs/manual/home-tracks.png
-  alt: "Ravel HOME screen showing track 1 (synth, VA engine) with level, pan, kind and engine knobs above eight track columns labelled SYN, STK and TAP with level meters"
+  alt: "Ravel HOME screen showing track 1 (synth, VA engine) with level, pan, kind and engine knobs above eight track columns labelled SYN, STK and PRC with level meters"
   credit: De-Pattern
   source_url: https://github.com/De-Pattern/Ravel_FM1
   first_party: true
 versions:
+- version: 0.9.0
+  date: 2026-10-26
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.9.0
+  notes: Removes the capture tape and its tracks, adds an arpeggiator, an optional bus compressor on track 8 and a TEMPO page on SEQ, and runs more of the audio code from RAM.
 - version: 0.8.4
   date: 2026-10-23
   url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.8.4

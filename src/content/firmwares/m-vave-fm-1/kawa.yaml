@@ -8,7 +8,7 @@ description: >-
   every sound has an envelope, an effect, an LFO and a modulation page, with a drive on every track. Eight synthesized drum
   kits and six generated breaks that can be cut into 16 slices are included, along with four user sample slots filled
   through a browser importer. The FM track uses the msfa engine as ported in Felucca. The firmware is built on Dinghy,
-  Felucca and SLOOP, and a web emulator and a manual in three languages are published. The README says beta 0.5 has
+  Felucca and SLOOP, and a web emulator and a manual in three languages are published. The README says beta 0.6 has
   not been tried on a real FM-1 and passes the checks that need no hardware.
 status: active
 authors:
@@ -36,7 +36,7 @@ image:
   source_url: https://github.com/Guizmoh/Kawa-Tracker-Fm1
   first_party: true
 versions:
-- version: main @ 2bd9815
+- version: main @ a101686
   date: 2026-10-26
-  url: https://github.com/Guizmoh/Kawa-Tracker-Fm1/commit/2bd9815c7506e5677fa7a6a9a74fc21ec5527bc9
-  notes: No tagged releases; this is the latest commit. The repository holds the 0.5 beta package.
+  url: https://github.com/Guizmoh/Kawa-Tracker-Fm1/commit/a10168605cb86276f55d8164d1c89ded7e3852aa
+  notes: No tagged releases; this is the latest commit. The repository holds the 0.6 beta package.

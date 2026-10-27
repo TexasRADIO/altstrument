@@ -30,6 +30,10 @@ install_notes: >-
 brick_risk: true
 tags: [drums, synth-engine, sequencer, fx, midi, usb-midi, sampler, emulator]
 versions:
+- version: 0.1.7
+  date: 2026-10-27
+  url: https://github.com/konsumer/fomajam/releases/tag/v0.1.7
+  notes: Fixes a crash on the PHYS engine and the OCT- rescue at power-on; HOME now opens the scope page.
 - version: 0.1.6
   date: 2026-10-23
   url: https://github.com/konsumer/fomajam/releases/tag/v0.1.6

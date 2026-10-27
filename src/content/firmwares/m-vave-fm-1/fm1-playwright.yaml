@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: fm1-playwright
+kind: tool
+summary: >-
+  Python test harness that drives the fm1-emu emulator with Playwright, so FM-1 firmware screens can be tested by
+  turning encoders, pressing buttons and playing notes, and captured as screenshots, GIFs, video and audio.
+description: >-
+  Provides a FirmwareUITest base class for unittest-style tests that open a firmware in the browser build of
+  fm1-emu. Tests can rotate encoders, press and hold buttons, play notes and save screenshots of the whole device or
+  of the 240x240 screen. Recording helpers write GIFs and webm video, capture the emulator's Web Audio output and
+  convert or combine it into MP3 and MP4 with ffmpeg. It is meant to run in CI together with the same author's
+  setup-fm1-emulator action, and the repository's own workflow publishes demo captures of Felucca. Audio
+  capture needs ffmpeg and PulseAudio, and a headed browser in CI needs Xvfb. The emulator itself is Joakim
+  Eriksson's fm1-emu.
+status: active
+authors:
+- name: DimmKirr
+  url: https://github.com/DimmKirr
+source: https://github.com/DimmKirr/fm1-playwright
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  The README gives pip install fm1-playwright followed by playwright install chromium, but the package was not on PyPI
+  when checked, so install it from a checkout of the repository. Point FM1_WEB_DIR at an fm1-emu WebAssembly build,
+  for example the one setup-fm1-emulator installs, and set FIRMWARE_NAME. The repository includes a Nix flake that
+  provides ffmpeg, PulseAudio, Xvfb and Chromium.
+brick_risk: false
+tags: [emulator, python, utility]
+versions:
+- version: v0.2.0
+  date: 2026-10-26
+  url: https://github.com/DimmKirr/fm1-playwright/releases/tag/v0.2.0
+  notes: Adds audio capture and video recording with MP3, MP4 and GIF conversion, a Nix dev shell and a CI demo workflow.
+- version: v0.1.0
+  date: 2026-10-26
+  url: https://github.com/DimmKirr/fm1-playwright/releases/tag/v0.1.0
+  notes: First release, with the FirmwareUITest base class, FM-1 control mappings and an example test suite.

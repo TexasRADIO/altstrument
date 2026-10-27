@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: OPQuencer
+summary: >-
+  Felucca 1.5.1 fork that adds USB MIDI out for the sequencer, arpeggiator and ratchets with a channel per track, and
+  controlled chance on pitch and ratchets, aimed at driving Eurorack through a MIDI-CV converter.
+description: >-
+  Merges Felucca's engines and sequencer with ideas from SLOOP's MIDI out. MENU > MIDI > MIDI OUT chooses between live keys
+  and the sequencer, whose notes go out at their step velocity, with ratchets and the arpeggiator retriggering; the four track TX
+  channels are FOLLOW, a fixed channel or off. SEQ > CHANCE adds pitch variation probability and range and
+  ratchet probability with equal, push or drag feel, per track and lockable per step. Projects, presets, backups and the web editor
+  carry over from Felucca 1.5.1, though projects saved here show the new parameters as empty on older firmware. The package
+  keeps Felucca's identity. The README's roadmap names OP-style tape sections and more Eloquencer-style
+  features as future work.
+status: active
+authors:
+- name: Andrea Baldo (andrixb)
+  url: https://github.com/andrixb
+- name: Leo Kuroshita (@kurogedelic), Hügelton Instruments
+  url: https://github.com/kurogedelic
+source: https://github.com/andrixb/opquencer
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and LICENSING.md, as Felucca. The Hügelton sample pack is GPL-3.0-only, the PHASE engine ports
+  CrispyZebra (GPL-3.0) and the Fukiai icon font is MIT.
+homepage: https://github.com/andrixb/opquencer
+distribution: source-only
+requires_stock: M-VAVE V15
+install_notes: >-
+  No hosted installer yet: build it (BUILDING.md) and serve the web installer from localhost, or run
+  tools/fm1_install.py on build/felucca.fwsc. The installer's Return to official V15 or M-VAVE's updater go back to stock.
+  Installing is at your own risk.
+brick_risk: true
+tags: [sequencer, midi, usb-midi, synth-engine, fork]
+image:
+  url: https://raw.githubusercontent.com/andrixb/opquencer/main/docs/opquencer-0.2.0.png
+  alt: "Four OPQuencer 0.2.0 screens: boot splash, MENU MIDI page with OUT and TX rows, SEQ CHANCE page with CV and ratchet knobs over a step grid, and the ABOUT page"
+  credit: Andrea Baldo
+  source_url: https://github.com/andrixb/opquencer
+  first_party: true
+versions:
+- version: main @ b992291
+  date: 2026-10-12
+  url: https://github.com/andrixb/opquencer/commit/b992291caa6e7a30832da3502902580fa32fba25
+  notes: No tagged releases; this is the latest commit. The README calls it v0.2.0.

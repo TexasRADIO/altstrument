@@ -1,0 +1,46 @@
+device: m-vave-fm-1
+name: K-WASUB
+summary: >-
+  Bass synth firmware for the FM-1 built from KAWA's platform: wobble, reese, sub and 808 engines, two LFOs, an A/B and
+  X/Y morph, FX pads, a four-band EQ, and a drum and bass sequencer with parameter locks.
+description: >-
+  Aimed at drum and bass, dub, dubstep and techno. It has four bass engines, or eight when pads and leads are
+  enabled, seven filters, a four-band EQ and an LFO page, and holding LFO while turning a knob assigns the second
+  LFO to that setting. The SEL windows hold performance, morph, live effects and macro pages. A bass sequencer of
+  up to 64 steps and an eight-track drum sequencer, with kits in 808, 909, dub techno and acoustic styles, both
+  support trig conditions, probability and parameter locks, and knob moves can be recorded as automation. The
+  screen has several themes and fonts and a language setting for English, French or Spanish. The repository has a
+  browser emulator, an illustrated manual, a web installer and install scripts for Windows, macOS and Linux. It
+  is derived from KAWA and reuses its platform code.
+status: active
+authors:
+- name: Omnipotard (Guizmoh)
+  url: https://github.com/Guizmoh
+source: https://github.com/Guizmoh/K-WASUB_Firmware_for_FM1
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0-only, inherited from KAWA, with platform code by Leo Kuroshita (Hügelton Instruments)
+  and zvenson. msfa is Apache-2.0 and the fonts are SIL OFL 1.1; the sounds are synthesized, with no recordings.
+  JieLi SDK files are read from the user's own checkout at build time.
+homepage: https://guizmoh.github.io/K-WASUB_Firmware_for_FM1/
+distribution: browser-installer
+requires_stock: V15
+install_notes: >-
+  Browser installer in Chrome or Edge over USB, or the install script for Windows, macOS or Linux; the package and
+  its checksums are in the repository's install folder. Use a data cable and close other MIDI software. The README
+  names going back to KAWA 0.5 or to M-VAVE's firmware with M-UPGRADE, and holding OCT- at power-on opens the USB
+  rescue.
+brick_risk: true
+tags: [synth-engine, sequencer, drums, fx, fork, emulator]
+image:
+  url: https://raw.githubusercontent.com/Guizmoh/K-WASUB_Firmware_for_FM1/main/docs/img/promo.png
+  alt: "K-WASUB promo graphic: a feature list beside six FM-1 screens showing a wobble page, an X/Y morph pad, an oscillator page, a four-band EQ, a drum sequencer and a patch page"
+  credit: Omnipotard (Guizmoh)
+  source_url: https://github.com/Guizmoh/K-WASUB_Firmware_for_FM1
+  first_party: true
+versions:
+- version: main @ cd246c3
+  date: 2026-10-27
+  url: https://github.com/Guizmoh/K-WASUB_Firmware_for_FM1/commit/cd246c33cf27a131ab9ac6c49a5ea51c8120b9b3
+  notes: No tagged releases; this is the latest commit, which carries package 1.0.13.

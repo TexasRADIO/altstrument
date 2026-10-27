@@ -1,0 +1,38 @@
+device: m-vave-fm-1
+name: EDDA OS
+summary: >-
+  Felucca 1.1.5.1 fork for one artist's live set: thirteen preloaded songs, 16-WAV user drum kits, a fourth
+  sample slot, chord and filter additions, sequencer MIDI out with clock and twelve full-screen visualisers.
+description: >-
+  Built for the author's live performance of an album, with the album's songs loadable and cued from the keys, a
+  Camelot-wheel key lock, a bank of rhythm patterns and a hard stop that re-enters on the one. Other additions
+  are user drum kits of 16 WAV pads built from the web editor, a fourth user sample slot, CHORD+ with voice
+  leading and strum, a one-knob filter per track, micro timing per step, dotted delay times, a sequencer output
+  on USB MIDI with clock, and twelve visualisers over the HOME screen. The author's guide says the build passes
+  the project's host tests and compiles with JieLi's toolchain on GitHub, and that it had not yet been flashed
+  onto an FM-1. Install instructions are written for a Windows laptop with GitHub Actions doing the build. Felucca
+  settings, projects and user samples are kept when moving between the two.
+status: active
+authors:
+- name: mrsheez
+  url: https://github.com/mrsheez
+source: https://github.com/mrsheez/felucca
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Inherited from Felucca. The bundled drum recordings are cuts from Versilian Studios' VCSL (CC0 1.0), and the
+  kick, udu, bottle and log drum are synthesised by the repository's script (assets/samples-edda/ATTRIBUTION.txt).
+homepage: https://github.com/mrsheez/felucca/blob/main/EDDA-OS.md
+distribution: source-only
+install_notes: >-
+  EDDA-OS.md has two routes: let GitHub Actions build the package and publish an installer page from your own
+  fork, or build with WSL2 on Windows and serve the installer locally, then install in Chrome or Edge over USB or
+  with tools/fm1_install.py. The CI also writes its latest package to the ci-out branch. The installer's Return to
+  official V15 and Felucca's own installer go back; the guide says installing is at your own risk.
+brick_risk: true
+tags: [performance, sequencer, sampler, midi, fork, editor, ui]
+versions:
+- version: main @ 13dd665
+  date: 2026-10-08
+  url: https://github.com/mrsheez/felucca/commit/13dd66517d2f8973c2f3fcefdeb7ac7b0d948e4f
+  notes: No tagged releases; this is the latest commit, labelled 1.1.5-EDDA in the guide.

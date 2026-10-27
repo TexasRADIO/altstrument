@@ -1,0 +1,37 @@
+device: m-vave-fm-1
+name: GuitChordi
+summary: >-
+  Six-string guitar-style chord instrument: 16 synthesized instruments, 50 chord styles, 14 tunings, and
+  freeplay, strum and arpeggio modes on the white keys, with a browser panel simulator.
+description: >-
+  The black keys pick chords from an eleven-chord guide and the sixteen white keys act as strings across three
+  zones; muted strings stay silent. Instruments include guitars, harp, violin, pizzicato cello, bass and
+  dulcimer on a 14-voice limit, built on a physical string model taken unchanged from Clipper (MIT), and chord
+  voicings are editable. The hardware layer is X0X and Felucca's platform code. The simulator runs the shared C
+  application as WebAssembly with an FM-1-style panel and a note-reactive visuals option. The author tested the
+  tagged beta on one FM-1, installing from V15 and from Felucca 1.6.1 and switching back; USB MIDI, USB audio and
+  on-device saving are not implemented, and interrupted-update resume was not tested.
+status: active
+authors:
+- name: stoogs
+  url: https://github.com/stoogs
+source: https://github.com/stoogs/guitchordi
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Combined project is GPL-3.0-only (LICENSE, NOTICES.md). The string DSP file is MIT, the display font is
+  SIL OFL 1.1 and the JieLi SDK inputs are Apache-2.0.
+homepage: https://stoogs.github.io/guitchordi/
+distribution: download
+requires_stock: V15 or Felucca 1.6.1
+install_notes: >-
+  Download guitchordi-v0.1.0-beta.1.fwsc from the release (SHA-256 and size are in the release notes) and install
+  it with a Web MIDI updater in Chrome. Device saves are RAM-only, so edits are lost at power-off, and it does
+  not import another firmware's data; back up first and keep a recovery image.
+brick_risk: true
+tags: [chords, synth-engine, performance, physical-modeling, emulator, fork]
+versions:
+- version: 0.1.0-beta.1
+  date: 2026-10-26
+  url: https://github.com/stoogs/guitchordi/releases/tag/v0.1.0-beta.1
+  notes: Beta pre-release tested on one FM-1; the .fwsc is a renamed copy of the tested build.
