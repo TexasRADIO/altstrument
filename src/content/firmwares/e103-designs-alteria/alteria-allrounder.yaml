@@ -28,7 +28,7 @@ install_notes: >-
 brick_risk: false
 tags: [official, generative, sequencer, drums, envelope, arduino, eurorack]
 image:
-  url: https://raw.githubusercontent.com/E103-designs/ALTERIA/main/images/front.jpg
+  url: https://raw.githubusercontent.com/E103-designs/ALTERIA/main/images/ALTERIA_front_IMG_3251_clean.png
   alt: Front panel of the ALTERIA module with four LEDs, two buttons, three white knobs and four jacks
   credit: E103-designs
   source_url: https://github.com/E103-designs/ALTERIA#readme

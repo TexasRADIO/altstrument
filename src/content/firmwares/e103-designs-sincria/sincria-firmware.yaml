@@ -30,7 +30,7 @@ install_notes: >-
 brick_risk: false
 tags: [official, sequencer, generative, arduino, eurorack]
 image:
-  url: https://raw.githubusercontent.com/E103-designs/SINCRIA/main/images/front.jpg
+  url: https://raw.githubusercontent.com/E103-designs/SINCRIA/main/images/SINCRIA_front_IMG_3236_clean.png
   alt: Front panel of the SINCRIA module with an 8x8 LED matrix, output jacks, a tempo knob and control buttons
   credit: E103-designs
   source_url: https://github.com/E103-designs/SINCRIA#readme
