@@ -58,6 +58,7 @@ A news item that mentions a catalog entry is usually a new version of that entry
 Every row of the release sweep is also an update candidate. Work through each one before researching new entries:
 - Confirm the release belongs to this entry. Monorepos publish releases for several components. The sweep marks a tag prefix that no existing version uses as `other component?`, for example `smk-` builds in an FM-1 repo, or `desktop-` and `plugin-` builds. Add only the ones for this entry's build.
 - Skip data, model, CI and test releases, and pre-releases or dated snapshots the entry deliberately leaves out. Follow what the existing `versions[]` already include.
+- When the release notes or README link a new first-party video for the release, put it in `video` with `version` set and move the old `video` to the top of `videos` (see `m-vave-fm-1/mutable-dreams.yaml`). Drop the old one instead if it no longer matches the firmware, or if it was a third-party video.
 - Add each confirmed release at the top of `versions[]`, newest first, in the entry's existing style. Use the release date and URL, and a short `notes:` line in your own words when the release notes say something concrete.
 - For a moved branch, replace the `<branch> @ <sha>` version's sha, URL and date. Once real releases exist, replace the commit version with them.
 - Fix prose the release makes untrue: a new device build, a feature the summary denies, or a `distribution` that is no longer `source-only`.
@@ -73,7 +74,7 @@ Collect evidence before writing. Keep the URLs; they go into the file and the re
 - License: open the `LICENSE` file or the license statement and map it to the exact SPDX id in the `LICENSES` list in `src/content/schema.ts`. Follow CONTRIBUTING "Choosing a license" to the letter, including `proprietary` and `unspecified`, and quote vague statements in `license_notes`.
 - Versions: GitHub releases with their dates and release URLs. Tags without a release page: the tag as `version`, `https://github.com/<owner>/<repo>/tree/<tag>` as `url`, the tagged commit's date as `date`, and `notes: Git tag; no GitHub release page.` (see `m-vave-fm-1/modular-1.yaml`). No tags at all: the latest commit as `main @ <sha7>` (or `master @ ...`, matching the default branch) with `notes: No tagged releases; this is the latest commit.` and the commit URL. A release page, changelog or commit confirms a date; nothing else does. Omit `date` otherwise.
 - Authors with profile links. When the same person already appears elsewhere in `src/content`, reuse that name form. Status per CONTRIBUTING's table, judged from commit and release dates.
-- Demo video: only a YouTube link that the project's own README or homepage links to, with `first_party: true` and `found_via`. A channel link is not a video. Otherwise no video. An `image` only when there is no video: prefer one the README or homepage itself displays, use the direct https file URL, and open it so the alt text describes what is actually shown.
+- Demo video: only a YouTube link that the project's own README, homepage or release notes link to, with `first_party: true` and `found_via`. A channel link is not a video. Otherwise no video. When the video belongs to one release, set `version` to that release's `versions[].version`. If the project links one video per release, the newest goes in `video` and the earlier ones in `videos`, newest first. An `image` only when there is no video: prefer one the README or homepage itself displays, use the direct https file URL, and open it so the alt text describes what is actually shown.
 - Device: does `src/content/devices/<manufacturer>-<device>.yaml` exist? Look at `related` devices too; some firmware targets a family. Check `src/content/manufacturers/` for the manufacturer's exact display name and reuse it.
 - Install and risk: `distribution`, `requires_stock`, `install_notes` and `brick_risk` from the project's own install docs. A fork or derivative of a firmware already on the same device inherits that entry's `brick_risk` unless the project documents otherwise.
 - Long READMEs get truncated in tool output. Save them to a file and read in pieces rather than skimming the first screen.
@@ -101,7 +102,7 @@ Dedupe once more by hand: grep `src/content` for the repository owner, the proje
 ALTSTRUMENT_SKIP_REMOTE=1 pnpm validate
 ```
 
-Once every file is written, run it once more without `ALTSTRUMENT_SKIP_REMOTE` if you added a `video` or `image`, so the remote media checks run.
+Once every file is written, run it once more without `ALTSTRUMENT_SKIP_REMOTE` if you added a `video`, `videos` entry or `image`, so the remote media checks run.
 
 ## 5. Record rejections
 

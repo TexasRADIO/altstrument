@@ -223,9 +223,10 @@ export const versionSchema = z.object({
 });
 
 /**
- * A demo video for a firmware. YouTube only; the page embeds it with a
- * click-to-load youtube-nocookie player. validate.ts checks each one against
- * YouTube's oEmbed endpoint, so removed or non-embeddable videos fail the build.
+ * A demo video for a firmware. YouTube only; the page embeds `video` with a
+ * click-to-load youtube-nocookie player and lists any `videos` under it.
+ * validate.ts checks each one against YouTube's oEmbed endpoint, so removed or
+ * non-embeddable videos fail the build.
  */
 export const videoSchema = z.object({
   /** Watch, youtu.be, shorts or live URL. A t= offset is honoured. */
@@ -238,6 +239,8 @@ export const videoSchema = z.object({
   first_party: z.boolean().default(false),
   /** The page that linked the video, when first_party. */
   found_via: url.optional(),
+  /** The release the video shows, matching a `versions[].version` string. */
+  version: z.string().min(1).optional(),
 });
 
 /**
@@ -284,7 +287,13 @@ export const firmwareBaseSchema = z.object({
   brick_risk: z.boolean().default(false),
   tags: z.array(z.string().regex(/^[a-z0-9-]+$/)).default([]),
   versions: z.array(versionSchema).default([]),
+  /** The main video, embedded on the page and used as the card thumbnail. */
   video: videoSchema.optional(),
+  /**
+   * More videos, e.g. the walkthrough for each earlier release. Newest first.
+   * Listed under `video`, which must be set and should be the newest.
+   */
+  videos: z.array(videoSchema).default([]),
   /** Fallback visual when there is no video. */
   image: firmwareImageSchema.optional(),
   /**
@@ -321,12 +330,34 @@ export function refineFirmware<T extends z.ZodType<FirmwareData>>(schema: T) {
         message: 'every entry needs at least one of source or homepage',
       });
     }
-    if (fw.video && !youtubeId(fw.video.url)) {
+    if (fw.videos.length && !fw.video) {
       ctx.addIssue({
         code: 'custom',
-        path: ['video', 'url'],
-        message: 'video url must be a YouTube watch, youtu.be, shorts or live link',
+        path: ['videos'],
+        message: 'videos needs a video: move the newest one to `video`',
       });
+    }
+    const videoIds = new Map<string, string>();
+    const allVideos = [
+      ...(fw.video ? [{ path: ['video'] as (string | number)[], v: fw.video }] : []),
+      ...fw.videos.map((v, i) => ({ path: ['videos', i], v })),
+    ];
+    for (const { path, v } of allVideos) {
+      const id = youtubeId(v.url);
+      if (!id) {
+        ctx.addIssue({
+          code: 'custom',
+          path: [...path, 'url'],
+          message: 'video url must be a YouTube watch, youtu.be, shorts or live link',
+        });
+        continue;
+      }
+      const first = videoIds.get(id);
+      if (first) {
+        ctx.addIssue({ code: 'custom', path: [...path, 'url'], message: `same YouTube video as ${first}` });
+      } else {
+        videoIds.set(id, path.join('.'));
+      }
     }
     if (fw.image && !fw.image.url.startsWith('https://')) {
       ctx.addIssue({ code: 'custom', path: ['image', 'url'], message: 'image url must be https' });

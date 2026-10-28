@@ -170,12 +170,26 @@ tags: [oscillator, midi-clock]
 # README or homepage: set first_party: true and found_via to the page that
 # links it. Otherwise use a third-party demo of this firmware, with
 # first_party: false. Take title and credit (the channel) from YouTube oEmbed.
+# This is the main video: the page embeds it and cards use its thumbnail.
 video:
   url: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-  title: ExampleFW demo
+  title: ExampleFW 1.3 walkthrough
   credit: Example Channel
   first_party: true
-  found_via: https://github.com/janedoe/examplefw#readme
+  found_via: https://github.com/janedoe/examplefw/releases/tag/v1.3.0
+  # OPTIONAL. The release the video shows, exactly as in versions[].
+  version: 1.3.0
+
+# OPTIONAL. Defaults to []. More videos, same fields as `video`, listed under
+# it on the page. Newest first; needs `video`, which holds the newest. Use it
+# for one first-party walkthrough per release, not for every demo you find.
+videos:
+  - url: https://www.youtube.com/watch?v=jNQXAC9IVRw
+    title: ExampleFW 1.2 walkthrough
+    credit: Example Channel
+    first_party: true
+    found_via: https://github.com/janedoe/examplefw#readme
+    version: 1.2.0
 
 # OPTIONAL. Use only when there is no video. A hotlinked screenshot or photo:
 # a direct https image URL (raw.githubusercontent.com or the project's own
@@ -202,7 +216,9 @@ versions:
     url: https://github.com/janedoe/examplefw/releases/tag/v1.2.0
 ```
 
-`pnpm validate` checks every `video` against YouTube's oEmbed endpoint and every `image` URL for an image content type. A removed or missing target (404) is an error; network trouble is only a warning. Set `ALTSTRUMENT_SKIP_REMOTE=1` to skip these checks. Workshop Computer cards are fetched at build time (see above) and take their video from the upstream `info.yaml` `demo-link`, so there is no `video` to write for them.
+When a release brings its own first-party video, put it in `video` and move the previous one to the top of `videos`. See `m-vave-fm-1/mutable-dreams.yaml`. The same YouTube video may appear only once per entry, whatever the URL form. `pnpm validate` warns when a video's `version` is missing from `versions[]` or when `video` and `videos` are not in the same newest-first order as `versions[]`.
+
+`pnpm validate` checks every `video` and `videos` entry against YouTube's oEmbed endpoint and every `image` URL for an image content type. A removed or missing target (404) is an error; network trouble is only a warning. Set `ALTSTRUMENT_SKIP_REMOTE=1` to skip these checks. Workshop Computer cards are fetched at build time (see above) and take their video from the upstream `info.yaml` `demo-link`, so there is no `video` to write for them.
 
 ## One project, several devices
 

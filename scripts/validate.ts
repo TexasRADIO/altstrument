@@ -15,7 +15,9 @@
  *     duplicate that should be one entry with `also_devices` (warning)
  *   - every device should have at least one firmware or an explanatory `notes`
  *   - file names must be kebab-case slugs
- *   - every hotlinked `video` / `image` still resolves (network; see below)
+ *   - a video's `version` is in `versions`, and `video` + `videos` follow
+ *     the versions order, newest first (warnings)
+ *   - every hotlinked `video` / `videos` / `image` still resolves (network; see below)
  *
  * Exit code 1 on any error. Warnings are printed but do not fail the run.
  */
@@ -230,7 +232,24 @@ for (const dir of deviceDirs) {
         hiddenTotal++;
       }
     }
-    if (fw.video) remoteChecks.push({ file, kind: 'video', url: fw.video.url });
+    // `video` first, then `videos`, newest first: a video's `version` must be
+    // listed in versions[] and the order must follow versions[].
+    const videos = fw.video ? [fw.video, ...fw.videos] : fw.videos;
+    let lastIdx = -1;
+    let lastVersion = '';
+    for (const v of videos) {
+      remoteChecks.push({ file, kind: 'video', url: v.url });
+      if (!v.version) continue;
+      const idx = fw.versions.findIndex((x) => x.version === v.version);
+      if (idx === -1) {
+        warn(file, `video ${v.url} names version "${v.version}", which is not in versions`);
+      } else if (idx < lastIdx) {
+        warn(file, `video for ${v.version} is listed after the one for ${lastVersion}; put the newest release's video first`);
+      } else {
+        lastIdx = idx;
+        lastVersion = v.version;
+      }
+    }
     if (fw.image) remoteChecks.push({ file, kind: 'image', url: fw.image.url });
     firmwareTotal++;
     firmwareCountByDevice.set(fw.device, (firmwareCountByDevice.get(fw.device) ?? 0) + 1);
@@ -340,11 +359,15 @@ if (process.env.ALTSTRUMENT_SKIP_REMOTE) {
 } else if (remoteChecks.length) {
   let next = 0;
   let broken = 0;
+  // One request per URL, however many entries or `videos` lists share it.
+  const pending = new Map<string, Promise<[boolean, string] | undefined>>();
   await Promise.all(
     Array.from({ length: Math.min(REMOTE_CONCURRENCY, remoteChecks.length) }, async () => {
       while (next < remoteChecks.length) {
         const c = remoteChecks[next++];
-        const problem = await checkRemote(c.kind, c.url);
+        const key = `${c.kind} ${c.url}`;
+        if (!pending.has(key)) pending.set(key, checkRemote(c.kind, c.url));
+        const problem = await pending.get(key);
         if (!problem) continue;
         broken++;
         (problem[0] ? fail : warn)(c.file, problem[1]);

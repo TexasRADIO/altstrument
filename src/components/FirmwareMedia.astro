@@ -2,15 +2,21 @@
 import type { FirmwareImage, FirmwareVideo } from '@/content/schema';
 import { hostOf } from '@/lib/catalog';
 import { youtubeEmbedUrl, youtubeId, youtubeStart, youtubeThumb, youtubeWatchUrl } from '@/lib/media';
-interface Props { video?: FirmwareVideo; image?: FirmwareImage; name: string }
-const { video, image, name } = Astro.props;
+interface Props { video?: FirmwareVideo; videos?: FirmwareVideo[]; image?: FirmwareImage; name: string }
+const { video, videos = [], image, name } = Astro.props;
 // A video wins; the image is only the fallback when there is none.
 const id = video ? youtubeId(video.url) : undefined;
 const start = video ? youtubeStart(video.url) : undefined;
 const watchUrl = id ? youtubeWatchUrl(id, start) : undefined;
 const label = video?.title ?? name;
+// The other videos, newest first as written, link out to YouTube under the main one.
+const more = videos.flatMap((v) => {
+  const vid = youtubeId(v.url);
+  return vid ? [{ ...v, id: vid, watchUrl: youtubeWatchUrl(vid, youtubeStart(v.url)) }] : [];
+});
 ---
 {id && video && watchUrl ? (
+  <>
   <figure class="max-w-[30rem]">
     <div class="relative aspect-video overflow-hidden rounded border border-line bg-surface-2">
       <a href={watchUrl} rel="noopener" data-embed={youtubeEmbedUrl(id, start)} data-title={label} class="yt-facade group absolute inset-0 block">
@@ -24,6 +30,7 @@ const label = video?.title ?? name;
       </a>
     </div>
     <figcaption class="mt-1.5 text-xs text-muted">
+      {video.version && <><span class="mono">{video.version}</span> · </>}
       {video.title && <>{video.title} · </>}
       {video.credit && <>{video.credit} · </>}
       via <a href={watchUrl} rel="noopener">youtube.com</a>
@@ -34,6 +41,32 @@ const label = video?.title ?? name;
       )}
     </figcaption>
   </figure>
+  {more.length > 0 && (
+    <section class="mt-4 max-w-[30rem]" aria-labelledby="more-videos-h">
+      <h2 id="more-videos-h" class="mb-1.5 text-sm text-muted">More videos</h2>
+      <ul class="space-y-2">
+        {more.map((v) => (
+          <li class="flex items-start gap-3">
+            <a href={v.watchUrl} rel="noopener" tabindex="-1" aria-hidden="true" class="block w-28 shrink-0 overflow-hidden rounded border border-line bg-surface-2">
+              <img src={youtubeThumb(v.id)} alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="block aspect-video w-full object-cover" />
+            </a>
+            <div class="min-w-0 text-xs text-muted">
+              <a href={v.watchUrl} rel="noopener" class="text-sm">{v.title ?? `${name} video`}</a>
+              <p class="mt-0.5">
+                {v.version && <><span class="mono">{v.version}</span> · </>}
+                {v.credit && <>{v.credit} · </>}
+                youtube.com
+                {v.first_party && (v.found_via
+                  ? <> · linked from <a href={v.found_via} rel="noopener">{hostOf(v.found_via)}</a></>
+                  : <> · from the authors</>)}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+  </>
 ) : image ? (
   <figure class="max-w-[30rem]">
     <div class="overflow-hidden rounded border border-line bg-surface-2">

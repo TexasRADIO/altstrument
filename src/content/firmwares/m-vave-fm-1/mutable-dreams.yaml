@@ -49,6 +49,14 @@ video:
   credit: Kid Bunka
   first_party: true
   found_via: https://github.com/kidbee85-beep/mutable-dreams/releases/tag/v1.2
+  version: v1.2
+videos:
+- url: https://www.youtube.com/watch?v=RCgs8t8fXvM
+  title: "Mutable Dreams 1.1 — Warmer Voices, Your Own Biomes | FM-1 Update"
+  credit: Kid Bunka
+  first_party: true
+  found_via: https://github.com/kidbee85-beep/mutable-dreams#readme
+  version: v1.1
 versions:
 - version: v1.2
   date: 2026-10-27
