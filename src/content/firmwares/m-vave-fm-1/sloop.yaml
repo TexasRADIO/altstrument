@@ -33,6 +33,10 @@ video:
   credit: "Darren Lock Music"
   first_party: false
 versions:
+- version: 2.8.3
+  date: 2026-10-27
+  url: https://github.com/isod89/sloop-fm1/releases/tag/v2.8.3
+  notes: A held POLY note no longer stutters when other notes are recorded over it, a busy drum track stops cutting kicks, sample chops restart from silence, and the second core refuses a corrupted job instead of crashing.
 - version: 2.8.1
   date: 2026-10-23
   url: https://github.com/isod89/sloop-fm1/releases/tag/v2.8.1

@@ -36,7 +36,7 @@ image:
   source_url: https://github.com/delirioux/tuna
   first_party: true
 versions:
-- version: main @ f06047d
-  date: 2026-10-26
-  url: https://github.com/delirioux/tuna/commit/f06047dc7e4a4c061818b9a29f5412359a2fb607
-  notes: No tagged releases; this is the latest commit, a development-notes change that follows the commit titled Tuna 1.0.
+- version: main @ 73bd65f
+  date: 2026-10-27
+  url: https://github.com/delirioux/tuna/commit/73bd65f85cf6d417d3b2a2afd52a16083aec0acb
+  notes: No tagged releases; this is the latest commit, a fix to the sample clock wrap that follows the commit titled Tuna 1.0.

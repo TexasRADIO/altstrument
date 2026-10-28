@@ -817,3 +817,15 @@ ignore:
   - url: https://github.com/genkigenki/frodhes
     reason: fork of catalogued Frodhes; upstream now ships the SMK-37 builds
     date: 2026-10-27
+  - url: https://github.com/federico-pepe/pta-module-knobs
+    reason: example module for push-tethered-app (knob test bench), not a tool
+    date: 2026-10-28
+  - url: https://github.com/TheRealQuantam/lozft
+    reason: Zelda (NES) romhack that swaps the game's soundtrack; patches a commercial ROM, not music software for the NES
+    date: 2026-10-28
+  - url: https://github.com/roomi-fields/open-synth-descriptors
+    reason: CC0 data schemas describing devices and firmwares, not firmware or a device tool
+    date: 2026-10-28
+  - url: https://github.com/dafadey/EG_Dynamic_alt_firmware
+    reason: automotive LPG module firmware, not music hardware
+    date: 2026-10-28

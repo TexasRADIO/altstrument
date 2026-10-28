@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: Nauclerus
+summary: >-
+  Hortator fork that expands the eight-track drum machine with ORB Remix pattern remapping (256 mappings), the TB-3PO acid melody generator with 22 scales, variable-width and morphing 303 waveforms, unipolar LFO routing and Grids-to-steps writing.
+description: >-
+  Keeps Hortator's eight drum tracks, 64-step sequencer, parameter locks, Motion recording, Grids, compressor, resonators and
+  effects, and builds on its ACID bass voice. ORB Remix selects among 256 mappings that reorder playback without changing
+  stored steps, with one shared drum selection and separate selections for each ACID track. TB-3PO is the melody core from
+  the author's X0X-RMX, seeded and mutating. ACID gains a variable pulse width and a MORPH waveform, LFOs can be routed
+  as bipolar, positive-only or negative-only, and Grids rhythms can be written into editable steps. It also adds twelve colour
+  schemes and its own USB identity, Nauclerus, separate from Hortator's. The README says the owner confirmed an install of
+  0.25.0 over a release candidate on a real FM-1 but has not tested a physical rollback, and that the remaining acid
+  resonance character is a known limitation. The project site has a simulator running the release firmware, a manual and
+  an installer that checks the package's SHA-256 first.
+status: active
+authors:
+- name: Mr-Roboto
+  url: https://github.com/Mr-Roboto
+source: https://github.com/Mr-Roboto/nauclerus
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and LICENSING.md, inherited from Hortator and Felucca. TB-3PO derives from the Phazerville
+  Hemisphere TB_3PO applet (GPL-3.0) by way of X0X-RMX. The ORB mapping table rests on the author's own declaration of
+  independent authorship and permission to redistribute it. The legacy panel photograph is left out of the release because its
+  permission is unverified. Fonts, CC0 samples and ported DSP code keep their own licences.
+homepage: https://mr-roboto.github.io/nauclerus/
+distribution: browser-installer
+install_notes: >-
+  Web installer on the project site in Chrome or Edge, or the .fwsc and SHA256SUMS from the release; the README says to use
+  only the checksum-verified package. Recovery is through the installer tools or M-VAVE's M-UPGRADE with official
+  firmware (docs/RECOVERY.md). Hortator's own installers install Hortator, not this build.
+brick_risk: true
+tags: [drums, sequencer, synth-engine, generative, fx, performance, emulator]
+image:
+  url: https://raw.githubusercontent.com/Mr-Roboto/nauclerus/main/docs/img/nauclerus-display-240.png
+  alt: "Nauclerus screen in orange on black: the T3 ACID REMIX page with BANK C, PATTERN 7, REMIX ON and SET GO above a bar graph of step values"
+  credit: Mr-Roboto
+  source_url: https://github.com/Mr-Roboto/nauclerus
+  first_party: true
+versions:
+- version: 0.25.0
+  date: 2026-10-28
+  url: https://github.com/Mr-Roboto/nauclerus/releases/tag/v0.25.0
+  notes: First release under the Nauclerus name, with its own FM-1_25000 identity. Adds ORB Remix, TB-3PO, the PWM and MORPH waveforms and unipolar LFO routing.

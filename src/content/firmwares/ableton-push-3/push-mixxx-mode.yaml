@@ -1,0 +1,45 @@
+device: ableton-push-3
+name: Mixxx Mode
+summary: >-
+  Push Hack module that stops Live on Push 3 Standalone and runs the Mixxx DJ software on the unit's own audio
+  outputs, with two decks mapped to the pads, buttons and encoders and a Mixxx skin on Push's screen.
+description: >-
+  Switching to Mixxx mode stops Push's own software, starts a patched Mixxx 2.5.6 on the Push's audio outputs and
+  sends a 960 by 160 skin to the screen through Push Manager. Each side of the Push controls one deck, with hot
+  cues, loops, jumps, sync, key lock and a volume fader on the pads, EQ, effect, grid and gain pages on the encoders,
+  a crossfader on the touch strip and headphone cue buttons. A 4-deck layout and a library browser with on-pad
+  search are included. Rekordbox USB drives can be browsed and playlists with their hot cues and beat grids imported, which
+  needs the patches the project applies to Mixxx. Holding Settings returns to Push mode. The release is a tarball of
+  about 180 MB that bundles Mixxx and its libraries, and a matching source archive is attached to every release.
+status: active
+authors:
+  - name: itsrave
+    url: https://github.com/itsrave
+source: https://github.com/itsrave/push-mixxx-mode
+source_status: open
+license: GPL-2.0-or-later
+license_notes: >-
+  The LICENSE file grants GPL version 2 or any later version for the module code. The release bundles Mixxx 2.5.6,
+  also GPL-2.0-or-later and patched by this project, plus the Ubuntu 22.04 libraries it needs, with the Mixxx source
+  attached to each release. GitHub's detector reports NOASSERTION; the file has a short custom header above the
+  GPL text.
+homepage: https://github.com/federico-pepe/ableton-push-hack#readme
+distribution: download
+requires_stock: Push Hack with push-manager version that supports direct display mode
+install_notes: >-
+  Install Mixxx Mode from Push Catalog on the unit. Switch from push-manager's web page, or from the MIXXX tab of
+  the Shadow UI opened with Shift and Set, and hold Settings for 1.5 seconds to return to Push mode. Removing it from
+  the catalog deletes its whole folder, including the Mixxx library, playlists, cue points and audio settings, so copy
+  the settings folder first to keep them. Without a suitable push-manager the screen stays dark in Mixxx mode. The
+  Push Hack warnings about backups, recovery and Push software updates apply.
+brick_risk: false
+tags: [dj, performance, platform, ui, controller-mode]
+versions:
+  - version: v0.1.1
+    date: 2026-10-19
+    url: https://github.com/itsrave/push-mixxx-mode/releases/tag/v0.1.1
+    notes: Logs when push-manager is missing or too old, and no longer asks for a fixed port.
+  - version: v0.1.0
+    date: 2026-10-15
+    url: https://github.com/itsrave/push-mixxx-mode/releases/tag/v0.1.0
+    notes: First release.

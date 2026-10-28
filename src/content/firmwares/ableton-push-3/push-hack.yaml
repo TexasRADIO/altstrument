@@ -8,8 +8,9 @@ description: >-
   that also handles file access, a MIDI monitor and an app switcher; Push Display, a preload hook in Push's own
   process that lets other programs draw on the screen and take over pad and button MIDI; and Push Catalog, an
   on-device installer for community modules. Because it cannot reach inside Live, it creates virtual MIDI and audio
-  ports for apps to talk to Live, and uses Live remote scripts to load presets. Apps can take over the whole screen,
-  pads and buttons, and are opened from Push Hack Home with Shift + Help. The author calls it a prototype that is not
+  ports for apps to talk to Live, and uses the PushHack Remote Script inside Live to load presets and control tracks,
+  clips and devices. Apps can take over the whole screen, pads and buttons, and are opened from Push Hack Home with
+  Shift + Help. The author calls it a prototype that is not
   meant for production use, says it was inspired by Move Anything and Schwung, and discloses that most of the code
   was written with coding agents under human supervision.
 status: active
@@ -38,6 +39,26 @@ video:
   first_party: true
   found_via: https://github.com/federico-pepe/ableton-push-hack#readme
 versions:
+  - version: v0.1.20-alpha
+    date: 2026-10-28
+    url: https://github.com/federico-pepe/ableton-push-hack/releases/tag/v0.1.20-alpha
+    notes: Remote Script 0.5.0 can read and set track routing; the Shadow UI Stats tab becomes System.
+  - version: v0.1.19-alpha
+    date: 2026-10-28
+    url: https://github.com/federico-pepe/ableton-push-hack/releases/tag/v0.1.19-alpha
+    notes: Remote Script 0.4.0 drops the old text protocol and arrangement socket; restart Live after updating.
+  - version: v0.1.18-alpha
+    date: 2026-10-28
+    url: https://github.com/federico-pepe/ableton-push-hack/releases/tag/v0.1.18-alpha
+    notes: Remote Script 0.3.0 adds track, session, device and clip control from hacks; restart Live after updating.
+  - version: v0.1.17-alpha
+    date: 2026-10-27
+    url: https://github.com/federico-pepe/ableton-push-hack/releases/tag/v0.1.17-alpha
+    notes: First release that carries the PushHack Remote Script; users on 0.1.15-alpha need one run of install.sh.
+  - version: v0.1.16-alpha
+    date: 2026-10-27
+    url: https://github.com/federico-pepe/ableton-push-hack/releases/tag/v0.1.16-alpha
+    notes: Update learns to install the Remote Script but does not include it.
   - version: v0.1.15-alpha
     date: 2026-10-20
     url: https://github.com/federico-pepe/ableton-push-hack/releases/tag/v0.1.15-alpha

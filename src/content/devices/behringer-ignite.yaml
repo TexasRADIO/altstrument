@@ -1,0 +1,36 @@
+name: IGNITE
+manufacturer: Behringer
+category: groovebox
+tagline: 64-channel multitrack sequencer with a touchscreen and 16 step encoders
+description: >-
+  The IGNITE (BE 0716-AAF) is a standalone multitrack sequencer from Behringer
+  with a touchscreen, 16 RGB step pads that each have an encoder, eight
+  assignable knobs and a jog wheel. According to the manufacturer's repository
+  it organises music as songs, scenes, tracks and patterns, runs 64 channels and
+  has an internal General MIDI sound engine. It has five MIDI DIN in and out
+  pairs, USB MIDI, USB host, eight CV and eight gate outputs, sync in and out,
+  and Wi-Fi.
+platform: Linux (Buildroot image), JUCE application
+links:
+  community:
+    - label: Music Tribe Open Source organisation
+      url: https://github.com/MusicTribeOpenSource
+    - label: IGNITE source repository
+      url: https://github.com/MusicTribeOpenSource/0716-AAF
+notes: >-
+  This entry rests on Music Tribe's own source repository, which was merged on
+  2026-10-28. No product page on behringer.com was found when it was written
+  (the address for model 0716-AAF returns 404), so whether the unit is on sale
+  is not confirmed. The repository says no official firmware release is
+  published there yet.
+image:
+  src: /images/devices/behringer-ignite.webp
+  style: photo
+  alt: Top view of the Behringer IGNITE, a black unit with a touchscreen at upper left, eight knobs at upper right, transport buttons, and 16 encoders above 16 backlit step pads
+  width: 1200
+  height: 718
+  credit: Music Tribe
+  license: project photo, published in the official Behringer IGNITE repository
+  source_url: https://github.com/MusicTribeOpenSource/0716-AAF
+  original_url: https://raw.githubusercontent.com/MusicTribeOpenSource/0716-AAF/main/docs/images/ignite-front.jpg
+pinned: [ignite-source]

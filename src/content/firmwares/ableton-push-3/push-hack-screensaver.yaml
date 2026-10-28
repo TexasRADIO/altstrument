@@ -1,0 +1,36 @@
+device: ableton-push-3
+name: Push Hack Screensaver
+summary: >-
+  Push Hack module that takes over Push 3 Standalone's screen and pad lights with an animation after a set idle time,
+  and hands them back on any input.
+description: >-
+  After a configurable number of idle seconds, it draws one of three full-screen animations (a scrolling rainbow,
+  blinking text-character stars, or a starfield) and animates the pad and button lights to match. Any pad, button or
+  encoder input ends it, and MIDI clock and transport messages do not count as activity. A browser page on the
+  unit sets the animation, idle time, speed and an optional rainbow light sweep at startup, and the settings are saved
+  on the unit. New animations are one Go file each. The module draws through Push Manager's display API, so it needs
+  Push Manager and Push Display from Push Hack.
+status: active
+authors:
+  - name: itsrave
+    url: https://github.com/itsrave
+source: https://github.com/itsrave/push-hack-screensaver
+source_status: open
+license: unspecified
+license_notes: The repository has no license file and no license statement.
+homepage: https://github.com/federico-pepe/ableton-push-hack#readme
+distribution: download
+requires_stock: Push Hack with push-manager and push-display
+install_notes: >-
+  Install it from Push Catalog on the unit, after Push Hack's base modules, and configure it from its web page or the
+  Shadow UI. It logs a warning when Push Manager or Push Display is missing. Releases are tarballs built by the
+  project's GitHub workflow. The Push Hack warnings about backups, recovery and Push software updates apply.
+brick_risk: false
+tags: [ui, utility, platform]
+versions:
+  - version: v0.2.0
+    date: 2026-09-06
+    url: https://github.com/itsrave/push-hack-screensaver/releases/tag/v0.2.0
+  - version: v0.1.0
+    date: 2026-09-01
+    url: https://github.com/itsrave/push-hack-screensaver/releases/tag/v0.1.0

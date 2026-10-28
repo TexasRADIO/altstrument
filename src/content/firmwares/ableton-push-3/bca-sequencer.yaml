@@ -1,0 +1,52 @@
+device: ableton-push-3
+also_devices:
+  - ableton-push-2
+name: BCA Sequencer
+kind: tool
+summary: >-
+  Module for Push Tethered App that turns a USB-connected Push into a multi-track MIDI step sequencer with three pad
+  layouts, chord steps, per-track key and scale, and MIDI clock lead or follow.
+description: >-
+  The module is a Python program run by Push Tethered App. It shows four tracks at a time with a 16-step pattern each,
+  laid out as four 4 by 4 pad quadrants in the first layout, with pitch grids beside the step grids in the other two. Steps can
+  hold chords, and each step has velocity, gate length, probability, offset, repeat and note length. Each track has its own
+  MIDI channel, sequence length and rate, with a global or per-track key and scale. The module follows an incoming MIDI
+  clock by default, or leads and sends clock, start and stop. Sequences can be saved and loaded. The README says the
+  clock lead mode was not tested with Live. The repository includes a manual and tests.
+status: active
+authors:
+  - name: Federico P.
+    url: https://github.com/federico-pepe
+source: https://github.com/federico-pepe/pta-module-bcaseq
+source_status: open
+license: unspecified
+license_notes: The repository has no license file and no license statement.
+homepage: https://github.com/federico-pepe/pta-module-bcaseq#readme
+distribution: download
+requires_stock: Push Tethered App; python3 on the PATH
+install_notes: >-
+  Install it from the Browse catalog page in Push Tethered App, or with pushapp -catalog-install bcaseq. A release
+  tarball or a checkout of the repository can also be added with the app's Add module button or pushapp -install.
+  Route the app's MIDI output to a synth or to Live to hear it.
+brick_risk: false
+tags: [sequencer, midi, chords, scales, python]
+versions:
+  - version: v0.3.2
+    date: 2026-10-10
+    url: https://github.com/federico-pepe/pta-module-bcaseq/releases/tag/v0.3.2
+    notes: Steadier timing when following a clock.
+  - version: v0.3.1
+    date: 2026-10-10
+    url: https://github.com/federico-pepe/pta-module-bcaseq/releases/tag/v0.3.1
+    notes: Adds clock lead mode and a MIDI channel knob.
+  - version: v0.3.0
+    date: 2026-10-09
+    url: https://github.com/federico-pepe/pta-module-bcaseq/releases/tag/v0.3.0
+    notes: Adds the third layout, chords, a working track and long press.
+  - version: v0.2.2
+    date: 2026-10-06
+    url: https://github.com/federico-pepe/pta-module-bcaseq/releases/tag/v0.2.2
+  - version: v0.2.1
+    date: 2026-10-05
+    url: https://github.com/federico-pepe/pta-module-bcaseq/releases/tag/v0.2.1
+    notes: Adds the scale menu and per-track key and scale.

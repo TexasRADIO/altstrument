@@ -43,7 +43,7 @@ install_notes: >-
 brick_risk: true
 tags: [machines, synth-engine, sdk, web, fx, sampler, patch]
 versions:
-  - version: staging @ c0e5ab6
-    date: 2026-10-27
-    url: https://github.com/etcetc000/open-xy/commit/c0e5ab656c560bbd95b242e5efbc7615c4004fcd
-    notes: No tagged firmware releases; this is the latest commit on the default branch. The only release, toolchain-1, is the compiler toolchain.
+  - version: v0.0.2
+    date: 2026-10-28
+    url: https://github.com/etcetc000/open-xy/releases/tag/v0.0.2
+    notes: First versioned release, built for OS 1.2.1. Adds the catalog of pinned community machines, SDK 1.0 and 1.1, Linux firmware builds and 2 MiB of reserved module heap. The other release, toolchain-1, is the compiler toolchain.

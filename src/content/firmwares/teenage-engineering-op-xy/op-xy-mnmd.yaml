@@ -1,0 +1,71 @@
+device: teenage-engineering-op-xy
+name: OP-XY MNMD
+summary: >-
+  Machinedrum- and Monomachine-style drum kits and synth engines, written from scratch as fixed-point C++ machines on
+  the Open-XY SDK and linked into a modified copy of your own OP-XY OS 1.2.0.
+description: >-
+  The repository has four drum kits modelled on Machinedrum machine families (TRX, EFM, P-I and E12), each playing
+  24 keys that can each hold a different machine with eight controls, choke groups and parameter locks, and fourteen
+  Monomachine-style synth engines (SWAVE, SID-6581, FM, VO-6, GND, DPRO) played chromatically with two pages of four
+  encoders. The sounds were fitted by ear and by measurement against the original machines running in an emulator,
+  and each engine has its own screen drawing. A browser bench on the computer plays every engine without a device.
+  The E12 and DPRO engines need samples and waves captured from the user's own Elektron ROMs, and build silent
+  without them. Putting the engines on a device means building a firmware with the project's fork of Open-XY and
+  installing the result from the device's boot menu. The README calls it experimental and says CPU use has not yet
+  been profiled on the device. Seven of the synth engines have been submitted to the Open-XY machine catalog.
+status: active
+authors:
+  - name: mmockett
+    url: https://github.com/mmockett
+source: https://github.com/mmockett/OP-XY-MNMD
+source_status: open
+license: MIT
+license_notes: >-
+  The README states that the repository holds no Elektron code, firmware, ROM data or samples, and its .gitignore
+  keeps captured samples out of commits. Machinedrum and Monomachine are Elektron trademarks, used here as names
+  for the modelled machines, and the project says it is not affiliated with Elektron or Teenage Engineering. The
+  E12 and DPRO engines need audio captured from ROMs the user owns, which are not distributed. Builds link the engines
+  into a modified copy of the user's own OP-XY OS.
+homepage: https://github.com/mmockett/OP-XY-MNMD#readme
+distribution: source-only
+requires_stock: "1.2.0"
+install_notes: >-
+  Needs macOS, Python 3.12, Node 22, Homebrew's llvm and lld, the Open-XY fork branch two-page-synths checked out
+  next to this repository, and the Open-XY Blackfin toolchain. Copy os.ldr off your own OP-XY once over the boot menu's
+  MTP mode, run tools/build_firmware.py, then tools/install_firmware.py --copy, and write the OS from the boot menu.
+  The README tested it on OS 1.2.0 only, and the SDK's checks cannot guarantee that a faulty image can be recovered.
+  To return to stock, reinstall the official OS update. The engines can be tried on the computer in the browser bench
+  before flashing.
+brick_risk: true
+tags: [machines, synth-engine, drums, fm, sdk, emulator]
+image:
+  url: https://raw.githubusercontent.com/mmockett/OP-XY-MNMD/main/docs/machines.png
+  alt: Eight OP-XY screen mock-ups in white line art on black, among them an MD TRX bass drum and cowbell, a SID-6581 saw wave, a VO-6 vowel plot and an FM STAT diagram
+  credit: mmockett
+  source_url: https://github.com/mmockett/OP-XY-MNMD#readme
+  first_party: true
+versions:
+  - version: v1.1.3
+    date: 2026-10-28
+    url: https://github.com/mmockett/OP-XY-MNMD/tree/v1.1.3
+    notes: Git tag; no GitHub release page.
+  - version: v1.1.2
+    date: 2026-10-28
+    url: https://github.com/mmockett/OP-XY-MNMD/tree/v1.1.2
+    notes: Git tag; no GitHub release page.
+  - version: v1.1.1
+    date: 2026-10-28
+    url: https://github.com/mmockett/OP-XY-MNMD/tree/v1.1.1
+    notes: Git tag; no GitHub release page.
+  - version: v1.1.0
+    date: 2026-10-28
+    url: https://github.com/mmockett/OP-XY-MNMD/tree/v1.1.0
+    notes: Git tag; no GitHub release page.
+  - version: v1.0.1
+    date: 2026-10-27
+    url: https://github.com/mmockett/OP-XY-MNMD/tree/v1.0.1
+    notes: Git tag; no GitHub release page.
+  - version: v1.0.0
+    date: 2026-10-27
+    url: https://github.com/mmockett/OP-XY-MNMD/tree/v1.0.0
+    notes: Git tag; no GitHub release page.

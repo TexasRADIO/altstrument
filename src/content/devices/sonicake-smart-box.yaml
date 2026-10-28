@@ -1,0 +1,30 @@
+name: Smart Box
+manufacturer: Sonicake
+category: pedal
+tagline: Compact multi-effects processor with drum rhythms and looper (QME-20)
+description: >-
+  The Smart Box (QME-20) is a multi-effects processor from Sonicake with a small
+  display, a value encoder, nine effect-block buttons and two footswitches with
+  LED rings. It has 100 preset slots, 100 drum rhythms, a looper, tuner and
+  metronome, supports third-party Neural Amp Modeler captures and cabinet IRs in
+  user slots, and works as a USB audio interface. It runs from a DC supply or USB-C
+  and has a built-in lithium battery.
+stock_firmware: V1.0.6
+links:
+  manufacturer: https://www.sonicake.com/products/smart-box
+notes: >-
+  No custom firmware or SDK exists for the Smart Box; Sonicake publishes only its
+  own firmware updates. The listed tools are third-party editors built from
+  reverse-engineered USB-MIDI and Bluetooth protocols, and they can overwrite
+  user presets, so back up first.
+related: [sonicake-pocket-master]
+image:
+  src: /images/devices/sonicake-smart-box.webp
+  style: photo
+  alt: Front view of the Sonicake Smart Box, a dark grey unit with a small screen showing preset F01, a large encoder, orange effect-block buttons labelled NR to RVB and two footswitches with lit rings
+  width: 1200
+  height: 1200
+  credit: Sonicake
+  license: manufacturer product image
+  source_url: https://www.sonicake.com/products/smart-box
+  original_url: https://www.sonicake.com/cdn/shop/files/QME-20-1.jpg

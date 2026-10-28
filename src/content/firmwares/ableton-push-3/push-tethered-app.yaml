@@ -1,0 +1,71 @@
+device: ableton-push-3
+also_devices:
+  - ableton-push-2
+name: Push Tethered App
+kind: tool
+summary: >-
+  Desktop app for macOS, Windows and Linux that takes over a USB-connected Push 2 or Push 3 without Live and runs
+  small modules, written in Go, Python or JavaScript, that draw on its screen and read its pads, buttons and encoders.
+description: >-
+  The app finds the Push's display and MIDI ports, pairs them, and acts as a host for modules that can draw to the
+  960 by 160 screen, set pad and button lights and react to pads, buttons and encoders. Built-in
+  modules include a step sequencer, a MIDI monitor, a remapper and a pass-through, and modules from other authors
+  can be installed from an online catalog or from a folder. Several Push units can be paired at once, and a User Mode
+  setting lets it run next to Live. Push 3's DIN MIDI jacks can be used for module input and output, and the screen
+  can be mirrored to a browser. It shares its toolkit with Push Hack, which covers Push 3 Standalone, and its
+  documentation records protocol notes for Push 2 and Push 3. The project says it is not approved or supported by
+  Ableton, and all of its releases are marked alpha.
+status: active
+authors:
+  - name: Federico P.
+    url: https://github.com/federico-pepe
+source: https://github.com/federico-pepe/push-tethered-app
+source_status: open
+license: unspecified
+license_notes: The repository has no license file and no license statement.
+homepage: https://github.com/federico-pepe/push-tethered-app#readme
+distribution: download
+install_notes: >-
+  Download the pushapp-ui build for your platform from the releases page, connect the Push over USB, pick its screen
+  and a MIDI port in the app and pair them. To use it next to Live, close Live first, pair the User Port, start Live
+  and turn on User Mode, as the manual describes. It runs on the computer and installs nothing on the Push. All releases
+  are marked pre-release.
+brick_risk: false
+tags: [platform, sdk, ui, midi, controller-mode, python]
+versions:
+  - version: v0.2.6-alpha
+    date: 2026-10-06
+    url: https://github.com/federico-pepe/push-tethered-app/releases/tag/v0.2.6-alpha
+    notes: Docs say Keep Push in User Mode works on Windows and Push 2.
+  - version: v0.2.5-alpha
+    date: 2026-10-03
+    url: https://github.com/federico-pepe/push-tethered-app/releases/tag/v0.2.5-alpha
+    notes: Adds the Keep Push in User Mode option.
+  - version: v0.2.4-alpha
+    date: 2026-10-01
+    url: https://github.com/federico-pepe/push-tethered-app/releases/tag/v0.2.4-alpha
+  - version: v0.2.3-alpha
+    date: 2026-09-02
+    url: https://github.com/federico-pepe/push-tethered-app/releases/tag/v0.2.3-alpha
+  - version: v0.2.0-alpha
+    date: 2026-08-29
+    url: https://github.com/federico-pepe/push-tethered-app/releases/tag/v0.2.0-alpha
+    notes: Windows MIDI fixes and a Raspberry Pi build.
+  - version: v0.1.4-alpha
+    date: 2026-08-28
+    url: https://github.com/federico-pepe/push-tethered-app/releases/tag/v0.1.4-alpha
+  - version: v0.1.3-alpha
+    date: 2026-08-26
+    url: https://github.com/federico-pepe/push-tethered-app/releases/tag/v0.1.3-alpha
+    notes: Adds the screen mirror and the pad-grid pointer.
+  - version: v0.1.2-alpha
+    date: 2026-08-23
+    url: https://github.com/federico-pepe/push-tethered-app/releases/tag/v0.1.2-alpha
+  - version: v0.1.1-alpha
+    date: 2026-08-20
+    url: https://github.com/federico-pepe/push-tethered-app/releases/tag/v0.1.1-alpha
+    notes: Adds User Mode co-existence with Live and MIDI clock in and out.
+  - version: v0.1.0-alpha
+    date: 2026-08-20
+    url: https://github.com/federico-pepe/push-tethered-app/releases/tag/v0.1.0-alpha
+    notes: First module host release, tested on Windows and a Raspberry Pi 5.

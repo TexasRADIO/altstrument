@@ -21,7 +21,7 @@ license_notes: >-
   The LICENSE file names ChipNomad and paiheulevrai as copyright holders. Mutable Instruments, Airwindows, Signalsmith
   Stretch and other components keep their own licenses, listed in the repository's license folders. The manual says
   the Miyoo builds do not include Ableton Link.
-homepage: https://choochootracker.vercel.app/
+homepage: https://choochootracker.pages.dev/
 distribution: download
 install_notes: >-
   Extract the MiyooPorts archive from the GitHub release at the root of the SD card so that its Roms/PORTS folders
@@ -36,6 +36,10 @@ image:
   source_url: https://github.com/paiheulevrai/Choochootracker
   first_party: true
 versions:
+  - version: v1.0.21-alpha
+    date: 2026-10-28
+    url: https://github.com/paiheulevrai/Choochootracker/releases/tag/v1.0.21-alpha
+    notes: Scales the Miyoo interface to the detected display, enables Onion OS 560p mode and restores the hardware volume controls; also adds stereo audio input, a graphical instrument EQ and Furnace module import.
   - version: v1.0.19-alpha
     date: 2026-10-19
     url: https://github.com/paiheulevrai/Choochootracker/releases/tag/v1.0.19-alpha

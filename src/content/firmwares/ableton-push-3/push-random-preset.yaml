@@ -1,0 +1,42 @@
+device: ableton-push-3
+name: Push Random Preset
+summary: >-
+  Push Hack module that loads a random instrument preset or drum rack kit onto the selected track in Live on Push 3
+  Standalone with a Shift chord, optionally limited to a category picked on screen.
+description: >-
+  Shift and Add loads a random preset, preferring instruments, and Shift and Swap loads a random drum rack kit,
+  skipping single drum sounds. Adding Select opens a category menu on Push's screen that is driven by the jog wheel and
+  stays in effect for later random picks until reset to Any. The module does not load anything itself. It reads
+  Push Manager's preset index and asks Push Manager to load the choice into Live. Push Manager now does that through
+  the PushHack Remote Script, which replaced the retired Browser Bridge module and its PushHackBrowser script in Push Hack
+  0.1.16-alpha, although the module's own README and log messages still name Browser Bridge. It only watches the Shift, Add, Swap and Select buttons, so the pads keep
+  playing normally.
+status: active
+authors:
+  - name: itsrave
+    url: https://github.com/itsrave
+source: https://github.com/itsrave/push-random-preset
+source_status: open
+license: unspecified
+license_notes: The repository has no license file and no license statement.
+homepage: https://github.com/federico-pepe/ableton-push-hack#readme
+distribution: download
+requires_stock: Push Hack 0.1.16-alpha or later with push-manager, and the PushHack Remote Script selected in Live
+install_notes: >-
+  Install it from Push Catalog on the unit, with Push Hack up to date. If a load does nothing, check that the PushHack
+  control surface is selected in a slot in Live and read the module's log on the unit. Its README still says to
+  activate Browser Bridge's PushHackBrowser script, which is retired; Push Hack's changelog says Push Manager's loads
+  now go through PushHack. The Push Hack
+  warnings about backups, recovery and Push software updates apply.
+brick_risk: false
+tags: [random, performance, midi, utility]
+versions:
+  - version: v0.2.1
+    date: 2026-09-01
+    url: https://github.com/itsrave/push-random-preset/releases/tag/v0.2.1
+  - version: v0.2.0
+    date: 2026-08-28
+    url: https://github.com/itsrave/push-random-preset/releases/tag/v0.2.0
+  - version: v0.1.0
+    date: 2026-08-28
+    url: https://github.com/itsrave/push-random-preset/releases/tag/v0.1.0

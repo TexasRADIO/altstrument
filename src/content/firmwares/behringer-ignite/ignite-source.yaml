@@ -1,0 +1,39 @@
+device: behringer-ignite
+name: IGNITE source code
+summary: Music Tribe's published source for the Behringer IGNITE, covering the JUCE sequencer application, an audio engine library, the hardware protocol and the Buildroot Linux image.
+description: >-
+  The repository is published by the Music Tribe Open Source organisation. It
+  has four parts: the IGNITE application written in C++ with JUCE (sequencer
+  UI, engine and hardware integration), the AudIO audio engine library,
+  ComProtocol (the protocol between application and hardware) and a Buildroot
+  tree for the Linux image. Material that could not be redistributed was
+  removed, for example the General MIDI SoundFont, so some parts need your own
+  replacements before they build. The application also builds for desktop
+  systems. The README says there is no official firmware release in the
+  repository yet. No build or flash was attempted for this entry.
+status: active
+authors:
+  - name: Music Tribe
+    url: https://github.com/MusicTribeOpenSource
+source: https://github.com/MusicTribeOpenSource/0716-AAF
+source_status: open
+license: AGPL-3.0-or-later
+license_notes: >-
+  Application, AudIO and ComProtocol are AGPL-3.0-or-later per the repository
+  README and the application's README; the root LICENSE file is the AGPL-3.0
+  text. The Buildroot tree is GPL-2.0 and bundled third-party code keeps its own
+  licenses. The Behringer and IGNITE names and logos and the product images in
+  the repository are excluded.
+distribution: source-only
+install_notes: >-
+  Build from source with CMake. For the device, build the SDK from the Buildroot
+  tree (`make Ignite_defconfig && make sdk`) and pass its toolchain file to
+  CMake; the application README and the READMEs in each folder list the pieces
+  to supply yourself. No flashing steps are given.
+brick_risk: false
+tags: [official, open-source, sequencer, os, platform]
+versions:
+  - version: main @ 0371a3e
+    date: 2026-10-28
+    url: https://github.com/MusicTribeOpenSource/0716-AAF/commit/0371a3e
+    notes: No tagged releases; this is the latest commit.

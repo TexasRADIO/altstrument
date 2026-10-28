@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: GLIDER
+summary: >-
+  Drone synth where white keys latch scale tones on and off and black keys glide them up or down the scale like a
+  steel guitar, with a tape echo, shimmer reverb and a quiet microsound drum track.
+description: >-
+  A fork of M-VAVE's FM1 Open V14 that drops the FM1 sequencer, DX7 and project pages. Up to 16 tones sound at once
+  in a chosen key and scale, from 25 scales including chords as scales, in equal or just tuning. Each voice has two
+  oscillators with overtones, undertones, drift and an optional interval voice, and there are 22 presets. The effects
+  are a tape echo that can self-oscillate, a ladder filter, a delay and a shimmer reverb, with tempo sync, tap tempo
+  and MIDI clock. The drum track has 27 synthesized microsound slots of 16 steps with probability, ratchets and
+  scatter. When the load gets high the oldest tone fades out instead of the audio breaking up. The author calls it a
+  beta hobby project, tested on one FM-1 in October 2026, and asks for test reports. A sibling project, GLITCH, is a
+  microsound drum machine from the same author.
+status: active
+authors:
+- name: ttreu
+  url: https://github.com/ttreu
+source: https://github.com/ttreu/fm1-glider
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSE.md: GPL-3.0-only with M-VAVE's additional permission to link the FM1 binary SDK, inherited from FM1 Open.
+  The binary engine library sdk/lib/libfm1_engine.a is under M-VAVE's separate terms for FM-1 devices
+  (THIRD_PARTY.md). The repository contains M-VAVE's licensed V15 recovery image sdk/firmware/FM-1_015.fwsc,
+  Apache-2.0, git blob ce49cc1595b67347c68a3ac7463017f9fa8c19dd, the same file as in m-vave/fm1_open; the factory DX7
+  bank in app/fm_factory.inc is extracted from it.
+homepage: https://subcity.at/fm1-glider/
+distribution: browser-installer
+requires_stock: V15 or FM1 Open
+install_notes: >-
+  The project page is a workbench with the firmware and the V15 recovery image: open it in Chrome or Edge with the
+  FM-1 on USB and use Device update; a first install from the stock firmware needs Recovery & force update. Back up
+  projects, voices and samples first, since GLIDER does not use them but leaves them in flash. With FM1 Open already
+  on the device, macOS users can flash with tools/flash_fm1.py.
+brick_risk: true
+tags: [drone, synth-engine, fx, reverb, delay, scales, midi, emulator, fork]
+image:
+  url: https://subcity.at/assets/img/fm1-glider/panel.webp
+  alt: "The FM-1 workbench simulator running GLIDER: the screen shows the preset Synthiscapes in C3 major just, with latched keys lit green, a PLAY page and four knob values, above 16 vertical key sliders"
+  credit: ttreu
+  source_url: https://subcity.at/fm1-glider/
+  first_party: true
+versions:
+- version: main @ 51ea259
+  date: 2026-10-27
+  url: https://github.com/ttreu/fm1-glider/commit/51ea2590ef9a14a0083c5fd628e1e6f1062da2f7
+  notes: No tagged releases; this is the latest commit.

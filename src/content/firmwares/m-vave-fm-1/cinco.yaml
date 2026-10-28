@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: CINCO Identity Generator 2.5
+summary: >-
+  Joke firmware that turns the FM-1 into the "Celery Man" computer from Tim & Eric Awesome Show, Great Job!: a
+  playable instrument with dancing sprites, a speech synthesizer and a Eurodance backing groove.
+description: >-
+  Rights warning: this is a fan parody of a television sketch. The planning notes say the dancer sprites are rotoscoped
+  from the show's footage and show the actor's likeness, and the firmware uses the show's character names, quoted lines
+  and trademark-style branding. The README presents the project as a 1995 Cinco software box and uses the Cinco name.
+  The computer's voice is described as new speech made with macOS text-to-speech and encoded as LPC data, not the
+  show's audio. It is a working firmware, not only a README gag: a fork of Felucca with about 80 KB of its own
+  C source (graphics, sound, groove, speech and UI) and a WebAssembly emulator on the project site. Knob 1 stacks up to
+  five cascading windows and widens the chorus, the LFO, ARP and FX keys trigger the sketch's Hat Wobble, Flarhgunnstow
+  and Nude Tayne moves, a boss key swaps in a fake spreadsheet, and a speech soundboard plays on the keyboard. The plan
+  lists testing on real hardware as a later phase and the repository ships no prebuilt package; the README points to a
+  build/felucca.fwsc file and to Felucca's web installer, neither of which holds this firmware.
+status: active
+authors:
+- name: mrjoshida
+  url: https://github.com/mrjoshida
+source: https://github.com/mrjoshida/CINCO
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md is Felucca's, kept unchanged: GPL-3.0-only code by Leo Kuroshita, with MIT engines, CC0 samples and SIL
+  OFL fonts. The sprites, quoted dialogue and sketch characters are not covered by that licence and belong to their
+  rights holders.
+homepage: https://mrjoshida.github.io/CINCO/
+distribution: source-only
+requires_stock: V15 or Felucca
+install_notes: >-
+  Build with ./build.sh (Docker and the JieLi toolchain) and install the result with the Felucca tools. The README
+  says to return to M-VAVE's firmware with Felucca's Return to official V15 option or the OCT- and OCT+ boot
+  recovery. The browser emulator on the project page needs no hardware.
+brick_risk: true
+tags: [game, emulator, sequencer, synth-engine, fork]
+versions:
+- version: main @ e8470c6
+  date: 2026-10-28
+  url: https://github.com/mrjoshida/CINCO/commit/e8470c6a4b2f6e3e3f5f2469bf8a0008b5b052ae
+  notes: No tagged releases; this is the latest commit.

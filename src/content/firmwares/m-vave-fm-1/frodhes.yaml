@@ -22,10 +22,10 @@ license: GPL-3.0-only
 license_notes: >-
   Stated in LICENSING.md; the platform code is Felucca's, with changes by SLOOP and Dinghy, and the font is SIL OFL 1.1.
 homepage: https://leonardomirabal.github.io/frodhes/
-distribution: download
+distribution: browser-installer
 install_notes: >-
-  Download the .fwsc from a release and install it with tools/fm1_install.py over USB (Python with mido and
-  python-rtmidi). Holding OCT- at power-on gives the USB rescue. The README points to the Official firmware section of
+  The emulator page installs the latest release in Chrome or Edge over WebMIDI, or download the .fwsc from a
+  release and install it with tools/fm1_install.py over USB (Python with mido and python-rtmidi). Holding OCT- at power-on gives the USB rescue. The README points to the Official firmware section of
   The Firmware Hub, with M-VAVE's V15 from m-vave.com, to go back to stock.
 brick_risk: true
 tags: [synth-engine, physical-modeling, fx, sequencer, chords, scales, midi, emulator]
@@ -36,6 +36,10 @@ image:
   source_url: https://github.com/leonardoMirabal/frodhes
   first_party: true
 versions:
+- version: 0.9.7
+  date: 2026-10-27
+  url: https://github.com/leonardoMirabal/frodhes/releases/tag/v0.9.7
+  notes: The emulator page installs Frodhes over WebMIDI in Chrome or Edge. The USB name now carries the model (Frodhes FM-1, Frodhes SMK-37 Pro) with new product ids, so a computer sees a new device. Fixes clipping in 48 kHz USB recording, swapped CHORD and PARA keys on the SMK-37 and faint distortion under a dying held note.
 - version: 0.9.6
   date: 2026-10-26
   url: https://github.com/leonardoMirabal/frodhes/releases/tag/v0.9.6

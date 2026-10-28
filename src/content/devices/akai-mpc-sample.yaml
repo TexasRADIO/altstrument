@@ -1,0 +1,28 @@
+name: MPC Sample
+manufacturer: Akai Professional
+category: sampler
+tagline: Battery-powered portable MPC-style sampler and sequencer
+description: >-
+  The MPC Sample is a portable standalone sampler, sequencer and effects unit
+  from Akai Professional, styled after the vintage MPC60. It has 16 velocity and
+  pressure sensitive RGB pads, a colour display, three knobs, a slider, a
+  built-in speaker and microphone and four effects engines. Samples load from a
+  microSD card or over USB-C, and projects can be opened on MPC hardware running
+  MPC software 3.8 or later.
+stock_firmware: "1.3"
+links:
+  manufacturer: https://www.akaipro.com/mpc-sample
+notes: >-
+  No custom firmware exists for the MPC Sample. The only third-party software
+  listed is a project editor and generator that works on its project files.
+related: [akai-mpc-live]
+image:
+  src: /images/devices/akai-mpc-sample.webp
+  style: photo
+  alt: Top view of the Akai MPC Sample held in one hand, a cream-coloured unit with a grid of 16 blue-lit pads, three knobs, a small colour display and a speaker grille
+  width: 796
+  height: 796
+  credit: Akai Professional
+  license: manufacturer product image
+  source_url: https://www.akaipro.com/mpc-sample
+  original_url: https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Ff2f61c6cab054c55a95ebc27bf56c1df

@@ -1,0 +1,60 @@
+device: ableton-push-3
+name: Push Hack Keyboard Visualizer
+summary: >-
+  Push Hack module that draws a piano keyboard on Push 3 Standalone's screen showing the notes Live is actually
+  playing, with a phone-friendly web view that adds chord names.
+description: >-
+  The module creates a MIDI input port that a Live track's MIDI output can be routed to, so the keyboard shows notes
+  after Live's octave and scale transforms rather than the raw pad notes. It keeps track of the held notes and draws
+  a fixed 49-key window, notes 36 to 84, through Push Manager's display API. Showing it on Push's screen is switched
+  on and off by holding Shift and Note. The same module serves a web page for phones that shows the keyboard from a
+  live feed and names chords of three or more notes using the bundled Tonal.js library. It needs Push Manager and
+  Push Display from Push Hack, and checks for them at startup.
+status: active
+authors:
+  - name: Federico P.
+    url: https://github.com/federico-pepe
+source: https://github.com/federico-pepe/push-hack-keyboard-visualizer
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no license file of its own. The bundled Tonal.js build under src/ui/vendor/ has its own license
+  file, which the README describes as MIT.
+homepage: https://github.com/federico-pepe/ableton-push-hack#readme
+distribution: download
+requires_stock: Push Hack with push-manager and push-display
+install_notes: >-
+  Install it from Push Catalog on the unit, after Push Hack's base modules. Route a Live track's MIDI output to the
+  Keyboard Viz In port on Push's own screen, then hold Shift and Note to show the keyboard. Without push-manager and
+  push-display installed nothing appears on screen, and the module logs a warning. The Push Hack warnings about
+  backups, recovery and Push software updates apply.
+brick_risk: false
+tags: [ui, midi, chords, performance, web]
+versions:
+  - version: v0.1.8
+    date: 2026-10-19
+    url: https://github.com/federico-pepe/push-hack-keyboard-visualizer/releases/tag/v0.1.8
+  - version: v0.1.7
+    date: 2026-10-19
+    url: https://github.com/federico-pepe/push-hack-keyboard-visualizer/releases/tag/v0.1.7
+  - version: v0.1.6
+    date: 2026-09-30
+    url: https://github.com/federico-pepe/push-hack-keyboard-visualizer/releases/tag/v0.1.6
+  - version: v0.1.5
+    date: 2026-09-08
+    url: https://github.com/federico-pepe/push-hack-keyboard-visualizer/releases/tag/v0.1.5
+  - version: v0.1.4
+    date: 2026-08-30
+    url: https://github.com/federico-pepe/push-hack-keyboard-visualizer/releases/tag/v0.1.4
+  - version: v0.1.3
+    date: 2026-08-29
+    url: https://github.com/federico-pepe/push-hack-keyboard-visualizer/releases/tag/v0.1.3
+  - version: v0.1.2
+    date: 2026-08-28
+    url: https://github.com/federico-pepe/push-hack-keyboard-visualizer/releases/tag/v0.1.2
+  - version: v0.1.1
+    date: 2026-08-28
+    url: https://github.com/federico-pepe/push-hack-keyboard-visualizer/releases/tag/v0.1.1
+  - version: v0.1.0
+    date: 2026-08-28
+    url: https://github.com/federico-pepe/push-hack-keyboard-visualizer/releases/tag/v0.1.0

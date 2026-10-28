@@ -1,0 +1,36 @@
+device: ableton-move
+name: Move Network Samples
+kind: tool
+summary: >-
+  Python scripts that mount an NFS share of your sample library on Move over SSH, either as a persistent
+  setup that survives reboots or as a manual mount and unmount, so samples stream from a NAS instead of using Move's
+  storage.
+description: >-
+  The install script connects to Move over SSH as root, downloads the mount.nfs binary from a Debian nfs-common package
+  onto the unit and writes an fstab entry, so the share is mounted at boot as a read-only folder inside Move's sample
+  library. A second set of scripts mounts, verifies and unmounts the share without changing system files. Server
+  address, share path and mount point go in a settings file, and passwords or SSH keys are read from an environment
+  file. The README says to run the installer again after a Move firmware update or factory reset, and warns not to
+  expose NFS to the internet. The repository has only a few commits, all from February 2026.
+status: active
+authors:
+  - name: Rainer Geissendoerfer
+    url: https://github.com/rgeissen
+source: https://github.com/rgeissen/move-network
+source_status: open
+license: MIT
+homepage: https://github.com/rgeissen/move-network#readme
+distribution: source-only
+requires_stock: Move with SSH access enabled and an NFS server on the same network
+install_notes: >-
+  Needs Python 3.7 or later, SSH access to the NFS server and to the Move, and an NFS export of the sample folder.
+  Copy .env.example to .env, edit config/settings.yaml, then run scripts/install_move_nfs.py auto. It installs software
+  as root on the Move and edits its fstab, which Ableton does not support, so keep a backup and expect to repeat the
+  install after firmware updates.
+brick_risk: false
+tags: [utility, platform, research]
+versions:
+  - version: main @ f3ced9b
+    date: 2026-02-14
+    url: https://github.com/rgeissen/move-network/commit/f3ced9b
+    notes: No tagged releases; this is the latest commit.

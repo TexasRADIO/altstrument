@@ -13,7 +13,8 @@ description: >-
   Braids, NAM and Airwindows effects, the JV-880 emulation, and
   build-it-yourself ports of Elektron engines that need the user's own
   firmware. Engines written for Ableton Move's Schwung host build through an
-  adapter. Developed on a Force on MPC OS 3.x.
+  adapter. Developed on a Force on MPC OS 3.x. The on-device Plugin Manager G2
+  from the same repository has its own entry, OpenMPC Plugin Manager G2.
 status: active
 authors:
   - name: sd88me
@@ -37,7 +38,7 @@ install_notes: >-
 tags: [sdk, platform, loader, web]
 versions:
   - version: desktop-v1.0.0
-    date: 2026-10-24
+    date: 2026-10-28
     url: https://github.com/sd88me/mpc-vst-plugins/releases/tag/desktop-v1.0.0
     notes: Installer app pre-release. Adds a USB-stick setup that installs plugins without SSH or a network connection, plus optional SSH access on the same stick.
   - version: desktop-v0.6.1

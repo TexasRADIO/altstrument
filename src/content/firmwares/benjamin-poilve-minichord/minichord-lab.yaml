@@ -22,7 +22,7 @@ homepage: https://keyandcableco.github.io/minichord-lab/
 install_notes: Nothing to install. Open the page in a browser with Web MIDI and connect the minichord over USB.
 tags: [ear-training, visualizer, looper, mpe, web-ui]
 versions:
-  - version: main @ 93fa97e
-    date: 2026-10-24
-    url: https://github.com/keyandcableco/minichord-lab/commit/93fa97ec63ecd6219a564b82c3b8dc66039f22d6
+  - version: main @ 8f3518d
+    date: 2026-10-27
+    url: https://github.com/keyandcableco/minichord-lab/commit/8f3518dedf6566cc2135eb6938d052cb3220852e
     notes: No tagged releases; this is the latest commit.

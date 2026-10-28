@@ -24,7 +24,7 @@ license_notes: >-
   Stretch and other components keep their own licenses, listed in the repository's license folders. The README says
   official releases may include Ableton Link under a separate authorization from Ableton that does not extend to
   forks or other distributors, and the PortMaster build lists Link as supported.
-homepage: https://choochootracker.vercel.app/
+homepage: https://choochootracker.pages.dev/
 distribution: download
 install_notes: >-
   Download the PortMaster zip from the latest GitHub release and install it through PortMaster, or extract it into the
@@ -39,6 +39,10 @@ image:
   source_url: https://github.com/paiheulevrai/Choochootracker
   first_party: true
 versions:
+  - version: v1.0.21-alpha
+    date: 2026-10-28
+    url: https://github.com/paiheulevrai/Choochootracker/releases/tag/v1.0.21-alpha
+    notes: Adds stereo audio input with track routing, MIDI clock and transport output, Furnace module import and export, and sampler loop-start editing; restores ArkOS volume controls and improves the PortMaster microphone fallback.
   - version: v1.0.19-alpha
     date: 2026-10-19
     url: https://github.com/paiheulevrai/Choochootracker/releases/tag/v1.0.19-alpha

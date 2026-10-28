@@ -11,7 +11,9 @@ description: >-
   features may not load the same elsewhere. The README calls the build
   experimental and says it was tested on a 7-segment Deluge, with the OLED
   screens written but not tried on hardware. The repository was a few days old
-  and at version 1.15.1 when this entry was written.
+  when this entry was written; by v1.16.2 the README also lists an Affect all
+  snapshot for LXR, Cycles and GIN kits, Pad Guides that light up each drum
+  synth's setting pads, and a synth picker offering Deluge, DLFM or DX7.
 status: active
 authors:
   - name: thisisbribery
@@ -32,7 +34,7 @@ install_notes: >-
 brick_risk: false
 tags: [fork, drums, synth-engine, sequencer, fx, sampler, swing]
 versions:
-  - version: main @ 1827bab
-    date: 2026-10-25
-    url: https://github.com/thisisbribery/deluge-bribes-v1/commit/1827bab
-    notes: No tagged releases; this is the latest commit, which the README and commit message call v1.15.1.
+  - version: main @ fb2a402
+    date: 2026-10-27
+    url: https://github.com/thisisbribery/deluge-bribes-v1/commit/fb2a4020d4ac27130984ea24f80684290e163d89
+    notes: No tagged releases; this is the latest commit, which the README and commit message call v1.16.2.

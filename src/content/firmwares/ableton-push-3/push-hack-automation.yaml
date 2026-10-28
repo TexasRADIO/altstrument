@@ -1,0 +1,56 @@
+device: ableton-push-3
+name: Push Hack Automation
+summary: >-
+  Push Hack module that runs LFO-style MIDI CC lanes drawn as curves in a web page and sends them to Live on Push 3
+  Standalone, following Live's tempo, for recording as automation or mapping to parameters.
+description: >-
+  The module serves a browser page, opened from Push Manager, where each lane gets a MIDI CC number, a channel and a
+  looping curve of draggable breakpoints, with linear or smooth interpolation. A lane can loop over a number of beats
+  in sync with Live, or run on its own tempo and length, and a lane can be muted without deleting it. There is a
+  maximum of eight lanes. It creates a MIDI output port that Live has to enable for Remote in its MIDI preferences,
+  after which each CC is mapped to a parameter with MIDI Learn. Tempo comes from the PushHack Remote Script, with MIDI
+  clock and Push Manager's tempo as fallbacks, and the Push Play button starts and stops the lanes when Sync to Live
+  is on. Lane settings are saved on the unit and survive restarts.
+status: active
+authors:
+  - name: Federico P.
+    url: https://github.com/federico-pepe
+source: https://github.com/federico-pepe/push-hack-automation
+source_status: open
+license: unspecified
+license_notes: The repository has no license file and no license statement.
+homepage: https://github.com/federico-pepe/ableton-push-hack#readme
+distribution: download
+requires_stock: Push Hack with push-manager; Live 12.4 or later on Push; PushHack Remote Script 0.2.0 or newer for exact tempo
+install_notes: >-
+  Install it from Push Catalog on the unit, after Push Hack itself, then open it from Push Manager's menu bar. In
+  Push's MIDI preferences, enable Remote on the Push Hack Automation input. Without the Remote Script, also enable Sync
+  on the Push Hack Clock output. Releases are tarballs built by the project's GitHub workflow. The Push Hack warnings
+  about backups, recovery and Push software updates apply.
+brick_risk: false
+tags: [lfo, midi, performance, web, platform]
+image:
+  url: https://raw.githubusercontent.com/federico-pepe/push-hack-automation/main/resources/push-hack-automation-settings-midiin.png
+  alt: Push's MIDI preferences screen on the Input tab, with the Push Hack Automation port selected and its Remote box checked
+  credit: Federico P.
+  source_url: https://github.com/federico-pepe/push-hack-automation#readme
+  first_party: true
+versions:
+  - version: v0.1.5
+    date: 2026-10-27
+    url: https://github.com/federico-pepe/push-hack-automation/releases/tag/v0.1.5
+  - version: v0.1.4
+    date: 2026-10-19
+    url: https://github.com/federico-pepe/push-hack-automation/releases/tag/v0.1.4
+  - version: v0.1.3
+    date: 2026-09-30
+    url: https://github.com/federico-pepe/push-hack-automation/releases/tag/v0.1.3
+  - version: v0.1.2
+    date: 2026-09-08
+    url: https://github.com/federico-pepe/push-hack-automation/releases/tag/v0.1.2
+  - version: v0.1.1
+    date: 2026-08-30
+    url: https://github.com/federico-pepe/push-hack-automation/releases/tag/v0.1.1
+  - version: v0.1.0
+    date: 2026-08-29
+    url: https://github.com/federico-pepe/push-hack-automation/releases/tag/v0.1.0

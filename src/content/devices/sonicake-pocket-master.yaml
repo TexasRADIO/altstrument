@@ -1,0 +1,34 @@
+name: Pocket Master
+manufacturer: Sonicake
+category: pedal
+tagline: Compact battery-powered multi-effects processor for guitar (QME-10)
+description: >-
+  The Pocket Master (QME-10) is a small multi-effects processor from Sonicake
+  with a colour display, one encoder and two footswitch-style pads. It holds
+  50 factory and 50 editable user presets, each a chain of noise reduction, two
+  effect slots, drive, amp, cabinet IR, EQ, delay and reverb, and runs on a
+  built-in battery. It connects over USB and Bluetooth, and Sonicake's own apps
+  are Sonicake Manager for desktop and SONICLINK for phones.
+stock_firmware: V1.3.3
+links:
+  manufacturer: https://www.sonicake.com/products/pocket-master
+  community:
+    - label: Sonicake firmware and software downloads
+      url: https://www.sonicake.com/pages/pocket-master-software-firmware-download-qme-10
+notes: >-
+  No custom firmware or SDK exists for the Pocket Master; Sonicake publishes
+  only its own firmware updates through Sonicake Manager. Speculation in news
+  coverage that it could become an open platform is not evidence. The listed
+  tools are third-party editors built from reverse-engineered USB-MIDI and
+  Bluetooth protocols, and they can overwrite user presets, so back up first.
+related: [sonicake-smart-box]
+image:
+  src: /images/devices/sonicake-pocket-master.webp
+  style: photo
+  alt: Front view of the Sonicake Pocket Master, a dark grey unit with a colour screen showing preset F01 and an effect chain, a large encoder at right and two wide footswitch pads below
+  width: 1200
+  height: 1200
+  credit: Sonicake
+  license: manufacturer product image
+  source_url: https://www.sonicake.com/products/pocket-master
+  original_url: https://www.sonicake.com/cdn/shop/files/QME-1001_dc1d58ce-6c19-4bbb-8bc2-1740e5f15f55.jpg

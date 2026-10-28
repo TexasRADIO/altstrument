@@ -1,0 +1,26 @@
+name: KeyStep Pro Chroma
+manufacturer: Arturia
+category: controller
+tagline: Dark gray special edition of the KeyStep Pro with per-track LED colours
+description: >-
+  The KeyStep Pro Chroma is a special-edition KeyStep Pro from Arturia with a dark gray casing, blue LEDs, new knob
+  caps and LED colours that can be set for each track. It keeps the KeyStep Pro's keyboard, four-track sequencer and
+  drum sequencer, and its USB, MIDI, CV, gate and clock connections. Projects and settings are managed with the
+  Arturia MIDI Control Center editor.
+links:
+  manufacturer: https://www.arturia.com/products/hybrid-synths/keystep-pro-chroma/overview
+notes: >-
+  Arturia has not published its firmware as open source. The KeyStep Pro's 2.5.20 update file holds images for both the
+  standard model and the Chroma, and keystep-mods builds patches for both. The keystep-doom image leaves the Chroma
+  out.
+related: [arturia-keystep-pro]
+image:
+  src: /images/devices/arturia-keystep-pro-chroma.webp
+  style: photo
+  alt: Three-quarter view of the dark gray Arturia KeyStep Pro Chroma, a keyboard controller with a four-track sequencer panel, a row of step buttons and five knobs above the keys
+  width: 1200
+  height: 800
+  credit: Arturia
+  license: manufacturer product image
+  source_url: https://www.arturia.com/products/hybrid-synths/keystep-pro-chroma/overview
+  original_url: https://medias.arturia.net/images/products/keystep-pro-chroma/gallery/keystep-pro-chroma_06.jpg

@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: GRVBOX
+summary: >-
+  Groovebox with eight parts, real-time and step (TR-REC) pattern recording, an arpeggiator and reverb, delay and
+  chorus sends, in the style of the Roland MC-303 and with every sound synthesized.
+description: >-
+  The parts are one drum part and seven melodic parts, each with its own sound, level, pan, octave, real-time
+  settings and effect sends saved with the pattern. It has 24 synth sounds, four drum kits (808, 909, 606, CR-78) of
+  16 sounds, 12 shared synth voices plus 8 drum voices, and eight patterns of one, two or four bars at sixteenth-note
+  resolution with shuffle, 40 to 240 BPM and tap tempo. Patterns record live over a loop or step by step on the drum
+  part, there are ten arpeggio styles, and eight factory patterns (house, techno, hip hop, drum and bass, electro,
+  acid, trance, breakbeat) can be saved to flash. The screen mimics the MC-303's red seven-segment readout. The
+  README (in French) says it is an independent project with no link to Roland or M-VAVE and that no samples from the
+  original's ROM are used; no Roland sample data or patterns were found in the repository. It is built on konsumer's
+  foma framework.
+status: active
+authors:
+- name: pjac1810
+  url: https://github.com/pjac1810
+source: https://github.com/pjac1810/grvbox
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md. The platform/mvave directory is from M-VAVE's FM1 Open kit: GPLv3 with M-VAVE's SDK linking
+  exception, plus the binary engine library platform/mvave/sdk/lib/libfm1_engine.a under M-VAVE's terms for FM-1
+  devices only. Felucca, SLOOP and Dinghy code is GPL-3.0-only, and the USB audio code ported from felucca-bsp is
+  MPL-2.0 used under GPL-3.0.
+homepage: https://pjac1810.github.io/grvbox/
+distribution: browser-installer
+requires_stock: V15
+install_notes: >-
+  Open the project page in Chrome or Edge with the FM-1 on USB and use its Install tab; the .fwsc is built by the
+  repository's GitHub workflow, or build it with Docker (./fm1 build). Hold OCT- at power-on for the rescue mode, where
+  the page's Rescue tab puts M-VAVE's V15 back from a file you download from M-VAVE.
+brick_risk: true
+tags: [groovebox, sequencer, drums, synth-engine, arpeggiator, fx, midi, emulator]
+versions:
+- version: main @ 8363f7b
+  date: 2026-10-27
+  url: https://github.com/pjac1810/grvbox/commit/8363f7b659d94fb19cd5b0ba6d46ea07d6f92461
+  notes: No tagged releases; this is the latest commit.

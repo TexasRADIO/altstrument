@@ -6,8 +6,9 @@ summary: >-
 description: >-
   Rights warning: the CLUSTER engine is built on tables and 16 factory presets extracted from teenage
   engineering's OP-1 software, which the README says keep teenage engineering's rights and are neither GPL nor
-  CC0, and that extraction alone does not establish permission to distribute them. Lives on the smk37 branch of the genkigenki/orbit fork and is offered upstream as dspaudio/orbit pull
-  request 4, which is still open. It is ORBIT 0.7.0, a four-track groovebox with three synth parts, a drum
+  CC0, and that extraction alone does not establish permission to distribute them. Lives on the smk37 branch of the genkigenki/orbit fork. Upstream merged the port as dspaudio/orbit pull
+  request 4 on 2026-10-26, and ORBIT 0.8.0 includes SMK-37 support in its source, but upstream publishes FM-1
+  binaries only, so the SMK-37 packages still come from the fork. The fork's build is ORBIT 0.7.0, a four-track groovebox with three synth parts, a drum
   machine, an event tape editor and a mixer. The FM-1 build is unchanged and the SMK-37 code sits behind a
   BOARD_SMK37 switch. Releases carry one package each for the Pro, Elite and MKE-P37 names. USR3 and USR4
   have no flash on the SMK-37, so only two user sample slots are usable.

@@ -1,0 +1,36 @@
+device: sonicake-pocket-master
+kind: tool
+name: Pocket Master Interoperability Guide
+summary: Unofficial notes on the Pocket Master's standard MIDI commands, vendor SysEx editor protocol and .prst preset format, with each finding labelled by how well it was tested.
+description: >-
+  A documentation repository that combines the published MIDI table with
+  behaviour tested on firmware V1.3.3 over USB MIDI and Bluetooth MIDI. Findings
+  are labelled as manual, confirmed, inferred or unknown, and commands as passive,
+  device read, live or persistent. It covers the SysEx overview, the stored-preset
+  structure, known limits and a safety section on backing up and verifying writes.
+  A getting-started file and a small Python script give three bounded exercises.
+  It states that it contains no vendor software, firmware or decompiled source.
+status: active
+authors:
+  - name: klotznick
+    url: https://github.com/klotznick
+source: https://github.com/klotznick/pocket-master-interoperability-guide
+source_status: open
+license: CC0-1.0
+license_notes: >-
+  The README dedicates the original guide material to the public domain under
+  CC0 1.0 and says any executable code added later may carry a separate licence.
+  Sonicake trademarks and third-party material are excluded.
+distribution: source-only
+requires_stock: Tested on Pocket Master firmware V1.3.3; the published baseline is the V1.3.0 MIDI table
+install_notes: >-
+  Documentation only; nothing to install. The example script in examples/ talks to a
+  connected pedal, and the guide advises backing up user presets and testing writes
+  on a spare slot.
+brick_risk: false
+tags: [research, sysex, midi, documentation]
+versions:
+  - version: main @ 7bff605
+    date: 2026-07-25
+    url: https://github.com/klotznick/pocket-master-interoperability-guide/commit/7bff605
+    notes: No tagged releases; this is the latest commit.

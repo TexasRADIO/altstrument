@@ -24,9 +24,11 @@ notes: >-
   afterwards, and that an update with the hack still installed can leave the unit stuck with a black screen. The
   projects point to Ableton's documented recovery methods for Push 3 Standalone as the way back to stock. Most
   work here adds apps on top of the stock software through the Push Hack framework rather than replacing the
-  operating system. Push 2 and Push 3 used as a tethered controller are not covered by these entries.
+  operating system. A few host-side tools drive Push 3 or Push 2 as a tethered controller from a computer; Push 2 has
+  its own page.
 related:
   - ableton-move
+  - ableton-push-2
 image:
   src: /images/devices/ableton-push-3.webp
   style: photo

@@ -1,7 +1,7 @@
 device: m-vave-fm-1
 name: Clipper
 summary: >-
-  Experimental synthesizer firmware that grew out of SLOOP: one instrument with 23 engines and 407 sounds, including
+  Synthesizer firmware that grew out of SLOOP: one instrument with 23 engines and 407 sounds, including
   a three-oscillator, two-filter HYBRID voice, a twelve-slot modulation matrix, four macros and a web editor.
 description: >-
   Where SLOOP is a groovebox, Clipper is a single synth (two parts in MULTI mode) with no tracks, drum machine,
@@ -11,7 +11,8 @@ description: >-
   gets a modulation matrix, a third LFO, a looping second envelope, a four-lane modulation sequencer, per-voice
   stereo spread, hall and shimmer reverbs and a tape delay. Tunings include just, meantone, maqam and Scala
   files, and the browser editor edits patches live, loads DX7 banks and your own wavetables and backs up the
-  whole FM-1. The README and releases call it experimental and says it has run very little on real hardware.
+  whole FM-1. The first two releases were labelled experimental; the README for 1.2 lists more testing on real units as the
+  main item still to do.
 status: active
 authors:
 - name: isod89
@@ -33,6 +34,12 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, oscillator, wavetable, fm, filter, lfo, fx, reverb, delay, arpeggiator, sequencer, scales, midi, usb-audio, editor, physical-modeling]
 versions:
+- version: '1.2'
+  date: 2026-10-28
+  url: https://github.com/isod89/clipper-fm1/releases/tag/v1.2
+  notes: >-
+    First release without the experimental label; takes in SLOOP 2.8.3's fixes, so a held note keeps sounding under
+    later notes, hardens the second core, adds an offline editor file and plays the EWI as one voice.
 - version: 1.1-experimental
   date: 2026-10-20
   url: https://github.com/isod89/clipper-fm1/releases/tag/v1.1-experimental

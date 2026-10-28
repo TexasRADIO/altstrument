@@ -39,7 +39,7 @@ image:
   source_url: https://github.com/canadianblaken/keystep-con
   first_party: true
 versions:
-  - version: main @ 097ae4f
-    date: 2026-10-26
-    url: https://github.com/canadianblaken/keystep-con/commit/097ae4f0b472529c901095e43c5b3222715de6f7
+  - version: main @ 2e63f19
+    date: 2026-10-27
+    url: https://github.com/canadianblaken/keystep-con/commit/2e63f19271bd47c32e03228b15858e056c470f65
     notes: No tagged releases; this is the latest commit.

@@ -34,6 +34,10 @@ install_notes: >-
 brick_risk: true
 tags: [synth, drums, sequencer, fx, lfo, delay, filter, emulator, fork]
 versions:
+- version: v1.0.1
+  date: 2026-10-27
+  url: https://github.com/galfaroth/mnm1/releases/tag/v1.0.1
+  notes: Gives MNM-1 its own firmware identity, FM-1_61000100; sound engines, controls and saved-data formats are unchanged.
 - version: v1.0.0
   date: 2026-10-26
   url: https://github.com/galfaroth/mnm1/tree/v1.0.0

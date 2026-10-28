@@ -12,7 +12,8 @@ description: >-
   import and export, plus a web editor with full backups. Input is USB MIDI, TRS MIDI and Bluetooth MIDI, and the
   firmware remembers and retries the last outgoing Bluetooth device. USB audio is stereo at 44.1 kHz in 16 or 24
   bit with a synth-master capture. The author labels 0.1.0 experimental and lists final audio, timing and
-  Bluetooth acceptance on hardware as still to be recorded. Installing it over Melodee can replace Melodee's
+  Bluetooth acceptance on hardware as still to be recorded; the 0.1.1 notes say physical validation of that
+  package is still pending. Installing it over Melodee can replace Melodee's
   project A data, and Melodee backups cannot be restored as Saadet backups.
 status: active
 authors:
@@ -44,6 +45,10 @@ image:
   source_url: https://github.com/keremimo/saadet
   first_party: true
 versions:
+- version: 0.1.1
+  date: 2026-10-27
+  url: https://github.com/keremimo/saadet/releases/tag/v0.1.1
+  notes: Fixes MIDI clock drift when the input queue overflows and arpeggiator catch-up after clock bursts, backported from Melodee; physical validation of this package is still pending.
 - version: 0.1.0
   date: 2026-10-23
   url: https://github.com/keremimo/saadet/releases/tag/v0.1.0

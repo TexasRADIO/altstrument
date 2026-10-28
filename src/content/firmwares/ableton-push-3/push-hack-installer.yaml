@@ -24,6 +24,10 @@ install_notes: >-
 brick_risk: false
 tags: [flasher, platform]
 versions:
+  - version: v0.1.6-beta
+    date: 2026-10-28
+    url: https://github.com/federico-pepe/push-hack-installer/releases/tag/v0.1.6-beta
+    notes: Installs the PushHack Remote Script and shows how to turn it on in Live.
   - version: v0.1.4-beta
     date: 2026-10-09
     url: https://github.com/federico-pepe/push-hack-installer/releases/tag/v0.1.4-beta

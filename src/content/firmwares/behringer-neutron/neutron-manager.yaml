@@ -1,0 +1,39 @@
+device: behringer-neutron
+name: Neutron Manager
+kind: tool
+summary: Windows app for the Behringer Neutron that edits the stock firmware's global settings over USB-MIDI, shows a live oscillator tuner, and backs up and flashes firmware images through the chip's ROM bootloader.
+description: >-
+  Finds the Neutron over USB-MIDI and edits its 37 global settings (oscillators, LFO, filter, MIDI, keyboard),
+  reading each value back after writing it. A tuner tab displays the oscillator readings the synth streams,
+  and the settings can be saved to and loaded from JSON. The firmware tab takes a full flash backup first, writes
+  a .bin, .hex or .dfu image over the STM32 DFU bootloader erasing only the pages the image uses, verifies the
+  write, and refuses images that do not fit the Neutron's flash. A reference tab lists the panel button
+  combinations of mrf-r's alternate firmware. The settings protocol was worked out without the official editor,
+  and the repository documents it in SPEC.md. No firmware images are included or downloaded; the user supplies the
+  image to install, and the backup is of the user's own unit.
+status: active
+authors:
+  - name: nexushouser92
+    url: https://github.com/nexushouser92
+source: https://github.com/nexushouser92/neutron-manager
+source_status: open
+license: MIT
+license_notes: The bundled Inter font under assets/fonts is licensed under the SIL Open Font License 1.1, not MIT.
+distribution: download
+requires_stock: 2.0.2 or later for the settings editor
+install_notes: >-
+  Download Neutron Manager.exe from the release (Windows 10/11, no installer) and check it against SHA256.txt, or run
+  main.py with Python after installing requirements.txt. The firmware tab needs the Neutron in its DFU bootloader mode, entered as in Behringer's update
+  procedure, and the WinUSB driver that Behringer's updater installs. It makes a backup of the current flash before every install, and the backup can be restored from the same tab.
+brick_risk: false
+tags: [editor, sysex, flasher, tuner, windows]
+image:
+  url: https://raw.githubusercontent.com/nexushouser92/neutron-manager/main/docs/screenshot.png
+  alt: Neutron Manager window on the Oscillators page, with a sidebar of settings pages and rows of range, stepped shape, autoglide and sync switches
+  credit: nexushouser92
+  source_url: https://github.com/nexushouser92/neutron-manager
+  first_party: true
+versions:
+  - version: v1.0.0
+    date: 2026-10-23
+    url: https://github.com/nexushouser92/neutron-manager/releases/tag/v1.0.0

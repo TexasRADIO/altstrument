@@ -1,0 +1,41 @@
+device: m-vave-fm-1
+name: OCTODRONE
+summary: >-
+  Eight-voice drone synth with paired cross-FM, a two-square hyper LFO, total feedback, a cross-feeding modulated
+  delay and distortion, modelled on SOMA Laboratory's Lyra-8 and played on the keys as touch sensors.
+description: >-
+  The eight voices are grouped as four pairs and two quartets, each with its own tune, a triangle-to-square shape,
+  slow or fast envelopes, hold and vibrato. Pairs can frequency-modulate their neighbours, a switch closes all four
+  pairs into one loop, and total feedback feeds the output back in place of the LFO. The white keys act as the eight
+  touch sensors (a black key touches both neighbours), a latch mode holds them, and MIDI notes play the same sensors.
+  The effects are two delay lines with crossed feedback that can modulate themselves or follow the LFO, and a
+  distortion with spread. Eight factory panels can be saved to flash, and a computer can play audio into the USB input.
+  All sound is computed with integers. The README (in French) calls it an independent project with no link to SOMA
+  Laboratory or M-VAVE. It is built on konsumer's foma framework, so it uses foma's browser page for the emulator,
+  installer and rescue.
+status: active
+authors:
+- name: pjac1810
+  url: https://github.com/pjac1810
+source: https://github.com/pjac1810/octodrone
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md. The platform/mvave directory is from M-VAVE's FM1 Open kit: GPLv3 with M-VAVE's SDK linking
+  exception, plus the binary engine library platform/mvave/sdk/lib/libfm1_engine.a under M-VAVE's terms for FM-1
+  devices only. Felucca, SLOOP and Dinghy code is GPL-3.0-only, and the USB audio code ported from felucca-bsp is
+  MPL-2.0 used under GPL-3.0.
+homepage: https://pjac1810.github.io/octodrone/
+distribution: browser-installer
+requires_stock: V15
+install_notes: >-
+  Open the project page in Chrome or Edge with the FM-1 on USB and use its Install tab; the .fwsc is built by the
+  repository's GitHub workflow, or build it with Docker (./fm1 build). Hold OCT- at power-on for the rescue mode, where
+  the page's Rescue tab puts M-VAVE's V15 back from a file you download from M-VAVE.
+brick_risk: true
+tags: [synth-engine, oscillator, fm, lfo, delay, fx, midi, usb-audio, emulator]
+versions:
+- version: main @ 1a07fc0
+  date: 2026-10-28
+  url: https://github.com/pjac1810/octodrone/commit/1a07fc0d3c8e9da2d1fe3f01289320532b093339
+  notes: No tagged releases; this is the latest commit.

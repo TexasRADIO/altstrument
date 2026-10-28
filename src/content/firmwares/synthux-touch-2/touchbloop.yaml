@@ -1,0 +1,42 @@
+device: synthux-touch-2
+name: TouchBloop (Bloop)
+summary: Synthux glitch looper for the Touch 2, inspired by the Chase Bliss Blooper, that grabs the input when a pad is touched and loops it with a different distortion per pad, a digital-to-analog fader, reverse and random modes, and size, position, pitch and mod controls.
+description: >-
+  The repository began as TouchB, titled Simple B in its README, and is now
+  called TouchBloop; its README calls the firmware Bloop. Pads P03 to P09 loop
+  the incoming audio and each puts a different distortion on the loop, with the
+  centre pad clean. The left fader morphs the distortion from digital to
+  analog, the right fader is a low-pass/high-pass filter, and the switches
+  choose momentary, latched or effects-only pads and forward, random or
+  reverse playback. The knobs set loop size, position, pitch (with hidden
+  snapping to fifths and octaves), mod, reverb and mix. The first release not
+  marked as a pre-release, 1.0.0, followed many pre-releases since June 2026.
+status: active
+authors:
+  - name: Synthux Academy
+    url: https://github.com/Synthux-Academy
+source: https://github.com/Synthux-Academy/TouchBloop
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file.
+homepage: https://github.com/Synthux-Academy/TouchBloop/releases
+distribution: download
+install_notes: >-
+  Download the .bin from the latest release (TouchBloop_1.0.0.bin for 1.0.0) and
+  flash it with the Daisy Seed web programmer or Synthux's firmware tool, or build it with make libs and make and upload with make
+  program-dfu.
+tags: [sampler, looper, granular, open-source, touch-2]
+versions:
+  - version: v1.0.0
+    date: 2026-10-28
+    url: https://github.com/Synthux-Academy/TouchBloop/releases/tag/v1.0.0
+    notes: First release not marked as a pre-release; the repository is now TouchBloop and the firmware is called Bloop.
+  - version: v0.9.20
+    date: 2026-09-30
+    url: https://github.com/Synthux-Academy/TouchBloop/releases/tag/v0.9.20
+  - version: v0.9.19
+    date: 2026-09-28
+    url: https://github.com/Synthux-Academy/TouchBloop/releases/tag/v0.9.19
+  - version: v0.9.18
+    date: 2026-09-28
+    url: https://github.com/Synthux-Academy/TouchBloop/releases/tag/v0.9.18

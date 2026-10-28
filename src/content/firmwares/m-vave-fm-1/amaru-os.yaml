@@ -37,7 +37,7 @@ image:
   source_url: https://github.com/MarcoCasanova00/amaru-os
   first_party: true
 versions:
-- version: main @ 0be50cb
-  date: 2026-10-27
-  url: https://github.com/MarcoCasanova00/amaru-os/commit/0be50cb519c54174f7cf8395c51111f1b0ad0a37
+- version: main @ f740e21
+  date: 2026-10-28
+  url: https://github.com/MarcoCasanova00/amaru-os/commit/f740e2114a644b96fa8a97d10c9b781e995d31d0
   notes: No tagged releases; this is the latest commit.

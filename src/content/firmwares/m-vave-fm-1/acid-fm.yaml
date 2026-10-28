@@ -1,17 +1,19 @@
 device: m-vave-fm-1
 name: ACID FM
 summary: >-
-  Fork of JIANT FM aimed at IDM and braindance: its README is at 0.4, with trimmed engines, an acid-coloured screen
+  Fork of JIANT FM aimed at IDM and braindance: its README is at 0.5.1, with trimmed engines, an acid-coloured screen
   theme and IDM genres in the song generator; chopped breaks and tape effects are still planned.
 description: >-
   Fork of JIANT FM, which is itself a Felucca fork using SLOOP's song system, so it keeps JIANT's engines,
   sequencer, browser installer, editor and emulator. The README lists the work in steps: 0.2 trimmed the engines
   and set aside 128 KiB of flash for breakbeats, 0.3 brought one acid palette, a home screen with TRACKS, VISUAL and
-  GEN views and a new splash, and 0.4 redrew the sound sections (EDIT, ENV, ARP, SCL, LFO, FX) in that look, narrowed
-  the generator to ten IDM genres and added a short demo that plays at power-on. Still planned are loading and
-  chopping your own breakbeats from the web page, tape and 303-style accent and slide effects, new voices and
-  further song-generator styles. SEQ, GLO, SAVE and the menu keep their inherited layouts in the new colours, and
-  parts of the manual still describe JIANT FM. No release is tagged yet, so the version below is a commit. The
+  GEN views and a new splash, 0.4 redrew the sound sections (EDIT, ENV, ARP, SCL, LFO, FX) in that look, narrowed
+  the generator to ten IDM genres and added a short demo that plays at power-on, 0.5 redrew SEQ, GLO and a new MIDI
+  page (per-track MIDI in, out and channel, clock source and clock out) in the same look, and 0.5.1 retuned the
+  genre names, tempo ranges and swing, replaced BROKEN BEAT and DRIFT with GLITCH HOP and AMB TECHNO, and made an
+  external clock hold a steady tempo. Still planned are loading and chopping your own breakbeats from the web
+  page, tape and 303-style accent and slide effects, new voices and further song-generator styles. SAVE and the
+  menu keep their inherited layouts in the new colours. No release is tagged yet, so the version below is a commit. The
   repository includes a browser emulator and a manual site.
 status: active
 authors:
@@ -32,7 +34,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, sequencer, fx, fm, editor, emulator]
 versions:
-- version: main @ 851c037
-  date: 2026-10-26
-  url: https://github.com/NorfolkHacker/acid-fm/commit/851c037de9282a972266d39059bed70e440fd35a
+- version: main @ cbbf04a
+  date: 2026-10-27
+  url: https://github.com/NorfolkHacker/acid-fm/commit/cbbf04ab0e929ca9e1864a2f7a894ea64b1b12db
   notes: No tagged releases; this is the latest commit.

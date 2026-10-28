@@ -21,7 +21,7 @@ install_notes: Reference data and a checker script for mod authors; nothing is i
 brick_risk: false
 tags: [research, python]
 versions:
-  - version: main @ dd618b1
-    date: 2026-10-15
-    url: https://github.com/LizardMan245/op1-mod-registry/commit/dd618b14d8eeca6bf656236c6d88043f86e120f4
+  - version: main @ 01aaba6
+    date: 2026-10-27
+    url: https://github.com/LizardMan245/op1-mod-registry/commit/01aaba6201701e697e67738aafbd89f813a006d0
     notes: No tagged releases; this is the latest commit.

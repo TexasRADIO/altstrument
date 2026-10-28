@@ -1,0 +1,29 @@
+name: euroTrack
+manufacturer: E103-designs
+category: eurorack
+tagline: Narrow Eurorack bar and beat counter with a 128x64 OLED, timer and clock output
+description: >-
+  euroTrack is a narrow Eurorack module from E103-designs that counts bars and beats from an external clock and
+  shows the position on a 128 by 64 OLED. It has jacks for clock in, reset, clock out and a measure marker output,
+  plus two buttons, one for the meter and one for the performance timer. Its firmware runs on an Arduino Nano-style
+  ATmega328P board.
+platform: ATmega328P (Arduino Nano)
+links:
+  manufacturer: https://github.com/E103-designs/euroTrack
+notes: >-
+  The published sketch targets a classic Nano with an ATmega328P at 16 MHz and an SSD1306 I2C display at 0x3C. The
+  repository says its schematics folder is still a placeholder: corrected schematics and editable CAD files are
+  pending upload, so it is not yet a complete hardware release, and jack voltage limits and the PCB-to-firmware pin
+  mapping should be checked against that release. The README calls the V4.1 source an engineering candidate that
+  has been compiled and tested on a host but not qualified on hardware.
+related: [e103-designs-alteria, e103-designs-sincria]
+image:
+  src: /images/devices/e103-designs-eurotrack.webp
+  style: photo
+  alt: Front panel of the black euroTrack module with an OLED window, CLKIN, RESET, CLKOUT and MEAS jacks, and blue T.S. and TIMER buttons
+  width: 800
+  height: 1423
+  credit: E103-designs
+  license: project photo, published in the official euroTrack repository
+  source_url: https://github.com/E103-designs/euroTrack
+  original_url: https://raw.githubusercontent.com/E103-designs/euroTrack/main/images/front.jpg

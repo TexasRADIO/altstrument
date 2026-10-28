@@ -1,0 +1,54 @@
+device: polyend-tracker
+name: Retrack
+summary: From-scratch four-track stereo looper firmware for the original Polyend Tracker, with overdub and punch-in, playback modes, granular playback, delay, reverb and Clouds effects, a mixer, performance mode, MIDI clock and projects on the SD card.
+description: >-
+  Replaces the Tracker's application with a looper whose four stereo tracks share one bar clock. Takes record to the
+  16 MB of SDRAM, up to about 21 seconds of stereo per track, and longer takes stream to the SD card up to five
+  minutes. It offers count-in and start-on-sound recording, undo and redo, latency compensation measured with a patch
+  cable, reverse, ping-pong, half and double speed, octave and granular playback, tape or time-stretch tempo changes
+  and a loop editor. Two send effects cover delay, reverb, chorus, flanger and a port of Mutable Instruments Clouds.
+  Other parts are a mixer with DJ filters, a performance page with beat repeats and tape stop, WAV loading and
+  export, learnable footswitch actions and an on-device manual. The hardware layer is copied from OpenTracker, and
+  the sequencer and sample engine are not. The README marks it as very beta, with audio glitches and a slow screen
+  under load possible.
+status: active
+authors:
+  - name: math0ne
+    url: https://github.com/math0ne
+source: https://github.com/math0ne/retrack-tracker
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no LICENSE file. PROVENANCE.md says the hardware layer is copied from OpenTracker, whose README
+  calls it MIT but whose repositories do not ship the licence file, and that a licence notice should be added before
+  publishing. Third-party code in third_party/ keeps its own licence.
+distribution: download
+install_notes: >-
+  Download the .ptf from a release and copy it into /Firmware on the Tracker's SD card, then run the firmware update
+  from Config and pick the file. Each release also has an SD card zip with an ot_restore.txt that flashes the image at
+  the next power-on. Keep Polyend's stock .ptf on the card as the way back, which the Config firmware page can also
+  flash.
+brick_risk: true
+tags: [looper, fx, granular, reverb, delay, performance, midi]
+image:
+  url: https://raw.githubusercontent.com/math0ne/retrack-tracker/main/docs/img/home.png
+  alt: Retrack home screen with four rows of stereo waveforms, each with a bar grid and a playhead, above a row of screen key labels for REC, PLAY, MUTE, TEMPO, MODE, INPUT, VOLUME and UNDO
+  credit: math0ne
+  source_url: https://github.com/math0ne/retrack-tracker
+  first_party: true
+versions:
+  - version: v1.0
+    date: 2026-10-28
+    url: https://github.com/math0ne/retrack-tracker/releases/tag/v1.0
+  - version: v0.4
+    date: 2026-10-28
+    url: https://github.com/math0ne/retrack-tracker/releases/tag/v0.4
+  - version: v0.3
+    date: 2026-10-27
+    url: https://github.com/math0ne/retrack-tracker/releases/tag/v0.3
+  - version: v0.2
+    date: 2026-10-27
+    url: https://github.com/math0ne/retrack-tracker/releases/tag/v0.2
+  - version: v0.1
+    date: 2026-10-27
+    url: https://github.com/math0ne/retrack-tracker/releases/tag/v0.1

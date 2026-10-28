@@ -1,11 +1,12 @@
 device: m-vave-fm-1
 name: K-WASUB
 summary: >-
-  Bass synth firmware for the FM-1 built from KAWA's platform: wobble, reese, sub and 808 engines, two LFOs, an A/B and
+  Bass synth firmware for the FM-1 built from KAWA's platform: nine oscillator engines, three LFOs, an A/B and
   X/Y morph, FX pads, a four-band EQ, and a drum and bass sequencer with parameter locks.
 description: >-
-  Aimed at drum and bass, dub, dubstep and techno. It has four bass engines, or eight when pads and leads are
-  enabled, seven filters, a four-band EQ and an LFO page, and holding LFO while turning a knob assigns the second
+  Aimed at drum and bass, dub, dubstep and techno. Each oscillator has nine engines (analog, 808, CS, wavetable,
+  four-operator FM, growl, additive, phase distortion and hard sync), and there are seven filters, a four-band EQ
+  and an LFO page with three LFOs, the third one global. Holding LFO while turning a knob assigns the second
   LFO to that setting. The SEL windows hold performance, morph, live effects and macro pages. A bass sequencer of
   up to 64 steps and an eight-track drum sequencer, with kits in 808, 909, dub techno and acoustic styles, both
   support trig conditions, probability and parameter locks, and knob moves can be recorded as automation. The
@@ -40,7 +41,7 @@ image:
   source_url: https://github.com/Guizmoh/K-WASUB_Firmware_for_FM1
   first_party: true
 versions:
-- version: main @ cd246c3
+- version: main @ a6204c3
   date: 2026-10-27
-  url: https://github.com/Guizmoh/K-WASUB_Firmware_for_FM1/commit/cd246c33cf27a131ab9ac6c49a5ea51c8120b9b3
-  notes: No tagged releases; this is the latest commit, which carries package 1.0.13.
+  url: https://github.com/Guizmoh/K-WASUB_Firmware_for_FM1/commit/a6204c3cefa370eb8147b80c5d09f7a6574fc8ed
+  notes: No tagged releases; this is the latest commit, which carries package 1.0.33.

@@ -1,0 +1,37 @@
+device: m5stack-cardputer
+name: meehaw live performer
+summary: Live-performance groovebox firmware for the Cardputer ADV with two sets of eight tracks, MIDI-generated patterns in a global key, one-shot drums, loops, 303-style synth tracks, per-track effects, a looper, a session recorder and a USB drive mode.
+description: >-
+  Tracks are grouped into chord, lead, pad, bass, effects, percussion, vocal and beat roles, with two sets of eight
+  switched at the bar. Patterns are generated from a MIDI library in the chosen key, drums are one-shots, vocals and
+  loops stream from the microSD card, and the synth tracks take their 303 character from MiniAcid. A perform page adds
+  a looper, per-track effects and gyro effects. The session recorder renders to WAV, and sets are saved as presets.
+  The keyboard layout has printable key stickers. A second firmware in the spare OTA slot makes the card appear as a
+  USB drive, and a serial loader fills the card. A desktop SDL build of the same app is included. The player does
+  nothing until the card holds its /lp content; the release has a free card bundle, while the author's own
+  commercial-pack content is not shared and the card tools build it from the user's own library. The release is marked
+  as a pre-release.
+status: active
+authors:
+  - name: Miha Ambroz
+    url: https://github.com/mihatm8
+source: https://github.com/mihatm8/meehaw-live-performer
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the firmware, tools, docs and the generated clips. MiniAcid (MIT), the M5Stack libraries (MIT),
+  arduino-esp32 (LGPL-2.1), ESP-IDF (Apache-2.0), FatFs and TinyUSB keep their own licences, listed in
+  docs/CREDITS.md. Card content has its own licences, in lp/LICENSES.md inside each bundle.
+distribution: download
+install_notes: >-
+  Each release has a merged full image (flash at 0x0 with esptool, or the web flasher in Chrome or Edge), a player
+  image for updates, and checksums. Fill the microSD card's /lp folder from the free bundle or build your own with the
+  tools in the repository; the firmware needs it to play anything. docs/FLASHING.md has the steps and the recovery
+  procedure.
+brick_risk: false
+tags: [groovebox, performance, looper, sequencer, chords, synth-engine, drums, midi, generative]
+versions:
+  - version: v0.9.0
+    date: 2026-10-28
+    url: https://github.com/mihatm8/meehaw-live-performer/releases/tag/v0.9.0
+    notes: Pre-release with the full, player, USB drive and card loader images and a free card bundle.

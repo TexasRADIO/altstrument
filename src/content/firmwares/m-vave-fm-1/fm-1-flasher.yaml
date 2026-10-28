@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: FM-1 Flasher
+kind: tool
+summary: >-
+  Portable CircuitPython device that keeps FM-1 firmware packages on a microSD card and installs them over USB MIDI
+  SysEx, so a firmware can be swapped without a computer. Installs work from the REPL; the touchscreen is not started.
+description: >-
+  An Adafruit Feather RP2040 USB Host acts as the USB host for the FM-1, with a MAX3421E USB Host FeatherWing or the
+  Feather's own PIO USB port, and an optional 3.5-inch TFT FeatherWing for the planned touchscreen. The update
+  protocol is ported from M-VAVE's WebUpdate.js, with each package checked the way the FM-1 checks it before writing.
+  The README reports installs from the REPL of V15 to SLOOP in 70 seconds, SLOOP back to V15 with the factory voices
+  restored in 73 seconds, and V15 to ChoralRoot in 69 seconds. It needs a patched CircuitPython build (patches are in
+  the repository). A desktop command-line flasher, a simulated FM-1 and a unit-test suite are included, and tools/make_sd.py
+  prepares an SD card from .fwsc files or from the FM-1 Firmware Hub catalog. The repository holds no firmware
+  packages; the README tells you to take the stock V15 image from a clone of m-vave/fm1_open.
+status: active
+authors:
+- name: jedgarpark
+  url: https://github.com/jedgarpark
+source: https://github.com/jedgarpark/FM-1_Flasher
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README says GPL-3.0, because the update protocol is ported from M-VAVE's WebUpdate.js (GPL-3.0-only with the
+  GPL-3.0 linking exception). Each firmware you put on the card keeps its own licence.
+distribution: source-only
+requires_stock: V15 or a firmware with a compatible USB updater
+install_notes: >-
+  Hardware build only: a Feather RP2040 USB Host running CircuitPython 10.3.1 or 11 with the patches from patches/,
+  plus the USB host wing or cable setup described in PLAN.md. Prepare the card with tools/make_sd.py, then run
+  device/fm1_install.py from the REPL; the touchscreen UI has not been started and reading packages from microSD is still
+  an open item. Keep both devices powered during an install. PLAN.md lists recovery routes, including holding OCT- at
+  power-on and a Raspberry Pi Pico transporter rig.
+brick_risk: true
+tags: [flasher, loader, usb-midi, sysex, python, utility]
+versions:
+- version: main @ a22a362
+  date: 2026-10-28
+  url: https://github.com/jedgarpark/FM-1_Flasher/commit/a22a3623d674b972fb4d5488c66cacc5127ef0a8
+  notes: No tagged releases; this is the latest commit.

@@ -7,9 +7,11 @@ description: >-
   back on exit. USB is not emulated and the 7-segment display is a stub. On
   first launch it offers to download the community firmware and the factory
   SD card contents. Graham Wheeler started it in gramster/delugemu, where the
-  prebuilt macOS, Linux and Windows bundles still live. A copy with the same
-  history moved to Synthstrom Audible's GitHub organisation in October 2026,
-  and other firmware developers now commit there.
+  prebuilt macOS, Linux and Windows bundles of the stable releases still live.
+  A copy with the same history moved to Synthstrom Audible's GitHub
+  organisation in October 2026, and other firmware developers now commit there.
+  That copy publishes a rolling "nightly" pre-release with bundles for the
+  three systems, which is not listed below.
 status: active
 authors:
   - name: Graham Wheeler

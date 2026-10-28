@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: GLITCH
+summary: >-
+  Drum machine for glitch and microsound beats: 27 synthesized sound slots, a polymetric sequencer of up to 64 steps
+  per slot, living loops that mutate, stutter and punch-in effects, tape echo and shimmer reverb.
+description: >-
+  A fork of M-VAVE's FM1 Open V14. Every sound is synthesized (clicks, click trains, digital crunch, noise snaps, micro
+  kicks, speaker pops, very high beeps), with no samples, and each of the 27 key slots has pitch, decay, color and
+  random settings per hit. Each slot has its own length and rate (1/16 to 1/64), probability, ratchets, micro timing,
+  scatter, accent and flam. Random beats and mutating loops can be generated, holding FX with a white key gives 16
+  stutter and repeat effects and with a black key 11 punch-in effects. Space comes from a tape echo, a delay, a drive
+  filter and a shimmer reverb, and 16 patterns are stored on the device, with MIDI notes, clock, start and stop. The
+  author calls it a beta hobby project; the first hardware test, on one unit, showed CPU load under 30% with dense
+  beats. Its sibling GLIDER is a drone synth from the same author.
+status: active
+authors:
+- name: ttreu
+  url: https://github.com/ttreu
+source: https://github.com/ttreu/fm1-glitch
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSE.md: GPL-3.0-only with M-VAVE's additional permission to link the FM1 binary SDK, inherited from FM1 Open.
+  The binary engine library sdk/lib/libfm1_engine.a is under M-VAVE's separate terms for FM-1 devices
+  (THIRD_PARTY.md). The repository contains M-VAVE's licensed V15 recovery image sdk/firmware/FM-1_015.fwsc,
+  Apache-2.0, git blob ce49cc1595b67347c68a3ac7463017f9fa8c19dd, the same file as in m-vave/fm1_open.
+  The 0.1.0-beta installer page FM1-GLITCH.html embeds that same V15 image (699,956 bytes, same blob).
+homepage: https://subcity.at/fm1-glitch-drums/
+distribution: browser-installer
+requires_stock: V15 or FM1 Open
+install_notes: >-
+  Download FM1-GLITCH.html from the release, open it in Chrome or Edge with the FM-1 on USB and use Device update;
+  its Recovery & force update option goes back to the V15 image it carries. Back up projects, voices and samples
+  first: GLITCH keeps its patterns in the sample area and cannot read FM1 projects, voices or samples. The release also
+  has FM1-GLITCH.fwsc for tools/flash_fm1.py on macOS, from a unit already running FM1 Open firmware.
+brick_risk: true
+tags: [drums, sequencer, generative, synth-engine, fx, reverb, delay, midi, emulator, fork]
+image:
+  url: https://subcity.at/assets/img/fm1-glitch-drums/panel-2.webp
+  alt: "The FM-1 workbench simulator running GLITCH: the screen shows pattern P01 running at 90 BPM, slot C SNAP with a step grid, and a KIT page with accent, flam, hiss and density values"
+  credit: ttreu
+  source_url: https://subcity.at/fm1-glitch-drums/
+  first_party: true
+versions:
+- version: 0.1.0-beta
+  date: 2026-10-27
+  url: https://github.com/ttreu/fm1-glitch/releases/tag/v0.1.0-beta
+  notes: First release, marked as a beta pre-release; tested on one real FM-1.

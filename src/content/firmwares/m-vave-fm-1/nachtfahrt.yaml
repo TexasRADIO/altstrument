@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: NACHTFAHRT
+summary: >-
+  Generative Berlin School instrument that plays itself from power-on: two drifting sequences over a chord drone, a
+  gliding lead and an atmosphere, in eight pieces after Tangerine Dream, Klaus Schulze and Ashra.
+description: >-
+  A fork of DUB-1, which is a fork of AMB-1, keeping their echo, plate reverb, pieces system and platform. The first
+  sequence has up to 16 steps on a plucked analog-style voice, with its notes repeated at the echo times (a dotted
+  eighth by default). The second sequence is often a step shorter, so the two drift apart and meet again. A drone plays
+  a walking chord on two banks of voices with a pedal and a phaser, a lead plays long glided phrases deep in the
+  reverb, and an atmosphere layer offers wind, surf, space, air or tape. Every layer's filter moves on its own clock
+  around the cutoff you set, a bridge in the middle of each piece brings the layers' filters apart and together, and
+  a piece repeats until switched off. The white keys play the lead in the piece's scale, the black keys are
+  eleven effects held while pressed, and a PERFORM page mutes and solos layers. The project site has a browser
+  emulator and a manual. The README and manual still describe version 0.1 as untested on hardware, while the 0.9.0
+  release notes say it has run on a real FM-1, at about 48% average and 73% peak audio CPU load.
+status: active
+authors:
+- name: FartyPants
+  url: https://github.com/FartyPants
+source: https://github.com/FartyPants/fm1-nachtfahrt
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md: inherits GPL-3.0-only from DUB-1, AMB-1 and Felucca. The Terminus and Barlow Semi Condensed fonts
+  are SIL OFL 1.1, and the JieLi AC79 SDK files are read from your SDK checkout at build time, not stored in the
+  repository.
+homepage: https://fartypants.github.io/fm1-nachtfahrt/
+distribution: browser-installer
+requires_stock: V15 or Felucca
+install_notes: >-
+  Web installer in Chrome or Edge over USB (also Chrome on Android with a USB-OTG adapter), or tools/fm1_install.py
+  with nachtfahrt-0.9.0.fwsc from the release. The installer's Back to the stock firmware option and M-VAVE's
+  M-UPGRADE both restore V15. If NACHTFAHRT fails to start twice it starts in a safe mode from which the installer
+  still works.
+brick_risk: true
+tags: [generative, ambient, sequencer, synth-engine, fx, reverb, delay, emulator]
+image:
+  url: https://raw.githubusercontent.com/FartyPants/fm1-nachtfahrt/main/docs/img/site/banner.jpg
+  alt: "Banner with the word NACHTFAHRT in cream capitals at the centre of a ring of small coloured dots on a black starfield"
+  credit: FartyPants
+  source_url: https://github.com/FartyPants/fm1-nachtfahrt
+  first_party: true
+versions:
+- version: 0.9.0
+  date: 2026-10-28
+  url: https://github.com/FartyPants/fm1-nachtfahrt/releases/tag/v0.9.0
+  notes: First public build; eight pieces, two sequences, drone, lead, atmosphere and filter motion.

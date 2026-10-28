@@ -1,0 +1,65 @@
+device: m-vave-fm-1
+name: OPERATOR
+summary: >-
+  Polyphonic FM synth modelled on Ableton Live's Operator: four oscillators, 11 algorithms, seven envelopes, an LFO,
+  a filter and a waveshaper, with Operator's factory presets as a read-only bank.
+description: >-
+  Rights warning: the read-only preset bank is Operator's factory presets from Ableton Live 12's Core Library,
+  converted to OPERATOR's parameters. The converted files are in presets/ableton/ in the repository and are compiled
+  into the firmware; LICENSING.md says they belong to Ableton and are not covered by the GPL. The project states that
+  it contains no Ableton code and is not affiliated with Ableton. The synth has four oscillators (A to D) with 23
+  waveforms and user partials, fixed frequency, feedback and phase, plus seven envelopes with Loop, Beat, Sync and
+  Trigger modes. It also has an LFO that reaches audio rate, a pitch envelope, a filter (low-pass, high-pass,
+  band-pass, notch and morph, at 12 or 24 dB) and a waveshaper. It plays up to six voices with a Spread option
+  (a stereo voice pair), glide and MIDI routing for velocity, key, aftertouch, pitch bend and mod wheel, takes USB and
+  TRS MIDI, outputs 48 kHz audio and has user preset slots in flash. The README says the engine had not yet been
+  heard on the hardware, that the algorithm routings are provisional and that modulation depths still need matching
+  to Operator by ear. The platform layer comes from Felucca by way of SLOOP and ORBIT.
+status: active
+authors:
+- name: npi3pak
+  url: https://github.com/npi3pak
+source: https://github.com/npi3pak/fm1-operator
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md. The Ableton factory presets compiled into the firmware (presets/ableton/) are Ableton AG's and not
+  covered by OPERATOR's GPL. The Terminus and IBM Plex Sans fonts are SIL OFL 1.1, and three unmodified JieLi AC79
+  SDK files in each package are Apache-2.0. The Felucca platform code is GPL-3.0-only.
+homepage: https://npi3pak.github.io/fm1-operator/
+distribution: browser-installer
+requires_stock: V15 or Felucca
+install_notes: >-
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with an operator-*.fwsc from the releases page.
+  The installer has a Back to the official firmware option, which asks you to download M-VAVE's V15 file from
+  M-VAVE and select it. The README says an interrupted write resumes, an FM-1 that fails to start twice opens USB
+  rescue (also OCT- held at power-on), and one that does not start at all can be recovered with MvaveFM1Unbricker.
+brick_risk: true
+tags: [synth-engine, fm, oscillator, filter, lfo, midi, usb-midi]
+image:
+  url: https://raw.githubusercontent.com/npi3pak/fm1-operator/main/docs/img/operator-pages.png
+  alt: "Four OPERATOR screens on black: the oscillator page with levels for operators A to D, an envelope page, a filter page and an algorithm diagram of four boxes"
+  credit: npi3pak
+  source_url: https://github.com/npi3pak/fm1-operator
+  first_party: true
+versions:
+- version: '0.5'
+  date: 2026-10-28
+  url: https://github.com/npi3pak/fm1-operator/releases/tag/v0.5
+  notes: Frees a voice once it is below -60 dBFS and cannot rise again.
+- version: '0.4'
+  date: 2026-10-28
+  url: https://github.com/npi3pak/fm1-operator/releases/tag/v0.4
+  notes: Cuts every voice on a preset change; HOME rows now run from A at the bottom to D at the top.
+- version: '0.3'
+  date: 2026-10-28
+  url: https://github.com/npi3pak/fm1-operator/releases/tag/v0.3
+  notes: Uses Operator's factory presets as the bank, reworks the HOME rows and limits playback to six voices.
+- version: '0.2'
+  date: 2026-10-28
+  url: https://github.com/npi3pak/fm1-operator/releases/tag/v0.2
+  notes: New interface with oscillator rows on HOME, the display on top, and dials and toggles.
+- version: '0.1'
+  date: 2026-10-28
+  url: https://github.com/npi3pak/fm1-operator/releases/tag/v0.1
+  notes: First release.

@@ -44,7 +44,7 @@ image:
   source_url: https://github.com/jasonbot/fm1-grid
   first_party: true
 versions:
-- version: main @ 4d14ddf
-  date: 2026-10-26
-  url: https://github.com/jasonbot/fm1-grid/commit/4d14ddf67533d6b7d6a38555b31c6cd6dacde993
+- version: main @ fc73bd0
+  date: 2026-10-28
+  url: https://github.com/jasonbot/fm1-grid/commit/fc73bd0d13a3909695ea40d3dc64a889a01e8cc7
   notes: No tagged releases; this is the latest commit.

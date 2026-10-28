@@ -20,6 +20,10 @@ install_notes: >-
 brick_risk: true
 tags: [drums, sequencer, sampler, fx, performance]
 versions:
+- version: 0.26.0
+  date: 2026-10-28
+  url: https://github.com/DeadActive/hortator/releases/tag/drum-v0.26.0
+  notes: Adds MIDI clock out, MIDI-in routing and thru, live cueing of project slots and eight variations per slot, FILL step probability and slot copy and paste. The Bluetooth package gets a page for saved devices and FM-Link between two FM-1s.
 - version: 0.25.0
   date: 2026-10-27
   url: https://github.com/DeadActive/hortator/releases/tag/drum-v0.25.0

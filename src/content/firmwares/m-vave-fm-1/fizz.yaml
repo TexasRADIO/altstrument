@@ -28,10 +28,15 @@ distribution: browser-installer
 install_notes: >-
   Install from the page at quixotic7.github.io/FIZZ/install/ in Chrome or Edge over USB, which writes the firmware
   and then FIZZ's data. With the release files instead, install the .fwsc and then push the xdata file with
-  firmware/tools/fizz_xdata.py. Updating between betas keeps projects and presets.
+  firmware/tools/fizz_xdata.py. Updating between betas keeps projects and presets, but switching between the USB and Bluetooth packages
+  erases them, so back up in the manager first.
 brick_risk: true
 tags: [sequencer, synth-engine, fm, fx, chords, arpeggiator, performance, editor, midi]
 versions:
+- version: 0.12.0-beta.12
+  date: 2026-10-28
+  url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.12.0-beta.12
+  notes: Adds USB audio so the master output can be recorded over the cable, and a second package with Bluetooth MIDI that holds 4 projects and 128 presets. Switching between the two packages erases projects and presets.
 - version: 0.12.0-beta.9
   date: 2026-10-27
   url: https://github.com/Quixotic7/FIZZ/releases/tag/v0.12.0-beta.9

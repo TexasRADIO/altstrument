@@ -1,0 +1,33 @@
+device: elektron-syntakt
+name: syntakt-machine45-research
+kind: tool
+summary: Research notes and a C header for adding a 46th Machine, raw ID 45, to Syntakt OS 1.41, plus a small script that checks stock OS metadata. Documentation only; no firmware, patch or installable mod.
+description: >-
+  The repository describes how a new Machine with its own public ID could be registered next to the stock IDs 0 to 44,
+  covering the menu entry, selector value, engine-family slot, eight parameter fields and their save and load path.
+  It also holds an evidence index, a draft issue for the SyntHack OS project, a DSP source interface header for future
+  Machine code and a Python script that checks sections of a stock 1.41 file you supply against recorded hashes. The author
+  states that the working candidate is private and frozen, that the public material cannot reproduce it, and that a
+  complete Machine has not been shown running on a device or in a whole-device emulator. The README is headed
+  research only and do not flash. It is meant to complement SyntHack OS and SY FM4 rather than replace them.
+status: active
+authors:
+  - name: Humgic
+    url: https://github.com/Humgic
+source: https://github.com/Humgic/syntakt-machine45-research
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the documentation, the header and the checker script. The licence grants no rights in Elektron firmware, code,
+  assets or trademarks, and the repository says it contains none.
+distribution: source-only
+requires_stock: "1.41"
+install_notes: >-
+  Nothing to install or flash. The checker script takes sections you extracted yourself from a stock 1.41 file.
+brick_risk: false
+tags: [research, machines, synth-engine]
+versions:
+  - version: main @ 9511030
+    date: 2026-10-28
+    url: https://github.com/Humgic/syntakt-machine45-research/commit/9511030517b0b82ec5dfa8d74d75b77e58bef9c0
+    notes: No tagged releases; this is the latest commit.

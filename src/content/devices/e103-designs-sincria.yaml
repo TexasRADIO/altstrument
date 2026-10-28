@@ -16,7 +16,7 @@ notes: >-
   corrected schematic and editable CAD files are still to be uploaded, and that the published
   sketch has not been checked against the newest PCB revision, so confirm the board and MCU
   before uploading.
-related: []
+related: [e103-designs-eurotrack]
 image:
   src: /images/devices/e103-designs-sincria.webp
   style: photo

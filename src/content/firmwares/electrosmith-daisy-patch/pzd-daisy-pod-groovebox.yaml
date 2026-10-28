@@ -40,6 +40,18 @@ image:
   source_url: https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox
   first_party: true
 versions:
+  - version: v3.5.0
+    date: 2026-10-27
+    url: https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox/releases/tag/v3.5.0
+    notes: Runs the Pod at 480 MHz instead of 400 MHz, skips processing in idle engines and makes filters and effects cheaper, and adds a per-part CPU breakdown on the Mixer page. The encoder click now goes back one level.
+  - version: v3.4.2
+    date: 2026-10-27
+    url: https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox/releases/tag/v3.4.2
+    notes: Adds multi-sample banks of one WAV per note, folder-based kits, breaks and sounds that load WAVs of any sample rate, and SD card folders for drum pack imports.
+  - version: v3.4.1
+    date: 2026-10-26
+    url: https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox/releases/tag/v3.4.1
+    notes: Stops a knob from taking over a setting when you scroll to a page without touching it.
   - version: v3.4.0
     date: 2026-10-26
     url: https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox/releases/tag/v3.4.0

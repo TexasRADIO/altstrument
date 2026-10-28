@@ -1,0 +1,44 @@
+device: m-vave-fm-1
+name: PT/FM
+summary: >-
+  ProTracker-style tracker for the FM-1 (Pocket Tracker / Fusion Machine): patterns of up to 16 tracks mixing DX7, JUNO-106, TB-303, chip and sampler instruments, 16 voices over both cores, a loop station, a two-deck DJ mode and a MIDI controller mode.
+description: >-
+  Songs are built from patterns of up to 16 tracks by 128 rows, each cell holding a note, an instrument, a volume and up to
+  four commands. Six instrument kinds share a song: six-operator FM, a JUNO-106 voice, a TB-303 voice, chip sounds, a sampler,
+  and FUSION, where one key plays a row of other instruments as a chord, layer or kit. More than 500 instruments are built in.
+  It has per-song effects with 16 punch-ins on the white keys, a loop station that layers up to 16 loops and records the
+  performance as a song, a DJ mode with two decks, USB and TRS MIDI with clock, USB audio, and a MIDI controller mode. Songs
+  and instruments are saved in the FM-1's flash and survive firmware updates. Songs, patterns and samples come from a demo disk
+  uploaded by the installer. The project site has a browser emulator, a manual and a beta web editor that imports tracker modules, MIDI
+  files and DX7 cartridges. The README says the firmware is being made lighter so more voices can play at once.
+status: active
+authors:
+- name: Vasily Kazantsev (hitosu)
+  url: https://github.com/hitosu
+source: https://github.com/hitosu/ptfm
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Stated in the README and LICENSE. Builds on SLOOP and Felucca (GPL-3.0-only) and on second-core work by Charles Vestal,
+  Kerem Kilic and zednaked. The DX7 engine uses msfa (Apache-2.0), the TB-303 voice follows Open303 (MIT) and the module
+  player is ibxm (BSD-licensed); their licence files are under fw/core. Terminus fonts are SIL OFL 1.1, the package carries three JieLi SDK files (Apache-2.0), and
+  the demo disk has its own free licences (demo-disk/CREDITS.md).
+homepage: https://hitosu.github.io/ptfm/
+distribution: browser-installer
+install_notes: >-
+  Web installer on the project site in Chrome or Edge, on a computer or an Android phone; it installs the firmware and then
+  uploads the demo disk. The page says USB RESCUE stays available and another FM-1 firmware's installer replaces PT/FM. Its
+  return-to-stock option accepts only an unmodified M-VAVE V15 file that you supply.
+brick_risk: true
+tags: [tracker, sequencer, synth-engine, sampler, fx, looper, midi, usb-audio, emulator, editor]
+video:
+  url: https://www.youtube.com/watch?v=95bZPtyD5rE
+  title: "INTRODUCING PT/FM for M-VAVE FM-1"
+  credit: HITOSU
+  first_party: true
+  found_via: https://github.com/hitosu/ptfm#readme
+versions:
+- version: '0.26'
+  date: 2026-10-28
+  url: https://github.com/hitosu/ptfm/releases/tag/v0.26
+  notes: Initial release; the assets are the installer, emulator, editor and manual pages.

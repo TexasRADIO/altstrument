@@ -22,8 +22,12 @@
 /firmware/elektron-octatrack/octamachine /devices/elektron-octatrack 301
 /firmware/elektron-digitone-ii/dn2-cfw /firmware/elektron-digitone-ii/digiwerk 301
 /firmware/m-vave-fm-1/terkinstein /firmware/m-vave-fm-1/crepuscular-homunculus 301
-/firmware/m-vave-fm-1/m-flasher-legacy /firmware/m-vave-fm-1/m-flasher-kmplngj 301
+/firmware/m-vave-fm-1/m-flasher-legacy /firmware/m-vave-fm-1/m-flasher 301
 /firmware/elektron-digitakt/digidrum /devices/elektron-digitakt 301
-/firmware/behringer-neutron/neutron-manager /devices/behringer-neutron 301
 /firmware/buchla-200e/buchla-200e-firmware /devices/buchla-200e 301
 /firmware/roland-sp-404-mkii/doom-os-etc /firmware/roland-sp-404-mkii/sp-etc 301
+/firmware/m-vave-fm-1/m-flasher-kmplngj /firmware/m-vave-fm-1/m-flasher 301
+/firmware/m-vave-fm-1/oktowave /devices/m-vave-fm-1 301
+/firmware/korg-volca-sample/lumon-os-xl /devices/korg-volca-sample 301
+/firmware/korg-volca-sample/volca-studio-xl /devices/korg-volca-sample 301
+/firmware/synthux-touch-2/touchb /firmware/synthux-touch-2/touchbloop 301

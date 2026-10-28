@@ -6,7 +6,8 @@ summary: >-
 description: >-
   Started from a SLOOP v2.3 snapshot rather than a fork, with later SLOOP changes merged in. Releases
   carry only the firmware file, installed with a script from the source; there is no browser installer.
-  Extracted OP-1 tables and factory data are noted separately in LICENSING.md.
+  Extracted OP-1 tables and factory data are noted separately in LICENSING.md. From 0.8.0 the source tree also
+  builds for the SMK-37 Pro, SMK-37 Elite and MKE-P37; the published binaries are for the FM-1 only.
 status: active
 authors:
 - name: dspaudio
@@ -30,6 +31,10 @@ image:
   source_url: https://github.com/dspaudio/orbit
   first_party: true
 versions:
+- version: 0.8.0
+  date: 2026-10-27
+  url: https://github.com/dspaudio/orbit/releases/tag/v0.8.0
+  notes: Adds resonance and a band-pass mode to the track filter, removes the built-in demo song loader and merges the SMK-37 board port into the source; project and USER bank formats change, so back up before updating.
 - version: 0.7.1
   date: 2026-10-15
   url: https://github.com/dspaudio/orbit/releases/tag/v0.7.1

@@ -8,7 +8,8 @@ description: >-
   storage formats, so projects and presets saved by Felucca open in Caravel; projects that use Caravel-only
   parameters need Caravel to open, and projects saved by 0.3.0 or later do not open on 0.2.0 or earlier. Added
   features include a latch for held keys, a button to clear the step under the cursor, per-track voice reservations
-  and a MORE page for spread and morph. DRUM-X, MORPH and the BYTE and FLOAT waves in LOFI are adapted from the
+  and a MORE page for spread and morph; 0.6.0 adds a STASIS hold with ADD and BLEND, and leaves out ROOM, SPRING
+  and the SLICE engine. DRUM-X, MORPH and the BYTE and FLOAT waves in LOFI are adapted from the
   JIANT FM fork. A web installer, editor and browser emulator are published on the project site. The README says
   hardware acceptance on a real FM-1 is still pending, and that the firmware uses USB test IDs that the pid.codes
   policy does not allow on devices that are shared or sold. Not affiliated with Hügelton Instruments or M-VAVE.
@@ -39,6 +40,13 @@ video:
   first_party: true
   found_via: https://github.com/bonszaimusic/caravel#readme
 versions:
+- version: 0.6.0
+  date: 2026-10-27
+  url: https://github.com/bonszaimusic/caravel/releases/tag/v0.6.0
+  notes: >-
+    Adds STASIS HOLD, which captures recent sound from the REV send and holds it, with ADD and BLEND to mix in or
+    fade to another captured sound. ROOM, SPRING and the SLICE engine are left out to fit; projects that use them
+    show substitutions before loading.
 - version: 0.5.0
   date: 2026-10-25
   url: https://github.com/bonszaimusic/caravel/releases/tag/v0.5.0

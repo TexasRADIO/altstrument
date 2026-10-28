@@ -1,0 +1,58 @@
+device: akai-mpc-live
+name: OpenMPC Plugin Manager G2
+summary: On-device VST2 plugin manager for MPC OS 3.x, a fork of poloq's Plugin Manager for MPC with Gen1 and Gen2 builds, that installs, updates and removes catalog plugins from the MPC itself with rollback.
+description: >-
+  Runs as an instrument plugin with its own touchscreen skin and reads the
+  mpc-vst-plugins catalog over the device's network. Tabs list plugins to
+  discover, installed ones and updates, with search, filter and sort. Changes
+  are queued and applied together with one MPC restart. Before MPC is stopped
+  each package's SHA-256 is checked and its manifest is compared with the
+  device's architecture, glibc and MPC OS, and plugins go only to a folder MPC
+  lists in SynthContentLocations. A failed install puts the plugin folder and
+  MPC.settings back. It also takes local zips, registers hand-copied plugin
+  folders, handles addins and has a light and dark theme. It started as a fork
+  of poloq's Plugin Manager for MPC and keeps that project's history. v0.1.9
+  was Gen2 only; v0.2.0 ships a 32-bit armv7 zip for Gen1 devices (Force, Live,
+  Live II, One, X, Key) next to the 64-bit aarch64 zip for Gen2. The author
+  tested it on an MPC Live III with MPC OS 3.10 and on a Force; the MPC One
+  layout comes from a user report and is tested offline only.
+status: active
+authors:
+  - name: sd88me
+    url: https://github.com/sd88me
+  - name: poloq-instruments
+    url: https://github.com/poloq-instruments
+source: https://github.com/sd88me/mpc-vst-plugins/tree/main/tools/plugin_manager_g2
+source_status: open
+license: MIT
+license_notes: >-
+  LICENSE is MIT and keeps poloq's copyright notice from the upstream manager;
+  NOTICE.md lists the other contributors and sources. The repository is MIT
+  overall. Nothing of Akai's firmware or skins is included.
+homepage: https://sd88me.github.io/mpc-vst-plugins/
+distribution: download
+requires_stock: MPC OS 3.x
+install_notes: >-
+  Download the zip for your device (mpc-armv7 for Gen1, mpc-aarch64 for Gen2),
+  copy the folder to the device over root SSH and run install.sh with -t and a
+  Synths folder listed in SynthContentLocations in MPC.settings. It stops MPC,
+  backs up MPC.settings and starts MPC again. Needs a modded unit with root
+  access; the device needs a network connection for the catalog. Applying
+  changes restarts MPC, so save the project first.
+brick_risk: false
+tags: [loader, utility, platform, ui]
+image:
+  url: https://raw.githubusercontent.com/sd88me/mpc-vst-plugins/main/tools/plugin_manager_g2/docs/screenshots/manager-discover-light.png
+  alt: Plugin Manager G2 Discover tab in the light theme, listing five plugins with Beta or Stable badges, versions and red INSTALL buttons, above Update All and Apply buttons
+  credit: sd88me
+  source_url: https://github.com/sd88me/mpc-vst-plugins/tree/main/tools/plugin_manager_g2
+  first_party: true
+versions:
+  - version: plugin-manager-g2-v0.2.0
+    date: 2026-10-28
+    url: https://github.com/sd88me/mpc-vst-plugins/releases/tag/plugin-manager-g2-v0.2.0
+    notes: First release for Gen1 and Gen2 together, with an armv7 and an aarch64 zip, and a picker for the install folder.
+  - version: plugin-manager-g2-v0.1.9
+    date: 2026-10-28
+    url: https://github.com/sd88me/mpc-vst-plugins/releases/tag/plugin-manager-g2-v0.1.9
+    notes: Gen2 only (aarch64); installs, updates and removes plugins with rollback.

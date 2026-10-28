@@ -7,7 +7,8 @@ description: >-
   same author), including a metronome with count-in, quantize, mixer mutes and scene repeats, pattern chains with
   rules, sidechain and FX views, an arpeggiator and custom scales. It adds a track copy and reset, a sample and
   note arpeggiator, per-track scales, a pitch envelope and LFO page for the track knobs, and on-device pack
-  delete and sample copy. Each version has an "S" variant without the features that create, change or delete SD
+  delete and sample copy. Later alphas add a track menu, granular playback on up to four tracks, line input as a
+  track's sound, a two-oscillator synth and an envelope page for the synth and granular sounds. Each version has an "S" variant without the features that create, change or delete SD
   card files by themselves. The repository holds the builders, an assembler, manuals in Spanish and English and
   per-version manifests, and no Novation code. The README says the features were checked mostly in emulation and
   partly on the device, and that the project was developed with Claude.
@@ -27,11 +28,23 @@ install_notes: >-
   Download Novation's official 5706 update yourself (the README links Novation Components' own download), open
   rm_uploader.html from the release zip in Chrome or Edge, pick the official file and a version, and send it over
   Web MIDI, or build the .syx with tools/patch_official.py. The page checks the stock file's hash and refuses other
-  devices. Back up the SD card first; 0.01S is the variant that never writes to the card by itself. The
+  devices. Back up the SD card first; the S variants never write to the card by themselves. The
   bootloader is not touched: Sample Rec + Samples + Note at power-on returns to the official firmware.
 brick_risk: true
 tags: [sampler, sequencer, drums, fx, midi, arpeggiator, performance]
 versions:
+  - version: alpha-0.06
+    date: 2026-10-28
+    url: https://github.com/Ghillermo/CIRCUIT-REMIX/releases/tag/alpha-0.06
+    notes: Pre-release. Adds an envelope page per play mode for the synth and granular sounds and line input from the FX returns. Checked only in emulation.
+  - version: alpha-0.05
+    date: 2026-10-28
+    url: https://github.com/Ghillermo/CIRCUIT-REMIX/releases/tag/alpha-0.05
+    notes: Pre-release. Adds a two-oscillator synth as a track sound, a colour-coded knob-page interface and a new manual. Checked only in emulation.
+  - version: alpha-0.04
+    date: 2026-10-27
+    url: https://github.com/Ghillermo/CIRCUIT-REMIX/releases/tag/alpha-0.04
+    notes: Pre-release. Adds a track menu, granular playback on up to four tracks, line input as a track sound, stereo link and stereo Sample Rec, mostly checked only in emulation.
   - version: alpha-0.03
     date: 2026-10-25
     url: https://github.com/Ghillermo/CIRCUIT-REMIX/releases/tag/alpha-0.03

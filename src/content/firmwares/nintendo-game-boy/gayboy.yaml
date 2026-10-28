@@ -5,12 +5,14 @@ summary: >-
   MIDI input through Arduinoboy and a SameBoy-based player on the project's site.
 description: >-
   GAYBOY is a 1 MiB MBC5 cartridge image with battery-backed save RAM that targets the original Game Boy and the
-  Game Boy Color. Seven logical tracks share the four hardware sound channels, and the sample drums share the wave
-  channel. It has a piano roll with note length and velocity, pattern pads, a mixer with pan and mute/solo, and
+  Game Boy Color. Five logical tracks (two pulse, wave, noise and drums) share the four hardware sound channels, and the sample
+  drums temporarily take the wave channel. It has a piano roll with note length and velocity, pattern pads, a mixer with pan and mute/solo, and
   drum kits with ten PCM rows and two noise voices. An Arduinoboy in mGB mode can play it from external MIDI gear.
   The author's page runs the ROM in a browser emulator with a tutorial. The README calls version 1.0 stable and
   says pattern-launch playback has been tested on physical hardware, while its development notes still list current
-  limitations, including timing measurements. The build needs GBDK 4.5.0 and audio inputs
+  limitations, including timing measurements. On 2026-10-27 the author froze the public repository as the final free
+  demo, a build later than 1.0; the browser player and ROM download stay on that build and further development is
+  not published here. The build needs GBDK 4.5.0 and audio inputs
   that are not in the repository. The GitHub owner is EvatechLTD and the README credits dpjpandone.
 status: active
 authors:
@@ -37,6 +39,10 @@ image:
   source_url: https://github.com/EvatechLTD/GAYBOY
   first_party: true
 versions:
+  - version: free-demo-final
+    date: 2026-10-27
+    url: https://github.com/EvatechLTD/GAYBOY/releases/tag/free-demo-final
+    notes: Final frozen public demo, a later engine than 1.0, shipped with a matching demo save file; the site's player and download use this build.
   - version: v1.0
     date: 2026-10-22
     url: https://github.com/EvatechLTD/GAYBOY/releases/tag/v1.0

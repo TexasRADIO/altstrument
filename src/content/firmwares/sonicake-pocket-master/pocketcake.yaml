@@ -1,0 +1,44 @@
+device: sonicake-pocket-master
+also_devices: [sonicake-smart-box]
+kind: tool
+name: PocketCake
+summary: Native Windows editor for the Pocket Master and Smart Box over USB-MIDI or Bluetooth, built with WinUI 3, with NAM clone import and an optional local MCP endpoint for AI agents.
+description: >-
+  A C# app that edits presets in real time, saves to user slots, shows the
+  signal chain with per-module on/off, and covers every effect parameter,
+  footswitch assignment and tap tempo. It also sets global options such as USB
+  audio mode, uploads user IRs, converts Neural Amp Modeler files to the pedal's
+  clone format, and imports and exports presets as JSON. A demo mode replays
+  captured device traffic so it can be tried without a pedal. When switched on in
+  settings, it serves a loopback-only MCP endpoint protected by a bearer token so
+  an AI agent can edit presets in the running app; saving presets and writing IR
+  or clone slots still ask for confirmation, and factory reset is not exposed.
+  The protocol code and data tables are ported from SonicMaster. Not affiliated
+  with Sonicake.
+status: active
+authors:
+  - name: An Long
+    url: https://github.com/aisk
+source: https://github.com/aisk/PocketCake
+source_status: open
+license: MIT
+license_notes: Portions are ported from SonicMaster, copyright Andrii Klaptsov, also MIT.
+distribution: source-only
+requires_stock: Pocket Master or Smart Box; the README names no firmware version
+install_notes: >-
+  Needs the .NET 10 SDK on Windows 10 or later. Run dotnet run --project
+  src/PocketCake -p:Platform=x64 from a clone. The repository has no release
+  builds. Saving writes to user presets on the pedal.
+brick_risk: false
+tags: [editor, midi, bluetooth, nam, ir, mcp, fx]
+image:
+  url: https://raw.githubusercontent.com/aisk/PocketCake/master/screenshot.png
+  alt: PocketCake window in demo mode with a preset list at left, the signal chain of eight modules across the top and the amp module's effect picker and gain and tone sliders below
+  credit: An Long
+  source_url: https://github.com/aisk/PocketCake
+  first_party: true
+versions:
+  - version: master @ 9628cb0
+    date: 2026-10-17
+    url: https://github.com/aisk/PocketCake/commit/9628cb0
+    notes: No tagged releases; this is the latest commit.

@@ -17,14 +17,14 @@ authors:
     url: https://github.com/AveyCole
   - name: 18nelli18
     url: https://github.com/18nelli18
-source: https://github.com/AveyCole/Modded-Cycles
+source: https://github.com/AveyCole/Supermodel
 source_status: open
 license: unspecified
 license_notes: >-
   The fork has no LICENSE file at its root (the upstream Modded Cycles repository
   has an MIT one). Bundled components carry their own MIT notices, such as
   LICENSE-Model909.txt.
-homepage: https://aveycole.github.io/Modded-Cycles/flasher-supermodel-909/
+homepage: https://aveycole.github.io/Supermodel/flasher-supermodel-909/
 distribution: browser-installer
 requires_stock: "1.13"
 install_notes: >-
@@ -35,7 +35,7 @@ install_notes: >-
   returns to stock.
 tags: [machines, drums, sampler, sequencer, lfo, midi, fx]
 versions:
-  - version: main @ 71f53d6
-    date: 2026-10-27
-    url: https://github.com/AveyCole/Modded-Cycles/commit/71f53d63491e77f0a3c6657691437f10d417f8d1
+  - version: main @ 7688bb8
+    date: 2026-10-28
+    url: https://github.com/AveyCole/Supermodel/commit/7688bb8a7804415647756d120f6ed55c3df56d7d
     notes: No tagged releases; this is the latest commit.

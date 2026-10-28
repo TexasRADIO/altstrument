@@ -4,8 +4,8 @@ summary: >-
   Modular synth framework for the FM-1: build patches from modules and nestable assemblies in a browser editor,
   send them over WebMIDI, and play them on a firmware that runs one patch at a time.
 description: >-
-  A fork of WiggisModular's Modular-1, which is in turn built on Felucca's hardware layer. The editor has 44 module
-  types (oscillators, filters, envelopes, sequencers, an arpeggiator, granular, delay, reverb and others), 66 factory
+  A fork of WiggisModular's Modular-1, which is in turn built on Felucca's hardware layer. The editor has 50 module
+  types (oscillators, filters, envelopes, sequencers, an arpeggiator, granular, delay, reverb and others), 67 factory
   assemblies, factory patches that model other synths, and a library for the FM-1's 64 patch slots. Patches too big
   for the FM-1's CPU budget can still be edited and heard in the browser. Patches live in flash sectors that Felucca
   also uses, so a first start erases Felucca's projects and samples there; the README says to save them first.
@@ -35,6 +35,14 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, modular, editor, emulator, patch, sequencer, arpeggiator, fork]
 versions:
+- version: 1.5.1
+  date: 2026-10-27
+  url: https://github.com/glvno/matryoshka/releases/tag/v1.5.1
+  notes: Web editor only; the editor starts about three times faster.
+- version: 1.5.0
+  date: 2026-10-27
+  url: https://github.com/glvno/matryoshka/releases/tag/v1.5.0
+  notes: Adds pattern memory and songs to Steps, new modules such as Selector and Follower, rebuilt FM-1 factory instruments and lower CPU use, and fixes an FM-1 freeze when no app on the computer reads its MIDI.
 - version: 1.4.0
   date: 2026-10-26
   url: https://github.com/glvno/matryoshka/releases/tag/v1.4.0

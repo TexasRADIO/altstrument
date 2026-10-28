@@ -1,0 +1,50 @@
+device: m-vave-fm-1
+name: Forge Five
+summary: >-
+  Clipper fork that trims its 23 engines to four and adds five new synth engines (LADDER, CHORD-D, BRASS, RIBBON,
+  WAVE-P), two layerable parts and a USB-MIDI screen mirror; still in development.
+description: >-
+  Built on Clipper, which grew out of SLOOP and Felucca. Each of the five new engines imitates one style of synth:
+  LADDER (three oscillators into a ladder filter), CHORD-D (one oscillator, sub, chorus and chord memory), BRASS (two
+  oscillators with sync and a sweeping filter), RIBBON (layered voices with a pitch ribbon on a knob) and WAVE-P
+  (formula-made wavetables with a stepped mode). Two parts can layer or split the keyboard, voices share a budget set
+  from CPU measurements on a unit, and each engine has four macros. The step sequencer, recording, song mode and drum
+  track of Clipper are not included, and the unit is meant to be played from Ableton Move or another MIDI source. Version
+  FF 0.1.1 DEV adds a screen mirror: the FM-1's screen is sent over the same USB-MIDI port so an iPad or computer app can
+  display it, using a protocol extension described in the repository's web/EDITOR_PROTOCOL.md. The README calls the
+  project in development; its latest published build is an untested development build that has not been tried on an FM-1,
+  though earlier measurements were made on a unit. An earlier Felucca-based Forge Five (FF 0.2) is kept on a branch and tag.
+status: active
+authors:
+- name: Khantipol Kasemsant
+  url: https://github.com/kkasemsa
+source: https://github.com/kkasemsa/Forge-Five
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Code is GPL-3.0-only, with the web editor included. Fonts and ported DSP keep their own licences (LICENSES/,
+  LICENSING.md). The README says no ROMs, wavetables or samples of real instruments are used.
+homepage: https://github.com/kkasemsa/Forge-Five/blob/main/docs/INSTALL.md
+distribution: download
+requires_stock: >-
+  FM-1 on V15 stock; the install guide asks you to keep M-VAVE's own FM-1.fwsc (V15) as the way back.
+install_notes: >-
+  Download the .fwsc from a green GitHub Actions run or the dev-main prerelease and check it against SHA256SUMS, then
+  send it with tools/fm1_install.py (needs mido and python-rtmidi) over USB-MIDI; it takes two to three minutes and the
+  screen goes dark meanwhile. Close any program holding the FM-1's MIDI port first. The guide says Forge Five had not
+  run on hardware yet when written, and that a failed install can leave the unit in its boot loader, recoverable with
+  FM-1-transporter hardware. Settings, presets and projects live outside the firmware image, and a Forge Five install over
+  Clipper keeps Clipper's, so sounds of engines it leaves out load silent; back up with the web editor first.
+brick_risk: true
+tags: [synth-engine, oscillator, wavetable, filter, fx, chorus, arpeggiator, midi, fork]
+versions:
+- version: main @ f9f60f2
+  date: 2026-10-28
+  url: https://github.com/kkasemsa/Forge-Five/commit/f9f60f2
+  notes: >-
+    Latest commit, also published as the dev-main prerelease build (https://github.com/kkasemsa/Forge-Five/releases/tag/dev-main),
+    which is marked untested on an FM-1.
+- version: ff-0.2-felucca
+  date: 2026-10-22
+  url: https://github.com/kkasemsa/Forge-Five/tree/ff-0.2-felucca
+  notes: Git tag; no GitHub release page. The earlier Felucca-based build with four parts, kept on the archive/felucca-base branch.

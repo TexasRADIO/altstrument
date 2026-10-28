@@ -31,6 +31,13 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, wavetable, sequencer, fx, platform]
 versions:
+- version: 0.9.5
+  date: 2026-10-27
+  url: https://github.com/OwenKirby/carnac-os/releases/tag/v0.9.5
+  notes: >-
+    Adds the SAMHAIN factory bank (32 patches and 9 performances), a Foundations wavetable bank, FULL and DUAL
+    SPREAD architectures and larger menus; patch format v10, older patches migrate. The release text calls it a
+    prerelease until checked on the device.
 - version: 0.9.4
   date: 2026-10-25
   url: https://github.com/OwenKirby/carnac-os/releases/tag/v0.9.4

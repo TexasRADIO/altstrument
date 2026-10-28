@@ -1,0 +1,37 @@
+device: ableton-push-3
+also_devices:
+  - ableton-push-2
+name: GridSeq
+kind: tool
+summary: >-
+  Module for Push Tethered App that makes a USB-connected Push a multi-track step sequencer with tracks as pad
+  columns, per-step parameters, mod tracks and scale quantizing, in the style of the OXI ONE.
+description: >-
+  The module is a Python program, using only the standard library, that runs inside Push Tethered App. The pad grid
+  shows eight tracks as columns, with the steps of a track running down the rows and paging for longer patterns and more
+  tracks. Each step has on or off, velocity, gate, repeat, probability, timing offset, accent and pitch, and each track has its own
+  time division, length, MIDI channel, colour and scale. Mod tracks send sequenced modulation values. It can follow
+  an external MIDI clock, mute and solo tracks, and save named sequences. The author takes design ideas from the OXI
+  ONE MKII but says it is a new design for Push's controls. There is no tagged release, and the README says pattern
+  persistence through the host's store is switched off.
+status: active
+authors:
+  - name: Federico P.
+    url: https://github.com/federico-pepe
+source: https://github.com/federico-pepe/pta-module-gridseq
+source_status: open
+license: unspecified
+license_notes: The repository has no license file and no license statement.
+homepage: https://github.com/federico-pepe/pta-module-gridseq#readme
+distribution: source-only
+requires_stock: Push Tethered App; python3 on the PATH
+install_notes: >-
+  Clone the repository and add the folder in Push Tethered App with Add module, or run pushapp -install with its
+  path, then start it with pushapp -module gridseq. The module is not in the app's online catalog.
+brick_risk: false
+tags: [sequencer, midi, scales, generative, python]
+versions:
+  - version: main @ d08b93f
+    date: 2026-10-05
+    url: https://github.com/federico-pepe/pta-module-gridseq/commit/d08b93f
+    notes: No tagged releases; this is the latest commit.

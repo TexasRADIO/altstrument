@@ -1,0 +1,40 @@
+device: sonicake-pocket-master
+kind: tool
+name: PocketMaster Studio
+summary: Self-saving single-file browser app that builds, edits and exports Pocket Master preset libraries for 260 songs, with PocketEdit embedded to send presets to the pedal over Web Bluetooth.
+description: >-
+  One HTML file holds a data set of 482 presets arranged by artist and song, in
+  three versions: tuned modelled amps, versions that use five Neural Amp Modeler
+  captures, and a mixed set. The app validates every effect and parameter against
+  a catalogue of the pedal's modules, generates a prompt for asking an AI chat
+  for new presets, merges pasted preset JSON, edits collections of 40 or 50
+  presets, and writes out listings and tables. An Editor tab embeds PocketEdit
+  to connect to the pedal over Web Bluetooth and import or export presets, and a
+  preset tweaked on the pedal can be kept as an override. Saving writes a new copy
+  of the HTML file with the changes inside, and the whole file tree can be exported
+  as a ZIP. The NAM captures themselves are not included; the README points to
+  community captures on TONE3000 to load under set names. Not affiliated with
+  Sonicake.
+status: active
+authors:
+  - name: sadurni
+    url: https://github.com/sadurni
+source: https://github.com/sadurni/PocketMasterStudio
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no LICENSE file and the README gives no licence statement.
+  It embeds PocketEdit, which also has no licence file.
+distribution: browser-installer
+requires_stock: Pocket Master; the README names no firmware version
+install_notes: >-
+  Open PocketMasterStudio.html in Chrome, Edge or Opera, on desktop or Android;
+  Safari and Firefox cannot connect to the pedal. Presets that use NAM captures
+  need those captures loaded on the pedal under the names the README lists.
+  Writing presets to the pedal overwrites user slots, so back up first.
+brick_risk: false
+tags: [editor, midi, bluetooth, nam, web, fx, generator]
+versions:
+  - version: v1.0.0
+    date: 2026-09-04
+    url: https://github.com/sadurni/PocketMasterStudio/releases/tag/v1.0.0

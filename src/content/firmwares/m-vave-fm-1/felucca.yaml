@@ -18,7 +18,8 @@ source_status: open
 license: GPL-3.0-only
 license_notes: >-
   Bundled fonts and ported DSP keep their own licences (LICENSING.md, LICENSES/).
-  Since 1.6.1 five engines come from the separate Felucca-Engines repository, which is MIT.
+  Since 1.6.1 five engines, and since 1.7.0 PHASE as well, come from the separate Felucca-Engines repository,
+  which is MIT. Since 1.7.0 the hardware layer is the felucca-bsp submodule (MPL-2.0).
 homepage: https://hugelton.github.io/Felucca/
 distribution: browser-installer
 install_notes: >-
@@ -33,6 +34,13 @@ video:
   credit: "Stanley Gurvich"
   first_party: false
 versions:
+- version: 1.7.0
+  date: 2026-10-28
+  url: https://github.com/hugelton/Felucca/releases/tag/v1.7.0
+  notes: >-
+    Moves the hardware layer to the felucca-bsp submodule, no longer refuses M-VAVE's V15 package from M-VAVE's own
+    updater, and fixes TRS MIDI clock timing, external clock drift, TRS input reads and a divide by zero at BPM 0.
+    PHASE moves to Felucca-Engines.
 - version: 1.6.1
   date: 2026-10-14
   url: https://github.com/hugelton/Felucca/releases/tag/v1.6.1

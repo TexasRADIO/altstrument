@@ -1,0 +1,27 @@
+name: SampleKey
+manufacturer: Akai Professional
+category: sampler
+tagline: Teased keyboard sampler related to the MPC Sample
+description: >-
+  The SampleKey is a keyboard sampler that Akai Professional showed in a short
+  teaser video on 2026-10-27. Press coverage of the video describes a compact unit
+  with a two-octave keyboard, pitch and mod wheels, knobs, an encoder and a screen,
+  and a voice-over that mentions sampling on individual keys and key splits. Akai
+  has not published a specification, price or release date, and press outlets spell
+  the name SampleKey and Sample Key.
+links:
+  community:
+    - label: Akai Professional teaser reel on Instagram
+      url: https://www.instagram.com/akai_pro/reel/DfA8SCfRQnG/
+    - label: Gearnews report on the teaser
+      url: https://www.gearnews.com/akai-sample-key-mpc-sample-synth/
+    - label: Synth Anatomy report on the teaser
+      url: https://synthanatomy.com/2026/10/akai-samplekey-the-keyboard-sampler-sibling-of-the-mpc-sample-with-open-firmware.html
+notes: >-
+  Announced 2026-10-27 in a teaser. The press says the teaser's voice-over claims the
+  firmware will be opened to the community, but no source code, licence, product page
+  or release exists yet. Everything on this entry rests on that video and the news
+  reports about it. No image is shown because Akai has no product page or press kit
+  for the unit and a video frame or news photo is not an acceptable source.
+related: [akai-mpc-sample]
+pinned: [samplekey-open-firmware]

@@ -11,7 +11,8 @@ description: >-
   acts as a USB host for up to four MIDI devices, which all hear each other, and Bluetooth MIDI devices can
   join; Bluetooth is off while Wi-Fi is on. Version 0.1.0 rebuilt the project around this board and dropped the
   earlier Feather RP2040, OLED and CYD variants. The repository also holds a printable case and a browser
-  installer page. No FM-1 firmware is bundled.
+  installer page. Later releases add a clock, arpeggiator and chords, a mapping editor, backups of SLOOP projects
+  and samples and recording of the FM-1's USB audio. No FM-1 firmware is bundled.
 status: active
 authors:
 - name: David Konsumer (konsumer)
@@ -40,6 +41,18 @@ image:
   source_url: https://konsumer.js.org/fm1buddy/
   first_party: true
 versions:
+- version: 0.1.14
+  date: 2026-10-28
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.14
+  notes: An install no longer hangs when a USB send stalls; the send is repeated and a stuck install stops with a message.
+- version: 0.1.13
+  date: 2026-10-28
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.13
+  notes: Fixes scratchy USB audio recordings, adds sample slots for Felucca firmwares and lets you pick the FM-1 on a hub.
+- version: 0.1.12
+  date: 2026-10-27
+  url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.12
+  notes: Adds clock, arpeggiator, chords and a mapping editor, a touch controller and start page, SLOOP backups of projects and samples, and recording of the FM-1's USB audio.
 - version: 0.1.11
   date: 2026-10-24
   url: https://github.com/konsumer/fm1buddy/releases/tag/v0.1.11

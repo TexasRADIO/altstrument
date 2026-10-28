@@ -1,0 +1,53 @@
+device: arturia-keystep-pro
+also_devices: [arturia-keystep-pro-chroma]
+name: keystep-mods
+summary: >-
+  Browser patcher that applies mods to your own KeyStep Pro 2.5.20 update file, adding generative Flux and Pulse tracks and
+  pattern switches that skip repeated Bank and Program Change messages. Builds images for the KeyStep Pro and the Chroma.
+description: >-
+  Each mod is a set of hooks written in C or assembly that the patcher inserts into the stock update file in your
+  browser, after checking that the file is the unmodified 2.5.20 update. The generative mod adds Flux, which loops up to
+  16 random notes that change a little on each pass, on tracks 2 to 4, and Pulse, which spreads drum pulses evenly over
+  each drum lane's steps, on track 1. A track enters generative mode by holding Seq and pressing Arp or Drum, and
+  the five encoders then set the generator. The step LEDs show the loop, Record writes what was played into the
+  pattern, and nothing is stored in the project. The filter-midicc mod stops a pattern switch from re-sending Bank
+  MSB, Bank LSB and Program Change when that channel already has the same values, so synths that reload a sound on
+  every program change are not late on the first note. Mods can be combined into one update. The update file holds
+  images for both the standard model and the Chroma, and the patcher builds both. The repository stores only the
+  added code, never Arturia's firmware, and says that both mods were flashed to a KeyStep Pro and the generative
+  mod was played on it.
+status: active
+authors:
+  - name: Ronald Klarenbeek
+    url: https://github.com/yonie
+source: https://github.com/yonie/keystep-mods
+source_status: open
+license: MIT
+license_notes: >-
+  Covers the patches, the patcher page and the tools. Arturia's firmware is not included; the patcher and the
+  make_patch.py script read it from your own update file and check its SHA-256. Arturia and KeyStep Pro are
+  trademarks of Arturia, and the project says it is not affiliated with Arturia.
+homepage: https://yonie.github.io/keystep-mods/
+distribution: patch-your-own
+requires_stock: 2.5.20
+install_notes: >-
+  Back up your projects in MIDI Control Center first. Open the patcher page, drop your own
+  keystep-pro_Firmware_Update_2.5.20.0.kspf on it (MIDI Control Center keeps a copy), tick the mods, accept the
+  at-your-own-risk box and save the patched .kspf. Flash it from MIDI Control Center's firmware page like an official
+  update. To go back, flash the stock .kspf you kept. If the unit does not start, power it off, connect Clock In to
+  Reset Out with a cable, power it on, remove the cable and flash again. MIDI Control Center may offer the stock
+  update, which removes the mods. Python 3 with keystone-engine and the Arm GNU Toolchain can build the same file from
+  the command line.
+brick_risk: false
+tags: [patch, generative, sequencer, midi, web]
+image:
+  url: https://raw.githubusercontent.com/yonie/keystep-mods/main/docs/img/flux.gif
+  alt: Animation drawn by the project of Flux mode, with eight step buttons and note markers above them, one step white as the playhead, one marker magenta, and a seven-segment FL display
+  credit: Ronald Klarenbeek
+  source_url: https://github.com/yonie/keystep-mods
+  first_party: true
+versions:
+  - version: main @ 90ad455
+    date: 2026-10-27
+    url: https://github.com/yonie/keystep-mods/commit/90ad455aaa39a7fab2ed9ff1e992aca997d99def
+    notes: No tagged releases; this is the latest commit.

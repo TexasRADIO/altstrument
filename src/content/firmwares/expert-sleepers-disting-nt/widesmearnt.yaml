@@ -1,0 +1,37 @@
+device: expert-sleepers-disting-nt
+name: WideSmearNT
+summary: Stereo allpass-network phase effect plugin for the disting NT with two clocked modulators, CV control and 16 presets.
+description: >-
+  The plugin runs a chain of allpass stages to smear drum attacks and add
+  movement to sustained sounds. Frequency, distribution, stages, resonance and
+  feedback shape the sound, while spread and crossover widen the highs and
+  leave the bass centred. Two modulators can run from an internal clock, CV or
+  MIDI clock and be routed to any control. It uses audio inputs 1 and 2 and
+  outputs 1 and 2, and the repository holds the C++ source, a host-side test
+  suite and an offline WAV renderer. The project was renamed from SmearNT in
+  October 2026. No hardware test was done for this entry.
+status: active
+authors:
+  - name: kf4u43D
+    url: https://github.com/kf4u43D
+source: https://github.com/kf4u43D/WideSmearNT
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file and the README gives no license statement.
+distribution: download
+requires_stock: disting NT firmware 1.15.0 or later
+install_notes: >-
+  Unzip the release, copy its programs and presets folders to the root of the NT's
+  microSD card and restart the NT. If you used the earlier SmearNT, delete
+  smearnt_nt.o from /programs/plug-ins/ first. For mono input, set In R to 1.
+brick_risk: false
+tags: [fx, filter, phaser, stereo, open-source]
+versions:
+  - version: v2026.10.17.1
+    date: 2026-10-17
+    url: https://github.com/kf4u43D/WideSmearNT/releases/tag/v2026.10.17.1
+    notes: Packaged release with the plugin object, 16 presets and checksums.
+  - version: v2026.10.17
+    date: 2026-10-17
+    url: https://github.com/kf4u43D/WideSmearNT/tree/v2026.10.17
+    notes: Git tag; no GitHub release page.

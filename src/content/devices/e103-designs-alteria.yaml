@@ -16,7 +16,7 @@ notes: >-
   says ATmega168P is not supported. The schematics folder says corrected schematics and CAD files
   are still to be uploaded, so the repository is not yet a complete hardware release. Output
   calibration is done by hand with a multimeter.
-related: []
+related: [e103-designs-eurotrack]
 image:
   src: /images/devices/e103-designs-alteria.webp
   style: photo

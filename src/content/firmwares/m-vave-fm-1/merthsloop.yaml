@@ -40,7 +40,7 @@ image:
   source_url: https://github.com/merthsoft/sloop-fm1
   first_party: true
 versions:
-- version: merthsloop @ d352b67
-  date: 2026-10-27
-  url: https://github.com/merthsoft/sloop-fm1/commit/d352b6715bd95f0a972e733141a6e105f1eaa6dd
+- version: merthsloop @ e3b6e4b
+  date: 2026-10-28
+  url: https://github.com/merthsoft/sloop-fm1/commit/e3b6e4b5afcdeb641d40cf5588fc7f5d0604f781
   notes: No tagged releases; this is the latest commit.

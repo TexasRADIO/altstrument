@@ -1,0 +1,35 @@
+device: ableton-push-3
+name: Push Hack Net MIDI
+summary: >-
+  Push Hack module that puts Push 3 Standalone's MIDI ports on the network as Apple MIDI (RTP-MIDI), so an iPad,
+  iPhone or Mac sees the Push as a network MIDI peer and Live gets a Net MIDI port.
+description: >-
+  The module implements the Apple MIDI session and RTP-MIDI data protocols in Go, announces the Push through the
+  unit's Bonjour service and lets either side start a session. Live sees one port, Net MIDI, and a route table can
+  bridge other Push ports to the network or back, with an optional channel rewrite. Incoming messages are played at the
+  time they were sent, plus a buffer set by the user, to smooth Wi-Fi jitter. Incoming clock and transport messages
+  are ignored unless switched on, and the README suggests Ableton Link for tempo. Settings are on a NETMIDI tab of Push
+  Manager's Shadow UI and on a web page, and live outside the hack folder so they survive a reinstall. The README
+  describes it as early and reports it working with an iPad running AUM over Wi-Fi.
+status: active
+authors:
+  - name: Rainer Geissendoerfer
+    url: https://github.com/rgeissen
+source: https://github.com/rgeissen/push-hack-netmidi
+source_status: open
+license: MIT
+homepage: https://github.com/rgeissen/push-hack-netmidi#readme
+distribution: download
+requires_stock: Push Hack with push-manager
+install_notes: >-
+  Install it from Push Catalog on the unit, then open the NETMIDI tab of the Shadow UI or the Net MIDI web page. On
+  the iPad, turn on a network session in the MIDI app, or use a helper such as midimittr, and allow connections from
+  anyone. Set the buffer above the Wi-Fi delay shown on the page. Releases are tarballs built by the project's GitHub
+  workflow. The Push Hack warnings about backups, recovery and Push software updates apply.
+brick_risk: false
+tags: [midi, platform, utility]
+versions:
+  - version: v0.1.0
+    date: 2026-10-26
+    url: https://github.com/rgeissen/push-hack-netmidi/releases/tag/v0.1.0
+    notes: First release.

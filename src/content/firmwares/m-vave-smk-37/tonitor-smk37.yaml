@@ -1,13 +1,13 @@
 device: m-vave-smk-37
 name: Tonitor SMK-37
 summary: >-
-  Tonitor ported to the SMK-37 Pro: six tracks on seven engines, loopers, a physics sequencer and tracks that
+  Tonitor ported to the SMK-37 Pro: six tracks on eight engines, loopers, a physics sequencer and tracks that
   play along with what you play, for electroacoustic and live ambient music. Large high-contrast screen.
 description: >-
   Separate firmware that shares its core with Tonitor for the FM-1 and began from Tonitor 0.53. The six tracks
-  each take one of seven engines (FM, ANIMA, CALIGULA, RUSSOLO, DRUID, BAYAREA and HIVE), with sounds generated
+  each take one of eight engines (FM, ANIMA, CALIGULA, RUSSOLO, DRUID, BAYAREA, HIVE and OBRADOR), with sounds generated
   from a seed and steered toward an ambient or experimental path. All 37 keys follow the chosen scale. It has
-  loopers with up to eight overdubs per track, BALLSY (a physics sequencer), BRICKLAYER (a note-by-note step
+  loopers with up to eight overdubs per track, gesture loops that record knob and fader moves, BALLSY (a physics sequencer), BRICKLAYER (a note-by-note step
   sequencer), chords and latched notes, and REACT, SHADOW and ARP modes in which chosen tracks answer the
   one being played. Sessions and presets, USB and TRS MIDI and USB audio are included. The screen uses very
   large type for low vision. The project numbers its builds and marks itself a work in progress; the
@@ -35,7 +35,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, looper, granular, fx, reverb, fm, performance, ui]
 versions:
-- version: main @ de5fbc6
-  date: 2026-10-23
-  url: https://github.com/nzimas/tonitor-smk37/commit/de5fbc64f6c60d9ebd29b6544ae0e3b7c5b197fa
-  notes: No tagged releases; this is the latest commit. The changelog lists BUILD 32 as the newest build.
+- version: main @ 64e4801
+  date: 2026-10-28
+  url: https://github.com/nzimas/tonitor-smk37/commit/64e48015ce7f350442801d98f246acbab77c7204
+  notes: No tagged releases; this is the latest commit. The changelog lists BUILD 43 as the newest build.

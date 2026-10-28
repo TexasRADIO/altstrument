@@ -36,6 +36,14 @@ image:
   source_url: https://github.com/keremimo/melodee
   first_party: true
 versions:
+- version: 1.6.0-rc.5
+  date: 2026-10-27
+  url: https://github.com/keremimo/melodee/releases/tag/v1.6.0-rc.5
+  notes: Pre-release. Sixteen patterns on each synth track, a shared storage pool of 32 projects in place of four fixed slots, the Rubik font back, and Bluetooth radio self-calibration.
+- version: 1.6.0-rc.4
+  date: 2026-10-26
+  url: https://github.com/keremimo/melodee/releases/tag/v1.6.0-rc.4
+  notes: Pre-release. Adds per-block sound copies in the song view and a visual editor for song punch effects; changes project storage and the firmware font.
 - version: 1.6.0-rc.2
   date: 2026-10-26
   url: https://github.com/keremimo/melodee/releases/tag/v1.6.0-rc.2

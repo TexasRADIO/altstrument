@@ -1,0 +1,74 @@
+device: electrosmith-daisy-patch
+name: Cineol-X 224
+summary: Lexicon 224 reverb programs as a desktop plugin and as a Daisy Seed or Patch SM firmware project, built from ROM files you supply yourself.
+description: >-
+  The repository is mainly an AU, VST3 and standalone plugin that plays the six
+  programs of the original Lexicon 224 (firmware v4.4) and a preview of the 22
+  programs of the 224 XL (v8.21). The same DSP code also builds as a Daisy
+  firmware image for Daisy Seed or Patch SM. The Daisy build has a generic
+  adapter: the reference version assigns no pins, so you write your own control
+  and RGB mapping in two local header files before flashing. No Lexicon ROMs or
+  prepared banks are in the repository, and every Daisy build needs your own
+  224 ROM files, which end up inside your personal firmware image. The author
+  says ChatGPT was used for code, tests and documentation, and the pinned
+  Reflexion 8080 emulator is used to prepare control data. No hardware build or
+  flash was attempted for this entry.
+status: active
+authors:
+  - name: temaniak
+    url: https://github.com/temaniak
+source: https://github.com/temaniak/cineolX
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no LICENSE file. NOTICE.md and the README say a project-wide
+  license for the Cineol-owned files has not been selected, and grant no rights
+  to dependency code, third-party firmware or extracted data. JUCE, libDaisy and
+  the Reflexion submodule keep their own terms.
+distribution: source-only
+requires_stock: >-
+  Daisy Seed or Patch SM with the public Daisy bootloader set up for a QSPI
+  application at 0x90040000, plus your own Lexicon 224 v4.4 ROM1 to ROM5 files.
+install_notes: >-
+  Needs the Arm GNU toolchain, CMake, Python 3 and the pinned submodules. Run
+  script/build_daisy.sh with DAISY_BOARD set to seed or patch-sm and
+  NATIVE_HALL_ROM_DIR pointing to a private folder with your ROM files; add
+  --flash to load it over USB DFU, which replaces the QSPI application but not
+  the bootloader. The README says the build checks do not establish CPU margin or
+  I/O correctness on your board.
+brick_risk: false
+tags: [fx, reverb, emulation, open-source, daisy-seed]
+image:
+  url: https://raw.githubusercontent.com/temaniak/cineolX/main/docs/images/cineol-x-224.png
+  alt: Cineol-X 224 plugin window with a red dot-matrix display above nine vertical faders and eight quick-preset buttons on a worn metal panel
+  credit: temaniak
+  source_url: https://github.com/temaniak/cineolX
+  first_party: true
+versions:
+  - version: v1.0Alpha
+    date: 2026-10-23
+    url: https://github.com/temaniak/cineolX/releases/tag/v1.0Alpha
+    notes: GitHub prerelease. Adds SPACE and a wider DIRT range, and a second stereo output in hosts that support it.
+  - version: v0.99B
+    date: 2026-10-23
+    url: https://github.com/temaniak/cineolX/releases/tag/v0.99B
+    notes: GitHub prerelease.
+  - version: v0.99A
+    date: 2026-10-10
+    url: https://github.com/temaniak/cineolX/releases/tag/v0.99A
+    notes: GitHub prerelease.
+  - version: v0.9.8
+    date: 2026-10-06
+    url: https://github.com/temaniak/cineolX/releases/tag/v0.9.8
+  - version: v0.9.6
+    date: 2026-10-04
+    url: https://github.com/temaniak/cineolX/releases/tag/v0.9.6
+  - version: v0.9.5
+    date: 2026-10-04
+    url: https://github.com/temaniak/cineolX/releases/tag/v0.9.5
+  - version: v0.6.0
+    date: 2026-10-03
+    url: https://github.com/temaniak/cineolX/releases/tag/v0.6.0
+  - version: v0.5.1
+    date: 2026-10-03
+    url: https://github.com/temaniak/cineolX/releases/tag/v0.5.1

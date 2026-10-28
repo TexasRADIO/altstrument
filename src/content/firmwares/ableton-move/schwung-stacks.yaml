@@ -1,0 +1,39 @@
+device: ableton-move
+name: Stacks
+summary: >-
+  Schwung tool for writing chord progressions on Move, with 38 chord shapes, rhythm figures, voicing colours, 16
+  pattern slots and a browser panel, played on the selected track or stamped into a clip.
+description: >-
+  Stacks is opened from Schwung's Tools menu and is edited on Move's own screen and in a browser panel at the same time. It has
+  38 chord shapes in six families, 35 rhythm figures, 10 voicing colours and a library of more than 140 progressions
+  sorted by genre. It plays into the track selected on Move, keeps 16 pattern slots as buffers without touching the set, and can
+  record a lap into a clip by arming Stamp and pressing Record. Clip Transpose and Clip Octave shift the sound without
+  rewriting the progression, and the progression, patterns and settings are saved on the device. The repository ships a
+  C test suite and pins Schwung's host headers byte for byte. The same author runs the same Stacks core on Push 3 as
+  Push Hack Stacks, which is a separate repository and release line. No release is tagged yet, although the install
+  notes and release.json refer to a stacks-module tarball from a v0.2.0 release.
+status: active
+authors:
+  - name: Rainer Geissendoerfer
+    url: https://github.com/rgeissen
+source: https://github.com/rgeissen/schwung-stacks
+source_status: open
+license: MIT
+license_notes: >-
+  The repository is MIT. The Schwung plugin headers in src/host/ are Charles Vestal's, also MIT, as listed in
+  THIRD_PARTY_LICENSES.md.
+homepage: https://github.com/rgeissen/schwung-stacks#readme
+distribution: source-only
+requires_stock: Schwung 1.4 or later installed on the Move, with SSH access enabled
+install_notes: >-
+  Needs Schwung with overtake tools and the Tool tab. Build it with scripts/build.sh, which cross-compiles in Docker,
+  and copy it to the Move with scripts/install.sh over SSH. The README also describes installing a stacks-module.tar.gz
+  from the Schwung web manager, but the repository has no release to download yet. Read Track following the selected
+  track needs Schwung 1.6 or later.
+brick_risk: false
+tags: [chords, sequencer, midi, scales, performance]
+versions:
+  - version: main @ 99ab7fe
+    date: 2026-10-18
+    url: https://github.com/rgeissen/schwung-stacks/commit/99ab7fe
+    notes: No tagged releases; this is the latest commit.

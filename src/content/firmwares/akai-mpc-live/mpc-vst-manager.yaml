@@ -12,7 +12,8 @@ description: >-
   locations from the device's settings file. Tested on an MPC One and an MPC
   Key 37 running MPC OS 3.9.1; the Force and the other first-generation
   models are expected to work but are untested. Second-generation 64-bit
-  devices are not supported yet.
+  devices are not supported yet; the OpenMPC Plugin Manager G2 fork, catalogued
+  separately, covers them.
 status: active
 authors:
   - name: poloq-instruments

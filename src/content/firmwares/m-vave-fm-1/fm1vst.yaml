@@ -11,7 +11,7 @@ description: >-
   exposed as host parameters, with settings for how a controller's buttons and clicking encoders are interpreted, MIDI in
   and out, and presets per firmware. The editor draws the FM-1 panel with colour themes. A virtual MIDI port lets a
   firmware's own web editor talk to the plugin, and the standalone app can record the screen and sound as a video. A
-  Remote FM-1 mode connects to a unit running the RemoteFM1 firmware. The releases are unsigned and not notarised, and are
+  Remote FM-1 mode connects over USB or Bluetooth MIDI to a unit running the RemoteFM1 firmware. The releases are unsigned and not notarised, and are
   built for macOS 11 or later on Apple silicon only.
 status: active
 authors:
@@ -31,6 +31,10 @@ install_notes: >-
 brick_risk: false
 tags: [emulator, synth-engine, vst]
 versions:
+- version: 0.6.2
+  date: 2026-10-28
+  url: https://github.com/Quixotic7/FM1VST/releases/tag/v0.6.2
+  notes: The Remote FM-1 mode also works over Bluetooth MIDI with a unit on RemoteFM1 0.2 or later, with frames paced to the radio; a unit connected by both is driven over USB.
 - version: 0.6.1
   date: 2026-10-23
   url: https://github.com/Quixotic7/FM1VST/releases/tag/v0.6.1

@@ -1,0 +1,54 @@
+device: sonicake-pocket-master
+also_devices: [sonicake-smart-box]
+kind: tool
+name: SonicMaster
+summary: Desktop and browser preset editor for the Pocket Master and Smart Box over USB-MIDI or Bluetooth, with two-way sync, footswitch mapping and a NAM-to-clone-model importer.
+description: >-
+  A Flutter app that edits the connected pedal live and reflects changes made on
+  the pedal itself. It lists the 50 factory and 50 user presets, shows the
+  signal chain with drag-to-reorder for the movable modules, swaps effect
+  models per module, assigns modules to the two footswitches and sets per-preset
+  tempo and volume. It also loads your own cabinet IR .wav files and converts
+  Neural Amp Modeler .nam captures into the pedal's own clone-model format on your
+  machine before uploading them to a user slot. It runs from the project's web
+  page in Chrome, Edge or Opera, or as a Windows installer, Linux AppImage or
+  tarball and macOS dmg. The README says it is mostly written with AI and that the
+  author reverse-engineered the device protocol from Bluetooth and USB-MIDI
+  captures. Not affiliated with Sonicake.
+status: active
+authors:
+  - name: Andrii Klaptsov
+    url: https://github.com/Skyggedans
+source: https://github.com/Skyggedans/SonicMaster
+source_status: open
+license: MIT
+license_notes: The bundled Oswald font is under the SIL Open Font License 1.1.
+homepage: https://skyggedans.github.io/SonicMaster/
+distribution: browser-installer
+requires_stock: Pocket Master or Smart Box; the README names no firmware version
+install_notes: >-
+  Open the web app in a Chromium browser, or install the desktop build from the
+  release page, plug the pedal in by USB or pair it over Bluetooth LE and press
+  Connect. Safari does not provide Web MIDI or Web Bluetooth. Saving writes to the
+  pedal's user presets, so export or note any you want to keep first.
+brick_risk: false
+tags: [editor, midi, web-midi, bluetooth, nam, ir, fx]
+image:
+  url: https://raw.githubusercontent.com/Skyggedans/SonicMaster/master/screenshot.png
+  alt: SonicMaster window with a preset list at left, a row of effect modules with footswitch badges across the top and the amp module's gain, presence, volume and tone knobs below
+  credit: Andrii Klaptsov
+  source_url: https://github.com/Skyggedans/SonicMaster
+  first_party: true
+versions:
+  - version: v1.0.9
+    date: 2026-10-17
+    url: https://github.com/Skyggedans/SonicMaster/releases/tag/v1.0.9
+  - version: v1.0.8
+    date: 2026-08-06
+    url: https://github.com/Skyggedans/SonicMaster/releases/tag/v1.0.8
+  - version: v1.0.7
+    date: 2026-07-26
+    url: https://github.com/Skyggedans/SonicMaster/releases/tag/v1.0.7
+  - version: v1.0.0
+    date: 2026-07-22
+    url: https://github.com/Skyggedans/SonicMaster/releases/tag/v1.0.0

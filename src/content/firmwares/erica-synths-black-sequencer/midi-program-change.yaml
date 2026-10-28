@@ -35,7 +35,7 @@ install_notes: >-
 brick_risk: false
 tags: [patch, midi, sequencer, program-change]
 versions:
-  - version: main @ ae4f4b3
-    date: 2026-10-26
-    url: https://github.com/aleph-void/Erica-Synths-Black-Seqeuencer-Custom-MIDI-Program-Change-Firmware/commit/ae4f4b33e5c9d8fe07997e07368321134c9d4dd1
+  - version: main @ 4474eb9
+    date: 2026-10-27
+    url: https://github.com/aleph-void/Erica-Synths-Black-Seqeuencer-Custom-MIDI-Program-Change-Firmware/commit/4474eb9e6cc442a289dae3e070304e766f01b465
     notes: No tagged releases; this is the latest commit.

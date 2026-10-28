@@ -1,0 +1,40 @@
+device: elektron-model-cycles
+name: Vladiktron Spoke
+kind: tool
+summary: macOS app that runs Elektron's own Model:Cycles OS 1.13 on an emulated board, with the screen, keys, knobs, pads, audio out, MIDI and USB audio, and an Arturia MiniLab 3 mapping. Bring your own OS file; no Elektron firmware is included.
+description: >-
+  Emulates the Model:Cycles' ColdFire CPU with a patched copy of Unicorn 2.1.4 and models the board around it: interrupt
+  controllers, timers, DMA, SPI flash, the +Drive eMMC, the front-panel bus, the MIDI UART and the USB device with a
+  built-in host. The SwiftUI front end draws the 128 by 64 screen and the panel, plays the audio through Core Audio,
+  exposes the two MIDI port pairs as CoreMIDI ports and can send and receive USB audio through chosen Mac devices. On
+  first run it asks for Elektron's official OS 1.13 file or the downloaded zip, checks the version and SHA-256 and
+  decodes it into the app's data folder; other versions, modified OS files and the Model:Samples OS are refused. The
+  repository contains no Elektron firmware, and its notes say it must stay that way. It reuses code from Modded-Cycles,
+  elektron-model-tweaks and elektron-firmware-tool, all MIT, and the project's release notes list signing,
+  notarisation and a first release as still open. The panel artwork follows the hardware's layout, which the notes
+  flag as the part most likely to draw a complaint from Elektron.
+status: active
+authors:
+  - name: imaf6971
+    url: https://github.com/imaf6971
+source: https://github.com/imaf6971/vladiktron-spoke
+source_status: open
+license: GPL-2.0-only
+license_notes: >-
+  The README states GPL-2.0-only, the same terms as the statically linked Unicorn. Third-party code and licences are
+  listed in THIRD-PARTY-NOTICES.md. Model:Cycles and Elektron are trademarks of Elektron Music Machines MAV AB, and
+  the project says it is not affiliated with Elektron.
+distribution: source-only
+requires_stock: "1.13"
+install_notes: >-
+  Needs CMake and the Xcode command line tools. Run native/build.sh with the path to your own
+  model-cycles_OS1.13.syx (Elektron's support page has it as a zip), then open the built app. Without the file the app
+  asks for it on first run. Data lives in ~/Library/Application Support/Vladiktron Spoke/. Nothing is flashed to a
+  device.
+brick_risk: false
+tags: [emulator, research, usb-audio, midi]
+versions:
+  - version: main @ d42fa30
+    date: 2026-10-28
+    url: https://github.com/imaf6971/vladiktron-spoke/commit/d42fa30da5f8b6f166ea49cb34d7752b83e6a1db
+    notes: No tagged releases; this is the latest commit.

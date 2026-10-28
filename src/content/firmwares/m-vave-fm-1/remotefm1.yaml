@@ -6,31 +6,39 @@ summary: >-
 description: >-
   The device sends its input as plain MIDI and draws the screen from tiles sent back over USB SysEx or a vendor bulk
   interface. A host program on macOS runs a firmware core such as ChoralRoot, Felucca or Melodee, using FM1VST's engine,
-  and the sound plays on the computer. The stock firmware cannot run this way. It is built on TransitFM1, which comes
-  from Dinghy, and keeps TransitFM1's boot stub and staged update loader. It answers installers as V15 so any installer
-  can write over it later. The README calls the project early: one unit has run ChoralRoot at 20 frames a second.
+  and the sound plays on the computer. The stock firmware cannot run this way. Since 0.2 it is built on fm1-base and
+  felucca-bsp, adds Bluetooth MIDI as a third transport beside USB SysEx and the vendor bulk interface, and plays the
+  computer's audio through the FM-1's speaker or headphones over USB. It answers installers as itself
+  (FM-1_52XXYYZZ); 0.1 and 0.1.1 were built on TransitFM1, which comes from Dinghy, and answered as V15. Any
+  Felucca-family installer can write the next firmware over it.
 status: active
 authors:
 - name: Quixotic7
   url: https://github.com/Quixotic7
 source: https://github.com/Quixotic7/RemoteFM1
 source_status: open
-license: GPL-3.0-only
+license: MPL-2.0
 license_notes: >-
-  LICENSING.md states GPL-3.0-only. Parts come from Felucca and SLOOP through Dinghy and TransitFM1, and the boot
-  stub from ChoralRoot FM-1. The Terminus font is SIL OFL 1.1, and JieLi SDK files are read from the user's own SDK
-  checkout at build time.
+  LICENSING.md puts the firmware (firmware/) under MPL-2.0 from 0.2, on fm1-base and felucca-bsp (MPL-2.0); the site,
+  host library, tools and documents stay GPL-3.0-only. The 0.1 and 0.1.1 firmware, built on TransitFM1 with parts from
+  Felucca and SLOOP through Dinghy, stays GPL-3.0-only. The fonts are SIL OFL 1.1, and JieLi SDK files, including the
+  Bluetooth libraries (Apache-2.0), are read from the user's own SDK checkout at build time.
 homepage: https://quixotic7.github.io/RemoteFM1/
 distribution: browser-installer
 install_notes: >-
-  Installer page in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc; the repository holds remote-0.1.1.fwsc.
-  The README says RemoteFM1 answers as the official V15, so any Felucca-family installer can replace it. The host
-  program is built with CMake on macOS and expects an FM1VST checkout. The README keeps the FM-1 Transporter and
+  Installer page in Chrome or Edge over USB, or tools/fm1_install.py with the .fwsc; releases carry a USB plus
+  Bluetooth package and a USB-only package. 0.2 answers as FM-1_52XXYYZZ, so an installer that does not know it
+  yet may refuse it; any Felucca-family installer can replace it. The host program is built with CMake on macOS
+  and expects an FM1VST checkout. The README keeps the FM-1 Transporter and
   MvaveFM1Unbricker at hand for recovery.
 brick_risk: true
 tags: [platform, emulator, usb-midi, research]
 versions:
-- version: main @ 8113af4
-  date: 2026-10-26
-  url: https://github.com/Quixotic7/RemoteFM1/commit/8113af4598caa5da2aa0cfbc9e7c015eba2a33ca
-  notes: No tagged releases; this is the latest commit. The repository holds the 0.1.1 package.
+- version: 0.2.2
+  date: 2026-10-28
+  url: https://github.com/Quixotic7/RemoteFM1/releases/tag/v0.2.2
+  notes: Bluetooth about six times faster and each screen change shown whole.
+- version: 0.2.1
+  date: 2026-10-27
+  url: https://github.com/Quixotic7/RemoteFM1/releases/tag/v0.2.1
+  notes: Moves to fm1-base with Bluetooth MIDI and USB audio, answers as its own firmware identity instead of V15, and adds a USB-only package.

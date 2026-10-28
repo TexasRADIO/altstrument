@@ -1,0 +1,50 @@
+device: sonicake-pocket-master
+kind: tool
+name: PocketEdit
+summary: Single-file browser editor for the Pocket Master over USB-MIDI or Bluetooth, with live two-way editing, preset browsing and JSON import and export.
+description: >-
+  An HTML and JavaScript page that runs in the browser with no install, hosted on
+  GitHub Pages or opened from a local copy of index.html. It connects over Web
+  MIDI or Web Bluetooth, syncs preset names, effect types, user IRs and global
+  settings on connect, and shows changes made on the pedal. It lists the factory
+  and user presets, displays the signal chain with drag-to-reorder, edits each
+  module, has a tap-tempo helper, and saves presets using a CRC-8 check instead of
+  brute force. Presets can be exported as JSON instead of Sonicake's own .prst
+  files. The README says it was made mostly with AI after reverse-engineering the
+  device from Bluetooth logs, and credits a contributor for the USB-MIDI mode. It is
+  the editor that PocketMasterStudio embeds.
+status: maintained
+authors:
+  - name: suckyble
+    url: https://github.com/suckyble
+source: https://github.com/suckyble/PocketEdit
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file and the README gives no licence statement.
+homepage: https://suckyble.github.io/PocketEdit/
+distribution: browser-installer
+requires_stock: Pocket Master; the README names no firmware version
+install_notes: >-
+  Open the hosted page or a local index.html in Chrome, Edge or Firefox for USB
+  MIDI, or a Chromium browser for Bluetooth, then press Connect. Edits are
+  saved to the pedal's user presets from the settings panel, so back up first.
+brick_risk: false
+tags: [editor, midi, web-midi, bluetooth, web, fx]
+image:
+  url: https://raw.githubusercontent.com/suckyble/PocketEdit/main/img/gui.jpg
+  alt: PocketEdit window with a connection panel and preset list at left, eight effect modules across the top and the noise gate's threshold slider below
+  credit: suckyble
+  source_url: https://github.com/suckyble/PocketEdit
+  first_party: true
+versions:
+  - version: v0.9.5
+    date: 2026-01-31
+    url: https://github.com/suckyble/PocketEdit/releases/tag/v0.9.5
+    notes: Bug fixes for missing FX2 parameter increments and some wrong CRC bytes.
+  - version: v0.9.4
+    date: 2025-10-13
+    url: https://github.com/suckyble/PocketEdit/releases/tag/v0.9.4
+  - version: v0.9
+    date: 2025-10-03
+    url: https://github.com/suckyble/PocketEdit/releases/tag/v0.9
+    notes: First release as a single HTML file.

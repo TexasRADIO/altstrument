@@ -1,18 +1,21 @@
 device: m-vave-fm-1
 name: Mutable Dreams
 summary: >-
-  Six-track generative instrument with twelve engines, 76 editable Biomes plus Blank, 224 tones,
+  Six-track generative instrument with 15 engines, 92 editable Biomes plus Blank, 288 tones,
   user banks and granular, delay and room sends, with a playable browser instrument and live editor.
 description: >-
   Each of the six tracks can use any engine. Selected Plaits, Rings and Elements algorithms sit alongside
   original voices including Choir, Round Bass, Mellow Drift and Satin Morph. Biomes combine scales,
-  Euclidean rhythms, probability, swing and accents; bassline modes, glide and editable 16-step phrases
-  provide additional ways to shape a piece. A global mixer controls track levels and shared effect sends.
+  Euclidean rhythms, probability, swing and accents; bassline modes, glide and editable phrases of up to
+  32 steps per track (note, rest, velocity, gate and probability) provide additional ways to shape a piece.
+  Four phrase generators, step entry from the keyboard or USB MIDI, monophonic live recording and four
+  optional chord journeys across selected tracks are included. A global mixer controls track levels and
+  shared effect sends.
   The device stores sixteen named User Biomes and 64 User Sounds. The browser instrument also works as
   a bidirectional hardware editor, with live-patch JSON transfer and full .mddb saved-bank backup and restore.
   Full-bank restore requires physical SEL confirmation. Granular audio is not saved in a Biome.
   USB MIDI was tested; TRS MIDI input is implemented but its physical cable test remains outstanding.
-  The complete 1.1 source tree is directly browsable, with build instructions and a device test report
+  The complete 1.2 source tree is directly browsable, with build instructions and a device test report
   describing the qualification scope. These are selected algorithms and inspired functions, not full
   ports of every Mutable Instruments module.
 status: active
@@ -32,21 +35,25 @@ homepage: https://mutable-dreams.sugarypixie10.chatgpt.site/
 distribution: browser-installer
 install_notes: >-
   Use the project installer in desktop Chrome or Edge over USB, or the Python installer kit.
-  Direct update from Mutable Dreams 1.0 to 1.1 is supported and tested; visiting V15 first is unnecessary
-  for that route. Stock V15 installation and return are documented in Recovery-1.1.txt and the illustrated
-  English guide. Follow the published instructions for other starting firmwares; not every route is tested.
-  Back up first. On 1.1 save both .mddb for stored banks and JSON for unsaved live edits; 1.0 does not
-  support the new .mddb protocol. Returning to V15 erases 1.1 User Banks and preferences.
-  Use the current website or supplemental 1.1 Browser.html, not the HTML in the original offline ZIP.
+  Stock V15 installation and return are documented in Recovery-1.2.txt. For 1.0, use the documented route
+  through 1.1 first and back up in 1.1 before installing 1.2. Follow the published instructions for other
+  starting firmwares; not every route is tested. Back up first. On 1.1 and 1.2 save both .mddb for stored
+  banks and JSON for unsaved live edits; 1.0 does not support the .mddb protocol. Returning to V15 erases
+  User Banks and preferences. A 1.2 patch is newer than 1.1, so keep a backup from before updating if you
+  may downgrade.
 brick_risk: true
 tags: [generative, ambient, synth-engine, drums, granular, sequencer, physical-modeling, emulator]
 video:
-  url: https://www.youtube.com/watch?v=RCgs8t8fXvM
-  title: "Mutable Dreams 1.1 — Warmer Voices, Your Own Biomes | FM-1 Update"
+  url: https://www.youtube.com/watch?v=CBhFDaGCa44
+  title: "Mutable Dreams 1.2 — Warmer Worlds, Your Own Sequences | M-VAVE FM-1"
   credit: Kid Bunka
   first_party: true
-  found_via: https://github.com/kidbee85-beep/mutable-dreams#readme
+  found_via: https://github.com/kidbee85-beep/mutable-dreams/releases/tag/v1.2
 versions:
+- version: v1.2
+  date: 2026-10-27
+  url: https://github.com/kidbee85-beep/mutable-dreams/releases/tag/v1.2
+  notes: Adds three sound families (Velvet Keys, Spectral Bloom, Breath Texture), 15 engines, 288 tones and 92 Biomes, 32-step tracks with phrase generators, keyboard and MIDI step entry and live overdub, and chord journeys. Package ID FM-1_710010200.
 - version: v1.1
   date: 2026-10-25
   url: https://github.com/kidbee85-beep/mutable-dreams/releases/tag/v1.1

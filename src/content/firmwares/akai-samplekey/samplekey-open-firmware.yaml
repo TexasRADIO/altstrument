@@ -1,0 +1,25 @@
+device: akai-samplekey
+name: SampleKey open firmware (announced)
+summary: Open firmware for Akai's teased SampleKey keyboard sampler, which press reports say Akai will open to the community; no source, licence or release has been published.
+description: >-
+  Akai Professional posted a teaser reel for the SampleKey on 2026-10-27. Gearnews
+  and Synth Anatomy report that its voice-over says the firmware will be open to
+  the community, so users can add their own functions. This entry rests on that
+  reported claim; the reel's own caption is only an emoji, and Akai has published
+  no product page, repository, licence, SDK documentation or release date. The
+  scope of what would be opened, and whether the MPC Sample would get the same
+  treatment, is not stated. Check Akai's own channels before relying on any of it.
+status: announced
+authors:
+  - name: Akai Professional
+    url: https://www.akaipro.com/
+source_status: closed
+license: unspecified
+license_notes: >-
+  No licence or source is published. The open-firmware claim comes from the teaser's
+  voice-over as reported by Gearnews and Synth Anatomy.
+homepage: https://www.instagram.com/akai_pro/reel/DfA8SCfRQnG/
+install_notes: >-
+  Nothing to install; no firmware or SDK is available at the time of writing.
+tags: [official, platform, sampler]
+versions: []

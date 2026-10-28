@@ -1,0 +1,32 @@
+name: Push 2
+manufacturer: Ableton
+category: controller
+tagline: Ableton's USB pad controller with an 8 by 8 pad grid and a colour display
+description: >-
+  Push 2 is a controller from Ableton for Ableton Live. It has an 8 by 8 grid of pressure-sensitive pads, a row of
+  touch-sensitive encoders, buttons, a touch strip and a 960 by 160 pixel colour display. It has no computer or
+  audio interface of its own: it connects to a computer over USB, with the screen drawn by the host and the pads,
+  buttons and lights controlled over MIDI. Ableton publishes the display and MIDI interface in a public repository.
+platform: USB controller driven by the host computer (no on-board OS)
+links:
+  community:
+    - label: Ableton Push 2 interface specification
+      url: https://github.com/Ableton/push-interface
+    - label: Push Hack Discord
+      url: https://discord.gg/8y6aYxy9nU
+notes: >-
+  No custom firmware is catalogued for Push 2. The entries here are host-side tools that run on a computer and
+  drive the controller through its USB display and MIDI interface, which also work on a tethered Push 3. They are
+  not approved or supported by Ableton. Push 3 Standalone, the unit with a built-in computer, has its own page.
+related:
+  - ableton-push-3
+image:
+  src: /images/devices/ableton-push-2.webp
+  style: photo
+  alt: Top-down view of Push 2, a black controller with a row of encoders, a colour display, an 8 by 8 pad grid with a purple block lit in its lower left, and buttons around it, on a pale wood table
+  width: 1200
+  height: 800
+  credit: Ableton
+  license: manufacturer archive image
+  source_url: https://web.archive.org/web/20220531124853/https://www.ableton.com/en/push/
+  original_url: https://web.archive.org/web/20220531124853im_/https://ableton-production.imgix.net/tours/push/poster-intro.jpg?w=1200

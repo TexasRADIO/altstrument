@@ -42,6 +42,10 @@ image:
   source_url: https://dmajka.github.io/elixir/
   first_party: true
 versions:
+- version: '0.16'
+  date: 2026-10-28
+  url: https://github.com/dmajka/elixir/tree/v0.16
+  notes: Git tag; no GitHub release page.
 - version: '0.15'
   date: 2026-10-27
   url: https://github.com/dmajka/elixir/tree/v0.15
