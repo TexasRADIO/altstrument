@@ -1,0 +1,33 @@
+device: dadamachines-tbd-16
+name: dadamachines CTAG TBD
+kind: firmware
+summary: Public DSP firmware for tbd-16, with CTAG sound processors, a 16-track GrooveBoxRack and a C++ framework for custom machines and plugins.
+description: >-
+  Adapts the CTAG TBD audio engine to the tbd-16 hardware, adding the rack,
+  macro and preset systems, REST API and hardware-specific drivers. Developers
+  can build custom synthesizers, effects and rack machines and test their DSP
+  code in the desktop simulator before flashing the hardware. This entry
+  covers the public DSP-side repository, not the complete instrument firmware.
+status: active
+authors:
+  - name: dadamachines
+    url: https://dadamachines.com/
+  - name: Robert Manzke
+  - name: Per-Olov Jernberg
+    url: https://possan.codes/
+source: https://github.com/dadamachines/ctag-tbd
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  Covers firmware, DSP, rack layer and tooling. The dadamachines-authored
+  WebUI in sdcard_image/www/ is proprietary and excluded from the GPL;
+  vendored components retain their own licenses. Hardware designs for
+  tbd-16 and tbd-core are proprietary.
+homepage: https://dadamachines.github.io/ctag-tbd/
+distribution: source-only
+install_notes: >-
+  Follow the developer documentation for the target hardware configuration
+  and flashing procedure. The desktop simulator allows DSP development
+  without hardware; building the public DSP repository does not supply all
+  firmware for the instrument's other processors.
+tags: [dsp, synthesizer, effects, sampler, plugin-development, groovebox]

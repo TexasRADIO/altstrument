@@ -1,0 +1,32 @@
+device: dadamachines-tbd-16
+name: CTAG TBD desktop simulator
+kind: tool
+summary: Runs the tbd-16 DSP engine on a computer with real-time audio and a local browser interface for developing and playing plugins without hardware.
+description: >-
+  Builds the same DSP plugins and rack machines for a desktop host. A local
+  web server provides the WebUI and a control page with CV, trigger and pot
+  simulation, plus MIDI controls for GrooveBoxRack. It supports sound-card
+  audio, WAV-file input and sample-ROM files for testing processors before
+  building them for the device.
+status: active
+authors:
+  - name: dadamachines
+    url: https://dadamachines.com/
+  - name: Robert Manzke
+  - name: Per-Olov Jernberg
+    url: https://possan.codes/
+source: https://github.com/dadamachines/ctag-tbd/tree/dada-tbd-master/simulator
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The simulator and DSP code are GPL-3.0-only. The separately served
+  dadamachines WebUI is proprietary; vendored components retain their own
+  licenses.
+homepage: https://dadamachines.github.io/ctag-tbd/get_started/simulator.html
+distribution: source-only
+install_notes: >-
+  Clone the dadamachines repository with submodules, install the documented
+  CMake and Boost dependencies, then build from simulator/build. Run tbd-sim
+  and open localhost:8080 for the WebUI and localhost:8080/ctrl to play the
+  loaded plugin. ESP-IDF and a hardware device are not required.
+tags: [simulator, plugin-development, dsp, editor]

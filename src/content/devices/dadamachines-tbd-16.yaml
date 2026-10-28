@@ -1,0 +1,46 @@
+name: tbd-16
+manufacturer: dadamachines
+category: groovebox
+tagline: Compact standalone 16-track groovebox with synthesis, sampling and SD-card apps
+description: >-
+  The tbd-16 is a USB-C-powered standalone groovebox designed, assembled and
+  tested in Berlin. Its Groovebox app provides 16 audio or MIDI tracks,
+  synthesis and sampling, step sequencing with parameter locks, two FX tracks
+  and master processing. The 110 × 110 × 25 mm instrument has a 2.4-inch OLED,
+  four endless potentiometers and 16 RGB step keys. Connections include USB
+  audio, USB host and device MIDI, two TRS MIDI inputs and outputs, two stereo
+  audio inputs, separate main and headphone/cue outputs, and Ableton Link;
+  a browser-based WebUI manages samples, presets and configuration over USB
+  or Wi-Fi.
+platform: ESP32-P4 (DSP), RP2350B (UI/MIDI), ESP32-C6 (Wi-Fi)
+links:
+  manufacturer: https://dadamachines.com/products/tbd-16/
+  community:
+    - label: tbd-16 manual
+      url: https://docs.dadamachines.com/tbd-16/
+    - label: dadamachines forum
+      url: https://forum.dadamachines.com/
+    - label: Public DSP firmware and developer tools
+      url: https://github.com/dadamachines/ctag-tbd
+    - label: Developer documentation and desktop simulator guide
+      url: https://dadamachines.github.io/ctag-tbd/
+notes: >-
+  Pre-orders are not yet open and the shipping date is unconfirmed. Apps can
+  be switched from the SD card at reboot; the manufacturer demonstrates a
+  tbd-16 port of MCL (MegaCommand Live), the Elektron Machinedrum sequencer.
+  The dadamachines CTAG TBD repository publishes the DSP firmware, plugin and
+  rack framework, developer tools and desktop simulator under GPL-3.0-only.
+  This is the public DSP-side code, rather than the complete instrument
+  firmware. The separately licensed WebUI and proprietary hardware designs
+  are not covered by the GPL.
+pinned: [ctag-tbd, ctag-tbd-simulator]
+image:
+  src: /images/devices/dadamachines-tbd-16.webp
+  style: photo
+  alt: dadamachines tbd-16 groovebox with OLED display, four potentiometers and RGB step keys
+  width: 1200
+  height: 1254
+  credit: dadamachines
+  license: manufacturer product image
+  source_url: https://dadamachines.com/products/tbd-16/
+  original_url: https://dadamachines.com/img/products/tbd-16/hero.webp
