@@ -1,0 +1,35 @@
+device: valeton-gp-200
+kind: tool
+name: webGP-200
+summary: >-
+  Small hosted React page that controls the GP-200 over Web MIDI, with bank and patch changes, block toggles,
+  tempo, CTRL switches, looper and drum controls, and a raw SysEx send box.
+description: >-
+  A Vite and MUI front end published on GitHub Pages. After finding the pedal's MIDI port it sends
+  MIDI control changes for bank and patch stepping, switching each of the effect blocks on and off, tap
+  tempo, CTRL 1 to 8, looper and drum functions, and sets patch volume and expression values. It also reads
+  the patch name and module state back with SysEx queries, and has a field for sending hand-typed SysEx
+  with a message log. The page says it is meant for controlling a GP-200 from a computer or a phone and
+  that it is unaffiliated with Valeton. The repository has no README; a Python script in src/ opens
+  the pedal's MIDI ports to send and monitor SysEx from a terminal. It does not edit or store presets.
+status: active
+authors:
+- name: Josip
+  url: https://github.com/jmiskovic
+source: https://github.com/jmiskovic/webgp-200
+source_status: open
+license: unspecified
+license_notes: No LICENSE file in the repository.
+homepage: https://jmiskovic.github.io/webgp-200/
+distribution: browser-installer
+install_notes: >-
+  Open the hosted page with the pedal connected by USB and allow MIDI and SysEx access; the page suggests
+  Firefox and says to check the browser's MIDI permission if it cannot connect. Running it locally means
+  npm install and npm run dev in a clone.
+brick_risk: false
+tags: [web-midi, web, midi, usb-midi, sysex, looper]
+versions:
+- version: main @ a9acd5d
+  date: 2025-12-08
+  url: https://github.com/jmiskovic/webgp-200/commit/a9acd5d
+  notes: No tagged releases; this is the latest commit.

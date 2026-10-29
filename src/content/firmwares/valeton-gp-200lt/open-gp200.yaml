@@ -1,0 +1,40 @@
+device: valeton-gp-200lt
+kind: tool
+name: open-gp200
+summary: Browser controller for the GP-200LT built with Nuxt that shows the loaded preset and chain over Web MIDI, switches presets, toggles effects and sets tempo, with live sync from the pedal.
+description: >-
+  A hosted page that talks to the pedal directly through the browser's MIDI support, with no install,
+  account or server. It shows the current preset and its eleven blocks with the model each uses, switches
+  to any of the 256 slots, toggles blocks, reads and sets tempo with a tap button, and presses the CTRL 1 to
+  4 switches from the screen. Footswitch presses, toggles, model changes and renames made on the pedal
+  update the page, and an optional panel logs the MIDI messages. The README lists knob editing, changing
+  models, reordering the chain and saving presets as planned, and says writing to the pedal's memory will
+  be marked clearly when it arrives. Written for the GP-200LT and tested on firmware 1.8.0; other GP-200
+  models may partly work but are untested. Not affiliated with Valeton.
+status: active
+authors:
+- name: Dian Aditya
+  url: https://github.com/dianw
+source: https://github.com/dianw/open-gp200
+source_status: open
+license: MIT
+homepage: https://dianw.github.io/open-gp200/
+distribution: browser-installer
+requires_stock: GP-200LT firmware 1.8.0
+install_notes: >-
+  Open the hosted page in Chrome, Edge or Brave with the pedal connected by USB and allow MIDI access;
+  Safari and Firefox lack Web MIDI. To run it locally, follow CONTRIBUTING.md in the repository. Reading and
+  switching presets is described as safe, and the README says the app does not yet write to the pedal's memory.
+brick_risk: false
+tags: [editor, web-midi, web, midi, usb-midi, presets]
+image:
+  url: https://raw.githubusercontent.com/dianw/open-gp200/main/docs/screenshot.webp
+  alt: "open-gp200 connected to a GP-200LT: preset 27-B Mesa Rock at 74 BPM, bank buttons, a two-row chain of coloured pedals with the amp selected, its knobs, and four CTRL switches"
+  credit: Dian Aditya
+  source_url: https://github.com/dianw/open-gp200
+  first_party: true
+versions:
+- version: main @ 62d04ee
+  date: 2026-10-19
+  url: https://github.com/dianw/open-gp200/commit/62d04ee
+  notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,30 @@
+name: Tank-G
+manufacturer: M-VAVE
+category: pedal
+tagline: Battery-powered guitar multi-effects pedal with amp models and IR cabinets
+description: >-
+  The Tank-G is a long, flat guitar multi-effects pedal from M-VAVE with four footswitches, a row of
+  fifteen knobs and a one-digit preset display. The stock firmware chains a noise gate, nine amp models,
+  a three-band EQ, modulation, delay, reverb and eight IR cabinet slots, with 36 editable presets. It runs
+  from a built-in rechargeable battery and has an XLR output, headphone output, Bluetooth audio playback
+  and a USB audio interface. M-VAVE's M-EFCS app edits presets and M-UPGRADE installs firmware updates.
+links:
+  manufacturer: https://www.m-vave.com/product.html?id=tank-g
+  community:
+  - label: M-VAVE software and firmware downloads
+    url: https://www.m-vave.com/download
+notes: >-
+  There are two hardware revisions, v1 and v2; UltraRig's notes put the v2 on a JieLi AC791N chip and ship
+  a separate build for each board. According to UltraRig's release notes, M-UPGRADE began installing
+  factory firmware 98 in October 2026; UltraRig needs 96 or 97, so check before updating.
+related: [m-vave-fm-1, m-vave-smk-37, m-vave-chocolate]
+image:
+  src: /images/devices/m-vave-tank-g.webp
+  style: photo
+  alt: "M-VAVE Tank-G, a teal pedal with fifteen coloured knobs above four footswitches labelled A/Reverb, B/Delay, C/Mod and D/Amp, and a small display in the middle"
+  width: 960
+  height: 230
+  credit: M-VAVE
+  license: manufacturer product image
+  source_url: https://www.m-vave.com/product.html?id=tank-g
+  original_url: https://www.m-vave.com/images/products/tank-g.webp

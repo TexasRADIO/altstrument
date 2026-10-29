@@ -1,0 +1,60 @@
+device: valeton-gp-200
+name: GP-200 Firmware Mods
+summary: >-
+  Browser configurator that builds a modified GP-200 firmware from your own stock V1.8.0 or V1.8.2 image:
+  DSP load readout, dual chains, scenes, preset trails, native NAM A2 Lite amps and replacement IRs. The
+  repository also holds a precompiled modified image.
+description: >-
+  Rights warning: the repository's BIN folder holds a ready-made firmware image that is Valeton's V1.8.2
+  firmware with the mods applied, so it redistributes Valeton's proprietary firmware in modified form
+  and the project states no licence from Valeton for that. The GPL-3.0 licence file covers the author's own code and
+  patches, not Valeton's firmware inside that image.
+
+  The main route is the configurator, an offline HTML page. You load your own unmodified BIN, tick the
+  mods you want and download a ZIP with the generated firmware, a manifest and, for some mods, replacement
+  resources for Valeton's editor. The mods are a DSP load percentage at the top of the screen, a Dual Chain
+  mode with two paths, a blend control, sample alignment and a polarity switch for the second path, a Scenes
+  mode with four snapshots per preset on top of the saved preset, trails when switching patches, alternative effect algorithms for the wah, preamp, distortion and EQ slots, up to
+  five native NAM A2 Lite amp models in the current version, up to 15 Sound Clone replacements for factory
+  amps and replacement IRs for the 70 factory cabinets. The Dual Chain screens can be edited only on the
+  pedal, because Valeton's editor does not understand them, and the editor shows no names for the NAM amps.
+  The author lists a number of effects that must not be used in a patch while a NAM model is loaded, since
+  the model takes about half of the DSP budget. The page says it is experimental and unofficial.
+
+  The README credits tntexplosivesltd, author of gp200-patcher, for the reverse engineering it builds on.
+  The configurator is a single bundled HTML file, not readable source, and the repository holds no
+  separate source for the patches. It targets the GP-200 only; the GP-200LT is not mentioned.
+status: active
+authors:
+- name: Goaltoday
+  url: https://github.com/Goaltoday
+source: https://github.com/Goaltoday/GP-200-FIRMWARE-MODS
+source_status: patcher-only
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file is the GNU GPL version 3 text, with no "or later" statement in the README or the
+  configurator page. It covers the author's own work only: the precompiled BIN contains Valeton's firmware,
+  which Valeton has not licensed for redistribution.
+distribution: patch-your-own
+requires_stock: GP-200 (also GP-200R and GP-200X) V1.8.0 or V1.8.2, or an image the configurator already modified
+install_notes: >-
+  Open Custom_Firmware_0.5.html from the repository in a desktop browser, load your own unmodified
+  firmware BIN, choose and configure the mods, and build. Unzip the result, read the manifest and flash
+  the BIN with Valeton's official update procedure for your version; do not interrupt the update. Copy the
+  replacement files listed in the ZIP into Valeton's editor only if the manifest says to, after backing
+  up the originals. Back up your presets first. The author calls the project experimental and beta. The
+  BIN folder's prebuilt image is Valeton's firmware with changes applied; prefer building your own from
+  the image you downloaded from Valeton.
+brick_risk: false
+tags: [fx, patch, web, nam, ir, scenes, routing]
+video:
+  url: https://www.youtube.com/watch?v=2Who0_31P_A
+  title: HTML MOD
+  credit: goaltoday
+  first_party: true
+  found_via: https://github.com/Goaltoday/GP-200-FIRMWARE-MODS#readme
+versions:
+- version: main @ 0ba009a
+  date: 2026-10-23
+  url: https://github.com/Goaltoday/GP-200-FIRMWARE-MODS/commit/0ba009acf3821f782c87be2869f36e686228bb08
+  notes: No tagged releases; this is the latest commit.

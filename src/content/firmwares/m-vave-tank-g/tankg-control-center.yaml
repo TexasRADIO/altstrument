@@ -1,0 +1,78 @@
+device: m-vave-tank-g
+name: Tank-G Control Center
+kind: tool
+summary: Preset manager for the Tank-G on Windows, Linux and Android that talks the M-EFCS protocol directly over USB-MIDI or, on the v2, Bluetooth, with a virtual pedal panel, backups and a preset library.
+description: >-
+  Rights warning: the source repository's research/factory folder holds M-VAVE factory preset dumps
+  extracted from M-EFCS, which its README describes as M-VAVE's property for local use, so their
+  redistribution is not licensed.
+
+  An independent replacement for M-VAVE's M-EFCS editor, based on a reverse-engineered protocol. It reads
+  and writes the 36 presets with a read-back check, saves a backup of the whole bank before each write, and
+  edits every control from a panel laid out like the pedal. It also covers preset and bank names, LED
+  colour, import and export of presets and banks, a library of ready-made banks, live audition and
+  Bluetooth connection on the v2. Optional features generate presets with an AI service using the user's own
+  account or API key, upload amp models in M-VAVE's .am4data format over Bluetooth, and keep presets in the
+  user's Google Drive. A command-line mode lists, backs up, exports, imports, copies and resets presets.
+  Firmware updates, IR import and the global settings are not implemented. The app updates itself, and the
+  README and app are in Spanish. Compiled builds are published both as releases of the source repository
+  and in the separate tankg-control-center-releases repository, which holds only the installers and a short
+  README.
+status: active
+authors:
+- name: Dotnginx
+  url: https://github.com/CamiloFerreira
+source: https://github.com/CamiloFerreira/tankg-control-center
+source_status: open
+license: unspecified
+license_notes: >-
+  No LICENSE file in the repository. docs/TERMS.md calls the app free and open source but names no licence.
+homepage: https://github.com/CamiloFerreira/tankg-control-center-releases
+distribution: download
+install_notes: >-
+  Download TankG-windows-x64.exe, TankG-linux-x86_64 or TankG-android.apk from the latest release and check it
+  against SHA256SUMS. The Windows build is unsigned in the latest releases, so SmartScreen may warn. Close
+  M-EFCS first, since Windows lets only one program use the MIDI port. Android connects by USB-OTG or, on the
+  v2, Bluetooth; the pedal accepts one Bluetooth connection at a time. It can also be run from source with
+  Python 3.11 or newer using run.sh or run.bat.
+brick_risk: false
+tags: [editor, midi, usb-midi, bluetooth, android, presets, library, cli, python]
+image:
+  url: https://raw.githubusercontent.com/CamiloFerreira/tankg-control-center/main/docs/img/desktop-main.png
+  alt: Tank-G Control Center desktop window, in Spanish, with a list of nine preset banks at left and vertical sliders for gate, gain, tone, volume, modulation, delay, reverb and cabinet
+  credit: Dotnginx
+  source_url: https://github.com/CamiloFerreira/tankg-control-center
+  first_party: true
+versions:
+- version: v1.9.1
+  date: 2026-10-28
+  url: https://github.com/CamiloFerreira/tankg-control-center/releases/tag/v1.9.1
+  notes: Factory restore now defaults to the as-shipped preset set, and the factory presets have names.
+- version: v1.9.0
+  date: 2026-10-28
+  url: https://github.com/CamiloFerreira/tankg-control-center/releases/tag/v1.9.0
+  notes: Adds band preset packs built around community amp captures downloaded on demand, and .tgpack export and import.
+- version: v1.8.0
+  date: 2026-10-28
+  url: https://github.com/CamiloFerreira/tankg-control-center/releases/tag/v1.8.0
+  notes: Uploads .am4data amp models and restores the factory amp and cab sets, both over Bluetooth on the v2 only.
+- version: v1.7.0
+  date: 2026-10-27
+  url: https://github.com/CamiloFerreira/tankg-control-center/releases/tag/v1.7.0
+  notes: Google Drive sync of presets and names, with a 30-version history.
+- version: v1.6.0
+  date: 2026-10-27
+  url: https://github.com/CamiloFerreira/tankg-control-center/releases/tag/v1.6.0
+  notes: Adds Bluetooth connection for the v2 on Android, Windows and Linux; the web version is dropped.
+- version: v1.5.0
+  date: 2026-10-27
+  url: https://github.com/CamiloFerreira/tankg-control-center/releases/tag/v1.5.0
+  notes: Self-update on all three platforms, and the Android app reaches the desktop feature set.
+- version: v1.4.0
+  date: 2026-10-27
+  url: https://github.com/CamiloFerreira/tankg-control-center/releases/tag/v1.4.0
+  notes: First Android release and the built-in preset library.
+- version: v1.0.0
+  date: 2026-10-26
+  url: https://github.com/CamiloFerreira/tankg-control-center/releases/tag/v1.0.0
+  notes: First release, for Linux and Windows.

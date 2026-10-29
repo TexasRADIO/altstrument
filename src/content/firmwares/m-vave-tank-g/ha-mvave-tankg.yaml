@@ -1,0 +1,50 @@
+device: m-vave-tank-g
+name: ha-mvave-tankg
+kind: tool
+summary: Home Assistant custom integration that discovers a Tank-G over Bluetooth and exposes presence, signal strength and a 1 to 36 preset selector that switches presets by BLE-MIDI.
+description: >-
+  Installed through HACS as a custom repository or by copying the custom_components folder. Home Assistant
+  discovers the pedal from its Bluetooth advertisements and the integration creates a connectivity sensor,
+  an RSSI diagnostic sensor and a number entity for the preset, which can be set from automations. It uses
+  Home Assistant's shared Bluetooth stack, so an ESPHome Bluetooth proxy near the pedal works. The preset
+  value is one-way: the pedal does not report its current preset, so the entity shows the last value sent.
+  LED colour and power control are not available. The Bluetooth code lives in the separate mvave-tankg-ble
+  library, which the integration installs as a requirement. It needs Home Assistant 2024.8 or newer.
+status: active
+authors:
+- name: Hudson Brendon
+  url: https://github.com/hudsonbrendon
+source: https://github.com/hudsonbrendon/ha-mvave-tankg
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  In HACS add the repository as a custom Integration source, install it and restart Home Assistant. Turn on
+  the pedal's Bluetooth by holding footswitches B and C for three seconds until the indicator blinks, then
+  confirm the discovered device under Devices and Services. Close the official M-VAVE app while Home
+  Assistant controls the pedal.
+brick_risk: false
+tags: [bluetooth, midi, python, home-assistant, presets]
+versions:
+- version: v0.2.2
+  date: 2026-07-04
+  url: https://github.com/hudsonbrendon/ha-mvave-tankg/releases/tag/v0.2.2
+  notes: Fixes a leaked Bluetooth callback after a failed setup and adds a 30-second timeout to preset writes.
+- version: v0.2.1
+  date: 2026-05-26
+  url: https://github.com/hudsonbrendon/ha-mvave-tankg/releases/tag/v0.2.1
+  notes: Fixes the integration icon, which was cropped in the Home Assistant interface.
+- version: v0.2.0
+  date: 2026-05-26
+  url: https://github.com/hudsonbrendon/ha-mvave-tankg/releases/tag/v0.2.0
+  notes: Moves the Bluetooth code into the mvave-tankg-ble library and removes the battery code.
+- version: v0.1.2
+  date: 2026-05-26
+  url: https://github.com/hudsonbrendon/ha-mvave-tankg/releases/tag/v0.1.2
+- version: v0.1.1
+  date: 2026-05-26
+  url: https://github.com/hudsonbrendon/ha-mvave-tankg/releases/tag/v0.1.1
+- version: v0.1.0
+  date: 2026-05-26
+  url: https://github.com/hudsonbrendon/ha-mvave-tankg/releases/tag/v0.1.0
+  notes: First release, with Bluetooth discovery, presence, signal strength and preset selection.

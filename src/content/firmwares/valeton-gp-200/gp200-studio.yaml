@@ -1,0 +1,42 @@
+device: valeton-gp-200
+also_devices: [valeton-gp-200lt]
+kind: tool
+name: GP200 Studio
+summary: Browser editor, patch manager and multi-track loop station for the GP-200 that talks to the pedal over Web MIDI, with no account or server.
+description: >-
+  A client-side TypeScript app hosted at gp200studio.com. It draws a patch as a pedalboard, with each of the
+  305 effects labelled after the real amp or pedal it models, and sends knob changes, swaps, bypasses and
+  chain reordering to the pedal as they happen. It lists all 256 patches for searching and renaming, backs
+  the whole pedal up to one zip, and imports and exports .prst files. It assigns the CTRL footswitches and
+  expression pedals, and the 1.1.0 release added a bulk apply that copies one patch's footswitch layout or
+  volume into many patches. Separate from the pedal's single loop, it records any number of timed loop
+  tracks and has a built-in drum machine and a remote panel for tuner, tempo and bank changes. Patches stay
+  in the browser tab. The hosted site uses Google Analytics with a documented list of events. It needs
+  Chrome or Edge, since Firefox and Safari lack the required MIDI support. The .prst and SysEx work builds
+  on Preset Forge. Not affiliated with Valeton.
+status: active
+authors:
+- name: Kabir Tamari
+  url: https://github.com/kabir0st
+source: https://github.com/kabir0st/gp200-studio
+source_status: open
+license: GPL-3.0-only
+homepage: https://gp200studio.com/
+distribution: browser-installer
+install_notes: >-
+  Open gp200studio.com in Chrome or Edge, connect the pedal over USB and press Connect. Saved .prst files
+  can be edited without a pedal. Bulk apply overwrites the patches it touches, so make the backup zip first.
+  To run it locally, clone the repository and use npm run dev.
+brick_risk: false
+tags: [editor, web-midi, web, presets, sysex, midi, usb-midi, librarian, looper]
+image:
+  url: https://raw.githubusercontent.com/kabir0st/gp200-studio/PRODUCTION/public/guide/02-editor-board.png
+  alt: "GP200 Studio showing patch Scotland Kiss offline: a signal chain strip above two rows of pedal-style blocks, from gate and volume through a Mesa-style amp and cab to EQ, chorus, delay and reverb"
+  credit: Kabir Tamari
+  source_url: https://github.com/kabir0st/gp200-studio
+  first_party: true
+versions:
+- version: v1.1.0
+  date: 2026-08-10
+  url: https://github.com/kabir0st/gp200-studio/releases/tag/v1.1.0
+  notes: Fixes footswitch assignment writes and adds bulk apply, a pedalboard that fits the window and a dark mode.

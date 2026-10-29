@@ -1,0 +1,54 @@
+device: valeton-gp-200
+kind: tool
+name: ToneCircuit
+summary: Closed-source Android patch editor for the GP-200 over USB-C, with patch browsing, live parameter edits, chain arranging and a stage-friendly Live view, distributed as an APK.
+description: >-
+  An early release that follows patch changes from the pedal, lists banks and patches with search by number
+  or name and lets loaded patches be moved in the list. It edits supported effects and parameters in real
+  time, turns blocks on and off, changes effects, renames patches and arranges the signal chain. A Live
+  view shows large stomp-style controls. Effect names, parameter labels and ranges come from the GP-200
+  algorithm.xml file, which the user copies from Valeton's Windows editor. The README says real-time edits
+  reach the pedal but saving stored patches is still being verified, that part of the protocol is
+  reverse-engineered and that iOS is not supported. It needs no account. The repository holds only a README
+  and the published APKs.
+status: active
+authors:
+- name: Rommel Cuneta
+  url: https://github.com/mel0620
+source: https://github.com/mel0620/tonecircuit-releases
+source_status: binary-only
+license: unspecified
+license_notes: No LICENSE file in the repository; it holds only a README, and only APKs are published.
+distribution: download
+install_notes: >-
+  Download ToneCircuit.apk from the latest release and open it on an Android phone, allowing installation
+  from your browser or file manager if asked. Connect the pedal, powered by its own supply, with a USB-C
+  data cable. For real effect names, load algorithm.xml from the official GP-200 editor's install folder.
+  This is a closed-source APK from a single developer, so install it only if you trust the author.
+brick_risk: false
+tags: [editor, android, usb-midi, midi, presets]
+versions:
+- version: v0.3.2
+  date: 2026-09-12
+  url: https://github.com/mel0620/tonecircuit-releases/releases/tag/v0.3.2
+  notes: Fixes the all-patches-loaded progress bar reappearing after leaving Live mode.
+- version: v0.3.1
+  date: 2026-09-12
+  url: https://github.com/mel0620/tonecircuit-releases/releases/tag/v0.3.1
+  notes: Fixes the Arrange button vanishing after Live mode and the patch list not scrolling to the active patch.
+- version: 0.3.0
+  date: 2026-09-12
+  url: https://github.com/mel0620/tonecircuit-releases/releases/tag/0.3.0
+  notes: Adds a Select button to each patch in the patch list.
+- version: 0.2.0
+  date: 2026-09-12
+  url: https://github.com/mel0620/tonecircuit-releases/releases/tag/0.2.0
+  notes: Adds loading of algorithm.xml so effect names, parameter labels and ranges are real.
+- version: 0.1.1
+  date: 2026-09-12
+  url: https://github.com/mel0620/tonecircuit-releases/releases/tag/0.1.1
+  notes: Adds patch search, moving loaded patches and arranging the signal chain.
+- version: 0.1.0
+  date: 2026-09-11
+  url: https://github.com/mel0620/tonecircuit-releases/releases/tag/0.1.0
+  notes: First release; connects over USB-C MIDI and follows patch changes from the pedal.

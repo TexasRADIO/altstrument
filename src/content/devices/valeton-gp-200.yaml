@@ -1,0 +1,37 @@
+name: GP-200
+manufacturer: Valeton
+category: pedal
+tagline: Floor multi-effects processor with expression pedal, looper and drum machine
+description: >-
+  The GP-200 is a floor multi-effects processor from Valeton with a 4.3-inch colour screen, eight LED
+  footswitches and a built-in expression pedal. Its stock firmware has over 140 amp and cabinet models, more
+  than 100 effects, 20 user IR slots, up to eleven freely ordered modules per patch, a 180-second looper and
+  100 drum patterns. It has 5-pin MIDI, stereo XLR and 1/4-inch outputs, an effects loop and a 6-in/4-out
+  USB audio interface. The GP-200R and GP-200X are the same pedal in other colours; the GP-200JR is a
+  different product.
+platform: NXP i.MX RT1060
+stock_firmware: V1.8.2
+links:
+  manufacturer: https://www.valeton.net/product/gp-200/
+  community:
+  - label: Valeton firmware downloads
+    url: https://www.valeton.net/firmware/
+  - label: GP-200 reverse-engineering blog
+    url: https://gp200-reversing.hashnode.dev/
+notes: >-
+  The firmware entries patch Valeton's own firmware image, which the owner supplies, and are flashed with
+  Valeton's editor. The pedal's update mode sits in a part of the flash the mods do not touch, so a
+  failed update can be undone by flashing the stock image again. The tools are third-party editors and
+  librarians built on the reverse-engineered USB SysEx protocol and the .prst preset format, much of it
+  first documented by Preset Forge.
+related: [valeton-gp-200lt]
+image:
+  src: /images/devices/valeton-gp-200.webp
+  style: photo
+  alt: "Valeton GP-200, a black floor unit with a colour screen showing patch 01-A, a row of knobs and module buttons, eight ringed footswitches and an expression pedal at the right"
+  width: 660
+  height: 445
+  credit: Valeton
+  license: manufacturer product image
+  source_url: https://www.valeton.net/product/gp-200/
+  original_url: https://res.valeton.net/Uploads/wp/2025/05/GP-200-PN-IMG800x600.png

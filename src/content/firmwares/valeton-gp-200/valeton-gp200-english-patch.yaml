@@ -1,0 +1,45 @@
+device: valeton-gp-200
+also_devices: [valeton-gp-200lt]
+name: Valeton GP200 English Patch
+summary: >-
+  Python command-line tool that replaces the Chinese interface strings in a Chinese-locked GP-200 firmware
+  image with English ones of the same byte length, then fixes the image checksum.
+description: >-
+  On units sold with Chinese-only firmware the language cannot be switched to English whatever image is
+  flashed. The tool scans a firmware file for Chinese strings, fills a translation list with English
+  strings cut to fit the original lengths, writes them into the image and recalculates the GP-200
+  checksum. The wording is therefore shortened and does not match Valeton's English firmware; the author
+  shows the language entry as "CN". The repository also carries the logic of an earlier patch for the
+  GP-50, which the author did not test. A Google Colab notebook runs it online.
+
+  The README says the project will soon be deprecated in favour of tntexplosivesltd's unlock of the full
+  language list on Chinese-locked units. That unlock shipped as a mod in gp200-patcher v1.0 on 2026-10-02,
+  and it restores Valeton's own translations instead of shortened ones. The author tested only firmware
+  1.8.0. The usage example names a GP-200LT image, and the repository description names the LT, so this
+  entry also lists the LT; the author has not stated a tested LT result.
+status: maintained
+authors:
+- name: Levan Shugliashvili
+  url: https://github.com/lshug
+source: https://github.com/lshug/valeton-gp200-english-patch
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The README and LICENSE.md give GNU GPL version 3, inherited from the GP-50 patch it is partly based on,
+  with no "or later" statement.
+distribution: patch-your-own
+requires_stock: Chinese-locked GP-200 or GP-200LT firmware V1.8.0 (the only version the author tested)
+install_notes: >-
+  Needs uv. Run the scan step on your own firmware BIN, fill the translation file with the translate
+  step, then run the patch step to write a new BIN beside the original, and flash that BIN with Valeton's
+  tools. Use --force only if you accept patching an image whose version the tool does not recognise. The
+  README documents no brick risk and the checksum is recalculated, but only V1.8.0 was tested, and no
+  result on a GP-200LT has been reported; LT owners should keep the stock image to flash back. Check
+  gp200-patcher first: its language unlock mod does the same job with the full translations.
+brick_risk: false
+tags: [patch, python, cli, localization]
+versions:
+- version: main @ d1a3095
+  date: 2026-08-20
+  url: https://github.com/lshug/valeton-gp200-english-patch/commit/d1a3095fe446d496150bb4fbae4a9775ce00e462
+  notes: No tagged releases; this is the latest commit.

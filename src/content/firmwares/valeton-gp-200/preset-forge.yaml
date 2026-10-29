@@ -1,0 +1,42 @@
+device: valeton-gp-200
+also_devices: [valeton-gp-200lt]
+kind: tool
+name: Preset Forge
+summary: Browser editor for GP-200 presets that loads and saves .prst files in any browser and edits the pedal live over USB when Web MIDI with SysEx is available, with a shared preset gallery.
+description: >-
+  A Next.js web app hosted at preset-forge.com that also publishes its reverse-engineering notes. It opens
+  and writes the 1224-byte .prst files, shows the eleven-block chain as a pedalboard with 305 effects and
+  their parameters, and handles EXP and controller assignments and the effects loop position. With the
+  pedal connected over USB it sends changes as they are made, can push a whole loaded preset to the unit,
+  and reconnects after a dropped cable. Live editing needs a desktop Chromium browser or Firefox 108 or
+  newer, because the whole protocol is SysEx; file editing works anywhere. Other parts are an
+  experimental importer for Line 6 HX Stomp files, timed setlists with a count-in, and an account-based
+  gallery where presets can be shared and searched by effect. The repository documents the .prst layout
+  and the SysEx message set, and the site is self-hostable with Docker, PostgreSQL and an S3-compatible
+  store. Not affiliated with Valeton.
+status: active
+authors:
+- name: Manuel / Phash
+  url: https://github.com/phash
+source: https://github.com/phash/gp200editor
+source_status: open
+license: GPL-3.0-or-later
+license_notes: >-
+  The LICENSE file is the GPL v3 text without its closing paragraph, followed by a filled-in notice for
+  Preset Forge, Copyright 2026 phash, that grants version 3 or any later version. GitHub reports it as
+  unrecognised because of that edit. Other projects that reuse the code read it as GPL-3.0-or-later.
+homepage: https://preset-forge.com
+distribution: browser-installer
+requires_stock: GP-200 firmware 1.8.0
+install_notes: >-
+  Open preset-forge.com. For live editing use desktop Chrome, Edge or another Chromium browser, or Firefox
+  108 or newer (it offers a one-time MIDI add-on), allow the SysEx permission, connect the pedal with a USB
+  data cable and close Valeton's editor and any DAW first. Safari and mobile browsers can only edit files.
+  Back up presets before pushing a loaded file to the unit.
+brick_risk: false
+tags: [editor, web-midi, web, presets, sysex, midi, usb-midi, research, librarian]
+versions:
+- version: master @ 80f7046
+  date: 2026-10-22
+  url: https://github.com/phash/gp200editor/commit/80f7046
+  notes: No tagged releases; this is the latest commit.

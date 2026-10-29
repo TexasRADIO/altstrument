@@ -1,0 +1,31 @@
+device: valeton-gp-200
+kind: tool
+name: GP200-Controller
+summary: Flutter app for Android and iOS that controls and edits the loaded GP-200 preset over USB-C or BLE MIDI, backs up the 256 slots as .prst files and drives the looper and drums.
+description: >-
+  A Flutter project with Android and iOS runners. It shows the loaded preset as a pedalboard and stays in
+  sync with the pedal, so knob turns on either side update the other. You can toggle slots, swap effect
+  models, edit parameters and reorder the chain. A sweep reads all 256 slots (255 on the JR and LT) for
+  browsing, zips them as .prst files and restores one to a chosen slot with a read-back check. The looper
+  and drum transport go out as MIDI control changes whose numbers come from a community list and are still
+  being checked on the pedal. A raw SysEx monitor is included. The author says it works against real
+  hardware and built the protocol layer from captured frames.
+status: active
+authors:
+- name: Frédéric Quié
+  url: https://github.com/fredquie
+source: https://github.com/fredquie/GP200-Controller
+source_status: open
+license: unspecified
+license_notes: No LICENSE file in the repository.
+distribution: source-only
+install_notes: >-
+  Build with Flutter: flutter pub get, then flutter run on a physical phone, since the pedal is reached over
+  USB-MIDI. There are no prebuilt packages. Back up slots before restoring over them.
+brick_risk: false
+tags: [editor, android, midi, usb-midi, bluetooth, presets, sysex, looper]
+versions:
+- version: main @ acf61b0
+  date: 2026-09-09
+  url: https://github.com/fredquie/GP200-Controller/commit/acf61b0
+  notes: No tagged releases; this is the latest commit.

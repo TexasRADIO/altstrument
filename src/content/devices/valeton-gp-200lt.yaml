@@ -1,0 +1,29 @@
+name: GP-200LT
+manufacturer: Valeton
+category: pedal
+tagline: Compact version of the GP-200 multi-effects processor
+description: >-
+  The GP-200LT is a smaller version of Valeton's GP-200 with the same effects library and the same
+  4.3-inch screen, but four footswitches and no built-in expression pedal. It has balanced 1/4-inch TRS
+  outputs, an effects loop, 1/8-inch TRS MIDI in and out, two jacks for external expression pedals or
+  footswitches, a headphone output with its own volume knob and a 6-in/4-out USB audio interface.
+stock_firmware: V1.8.0
+links:
+  manufacturer: https://www.valeton.net/product/gp-200lt/
+  community:
+  - label: Valeton firmware downloads
+    url: https://www.valeton.net/firmware/
+notes: >-
+  It runs its own firmware image, separate from the GP-200's, and Valeton's editor refuses an image made
+  for the other model. The listed mods patch the owner's stock LT image.
+related: [valeton-gp-200]
+image:
+  src: /images/devices/valeton-gp-200lt.webp
+  style: photo
+  alt: "Valeton GP-200LT, a black multi-effects unit with a colour screen showing patch 01-A, module buttons and knobs to its right, and four ringed footswitches along the front"
+  width: 640
+  height: 430
+  credit: Valeton
+  license: manufacturer product image
+  source_url: https://www.valeton.net/product/gp-200lt/
+  original_url: https://res.valeton.net/Uploads/wp/2025/05/GP-200LT-PN-IMG800x600.png

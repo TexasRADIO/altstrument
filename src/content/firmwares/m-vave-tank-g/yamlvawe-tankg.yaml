@@ -1,0 +1,31 @@
+device: m-vave-tank-g
+name: yamlvawe_tankg
+kind: tool
+summary: Converts Tank G v2 .tkg presets to and from readable YAML on the command line, and includes a browser-based pedal panel for editing and exporting presets.
+description: >-
+  A Python package with a strict converter between the 21-byte binary .tkg format and a YAML file, so
+  presets can be read, diffed in Git and used as test fixtures. The repository also holds a static viewer
+  made of plain HTML, CSS and JavaScript that imitates the pedal's panel, with drag-to-turn knobs, effect
+  type selectors, on and off switches, a cabinet choice and an LED colour picker. It opens and saves both
+  .tkg and YAML files without a backend and is served locally with Python's built-in web server. The format
+  is specified in the repository's openspec folder. The README says the project was written with Claude
+  Code and describes it as early but working.
+status: active
+authors:
+- name: Ilya Smirnov
+  url: https://github.com/alternativehood
+source: https://github.com/alternativehood/yamlvawe_tankg
+source_status: open
+license: unspecified
+license_notes: No LICENSE file in the repository.
+distribution: source-only
+install_notes: >-
+  Needs Python 3.10 or newer and PyYAML. Run python -m yamlvawe_tankg from a clone for the converter. For the
+  editor, run python -m http.server 9000 inside the viewer folder and open it in a browser.
+brick_risk: false
+tags: [editor, converter, python, web, cli, presets]
+versions:
+- version: main @ 88c1003
+  date: 2026-01-16
+  url: https://github.com/alternativehood/yamlvawe_tankg/commit/88c1003e040f603b5a139743c6f4ef33e1e52ead
+  notes: No tagged releases; this is the latest commit.

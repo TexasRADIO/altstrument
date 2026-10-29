@@ -1,0 +1,33 @@
+device: valeton-gp-200
+also_devices: [valeton-gp-200lt]
+kind: tool
+name: PRSTDecoder
+summary: Python scripts that decode GP-200 .prst preset files to readable JSON and encode the JSON back to .prst, with notes on the file layout.
+description: >-
+  Rights warning: the examples/FactoryPresets200 folder holds about a hundred of Valeton's factory
+  presets as .prst files, with no stated permission from Valeton to redistribute them.
+
+  Two command-line scripts and a batch wrapper that need only Python 3.6 or newer. The decoder turns a
+  binary preset into JSON holding the header, preset name, BPM, each effect module with its parameters and
+  on/off state, and the control and routing settings; the encoder rebuilds the binary from that JSON. The
+  repository carries format notes for the GP-200 binary layout and for the older GP-100 XML preset format,
+  a round-trip test script, and example presets. Intended for inspecting or generating presets
+  from scripts rather than for editing them by hand in a GUI.
+status: active
+authors:
+- name: Mike
+  url: https://github.com/mikeliddle
+source: https://github.com/mikeliddle/PRSTDecoder
+source_status: open
+license: MIT
+distribution: source-only
+install_notes: >-
+  Clone the repository and run python3 scripts/prst_decoder.py on a .prst file, or scripts/prst_encoder.py
+  on a JSON file, as shown in its README. The scripts work on files only and do not talk to the pedal.
+brick_risk: false
+tags: [converter, python, presets, research, cli]
+versions:
+- version: main @ 25dc374
+  date: 2025-12-16
+  url: https://github.com/mikeliddle/PRSTDecoder/commit/25dc374
+  notes: No tagged releases; this is the latest commit.

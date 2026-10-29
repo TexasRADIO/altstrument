@@ -1,0 +1,33 @@
+device: m-vave-tank-g
+name: m-vave-tankG-codec
+kind: tool
+summary: Dependency-free Python encoder, decoder and command-line tool for the 21-byte .tkg preset file, with a byte-by-byte description of the format.
+description: >-
+  A single Python module that turns a Tank-G preset into a small object and back. The README tabulates what
+  each of the 21 bytes holds: the on or off state of the four effect sections, noise gate, amp type, gain
+  and the three tone controls, volume, the modulation, delay and reverb knobs, the cabinet slot and the
+  footswitch LED colour. It explains that the three effect knobs store a position on one continuous
+  control rather than a type and a value, and that the editor shows those values one higher than the
+  stored byte. The author says some limits, such as the upper range of bass, are still being worked out.
+  The command line decodes a .tkg file to a list of fields or encodes one from key=value arguments. The
+  README is in Portuguese. It is a reverse-engineering reference more than an editor.
+status: active
+authors:
+- name: Mekuze
+  url: https://github.com/Mekuze44
+source: https://github.com/Mekuze44/m-vave-tankG-codec
+source_status: open
+license: unspecified
+license_notes: >-
+  No LICENSE file in the repository. The README's project tree lists one, but none is committed.
+distribution: source-only
+install_notes: >-
+  Needs Python 3.10 or newer and nothing else. Clone the repository and run python tankg_codec.py decode
+  preset.tkg, or import TKGPreset from the module.
+brick_risk: false
+tags: [research, converter, python, cli, presets]
+versions:
+- version: main @ ac3a322
+  date: 2026-10-03
+  url: https://github.com/Mekuze44/m-vave-tankG-codec/commit/ac3a3221f7fd29990b75823b6da68af0184db6ea
+  notes: No tagged releases; this is the latest commit.

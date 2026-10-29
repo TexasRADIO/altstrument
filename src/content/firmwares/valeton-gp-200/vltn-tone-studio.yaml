@@ -1,0 +1,75 @@
+device: valeton-gp-200
+also_devices: [valeton-gp-200lt]
+kind: tool
+name: VLTN Tone Studio
+summary: Desktop editor and librarian for Valeton pedals including the GP-200, GP-200LT and GP-200JR, with live editing over USB, backups, .prst import and export, and NAM captures and IRs sent to the pedal.
+description: >-
+  An Electron and React app for Windows, macOS and Linux, and a browser build for Chrome and Edge. It
+  identifies the connected model, edits the chain live, manages the 256-slot library with automatic
+  backups and restore, and handles CTRL assignments, patch settings, tempo and the global EQ. It converts
+  Neural Amp Modeler captures into SnapTones and uploads user IRs over USB, with TONE3000 browsing, and
+  includes a song splitter that proposes a preset from a recording's guitar part. The same app covers the
+  GP-5, GP-50, GP-150 and GP-180, which are not separate catalog devices. The GP-200 effect list was
+  generated from GP200 Studio, and Valeton's own algorithm.xml can be imported to add units. It has
+  simulated pedals for trying it without hardware. Not affiliated with Valeton.
+status: active
+authors:
+- name: Grzegorz Mołdawa
+  url: https://github.com/grzmol
+source: https://github.com/grzmol/VLTN-Tone-Studio
+source_status: open
+license: GPL-3.0-only
+distribution: download
+install_notes: >-
+  Download the installer for your system from the latest release. The Windows and macOS builds are
+  unsigned, so Windows SmartScreen and macOS Gatekeeper need a manual override. Close Valeton's editor and
+  other MIDI apps first, since only one can hold the pedal's port; on Windows 11 the USB MIDI 2.0 driver
+  can leave the pedal silent until it is switched back to USB Audio Device. The app backs up a slot before
+  overwriting it.
+brick_risk: false
+tags: [editor, librarian, presets, midi, usb-midi, web-midi, nam, ir, sysex]
+versions:
+- version: v0.8.1
+  date: 2026-10-21
+  url: https://github.com/grzmol/VLTN-Tone-Studio/releases/tag/v0.8.1
+  notes: Lets the GP-200LT, GP-200JR, GP-150 and GP-180 be written to, which 0.8.0 had left read-only.
+- version: v0.8.0
+  date: 2026-10-19
+  url: https://github.com/grzmol/VLTN-Tone-Studio/releases/tag/v0.8.0
+  notes: Adds a choice of stem separation model, TONE3000 search and a zoomable board with pedals drawn like the originals.
+- version: v0.7.2
+  date: 2026-10-15
+  url: https://github.com/grzmol/VLTN-Tone-Studio/releases/tag/v0.7.2
+  notes: Fixes connecting to a GP-200LT on firmware 1.6.0 that does not answer the User IR name read.
+- version: v0.7.1
+  date: 2026-10-12
+  url: https://github.com/grzmol/VLTN-Tone-Studio/releases/tag/v0.7.1
+  notes: Fixes GP-200 connections that stalled waiting for a mode reply the pedal never sends.
+- version: v0.7.0
+  date: 2026-10-12
+  url: https://github.com/grzmol/VLTN-Tone-Studio/releases/tag/v0.7.0
+  notes: Adds GP-150 and GP-180 support and turning your own NAM files into SnapTones.
+- version: v0.6.0
+  date: 2026-10-12
+  url: https://github.com/grzmol/VLTN-Tone-Studio/releases/tag/v0.6.0
+  notes: Adds Tone Match for the GP-200 family, a built-in GP-200 effect list and a session log, and moves the project to GPL-3.0.
+- version: v0.5.0
+  date: 2026-10-11
+  url: https://github.com/grzmol/VLTN-Tone-Studio/releases/tag/v0.5.0
+  notes: First release with GP-200, GP-200LT and GP-200JR support, alongside the GP-50.
+- version: v0.4.0
+  date: 2026-10-10
+  url: https://github.com/grzmol/VLTN-Tone-Studio/releases/tag/v0.4.0
+  notes: Adds in-app updates.
+- version: v0.3.0
+  date: 2026-10-10
+  url: https://github.com/grzmol/VLTN-Tone-Studio/releases/tag/v0.3.0
+  notes: Adds User IR upload over USB; still GP-5 only.
+- version: v0.2.0
+  date: 2026-10-10
+  url: https://github.com/grzmol/VLTN-Tone-Studio/releases/tag/v0.2.0
+  notes: Adds NAM A2 SnapTones and the song splitter; still GP-5 only.
+- version: v0.1.0
+  date: 2026-10-10
+  url: https://github.com/grzmol/VLTN-Tone-Studio/releases/tag/v0.1.0
+  notes: First release, for the GP-5 only.

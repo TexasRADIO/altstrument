@@ -1,0 +1,30 @@
+device: m-vave-tank-g
+name: mvave-tankg-ble
+kind: tool
+summary: Python library and command-line tool that finds a Tank-G over Bluetooth LE and switches presets 1 to 36 with BLE-MIDI Program Change messages.
+description: >-
+  A small asyncio library built on bleak with discovery, a device class usable as an async context manager
+  and helpers that build the BLE-MIDI frames and map preset numbers to banks and positions. The mvave-tankg
+  command scans for pedals and switches to a given preset. It only changes presets: the vendor service the
+  official app uses for LED colour and other settings is not reverse-engineered, the pedal reports neither
+  battery nor its current preset, and it accepts one Bluetooth connection at a time. It is the library the
+  ha-mvave-tankg Home Assistant integration uses.
+status: active
+authors:
+- name: Hudson Brendon
+  url: https://github.com/hudsonbrendon
+source: https://github.com/hudsonbrendon/mvave-tankg-ble
+source_status: open
+license: MIT
+homepage: https://pypi.org/project/mvave-tankg-ble/
+distribution: source-only
+install_notes: >-
+  pip install mvave-tankg-ble on Python 3.11 or newer, with a Bluetooth adapter. Enable the pedal's Bluetooth
+  first and close the official app, since only one client can connect.
+brick_risk: false
+tags: [bluetooth, midi, python, cli, presets, library]
+versions:
+- version: 0.1.0
+  date: 2026-05-26
+  url: https://pypi.org/project/mvave-tankg-ble/0.1.0/
+  notes: Only PyPI release, uploaded on the day of the repository's single commit; there is no Git tag or GitHub release.

@@ -1,0 +1,52 @@
+device: valeton-gp-200
+also_devices: [valeton-gp-200lt]
+name: GP-200 Patcher
+summary: >-
+  Offline browser page that applies up to eight optional mods to your own stock GP-200 or GP-200LT
+  firmware image, including a strobe tuner, carry-over tap tempo, an output balance control and faster
+  patch changes.
+description: >-
+  The patcher identifies the pedal and firmware version from the SHA-256 of the stock image you load,
+  offers only the mods built for it, and saves the patched image locally. The mods add a strobe tuner
+  mode, tuner state on the footswitch LEDs and a tighter in-tune window, a global setting that keeps a
+  tapped tempo across patch changes, a cut-only left/right balance on the main outputs, patch and effect
+  names on the footswitch labels, and a shorter fade-in after a patch change. Two more unlock all eight
+  display languages on region-restricted units and replace the Spanish translation with Brazilian
+  Portuguese. The page changes no version label, and a patched unit shows "(modified)" on its About
+  screen. The GP-200LT builds were tested only on testers' units, not on the author's own. The
+  reverse-engineering behind it is written up on the author's blog; the repository publishes only the
+  built page, not the tooling that produced the patches.
+status: active
+authors:
+- name: Thomas Phillips
+  url: https://github.com/tntexplosivesltd
+source: https://github.com/tntexplosivesltd/gp200-patcher
+source_status: patcher-only
+license: unspecified
+license_notes: No LICENSE file in the repository.
+homepage: https://gp200-reversing.hashnode.dev/
+distribution: patch-your-own
+requires_stock: GP-200 (also GP-200R and GP-200X) V1.8.0 or V1.8.2; GP-200LT V1.8.0. The GP-200JR is not supported
+install_notes: >-
+  Download GP-200-patcher.html from the latest release and open it in a browser; it makes no network
+  calls. Load an unmodified copy of Valeton's firmware for your own model, tick the mods you want, then
+  take the .bin out of the zip it saves and flash it with Valeton's editor. Build the file yourself
+  rather than using one someone else made, and check its size and SHA-256 against what the page shows.
+  Releases before tuner-v2 build images that units with Boot V0.0.5 or newer silently refuse. On
+  Windows 11 Valeton's editor can fail to update any firmware until a driver is swapped. Update mode is
+  untouched, so flashing the stock image again undoes the mods.
+brick_risk: false
+tags: [patcher, tuner, tap-tempo, localization, web]
+versions:
+- version: v1.0
+  date: 2026-10-02
+  url: https://github.com/tntexplosivesltd/gp200-patcher/releases/tag/v1.0
+  notes: Adds GP-200LT and GP-200 V1.8.2 support and seven more mods alongside the tuner.
+- version: tuner-v2
+  date: 2026-09-18
+  url: https://github.com/tntexplosivesltd/gp200-patcher/releases/tag/tuner-v2
+  notes: Leaves the firmware version label alone, so units with newer boot software accept the update.
+- version: tuner-v1
+  date: 2026-09-18
+  url: https://github.com/tntexplosivesltd/gp200-patcher/releases/tag/tuner-v1
+  notes: Tuner mod only; superseded because newer boot software refuses its images.
