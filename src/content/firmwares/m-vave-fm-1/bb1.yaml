@@ -2,22 +2,26 @@ device: m-vave-fm-1
 name: BB1
 summary: >-
   Felucca-based rhythm firmware with two simultaneous drum machines (a synthesised 808 plus seven sampled machines), the
-  Dillo bass synth, tape echo and spring reverb, and a library of 67 songs, 21 eras and 138 classic rhythms.
+  Dillo bass synth, tape echo and spring reverb, and a library of 67 songs, 21 eras, 138 classic rhythms and 205 ACID phrases.
 description: >-
   Rights warning: the sound library and pattern data come from commercial drum machines. The sampled LinnDrum,
   DrumTraks, DMX, LM-1, Simmons, Rhythm King and Drumulator kits live in a separate sound library, and the
   repository's catalogue holds the factory presets of four Roland rhythm boxes and drum patterns in the style of
   existing records. BIG-BEAT-LICENSING.md covers the LinnDrum, DrumTraks and DMX samples and the pattern data with a
   quoted statement from "the project owner" and says that statement does not establish the original sources or
-  third-party provenance. It says nothing about the four machines added in 1.2.
+  third-party provenance. It does not specify terms for the four machines added in 1.2. The 1.5 addendum credits
+  Acid-Tabs.com phrases to J. McConaghy under CC BY-SA 4.0 and records that the reported Acid Voice licence terms
+  are still to be filed in the intake.
 
   BB1 runs two drum layers at once, each with its own kit, pattern and level, and a monophonic bass synth called Dillo with
-  eight presets. A three-head tape echo and a spring reverb are shared, and holding REC and FX throws the echo. Kits
+  nine presets, including Square Acid. A three-head tape echo and a spring reverb are shared, and holding REC and FX throws the echo. Kits
   and patterns change on the next bar. The content is 67 songs, 21 original eras with bass lines and 138 preset
-  rhythms, and the 808 is synthesised in real time. The sound library is written over USB-MIDI by the installer. Saving into a scene
+  rhythms, plus 205 ACID phrases across 27 banks. The 808 is synthesised in real time. The sound library is written over USB-MIDI by the installer. Saving into a scene
   that holds another firmware's data asks you to hold SAVE for two seconds to replace it. The README lists dense two-drum
   playback as above its preferred processing headroom, and a browser player runs the same firmware. The project publishes the
-  full source, but the bit-for-bit rebuild needs build inputs that are not all in the repository.
+  full source, but the bit-for-bit rebuild needs build inputs that are not all in the repository. Version 1.5 adds configurable
+  drum and bass MIDI input channels; the lead channel is reserved and MIDI clock output is off. Its guide documents a tempo-display
+  mismatch after song loading: the first GLOBAL tempo edit can jump to the displayed tempo rather than increment the playing tempo.
 status: active
 authors:
 - name: TexasRADIO
@@ -30,7 +34,8 @@ license_notes: >-
   the same for the Big Beat code, with the 9W9 TR-909 voices ported under their own GPL-3.0 text. The CC0 instrument
   samples, DaisySP, Rings and msfa parts keep their own licences, and three JieLi SDK files inside each package are
   Apache-2.0. The sampled drum kits and pattern data are not under the GPL; see the rights warning above. The release
-  also carries the sound library as a separate bb1-sounds-1.2.bin.
+  also carries the sound library as a separate bb1-sounds-1.5.bin. ACID phrases carry the additional attribution and
+  adaptation statements in BIG-BEAT-LICENSING.md; the new phrase count is not a claim of original authorship.
 homepage: https://thebigbeat.app/fm1/
 distribution: browser-installer
 requires_stock: M-VAVE stock firmware
@@ -48,6 +53,10 @@ image:
   source_url: https://thebigbeat.app/fm1/
   first_party: true
 versions:
+- version: '1.5'
+  date: 2026-10-29
+  url: https://github.com/TexasRADIO/bb1-firmware/releases/tag/v1.5
+  notes: Adds 27 ACID banks with 205 phrases, Square Acid as the ninth bass sound, configurable MIDI inputs and revised navigation; documents the first-tempo-edit mismatch.
 - version: '1.2'
   date: 2026-10-29
   url: https://github.com/TexasRADIO/bb1-firmware/releases/tag/v1.2
