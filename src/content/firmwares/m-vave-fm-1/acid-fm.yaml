@@ -1,7 +1,7 @@
 device: m-vave-fm-1
 name: ACID FM
 summary: >-
-  Fork of JIANT FM aimed at IDM and braindance: its README is at 0.5.1, with trimmed engines, an acid-coloured screen
+  Fork of JIANT FM aimed at IDM and braindance: its README is at 0.5.2, with trimmed engines, an acid-coloured screen
   theme and IDM genres in the song generator; chopped breaks and tape effects are still planned.
 description: >-
   Fork of JIANT FM, which is itself a Felucca fork using SLOOP's song system, so it keeps JIANT's engines,
@@ -11,7 +11,8 @@ description: >-
   the generator to ten IDM genres and added a short demo that plays at power-on, 0.5 redrew SEQ, GLO and a new MIDI
   page (per-track MIDI in, out and channel, clock source and clock out) in the same look, and 0.5.1 retuned the
   genre names, tempo ranges and swing, replaced BROKEN BEAT and DRIFT with GLITCH HOP and AMB TECHNO, and made an
-  external clock hold a steady tempo. Still planned are loading and chopping your own breakbeats from the web
+  external clock hold a steady tempo, and 0.5.2 fixed harsh glitches on some generated songs by budgeting the
+  long delay against the processor load and falling back to its short mode under overload. Still planned are loading and chopping your own breakbeats from the web
   page, tape and 303-style accent and slide effects, new voices and further song-generator styles. SAVE and the
   menu keep their inherited layouts in the new colours. No release is tagged yet, so the version below is a commit. The
   repository includes a browser emulator and a manual site.
@@ -34,7 +35,7 @@ install_notes: >-
 brick_risk: true
 tags: [synth-engine, sequencer, fx, fm, editor, emulator]
 versions:
-- version: main @ cbbf04a
-  date: 2026-10-27
-  url: https://github.com/NorfolkHacker/acid-fm/commit/cbbf04ab0e929ca9e1864a2f7a894ea64b1b12db
+- version: main @ dcc6996
+  date: 2026-10-28
+  url: https://github.com/NorfolkHacker/acid-fm/commit/dcc6996d0ebe66bf8e5b3497693b95b033b84587
   notes: No tagged releases; this is the latest commit.

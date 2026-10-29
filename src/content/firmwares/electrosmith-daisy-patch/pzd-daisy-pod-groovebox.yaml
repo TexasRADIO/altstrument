@@ -40,6 +40,10 @@ image:
   source_url: https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox
   first_party: true
 versions:
+  - version: v3.5.1
+    date: 2026-10-28
+    url: https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox/releases/tag/v3.5.1
+    notes: Gives the Dexed, string ensemble and sampler engines a shared Mix page with Level, Pan, a 0 to +12 dB Gain applied before the limiter, a scope and a clip meter, and adds a scope to the Global effect pages. Delay Sync gets explicit on and off buttons. No SD card changes.
   - version: v3.5.0
     date: 2026-10-27
     url: https://github.com/Peteranthony1st/PZD-Daisy-Pod-Groovebox/releases/tag/v3.5.0

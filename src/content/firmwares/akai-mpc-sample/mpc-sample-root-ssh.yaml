@@ -1,0 +1,46 @@
+device: akai-mpc-sample
+kind: tool
+name: MPC Sample root SSH
+summary: SD autorun kit that starts the stock OpenSSH server on the MPC Sample over USB, for root login with your own keys on firmware 1.3.0.12, without flashing or changing the Akai app.
+description: >-
+  The README credits the method to puckcv on MPC-Forums. A setup script on your
+  computer generates a client key and a separate host key and builds an autorun
+  folder; copied to the root of an exFAT SD card, it makes the unit queue a
+  temporary SSH service at start-up, bound to the USB address 192.168.155.1 on
+  port 2222, with root public-key login only. The configuration, keys and logs
+  live under /run and disappear on reboot. It does not flash firmware, replace
+  the stock app or restart its service, and the release includes no keys, logs
+  or Akai binaries. It was tested on one unit with two cold boots; other
+  firmware versions and the Windows setup script are untested. The kit gives
+  access only; the README says it provides no recovery guarantee. The MPC Sample
+  Lab repository uses it for root access.
+status: active
+authors:
+  - name: orrpunk-art
+    url: https://github.com/orrpunk-art
+source: https://github.com/orrpunk-art/mpc-sample-root-ssh
+source_status: open
+license: unspecified
+license_notes: The repository has no LICENSE file and no licence statement.
+distribution: download
+requires_stock: "1.3.0.12"
+install_notes: >-
+  Save your project and back up any existing autorun folder on the SD card. Download
+  mpc-sample-root-ssh-v1.2.0.zip from the release, run sh setup_unix.sh (or the
+  PowerShell script) to create your keys, copy the generated autorun folder to the
+  root of an exFAT card, insert it, connect USB-C and wait up to 45 seconds, then run
+  ssh -p 2222 -i <your key> root@192.168.155.1. Boot without the card to start
+  without SSH. A root shell can modify the device, and the README warns that earlier
+  versions hung at boot with the card inserted and that a forced shutdown can lose
+  unsaved work.
+brick_risk: false
+tags: [platform, sampler, ssh, open-source]
+versions:
+  - version: v1.2.0
+    date: 2026-10-19
+    url: https://github.com/orrpunk-art/mpc-sample-root-ssh/releases/tag/v1.2.0
+    notes: Starts SSH in a separate temporary service so the card can stay inserted at power-on.
+  - version: v1.1.0
+    date: 2026-10-19
+    url: https://github.com/orrpunk-art/mpc-sample-root-ssh/releases/tag/v1.1.0
+    notes: Earliest release; superseded by 1.2.0, which fixes a startup hang.

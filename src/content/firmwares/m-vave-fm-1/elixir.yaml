@@ -8,7 +8,8 @@ description: >-
   pattern generators, morphing, songs, kits and projects, and MIDI in and out with clock sync. The LXR-02's
   floating-point DSP is rewritten in fixed point, and a host test renders each voice with both engines to compare
   them. Additions on top of the LXR-02 are per-voice FX and reverb sends, waveshapers, a bit reducer, tilt EQ,
-  choke groups, cross-modulation, a phaser and flanger on the FX bus, drum voices that can use ports of Rings
+  choke groups, cross-modulation, a phaser and flanger on the FX bus, MICRO model types from 0.17 (click, train,
+  crunch, grain and others) that replace a voice's oscillators, drum voices that can use ports of Rings
   resonators or Plaits engines, and a kit and sound library in flash. The keys can play a voice as an
   instrument. It was named Kettle up to version 0.13 and a unit running Kettle updates to Elixir keeping its
   projects. It is built on Felucca's hardware layer, USB stack and updater, and its flash data area is shared
@@ -42,6 +43,10 @@ image:
   source_url: https://dmajka.github.io/elixir/
   first_party: true
 versions:
+- version: '0.17'
+  date: 2026-10-28
+  url: https://github.com/dmajka/elixir/tree/v0.17
+  notes: Git tag; no GitHub release page.
 - version: '0.16'
   date: 2026-10-28
   url: https://github.com/dmajka/elixir/tree/v0.16

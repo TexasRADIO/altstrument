@@ -4,6 +4,9 @@ summary: >-
   Four-track generative firmware for hard dance genres on the FM-1, derived from Bunker Evolved: a seeded generator
   for tekno, acid, hardcore, jungle, drum and bass and psytrance with a choice of synthesis engines per track.
 description: >-
+  Rights warning: the repository keeps ten percussion hits decoded from Vermona SK86 sound EPROM dumps in
+  firmware/assets/tekno-import. Its README says they are manufacturer ROM dumps shared for preservation, not under an
+  open licence, and that they are kept out of the compiled firmware for now.
   A derivative of Bunker Evolved that keeps its pages and adds a GEN page, where genre, seed, energy and form
   (a loop of one, two or four bars) set a repeatable pattern; the OCT keys step the seed or reset it. The tracks are
   named AIR, MELODY, ROOT and SPARK, and any engine (analog, phase, grain, FM6, formant, physical, noise, lo-fi or
@@ -20,7 +23,9 @@ source_status: open
 license: GPL-3.0-only
 license_notes: >-
   Stated in the README and docs/ATTRIBUTION.md, inherited from Bunker Evolved and Felucca. Felucca-Engines is MIT,
-  msfa is Apache-2.0, the samples are CC0 and the fonts are SIL OFL; the logo artwork is by the author.
+  msfa is Apache-2.0, the samples are CC0 and the fonts are SIL OFL; the logo artwork is by the author. The ten Vermona SK86 EPROM dumps under firmware/assets/tekno-import are not under
+  an open licence (the README says the project owner has a team looking into the legal side) and are not built into the
+  firmware.
 homepage: https://marcocasanova00.github.io/amaru-os/
 distribution: source-only
 requires_stock: V15
@@ -37,7 +42,7 @@ image:
   source_url: https://github.com/MarcoCasanova00/amaru-os
   first_party: true
 versions:
-- version: main @ f740e21
-  date: 2026-10-28
-  url: https://github.com/MarcoCasanova00/amaru-os/commit/f740e2114a644b96fa8a97d10c9b781e995d31d0
+- version: main @ 943feaf
+  date: 2026-10-29
+  url: https://github.com/MarcoCasanova00/amaru-os/commit/943feafd8606960ec72efcf459973dbed09bf1b9
   notes: No tagged releases; this is the latest commit.

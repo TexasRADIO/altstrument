@@ -12,7 +12,9 @@ description: >-
   and the Mod Seq track behave as stock. A second mod, live transpose, moves both Osc patterns by scale degrees when
   Shift is held and a key is tapped in the Note or Expand view, without changing the pattern. The Randomise build
   reports itself as version 750, live transpose alone as 751 and both together as 752, all below the stock 800, so that
-  Novation Components should offer to reinstall stock; the README says this has not been tried yet. The README says the work was
+  Novation Components should offer to reinstall stock; the README says this has not been tried yet. The repository
+  also holds a drive overlay, added after the README's quick start was written, that widens the Overdrive and
+  Distortion range so the effect reaches full strength at full Level; it is tuned by ear and not yet described there. The README says the work was
   done with Claude Code.
 status: active
 authors:
@@ -35,7 +37,7 @@ install_notes: >-
 brick_risk: false
 tags: [sequencer, generative, flasher, python]
 versions:
-  - version: main @ f593d3a
+  - version: main @ 780bfba
     date: 2026-10-28
-    url: https://github.com/matozoid/novation_circuit_monostation_reverse_engineering/commit/f593d3a6610bdc9c77e3b90910e98bac9572501a
+    url: https://github.com/matozoid/novation_circuit_monostation_reverse_engineering/commit/780bfbabfa8241f1ea1b74b9f1d55e9c27f2212c
     notes: No tagged releases; this is the latest commit.

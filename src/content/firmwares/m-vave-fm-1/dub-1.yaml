@@ -8,6 +8,8 @@ description: >-
   through a resonant low-pass into an echo that feeds back past 100%, a granular cloud, a plate reverb, five bass
   grooves, a drum pattern page, a chord-slot page, 16 effects on the white keys and a PERFORM mixer. The screen
   draws each stab as a ring with its echoes, and it reports its screen to the FM-1 Screen Reader page over USB.
+  From 1.4.0 a piece can be a song with an intro and an outro, a set plays pieces one after another mixed like a DJ's,
+  and the Arrangement page is a dub desk with a meter, sends and a throw into the echo for every part, and four sirens.
   The project site has a browser emulator and a manual.
 status: active
 authors:
@@ -21,7 +23,7 @@ license_notes: >-
 homepage: https://sbegueria.github.io/fm1-dub/
 distribution: browser-installer
 install_notes: >-
-  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with dub-1.0.0.fwsc from the release. The
+  Web installer in Chrome or Edge over USB, or tools/fm1_install.py with the dub-<version>.fwsc package from a release. The
   installer has a Back to the stock firmware option and M-VAVE's M-UPGRADE also restores stock. An FM-1 that fails
   to start twice comes up in a safe mode the installer can reach.
 brick_risk: true
@@ -33,6 +35,14 @@ image:
   source_url: https://github.com/sbegueria/fm1-dub
   first_party: true
 versions:
+- version: 1.4.2
+  date: 2026-10-29
+  url: https://github.com/sbegueria/fm1-dub/releases/tag/v1.4.2
+  notes: A set's Mix now brings the next piece in under the old one, with no silence between them.
+- version: 1.4.0
+  date: 2026-10-28
+  url: https://github.com/sbegueria/fm1-dub/releases/tag/v1.4.0
+  notes: Pieces can be songs with an intro and outro, sets play pieces one after another, and the Arrangement page becomes a dub desk with Vary, Motion and Drift knobs.
 - version: 1.3.0
   date: 2026-10-23
   url: https://github.com/sbegueria/fm1-dub/releases/tag/v1.3.0

@@ -1,0 +1,48 @@
+device: m-vave-fm-1
+name: DWNLO
+summary: >-
+  X0X fork that plays five parts at once (909, 808, 303, an 808 bassline and a BLIP FM voice), with 64-step patterns,
+  song chains, probability, motion recording, TB-3PO line generation and a stereo effects bus.
+description: >-
+  The 909 and 808 drum kits and the 303 are ports of other open engines (9W9, 8W8, schwung-303), joined by an 808 Bassline
+  and BLIP, a two-operator FM pluck that the author wrote for the project. Each part has its own pattern and
+  step length up to 64 steps, and patterns chain into songs. Knob moves can be recorded, held steps take their own
+  knob values and probability or fixed play cycles, and a TB-3PO generator makes and mutates 303 lines. Audio goes out
+  in stereo through a shared reverb, tape delay and master compressor with a pump control. Over USB the unit is a
+  MIDI device and an audio input, external MIDI clock works, and the project can be backed up and restored. DWNLO
+  removes X0X's break and sample-loop part to free RAM for BLIP. The release notes call this a beta in which five
+  parts playing dense patterns together can overload the unit. It has a boot-splash animation, a browser emulator and a manual.
+status: active
+authors:
+- name: Jeff Webb
+  url: https://github.com/jeffwebb-to
+source: https://github.com/jeffwebb-to/dwnlo
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md and the README state GPL-3.0-only, as for X0X and Felucca. The 909 hi-hat, ride and crash samples in
+  assets/909 come from ER-99 by way of 9W9 (GPL-3.0), Open303 parts are MIT, fonts are SIL OFL 1.1, and three
+  Apache-2.0 JieLi AC79 SDK files are read from your SDK checkout at build time. Felucca's non-GPL assets are not
+  included.
+homepage: https://jeffwebb-to.github.io/dwnlo/
+distribution: browser-installer
+requires_stock: M-VAVE stock firmware
+install_notes: >-
+  Web installer in Chrome or Edge with the FM-1 on USB, or dwnlo-0.1-beta.fwsc from the releases page with
+  tools/fm1_install.py. The README says it is unsupported, that a firmware which fails to boot repeatedly enters a safe
+  mode with USB still active, and that tools/fm1_rescue.sh restores M-VAVE's firmware from a Mac. The installer page
+  says to go back with M-VAVE's M-UPGRADE tool. The README text still says there is no web installer, but the project
+  site and release notes link one.
+brick_risk: true
+tags: [drums, groovebox, sequencer, synth-engine, fx, midi, usb-audio, emulator, fork]
+image:
+  url: https://raw.githubusercontent.com/jeffwebb-to/dwnlo/main/.github/screens/sequencer.gif
+  alt: "DWNLO 909 step sequencer: twelve track rows from BD to RD with kick, clap and closed-hat steps lit in a four-on-the-floor pattern, and Decay and Tune knob arcs below"
+  credit: Jeff Webb
+  source_url: https://github.com/jeffwebb-to/dwnlo#screens
+  first_party: true
+versions:
+- version: 0.1-beta
+  date: 2026-10-28
+  url: https://github.com/jeffwebb-to/dwnlo/releases/tag/v0.1-beta
+  notes: First release, a beta; forked from X0X.

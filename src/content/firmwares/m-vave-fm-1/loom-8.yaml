@@ -41,6 +41,10 @@ image:
   source_url: https://github.com/charlesvestal/fm1-loom/blob/main/docs/MANUAL.md
   first_party: true
 versions:
+- version: '0.10'
+  date: 2026-10-29
+  url: https://github.com/charlesvestal/fm1-loom/releases/tag/v0.10
+  notes: Each drum sound on a kit step gets its own chance and step tricks, so a snare can flam while the kick on the same step plays plainly; projects from earlier versions load as they were.
 - version: 0.9.3
   date: 2026-10-27
   url: https://github.com/charlesvestal/fm1-loom/releases/tag/v0.9.3

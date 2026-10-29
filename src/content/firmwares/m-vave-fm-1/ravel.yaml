@@ -2,7 +2,7 @@ device: m-vave-fm-1
 name: Ravel
 summary: >-
   Eight-track sound-design groovebox with synth, strike and perc tracks, an influence grid where tracks modulate each
-  other, an arpeggiator, a step and graph sequencer, and a browser emulator. The v0.9.0 release notes call it untested on hardware.
+  other, an arpeggiator, a step and graph sequencer, and a browser emulator. The README status line says it runs on the FM-1 and calls it young.
 description: >-
   Tracks 1 to 4 are synths with thirteen engines (virtual analog, a Casio CZ model, FM, physical models, formant, particle,
   chip, wavetable, a function-block voice, a pipe organ, a mono horn-style voice, a bowed or reed resin voice and struck tine
@@ -10,11 +10,12 @@ description: >-
   Elektron Machinedrum's synthesis families. Any track can modulate, trigger or clock another through an eight by eight
   influence grid. Each track runs either a step sequencer or a graph of cords, and there is an arpeggiator, two LFOs, a
   modulation matrix, four macros, a granular tape delay, a 12-bit reverb, a feedback bus, an optional bus compressor on track 8,
-  scenes, an arrangement and project slots. Earlier releases had tape tracks that played back a shared capture tape; version 0.9.0
+  scenes, an arrangement and 32 compressed project slots. It takes MIDI in (notes by channel, clock, start and stop, and
+  aftertouch as a modulation source) and records steps from the keys. Earlier releases had tape tracks that played back a shared capture tape; version 0.9.0
   removed them. The same C sources build the FM-1 firmware, a desktop simulator and a one-file WebAssembly emulator. The
   fuller engine and effect set, including the vocoder, is kept as a browser-only Ravel Software edition. The FM-1 side takes
-  its platform layer from Felucca by way of X0X. The README status line now says it runs on the FM-1, while its FM-1 build
-  section and the v0.9.0 release notes still say it has not been checked on hardware.
+  its platform layer from Felucca by way of X0X. The README status line says it runs on the FM-1 and the v0.9.0 release notes
+  say it was tested on hardware, though the README's architecture section still lists everything as not checked on hardware.
 status: active
 authors:
 - name: De-Pattern
@@ -32,8 +33,8 @@ install_notes: >-
   Web installer on the project site in Chrome or Edge over USB, or tools/fm1_install.py with the Ravel-FM1.fwsc from the
   release. The source can also be built with tools/build_fm1.py (JieLi toolchain and three AC79 SDK files fetched by scripts
   in tools/). Holding OCT- and OCT+ for five seconds enters update mode, a firmware that crashes twice at start comes up in a
-  safe mode the installer can reach, and the installer can write M-VAVE's own V15 back from a file you download yourself. The
-  v0.9.0 release notes say it has not been tested on FM-1 hardware, while the README status line says it runs on the FM-1.
+  safe mode the installer can reach, and the installer can write M-VAVE's own V15 back from a file you download yourself. The README
+  asks you to copy projects to a computer now and then, since the firmware is young.
 brick_risk: true
 tags: [synth-engine, sequencer, granular, drums, fx, arpeggiator, emulator, generative]
 image:
@@ -43,6 +44,10 @@ image:
   source_url: https://github.com/De-Pattern/Ravel_FM1
   first_party: true
 versions:
+- version: 1.0.0
+  date: 2026-10-29
+  url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v1.0.0
+  notes: The release page lists only files (the same commit as v0.10.0). Since 0.9.0 the commits add 32 compressed project slots, user sounds on PRESETS, MIDI input with aftertouch as a modulation source, step recording, and the version on the start screen.
 - version: 0.9.0
   date: 2026-10-26
   url: https://github.com/De-Pattern/Ravel_FM1/releases/tag/v0.9.0

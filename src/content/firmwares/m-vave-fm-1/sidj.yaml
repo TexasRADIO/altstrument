@@ -1,0 +1,53 @@
+device: m-vave-fm-1
+name: SiDJ
+summary: >-
+  C64 music player and live remixer: a cycle-exact emulated C64 and reSID play SID tunes from your own collection, with
+  per-voice remix, USB audio with separate voice channels, and ASID output to real SID hardware.
+description: >-
+  Plays PSID and RSID tunes for one SID, including multi-speed tunes, on an emulated 6510, CIAs, VIC timing and a
+  fixed-point port of reSID 0.16 (6581 or 8580). The remix changes what reaches the chip: each voice can be
+  transposed, muted, soloed, played from the keys or a MIDI keyboard, given another waveform, sync or ring modulation,
+  routed around the filter, reshaped by envelope, filter and LFO pages, and slowed or sped up with tempo and a vinyl
+  fader. Sound leaves the audio jack, a driverless USB audio interface (the mix, or the mix and three voice stems) or
+  ASID to a SidStation, TherapSID, TeensyROM, USBSID-Pico or other ASID receiver. The FM-1 holds a few dozen tunes
+  (240 KB) that you add from the project's web page or a command-line tool, and tunes for two or three SIDs and BASIC
+  tunes are not played. The repository bundles two tunes by the author, which its LICENSING.md excludes from the GPL.
+  It is built on Felucca by way of X0X, has a browser emulator, and the author says AI coding tools helped write it.
+status: active
+authors:
+- name: Thomas Jansson
+  url: https://github.com/thomasj
+source: https://github.com/thomasj/fm1-sidj
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md states GPL-3.0-only for the firmware and GPL-2.0-or-later for the SID engine, which is a port of reSID
+  0.16 (included unmodified in third_party/); Felucca-derived files keep Leo Kuroshita's copyright. The two tunes in
+  web/site/songs (Debut and Credit, TwinCross) are the author's own, are not under the GPL, and may be played and
+  shared unmodified with SiDJ; other uses need the author's permission. Fonts are SIL OFL 1.1. No Commodore ROMs and no
+  other SID tunes are included.
+homepage: https://thomasj.github.io/fm1-sidj/
+distribution: browser-installer
+requires_stock: M-VAVE stock firmware, Felucca or X0X
+install_notes: >-
+  Web installer in Chrome or Edge with the FM-1 on USB, or the .fwsc from the releases page with tools/fm1_install.py;
+  songs are added on the same page or with tools/fm1_sid.py. The README says installing is at your own risk and that two
+  failed starts give a safe mode and four the chip's own update mode, from which tools/fm1_rescue.sh puts M-VAVE's
+  firmware back with the FM-1.fwsc you download from M-VAVE. To build it, use Docker with the JieLi toolchain and AC79 SDK.
+brick_risk: true
+tags: [chiptune, sid, emulator, midi, usb-audio, performance]
+video:
+  url: https://youtu.be/bY161B9_Evk
+  title: "SiDJ FM-1: Play & Remix C64 SID Music"
+  credit: tubesockor
+  first_party: true
+  found_via: https://github.com/thomasj/fm1-sidj#readme
+versions:
+- version: 1.0.1
+  date: 2026-10-29
+  url: https://github.com/thomasj/fm1-sidj/releases/tag/v1.0.1
+  notes: The web installer finds more FM-1s, including ones running firmware that names the unit after itself and on Windows with split port numbers; the firmware is unchanged.
+- version: 1.0.0
+  date: 2026-10-28
+  url: https://github.com/thomasj/fm1-sidj/releases/tag/v1.0.0
+  notes: First release.

@@ -34,7 +34,7 @@ image:
   source_url: https://github.com/E103-designs/ALTERIA#readme
   first_party: true
 versions:
-  - version: main @ 5bcaad7
-    date: 2026-10-27
-    url: https://github.com/E103-designs/ALTERIA/commit/5bcaad744363a33539e5f5f5ae7ccb88c1bb24c7
+  - version: main @ ce71f58
+    date: 2026-10-28
+    url: https://github.com/E103-designs/ALTERIA/commit/ce71f5802c20b8b3bfc3fcfd2b0d5b0ec3799189
     notes: No tagged releases; this is the latest commit. The README lists DRUM LAB 1.0.0.

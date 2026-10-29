@@ -13,8 +13,10 @@ stock_firmware: "1.3"
 links:
   manufacturer: https://www.akaipro.com/mpc-sample
 notes: >-
-  No custom firmware exists for the MPC Sample. The only third-party software
-  listed is a project editor and generator that works on its project files.
+  Third-party work on the MPC Sample is early: a Sample Mode application that
+  runs from RAM on stock 1.3.0.12, an SD-card kit that opens a root SSH shell
+  over USB, a QEMU emulator of the stock firmware, and a project editor and
+  generator. None of them replaces the stock firmware in flash.
 related: [akai-mpc-live]
 image:
   src: /images/devices/akai-mpc-sample.webp

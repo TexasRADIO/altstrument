@@ -1,0 +1,55 @@
+device: noise-engineering-versio
+name: Pleroma
+summary: Free stereo reverb firmware for Versio-platform modules with no size knob; near-wall and far-wall distances set the space instead, over sixteen delay lines in three diffusion topologies with a New Room reseed and Freeze.
+description: >-
+  Download note: the firmware is free, but the download is unlocked only after
+  joining the author's mailing list, and no source is published. Pleroma builds its reverb from four groups of four delay lines whose lengths are
+  derived from the distance to the nearest and furthest reflecting surface, between
+  0.1 and 100 metres. A switch chooses whether the four groups stay separate, couple
+  into two networks or couple fully, and the New Room button or gate input reseeds
+  all sixteen lengths for a new space of the same size. Damping acts on three decay
+  bands, modulation has a Modern and a Vintage mode, Freeze holds the reverb tail,
+  and every continuous parameter has a CV input. The firmware is written in Faust
+  for the Daisy Seed inside the module, and the control labels follow the Desmodus
+  Versio faceplate. The project page says VST and VCV Rack versions are being
+  worked on.
+status: active
+authors:
+  - name: Recursive Field Instruments
+    url: https://recursivefieldinstruments.com/
+source_status: binary-only
+license: unspecified
+license_notes: The project page states no license.
+homepage: https://recursivefieldinstruments.com/pleroma
+distribution: download
+install_notes: >-
+  The page unlocks the .bin for 30 days in your browser after you join the
+  Recursive Field mailing list. Put the Versio into its bootloader (DFU) mode, flash
+  the .bin with the Daisy Web Programmer's file upload, Noise Engineering's web
+  flasher or dfu-util, then power-cycle the module. The page describes it as
+  third-party firmware flashed at your own risk. It runs on any Versio-platform
+  module.
+tags: [reverb, fx, faust, delay]
+video:
+  url: https://www.youtube.com/watch?v=xIGZE9Iij5A
+  title: Recursive Field Instruments - Pleroma Demo (Caterina Barbieri - "Fantas")
+  credit: Feigur
+  first_party: false
+  found_via: https://recursivefieldinstruments.com/pleroma
+versions:
+  - version: v0.7
+    date: 2026-10-29
+    url: https://recursivefieldinstruments.com/pleroma
+    notes: Wider Mod Depth range, exponential Mod Rate and Mod Depth curves and a Vintage modulation mode.
+  - version: v0.6
+    date: 2026-10-14
+    url: https://recursivefieldinstruments.com/pleroma
+    notes: Stability over long runs.
+  - version: v0.5
+    date: 2026-09-12
+    url: https://recursivefieldinstruments.com/pleroma
+    notes: Fixes clipping and Freeze stability.
+  - version: v0.1
+    date: 2026-08-06
+    url: https://recursivefieldinstruments.com/pleroma
+    notes: First release.

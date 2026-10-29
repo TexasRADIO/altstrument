@@ -48,6 +48,14 @@ image:
   source_url: https://github.com/sd88me/mpc-vst-plugins/tree/main/tools/plugin_manager_g2
   first_party: true
 versions:
+  - version: plugin-manager-g2-v0.2.2
+    date: 2026-10-29
+    url: https://github.com/sd88me/mpc-vst-plugins/releases/tag/plugin-manager-g2-v0.2.2
+    notes: Scripted install.sh that replaces an older install of the plugin in place, with armv7 and aarch64 zips.
+  - version: plugin-manager-g2-v0.2.1
+    date: 2026-10-28
+    url: https://github.com/sd88me/mpc-vst-plugins/releases/tag/plugin-manager-g2-v0.2.1
+    notes: Remembers the chosen install folder, such as an SSD or card, as the default, and clears MPC's skin image cache on each restart.
   - version: plugin-manager-g2-v0.2.0
     date: 2026-10-28
     url: https://github.com/sd88me/mpc-vst-plugins/releases/tag/plugin-manager-g2-v0.2.0

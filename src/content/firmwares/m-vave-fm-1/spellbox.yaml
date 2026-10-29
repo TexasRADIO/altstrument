@@ -1,0 +1,49 @@
+device: m-vave-fm-1
+name: SPELLBOX
+summary: >-
+  Talking spelling game after the 1978 Speak & Spell, with an LPC speech voice, an eight-character display, five word
+  games on four levels, a text-to-speech page and circuit-bending controls, all synthesized.
+description: >-
+  The games are SPELL, LETTER, SAY IT, SECRET CODE and MYSTERY WORD (a hangman), played in English with 100 words of
+  up to eight letters in four levels. The keys are lettered A to Z from F3 upwards, with the highest key as enter, and
+  the screen imitates a blue-green fluorescent display. Beyond the games, SING sings a chosen word at the pitch of each
+  key, LETTER SYNTH makes each key sing its letter, and SPEAK reads typed text through a 12,000-word pronunciation
+  dictionary, word endings and letter-to-sound rules. Voice pitch, speed, chip clock and tone are adjustable, and BEND
+  controls corrupt the coefficients, stutter frames, flatten the intonation and crush the converter. The speech data
+  was made with espeak-ng and recoded to LPC frames by a script in the repository, with no data from the original's
+  ROM. The README (in French) calls it an independent project with no link to Texas Instruments or M-VAVE. It is
+  built on konsumer's foma framework.
+status: active
+authors:
+- name: pjac1810
+  url: https://github.com/pjac1810
+source: https://github.com/pjac1810/spellbox
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  LICENSING.md. The platform/mvave directory is from M-VAVE's FM1 Open kit: GPLv3 with M-VAVE's SDK linking
+  exception, plus the binary engine library platform/mvave/sdk/lib/libfm1_engine.a under M-VAVE's terms for FM-1
+  devices only. Felucca, SLOOP and Dinghy code is GPL-3.0-only, and the USB audio code ported from felucca-bsp is
+  MPL-2.0 used under GPL-3.0. The speech data in src/speech.h is made with espeak-ng (GPL-3.0), and its word choice
+  comes from wordfreq's frequency lists (CC BY-SA 4.0).
+homepage: https://pjac1810.github.io/spellbox/
+distribution: browser-installer
+requires_stock: V15
+install_notes: >-
+  Open the project page in Chrome or Edge with the FM-1 on USB and use its Install tab, or flash the .fwsc from the
+  release page; the repository's GitHub workflow builds it, or build it with Docker (./fm1 build). Hold OCT- at power-on
+  for the rescue mode, where the page's Rescue tab puts M-VAVE's V15 back from a file you download from M-VAVE. The
+  README says installing unofficial firmware is at your own risk.
+brick_risk: true
+tags: [game, voice, sequencer, synth-engine, fx, midi, emulator]
+image:
+  url: https://raw.githubusercontent.com/pjac1810/spellbox/main/docs/spellbox-240.png
+  alt: "SPELLBOX screen: the word PHILIPPE on a large teal fourteen-segment display in an orange frame, a lettered A to Z keyboard strip below it, and pitch, speed, clock and tone values"
+  credit: pjac1810
+  source_url: https://github.com/pjac1810/spellbox
+  first_party: true
+versions:
+- version: '0.3'
+  date: 2026-10-28
+  url: https://github.com/pjac1810/spellbox/releases/tag/v0.3
+  notes: Makes SPEAK slower and half an octave lower and fixes the letter A.

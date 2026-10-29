@@ -13,14 +13,14 @@ description: >-
   staged mutes. Melodee's engines were removed in stages and replaced by MACRO, fourteen models ported from
   Plaits, and SHAPES, the 47 shapes of Braids. The FM-1 reads WAV files from a USB card reader or hub on
   powered USB, so a track can be frozen to a stereo take on the card and played back from a phrase. The spec
-  and build documents call the project early; the default branch has no releases, and effects and the clip
-  browser come from the work on branches such as fx-jiant. Melodee's own README still follows Orange Cat's in
+  and build documents call the project early. Release 1, version 0.15.0, is its first GitHub release; effects
+  and further engines are still listed as in progress. Melodee's own README still follows Orange Cat's in
   the repository.
 status: active
 authors:
 - name: seattleuser0
-  url: https://github.com/seattleuser0
-source: https://github.com/seattleuser0/orangecat
+  url: https://github.com/SeattleUser0
+source: https://github.com/SeattleUser0/OrangeCat
 source_status: open
 license: GPL-3.0-only
 license_notes: >-
@@ -30,14 +30,15 @@ license_notes: >-
 homepage: https://seattleuser0.github.io/OrangeCat/
 distribution: browser-installer
 install_notes: >-
-  The project site has a web installer for the latest build of main, and a web editor. Builds run on GitHub
+  Download orangecat-0.15.0.fwsc from the release, or use the project site's web installer, which offers the
+  latest build of main, and its web editor. Builds run on GitHub
   Actions through zvenson's fm1-build. The installer is Melodee's and offers a backup first and a way back to V15,
   but the README says the firmware is early and installing is at your own risk. The card features need a USB card
   reader on a powered hub.
 brick_risk: true
 tags: [tracker, sequencer, synth-engine, fork, sampler, editor]
 versions:
-- version: main @ 19271b0
-  date: 2026-10-23
-  url: https://github.com/seattleuser0/orangecat/commit/19271b03707c7a09a8c35ba522ff7456a91dc5b4
-  notes: No tagged releases; this is the latest commit.
+- version: 0.15.0
+  date: 2026-10-28
+  url: https://github.com/SeattleUser0/OrangeCat/releases/tag/v0.15.0
+  notes: First release, with the firmware package, sound sets and loadable engine modules as files. The release page has no text; the build document lists loadable engines, a web app and caps on voices per engine.

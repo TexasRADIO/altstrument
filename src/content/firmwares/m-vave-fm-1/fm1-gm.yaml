@@ -30,6 +30,10 @@ install_notes: >-
 brick_risk: true
 tags: [sampler, sequencer, midi, usb-midi, editor, emulator]
 versions:
+- version: 1.1.1
+  date: 2026-10-28
+  url: https://github.com/jartificer/fm1-gm/releases/tag/v1.1.1
+  notes: With MIDI in MULTI, program changes name the tracks on the Song screen.
 - version: 1.1.0
   date: 2026-10-25
   url: https://github.com/jartificer/fm1-gm/releases/tag/v1.1.0

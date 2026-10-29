@@ -26,8 +26,8 @@ install_notes: >-
   Install the pinned Arduino AVR core 1.8.6 and the Adafruit SSD1306, GFX and BusIO libraries listed in
   docs/DEVELOPMENT.md, open one of the two sketch folders in the Arduino IDE and upload it to an Arduino Nano with an
   ATmega328P at 16 MHz, choosing the old bootloader only if the board needs it. Open only one sketch at a time. The
-  repository also holds prebuilt .hex files with SHA-256 sums. Check the hardware revision against the README first,
-  because the corrected schematics are not published yet.
+  repository also holds prebuilt .hex files with SHA-256 sums. Check the hardware revision against the README first;
+  an updated schematic PDF dated 2026-10-28 is in hardware/schematics.
 brick_risk: false
 tags: [official, clock, utility, arduino, eurorack]
 image:
@@ -37,7 +37,7 @@ image:
   source_url: https://github.com/E103-designs/euroTrack#readme
   first_party: true
 versions:
-  - version: main @ 5591601
-    date: 2026-10-27
-    url: https://github.com/E103-designs/euroTrack/commit/55916019f866aa3e11f58292cb352bd2785913fd
+  - version: main @ 9cae315
+    date: 2026-10-28
+    url: https://github.com/E103-designs/euroTrack/commit/9cae3150384997475dc60b90714ede99ec4f9544
     notes: No tagged releases; this is the latest commit. The README lists firmware V4.1, dated 2026-10-20.

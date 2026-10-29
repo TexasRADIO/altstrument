@@ -34,7 +34,7 @@ install_notes: >-
 brick_risk: false
 tags: [emulator, research, usb-audio, midi]
 versions:
-  - version: main @ d42fa30
-    date: 2026-10-28
-    url: https://github.com/imaf6971/vladiktron-spoke/commit/d42fa30da5f8b6f166ea49cb34d7752b83e6a1db
+  - version: main @ 113fbac
+    date: 2026-10-29
+    url: https://github.com/imaf6971/vladiktron-spoke/commit/113fbacc42df8e4d5a2e673e9ed824fac337be3b
     notes: No tagged releases; this is the latest commit.

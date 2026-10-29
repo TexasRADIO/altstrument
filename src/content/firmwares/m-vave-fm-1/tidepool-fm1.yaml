@@ -1,0 +1,50 @@
+device: m-vave-fm-1
+name: Tidepool
+summary: >-
+  Ambient loop instrument with twelve synthesised scenes of sixteen loops each, an autoplay mode and a Blank Canvas
+  bank for recording your own loops on 36 instruments.
+description: >-
+  Each scene is a bank of sixteen loops (drones, melodies, beats and textures) that the white keys switch on and off
+  in time and in key. The knobs set volume, attack, decay, reverb, echo and pan per row, a held PLAY with knob 1
+  swaps the chord progression, and SEQ hands the mix to an autoplay mode that brings loops in and out every four
+  bars. The thirteenth bank, the Blank Canvas, records loops of one, two or four bars with velocity-sensitive keys,
+  snapping and layering over several passes, on 36 instruments including a drum kit and hand drums. Everything is
+  synthesised on the device with no samples, and tempo, bank, loop settings and recorded loops are saved. The first
+  five scenes are ported from the author's Tidepool browser app. It is built on fm1-base and felucca-bsp, has a
+  browser emulator and manual, and ships a Claude skill that answers questions about playing it. The README says it
+  is not made or supported by M-VAVE.
+status: active
+authors:
+- name: pjh-133
+  url: https://github.com/pjh-133
+source: https://github.com/pjh-133/tidepool-fm1
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  The README and LICENSE give MPL-2.0 for Tidepool's own code. The fm1-base submodule and the felucca-bsp code under
+  it are MPL-2.0 as well.
+homepage: https://pjh-133.github.io/tidepool-fm1/
+distribution: browser-installer
+requires_stock: M-VAVE stock firmware
+install_notes: >-
+  Web installer in Chrome or Edge with the FM-1 on USB, or the .fwsc from the releases page with fm1_install.py. The
+  installer's "Back to the stock firmware" step takes the M-VAVE firmware file you download from M-VAVE. To build it
+  yourself, clone with submodules and build with fm1-base's tools (JieLi toolchain and AC79 SDK needed). The README
+  says installing is at your own risk.
+brick_risk: true
+tags: [looper, synth-engine, performance, fx, reverb, emulator]
+image:
+  url: https://raw.githubusercontent.com/pjh-133/tidepool-fm1/main/docs/img/banks.png
+  alt: "Twelve Tidepool scene screens in a grid, each with a banner, four chord boxes and a four by four grid of coloured loop pads, among them Shallows, Deep Space, Neon Rain and Old Blood"
+  credit: pjh-133
+  source_url: https://github.com/pjh-133/tidepool-fm1#the-scenes
+  first_party: true
+versions:
+- version: 1.0.2
+  date: 2026-10-29
+  url: https://github.com/pjh-133/tidepool-fm1/releases/tag/v1.0.2
+  notes: Old Blood's banner gains an animated blood moon, flickering windows and rolling fog.
+- version: 1.0.1
+  date: 2026-10-29
+  url: https://github.com/pjh-133/tidepool-fm1/releases/tag/v1.0.1
+  notes: Redrawn start-up screen.

@@ -1,0 +1,64 @@
+device: elektron-digitone-ii
+name: Overtone
+summary: "Custom firmware for the Digitone II on OS 1.12 that adds per-track insert effects, THRU, SOPHIE, LOOP and MACHINEDRUM machines, envelope followers, a second arpeggiator and a GROOVE timing editor, built on your computer from your own OS file."
+description: >-
+  Rights warning: the MACHINEDRUM machine and the phaser, chorus and reverb
+  inserts are described by the author as ports of Elektron's Machinedrum and
+  Monomachine sound engines, released here under the AGPL; Elektron has not
+  licensed them, and the project is not made or supported by Elektron. The
+  SOPHIE machine is a port of Matt Estela's MIT-licensed Schwung Sophie. The
+  patcher turns Elektron's original OS 1.12 file into the build on your own
+  computer, checking it by hash first, and no Elektron firmware is shared. The
+  author says its packs hold no 16-byte run found in Elektron's file. Beyond the
+  four machines, every track gets an insert (flanger, phaser, chorus or reverb)
+  with p-locks, each sound gets two envelope followers, two LFOs and two
+  arpeggiators that can modulate one another, and trigs get parameter slides.
+  ARP 1 can lock to the keyboard scale, ARP 2 is a step modulator, and GROOVE
+  replaces swing with per-step timing weights. LOOP records eight seconds per
+  track. ENV3 and LFO3 are gone, since their storage holds ENV2 and ARP 2. The
+  patcher includes the dnfw container code from dn2_firmware_explore unchanged.
+  Every build is checked in two emulators and was played on a unit, and the
+  README says the project was made with Claude Code.
+status: active
+authors:
+  - name: Julian Kominiak
+    url: https://github.com/complex-ping
+source: https://github.com/complex-ping/overtone
+source_status: open
+license: AGPL-3.0-or-later
+license_notes: >-
+  The LICENSE file is the AGPL v3 text, and the README and the patcher's SPDX
+  header state "or later". The bundled dnfw code is AGPL as well. Elektron,
+  Digitone, Machinedrum, Monomachine and Overbridge are Elektron trademarks.
+distribution: patch-your-own
+requires_stock: "1.12"
+install_notes: >-
+  Back up projects and the +Drive with Elektron Transfer first. Download
+  Elektron's Digitone II OS 1.12 and keep it, since Elektron's page lists only
+  the current version. Unzip the release and run python3 patcher/patch.py on the
+  OS zip (Python 3.11 or later); it takes one to three minutes and writes
+  Overtone-1.0.1.syx only if the result matches the tested build byte for byte.
+  Send that file with Transfer. To go back, send Elektron's Digitone_II_OS1.12.syx
+  with Transfer. If the unit does not start, hold FUNC at power-on, press TRIG 4
+  and send Elektron's file over DIN MIDI in Transfer's legacy OS upgrade mode;
+  Overtone never changes the bootstrap that holds that menu. Overtone 1.0 cannot
+  be replaced by Transfer, so return to Elektron's OS through the STARTUP menu
+  first. Opening Overtone projects on Elektron's OS is untested, and a project
+  that used LFO 3 loses it.
+brick_risk: false
+tags: [fx, machines, looper, arpeggiator, lfo, patcher, synth-engine]
+image:
+  url: https://raw.githubusercontent.com/complex-ping/overtone/main/docs/img/loop-1.png
+  alt: Digitone II screen from an emulator showing the LOOP machine's first page, with SRC, LEN, GAIN and FDBK knobs above MIX, INS, SLCE and SNAP values, under the project name OVERTONE
+  credit: complex-ping
+  source_url: https://github.com/complex-ping/overtone#whats-in-it
+  first_party: true
+versions:
+  - version: v1.0.1
+    date: 2026-10-29
+    url: https://github.com/complex-ping/overtone/releases/tag/v1.0.1
+    notes: Fixes installing Elektron's OS or an Overtone update with Transfer while Overtone is running.
+  - version: v1.0
+    date: 2026-10-29
+    url: https://github.com/complex-ping/overtone/releases/tag/v1.0
+    notes: First release; superseded by 1.0.1.

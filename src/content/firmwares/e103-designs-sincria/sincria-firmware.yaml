@@ -36,7 +36,7 @@ image:
   source_url: https://github.com/E103-designs/SINCRIA#readme
   first_party: true
 versions:
-  - version: main @ b015f9f
-    date: 2026-10-27
-    url: https://github.com/E103-designs/SINCRIA/commit/b015f9f54795ab00b2fbd5aebc3ba60f40bb0b00
+  - version: main @ 688c695
+    date: 2026-10-28
+    url: https://github.com/E103-designs/SINCRIA/commit/688c69550389920a4ba9ad776fe3cd9d480d48de
     notes: No tagged releases; this is the latest commit.

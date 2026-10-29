@@ -34,7 +34,7 @@ install_notes: >-
   Transporter. SMK-37 Pro: the keyboard must already run M-VAVE's V016, which the installers enforce, and
   a backup of its flash should be made first, because the flash holds the keyboard's key and pad calibration and
   its Bluetooth pairings (SMK37.md in the repository gives the steps, using jl-uboot-tool on Windows or Linux).
-  Use skiff-2.0.2-smk37.fwsc for the Pro; the -elite and -mke packages are for those models. Returning to
+  Use skiff-2.0.3-smk37.fwsc for the Pro; the -elite and -mke packages are for those models. Returning to
   M-VAVE's firmware takes your own unmodified SMK-37_Pro_016.fwsc. If an install is cut off, the keyboard waits in
   update mode and the installer resumes the write.
 brick_risk: true
@@ -46,6 +46,10 @@ image:
   source_url: https://github.com/illuminus5/skiff
   first_party: true
 versions:
+- version: 2.0.3
+  date: 2026-10-29
+  url: https://github.com/illuminus5/skiff/releases/tag/v2.0.3
+  notes: Adds KBD HOLD, which keeps played notes sounding without an arpeggio, sends whole chords into the arpeggiator on MONO sounds, and fixes song, FX-key and sampled-note bugs. The release says it was tested on a computer and in the emulator, not yet on a unit.
 - version: 2.0.2
   date: 2026-10-27
   url: https://github.com/illuminus5/skiff/releases/tag/v2.0.2

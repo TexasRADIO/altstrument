@@ -1,0 +1,48 @@
+device: akai-mpc-sample
+name: MPC Sample Lab
+summary: Research repository for the MPC Sample (firmware 1.3.0.12) with an own Sample Mode application that runs from RAM in place of the stock app, plus the panel protocol, audio and display notes and a read-only eMMC backup script.
+description: >-
+  The author gets root over USB with a third-party SSH kit, stops the stock
+  ac50 service and runs a replacement application, written independently from
+  the User Guide, that is removed again when it exits; nothing is written to
+  flash. Phase 1 of that application covers eight banks of 16 pads with 32
+  voices, amp envelopes, tune, mono or poly play, mute groups, loop, reverse and
+  Note On, three parameter pages, the knobs, encoder and Pad Volume fader, pad and
+  button LEDs and a screen with waveform and envelope. It loads up to 128 WAV
+  files from a folder on the SD card. Later phases, such as the filter, chop,
+  recording, the sequencer and effects, are only planned. The repository
+  also documents the control-surface protocol, the I2S audio and SPI display
+  paths and the platform (Rockchip RK3566 with a signed boot chain and dm-verity
+  root), and has tools to unpack Update.img and to back up the eMMC read-only. It
+  says it holds no Akai firmware or eMMC images, and omits the panel's
+  challenge-response key. An older patcher skeleton was never run on hardware
+  and is marked outdated. Documentation is Russian first, with English copies.
+status: active
+authors:
+  - name: gospodindilly-ops
+    url: https://github.com/gospodindilly-ops
+source: https://github.com/gospodindilly-ops/mpc-sample-lab
+source_status: open
+license: unspecified
+license_notes: >-
+  The repository has no LICENSE file and no licence statement. The bundled Terminus
+  bitmap fonts carry their own licence file, assets/fonts/Terminus-LICENSE.txt.
+distribution: source-only
+requires_stock: "1.3.0.12"
+install_notes: >-
+  Needs root access on the unit; the README uses the separate mpc-sample-root-ssh
+  autorun kit for that. Build the firmware directory with make (zig cc for static
+  aarch64), copy the binary to /run on the unit, and start it with systemd-run so
+  that ac50.service is stopped first and started again on exit, passing a folder
+  of 44.1 kHz WAV files. Binaries run from /run or /tmp only, because the SD card
+  is mounted noexec. The author backed up the eMMC first and says the restore
+  procedure is untested, that /factory must not be touched, and that writing the
+  dm-verity root filesystem breaks boot. Whether an alternative firmware can be
+  flashed depends on secure boot, which the README lists as open.
+brick_risk: false
+tags: [research, sampler, platform, os, open-source]
+versions:
+  - version: main @ 3d482b9
+    date: 2026-10-23
+    url: https://github.com/gospodindilly-ops/mpc-sample-lab/commit/3d482b94c918b96d174f31c411686f2b18b74ce6
+    notes: No tagged releases; this is the latest commit.

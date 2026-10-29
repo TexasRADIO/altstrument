@@ -1,15 +1,20 @@
 device: roland-sp-404-mkii
 name: DOOM OS
-summary: Heavily modified 5.52 firmware that adds a graphical pattern sequencer, piano roll, live recording, mixer, effect automation and undo in a "shadow OS" opened with REMAIN + SUB PAD.
+summary: Heavily modified 5.52 firmware that adds a graphical pattern sequencer, piano roll, live recording, mixer, built-in instruments, arpeggiator, parameter locks, effect automation and undo in a "shadow OS" opened with REMAIN + SUB PAD.
 description: >-
   The shadow OS sits beside the stock firmware and everything from the
   original firmware still works. Adds a grid pattern sequencer you can edit
   while it plays, a piano roll played on the pads, live recording with
   rehearse mode, quantise and swing, eight pattern tools, a mixer with level
   meters, recorded and step-edited effect automation, 12-step undo and redo,
-  custom shortcuts and a help mode. Patterns are written to a new file before
-  the old one is removed. The author lists built-in instruments, song mode, a
-  clip launcher, a sample editor and an add-on system as possible future work.
+  custom shortcuts and a help mode. Version 0.7 added 20 built-in sound
+  engines and 11 drum kits, an arpeggiator, per-step parameter locking, a live
+  waveform view, a visual sidechain editor, a three-band EQ per track and
+  bounce in place; 0.7.1 adds instrument preview and switching while a pattern
+  plays and a bounce screen. Patterns are written to a new file before the old
+  one is removed. The author lists song mode, a clip launcher, advanced sample
+  editing and a system for loading custom modifications as possible future
+  work.
 status: active
 authors:
   - name: Quintus Oostendorp (Klangfeld Labs)
@@ -37,6 +42,14 @@ video:
   credit: "SPVIDZ"
   first_party: false
 versions:
+  - version: 0.7.1 (build E7F5)
+    date: 2026-10-29
+    url: https://github.com/klangfeld-labs/doom-os/releases/tag/v0.7.1-E7F5
+    notes: Adds instrument preview and on-the-fly instrument switching, and a bounce screen for choosing the target pad; mixer solo moves to REMAIN + pad.
+  - version: 0.7 (build 0D8C)
+    date: 2026-10-28
+    url: https://github.com/klangfeld-labs/doom-os/tree/v0.7-0D8C
+    notes: Git tag; no GitHub release page. Adds 20 built-in instruments and 11 drum kits, an arpeggiator, parameter locking, sidechain editor, per-track EQ and bounce in place.
   - version: 0.6.2-alpha (build 3824)
     date: 2026-10-06
     url: https://github.com/klangfeld-labs/doom-os/tree/v0.6.2-alpha-3824

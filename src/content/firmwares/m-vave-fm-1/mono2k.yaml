@@ -7,7 +7,7 @@ description: >-
   Each track has one of nine machines (sine and noise, 8-bit SID-style, two FM, two wave, a digital wave machine and
   a vocal machine) written without floating point, with amplitude, filter, effects, distortion and
   three LFOs per track. The sequencer has 64 steps per track with accents, slides, parameter locks, trig
-  conditions, ratchets, swing and live recording. The bus adds a reverb, beat repeat, tape wobble and ADPCM
+  conditions, ratchets, swing and live recording; a Grids drum-pattern generator can fill tracks, and PERFORM has two banks of live effects. The bus adds a reverb, beat repeat, tape wobble and ADPCM
   crunch, and MIDI uses Monomachine-style channels and CC numbers. The core also runs in a browser emulator and in
   a desktop test harness. The README gives the FM-1 build as released since 1.0, installed from the project's
   installer page or the FM-1 Firmware Hub, and keeps one project of 64 patterns in its own storage area.
@@ -23,13 +23,25 @@ license_notes: >-
 homepage: https://inigohernandez.github.io/mono2k/
 distribution: download
 install_notes: >-
-  Download mono2k-1.1.fwsc (identity FM-1_980) from the releases page, or install it from the project's installer
+  Download mono2k-1.4.fwsc (identity FM-1_980) from the releases page, or install it from the project's installer
   page or the FM-1 Firmware Hub over USB in Chrome or Edge. Back up what the FM-1 holds first. Installing another
   firmware replaces it, and holding OCT- while switching on reaches the updater. The repository also holds the
   sound and sequencer core, a browser emulator (web/build.sh) and a host harness.
 brick_risk: true
 tags: [sequencer, synth-engine, fx, lfo, emulator, midi]
 versions:
+- version: '1.4'
+  date: 2026-10-28
+  url: https://github.com/InigoHernandez/mono2k/releases/tag/v1.4
+  notes: Adds a second bank of PERFORM effects (freeze, scatter, roll, octave shifts, filter sweeps, gate, dub echo, shimmer and spin-back), reached with OCT+, and revises the first bank's STOP, KILL and DRIVE.
+- version: '1.3'
+  date: 2026-10-28
+  url: https://github.com/InigoHernandez/mono2k/releases/tag/v1.3
+  notes: Adds a Grids drum-pattern generator behind ARP, mutes and solos that wait for the next bar, and four more step probabilities.
+- version: '1.2'
+  date: 2026-10-28
+  url: https://github.com/InigoHernandez/mono2k/releases/tag/v1.2
+  notes: Redraws every page on one grid with bolder type and a new splash, shows all three LFOs on the LFO pages, and adds a hold for the arpeggiator.
 - version: '1.1'
   date: 2026-10-27
   url: https://github.com/InigoHernandez/mono2k/releases/tag/v1.1

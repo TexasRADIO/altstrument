@@ -1,0 +1,26 @@
+device: behringer-sp1200x
+name: SP1200X open firmware (announced)
+summary: Open firmware for Behringer's announced SP1200X drum machine, which Behringer says will be open source; no source, licence or release has been published.
+description: >-
+  Behringer announced the SP1200X on 2026-10-29. Synth Anatomy quotes its post as
+  saying "we're making it open source", and Gearnews reads that as the same
+  approach as the KICK and IGNITE, whose source Music Tribe published on GitHub.
+  This entry rests on those reports of Behringer's post. Behringer has not said
+  where the firmware will be published, under which licence, or whether it will
+  be released before the unit ships, and the unit has no release date. Check
+  Behringer's and Music Tribe's own channels before relying on any of it.
+status: announced
+authors:
+  - name: Behringer
+    url: https://www.behringer.com/
+source_status: closed
+license: unspecified
+license_notes: >-
+  No licence or source is published. The open-source claim comes from Behringer's
+  social media post as reported by Synth Anatomy and Gearnews.
+homepage: https://synthanatomy.com/2026/10/behringer-sp1200x-a-200-open-source-clone-of-the-e-mu-sp-1200-drum-machine.html
+install_notes: >-
+  Nothing to install; no firmware, source or SDK is available at the time of
+  writing.
+tags: [official, platform, sampler, drums]
+versions: []

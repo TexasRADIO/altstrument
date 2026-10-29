@@ -2,15 +2,16 @@ device: m-vave-fm-1
 name: Skiff Go
 kind: tool
 summary: >-
-  Native Android editor and performance companion for Skiff on the FM-1, talking to the unit over USB-MIDI; early MVP
-  with the sound and mixer pages so far.
+  Native Android editor and performance companion for Skiff on the FM-1, talking to the unit over USB-MIDI; early,
+  with sound, mixer and sequencer pages so far.
 description: >-
   A Kotlin and Jetpack Compose app, sister to Sloop Go, that connects to an FM-1 over Android's MIDI API and uses
   Skiff's editor protocol. It checks the unit's identity and refuses SLOOP and Felucca, and wants Skiff 2.0 or later.
   So far it has transport controls, the sound pages for the selected track (envelope, LFO, modulation, effects, scale,
-  arpeggiator and others), a six-strip mixer, and saving or opening patch and library files in the format of the Skiff
-  web editor. The sequencer, song, FM6, sample and backup pages are listed as still to come. The README calls it an
-  MVP that has not been tested yet, and no APK is published.
+  arpeggiator and others), a six-strip mixer, a sequencer page with a piano roll on Skiff 2.0's per-note lengths, a drum
+  grid and a step sheet, and saving or opening patch and library files in the format of the Skiff web editor.
+  Parameter locks, the song, menu settings, FM6, samples and backup are listed as next. Its first release, 0.1.0, is
+  marked pre-release and carries an APK.
 status: active
 authors:
 - name: jahlib
@@ -22,16 +23,16 @@ license_notes: >-
   The README states GPL-3.0-only. NOTICE.md lists what comes from Skiff and Sloop Go (both GPL-3.0-only); the bundled
   JetBrains Mono font is under the SIL OFL 1.1.
 homepage: https://github.com/jahlib/skiff-go
-distribution: source-only
+distribution: download
 requires_stock: Skiff 2.0 or later
 install_notes: >-
-  Build with JDK 17 and the Android SDK using build-android.sh, which makes a debug APK or a debug-signed release APK.
-  The phone needs USB host support and an FM-1 already running Skiff. Back up the FM-1 first, since the app writes to
+  Sideload skiff_go_0.1.0.apk from the releases page (a pre-release), or build with JDK 17 and the Android SDK using
+  build-android.sh, which makes a debug APK or a debug-signed release APK. The phone needs USB host support and an FM-1 already running Skiff. Back up the FM-1 first, since the app writes to
   the unit.
 brick_risk: false
 tags: [editor, midi, performance]
 versions:
-- version: main @ 5de3556
-  date: 2026-10-27
-  url: https://github.com/jahlib/skiff-go/commit/5de35562874fcb99ba76f5a3422ab73aa80deac3
-  notes: No tagged releases; this is the latest commit.
+- version: 0.1.0
+  date: 2026-10-28
+  url: https://github.com/jahlib/skiff-go/releases/tag/0.1.0
+  notes: Pre-release, the project's first build, with an APK. The GitHub repository was created on the same day, so the earlier commit this entry tracked no longer exists.

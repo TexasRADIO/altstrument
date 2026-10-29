@@ -9,7 +9,8 @@ description: >-
   melodies, bass, chords and changing arrangements, with tempo, density, mutation and transpose on the four knobs. The
   keyboard plays up to three live PSG notes over the backing. Twelve sources each have a level and independent DECAY,
   COLOR and ECHO amounts, saved to flash after three seconds without edits. The 0.7.0 release adds a GLO button that
-  mutes the speaker and headphones while USB audio and MIDI continue. From 0.5.0 the FM-1 appears as a stereo 16-bit
+  mutes the speaker and headphones while USB audio and MIDI continue, and 0.10.0 adds an EDIT mode that sends the
+  keyboard and sequencer notes out over USB MIDI. From 0.5.0 the FM-1 appears as a stereo 16-bit
   44.1 kHz USB audio input carrying the master mix, plus USB MIDI and a status interface. The project describes the
   music as original and inspired by the Mega Drive sound palette, with no game music or extracted samples, and says
   it is not affiliated with Sega, Yamaha or M-VAVE. All releases are marked beta, and it does not import presets or
@@ -43,6 +44,10 @@ image:
   source_url: https://github.com/CaspiusLabs/Emerald-YM
   first_party: true
 versions:
+- version: 0.10.0
+  date: 2026-10-28
+  url: https://github.com/CaspiusLabs/Emerald-YM/releases/tag/v0.10.0
+  notes: EDIT switches to a MIDI OUT mode that sends keyboard and sequencer notes over USB MIDI while local synthesis continues. Beta.
 - version: 0.7.0
   date: 2026-10-27
   url: https://github.com/CaspiusLabs/Emerald-YM/releases/tag/v0.7.0

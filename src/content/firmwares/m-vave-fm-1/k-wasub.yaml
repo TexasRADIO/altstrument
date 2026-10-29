@@ -12,7 +12,8 @@ description: >-
   support trig conditions, probability and parameter locks, and knob moves can be recorded as automation. The
   screen has several themes and fonts and a language setting for English, French or Spanish. The repository has a
   browser emulator, an illustrated manual, a web installer and install scripts for Windows, macOS and Linux. It
-  is derived from KAWA and reuses its platform code.
+  is derived from KAWA and reuses its platform code. The author has marked it as a beta on the start screen, in
+  the manual and on the site.
 status: active
 authors:
 - name: Omnipotard (Guizmoh)
@@ -41,7 +42,7 @@ image:
   source_url: https://github.com/Guizmoh/K-WASUB_Firmware_for_FM1
   first_party: true
 versions:
-- version: main @ a6204c3
-  date: 2026-10-27
-  url: https://github.com/Guizmoh/K-WASUB_Firmware_for_FM1/commit/a6204c3cefa370eb8147b80c5d09f7a6574fc8ed
-  notes: No tagged releases; this is the latest commit, which carries package 1.0.33.
+- version: main @ 14f8c7d
+  date: 2026-10-28
+  url: https://github.com/Guizmoh/K-WASUB_Firmware_for_FM1/commit/14f8c7d4647d0535892760c722af995c6740510d
+  notes: No tagged releases; this is the latest commit, which carries package 1.0.45.

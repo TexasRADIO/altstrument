@@ -2,12 +2,14 @@ device: m-vave-fm-1
 name: fm1-base
 summary: >-
   MPL-2.0 base and template for FM-1 firmware on felucca-bsp: platform layer, host simulator, browser emulator,
-  optional Bluetooth MIDI and WiFi, and build, package and install tools, with a small template app to copy.
+  optional Bluetooth MIDI and audio and WiFi, and build, package and install tools, with a small template app to copy.
 description: >-
   Provides the platform layer above the hardware (screen, drawing and fonts, panel and LEDs, audio, MIDI over USB
   and TRS, storage, a screen reader channel) so an app supplies only its own sound, screen and controls. The
   same app builds for the FM-1, a host simulator and a browser emulator. Bluetooth MIDI and WiFi are build
-  options that need JieLi's SDK libraries and cannot be combined, since the chip lacks the RAM for both. The
+  options that cannot be combined, since the chip lacks the RAM for both. WiFi and the default Bluetooth stack need
+  JieLi's SDK libraries; an own stack taken from Optimist (build option ble_stack = "own") links none of them and also
+  offers pairing, connecting to Bluetooth MIDI devices and Bluetooth audio to headphones and speakers. The
   repository includes a skill file for moving a Felucca-based firmware onto it, which only works for firmware
   that keeps nothing of Felucca beyond what felucca-bsp and fm1-base already carry. The template is a flashable
   firmware with its own installer and emulator page, tagged as firmware rather than tool for that reason. The
@@ -24,7 +26,9 @@ license_notes: >-
   Every source file carries an MPL-2.0 header, and an app built on it may use any license (LICENSING.md). Some
   files in ble/ repeat parts of JieLi's AC79 SDK and are marked MPL-2.0 AND Apache-2.0. Fonts are SIL OFL 1.1.
   JieLi's binary Bluetooth and WiFi libraries are copied from your own SDK checkout at build time and are not in
-  the repository.
+  the repository. The own Bluetooth stack in bt/ is from Optimist by Henri David (GPL-3.0-only OR MPL-2.0, taken under
+  MPL-2.0); it also carries Apache-2.0 SBC encoder code from Android and BSD-2-Clause micro-ecc, and a firmware built with it
+  ships those licence texts.
 homepage: https://charlesvestal.github.io/fm1-base/
 distribution: source-only
 install_notes: >-
@@ -41,7 +45,7 @@ image:
   source_url: https://charlesvestal.github.io/fm1-base/
   first_party: true
 versions:
-- version: main @ 4587fda
-  date: 2026-10-28
-  url: https://github.com/charlesvestal/fm1-base/commit/4587fda7eac415da41d0012a99a32dc6af600245
+- version: main @ d8ff8f4
+  date: 2026-10-29
+  url: https://github.com/charlesvestal/fm1-base/commit/d8ff8f41aa511e03d70a7c565c9fa0f1dd18ae2f
   notes: No tagged releases; this is the latest commit. The project site offers template 0.1.

@@ -1,0 +1,40 @@
+device: m-vave-fm-1
+name: mvave-fm1
+kind: tool
+summary: >-
+  Starter kit for FM-1 development: two Claude Code skills (backup, flashing and recovery; writing firmware) written as
+  Markdown, plus a podman build container and script that builds Dinghy, Felucca, ORBIT, SLOOP and Optimist.
+description: >-
+  The firmware skill covers the SysEx update protocol, the flash map, taking a full-flash backup before flashing,
+  installing ORBIT as a worked example, and recovery from a bad flash. The development skill covers the chip's
+  rules, the hardware API, the memory map, how to package a .fwsc and a catalog of community firmwares copied
+  from the community hub. The Containerfile builds a Debian image with JieLi's pi32v2 clang toolchain and three
+  AC79 SDK files, and mvave-build.sh fetches those files, checks their SHA-256 hashes, clones a firmware's source
+  and runs its own build script inside the container, leaving the .fwsc in an output folder. JieLi's files are not
+  in the repository, and the notes say not to push the image because the toolchain licence forbids passing it on.
+  Flashing is done from the host with the installers the skill names, not in the container. The README separates what
+  was tested (one FM-1 on Linux, an ORBIT 0.7.1 install, and CI builds of Dinghy, Felucca and ORBIT) from what was
+  not, such as flashing a container-built package.
+status: active
+authors:
+- name: maxfridbe
+  url: https://github.com/maxfridbe
+source: https://github.com/maxfridbe/mvave-fm1
+source_status: open
+license: MIT
+license_notes: >-
+  LICENSE covers the repository's own text, scripts and workflow. The firmware projects it clones keep their own
+  licences, and JieLi's toolchain and SDK files, which are downloaded at build time, are not included.
+distribution: source-only
+install_notes: >-
+  Copy the two folders under skills/ into a Claude Code skills directory, or read them as Markdown. To build, run
+  mvave-build.sh fetch-vendor, image, clone and build in that order; it needs podman and a network that can reach
+  JieLi's download hosts. The skills tell you to take a verified backup before flashing anything, and flashing is at
+  your own risk.
+brick_risk: false
+tags: [sdk, flasher, platform, utility, research]
+versions:
+- version: main @ 5607a60
+  date: 2026-10-22
+  url: https://github.com/maxfridbe/mvave-fm1/commit/5607a600be7184f566dee46f0e53afb5595d0d48
+  notes: No tagged releases; this is the latest commit.

@@ -38,6 +38,10 @@ image:
   source_url: https://github.com/delirioux/flyfish
   first_party: true
 versions:
+- version: 1.0.3
+  date: 2026-10-29
+  url: https://github.com/delirioux/flyfish/releases/tag/v1.0.3
+  notes: TOUCH defaults to 30.
 - version: 1.0.2
   date: 2026-10-27
   url: https://github.com/delirioux/flyfish/tree/v1.0.2

@@ -40,7 +40,7 @@ image:
   source_url: https://joshbartlettband-web.github.io/Double-Rainbow/
   first_party: true
 versions:
-- version: main @ f615412
-  date: 2026-10-24
-  url: https://github.com/joshbartlettband-web/Double-Rainbow/commit/f615412bf7e30202a27037a716488214e0b16395
+- version: main @ de65c73
+  date: 2026-10-29
+  url: https://github.com/joshbartlettband-web/Double-Rainbow/commit/de65c7323273bfef5e6fee6c7057452434844f30
   notes: No tagged releases; this is the latest commit.

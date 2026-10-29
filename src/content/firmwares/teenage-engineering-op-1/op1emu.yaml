@@ -12,7 +12,7 @@ license: MIT
 install_notes: Build with CMake; it runs a firmware image (te-boot.ldr) and NAND image you supply.
 tags: [emulator, research]
 versions:
-  - version: main @ d4a4146
-    date: 2026-10-28
-    url: https://github.com/op1emu/op1emu/commit/d4a4146281a815ccf697691325d42e25d7c32e85
+  - version: main @ 4dfc73d
+    date: 2026-10-29
+    url: https://github.com/op1emu/op1emu/commit/4dfc73dad3195375bbd61c1b39572bd731d1a753
     notes: No tagged releases; this is the latest commit.

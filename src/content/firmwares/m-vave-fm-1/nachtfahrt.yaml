@@ -8,7 +8,7 @@ description: >-
   sequence has up to 16 steps on a plucked analog-style voice, with its notes repeated at the echo times (a dotted
   eighth by default). The second sequence is often a step shorter, so the two drift apart and meet again. A drone plays
   a walking chord on two banks of voices with a pedal and a phaser, a lead plays long glided phrases deep in the
-  reverb, and an atmosphere layer offers wind, surf, space, air or tape. Every layer's filter moves on its own clock
+  reverb, and an atmosphere layer offers wind, surf, rain, space, air or tape. Every layer's filter moves on its own clock
   around the cutoff you set, a bridge in the middle of each piece brings the layers' filters apart and together, and
   a piece repeats until switched off. The white keys play the lead in the piece's scale, the black keys are
   eleven effects held while pressed, and a PERFORM page mutes and solos layers. The project site has a browser
@@ -30,7 +30,7 @@ distribution: browser-installer
 requires_stock: V15 or Felucca
 install_notes: >-
   Web installer in Chrome or Edge over USB (also Chrome on Android with a USB-OTG adapter), or tools/fm1_install.py
-  with nachtfahrt-0.9.0.fwsc from the release. The installer's Back to the stock firmware option and M-VAVE's
+  with nachtfahrt-0.9.4.fwsc from the release. The installer's Back to the stock firmware option and M-VAVE's
   M-UPGRADE both restore V15. If NACHTFAHRT fails to start twice it starts in a safe mode from which the installer
   still works.
 brick_risk: true
@@ -42,6 +42,10 @@ image:
   source_url: https://github.com/FartyPants/fm1-nachtfahrt
   first_party: true
 versions:
+- version: 0.9.4
+  date: 2026-10-29
+  url: https://github.com/FartyPants/fm1-nachtfahrt/releases/tag/v0.9.4
+  notes: Reworks the wind and surf atmospheres, adds a rain atmosphere, and gives the Phaedra piece a choir drone. Builds 0.9.1 to 0.9.3, not listed separately, added drifting master actions, a lead that remembers and answers, a shimmer reverb key, a plucked-string sequence voice and a choir drone voice.
 - version: 0.9.0
   date: 2026-10-28
   url: https://github.com/FartyPants/fm1-nachtfahrt/releases/tag/v0.9.0

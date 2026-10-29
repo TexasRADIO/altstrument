@@ -1,0 +1,60 @@
+device: mutable-instruments-plaits
+name: DUB STAB PLAITS
+summary: Plaits firmware that turns the module into a clocked, generative dub techno chord sequencer in C minor, with an envelope on the FREQUENCY knob, a root-note CV on AUX and an Android app running the same code.
+description: >-
+  A TRIG clock plays a 16-step pattern of chord stabs, or single notes, in C minor.
+  FREQUENCY sets the envelope, the three main knobs shape the chord model, and the
+  small attenuverters set density, pattern length and speed, including triplets.
+  The buttons step through the models, start a new pattern and switch between chords
+  and notes, and a 1 V/oct CV on AUX sets the root. A second build, Cm DEEP, uses
+  open voicings such as minor sevenths and ninths, stacked fourths and suspended
+  chords, with no major chords. The output is dry, so delay and reverb come from
+  other modules. The repository also holds an Android app that runs the same
+  firmware code, and Max for Live devices. The firmware changes are a patch series
+  against Mutable Instruments' Plaits source, and the README says the published
+  source is an early development version, with the full source to come with the
+  current beta. Commit messages credit Claude as co-author. The author tested the
+  firmware in an emulator and on a Plaits clone, not on every hardware revision.
+status: active
+authors:
+  - name: narti_live
+    url: https://github.com/Narti-Live
+source: https://github.com/Narti-Live/dub-base-Plaits
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file is MIT with copyright lines for Narti Live and for Emilie Gillet's
+  Plaits firmware; GitHub reports it as NOASSERTION because of the two lines. Fonts
+  on the site and in the app are under the SIL Open Font License. The README states
+  that the published firmware source is an early version, so the released builds are
+  newer than the source in the repository.
+homepage: https://narti-live.github.io/dub-base-Plaits/
+distribution: download
+install_notes: >-
+  Unplug all cables, set FREQUENCY to noon, hold the left button while powering on and
+  play the firmware WAV from the repository's downloads folder into MODEL at about 80
+  percent volume, or use the flasher on the project site. A raw .bin is provided for
+  SWD flashing. To go back, install the official Plaits firmware WAV the same way.
+  The README warns that this is unofficial firmware and used at your own risk.
+brick_risk: true
+tags: [ai-assisted, chords, sequencer, generative, midi, fork]
+video:
+  url: https://www.youtube.com/watch?v=KDar2ZEt_Ak
+  title: Dub Stab Plaits / alternative Firmware for Mutable Instruments Plaits and clones
+  credit: Narti Live
+  first_party: true
+  found_via: https://github.com/Narti-Live/dub-base-Plaits#readme
+  version: v1.5
+versions:
+  - version: v1.5
+    date: 2026-10-28
+    url: https://github.com/Narti-Live/dub-base-Plaits/commit/5fd8bf4
+    notes: Lower CPU load with the same sound; v1.4 fixed soft clipping with long envelopes.
+  - version: v1.3
+    date: 2026-10-23
+    url: https://github.com/Narti-Live/dub-base-Plaits/commit/1a19f09
+    notes: Adds the VHIKK model in place of CHIPTUNE, plus the root-note CV on AUX.
+  - version: v1.0
+    date: 2026-10-21
+    url: https://github.com/Narti-Live/dub-base-Plaits/commit/1cfa288
+    notes: First release, with the ACID model and attenuated CV inputs. No tagged releases; versions are named in commit messages.

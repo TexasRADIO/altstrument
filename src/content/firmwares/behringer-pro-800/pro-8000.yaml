@@ -1,0 +1,48 @@
+device: behringer-pro-800
+name: PRO-8000
+summary: Independent replacement firmware for the PRO-800, written from scratch, with two layers, four LFOs, four envelopes per voice, a 16-route mod matrix, 128 patches with sequences, autotune and a WebMIDI editor.
+description: >-
+  Written for the STM32F446 and built on the schematic and packer that Music
+  Tribe published, with GliGli's Prophet-600 firmware used only as a reference
+  for how the analog side behaves. The voice board stays analog; the firmware
+  decides the control voltages. It adds two layers (split, stack, by MIDI
+  channel, eight mono channels or MPE), two LFOs per layer with eight shapes,
+  four envelopes per voice, a mod matrix with 27 sources and 46 destinations, a
+  step sequencer and arpeggiator in every patch, patch morphing, 128 named
+  patches with the stock factory bank importable, per-oscillator autotune and
+  the 5-pin MIDI input. A browser editor talks to the synth over WebMIDI, and
+  guides and a manual are published on the project site. The README calls it
+  wildly experimental, built and tested on a single synth, and says it is not
+  affiliated with Behringer or Music Tribe. A macOS command-line tool handles
+  install, backup and tuning.
+status: active
+authors:
+  - name: Klaine
+    url: https://github.com/klaine
+source: https://github.com/klaine/pro-8000
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file is MIT. The README says no code from GliGli's p600fw (GPL
+  v3) is in the firmware, and that Music Tribe's packer and schematic are kept
+  out of the repository.
+homepage: https://klaine.github.io/pro-8000/
+distribution: download
+install_notes: >-
+  Back up your patches first (build/pro800 backup <dir>); the first start
+  wipes patch records written by 0.7.x and tunes the oscillators silently. Send
+  the release's pro800-0.9.0.syx with the repository's macOS command-line tool
+  (build/pro800 install), or hold buttons 0 and 7 at power-up to enter the
+  bootloader and send the file with SynthTribe or a SysEx sender that paces its
+  output (the bootloader takes about 9.6 kB/s). Building from source needs zig,
+  Music Tribe's PRO800-Firmware-Packer and Xcode's swiftc. The firmware never
+  touches the write-protected bootloader, so holding 0 and 7 at power-up always
+  reaches it, and Behringer's stock .syx can be flashed the same way. The
+  MANUAL covers restoring the stock patch memory.
+brick_risk: false
+tags: [synth-engine, lfo, sequencer, arpeggiator, midi, usb-midi, editor, web-midi, open-source]
+versions:
+  - version: v0.9.0
+    date: 2026-10-29
+    url: https://github.com/klaine/pro-8000/releases/tag/v0.9.0
+    notes: First public release.

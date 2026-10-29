@@ -36,6 +36,10 @@ image:
   source_url: https://github.com/keremimo/melodee
   first_party: true
 versions:
+- version: 1.6.0-rc.6
+  date: 2026-10-28
+  url: https://github.com/keremimo/melodee/releases/tag/v1.6.0-rc.6
+  notes: Pre-release. Adds CR-78 and two-operator FM drum kits, a sound preset per pattern, note editing while the sequence plays, pattern copy to another track and nearest-degree snapping for microtonal scales; USB Host also finds audio and MIDI devices.
 - version: 1.6.0-rc.5
   date: 2026-10-27
   url: https://github.com/keremimo/melodee/releases/tag/v1.6.0-rc.5

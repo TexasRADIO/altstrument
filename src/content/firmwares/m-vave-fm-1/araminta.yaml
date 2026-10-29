@@ -3,7 +3,7 @@ name: Araminta
 summary: >-
   Opinionated Felucca 1.5.1 fork that adds a morphable eight-lane DRUM-X kit with Grids pattern generation, JIANT punch-ins, a chain-or-send effects list, free-take recording and mixer solo.
 description: >-
-  Replaces Felucca's sampled and virtual-analogue kit with DRUM-X, and adds drum pattern generation from Mutable
+  Replaces Felucca's sampled and virtual-analogue kit with DRUM-X (Felucca's synthesized DRUMS engine returned beside it in 3.2), and adds drum pattern generation from Mutable
   Instruments Grids, JIANT-style punch-ins, SHIMR and CLOUD reverb modes, an effects list whose stages can be
   chained, ordered or sent, free-take recording when a project is empty, SOLO on the mixer, scale mapping and
   a flat Felucca 0.9 look. Felucca 1.5 projects open, but a project saved on Araminta uses a new format that
@@ -34,6 +34,10 @@ image:
   source_url: https://github.com/Wulgaren/Araminta
   first_party: true
 versions:
+- version: '3.2'
+  date: 2026-10-28
+  url: https://github.com/Wulgaren/Araminta/releases/tag/v3.2
+  notes: Adds Felucca's DRUMS engine, a per-step PITCH lock, chord STRUM and STROKE, a TAPE effects bus and MASTER routing; saves use a new FUN19 format that older builds show as empty.
 - version: '3.1'
   date: 2026-10-22
   url: https://github.com/Wulgaren/Araminta/releases/tag/v3.1

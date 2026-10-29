@@ -35,7 +35,7 @@ install_notes: >-
   returns to stock.
 tags: [machines, drums, sampler, sequencer, lfo, midi, fx]
 versions:
-  - version: main @ 7688bb8
-    date: 2026-10-28
-    url: https://github.com/AveyCole/Supermodel/commit/7688bb8a7804415647756d120f6ed55c3df56d7d
+  - version: main @ 5dc119f
+    date: 2026-10-29
+    url: https://github.com/AveyCole/Supermodel/commit/5dc119f6b8d76d7364658f530a87164dfd0f3384
     notes: No tagged releases; this is the latest commit.

@@ -1,0 +1,39 @@
+device: after-later-audio-monsoon
+name: MONSOON VHIKK
+summary: Unofficial Monsoon firmware that adds a drone voice with nine algorithms, a Vhikk X-inspired processor called CAVERN and a stereo phaser to the Clouds and Parasites modes, with an Android app running the same code.
+description: >-
+  The firmware keeps the original Parasites modes and adds three: a stereo phaser
+  with 2 to 12 stages, CAVERN, a processor with a frequency-shifting delay that can
+  sound metallic or diffuse and works on any input, and VHIKK, a voice plus that
+  processor. VHIKK offers nine algorithms, from an analogue pair with a sub-oscillator
+  to wavetable, FM, formant and swarm voices, and plays from a single V/OCT cable or
+  from TRIG. The author says it is inspired by the Forge TME Vhikk X. The project
+  page is part of the author's Plaits firmware repository, which holds the firmware
+  files, a restore file for Parasites 2.01 and a manual with sound examples. No
+  source for the Monsoon firmware is published there, only the built files.
+status: active
+authors:
+  - name: narti_live
+    url: https://github.com/Narti-Live
+source_status: binary-only
+license: unspecified
+license_notes: >-
+  The repository's LICENSE file is MIT and covers the repository, but no source for
+  the Monsoon firmware is published, so its own terms and those of the Parasites
+  code it builds on are not stated.
+homepage: https://narti-live.github.io/dub-base-Plaits/monsoon/
+distribution: download
+requires_stock: Parasites 2.01 (the firmware the Monsoon ships with)
+install_notes: >-
+  Unplug all cables, hold FREEZE while powering on until the bootloader LEDs show,
+  and play the firmware WAV into the left input, or use the flasher on the project
+  page; the WAV takes about six minutes. A restore file for Parasites 2.01 is on
+  the same page. The page warns that this is unofficial firmware and used at your
+  own risk. Checksums are listed there.
+brick_risk: true
+tags: [ai-assisted, synth-engine, fx, phaser, mutable-instruments-port]
+versions:
+  - version: v1.8
+    date: 2026-10-23
+    url: https://github.com/Narti-Live/dub-base-Plaits/commit/2f8d8cc
+    notes: Smoother controls and click-free transitions. Version shown on the project page; the repository has no tags or releases.

@@ -1,14 +1,14 @@
 device: m-vave-fm-1
 name: Makohai
 summary: >-
-  Generative groovebox in the style of early-90s PC tracker music: six lanes composed live in ten styles, which you
+  Generative groovebox in the style of early-90s PC tracker music: six lanes composed live in eighteen styles, which you
   mix instead of programming steps, with tracker effects, an editor for your own parts and a browser version.
 description: >-
   Formerly called Espada. The six lanes are lead, arp, pad, bass, drums and sfx, and each has its own filter,
   FM brightness, drive and pan, plus tracker effects such as slide, vibrato, tremolo, gate, retrigger, bit crush
   and echo. A style can be queued, blended in lane by lane or launched at once, and an optional arc builds the
   piece up to a drop. The EDIT page takes your own parts of up to 512 bars per lane in scale steps, and the
-  setup screens show scopes and demo-style visuals. Eight sets and USB-MIDI out are included. It is built on
+  setup screens show scopes and demo-style visuals. Eight sets and MIDI in and out (notes, controllers, clock and transport) are included. It is built on
   Dinghy and carries Felucca's platform layer, and the browser version runs the firmware's own code.
 status: active
 authors:
@@ -37,6 +37,14 @@ image:
   source_url: https://github.com/delirioux/makohai
   first_party: true
 versions:
+- version: '1.3'
+  date: 2026-10-28
+  url: https://github.com/delirioux/makohai/releases/tag/v1.3
+  notes: Adds eight styles (eighteen in all) and 48 sounds, MIDI notes, controllers, clock and transport in both directions, and voice settings that are saved.
+- version: '1.2'
+  date: 2026-10-26
+  url: https://github.com/delirioux/makohai/releases/tag/v1.2
+  notes: Adds three animated pictures (a turning wireframe, shadebobs and a marble bust) for the knob pages, the background and the demo mode.
 - version: '1.1'
   date: 2026-10-26
   url: https://github.com/delirioux/makohai/releases/tag/v1.1

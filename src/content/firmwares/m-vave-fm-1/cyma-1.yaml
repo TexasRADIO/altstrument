@@ -1,0 +1,45 @@
+device: m-vave-fm-1
+name: CYMA-1
+summary: >-
+  Playable Chladni plate: keys strike, bow or rain on a simulated metal plate, and the sand on the screen settles into
+  the nodal pattern that the modal engine is sounding.
+description: >-
+  A modal simulation drives both the sound and the picture, so each note draws its own figure. Key pressure bows harder,
+  SELECT morphs the plate between circle, hexagon, star, guitar and bar shapes, and SEQ turns the keybed itself into
+  the plate. EDIT switches between three views of the same vibration (sand, a displacement field and a slowed 3-D
+  mesh), and a PHOSPHOR green theme replaces the default colours. There are presets such as singing bowl, handpan,
+  steel rain and bowed glass, a Sounds page for saving and sharing sounds as short codes, and a USB backup tool. The
+  README calls the plates Chladni-like rather than exact, since they are modelled as stiffened membranes. The browser
+  build in docs/ runs the same C code as WebAssembly, but the repository publishes no hosted page and no firmware
+  package. The README reports it running on a real FM-1 on 2026-10-29. It is built on fm1-base, and the README says it
+  was written by agent teams in a night.
+status: active
+authors:
+- name: MS-707
+  url: https://github.com/MS-707
+source: https://github.com/MS-707/cyma-1
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  The LICENSE is the MPL-2.0 text and the README gives MPL-2.0 for the app, with fm1-base (MPL-2.0) as a submodule.
+  Fonts are SIL OFL 1.1.
+distribution: source-only
+requires_stock: V15
+install_notes: >-
+  No .fwsc is published: build it with instrument/BUILDING.md (JieLi toolchain container and fm1-base) and install the
+  package yourself. The README advises backing up the unit's full flash first, keeping the official V15 image and having
+  an RP2040 recovery dongle ready, and its install runbook was written for a V15 unit. Run the browser build locally
+  with a static web server from docs/.
+brick_risk: true
+tags: [synth-engine, physical-modeling, performance, ui, emulator]
+image:
+  url: https://raw.githubusercontent.com/MS-707/cyma-1/main/media/screen-handpan.png
+  alt: "CYMA-1 Handpan screen: a round steel plate with sand gathered on its nodal rings, a crosshair and two markers, and Material, Stiff, Carve and Decay values along the top"
+  credit: MS-707
+  source_url: https://github.com/MS-707/cyma-1#readme
+  first_party: true
+versions:
+- version: v1.0-hw
+  date: 2026-10-29
+  url: https://github.com/MS-707/cyma-1/tree/v1.0-hw
+  notes: Git tag; no GitHub release page. First version installed and checked on a real FM-1.

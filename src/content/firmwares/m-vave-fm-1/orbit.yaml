@@ -31,6 +31,10 @@ image:
   source_url: https://github.com/dspaudio/orbit
   first_party: true
 versions:
+- version: 0.8.1
+  date: 2026-10-28
+  url: https://github.com/dspaudio/orbit/releases/tag/v0.8.1
+  notes: Fixes ported from SLOOP 2.8 for sample retriggers, drum voice stealing, held notes against the sequencer, lost MIDI notes after an input overflow and tempo readings under external clock; formats are unchanged. The release says it was installed on an FM-1.
 - version: 0.8.0
   date: 2026-10-27
   url: https://github.com/dspaudio/orbit/releases/tag/v0.8.0

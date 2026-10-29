@@ -1,0 +1,33 @@
+device: m-vave-fm-1
+name: Sloop Pocket
+kind: tool
+summary: Closed iPhone beta app that backs up and organises SLOOP projects from an FM-1 over USB, previews them offline, exports MIDI and audio stems, and works as a live mixer for the running unit.
+description: >-
+  An independent companion for the FM-1 running SLOOP. It saves projects from the unit over USB and keeps them in a
+  library, plays loops and sections with track mutes without the hardware connected, and exports a project as MIDI,
+  a stereo WAV, per-track WAVs or a single instrument for use in GarageBand or other DAWs. A Live screen turns the
+  phone into a four-track mixer with mute, solo, effect sends and scene memory while the FM-1 plays, and the app can
+  check for and install SLOOP firmware updates over USB. The TestFlight page says transfers and Live were tested with
+  SLOOP 2.8.1 and 2.8.3, that Felucca and Bluetooth transfers are not supported, and that the app has no account, ads
+  or analytics. The interface is in English and Ukrainian. It is a beta with a limited testing period per build, and no
+  source is published.
+status: active
+authors:
+- name: tar_anton
+source_status: closed
+license: unspecified
+license_notes: >-
+  Distributed as a TestFlight beta; no source repository or licence terms are published.
+homepage: https://testflight.apple.com/join/2TTUuEGd
+distribution: download
+requires_stock: SLOOP 2.8.1 or 2.8.3 firmware, FM-1 on a USB data cable, iOS 17 or later
+install_notes: >-
+  Install Apple's TestFlight app and open the invitation link on an iPhone, iPad or Mac running iOS 17 or later. Hardware
+  features need an FM-1 running supported SLOOP firmware and a USB data cable. TestFlight builds expire, so the beta
+  needs renewing from time to time.
+brick_risk: false
+tags: [editor, librarian, ios, mixer, sloop]
+versions:
+- version: 0.13.1
+  url: https://github.com/aroum/fm1-custom-fw#readme
+  notes: Version named for the Live Assistant screen in the community hub's README; the TestFlight page gives no version or date.

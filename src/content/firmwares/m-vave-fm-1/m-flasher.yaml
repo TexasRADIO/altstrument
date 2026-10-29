@@ -40,6 +40,10 @@ image:
   source_url: https://github.com/jvitkauskas/m-flasher
   first_party: true
 versions:
+- version: 0.7.0
+  date: 2026-10-29
+  url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.7.0
+  notes: Installing firmware now erases settings and Bluetooth pairings by default (a tick box turns this off), and a new restart command leaves download mode without touching the flash.
 - version: 0.6.1
   date: 2026-10-25
   url: https://github.com/jvitkauskas/m-flasher/releases/tag/v0.6.1

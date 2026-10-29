@@ -1,0 +1,44 @@
+device: m-vave-fm-1
+name: Boardwalk
+summary: >-
+  Seaside arcade of seventeen music games and a prize counter on fm1-base, including change ringing, ear training, falling-tile songs and
+  a roller coaster whose track is the melody, with tickets that buy prizes.
+description: >-
+  The screen is a boardwalk at golden hour with one cabinet per game; OCT- and OCT+ walk along it and PLAY steps up
+  to a cabinet. The games are Striker, Moles, Balloons, Tiles, Gull, Ducks, Teacups, Fortune, Parrot, Bumpers, Echo,
+  Claw, Pitch, Fishing, Chord Code, Coaster and Bells, plus a Prizes counter. They cover timing, memory, pitch and chord
+  recognition, playing songs and ringing the bells of a tower from published change-ringing methods. A finished round pays
+  tickets, each game keeps its best, and prizes bought at the counter sit on the boardwalk rail, where two of them change the
+  scene. It also sends its screens to the FM-1 Screen Reader over USB. The songs are traditional or out of copyright and
+  the README says the games that echo known arcade titles use none of their code, art or names. It is built on fm1-base,
+  has a browser emulator, and is tagged as a 0.9 first release.
+status: active
+authors:
+- name: Charles Vestal
+  url: https://github.com/charlesvestal
+source: https://github.com/charlesvestal/fm1-boardwalk
+source_status: open
+license: MPL-2.0
+license_notes: >-
+  LICENSING.md states MPL-2.0 file by file for Boardwalk, with fm1-base and felucca-bsp (MPL-2.0) in the base
+  submodule. Fonts are SIL OFL 1.1, and three Apache-2.0 JieLi AC79 SDK files are read from your SDK checkout at build time.
+homepage: https://charlesvestal.github.io/fm1-boardwalk/
+distribution: browser-installer
+install_notes: >-
+  Web installer in Chrome or Edge with the FM-1 on USB, or boardwalk-0.9.fwsc from the releases page with
+  base/tools/fm1_install.py. The README says installing is at your own risk, the installer can put M-VAVE's firmware
+  back, and a firmware that fails to start twice comes up in a safe mode. To build it, clone with --recursive and run
+  build.sh (BUILDING.md).
+brick_risk: true
+tags: [game, emulator, midi]
+image:
+  url: https://raw.githubusercontent.com/charlesvestal/fm1-boardwalk/main/app/site/img/boardwalk.png
+  alt: "Boardwalk screen: a pier at sunset with a Ferris wheel behind a red Striker cabinet marked PRESS PLAY, RING THE BELL, flanked by the Prizes and Moles cabinets"
+  credit: Charles Vestal
+  source_url: https://github.com/charlesvestal/fm1-boardwalk#readme
+  first_party: true
+versions:
+- version: '0.9'
+  date: 2026-10-28
+  url: https://github.com/charlesvestal/fm1-boardwalk/releases/tag/v0.9
+  notes: First release, with all seventeen games and the prize counter.

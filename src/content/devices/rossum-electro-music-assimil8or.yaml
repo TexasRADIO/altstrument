@@ -1,0 +1,33 @@
+name: Assimil8or
+manufacturer: Rossum Electro-Music
+category: eurorack
+tagline: eight-channel phase modulation sampler Eurorack module
+description: >-
+  The Assimil8or is a Eurorack sampler from Rossum Electro-Music that plays up to
+  eight channels from samples stored on a memory card. Each channel has its own
+  gate, three CV inputs and output, and any sample can be modulated in phase by
+  another channel. Presets and sample files are kept on the card, and the module
+  has stereo sample inputs for recording.
+platform: ARM
+stock_firmware: "3.04"
+links:
+  manufacturer: https://www.rossum-electro.com/products/assimil8or
+  community:
+    - label: Rossum downloads (software and manuals)
+      url: https://www.rossum-electro.com/pages/downloads
+notes: >-
+  The module updates its software from an app file on the memory card, using
+  Utilities > Load Software. The one catalogued mod is applied by a browser
+  patcher to your own copy of Rossum's software, so Rossum's file is never
+  redistributed here.
+related: []
+image:
+  src: /images/devices/rossum-electro-music-assimil8or.webp
+  style: photo
+  alt: Assimil8or Eurorack panel in silver, with eight rows of gate and CV jacks on the left, a small display and two knobs in the centre, rows of buttons below, and eight outputs on the right
+  width: 940
+  height: 780
+  credit: Rossum Electro-Music
+  license: manufacturer product image
+  source_url: https://www.rossum-electro.com/products/assimil8or
+  original_url: https://www.rossum-electro.com/cdn/shop/products/Assimil8or_2048x1700_at300_940x_0a69ed43-27d8-4ccd-bc4f-ea2613dfe00c.png?v=1631017957

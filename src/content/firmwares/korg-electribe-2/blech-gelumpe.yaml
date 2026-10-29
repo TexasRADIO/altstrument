@@ -45,6 +45,10 @@ image:
   source_url: https://github.com/KuhlerBuhler/kuhlers-gelumpe
   first_party: true
 versions:
+  - version: v1.3.7
+    date: 2026-10-29
+    url: https://github.com/KuhlerBuhler/kuhlers-gelumpe/releases/tag/v1.3.7
+    notes: The Electribe starts on the pattern last selected (hold EXIT at power-on for 001), a chosen init pattern replaces Korg's template for INITIALIZE PATTERN, BLECH > VERSION shows the running version, and a plugin switched off in PLUGIN EDIT stays off after a restart. Also for the blue Electribe.
   - version: v1.3.5
     date: 2026-10-27
     url: https://github.com/KuhlerBuhler/kuhlers-gelumpe/releases/tag/v1.3.5

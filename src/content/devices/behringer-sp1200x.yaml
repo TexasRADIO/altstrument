@@ -1,0 +1,27 @@
+name: SP1200X
+manufacturer: Behringer
+category: drum-machine
+tagline: Announced $200 tribute to the E-mu SP-1200 sampling drum machine
+description: >-
+  The SP1200X is a drum machine and sampler that Behringer announced on
+  2026-10-29 as a tribute to the E-mu SP-1200. Press coverage of the announcement
+  describes eight sliders and pads laid out like the original, a numeric keypad,
+  a larger full-colour display, stereo sampling inputs, eight individual outputs,
+  sync in and out, five-pin MIDI in, out and thru, and USB-C host and computer
+  ports. Behringer says it is still in development and is aiming for about $200,
+  and has published no specification or release date.
+links:
+  community:
+    - label: Synth Anatomy report on the announcement
+      url: https://synthanatomy.com/2026/10/behringer-sp1200x-a-200-open-source-clone-of-the-e-mu-sp-1200-drum-machine.html
+    - label: Gearnews report on the announcement
+      url: https://www.gearnews.com/behringer-sp1200x-sampler/
+notes: >-
+  Announced 2026-10-29 in a Behringer social media post, which the press quotes
+  as saying the firmware will be open source. No product page, repository,
+  licence or release date has been published, and Music Tribe's open source
+  organisation on GitHub has no SP1200X repository yet. No image is shown because
+  Behringer has no product page or press kit for the unit and a news photo is not
+  an acceptable source.
+related: [behringer-kick, behringer-ignite, rossum-electro-music-sp-1200]
+pinned: [sp1200x-open-firmware]

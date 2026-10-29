@@ -1,0 +1,50 @@
+device: akai-mpc-sample
+kind: tool
+name: Virtual MPC Sample
+summary: Unofficial emulator that runs the MPC Sample's stock 1.3.0.12 firmware in QEMU and shows the whole device, panel, screen and rear jacks, in a browser page; it includes no Akai firmware.
+description: >-
+  Meant for building and testing mods without risking a unit. It opens the stock
+  root filesystem read-only through dm-verity and lets the stock services start
+  the stock app, with a Python server playing the panel's microcontroller over
+  the same UART protocol. The page has the 320 by 240 screen, pads, knobs,
+  buttons and data wheel, sound output and input, an SD card folder, SD autorun
+  packages, a root shell and SSH, the USB-C network and USB MIDI. USB audio, a
+  Windows run and other firmware versions are not done; only macOS on Apple
+  Silicon has been run. You supply the firmware partitions extracted from
+  inMusic's 1.3.0.12 update, and the repository has no extractor for that image
+  yet. A stock-map folder holds an offline page of about 380 screenshots of every
+  stock screen. The README says it was developed with Claude.
+status: active
+authors:
+  - name: orrpunk-art
+    url: https://github.com/orrpunk-art
+source: https://github.com/orrpunk-art/virtual-mpc-sample
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE file is MIT, except kernel/patches/, which are GPL-2.0 like the
+  kernel. The repository says it contains no firmware or factory content, but the
+  stock-map and docs include screenshots of Akai's stock screens, which the
+  README says are shown for documentation and interoperability.
+distribution: source-only
+requires_stock: "1.3.0.12"
+install_notes: >-
+  Needs QEMU 9 or later, Docker (for the build only), Python 3.9 or later and an
+  OpenSSH client. Put the boot, rootfs and recovery partitions extracted from your
+  own copy of the 1.3.0.12 update into firmware/extracted/, check them against
+  inputs.sha256, then run python3 lab.py build (the kernel build takes about 15
+  minutes the first time) and python3 lab.py run, and open http://127.0.0.1:8765/.
+  Nothing is written to a physical device.
+brick_risk: false
+tags: [emulator, web, sampler, os, open-source]
+image:
+  url: https://raw.githubusercontent.com/orrpunk-art/virtual-mpc-sample/main/docs/img/panel.jpg
+  alt: Browser page with the virtual MPC Sample, rear-panel jacks above, the front panel with a waveform on the Trim screen, a 4 by 4 pad grid, knobs and buttons, and a column of virtual devices at right
+  credit: orrpunk-art
+  source_url: https://github.com/orrpunk-art/virtual-mpc-sample#readme
+  first_party: true
+versions:
+  - version: main @ 78d28ce
+    date: 2026-10-29
+    url: https://github.com/orrpunk-art/virtual-mpc-sample/commit/78d28cea1efe7e16b8a15a86465a64f432945a41
+    notes: No tagged releases; this is the latest commit.

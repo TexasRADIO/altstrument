@@ -5,7 +5,7 @@ summary: >-
   Desktop app (Rust) that runs up to four emulated FM-1s side by side with any community firmware, shares a MIDI
   clock and keyboard between them, and also detects and flashes real FM-1 units over USB.
 description: >-
-  Rights warning: the build downloads 18 firmware packages into a git-ignored folder, including M-VAVE's stock FM-1
+  Rights warning: the build downloads 19 firmware packages into a git-ignored folder, including M-VAVE's stock FM-1
   V16 package from M-VAVE's file server and Baud Girl's proprietary FM-1+VA from baudgirl.com; the repository holds none
   of the files. V16 is not the V15 file this catalogue lists as licensed for redistribution. Each pane runs the fm1-emu
   CPU and display model with its own firmware and screen, mixes the four audio streams into one output, and shows a
@@ -44,7 +44,7 @@ image:
   source_url: https://github.com/jasonbot/fm1-grid
   first_party: true
 versions:
-- version: main @ fc73bd0
+- version: main @ 9dd68c0
   date: 2026-10-28
-  url: https://github.com/jasonbot/fm1-grid/commit/fc73bd0d13a3909695ea40d3dc64a889a01e8cc7
+  url: https://github.com/jasonbot/fm1-grid/commit/9dd68c0bd848bd13fc9a1593483638af8e396cab
   notes: No tagged releases; this is the latest commit.

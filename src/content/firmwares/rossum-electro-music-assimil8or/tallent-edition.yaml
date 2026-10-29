@@ -1,0 +1,54 @@
+device: rossum-electro-music-assimil8or
+name: Assimil8or Tallent Edition
+summary: Browser patcher that adds per-channel EQ and multimode filter, a grain mode, Time Lock pitch shifting, resampling and a documented MIDI editor protocol to Rossum's Assimil8or software 3.04.
+description: >-
+  The patch adds a three-band EQ with high-pass filter to every channel and zone,
+  a multimode filter with 12 and 24 dB slopes, notch and band-stop types, a grain
+  mode that plays a sample as up to eight overlapping grains, Time Lock for
+  changing a loop's pitch while keeping its timing, and a resample function that
+  records a channel's output into one of its zones. Most settings take CV control.
+  The new pages sit behind a second press of existing buttons, presets keep the new
+  settings in files that Rossum's software still opens, and the original software
+  can be loaded again at any time. With a Locutus module the firmware can be
+  controlled over MIDI, and PROTOCOL.md documents the SysEx commands for editor
+  authors. The grain window shapes and stereo spread follow Mutable Instruments
+  Beads, re-implemented in the project's own code. The repository holds only the
+  overlay code, the patch data and the patcher, not Rossum's software, and the
+  project states it is not affiliated with Rossum.
+status: active
+authors:
+  - name: Brandon Tallent
+    url: https://github.com/brandon-tallent
+source: https://github.com/brandon-tallent/assimil8or-extended-firmware
+source_status: open
+license: MIT
+license_notes: >-
+  The LICENSE covers the project's own code, tools and documentation. No rights to
+  Rossum's software are granted, and the patched app file contains Rossum's code, so
+  it is a local output and not a release asset.
+homepage: https://brandon-tallent.github.io/assimil8or-extended-firmware/
+distribution: patch-your-own
+requires_stock: Assimil8or software v3.04 (app-v304-260610.zip)
+install_notes: >-
+  Download the 3.04 software zip from Rossum's Assimil8or page, open the patcher page
+  and select that zip without unzipping it. The patcher builds a zip that holds an
+  app file and an ext-*.bin file; copy both to the top level of the memory card, run
+  Utilities > Load Software and reboot, and leave the card in so the extension
+  loads. The line under SW Rev in Utilities > About this Module shows the Tallent
+  Edition version. To go back, load Rossum's own app file the same way. Your
+  software file stays in the browser and is not uploaded.
+brick_risk: false
+tags: [sampler, eq, filter, granular, resampling, patcher, editor, sysex, eurorack]
+versions:
+  - version: 1.1.0
+    date: 2026-10-28
+    url: https://github.com/brandon-tallent/assimil8or-extended-firmware/releases/tag/v1.1.0
+    notes: Adds Time Lock with a per-channel tempo source (own, speed, MIDI clock or CV clock).
+  - version: 1.0.1
+    date: 2026-10-25
+    url: https://github.com/brandon-tallent/assimil8or-extended-firmware/releases/tag/v1.0.1
+    notes: EQ starts off on every channel, and the Filter page cursor moves like the other pages.
+  - version: 1.0.0
+    date: 2026-10-21
+    url: https://github.com/brandon-tallent/assimil8or-extended-firmware/releases/tag/v1.0.0
+    notes: Stereo filter offset, per-channel grain settings and a version line in the About page.

@@ -1,0 +1,47 @@
+device: erica-synths-lxr-02
+name: lxr02-recomp
+kind: tool
+summary: Unofficial browser emulator that runs Erica Synths' open-source LXR-02 firmware as WebAssembly, with a virtual panel of display, pads, knobs and faders; the author calls it alpha.
+description: >-
+  Builds Erica Synths' lxr-desktop-app source unmodified, with the compiler flags
+  of its own build, for a Cortex-M7, then translates the resulting ARM program
+  instruction by instruction into C and WebAssembly. A virtual board under the
+  firmware stands in for the hardware, and the author reports that output is bit
+  identical to the same build running under QEMU's Cortex-M7, checked by golden
+  hashes in the test scripts. The page at the project's site shows a two-line
+  display, the encoder, knobs, six faders and the button grid, and runs a blank
+  FAT32 card image with a few demo kits. The repository carries the built
+  WebAssembly and the card image, 11 small kit files whose origin it does not
+  state, and a Flask app to serve the page. The README says only that it is alpha.
+status: active
+authors:
+  - name: gregsadetsky
+    url: https://github.com/gregsadetsky
+source: https://github.com/gregsadetsky/lxr02-recomp
+source_status: open
+license: GPL-3.0-only
+license_notes: >-
+  The LICENSE file is the GPL v3 text and the README says only "gpl-3.0", with no
+  "or later" wording. The firmware it translates is Erica Synths' GPL source,
+  pulled in as a git submodule.
+homepage: https://lxr02-recomp.greg.technology/
+distribution: source-only
+install_notes: >-
+  Use the hosted page, or build locally with the Arm GNU toolchain 14.3.rel1,
+  CMake, Ninja, Emscripten, uv and mtools (QEMU for the tests); the blank card
+  image script uses macOS hdiutil. Clone with --recursive so the upstream firmware
+  submodule is fetched, then run the build steps in the README and serve the page
+  with uv run gunicorn app:app. Nothing is flashed to a device.
+brick_risk: false
+tags: [emulator, web, drums, synth-engine, open-source]
+image:
+  url: https://lxr02-recomp.greg.technology/og.png
+  alt: Browser emulator panel for the LXR-02, with a red two-line display reading COA fin wav pwm, a data encoder, four knobs, six faders and rows of round buttons labelled drum1 to pattern
+  credit: gregsadetsky
+  source_url: https://lxr02-recomp.greg.technology/
+  first_party: true
+versions:
+  - version: main @ c72927f
+    date: 2026-10-27
+    url: https://github.com/gregsadetsky/lxr02-recomp/commit/c72927f1dad9d93445cdd4d12a726e6b47677e28
+    notes: No tagged releases; this is the latest commit.

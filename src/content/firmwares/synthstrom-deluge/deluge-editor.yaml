@@ -20,7 +20,7 @@ homepage: https://cyface.github.io/deluge-editor/
 distribution: browser-installer
 tags: [editor, kit-builder, librarian, sysex, web-midi]
 versions:
-  - version: main @ 2f9aee1
-    date: 2026-09-21
-    url: https://github.com/cyface/deluge-editor/commit/2f9aee1
+  - version: main @ 278a02d
+    date: 2026-10-28
+    url: https://github.com/cyface/deluge-editor/commit/278a02d64790345500fd1995ebd354b6836ca0b6
     notes: No tagged releases; this is the latest commit.

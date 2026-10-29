@@ -4,7 +4,7 @@ summary: >-
   Generative firmware for dark ambient and noise: three generators drawn at random, each through its own effect lane,
   with a looper per generator, snapshots with morphing, sessions and no sequencer.
 description: >-
-  Sounds come from a random draw of engine family and seed, and effect chains are drawn from 24 recipes that can be
+  Sounds come from a random draw of engine family and seed, and effect chains are drawn from 38 recipes that can be
   steered toward an abrasive or a dark path. Three generators share four voices, with a DISINTEGRATOR control,
   latching, 23 scales, a master delay, plate reverb and drive. Each generator has Tonitor's looper. Sixteen
   snapshots can be morphed over up to 30 seconds, and 64 session slots are kept in flash. Notes can come from the keys or
@@ -39,7 +39,7 @@ image:
   source_url: https://nzimas.github.io/norilsk/screens.html
   first_party: true
 versions:
-- version: main @ 4476c4b
-  date: 2026-10-27
-  url: https://github.com/nzimas/norilsk/commit/4476c4ba08556d1ec688f923966ab7046bb0a0f5
-  notes: No tagged releases; this is the latest commit. The changelog and installer name build 40 as the newest.
+- version: main @ 24f46f5
+  date: 2026-10-29
+  url: https://github.com/nzimas/norilsk/commit/24f46f55572ab3401b5c7f46c67c702a9cd821f9
+  notes: No tagged releases; this is the latest commit. The installer's firmware is build 45.

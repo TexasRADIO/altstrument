@@ -829,3 +829,9 @@ ignore:
   - url: https://github.com/dafadey/EG_Dynamic_alt_firmware
     reason: automotive LPG module firmware, not music hardware
     date: 2026-10-28
+  - url: https://github.com/PixelRoot32-Game-Engine/PixelRoot32-APU
+    reason: NES-style audio library for an ESP32 game engine, not firmware or a tool for a music device
+    date: 2026-10-29
+  - url: https://www.reddit.com/r/MVaveFM1/comments/1xgre3k/jexed_a_jsfx_port_of_dexed/
+    reason: Jexed is a REAPER JSFX port of Dexed, a desktop plugin with no FM-1 editor or emulator role
+    date: 2026-10-29

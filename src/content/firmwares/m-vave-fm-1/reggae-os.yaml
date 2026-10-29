@@ -2,14 +2,15 @@ device: m-vave-fm-1
 name: REGGAE-OS
 summary: >-
   Early Felucca 1.6.1 derivative that adds a bank of 15 reggae presets (organ, bass, melodica, piano, trumpet, sirens, drums), four-knob editing and
-  animated instrument screens. Untested on hardware.
+  animated instrument screens. One install on a real FM-1 is recorded; sound and controls are still unchecked.
 description: >-
   Adds a sound bank of 15 presets, including Roots Organ, Rocksteady, Deep Roots and Digital Bass, a reed melodica,
   electric piano, a sampled trumpet, three sirens and a drum kit, on top of Felucca's unchanged engines,
   with a home screen that edits four parameters per sound and animates the selected instrument. Later builds add
-  loop recording and overdubbing, song arrangement, a four-track mixer, sixteen punch-in pads, a one-key chord garden and
-  an optional CC0 percussion pack. Felucca's other engines, effects, sequencing, MIDI and user presets are kept. The
-  README calls it a prototype and the hardware notes say no physical FM-1 has been used. A browser build of the emulator is hosted on GitHub Pages; the public
+  loop recording and overdubbing, song arrangement, a four-track mixer, sixteen punch-in pads, a one-key chord garden,
+  automatic chord voice leading per track and an optional CC0 percussion pack. Felucca's other engines, effects, sequencing, MIDI and user presets are kept. The
+  README calls it an early development build. A hardware test report dated 28 October records one successful
+  install on an FM-1 that ran V15; screen, sound, controls and recovery on the unit are still listed as pending. A browser build of the emulator is hosted on GitHub Pages; the public
   Felucca installer does not install this firmware.
 status: active
 authors:
@@ -25,12 +26,12 @@ homepage: https://kemsthesage.github.io/reggae-os/
 distribution: source-only
 install_notes: >-
   Build it yourself with the JieLi toolchain and AC79 SDK (BUILDING.md); no package is published. The author
-  marks installation and recovery as hardware untested and points to Felucca's installation wiki and the
-  FM-1 transporter for recovery.
+  installed it once with tools/fm1_install.py over stock V15, marks physical recovery as untested and points to
+  Felucca's installation wiki and the FM-1 transporter for recovery.
 brick_risk: true
 tags: [synth-engine, performance, ui, emulator, research]
 versions:
-- version: main @ 5ca358b
+- version: main @ 9a67ddf
   date: 2026-10-28
-  url: https://github.com/KemstheSage/reggae-os/commit/5ca358b69061d42ba0a04388b64455033977f2d9
+  url: https://github.com/KemstheSage/reggae-os/commit/9a67ddfbe4e828cb01000a850df43988824f52ea
   notes: No tagged releases; this is the latest commit.

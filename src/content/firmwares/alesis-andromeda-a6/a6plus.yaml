@@ -14,8 +14,11 @@ description: >-
   input that is received as mono aftertouch. It also fixes jittery pots, CV-input glitches and
   envelope smoothing, and changes gain staging so that both oscillators at full level clip less
   than on stock. Existing patches may sound slightly different, and a Settings option switches
-  between stock and modified envelopes. The author lists known issues: the vintage knob can lag
-  the arpeggiator in chord mode and is disabled in Mix mode. They say the bootloader is left
+  between stock and modified envelopes. Beta 1.1.2 fixes the hanging notes reported with Beta 1.0
+  and adds an experimental pseudo-polyphonic aftertouch mode that tracks up to 32 held keys and
+  passes on the highest pressure; the author has not tested it with a poly aftertouch keyboard. The
+  author lists known issues: the vintage knob can lag the arpeggiator in chord mode and is
+  disabled in Mix mode. They say the bootloader is left
   untouched so stock firmware can be reloaded, and that Claude assisted with the coding.
 status: active
 authors:
@@ -44,7 +47,12 @@ video:
   credit: GT Synthware
   first_party: true
   found_via: https://gtsynthware.com/2026/10/26/a6plus-beta-1-0-is-now-available/
+  version: Beta 1.0
 versions:
+  - version: Beta 1.1.2
+    date: 2026-10-28
+    url: https://gtsynthware.com/firmware/
+    notes: Fixes hanging notes from Beta 1.0 and adds an experimental highest-pressure pseudo-polyphonic aftertouch mode, untested by the author on a poly aftertouch keyboard.
   - version: Beta 1.0
     date: 2026-10-26
     url: https://gtsynthware.com/firmware/

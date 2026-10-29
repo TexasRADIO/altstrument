@@ -1,0 +1,50 @@
+device: rossum-electro-music-assimil8or
+name: A8Manager
+kind: tool
+summary: Windows and macOS preset and sample manager for the Assimil8or that edits presets straight from the memory card, with drag-and-drop sample assignment, a waveform view with loop and sample markers, and checks for common card file problems.
+description: >-
+  A8Manager reads a memory card's preset and sample files and edits every channel
+  and zone of a preset, including stereo-linked channels and the MIDI setup editor.
+  Samples can be dropped onto a preset, auditioned with the module's play and loop
+  modes, and have their sample and loop points set on a zoomable waveform. It also
+  checks the card for file name length and character problems and offers fixes. The
+  project page lists version 2.7 as current, though the repository has no tag or
+  release for it yet, and the same author publishes similar
+  managers for other modules. Builds for Linux do not exist yet. The macOS build is
+  unsigned, so the quarantine flag has to be removed by hand.
+status: active
+authors:
+  - name: Chris Roberts
+    url: https://github.com/cpr2323
+source: https://github.com/cpr2323/A8Manager
+source_status: open
+license: MIT
+license_notes: >-
+  LICENSE.txt is the MIT license, with the licenses of bundled third-party
+  components in the Licenses folder. Before version 2.7 the project used a different
+  license, according to the project page.
+homepage: https://cpr2323.github.io/a8manager/index.html
+distribution: download
+requires_stock: Assimil8or software 3.03 or later for the newer MIDI setup options
+install_notes: >-
+  Download the Windows or macOS build from the project page. On macOS, run
+  xattr -d com.apple.quarantine on the downloaded app before opening it. The tool
+  works on the files of the module's memory card and does not flash anything.
+  It can also be built with CMake after initialising the JUCE and oolib submodules.
+brick_risk: false
+tags: [editor, sampler, librarian, eurorack]
+video:
+  url: https://www.youtube.com/watch?v=Osgd9R67FNU
+  title: A8Manager v2.7 Release - a quick run through of the newest features.
+  credit: Chris Roberts
+  first_party: true
+  found_via: https://cpr2323.github.io/a8manager/index.html
+versions:
+  - version: v2.6.2
+    date: 2025-08-11
+    url: https://github.com/cpr2323/A8Manager/tree/v2.6.2
+    notes: Git tag; no GitHub release page.
+  - version: v2.6.1
+    date: 2025-03-18
+    url: https://github.com/cpr2323/A8Manager/tree/v2.6.1
+    notes: Git tag; no GitHub release page.
